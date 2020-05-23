@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Optuna: A hyperparameter optimization framework &mdash; Optuna 1.2.0 documentation</title>
+  <title>Optuna: 一个超参数优化框架 &mdash; Optuna 1.2.0 documentation</title>
   
 
   
@@ -39,7 +39,7 @@
   <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Installation" href="installation.html" /> 
+    <link rel="next" title="安装" href="installation.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -89,7 +89,7 @@
             
               <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">安装</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tutorial/index.html">Tutorial</a></li>
 <li class="toctree-l1"><a class="reference internal" href="reference/index.html">API Reference</a></li>
 <li class="toctree-l1"><a class="reference internal" href="faq.html">FAQ</a></li>
@@ -138,7 +138,7 @@
     
       <li><a href="#">Docs</a> &raquo;</li>
         
-      <li>Optuna: A hyperparameter optimization framework</li>
+      <li>Optuna: 一个超参数优化框架</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -158,34 +158,26 @@
            <div itemprop="articleBody">
             
   <p><a class="reference internal" href="https://raw.githubusercontent.com/optuna/optuna/master/docs/image/optuna-logo.png"><img alt="OPTUNA" src="https://raw.githubusercontent.com/optuna/optuna/master/docs/image/optuna-logo.png" style="width: 800px;" /></a></p>
-<div class="section" id="optuna-a-hyperparameter-optimization-framework">
-<h1>Optuna: A hyperparameter optimization framework<a class="headerlink" href="#optuna-a-hyperparameter-optimization-framework" title="Permalink to this headline">¶</a></h1>
-<p><em>Optuna</em> is an automatic hyperparameter optimization software framework,
-particularly designed for machine learning. It features an imperative,
-<em>define-by-run</em> style user API. Thanks to our <em>define-by-run</em> API, the
-code written with Optuna enjoys high modularity, and the user of Optuna
-can dynamically construct the search spaces for the hyperparameters.</p>
-<div class="section" id="key-features">
-<h2>Key Features<a class="headerlink" href="#key-features" title="Permalink to this headline">¶</a></h2>
-<p>Optuna has modern functionalities as follows:</p>
+<div class="section" id="optuna">
+<h1>Optuna: 一个超参数优化框架<a class="headerlink" href="#optuna" title="Permalink to this headline">¶</a></h1>
+<p><em>Optuna</em> 是一个特别为机器学习而设计的自动超参数优化软件框架。它的一大特色是有着 <em>define-by-run</em> 风格的用户自定义 API。由于这种API 的存在，用 Optuna 编写的代码模块化程度很高。同时，Optuna 的用户也可以动态地构造超参数的搜索空间。</p>
+<div class="section" id="id1">
+<h2>主要特点<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>Optuna 有如下现代化的功能：</p>
 <ul class="simple">
-<li><p>Parallel distributed optimization</p></li>
-<li><p>Pruning of unpromising trials</p></li>
-<li><p>Lightweight, versatile, and platform agnostic architecture</p></li>
+<li><p>并行的分布式优化</p></li>
+<li><p>对不理想实验 (trial) 的提前剪枝</p></li>
+<li><p>轻量级、多功能和跨平台架构</p></li>
 </ul>
 </div>
-<div class="section" id="basic-concepts">
-<h2>Basic Concepts<a class="headerlink" href="#basic-concepts" title="Permalink to this headline">¶</a></h2>
-<p>We use the terms <em>study</em> and <em>trial</em> as follows:</p>
+<div class="section" id="id2">
+<h2>基本概念<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>我们以如下方式使用 <em>study</em> 和 <em>trial</em> 这两个术语：</p>
 <ul class="simple">
-<li><p>Study: optimization based on an objective function</p></li>
-<li><p>Trial: a single execution of the objective function</p></li>
+<li><p>Study: 基于目标函数的优化过程</p></li>
+<li><p>Trial: 目标函数的单次执行过程</p></li>
 </ul>
-<p>Please refer to sample code below. The goal of a <em>study</em> is to find out
-the optimal set of hyperparameter values (e.g., <code class="docutils literal notranslate"><span class="pre">classifier</span></code> and
-<code class="docutils literal notranslate"><span class="pre">svm_c</span></code>) through multiple <em>trials</em> (e.g., <code class="docutils literal notranslate"><span class="pre">n_trials=100</span></code>). Optuna is
-a framework designed for the automation and the acceleration of the
-optimization <em>studies</em>.</p>
+<p>请参考下面的示例代码。一个 <em>study</em> 的目的是通过多次 <em>trial</em> (例如``n_trials=100``) 来找出最佳的超参数值集（比如选择 <code class="docutils literal notranslate"><span class="pre">classifier</span></code> 还是 <code class="docutils literal notranslate"><span class="pre">svm_c</span></code>）。而 Optuna 旨在加速和自动化此类 <em>study</em> 优化过程。</p>
 <p><a class="reference external" href="http://colab.research.google.com/github/optuna/optuna/blob/master/examples/quickstart.ipynb"><img alt="Open in Colab" src="https://colab.research.google.com/assets/colab-badge.svg" /></a></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="o">...</span>
 
@@ -219,19 +211,14 @@ optimization <em>studies</em>.</p>
 <div class="section" id="communication">
 <h2>Communication<a class="headerlink" href="#communication" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p><a class="reference external" href="https://github.com/optuna/optuna/issues">GitHub Issues</a> for bug
-reports, feature requests and questions.</p></li>
-<li><p><a class="reference external" href="https://gitter.im/optuna/optuna">Gitter</a> for interactive chat
-with developers.</p></li>
-<li><p><a class="reference external" href="https://stackoverflow.com/questions/tagged/optuna">Stack
-Overflow</a> for
-questions.</p></li>
+<li><p>可在 <a class="reference external" href="https://github.com/optuna/optuna/issues">GitHub Issues</a> 报告bug、提feature request 和问问题。</p></li>
+<li><p>可在 <a class="reference external" href="https://gitter.im/optuna/optuna">Gitter</a> 与开发者互动.</p></li>
+<li><p>可在 <a class="reference external" href="https://stackoverflow.com/questions/tagged/optuna">StackOverflow</a> 提问。</p></li>
 </ul>
 </div>
-<div class="section" id="contribution">
-<h2>Contribution<a class="headerlink" href="#contribution" title="Permalink to this headline">¶</a></h2>
-<p>Any contributions to Optuna are welcome! When you send a pull request,
-please follow the <a class="reference external" href="https://github.com/optuna/optuna/blob/master/CONTRIBUTING.md">contribution guide</a>.</p>
+<div class="section" id="id3">
+<h2>贡献<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>欢迎大家对Optuna的一切贡献！但是在发送pull request时请遵从 <a class="reference external" href="https://github.com/optuna/optuna/blob/master/CONTRIBUTING.md">contribution guide</a> 的规范.</p>
 </div>
 <div class="section" id="license">
 <h2>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
@@ -245,7 +232,7 @@ Framework. In KDD (<a class="reference external" href="https://arxiv.org/abs/190
 <div class="toctree-wrapper compound">
 <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">安装</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tutorial/index.html">Tutorial</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="tutorial/first.html">First Optimization</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tutorial/configurations.html">Advanced Configurations</a></li>
@@ -310,7 +297,7 @@ Framework. In KDD (<a class="reference external" href="https://arxiv.org/abs/190
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="installation.html" class="btn btn-neutral float-right" title="Installation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="installation.html" class="btn btn-neutral float-right" title="安装" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
     </div>

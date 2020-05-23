@@ -1,36 +1,27 @@
 |optunalogo|
 
-Optuna: A hyperparameter optimization framework
+Optuna: 一个超参数优化框架
 ===============================================
 
-*Optuna* is an automatic hyperparameter optimization software framework,
-particularly designed for machine learning. It features an imperative,
-*define-by-run* style user API. Thanks to our *define-by-run* API, the
-code written with Optuna enjoys high modularity, and the user of Optuna
-can dynamically construct the search spaces for the hyperparameters.
+*Optuna* 是一个特别为机器学习而设计的自动超参数优化软件框架。它的一大特色是有着 *define-by-run* 风格的用户自定义 API。由于这种API 的存在，用 Optuna 编写的代码模块化程度很高。同时，Optuna 的用户也可以动态地构造超参数的搜索空间。
 
-Key Features
+主要特点
 ------------
 
-Optuna has modern functionalities as follows:
+Optuna 有如下现代化的功能：
 
--  Parallel distributed optimization
--  Pruning of unpromising trials
--  Lightweight, versatile, and platform agnostic architecture
+-  并行的分布式优化
+-  对不理想实验 (trial) 的提前剪枝
+-  轻量级、多功能和跨平台架构
 
-Basic Concepts
+基本概念
 --------------
+我们以如下方式使用 *study* 和 *trial* 这两个术语：
 
-We use the terms *study* and *trial* as follows:
+-  Study: 基于目标函数的优化过程
+-  Trial: 目标函数的单次执行过程
 
--  Study: optimization based on an objective function
--  Trial: a single execution of the objective function
-
-Please refer to sample code below. The goal of a *study* is to find out
-the optimal set of hyperparameter values (e.g., ``classifier`` and
-``svm_c``) through multiple *trials* (e.g., ``n_trials=100``). Optuna is
-a framework designed for the automation and the acceleration of the
-optimization *studies*.
+请参考下面的示例代码。一个 *study* 的目的是通过多次 *trial* (例如``n_trials=100``) 来找出最佳的超参数值集（比如选择 ``classifier`` 还是 ``svm_c``）。而 Optuna 旨在加速和自动化此类 *study* 优化过程。
 
 |Open in Colab|
 
@@ -66,19 +57,14 @@ optimization *studies*.
 Communication
 -------------
 
--  `GitHub Issues <https://github.com/optuna/optuna/issues>`__ for bug
-   reports, feature requests and questions.
--  `Gitter <https://gitter.im/optuna/optuna>`__ for interactive chat
-   with developers.
--  `Stack
-   Overflow <https://stackoverflow.com/questions/tagged/optuna>`__ for
-   questions.
+- 可在 `GitHub Issues <https://github.com/optuna/optuna/issues>`__ 报告bug、提feature request 和问问题。
+- 可在 `Gitter <https://gitter.im/optuna/optuna>`__ 与开发者互动.
+- 可在 `StackOverflow <https://stackoverflow.com/questions/tagged/optuna>`__ 提问。
 
-Contribution
+贡献
 ------------
 
-Any contributions to Optuna are welcome! When you send a pull request,
-please follow the `contribution guide <https://github.com/optuna/optuna/blob/master/CONTRIBUTING.md>`__.
+欢迎大家对Optuna的一切贡献！但是在发送pull request时请遵从 `contribution guide <https://github.com/optuna/optuna/blob/master/CONTRIBUTING.md>`__ 的规范.
 
 License
 -------
