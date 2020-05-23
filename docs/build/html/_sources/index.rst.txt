@@ -21,7 +21,7 @@ Optuna 有如下现代化的功能：
 -  Study: 基于目标函数的优化过程
 -  Trial: 目标函数的单次执行过程
 
-请参考下面的示例代码。一个 *study* 的目的是通过多次 *trial* (例如``n_trials=100``) 来找出最佳的超参数值集（比如选择 ``classifier`` 还是 ``svm_c``）。而 Optuna 旨在加速和自动化此类 *study* 优化过程。
+请参考下面的示例代码。一个 *study* 的目的是通过多次 *trial* (例如 ``n_trials=100`` ) 来找出最佳的超参数值集（比如选择 ``classifier`` 还是 ``svm_c``）。而 Optuna 旨在加速和自动化此类 *study* 优化过程。
 
 |Open in Colab|
 
