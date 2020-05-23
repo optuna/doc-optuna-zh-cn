@@ -1,0 +1,487 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Samplers &mdash; Optuna 1.2.0 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Storages" href="storages.html" />
+    <link rel="prev" title="Pruners" href="pruners.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Optuna
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.2.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial/index.html">Tutorial</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">API Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="cli.html">Command Line Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="distributions.html">Distributions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exceptions.html">Exceptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="importance.html">Hyperparameter Importance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="integration.html">Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="logging.html">Logging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="multi_objective/index.html">Multi-objective</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pruners.html">Pruners</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Samplers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="storages.html">Storages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structs.html">Structs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="study.html">Study</a></li>
+<li class="toctree-l2"><a class="reference internal" href="trial.html">Trial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="visualization.html">Visualization</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">FAQ</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Optuna</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">API Reference</a> &raquo;</li>
+        
+      <li>Samplers</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/reference/samplers.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <span class="target" id="module-optuna.samplers"></span><div class="section" id="samplers">
+<h1>Samplers<a class="headerlink" href="#samplers" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="optuna.samplers.BaseSampler">
+<em class="property">class </em><code class="sig-prename descclassname">optuna.samplers.</code><code class="sig-name descname">BaseSampler</code><a class="reference internal" href="../_modules/optuna/samplers/base.html#BaseSampler"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optuna.samplers.BaseSampler" title="Permalink to this definition">¶</a></dt>
+<dd><p>Base class for samplers.</p>
+<p>Optuna combines two types of sampling strategies, which are called <em>relative sampling</em> and
+<em>independent sampling</em>.</p>
+<p><em>The relative sampling</em> determines values of multiple parameters simultaneously so that
+sampling algorithms can use relationship between parameters (e.g., correlation).
+Target parameters of the relative sampling are described in a relative search space, which
+is determined by <a class="reference internal" href="#optuna.samplers.BaseSampler.infer_relative_search_space" title="optuna.samplers.BaseSampler.infer_relative_search_space"><code class="xref py py-func docutils literal notranslate"><span class="pre">infer_relative_search_space()</span></code></a>.</p>
+<p><em>The independent sampling</em> determines a value of a single parameter without considering any
+relationship between parameters. Target parameters of the independent sampling are the
+parameters not described in the relative search space.</p>
+<p>More specifically, parameters are sampled by the following procedure.
+At the beginning of a trial, <a class="reference internal" href="#optuna.samplers.BaseSampler.infer_relative_search_space" title="optuna.samplers.BaseSampler.infer_relative_search_space"><code class="xref py py-meth docutils literal notranslate"><span class="pre">infer_relative_search_space()</span></code></a>
+is called to determine the relative search space for the trial. Then,
+<a class="reference internal" href="#optuna.samplers.BaseSampler.sample_relative" title="optuna.samplers.BaseSampler.sample_relative"><code class="xref py py-meth docutils literal notranslate"><span class="pre">sample_relative()</span></code></a> is invoked to sample parameters
+from the relative search space. During the execution of the objective function,
+<a class="reference internal" href="#optuna.samplers.BaseSampler.sample_independent" title="optuna.samplers.BaseSampler.sample_independent"><code class="xref py py-meth docutils literal notranslate"><span class="pre">sample_independent()</span></code></a> is used to sample
+parameters that don’t belong to the relative search space.</p>
+<p>The following figure depicts the lifetime of a trial and how the above three methods are
+called in the trial.</p>
+<img alt="../_images/sampling-sequence.png" src="../_images/sampling-sequence.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<dl class="method">
+<dt id="optuna.samplers.BaseSampler.infer_relative_search_space">
+<em class="property">abstract </em><code class="sig-name descname">infer_relative_search_space</code><span class="sig-paren">(</span><em class="sig-param">study</em>, <em class="sig-param">trial</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/optuna/samplers/base.html#BaseSampler.infer_relative_search_space"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optuna.samplers.BaseSampler.infer_relative_search_space" title="Permalink to this definition">¶</a></dt>
+<dd><p>Infer the search space that will be used by relative sampling in the target trial.</p>
+<p>This method is called right before <a class="reference internal" href="#optuna.samplers.BaseSampler.sample_relative" title="optuna.samplers.BaseSampler.sample_relative"><code class="xref py py-func docutils literal notranslate"><span class="pre">sample_relative()</span></code></a>
+method, and the search space returned by this method is pass to it. The parameters not
+contained in the search space will be sampled by using
+<a class="reference internal" href="#optuna.samplers.BaseSampler.sample_independent" title="optuna.samplers.BaseSampler.sample_independent"><code class="xref py py-func docutils literal notranslate"><span class="pre">sample_independent()</span></code></a> method.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>study</strong> – Target study object.</p></li>
+<li><p><strong>trial</strong> – Target trial object.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A dictionary containing the parameter names and parameter’s distributions.</p>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>Please refer to <a class="reference internal" href="#optuna.samplers.intersection_search_space" title="optuna.samplers.intersection_search_space"><code class="xref py py-func docutils literal notranslate"><span class="pre">intersection_search_space()</span></code></a> as an
+implementation of <a class="reference internal" href="#optuna.samplers.BaseSampler.infer_relative_search_space" title="optuna.samplers.BaseSampler.infer_relative_search_space"><code class="xref py py-func docutils literal notranslate"><span class="pre">infer_relative_search_space()</span></code></a>.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="optuna.samplers.BaseSampler.sample_independent">
+<em class="property">abstract </em><code class="sig-name descname">sample_independent</code><span class="sig-paren">(</span><em class="sig-param">study</em>, <em class="sig-param">trial</em>, <em class="sig-param">param_name</em>, <em class="sig-param">param_distribution</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/optuna/samplers/base.html#BaseSampler.sample_independent"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optuna.samplers.BaseSampler.sample_independent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sample a parameter for a given distribution.</p>
+<p>This method is called only for the parameters not contained in the search space returned
+by <a class="reference internal" href="#optuna.samplers.BaseSampler.sample_relative" title="optuna.samplers.BaseSampler.sample_relative"><code class="xref py py-func docutils literal notranslate"><span class="pre">sample_relative()</span></code></a> method. This method is suitable
+for sampling algorithms that do not use relationship between parameters such as random
+sampling and TPE.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>study</strong> – Target study object.</p></li>
+<li><p><strong>trial</strong> – Target trial object.</p></li>
+<li><p><strong>param_name</strong> – Name of the sampled parameter.</p></li>
+<li><p><strong>param_distribution</strong> – Distribution object that specifies a prior and/or scale of the sampling algorithm.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A parameter value.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="optuna.samplers.BaseSampler.sample_relative">
+<em class="property">abstract </em><code class="sig-name descname">sample_relative</code><span class="sig-paren">(</span><em class="sig-param">study</em>, <em class="sig-param">trial</em>, <em class="sig-param">search_space</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/optuna/samplers/base.html#BaseSampler.sample_relative"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optuna.samplers.BaseSampler.sample_relative" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sample parameters in a given search space.</p>
+<p>This method is called once at the beginning of each trial, i.e., right before the
+evaluation of the objective function. This method is suitable for sampling algorithms
+that use relationship between parameters such as Gaussian Process and CMA-ES.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>study</strong> – Target study object.</p></li>
+<li><p><strong>trial</strong> – Target trial object.</p></li>
+<li><p><strong>search_space</strong> – The search space returned by
+<a class="reference internal" href="#optuna.samplers.BaseSampler.infer_relative_search_space" title="optuna.samplers.BaseSampler.infer_relative_search_space"><code class="xref py py-func docutils literal notranslate"><span class="pre">infer_relative_search_space()</span></code></a>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A dictionary containing the parameter names and the values.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="optuna.samplers.GridSampler">
+<em class="property">class </em><code class="sig-prename descclassname">optuna.samplers.</code><code class="sig-name descname">GridSampler</code><span class="sig-paren">(</span><em class="sig-param">search_space</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/optuna/samplers/grid.html#GridSampler"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optuna.samplers.GridSampler" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sampler using grid search.</p>
+<p>With <a class="reference internal" href="#optuna.samplers.GridSampler" title="optuna.samplers.GridSampler"><code class="xref py py-class docutils literal notranslate"><span class="pre">GridSampler</span></code></a>, the trials suggest all combinations of parameters
+in the given search space during the study.</p>
+<p class="rubric">Example</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">optuna</span>
+
+<span class="k">def</span> <span class="nf">objective</span><span class="p">(</span><span class="n">trial</span><span class="p">):</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">trial</span><span class="o">.</span><span class="n">suggest_uniform</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="o">-</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">trial</span><span class="o">.</span><span class="n">suggest_int</span><span class="p">(</span><span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="o">-</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">x</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> <span class="n">y</span> <span class="o">**</span> <span class="mi">2</span>
+
+<span class="n">search_space</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;x&#39;</span><span class="p">:</span> <span class="p">[</span><span class="o">-</span><span class="mi">50</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">50</span><span class="p">],</span>
+    <span class="s1">&#39;y&#39;</span><span class="p">:</span> <span class="p">[</span><span class="o">-</span><span class="mi">99</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">99</span><span class="p">]</span>
+<span class="p">}</span>
+<span class="n">study</span> <span class="o">=</span> <span class="n">optuna</span><span class="o">.</span><span class="n">create_study</span><span class="p">(</span><span class="n">sampler</span><span class="o">=</span><span class="n">optuna</span><span class="o">.</span><span class="n">samplers</span><span class="o">.</span><span class="n">GridSampler</span><span class="p">(</span><span class="n">search_space</span><span class="p">))</span>
+<span class="n">study</span><span class="o">.</span><span class="n">optimize</span><span class="p">(</span><span class="n">objective</span><span class="p">,</span> <span class="n">n_trials</span><span class="o">=</span><span class="mi">3</span><span class="o">*</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><a class="reference internal" href="#optuna.samplers.GridSampler" title="optuna.samplers.GridSampler"><code class="xref py py-class docutils literal notranslate"><span class="pre">GridSampler</span></code></a> raises an error if all combinations in the passed
+<code class="docutils literal notranslate"><span class="pre">search_space</span></code> has already been evaluated. Please make sure that unnecessary trials do
+not run during optimization by properly setting <code class="docutils literal notranslate"><span class="pre">n_trials</span></code> in the
+<a class="reference internal" href="study.html#optuna.study.Study.optimize" title="optuna.study.Study.optimize"><code class="xref py py-func docutils literal notranslate"><span class="pre">optimize()</span></code></a> method.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><a class="reference internal" href="#optuna.samplers.GridSampler" title="optuna.samplers.GridSampler"><code class="xref py py-class docutils literal notranslate"><span class="pre">GridSampler</span></code></a> does not take care of a parameter’s quantization
+specified by discrete suggest methods but just samples one of values specified in the
+search space. E.g., in the following code snippet, either of <code class="docutils literal notranslate"><span class="pre">-0.5</span></code> or <code class="docutils literal notranslate"><span class="pre">0.5</span></code> is
+sampled as <code class="docutils literal notranslate"><span class="pre">x</span></code> instead of an integer point.</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">optuna</span>
+
+<span class="k">def</span> <span class="nf">objective</span><span class="p">(</span><span class="n">trial</span><span class="p">):</span>
+    <span class="c1"># The following suggest method specifies integer points between -5 and 5.</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">trial</span><span class="o">.</span><span class="n">suggest_discrete_uniform</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">x</span> <span class="o">**</span> <span class="mi">2</span>
+
+<span class="c1"># Non-int points are specified in the grid.</span>
+<span class="n">search_space</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;x&#39;</span><span class="p">:</span> <span class="p">[</span><span class="o">-</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">]}</span>
+<span class="n">study</span> <span class="o">=</span> <span class="n">optuna</span><span class="o">.</span><span class="n">create_study</span><span class="p">(</span><span class="n">sampler</span><span class="o">=</span><span class="n">optuna</span><span class="o">.</span><span class="n">samplers</span><span class="o">.</span><span class="n">GridSampler</span><span class="p">(</span><span class="n">search_space</span><span class="p">))</span>
+<span class="n">study</span><span class="o">.</span><span class="n">optimize</span><span class="p">(</span><span class="n">objective</span><span class="p">,</span> <span class="n">n_trials</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>search_space</strong> – A dictionary whose key and value are a parameter name and the corresponding candidates
+of values, respectively.</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Added in v1.2.0 as an experimental feature. The interface may change in newer versions
+without prior notice. See <a class="reference external" href="https://github.com/optuna/optuna/releases/tag/v1.2.0">https://github.com/optuna/optuna/releases/tag/v1.2.0</a>.</p>
+</div>
+</dd></dl>
+
+<dl class="class">
+<dt id="optuna.samplers.RandomSampler">
+<em class="property">class </em><code class="sig-prename descclassname">optuna.samplers.</code><code class="sig-name descname">RandomSampler</code><span class="sig-paren">(</span><em class="sig-param">seed=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/optuna/samplers/random.html#RandomSampler"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optuna.samplers.RandomSampler" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sampler using random sampling.</p>
+<p>This sampler is based on <em>independent sampling</em>.
+See also <a class="reference internal" href="#optuna.samplers.BaseSampler" title="optuna.samplers.BaseSampler"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseSampler</span></code></a> for more details of ‘independent sampling’.</p>
+<p class="rubric">Example</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">study</span> <span class="o">=</span> <span class="n">optuna</span><span class="o">.</span><span class="n">create_study</span><span class="p">(</span><span class="n">sampler</span><span class="o">=</span><span class="n">RandomSampler</span><span class="p">())</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">study</span><span class="o">.</span><span class="n">optimize</span><span class="p">(</span><span class="n">objective</span><span class="p">,</span> <span class="n">direction</span><span class="o">=</span><span class="s1">&#39;minimize&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="simple">
+<dt>Args:</dt><dd><p>seed: Seed for random number generator.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="optuna.samplers.TPESampler">
+<em class="property">class </em><code class="sig-prename descclassname">optuna.samplers.</code><code class="sig-name descname">TPESampler</code><span class="sig-paren">(</span><em class="sig-param">consider_prior=True</em>, <em class="sig-param">prior_weight=1.0</em>, <em class="sig-param">consider_magic_clip=True</em>, <em class="sig-param">consider_endpoints=False</em>, <em class="sig-param">n_startup_trials=10</em>, <em class="sig-param">n_ei_candidates=24</em>, <em class="sig-param">gamma=&lt;function default_gamma&gt;</em>, <em class="sig-param">weights=&lt;function default_weights&gt;</em>, <em class="sig-param">seed=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/optuna/samplers/tpe/sampler.html#TPESampler"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optuna.samplers.TPESampler" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sampler using TPE (Tree-structured Parzen Estimator) algorithm.</p>
+<p>This sampler is based on <em>independent sampling</em>.
+See also <a class="reference internal" href="#optuna.samplers.BaseSampler" title="optuna.samplers.BaseSampler"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseSampler</span></code></a> for more details of ‘independent sampling’.</p>
+<p>On each trial, for each parameter, TPE fits one Gaussian Mixture Model (GMM) <code class="docutils literal notranslate"><span class="pre">l(x)</span></code> to
+the set of parameter values associated with the best objective values, and another GMM
+<code class="docutils literal notranslate"><span class="pre">g(x)</span></code> to the remaining parameter values. It chooses the parameter value <code class="docutils literal notranslate"><span class="pre">x</span></code> that
+maximizes the ratio <code class="docutils literal notranslate"><span class="pre">l(x)/g(x)</span></code>.</p>
+<p>For further information about TPE algorithm, please refer to the following papers:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://papers.nips.cc/paper/4443-algorithms-for-hyper-parameter-optimization.pdf">Algorithms for Hyper-Parameter Optimization</a></p></li>
+<li><p><a class="reference external" href="http://proceedings.mlr.press/v28/bergstra13.pdf">Making a Science of Model Search: Hyperparameter Optimization in Hundreds of
+Dimensions for Vision Architectures</a></p></li>
+</ul>
+<p class="rubric">Example</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">optuna</span>
+<span class="kn">from</span> <span class="nn">optuna.samplers</span> <span class="k">import</span> <span class="n">TPESampler</span>
+
+<span class="k">def</span> <span class="nf">objective</span><span class="p">(</span><span class="n">trial</span><span class="p">):</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">trial</span><span class="o">.</span><span class="n">suggest_uniform</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span>
+
+<span class="n">study</span> <span class="o">=</span> <span class="n">optuna</span><span class="o">.</span><span class="n">create_study</span><span class="p">(</span><span class="n">sampler</span><span class="o">=</span><span class="n">TPESampler</span><span class="p">())</span>
+<span class="n">study</span><span class="o">.</span><span class="n">optimize</span><span class="p">(</span><span class="n">objective</span><span class="p">,</span> <span class="n">n_trials</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="method">
+<dt id="optuna.samplers.TPESampler.hyperopt_parameters">
+<em class="property">static </em><code class="sig-name descname">hyperopt_parameters</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/optuna/samplers/tpe/sampler.html#TPESampler.hyperopt_parameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optuna.samplers.TPESampler.hyperopt_parameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the the default parameters of hyperopt (v0.1.2).</p>
+<p><a class="reference internal" href="#optuna.samplers.TPESampler" title="optuna.samplers.TPESampler"><code class="xref py py-class docutils literal notranslate"><span class="pre">TPESampler</span></code></a> can be instantiated with the parameters returned
+by this method.</p>
+<p class="rubric">Example</p>
+<p>Create a <a class="reference internal" href="#optuna.samplers.TPESampler" title="optuna.samplers.TPESampler"><code class="xref py py-class docutils literal notranslate"><span class="pre">TPESampler</span></code></a> instance with the default
+parameters of <a class="reference external" href="https://github.com/hyperopt/hyperopt/tree/0.1.2">hyperopt</a>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">optuna</span>
+<span class="kn">from</span> <span class="nn">optuna.samplers</span> <span class="k">import</span> <span class="n">TPESampler</span>
+
+<span class="k">def</span> <span class="nf">objective</span><span class="p">(</span><span class="n">trial</span><span class="p">):</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">trial</span><span class="o">.</span><span class="n">suggest_uniform</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span>
+
+<span class="n">sampler</span> <span class="o">=</span> <span class="n">TPESampler</span><span class="p">(</span><span class="o">**</span><span class="n">TPESampler</span><span class="o">.</span><span class="n">hyperopt_parameters</span><span class="p">())</span>
+<span class="n">study</span> <span class="o">=</span> <span class="n">optuna</span><span class="o">.</span><span class="n">create_study</span><span class="p">(</span><span class="n">sampler</span><span class="o">=</span><span class="n">sampler</span><span class="p">)</span>
+<span class="n">study</span><span class="o">.</span><span class="n">optimize</span><span class="p">(</span><span class="n">objective</span><span class="p">,</span> <span class="n">n_trials</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>A dictionary containing the default parameters of hyperopt.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="optuna.samplers.intersection_search_space">
+<code class="sig-prename descclassname">optuna.samplers.</code><code class="sig-name descname">intersection_search_space</code><span class="sig-paren">(</span><em class="sig-param">study</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/optuna/samplers.html#intersection_search_space"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optuna.samplers.intersection_search_space" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the intersection search space of the <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseStudy</span></code>.</p>
+<p>Intersection search space contains the intersection of parameter distributions that have been
+suggested in the completed trials of the study so far.
+If there are multiple parameters that have the same name but different distributions,
+neither is included in the resulting search space
+(i.e., the parameters with dynamic value ranges are excluded).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>A dictionary containing the parameter names and parameter’s distributions.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="storages.html" class="btn btn-neutral float-right" title="Storages" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="pruners.html" class="btn btn-neutral float-left" title="Pruners" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Optuna Contributors.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+    <a href="../privacy.html">Privacy Policy</a>.
+     
+
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

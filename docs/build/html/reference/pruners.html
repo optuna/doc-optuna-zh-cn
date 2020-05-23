@@ -1,0 +1,526 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Pruners &mdash; Optuna 1.2.0 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Samplers" href="samplers.html" />
+    <link rel="prev" title="Trial" href="multi_objective/trial.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Optuna
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.2.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial/index.html">Tutorial</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">API Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="cli.html">Command Line Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="distributions.html">Distributions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exceptions.html">Exceptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="importance.html">Hyperparameter Importance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="integration.html">Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="logging.html">Logging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="multi_objective/index.html">Multi-objective</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Pruners</a></li>
+<li class="toctree-l2"><a class="reference internal" href="samplers.html">Samplers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="storages.html">Storages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structs.html">Structs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="study.html">Study</a></li>
+<li class="toctree-l2"><a class="reference internal" href="trial.html">Trial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="visualization.html">Visualization</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">FAQ</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Optuna</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">API Reference</a> &raquo;</li>
+        
+      <li>Pruners</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/reference/pruners.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <span class="target" id="module-optuna.pruners"></span><div class="section" id="pruners">
+<h1>Pruners<a class="headerlink" href="#pruners" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="optuna.pruners.BasePruner">
+<em class="property">class </em><code class="sig-prename descclassname">optuna.pruners.</code><code class="sig-name descname">BasePruner</code><a class="reference internal" href="../_modules/optuna/pruners/base.html#BasePruner"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optuna.pruners.BasePruner" title="Permalink to this definition">¶</a></dt>
+<dd><p>Base class for pruners.</p>
+<dl class="method">
+<dt id="optuna.pruners.BasePruner.prune">
+<em class="property">abstract </em><code class="sig-name descname">prune</code><span class="sig-paren">(</span><em class="sig-param">study</em>, <em class="sig-param">trial</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/optuna/pruners/base.html#BasePruner.prune"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optuna.pruners.BasePruner.prune" title="Permalink to this definition">¶</a></dt>
+<dd><p>Judge whether the trial should be pruned based on the reported values.</p>
+<p>Note that this method is not supposed to be called by library users. Instead,
+<a class="reference internal" href="trial.html#optuna.trial.Trial.report" title="optuna.trial.Trial.report"><code class="xref py py-func docutils literal notranslate"><span class="pre">optuna.trial.Trial.report()</span></code></a> and <a class="reference internal" href="trial.html#optuna.trial.Trial.should_prune" title="optuna.trial.Trial.should_prune"><code class="xref py py-func docutils literal notranslate"><span class="pre">optuna.trial.Trial.should_prune()</span></code></a> provide
+user interfaces to implement pruning mechanism in an objective function.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>study</strong> – Study object of the target study.</p></li>
+<li><p><strong>trial</strong> – FrozenTrial object of the target trial.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A boolean value representing whether the trial should be pruned.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="optuna.pruners.MedianPruner">
+<em class="property">class </em><code class="sig-prename descclassname">optuna.pruners.</code><code class="sig-name descname">MedianPruner</code><span class="sig-paren">(</span><em class="sig-param">n_startup_trials=5</em>, <em class="sig-param">n_warmup_steps=0</em>, <em class="sig-param">interval_steps=1</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/optuna/pruners/median.html#MedianPruner"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optuna.pruners.MedianPruner" title="Permalink to this definition">¶</a></dt>
+<dd><p>Pruner using the median stopping rule.</p>
+<p>Prune if the trial’s best intermediate result is worse than median of intermediate results of
+previous trials at the same step.</p>
+<p class="rubric">Example</p>
+<p>We minimize an objective function with the median stopping rule.</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">optuna</span>
+<span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="k">import</span> <span class="n">SGDClassifier</span>
+
+<span class="k">def</span> <span class="nf">objective</span><span class="p">(</span><span class="n">trial</span><span class="p">):</span>
+    <span class="n">alpha</span> <span class="o">=</span> <span class="n">trial</span><span class="o">.</span><span class="n">suggest_uniform</span><span class="p">(</span><span class="s1">&#39;alpha&#39;</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span>
+    <span class="n">clf</span> <span class="o">=</span> <span class="n">SGDClassifier</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="n">alpha</span><span class="p">)</span>
+    <span class="n">n_train_iter</span> <span class="o">=</span> <span class="mi">100</span>
+
+    <span class="k">for</span> <span class="n">step</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_train_iter</span><span class="p">):</span>
+        <span class="n">clf</span><span class="o">.</span><span class="n">partial_fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">classes</span><span class="o">=</span><span class="n">classes</span><span class="p">)</span>
+
+        <span class="n">intermediate_value</span> <span class="o">=</span> <span class="n">clf</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span>
+        <span class="n">trial</span><span class="o">.</span><span class="n">report</span><span class="p">(</span><span class="n">intermediate_value</span><span class="p">,</span> <span class="n">step</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">trial</span><span class="o">.</span><span class="n">should_prune</span><span class="p">():</span>
+            <span class="k">raise</span> <span class="n">optuna</span><span class="o">.</span><span class="n">exceptions</span><span class="o">.</span><span class="n">TrialPruned</span><span class="p">()</span>
+
+    <span class="k">return</span> <span class="n">clf</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span>
+
+<span class="n">study</span> <span class="o">=</span> <span class="n">optuna</span><span class="o">.</span><span class="n">create_study</span><span class="p">(</span><span class="n">direction</span><span class="o">=</span><span class="s1">&#39;maximize&#39;</span><span class="p">,</span>
+                            <span class="n">pruner</span><span class="o">=</span><span class="n">optuna</span><span class="o">.</span><span class="n">pruners</span><span class="o">.</span><span class="n">MedianPruner</span><span class="p">(</span><span class="n">n_startup_trials</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
+                                                               <span class="n">n_warmup_steps</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span>
+                                                               <span class="n">interval_steps</span><span class="o">=</span><span class="mi">10</span><span class="p">))</span>
+<span class="n">study</span><span class="o">.</span><span class="n">optimize</span><span class="p">(</span><span class="n">objective</span><span class="p">,</span> <span class="n">n_trials</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>n_startup_trials</strong> – Pruning is disabled until the given number of trials finish in the same study.</p></li>
+<li><p><strong>n_warmup_steps</strong> – Pruning is disabled until the trial reaches the given number of step.</p></li>
+<li><p><strong>interval_steps</strong> – Interval in number of steps between the pruning checks, offset by the warmup steps.
+If no value has been reported at the time of a pruning check, that particular check
+will be postponed until a value is reported.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="optuna.pruners.NopPruner">
+<em class="property">class </em><code class="sig-prename descclassname">optuna.pruners.</code><code class="sig-name descname">NopPruner</code><a class="reference internal" href="../_modules/optuna/pruners/nop.html#NopPruner"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optuna.pruners.NopPruner" title="Permalink to this definition">¶</a></dt>
+<dd><p>Pruner which never prunes trials.</p>
+<p class="rubric">Example</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">optuna</span>
+<span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="k">import</span> <span class="n">SGDClassifier</span>
+
+<span class="k">def</span> <span class="nf">objective</span><span class="p">(</span><span class="n">trial</span><span class="p">):</span>
+    <span class="n">alpha</span> <span class="o">=</span> <span class="n">trial</span><span class="o">.</span><span class="n">suggest_uniform</span><span class="p">(</span><span class="s1">&#39;alpha&#39;</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span>
+    <span class="n">clf</span> <span class="o">=</span> <span class="n">SGDClassifier</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="n">alpha</span><span class="p">)</span>
+    <span class="n">n_train_iter</span> <span class="o">=</span> <span class="mi">100</span>
+
+    <span class="k">for</span> <span class="n">step</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_train_iter</span><span class="p">):</span>
+        <span class="n">clf</span><span class="o">.</span><span class="n">partial_fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">classes</span><span class="o">=</span><span class="n">classes</span><span class="p">)</span>
+
+        <span class="n">intermediate_value</span> <span class="o">=</span> <span class="n">clf</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span>
+        <span class="n">trial</span><span class="o">.</span><span class="n">report</span><span class="p">(</span><span class="n">intermediate_value</span><span class="p">,</span> <span class="n">step</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">trial</span><span class="o">.</span><span class="n">should_prune</span><span class="p">():</span>
+            <span class="k">assert</span> <span class="kc">False</span><span class="p">,</span> <span class="s2">&quot;should_prune() should always return False with this pruner.&quot;</span>
+            <span class="k">raise</span> <span class="n">optuna</span><span class="o">.</span><span class="n">exceptions</span><span class="o">.</span><span class="n">TrialPruned</span><span class="p">()</span>
+
+    <span class="k">return</span> <span class="n">clf</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span>
+
+<span class="n">study</span> <span class="o">=</span> <span class="n">optuna</span><span class="o">.</span><span class="n">create_study</span><span class="p">(</span><span class="n">direction</span><span class="o">=</span><span class="s1">&#39;maximize&#39;</span><span class="p">,</span>
+                            <span class="n">pruner</span><span class="o">=</span><span class="n">optuna</span><span class="o">.</span><span class="n">pruners</span><span class="o">.</span><span class="n">NopPruner</span><span class="p">())</span>
+<span class="n">study</span><span class="o">.</span><span class="n">optimize</span><span class="p">(</span><span class="n">objective</span><span class="p">,</span> <span class="n">n_trials</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="class">
+<dt id="optuna.pruners.PercentilePruner">
+<em class="property">class </em><code class="sig-prename descclassname">optuna.pruners.</code><code class="sig-name descname">PercentilePruner</code><span class="sig-paren">(</span><em class="sig-param">percentile</em>, <em class="sig-param">n_startup_trials=5</em>, <em class="sig-param">n_warmup_steps=0</em>, <em class="sig-param">interval_steps=1</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/optuna/pruners/percentile.html#PercentilePruner"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optuna.pruners.PercentilePruner" title="Permalink to this definition">¶</a></dt>
+<dd><p>Pruner to keep the specified percentile of the trials.</p>
+<p>Prune if the best intermediate value is in the bottom percentile among trials at the same step.</p>
+<p class="rubric">Example</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">optuna</span>
+<span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="k">import</span> <span class="n">SGDClassifier</span>
+
+<span class="k">def</span> <span class="nf">objective</span><span class="p">(</span><span class="n">trial</span><span class="p">):</span>
+    <span class="n">alpha</span> <span class="o">=</span> <span class="n">trial</span><span class="o">.</span><span class="n">suggest_uniform</span><span class="p">(</span><span class="s1">&#39;alpha&#39;</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span>
+    <span class="n">clf</span> <span class="o">=</span> <span class="n">SGDClassifier</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="n">alpha</span><span class="p">)</span>
+    <span class="n">n_train_iter</span> <span class="o">=</span> <span class="mi">100</span>
+
+    <span class="k">for</span> <span class="n">step</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_train_iter</span><span class="p">):</span>
+        <span class="n">clf</span><span class="o">.</span><span class="n">partial_fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">classes</span><span class="o">=</span><span class="n">classes</span><span class="p">)</span>
+
+        <span class="n">intermediate_value</span> <span class="o">=</span> <span class="n">clf</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span>
+        <span class="n">trial</span><span class="o">.</span><span class="n">report</span><span class="p">(</span><span class="n">intermediate_value</span><span class="p">,</span> <span class="n">step</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">trial</span><span class="o">.</span><span class="n">should_prune</span><span class="p">():</span>
+            <span class="k">raise</span> <span class="n">optuna</span><span class="o">.</span><span class="n">exceptions</span><span class="o">.</span><span class="n">TrialPruned</span><span class="p">()</span>
+
+    <span class="k">return</span> <span class="n">clf</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span>
+
+<span class="n">study</span> <span class="o">=</span> <span class="n">optuna</span><span class="o">.</span><span class="n">create_study</span><span class="p">(</span>
+    <span class="n">direction</span><span class="o">=</span><span class="s1">&#39;maximize&#39;</span><span class="p">,</span>
+    <span class="n">pruner</span><span class="o">=</span><span class="n">optuna</span><span class="o">.</span><span class="n">pruners</span><span class="o">.</span><span class="n">PercentilePruner</span><span class="p">(</span><span class="mf">25.0</span><span class="p">,</span> <span class="n">n_startup_trials</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
+                                           <span class="n">n_warmup_steps</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">interval_steps</span><span class="o">=</span><span class="mi">10</span><span class="p">))</span>
+<span class="n">study</span><span class="o">.</span><span class="n">optimize</span><span class="p">(</span><span class="n">objective</span><span class="p">,</span> <span class="n">n_trials</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>percentile</strong> – Percentile which must be between 0 and 100 inclusive
+(e.g., When given 25.0, top of 25th percentile trials are kept).</p></li>
+<li><p><strong>n_startup_trials</strong> – Pruning is disabled until the given number of trials finish in the same study.</p></li>
+<li><p><strong>n_warmup_steps</strong> – Pruning is disabled until the trial reaches the given number of step.</p></li>
+<li><p><strong>interval_steps</strong> – Interval in number of steps between the pruning checks, offset by the warmup steps.
+If no value has been reported at the time of a pruning check, that particular check
+will be postponed until a value is reported. Value must be at least 1.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="optuna.pruners.SuccessiveHalvingPruner">
+<em class="property">class </em><code class="sig-prename descclassname">optuna.pruners.</code><code class="sig-name descname">SuccessiveHalvingPruner</code><span class="sig-paren">(</span><em class="sig-param">min_resource='auto'</em>, <em class="sig-param">reduction_factor=4</em>, <em class="sig-param">min_early_stopping_rate=0</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/optuna/pruners/successive_halving.html#SuccessiveHalvingPruner"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optuna.pruners.SuccessiveHalvingPruner" title="Permalink to this definition">¶</a></dt>
+<dd><p>Pruner using Asynchronous Successive Halving Algorithm.</p>
+<p><a class="reference external" href="https://arxiv.org/abs/1502.07943">Successive Halving</a> is a bandit-based algorithm to
+identify the best one among multiple configurations. This class implements an asynchronous
+version of Successive Halving. Please refer to the paper of
+<a class="reference external" href="http://arxiv.org/abs/1810.05934">Asynchronous Successive Halving</a> for detailed descriptions.</p>
+<p>Note that, this class does not take care of the parameter for the maximum
+resource, referred to as <span class="math notranslate nohighlight">\(R\)</span> in the paper. The maximum resource allocated to a trial is
+typically limited inside the objective function (e.g., <code class="docutils literal notranslate"><span class="pre">step</span></code> number in <a class="reference external" href="https://github.com/optuna/optuna/tree/c5777b3e/examples/pruning/simple.py#L31">simple.py</a>,
+<code class="docutils literal notranslate"><span class="pre">EPOCH</span></code> number in <a class="reference external" href="https://github.com/optuna/optuna/tree/c5777b3e/examples/pruning/chainer_integration.py#L65">chainer_integration.py</a>).</p>
+<p class="rubric">Example</p>
+<p>We minimize an objective function with <code class="docutils literal notranslate"><span class="pre">SuccessiveHalvingPruner</span></code>.</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">optuna</span>
+<span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="k">import</span> <span class="n">SGDClassifier</span>
+
+<span class="k">def</span> <span class="nf">objective</span><span class="p">(</span><span class="n">trial</span><span class="p">):</span>
+    <span class="n">alpha</span> <span class="o">=</span> <span class="n">trial</span><span class="o">.</span><span class="n">suggest_uniform</span><span class="p">(</span><span class="s1">&#39;alpha&#39;</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span>
+    <span class="n">clf</span> <span class="o">=</span> <span class="n">SGDClassifier</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="n">alpha</span><span class="p">)</span>
+    <span class="n">n_train_iter</span> <span class="o">=</span> <span class="mi">100</span>
+
+    <span class="k">for</span> <span class="n">step</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_train_iter</span><span class="p">):</span>
+        <span class="n">clf</span><span class="o">.</span><span class="n">partial_fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">classes</span><span class="o">=</span><span class="n">classes</span><span class="p">)</span>
+
+        <span class="n">intermediate_value</span> <span class="o">=</span> <span class="n">clf</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span>
+        <span class="n">trial</span><span class="o">.</span><span class="n">report</span><span class="p">(</span><span class="n">intermediate_value</span><span class="p">,</span> <span class="n">step</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">trial</span><span class="o">.</span><span class="n">should_prune</span><span class="p">():</span>
+            <span class="k">raise</span> <span class="n">optuna</span><span class="o">.</span><span class="n">exceptions</span><span class="o">.</span><span class="n">TrialPruned</span><span class="p">()</span>
+
+    <span class="k">return</span> <span class="n">clf</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span>
+
+<span class="n">study</span> <span class="o">=</span> <span class="n">optuna</span><span class="o">.</span><span class="n">create_study</span><span class="p">(</span><span class="n">direction</span><span class="o">=</span><span class="s1">&#39;maximize&#39;</span><span class="p">,</span>
+                            <span class="n">pruner</span><span class="o">=</span><span class="n">optuna</span><span class="o">.</span><span class="n">pruners</span><span class="o">.</span><span class="n">SuccessiveHalvingPruner</span><span class="p">())</span>
+<span class="n">study</span><span class="o">.</span><span class="n">optimize</span><span class="p">(</span><span class="n">objective</span><span class="p">,</span> <span class="n">n_trials</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>min_resource</strong> – <p>A parameter for specifying the minimum resource allocated to a trial
+(in the <a class="reference external" href="http://arxiv.org/abs/1810.05934">paper</a> this parameter is
+referred to as <span class="math notranslate nohighlight">\(r\)</span>).
+This parameter defaults to ‘auto’ where the value is determined based on a heuristic
+that looks at the number of required steps for the first trial to complete.</p>
+<p>A trial is never pruned until it executes
+<span class="math notranslate nohighlight">\(\mathsf{min}\_\mathsf{resource} \times
+\mathsf{reduction}\_\mathsf{factor}^{
+\mathsf{min}\_\mathsf{early}\_\mathsf{stopping}\_\mathsf{rate}}\)</span>
+steps (i.e., the completion point of the first rung). When the trial completes
+the first rung, it will be promoted to the next rung only
+if the value of the trial is placed in the top
+<span class="math notranslate nohighlight">\({1 \over \mathsf{reduction}\_\mathsf{factor}}\)</span> fraction of
+the all trials that already have reached the point (otherwise it will be pruned there).
+If the trial won the competition, it runs until the next completion point (i.e.,
+<span class="math notranslate nohighlight">\(\mathsf{min}\_\mathsf{resource} \times
+\mathsf{reduction}\_\mathsf{factor}^{
+(\mathsf{min}\_\mathsf{early}\_\mathsf{stopping}\_\mathsf{rate}
++ \mathsf{rung})}\)</span> steps)
+and repeats the same procedure.</p>
+</p></li>
+<li><p><strong>reduction_factor</strong> – <p>A parameter for specifying reduction factor of promotable trials
+(in the <a class="reference external" href="http://arxiv.org/abs/1810.05934">paper</a> this parameter is
+referred to as <span class="math notranslate nohighlight">\(\eta\)</span>).  At the completion point of each rung,
+about <span class="math notranslate nohighlight">\({1 \over \mathsf{reduction}\_\mathsf{factor}}\)</span>
+trials will be promoted.</p>
+</p></li>
+<li><p><strong>min_early_stopping_rate</strong> – <p>A parameter for specifying the minimum early-stopping rate
+(in the <a class="reference external" href="http://arxiv.org/abs/1810.05934">paper</a> this parameter is
+referred to as <span class="math notranslate nohighlight">\(s\)</span>).</p>
+</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="optuna.pruners.HyperbandPruner">
+<em class="property">class </em><code class="sig-prename descclassname">optuna.pruners.</code><code class="sig-name descname">HyperbandPruner</code><span class="sig-paren">(</span><em class="sig-param">min_resource=1</em>, <em class="sig-param">reduction_factor=3</em>, <em class="sig-param">n_brackets=4</em>, <em class="sig-param">min_early_stopping_rate_low=0</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/optuna/pruners/hyperband.html#HyperbandPruner"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optuna.pruners.HyperbandPruner" title="Permalink to this definition">¶</a></dt>
+<dd><p>Pruner using Hyperband.</p>
+<p>As SuccessiveHalving (SHA) requires the number of configurations
+<span class="math notranslate nohighlight">\(n\)</span> as its hyperparameter.  For a given finite budget <span class="math notranslate nohighlight">\(B\)</span>,
+all the configurations have the resources of <span class="math notranslate nohighlight">\(B \over n\)</span> on average.
+As you can see, there will be a trade-off of <span class="math notranslate nohighlight">\(B\)</span> and <span class="math notranslate nohighlight">\(B \over n\)</span>.
+<a class="reference external" href="http://www.jmlr.org/papers/volume18/16-558/16-558.pdf">Hyperband</a> attacks this trade-off
+by trying different <span class="math notranslate nohighlight">\(n\)</span> values for a fixed budget.
+Note that this implementation does not take as inputs the maximum amount of resource to
+a single SHA noted as <span class="math notranslate nohighlight">\(R\)</span> in the paper.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul class="simple">
+<li><p>In the Hyperband paper, the counterpart of <a class="reference internal" href="samplers.html#optuna.samplers.RandomSampler" title="optuna.samplers.RandomSampler"><code class="xref py py-class docutils literal notranslate"><span class="pre">RandomSampler</span></code></a>
+is used.</p></li>
+<li><p>Optuna uses <a class="reference internal" href="samplers.html#optuna.samplers.TPESampler" title="optuna.samplers.TPESampler"><code class="xref py py-class docutils literal notranslate"><span class="pre">TPESampler</span></code></a> by default.</p></li>
+<li><p><a class="reference external" href="https://github.com/optuna/optuna/pull/828#issuecomment-575457360">The benchmark result</a>
+shows that <a class="reference internal" href="#optuna.pruners.HyperbandPruner" title="optuna.pruners.HyperbandPruner"><code class="xref py py-class docutils literal notranslate"><span class="pre">optuna.pruners.HyperbandPruner</span></code></a> supports both samplers.</p></li>
+</ul>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you use <code class="docutils literal notranslate"><span class="pre">HyperbandPruner</span></code> with <a class="reference internal" href="samplers.html#optuna.samplers.TPESampler" title="optuna.samplers.TPESampler"><code class="xref py py-class docutils literal notranslate"><span class="pre">TPESampler</span></code></a>,
+it’s recommended to consider to set larger <code class="docutils literal notranslate"><span class="pre">n_trials</span></code> or <code class="docutils literal notranslate"><span class="pre">timeout</span></code> to make full use of
+the characteristics of <a class="reference internal" href="samplers.html#optuna.samplers.TPESampler" title="optuna.samplers.TPESampler"><code class="xref py py-class docutils literal notranslate"><span class="pre">TPESampler</span></code></a>
+because <a class="reference internal" href="samplers.html#optuna.samplers.TPESampler" title="optuna.samplers.TPESampler"><code class="xref py py-class docutils literal notranslate"><span class="pre">TPESampler</span></code></a> uses some (by default, <span class="math notranslate nohighlight">\(10\)</span>)
+<a class="reference internal" href="trial.html#optuna.trial.Trial" title="optuna.trial.Trial"><code class="xref py py-class docutils literal notranslate"><span class="pre">Trial</span></code></a>s for its startup.</p>
+<p>As Hyperband runs multiple <a class="reference internal" href="#optuna.pruners.SuccessiveHalvingPruner" title="optuna.pruners.SuccessiveHalvingPruner"><code class="xref py py-class docutils literal notranslate"><span class="pre">SuccessiveHalvingPruner</span></code></a> and collect
+trials based on the current <a class="reference internal" href="trial.html#optuna.trial.Trial" title="optuna.trial.Trial"><code class="xref py py-class docutils literal notranslate"><span class="pre">Trial</span></code></a>’s bracket ID, each bracket
+needs to observe more than <span class="math notranslate nohighlight">\(10\)</span> <a class="reference internal" href="trial.html#optuna.trial.Trial" title="optuna.trial.Trial"><code class="xref py py-class docutils literal notranslate"><span class="pre">Trial</span></code></a>s
+for <a class="reference internal" href="samplers.html#optuna.samplers.TPESampler" title="optuna.samplers.TPESampler"><code class="xref py py-class docutils literal notranslate"><span class="pre">TPESampler</span></code></a> to adapt its search space.</p>
+<p>Thus, for example, if <code class="docutils literal notranslate"><span class="pre">HyperbandPruner</span></code> has <span class="math notranslate nohighlight">\(4\)</span> pruners in it,
+at least <span class="math notranslate nohighlight">\(4 \times 10\)</span> pruners are consumed for startup.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>min_resource</strong> – A parameter for specifying the minimum resource allocated to a trial noted as <span class="math notranslate nohighlight">\(r\)</span>
+in the paper.
+See the details for <a class="reference internal" href="#optuna.pruners.SuccessiveHalvingPruner" title="optuna.pruners.SuccessiveHalvingPruner"><code class="xref py py-class docutils literal notranslate"><span class="pre">SuccessiveHalvingPruner</span></code></a>.</p></li>
+<li><p><strong>reduction_factor</strong> – A parameter for specifying reduction factor of promotable trials noted as
+<span class="math notranslate nohighlight">\(\eta\)</span> in the paper. See the details for
+<a class="reference internal" href="#optuna.pruners.SuccessiveHalvingPruner" title="optuna.pruners.SuccessiveHalvingPruner"><code class="xref py py-class docutils literal notranslate"><span class="pre">SuccessiveHalvingPruner</span></code></a>.</p></li>
+<li><p><strong>n_brackets</strong> – The number of <a class="reference internal" href="#optuna.pruners.SuccessiveHalvingPruner" title="optuna.pruners.SuccessiveHalvingPruner"><code class="xref py py-class docutils literal notranslate"><span class="pre">SuccessiveHalvingPruner</span></code></a>s (brackets).
+Defaults to :math`4`. See
+<a class="reference external" href="https://github.com/optuna/optuna/pull/809#discussion_r361363897">https://github.com/optuna/optuna/pull/809#discussion_r361363897</a>.</p></li>
+<li><p><strong>min_early_stopping_rate_low</strong> – A parameter for specifying the minimum early-stopping rate.
+This parameter is related to a parameter that is referred to as <span class="math notranslate nohighlight">\(r\)</span> and used in
+<a class="reference external" href="http://arxiv.org/abs/1810.05934">Asynchronous SuccessiveHalving paper</a>.
+The minimum early stopping rate for <span class="math notranslate nohighlight">\(i\)</span> th bracket is <span class="math notranslate nohighlight">\(i + s\)</span>.</p></li>
+</ul>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Added in v1.1.0 as an experimental feature. The interface may change in newer versions
+without prior notice. See <a class="reference external" href="https://github.com/optuna/optuna/releases/tag/v1.1.0">https://github.com/optuna/optuna/releases/tag/v1.1.0</a>.</p>
+</div>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="samplers.html" class="btn btn-neutral float-right" title="Samplers" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="multi_objective/trial.html" class="btn btn-neutral float-left" title="Trial" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Optuna Contributors.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+    <a href="../privacy.html">Privacy Policy</a>.
+     
+
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

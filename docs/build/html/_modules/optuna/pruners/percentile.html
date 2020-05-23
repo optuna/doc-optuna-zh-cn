@@ -1,0 +1,381 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>optuna.pruners.percentile &mdash; Optuna 1.2.0 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Optuna
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.2.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../tutorial/index.html">Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../reference/index.html">API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../faq.html">FAQ</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Optuna</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../index.html">Module code</a> &raquo;</li>
+        
+      <li>optuna.pruners.percentile</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for optuna.pruners.percentile</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">functools</span>
+<span class="kn">import</span> <span class="nn">math</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="kn">from</span> <span class="nn">optuna.pruners</span> <span class="k">import</span> <span class="n">BasePruner</span>
+<span class="kn">from</span> <span class="nn">optuna</span> <span class="k">import</span> <span class="n">structs</span>
+<span class="kn">from</span> <span class="nn">optuna</span> <span class="k">import</span> <span class="n">type_checking</span>
+
+<span class="k">if</span> <span class="n">type_checking</span><span class="o">.</span><span class="n">TYPE_CHECKING</span><span class="p">:</span>
+    <span class="kn">from</span> <span class="nn">typing</span> <span class="k">import</span> <span class="n">KeysView</span>  <span class="c1"># NOQA</span>
+    <span class="kn">from</span> <span class="nn">typing</span> <span class="k">import</span> <span class="n">List</span>  <span class="c1"># NOQA</span>
+
+    <span class="kn">from</span> <span class="nn">optuna.study</span> <span class="k">import</span> <span class="n">Study</span>  <span class="c1"># NOQA</span>
+
+
+<span class="k">def</span> <span class="nf">_get_best_intermediate_result_over_steps</span><span class="p">(</span><span class="n">trial</span><span class="p">,</span> <span class="n">direction</span><span class="p">):</span>
+    <span class="c1"># type: (structs.FrozenTrial, structs.StudyDirection) -&gt; float</span>
+
+    <span class="n">values</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">trial</span><span class="o">.</span><span class="n">intermediate_values</span><span class="o">.</span><span class="n">values</span><span class="p">()),</span> <span class="n">np</span><span class="o">.</span><span class="n">float</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">direction</span> <span class="o">==</span> <span class="n">structs</span><span class="o">.</span><span class="n">StudyDirection</span><span class="o">.</span><span class="n">MAXIMIZE</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">nanmax</span><span class="p">(</span><span class="n">values</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">nanmin</span><span class="p">(</span><span class="n">values</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">_get_percentile_intermediate_result_over_trials</span><span class="p">(</span><span class="n">all_trials</span><span class="p">,</span> <span class="n">direction</span><span class="p">,</span> <span class="n">step</span><span class="p">,</span> <span class="n">percentile</span><span class="p">):</span>
+    <span class="c1"># type: (List[structs.FrozenTrial], structs.StudyDirection, int, float) -&gt; float</span>
+
+    <span class="n">completed_trials</span> <span class="o">=</span> <span class="p">[</span><span class="n">t</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">all_trials</span> <span class="k">if</span> <span class="n">t</span><span class="o">.</span><span class="n">state</span> <span class="o">==</span> <span class="n">structs</span><span class="o">.</span><span class="n">TrialState</span><span class="o">.</span><span class="n">COMPLETE</span><span class="p">]</span>
+
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">completed_trials</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;No trials have been completed.&quot;</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">direction</span> <span class="o">==</span> <span class="n">structs</span><span class="o">.</span><span class="n">StudyDirection</span><span class="o">.</span><span class="n">MAXIMIZE</span><span class="p">:</span>
+        <span class="n">percentile</span> <span class="o">=</span> <span class="mi">100</span> <span class="o">-</span> <span class="n">percentile</span>
+
+    <span class="k">return</span> <span class="nb">float</span><span class="p">(</span>
+        <span class="n">np</span><span class="o">.</span><span class="n">nanpercentile</span><span class="p">(</span>
+            <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span>
+                <span class="n">t</span><span class="o">.</span><span class="n">intermediate_values</span><span class="p">[</span><span class="n">step</span><span class="p">]</span>
+                <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">completed_trials</span> <span class="k">if</span> <span class="n">step</span> <span class="ow">in</span> <span class="n">t</span><span class="o">.</span><span class="n">intermediate_values</span>
+            <span class="p">],</span> <span class="n">np</span><span class="o">.</span><span class="n">float</span><span class="p">),</span>
+            <span class="n">percentile</span><span class="p">))</span>
+
+
+<span class="k">def</span> <span class="nf">_is_first_in_interval_step</span><span class="p">(</span><span class="n">step</span><span class="p">,</span> <span class="n">intermediate_steps</span><span class="p">,</span> <span class="n">n_warmup_steps</span><span class="p">,</span> <span class="n">interval_steps</span><span class="p">):</span>
+    <span class="c1"># type: (int, KeysView[int], int, int) -&gt; bool</span>
+
+    <span class="n">nearest_lower_pruning_step</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="p">(</span><span class="n">step</span> <span class="o">-</span> <span class="n">n_warmup_steps</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">//</span> <span class="n">interval_steps</span> <span class="o">*</span> <span class="n">interval_steps</span> <span class="o">+</span> <span class="n">n_warmup_steps</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">nearest_lower_pruning_step</span> <span class="o">&gt;=</span> <span class="mi">0</span>
+
+    <span class="c1"># `intermediate_steps` may not be sorted so we must go through all elements.</span>
+    <span class="n">second_last_step</span> <span class="o">=</span> <span class="n">functools</span><span class="o">.</span><span class="n">reduce</span><span class="p">(</span>
+        <span class="k">lambda</span> <span class="n">second_last_step</span><span class="p">,</span> <span class="n">s</span><span class="p">:</span> <span class="n">s</span> <span class="k">if</span> <span class="n">s</span> <span class="o">&gt;</span> <span class="n">second_last_step</span> <span class="ow">and</span> <span class="n">s</span> <span class="o">!=</span> <span class="n">step</span>
+        <span class="k">else</span> <span class="n">second_last_step</span><span class="p">,</span> <span class="n">intermediate_steps</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">second_last_step</span> <span class="o">&lt;</span> <span class="n">nearest_lower_pruning_step</span>
+
+
+<div class="viewcode-block" id="PercentilePruner"><a class="viewcode-back" href="../../../reference/pruners.html#optuna.pruners.PercentilePruner">[docs]</a><span class="k">class</span> <span class="nc">PercentilePruner</span><span class="p">(</span><span class="n">BasePruner</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Pruner to keep the specified percentile of the trials.</span>
+
+<span class="sd">    Prune if the best intermediate value is in the bottom percentile among trials at the same step.</span>
+
+<span class="sd">    Example:</span>
+
+<span class="sd">        .. testsetup::</span>
+
+<span class="sd">            import numpy as np</span>
+<span class="sd">            from sklearn.model_selection import train_test_split</span>
+
+<span class="sd">            np.random.seed(seed=0)</span>
+<span class="sd">            X = np.random.randn(200).reshape(-1, 1)</span>
+<span class="sd">            y = np.where(X[:, 0] &lt; 0.5, 0, 1)</span>
+<span class="sd">            X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=0)</span>
+<span class="sd">            classes = np.unique(y)</span>
+
+<span class="sd">        .. testcode::</span>
+
+<span class="sd">            import optuna</span>
+<span class="sd">            from sklearn.linear_model import SGDClassifier</span>
+
+<span class="sd">            def objective(trial):</span>
+<span class="sd">                alpha = trial.suggest_uniform(&#39;alpha&#39;, 0.0, 1.0)</span>
+<span class="sd">                clf = SGDClassifier(alpha=alpha)</span>
+<span class="sd">                n_train_iter = 100</span>
+
+<span class="sd">                for step in range(n_train_iter):</span>
+<span class="sd">                    clf.partial_fit(X_train, y_train, classes=classes)</span>
+
+<span class="sd">                    intermediate_value = clf.score(X_test, y_test)</span>
+<span class="sd">                    trial.report(intermediate_value, step)</span>
+
+<span class="sd">                    if trial.should_prune():</span>
+<span class="sd">                        raise optuna.exceptions.TrialPruned()</span>
+
+<span class="sd">                return clf.score(X_test, y_test)</span>
+
+<span class="sd">            study = optuna.create_study(</span>
+<span class="sd">                direction=&#39;maximize&#39;,</span>
+<span class="sd">                pruner=optuna.pruners.PercentilePruner(25.0, n_startup_trials=5,</span>
+<span class="sd">                                                       n_warmup_steps=30, interval_steps=10))</span>
+<span class="sd">            study.optimize(objective, n_trials=20)</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        percentile:</span>
+<span class="sd">            Percentile which must be between 0 and 100 inclusive</span>
+<span class="sd">            (e.g., When given 25.0, top of 25th percentile trials are kept).</span>
+<span class="sd">        n_startup_trials:</span>
+<span class="sd">            Pruning is disabled until the given number of trials finish in the same study.</span>
+<span class="sd">        n_warmup_steps:</span>
+<span class="sd">            Pruning is disabled until the trial reaches the given number of step.</span>
+<span class="sd">        interval_steps:</span>
+<span class="sd">            Interval in number of steps between the pruning checks, offset by the warmup steps.</span>
+<span class="sd">            If no value has been reported at the time of a pruning check, that particular check</span>
+<span class="sd">            will be postponed until a value is reported. Value must be at least 1.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">percentile</span><span class="p">,</span> <span class="n">n_startup_trials</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">n_warmup_steps</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">interval_steps</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+        <span class="c1"># type: (float, int, int, int) -&gt; None</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="mf">0.0</span> <span class="o">&lt;=</span> <span class="n">percentile</span> <span class="o">&lt;=</span> <span class="mi">100</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                <span class="s1">&#39;Percentile must be between 0 and 100 inclusive but got </span><span class="si">{}</span><span class="s1">.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">percentile</span><span class="p">))</span>
+        <span class="k">if</span> <span class="n">n_startup_trials</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                <span class="s1">&#39;Number of startup trials cannot be negative but got </span><span class="si">{}</span><span class="s1">.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">n_startup_trials</span><span class="p">))</span>
+        <span class="k">if</span> <span class="n">n_warmup_steps</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                <span class="s1">&#39;Number of warmup steps cannot be negative but got </span><span class="si">{}</span><span class="s1">.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">n_warmup_steps</span><span class="p">))</span>
+        <span class="k">if</span> <span class="n">interval_steps</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                <span class="s1">&#39;Pruning interval steps must be at least 1 but got </span><span class="si">{}</span><span class="s1">.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">interval_steps</span><span class="p">))</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_percentile</span> <span class="o">=</span> <span class="n">percentile</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_n_startup_trials</span> <span class="o">=</span> <span class="n">n_startup_trials</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_n_warmup_steps</span> <span class="o">=</span> <span class="n">n_warmup_steps</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_interval_steps</span> <span class="o">=</span> <span class="n">interval_steps</span>
+
+    <span class="k">def</span> <span class="nf">prune</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">study</span><span class="p">,</span> <span class="n">trial</span><span class="p">):</span>
+        <span class="c1"># type: (Study, structs.FrozenTrial) -&gt; bool</span>
+
+        <span class="n">all_trials</span> <span class="o">=</span> <span class="n">study</span><span class="o">.</span><span class="n">get_trials</span><span class="p">(</span><span class="n">deepcopy</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+        <span class="n">n_trials</span> <span class="o">=</span> <span class="nb">len</span><span class="p">([</span><span class="n">t</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">all_trials</span>
+                        <span class="k">if</span> <span class="n">t</span><span class="o">.</span><span class="n">state</span> <span class="o">==</span> <span class="n">structs</span><span class="o">.</span><span class="n">TrialState</span><span class="o">.</span><span class="n">COMPLETE</span><span class="p">])</span>
+
+        <span class="k">if</span> <span class="n">n_trials</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">False</span>
+
+        <span class="k">if</span> <span class="n">n_trials</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">_n_startup_trials</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">False</span>
+
+        <span class="n">step</span> <span class="o">=</span> <span class="n">trial</span><span class="o">.</span><span class="n">last_step</span>
+        <span class="k">if</span> <span class="n">step</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">False</span>
+
+        <span class="n">n_warmup_steps</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_n_warmup_steps</span>
+        <span class="k">if</span> <span class="n">step</span> <span class="o">&lt;=</span> <span class="n">n_warmup_steps</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">False</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">_is_first_in_interval_step</span><span class="p">(</span>
+                <span class="n">step</span><span class="p">,</span> <span class="n">trial</span><span class="o">.</span><span class="n">intermediate_values</span><span class="o">.</span><span class="n">keys</span><span class="p">(),</span> <span class="n">n_warmup_steps</span><span class="p">,</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_interval_steps</span><span class="p">):</span>
+            <span class="k">return</span> <span class="kc">False</span>
+
+        <span class="n">direction</span> <span class="o">=</span> <span class="n">study</span><span class="o">.</span><span class="n">direction</span>
+        <span class="n">best_intermediate_result</span> <span class="o">=</span> <span class="n">_get_best_intermediate_result_over_steps</span><span class="p">(</span><span class="n">trial</span><span class="p">,</span> <span class="n">direction</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">math</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">best_intermediate_result</span><span class="p">):</span>
+            <span class="k">return</span> <span class="kc">True</span>
+
+        <span class="n">p</span> <span class="o">=</span> <span class="n">_get_percentile_intermediate_result_over_trials</span><span class="p">(</span>
+            <span class="n">all_trials</span><span class="p">,</span> <span class="n">direction</span><span class="p">,</span> <span class="n">step</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_percentile</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">math</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">p</span><span class="p">):</span>
+            <span class="k">return</span> <span class="kc">False</span>
+
+        <span class="k">if</span> <span class="n">direction</span> <span class="o">==</span> <span class="n">structs</span><span class="o">.</span><span class="n">StudyDirection</span><span class="o">.</span><span class="n">MAXIMIZE</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">best_intermediate_result</span> <span class="o">&lt;</span> <span class="n">p</span>
+        <span class="k">return</span> <span class="n">best_intermediate_result</span> <span class="o">&gt;</span> <span class="n">p</span></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Optuna Contributors.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+    <a href="../../../privacy.html">Privacy Policy</a>.
+     
+
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

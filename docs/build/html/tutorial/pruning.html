@@ -1,0 +1,315 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Pruning Unpromising Trials &mdash; Optuna 1.2.0 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="User-Defined Sampler" href="sampler.html" />
+    <link rel="prev" title="User Attributes" href="attributes.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Optuna
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.2.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Tutorial</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="first.html">First Optimization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="configurations.html">Advanced Configurations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rdb.html">Saving/Resuming Study with RDB Backend</a></li>
+<li class="toctree-l2"><a class="reference internal" href="distributed.html">Distributed Optimization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cli.html">Command-Line Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="attributes.html">User Attributes</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Pruning Unpromising Trials</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#activating-pruners">Activating Pruners</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#integration-modules-for-pruning">Integration Modules for Pruning</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="sampler.html">User-Defined Sampler</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/index.html">API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">FAQ</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Optuna</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Tutorial</a> &raquo;</li>
+        
+      <li>Pruning Unpromising Trials</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/tutorial/pruning.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="pruning-unpromising-trials">
+<span id="pruning"></span><h1>Pruning Unpromising Trials<a class="headerlink" href="#pruning-unpromising-trials" title="Permalink to this headline">¶</a></h1>
+<p>This feature automatically stops unpromising trials at the early stages of the training (a.k.a., automated early-stopping).
+Optuna provides interfaces to concisely implement the pruning mechanism in iterative training algorithms.</p>
+<div class="section" id="activating-pruners">
+<h2>Activating Pruners<a class="headerlink" href="#activating-pruners" title="Permalink to this headline">¶</a></h2>
+<p>To turn on the pruning feature, you need to call <a class="reference internal" href="../reference/trial.html#optuna.trial.Trial.report" title="optuna.trial.Trial.report"><code class="xref py py-func docutils literal notranslate"><span class="pre">report()</span></code></a> and <a class="reference internal" href="../reference/trial.html#optuna.trial.Trial.should_prune" title="optuna.trial.Trial.should_prune"><code class="xref py py-func docutils literal notranslate"><span class="pre">should_prune()</span></code></a> after each step of the iterative training.
+<a class="reference internal" href="../reference/trial.html#optuna.trial.Trial.report" title="optuna.trial.Trial.report"><code class="xref py py-func docutils literal notranslate"><span class="pre">report()</span></code></a> periodically monitors the intermediate objective values.
+<a class="reference internal" href="../reference/trial.html#optuna.trial.Trial.should_prune" title="optuna.trial.Trial.should_prune"><code class="xref py py-func docutils literal notranslate"><span class="pre">should_prune()</span></code></a> decides termination of the trial that does not meet a predefined condition.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;filename: prune.py&quot;&quot;&quot;</span>
+
+<span class="kn">import</span> <span class="nn">sklearn.datasets</span>
+<span class="kn">import</span> <span class="nn">sklearn.linear_model</span>
+<span class="kn">import</span> <span class="nn">sklearn.model_selection</span>
+
+<span class="kn">import</span> <span class="nn">optuna</span>
+
+<span class="k">def</span> <span class="nf">objective</span><span class="p">(</span><span class="n">trial</span><span class="p">):</span>
+    <span class="n">iris</span> <span class="o">=</span> <span class="n">sklearn</span><span class="o">.</span><span class="n">datasets</span><span class="o">.</span><span class="n">load_iris</span><span class="p">()</span>
+    <span class="n">classes</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">iris</span><span class="o">.</span><span class="n">target</span><span class="p">))</span>
+    <span class="n">train_x</span><span class="p">,</span> <span class="n">valid_x</span><span class="p">,</span> <span class="n">train_y</span><span class="p">,</span> <span class="n">valid_y</span> <span class="o">=</span> \
+        <span class="n">sklearn</span><span class="o">.</span><span class="n">model_selection</span><span class="o">.</span><span class="n">train_test_split</span><span class="p">(</span><span class="n">iris</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">iris</span><span class="o">.</span><span class="n">target</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.25</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+    <span class="n">alpha</span> <span class="o">=</span> <span class="n">trial</span><span class="o">.</span><span class="n">suggest_loguniform</span><span class="p">(</span><span class="s1">&#39;alpha&#39;</span><span class="p">,</span> <span class="mf">1e-5</span><span class="p">,</span> <span class="mf">1e-1</span><span class="p">)</span>
+    <span class="n">clf</span> <span class="o">=</span> <span class="n">sklearn</span><span class="o">.</span><span class="n">linear_model</span><span class="o">.</span><span class="n">SGDClassifier</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="n">alpha</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">step</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">):</span>
+        <span class="n">clf</span><span class="o">.</span><span class="n">partial_fit</span><span class="p">(</span><span class="n">train_x</span><span class="p">,</span> <span class="n">train_y</span><span class="p">,</span> <span class="n">classes</span><span class="o">=</span><span class="n">classes</span><span class="p">)</span>
+
+        <span class="c1"># Report intermediate objective value.</span>
+        <span class="n">intermediate_value</span> <span class="o">=</span> <span class="mf">1.0</span> <span class="o">-</span> <span class="n">clf</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">valid_x</span><span class="p">,</span> <span class="n">valid_y</span><span class="p">)</span>
+        <span class="n">trial</span><span class="o">.</span><span class="n">report</span><span class="p">(</span><span class="n">intermediate_value</span><span class="p">,</span> <span class="n">step</span><span class="p">)</span>
+
+        <span class="c1"># Handle pruning based on the intermediate value.</span>
+        <span class="k">if</span> <span class="n">trial</span><span class="o">.</span><span class="n">should_prune</span><span class="p">():</span>
+            <span class="k">raise</span> <span class="n">optuna</span><span class="o">.</span><span class="n">exceptions</span><span class="o">.</span><span class="n">TrialPruned</span><span class="p">()</span>
+
+    <span class="k">return</span> <span class="mf">1.0</span> <span class="o">-</span> <span class="n">clf</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">valid_x</span><span class="p">,</span> <span class="n">valid_y</span><span class="p">)</span>
+
+<span class="c1"># Set up the median stopping rule as the pruning condition.</span>
+<span class="n">study</span> <span class="o">=</span> <span class="n">optuna</span><span class="o">.</span><span class="n">create_study</span><span class="p">(</span><span class="n">pruner</span><span class="o">=</span><span class="n">optuna</span><span class="o">.</span><span class="n">pruners</span><span class="o">.</span><span class="n">MedianPruner</span><span class="p">())</span>
+<span class="n">study</span><span class="o">.</span><span class="n">optimize</span><span class="p">(</span><span class="n">objective</span><span class="p">,</span> <span class="n">n_trials</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Executing the script above:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ python prune.py
+<span class="o">[</span>I <span class="m">2018</span>-11-21 <span class="m">17</span>:27:57,836<span class="o">]</span> Finished trial#0 resulted in value: <span class="m">0</span>.052631578947368474. Current best value is <span class="m">0</span>.052631578947368474 with parameters: <span class="o">{</span><span class="s1">&#39;alpha&#39;</span>: <span class="m">0</span>.011428158279113485<span class="o">}</span>.
+<span class="o">[</span>I <span class="m">2018</span>-11-21 <span class="m">17</span>:27:57,963<span class="o">]</span> Finished trial#1 resulted in value: <span class="m">0</span>.02631578947368418. Current best value is <span class="m">0</span>.02631578947368418 with parameters: <span class="o">{</span><span class="s1">&#39;alpha&#39;</span>: <span class="m">0</span>.01862693201743629<span class="o">}</span>.
+<span class="o">[</span>I <span class="m">2018</span>-11-21 <span class="m">17</span>:27:58,164<span class="o">]</span> Finished trial#2 resulted in value: <span class="m">0</span>.21052631578947367. Current best value is <span class="m">0</span>.02631578947368418 with parameters: <span class="o">{</span><span class="s1">&#39;alpha&#39;</span>: <span class="m">0</span>.01862693201743629<span class="o">}</span>.
+<span class="o">[</span>I <span class="m">2018</span>-11-21 <span class="m">17</span>:27:58,333<span class="o">]</span> Finished trial#3 resulted in value: <span class="m">0</span>.02631578947368418. Current best value is <span class="m">0</span>.02631578947368418 with parameters: <span class="o">{</span><span class="s1">&#39;alpha&#39;</span>: <span class="m">0</span>.01862693201743629<span class="o">}</span>.
+<span class="o">[</span>I <span class="m">2018</span>-11-21 <span class="m">17</span>:27:58,617<span class="o">]</span> Finished trial#4 resulted in value: <span class="m">0</span>.23684210526315785. Current best value is <span class="m">0</span>.02631578947368418 with parameters: <span class="o">{</span><span class="s1">&#39;alpha&#39;</span>: <span class="m">0</span>.01862693201743629<span class="o">}</span>.
+<span class="o">[</span>I <span class="m">2018</span>-11-21 <span class="m">17</span>:27:58,642<span class="o">]</span> Setting status of trial#5 as TrialState.PRUNED.
+<span class="o">[</span>I <span class="m">2018</span>-11-21 <span class="m">17</span>:27:58,666<span class="o">]</span> Setting status of trial#6 as TrialState.PRUNED.
+<span class="o">[</span>I <span class="m">2018</span>-11-21 <span class="m">17</span>:27:58,675<span class="o">]</span> Setting status of trial#7 as TrialState.PRUNED.
+<span class="o">[</span>I <span class="m">2018</span>-11-21 <span class="m">17</span>:27:59,183<span class="o">]</span> Finished trial#8 resulted in value: <span class="m">0</span>.39473684210526316. Current best value is <span class="m">0</span>.02631578947368418 with parameters: <span class="o">{</span><span class="s1">&#39;alpha&#39;</span>: <span class="m">0</span>.01862693201743629<span class="o">}</span>.
+<span class="o">[</span>I <span class="m">2018</span>-11-21 <span class="m">17</span>:27:59,202<span class="o">]</span> Setting status of trial#9 as TrialState.PRUNED.
+...
+</pre></div>
+</div>
+<p>We can see <code class="docutils literal notranslate"><span class="pre">Setting</span> <span class="pre">status</span> <span class="pre">of</span> <span class="pre">trial#{}</span> <span class="pre">as</span> <span class="pre">TrialState.PRUNED</span></code> in the log messages.
+This means several trials are stopped before they finish all iterations.</p>
+</div>
+<div class="section" id="integration-modules-for-pruning">
+<h2>Integration Modules for Pruning<a class="headerlink" href="#integration-modules-for-pruning" title="Permalink to this headline">¶</a></h2>
+<p>To implement pruning mechanism in much simpler forms, Optuna provides integration modules for the following libraries.</p>
+<ul class="simple">
+<li><p>XGBoost: <a class="reference internal" href="../reference/integration.html#optuna.integration.XGBoostPruningCallback" title="optuna.integration.XGBoostPruningCallback"><code class="xref py py-class docutils literal notranslate"><span class="pre">optuna.integration.XGBoostPruningCallback</span></code></a></p></li>
+<li><p>LightGBM: <a class="reference internal" href="../reference/integration.html#optuna.integration.LightGBMPruningCallback" title="optuna.integration.LightGBMPruningCallback"><code class="xref py py-class docutils literal notranslate"><span class="pre">optuna.integration.LightGBMPruningCallback</span></code></a></p></li>
+<li><p>Chainer: <a class="reference internal" href="../reference/integration.html#optuna.integration.ChainerPruningExtension" title="optuna.integration.ChainerPruningExtension"><code class="xref py py-class docutils literal notranslate"><span class="pre">optuna.integration.ChainerPruningExtension</span></code></a></p></li>
+<li><p>Keras: <a class="reference internal" href="../reference/integration.html#optuna.integration.KerasPruningCallback" title="optuna.integration.KerasPruningCallback"><code class="xref py py-class docutils literal notranslate"><span class="pre">optuna.integration.KerasPruningCallback</span></code></a></p></li>
+<li><p>TensorFlow <a class="reference internal" href="../reference/integration.html#optuna.integration.TensorFlowPruningHook" title="optuna.integration.TensorFlowPruningHook"><code class="xref py py-class docutils literal notranslate"><span class="pre">optuna.integration.TensorFlowPruningHook</span></code></a></p></li>
+<li><p>tf.keras <a class="reference internal" href="../reference/integration.html#optuna.integration.TFKerasPruningCallback" title="optuna.integration.TFKerasPruningCallback"><code class="xref py py-class docutils literal notranslate"><span class="pre">optuna.integration.TFKerasPruningCallback</span></code></a></p></li>
+<li><p>MXNet <a class="reference internal" href="../reference/integration.html#optuna.integration.MXNetPruningCallback" title="optuna.integration.MXNetPruningCallback"><code class="xref py py-class docutils literal notranslate"><span class="pre">optuna.integration.MXNetPruningCallback</span></code></a></p></li>
+<li><p>PyTorch Ignite <a class="reference internal" href="../reference/integration.html#optuna.integration.PyTorchIgnitePruningHandler" title="optuna.integration.PyTorchIgnitePruningHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">optuna.integration.PyTorchIgnitePruningHandler</span></code></a></p></li>
+<li><p>PyTorch Lightning <a class="reference internal" href="../reference/integration.html#optuna.integration.PyTorchLightningPruningCallback" title="optuna.integration.PyTorchLightningPruningCallback"><code class="xref py py-class docutils literal notranslate"><span class="pre">optuna.integration.PyTorchLightningPruningCallback</span></code></a></p></li>
+<li><p>FastAI <a class="reference internal" href="../reference/integration.html#optuna.integration.FastAIPruningCallback" title="optuna.integration.FastAIPruningCallback"><code class="xref py py-class docutils literal notranslate"><span class="pre">optuna.integration.FastAIPruningCallback</span></code></a></p></li>
+</ul>
+<p>For example, <a class="reference internal" href="../reference/integration.html#optuna.integration.XGBoostPruningCallback" title="optuna.integration.XGBoostPruningCallback"><code class="xref py py-class docutils literal notranslate"><span class="pre">XGBoostPruningCallback</span></code></a> introduces pruning without directly changing the logic of training iteration.
+(See also <a class="reference external" href="https://github.com/optuna/optuna/blob/master/examples/pruning/xgboost_integration.py">example</a> for the entire script.)</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pruning_callback</span> <span class="o">=</span> <span class="n">optuna</span><span class="o">.</span><span class="n">integration</span><span class="o">.</span><span class="n">XGBoostPruningCallback</span><span class="p">(</span><span class="n">trial</span><span class="p">,</span> <span class="s1">&#39;validation-error&#39;</span><span class="p">)</span>
+<span class="n">bst</span> <span class="o">=</span> <span class="n">xgb</span><span class="o">.</span><span class="n">train</span><span class="p">(</span><span class="n">param</span><span class="p">,</span> <span class="n">dtrain</span><span class="p">,</span> <span class="n">evals</span><span class="o">=</span><span class="p">[(</span><span class="n">dvalid</span><span class="p">,</span> <span class="s1">&#39;validation&#39;</span><span class="p">)],</span> <span class="n">callbacks</span><span class="o">=</span><span class="p">[</span><span class="n">pruning_callback</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="sampler.html" class="btn btn-neutral float-right" title="User-Defined Sampler" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="attributes.html" class="btn btn-neutral float-left" title="User Attributes" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Optuna Contributors.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+    <a href="../privacy.html">Privacy Policy</a>.
+     
+
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

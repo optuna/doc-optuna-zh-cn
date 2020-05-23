@@ -1,0 +1,435 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Structs &mdash; Optuna 1.2.0 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Study" href="study.html" />
+    <link rel="prev" title="Storages" href="storages.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Optuna
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.2.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial/index.html">Tutorial</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">API Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="cli.html">Command Line Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="distributions.html">Distributions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exceptions.html">Exceptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="importance.html">Hyperparameter Importance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="integration.html">Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="logging.html">Logging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="multi_objective/index.html">Multi-objective</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pruners.html">Pruners</a></li>
+<li class="toctree-l2"><a class="reference internal" href="samplers.html">Samplers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="storages.html">Storages</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Structs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="study.html">Study</a></li>
+<li class="toctree-l2"><a class="reference internal" href="trial.html">Trial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="visualization.html">Visualization</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">FAQ</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Optuna</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">API Reference</a> &raquo;</li>
+        
+      <li>Structs</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/reference/structs.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <span class="target" id="module-optuna.structs"></span><div class="section" id="structs">
+<h1>Structs<a class="headerlink" href="#structs" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="optuna.structs.TrialState">
+<em class="property">class </em><code class="sig-prename descclassname">optuna.structs.</code><code class="sig-name descname">TrialState</code><a class="reference internal" href="../_modules/optuna/structs.html#TrialState"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optuna.structs.TrialState" title="Permalink to this definition">¶</a></dt>
+<dd><p>State of a <a class="reference internal" href="trial.html#optuna.trial.Trial" title="optuna.trial.Trial"><code class="xref py py-class docutils literal notranslate"><span class="pre">Trial</span></code></a>.</p>
+<dl class="attribute">
+<dt id="optuna.structs.TrialState.RUNNING">
+<code class="sig-name descname">RUNNING</code><a class="headerlink" href="#optuna.structs.TrialState.RUNNING" title="Permalink to this definition">¶</a></dt>
+<dd><p>The <a class="reference internal" href="trial.html#optuna.trial.Trial" title="optuna.trial.Trial"><code class="xref py py-class docutils literal notranslate"><span class="pre">Trial</span></code></a> is running.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="optuna.structs.TrialState.COMPLETE">
+<code class="sig-name descname">COMPLETE</code><a class="headerlink" href="#optuna.structs.TrialState.COMPLETE" title="Permalink to this definition">¶</a></dt>
+<dd><p>The <a class="reference internal" href="trial.html#optuna.trial.Trial" title="optuna.trial.Trial"><code class="xref py py-class docutils literal notranslate"><span class="pre">Trial</span></code></a> has been finished without any error.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="optuna.structs.TrialState.PRUNED">
+<code class="sig-name descname">PRUNED</code><a class="headerlink" href="#optuna.structs.TrialState.PRUNED" title="Permalink to this definition">¶</a></dt>
+<dd><p>The <a class="reference internal" href="trial.html#optuna.trial.Trial" title="optuna.trial.Trial"><code class="xref py py-class docutils literal notranslate"><span class="pre">Trial</span></code></a> has been pruned with
+<a class="reference internal" href="exceptions.html#optuna.exceptions.TrialPruned" title="optuna.exceptions.TrialPruned"><code class="xref py py-class docutils literal notranslate"><span class="pre">TrialPruned</span></code></a>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="optuna.structs.TrialState.FAIL">
+<code class="sig-name descname">FAIL</code><a class="headerlink" href="#optuna.structs.TrialState.FAIL" title="Permalink to this definition">¶</a></dt>
+<dd><p>The <a class="reference internal" href="trial.html#optuna.trial.Trial" title="optuna.trial.Trial"><code class="xref py py-class docutils literal notranslate"><span class="pre">Trial</span></code></a> has failed due to an uncaught error.</p>
+</dd></dl>
+
+<div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 1.4.0: </span>This class is deprecated. Please use <code class="xref py py-class docutils literal notranslate"><span class="pre">TrialState</span></code> instead.</p>
+</div>
+</dd></dl>
+
+<dl class="class">
+<dt id="optuna.structs.StudyDirection">
+<em class="property">class </em><code class="sig-prename descclassname">optuna.structs.</code><code class="sig-name descname">StudyDirection</code><a class="reference internal" href="../_modules/optuna/structs.html#StudyDirection"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optuna.structs.StudyDirection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Direction of a <a class="reference internal" href="study.html#optuna.study.Study" title="optuna.study.Study"><code class="xref py py-class docutils literal notranslate"><span class="pre">Study</span></code></a>.</p>
+<dl class="attribute">
+<dt id="optuna.structs.StudyDirection.NOT_SET">
+<code class="sig-name descname">NOT_SET</code><a class="headerlink" href="#optuna.structs.StudyDirection.NOT_SET" title="Permalink to this definition">¶</a></dt>
+<dd><p>Direction has not been set.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="optuna.structs.StudyDirection.MINIMIZE">
+<code class="sig-name descname">MINIMIZE</code><a class="headerlink" href="#optuna.structs.StudyDirection.MINIMIZE" title="Permalink to this definition">¶</a></dt>
+<dd><p><a class="reference internal" href="study.html#optuna.study.Study" title="optuna.study.Study"><code class="xref py py-class docutils literal notranslate"><span class="pre">Study</span></code></a> minimizes the objective function.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="optuna.structs.StudyDirection.MAXIMIZE">
+<code class="sig-name descname">MAXIMIZE</code><a class="headerlink" href="#optuna.structs.StudyDirection.MAXIMIZE" title="Permalink to this definition">¶</a></dt>
+<dd><p><a class="reference internal" href="study.html#optuna.study.Study" title="optuna.study.Study"><code class="xref py py-class docutils literal notranslate"><span class="pre">Study</span></code></a> maximizes the objective function.</p>
+</dd></dl>
+
+<div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 1.4.0: </span>This class is deprecated. Please use <code class="xref py py-class docutils literal notranslate"><span class="pre">StudyDirection</span></code> instead.</p>
+</div>
+</dd></dl>
+
+<dl class="class">
+<dt id="optuna.structs.FrozenTrial">
+<em class="property">class </em><code class="sig-prename descclassname">optuna.structs.</code><code class="sig-name descname">FrozenTrial</code><span class="sig-paren">(</span><em class="sig-param">number</em>, <em class="sig-param">state</em>, <em class="sig-param">value</em>, <em class="sig-param">datetime_start</em>, <em class="sig-param">datetime_complete</em>, <em class="sig-param">params</em>, <em class="sig-param">distributions</em>, <em class="sig-param">user_attrs</em>, <em class="sig-param">system_attrs</em>, <em class="sig-param">intermediate_values</em>, <em class="sig-param">trial_id</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/optuna/structs.html#FrozenTrial"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optuna.structs.FrozenTrial" title="Permalink to this definition">¶</a></dt>
+<dd><p>Status and results of a <a class="reference internal" href="trial.html#optuna.trial.Trial" title="optuna.trial.Trial"><code class="xref py py-class docutils literal notranslate"><span class="pre">Trial</span></code></a>.</p>
+<dl class="attribute">
+<dt id="optuna.structs.FrozenTrial.number">
+<code class="sig-name descname">number</code><a class="headerlink" href="#optuna.structs.FrozenTrial.number" title="Permalink to this definition">¶</a></dt>
+<dd><p>Unique and consecutive number of <a class="reference internal" href="trial.html#optuna.trial.Trial" title="optuna.trial.Trial"><code class="xref py py-class docutils literal notranslate"><span class="pre">Trial</span></code></a> for each
+<a class="reference internal" href="study.html#optuna.study.Study" title="optuna.study.Study"><code class="xref py py-class docutils literal notranslate"><span class="pre">Study</span></code></a>. Note that this field uses zero-based numbering.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="optuna.structs.FrozenTrial.state">
+<code class="sig-name descname">state</code><a class="headerlink" href="#optuna.structs.FrozenTrial.state" title="Permalink to this definition">¶</a></dt>
+<dd><p><a class="reference internal" href="#optuna.structs.TrialState" title="optuna.structs.TrialState"><code class="xref py py-class docutils literal notranslate"><span class="pre">TrialState</span></code></a> of the <a class="reference internal" href="trial.html#optuna.trial.Trial" title="optuna.trial.Trial"><code class="xref py py-class docutils literal notranslate"><span class="pre">Trial</span></code></a>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="optuna.structs.FrozenTrial.value">
+<code class="sig-name descname">value</code><a class="headerlink" href="#optuna.structs.FrozenTrial.value" title="Permalink to this definition">¶</a></dt>
+<dd><p>Objective value of the <a class="reference internal" href="trial.html#optuna.trial.Trial" title="optuna.trial.Trial"><code class="xref py py-class docutils literal notranslate"><span class="pre">Trial</span></code></a>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="optuna.structs.FrozenTrial.datetime_start">
+<code class="sig-name descname">datetime_start</code><a class="headerlink" href="#optuna.structs.FrozenTrial.datetime_start" title="Permalink to this definition">¶</a></dt>
+<dd><p>Datetime where the <a class="reference internal" href="trial.html#optuna.trial.Trial" title="optuna.trial.Trial"><code class="xref py py-class docutils literal notranslate"><span class="pre">Trial</span></code></a> started.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="optuna.structs.FrozenTrial.datetime_complete">
+<code class="sig-name descname">datetime_complete</code><a class="headerlink" href="#optuna.structs.FrozenTrial.datetime_complete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Datetime where the <a class="reference internal" href="trial.html#optuna.trial.Trial" title="optuna.trial.Trial"><code class="xref py py-class docutils literal notranslate"><span class="pre">Trial</span></code></a> finished.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="optuna.structs.FrozenTrial.params">
+<code class="sig-name descname">params</code><a class="headerlink" href="#optuna.structs.FrozenTrial.params" title="Permalink to this definition">¶</a></dt>
+<dd><p>Dictionary that contains suggested parameters.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="optuna.structs.FrozenTrial.distributions">
+<code class="sig-name descname">distributions</code><a class="headerlink" href="#optuna.structs.FrozenTrial.distributions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Dictionary that contains the distributions of <a class="reference internal" href="#optuna.structs.FrozenTrial.params" title="optuna.structs.FrozenTrial.params"><code class="xref py py-attr docutils literal notranslate"><span class="pre">params</span></code></a>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="optuna.structs.FrozenTrial.user_attrs">
+<code class="sig-name descname">user_attrs</code><a class="headerlink" href="#optuna.structs.FrozenTrial.user_attrs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Dictionary that contains the attributes of the <a class="reference internal" href="trial.html#optuna.trial.Trial" title="optuna.trial.Trial"><code class="xref py py-class docutils literal notranslate"><span class="pre">Trial</span></code></a> set with
+<a class="reference internal" href="trial.html#optuna.trial.Trial.set_user_attr" title="optuna.trial.Trial.set_user_attr"><code class="xref py py-func docutils literal notranslate"><span class="pre">optuna.trial.Trial.set_user_attr()</span></code></a>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="optuna.structs.FrozenTrial.intermediate_values">
+<code class="sig-name descname">intermediate_values</code><a class="headerlink" href="#optuna.structs.FrozenTrial.intermediate_values" title="Permalink to this definition">¶</a></dt>
+<dd><p>Intermediate objective values set with <a class="reference internal" href="trial.html#optuna.trial.Trial.report" title="optuna.trial.Trial.report"><code class="xref py py-func docutils literal notranslate"><span class="pre">optuna.trial.Trial.report()</span></code></a>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<em class="property">property </em><code class="sig-name descname">distributions</code></dt>
+<dd><p>Return the distributions for this trial.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The distributions.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="optuna.structs.StudySummary">
+<em class="property">class </em><code class="sig-prename descclassname">optuna.structs.</code><code class="sig-name descname">StudySummary</code><span class="sig-paren">(</span><em class="sig-param">study_name</em>, <em class="sig-param">direction</em>, <em class="sig-param">best_trial</em>, <em class="sig-param">user_attrs</em>, <em class="sig-param">system_attrs</em>, <em class="sig-param">n_trials</em>, <em class="sig-param">datetime_start</em>, <em class="sig-param">study_id</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/optuna/structs.html#StudySummary"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optuna.structs.StudySummary" title="Permalink to this definition">¶</a></dt>
+<dd><p>Basic attributes and aggregated results of a <a class="reference internal" href="study.html#optuna.study.Study" title="optuna.study.Study"><code class="xref py py-class docutils literal notranslate"><span class="pre">Study</span></code></a>.</p>
+<p>See also <a class="reference internal" href="study.html#optuna.study.get_all_study_summaries" title="optuna.study.get_all_study_summaries"><code class="xref py py-func docutils literal notranslate"><span class="pre">optuna.study.get_all_study_summaries()</span></code></a>.</p>
+<dl class="attribute">
+<dt id="optuna.structs.StudySummary.study_name">
+<code class="sig-name descname">study_name</code><a class="headerlink" href="#optuna.structs.StudySummary.study_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of the <a class="reference internal" href="study.html#optuna.study.Study" title="optuna.study.Study"><code class="xref py py-class docutils literal notranslate"><span class="pre">Study</span></code></a>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="optuna.structs.StudySummary.direction">
+<code class="sig-name descname">direction</code><a class="headerlink" href="#optuna.structs.StudySummary.direction" title="Permalink to this definition">¶</a></dt>
+<dd><p><a class="reference internal" href="#optuna.structs.StudyDirection" title="optuna.structs.StudyDirection"><code class="xref py py-class docutils literal notranslate"><span class="pre">StudyDirection</span></code></a> of the <a class="reference internal" href="study.html#optuna.study.Study" title="optuna.study.Study"><code class="xref py py-class docutils literal notranslate"><span class="pre">Study</span></code></a>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="optuna.structs.StudySummary.best_trial">
+<code class="sig-name descname">best_trial</code><a class="headerlink" href="#optuna.structs.StudySummary.best_trial" title="Permalink to this definition">¶</a></dt>
+<dd><p><a class="reference internal" href="#optuna.structs.FrozenTrial" title="optuna.structs.FrozenTrial"><code class="xref py py-class docutils literal notranslate"><span class="pre">FrozenTrial</span></code></a> with best objective value in the <a class="reference internal" href="study.html#optuna.study.Study" title="optuna.study.Study"><code class="xref py py-class docutils literal notranslate"><span class="pre">Study</span></code></a>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="optuna.structs.StudySummary.user_attrs">
+<code class="sig-name descname">user_attrs</code><a class="headerlink" href="#optuna.structs.StudySummary.user_attrs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Dictionary that contains the attributes of the <a class="reference internal" href="study.html#optuna.study.Study" title="optuna.study.Study"><code class="xref py py-class docutils literal notranslate"><span class="pre">Study</span></code></a> set with
+<a class="reference internal" href="study.html#optuna.study.Study.set_user_attr" title="optuna.study.Study.set_user_attr"><code class="xref py py-func docutils literal notranslate"><span class="pre">optuna.study.Study.set_user_attr()</span></code></a>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="optuna.structs.StudySummary.system_attrs">
+<code class="sig-name descname">system_attrs</code><a class="headerlink" href="#optuna.structs.StudySummary.system_attrs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Dictionary that contains the attributes of the <a class="reference internal" href="study.html#optuna.study.Study" title="optuna.study.Study"><code class="xref py py-class docutils literal notranslate"><span class="pre">Study</span></code></a> internally
+set by Optuna.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="optuna.structs.StudySummary.n_trials">
+<code class="sig-name descname">n_trials</code><a class="headerlink" href="#optuna.structs.StudySummary.n_trials" title="Permalink to this definition">¶</a></dt>
+<dd><p>The number of trials ran in the <a class="reference internal" href="study.html#optuna.study.Study" title="optuna.study.Study"><code class="xref py py-class docutils literal notranslate"><span class="pre">Study</span></code></a>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="optuna.structs.StudySummary.datetime_start">
+<code class="sig-name descname">datetime_start</code><a class="headerlink" href="#optuna.structs.StudySummary.datetime_start" title="Permalink to this definition">¶</a></dt>
+<dd><p>Datetime where the <a class="reference internal" href="study.html#optuna.study.Study" title="optuna.study.Study"><code class="xref py py-class docutils literal notranslate"><span class="pre">Study</span></code></a> started.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optuna.structs.StudySummary.study_id">
+<em class="property">property </em><code class="sig-name descname">study_id</code><a class="headerlink" href="#optuna.structs.StudySummary.study_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the study ID.</p>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 0.20.0: </span>The direct use of this attribute is deprecated and it is recommended that you use
+<a class="reference internal" href="#optuna.structs.StudySummary.study_name" title="optuna.structs.StudySummary.study_name"><code class="xref py py-attr docutils literal notranslate"><span class="pre">study_name</span></code></a> instead.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The study ID.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="study.html" class="btn btn-neutral float-right" title="Study" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="storages.html" class="btn btn-neutral float-left" title="Storages" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Optuna Contributors.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+    <a href="../privacy.html">Privacy Policy</a>.
+     
+
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

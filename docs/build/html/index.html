@@ -1,0 +1,355 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Optuna: A hyperparameter optimization framework &mdash; Optuna 1.2.0 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Installation" href="installation.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="#" class="icon icon-home"> Optuna
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.2.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial/index.html">Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reference/index.html">API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">FAQ</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">Optuna</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="#">Docs</a> &raquo;</li>
+        
+      <li>Optuna: A hyperparameter optimization framework</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <p><a class="reference internal" href="https://raw.githubusercontent.com/optuna/optuna/master/docs/image/optuna-logo.png"><img alt="OPTUNA" src="https://raw.githubusercontent.com/optuna/optuna/master/docs/image/optuna-logo.png" style="width: 800px;" /></a></p>
+<div class="section" id="optuna-a-hyperparameter-optimization-framework">
+<h1>Optuna: A hyperparameter optimization framework<a class="headerlink" href="#optuna-a-hyperparameter-optimization-framework" title="Permalink to this headline">¶</a></h1>
+<p><em>Optuna</em> is an automatic hyperparameter optimization software framework,
+particularly designed for machine learning. It features an imperative,
+<em>define-by-run</em> style user API. Thanks to our <em>define-by-run</em> API, the
+code written with Optuna enjoys high modularity, and the user of Optuna
+can dynamically construct the search spaces for the hyperparameters.</p>
+<div class="section" id="key-features">
+<h2>Key Features<a class="headerlink" href="#key-features" title="Permalink to this headline">¶</a></h2>
+<p>Optuna has modern functionalities as follows:</p>
+<ul class="simple">
+<li><p>Parallel distributed optimization</p></li>
+<li><p>Pruning of unpromising trials</p></li>
+<li><p>Lightweight, versatile, and platform agnostic architecture</p></li>
+</ul>
+</div>
+<div class="section" id="basic-concepts">
+<h2>Basic Concepts<a class="headerlink" href="#basic-concepts" title="Permalink to this headline">¶</a></h2>
+<p>We use the terms <em>study</em> and <em>trial</em> as follows:</p>
+<ul class="simple">
+<li><p>Study: optimization based on an objective function</p></li>
+<li><p>Trial: a single execution of the objective function</p></li>
+</ul>
+<p>Please refer to sample code below. The goal of a <em>study</em> is to find out
+the optimal set of hyperparameter values (e.g., <code class="docutils literal notranslate"><span class="pre">classifier</span></code> and
+<code class="docutils literal notranslate"><span class="pre">svm_c</span></code>) through multiple <em>trials</em> (e.g., <code class="docutils literal notranslate"><span class="pre">n_trials=100</span></code>). Optuna is
+a framework designed for the automation and the acceleration of the
+optimization <em>studies</em>.</p>
+<p><a class="reference external" href="http://colab.research.google.com/github/optuna/optuna/blob/master/examples/quickstart.ipynb"><img alt="Open in Colab" src="https://colab.research.google.com/assets/colab-badge.svg" /></a></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="o">...</span>
+
+<span class="c1"># Define an objective function to be minimized.</span>
+<span class="k">def</span> <span class="nf">objective</span><span class="p">(</span><span class="n">trial</span><span class="p">):</span>
+
+    <span class="c1"># Invoke suggest methods of a Trial object to generate hyperparameters.</span>
+    <span class="n">regressor_name</span> <span class="o">=</span> <span class="n">trial</span><span class="o">.</span><span class="n">suggest_categorical</span><span class="p">(</span><span class="s1">&#39;classifier&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;SVR&#39;</span><span class="p">,</span> <span class="s1">&#39;RandomForest&#39;</span><span class="p">])</span>
+    <span class="k">if</span> <span class="n">regressor_name</span> <span class="o">==</span> <span class="s1">&#39;SVR&#39;</span><span class="p">:</span>
+        <span class="n">svr_c</span> <span class="o">=</span> <span class="n">trial</span><span class="o">.</span><span class="n">suggest_loguniform</span><span class="p">(</span><span class="s1">&#39;svr_c&#39;</span><span class="p">,</span> <span class="mf">1e-10</span><span class="p">,</span> <span class="mf">1e10</span><span class="p">)</span>
+        <span class="n">regressor_obj</span> <span class="o">=</span> <span class="n">sklearn</span><span class="o">.</span><span class="n">svm</span><span class="o">.</span><span class="n">SVR</span><span class="p">(</span><span class="n">C</span><span class="o">=</span><span class="n">svr_c</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">rf_max_depth</span> <span class="o">=</span> <span class="n">trial</span><span class="o">.</span><span class="n">suggest_int</span><span class="p">(</span><span class="s1">&#39;rf_max_depth&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">32</span><span class="p">)</span>
+        <span class="n">regressor_obj</span> <span class="o">=</span> <span class="n">sklearn</span><span class="o">.</span><span class="n">ensemble</span><span class="o">.</span><span class="n">RandomForestRegressor</span><span class="p">(</span><span class="n">max_depth</span><span class="o">=</span><span class="n">rf_max_depth</span><span class="p">)</span>
+
+    <span class="n">X</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">sklearn</span><span class="o">.</span><span class="n">datasets</span><span class="o">.</span><span class="n">load_boston</span><span class="p">(</span><span class="n">return_X_y</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+    <span class="n">X_train</span><span class="p">,</span> <span class="n">X_val</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_val</span> <span class="o">=</span> <span class="n">sklearn</span><span class="o">.</span><span class="n">model_selection</span><span class="o">.</span><span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+    <span class="n">regressor_obj</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+    <span class="n">y_pred</span> <span class="o">=</span> <span class="n">regressor_obj</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_val</span><span class="p">)</span>
+
+    <span class="n">error</span> <span class="o">=</span> <span class="n">sklearn</span><span class="o">.</span><span class="n">metrics</span><span class="o">.</span><span class="n">mean_squared_error</span><span class="p">(</span><span class="n">y_val</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">error</span>  <span class="c1"># An objective value linked with the Trial object.</span>
+
+<span class="n">study</span> <span class="o">=</span> <span class="n">optuna</span><span class="o">.</span><span class="n">create_study</span><span class="p">()</span>  <span class="c1"># Create a new study.</span>
+<span class="n">study</span><span class="o">.</span><span class="n">optimize</span><span class="p">(</span><span class="n">objective</span><span class="p">,</span> <span class="n">n_trials</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>  <span class="c1"># Invoke optimization of the objective function.</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="communication">
+<h2>Communication<a class="headerlink" href="#communication" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/optuna/optuna/issues">GitHub Issues</a> for bug
+reports, feature requests and questions.</p></li>
+<li><p><a class="reference external" href="https://gitter.im/optuna/optuna">Gitter</a> for interactive chat
+with developers.</p></li>
+<li><p><a class="reference external" href="https://stackoverflow.com/questions/tagged/optuna">Stack
+Overflow</a> for
+questions.</p></li>
+</ul>
+</div>
+<div class="section" id="contribution">
+<h2>Contribution<a class="headerlink" href="#contribution" title="Permalink to this headline">¶</a></h2>
+<p>Any contributions to Optuna are welcome! When you send a pull request,
+please follow the <a class="reference external" href="https://github.com/optuna/optuna/blob/master/CONTRIBUTING.md">contribution guide</a>.</p>
+</div>
+<div class="section" id="license">
+<h2>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
+<p>MIT License (see <a class="reference external" href="https://github.com/optuna/optuna/blob/master/LICENSE">LICENSE</a>).</p>
+</div>
+<div class="section" id="reference">
+<h2>Reference<a class="headerlink" href="#reference" title="Permalink to this headline">¶</a></h2>
+<p>Takuya Akiba, Shotaro Sano, Toshihiko Yanase, Takeru Ohta, and Masanori
+Koyama. 2019. Optuna: A Next-generation Hyperparameter Optimization
+Framework. In KDD (<a class="reference external" href="https://arxiv.org/abs/1907.10902">arXiv</a>).</p>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial/index.html">Tutorial</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tutorial/first.html">First Optimization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial/configurations.html">Advanced Configurations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial/rdb.html">Saving/Resuming Study with RDB Backend</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial/distributed.html">Distributed Optimization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial/cli.html">Command-Line Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial/attributes.html">User Attributes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial/pruning.html">Pruning Unpromising Trials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial/sampler.html">User-Defined Sampler</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="reference/index.html">API Reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="reference/cli.html">Command Line Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/distributions.html">Distributions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/exceptions.html">Exceptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/importance.html">Hyperparameter Importance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/integration.html">Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/logging.html">Logging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/multi_objective/index.html">Multi-objective</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/pruners.html">Pruners</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/samplers.html">Samplers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/storages.html">Storages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/structs.html">Structs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/study.html">Study</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/trial.html">Trial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/visualization.html">Visualization</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">FAQ</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#can-i-use-optuna-with-x-where-x-is-your-favorite-ml-library">Can I use Optuna with X? (where X is your favorite ML library)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#how-to-define-objective-functions-that-have-own-arguments">How to define objective functions that have own arguments?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#can-i-use-optuna-without-remote-rdb-servers">Can I use Optuna without remote RDB servers?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#how-can-i-save-and-resume-studies">How can I save and resume studies?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#how-to-suppress-log-messages-of-optuna">How to suppress log messages of Optuna?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#how-to-save-machine-learning-models-trained-in-objective-functions">How to save machine learning models trained in objective functions?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#how-can-i-obtain-reproducible-optimization-results">How can I obtain reproducible optimization results?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#how-are-exceptions-from-trials-handled">How are exceptions from trials handled?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#how-are-nans-returned-by-trials-handled">How are NaNs returned by trials handled?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#what-happens-when-i-dynamically-alter-a-search-space">What happens when I dynamically alter a search space?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#how-can-i-use-two-gpus-for-evaluating-two-trials-simultaneously">How can I use two GPUs for evaluating two trials simultaneously?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#how-can-i-test-my-objective-functions">How can I test my objective functions?</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="section" id="indices-and-tables">
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
+<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
+<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
+</ul>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="installation.html" class="btn btn-neutral float-right" title="Installation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Optuna Contributors.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+    <a href="privacy.html">Privacy Policy</a>.
+     
+
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

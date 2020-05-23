@@ -1,0 +1,462 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Distributions &mdash; Optuna 1.2.0 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Exceptions" href="exceptions.html" />
+    <link rel="prev" title="Command Line Interface" href="cli.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Optuna
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.2.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial/index.html">Tutorial</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">API Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="cli.html">Command Line Interface</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Distributions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exceptions.html">Exceptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="importance.html">Hyperparameter Importance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="integration.html">Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="logging.html">Logging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="multi_objective/index.html">Multi-objective</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pruners.html">Pruners</a></li>
+<li class="toctree-l2"><a class="reference internal" href="samplers.html">Samplers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="storages.html">Storages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structs.html">Structs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="study.html">Study</a></li>
+<li class="toctree-l2"><a class="reference internal" href="trial.html">Trial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="visualization.html">Visualization</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">FAQ</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Optuna</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">API Reference</a> &raquo;</li>
+        
+      <li>Distributions</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/reference/distributions.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <span class="target" id="module-optuna.distributions"></span><div class="section" id="distributions">
+<h1>Distributions<a class="headerlink" href="#distributions" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="optuna.distributions.UniformDistribution">
+<em class="property">class </em><code class="sig-prename descclassname">optuna.distributions.</code><code class="sig-name descname">UniformDistribution</code><span class="sig-paren">(</span><em class="sig-param">low</em>, <em class="sig-param">high</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/optuna/distributions.html#UniformDistribution"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optuna.distributions.UniformDistribution" title="Permalink to this definition">¶</a></dt>
+<dd><p>A uniform distribution in the linear domain.</p>
+<p>This object is instantiated by <a class="reference internal" href="trial.html#optuna.trial.Trial.suggest_uniform" title="optuna.trial.Trial.suggest_uniform"><code class="xref py py-func docutils literal notranslate"><span class="pre">suggest_uniform()</span></code></a>, and passed to
+<a class="reference internal" href="samplers.html#module-optuna.samplers" title="optuna.samplers"><code class="xref py py-mod docutils literal notranslate"><span class="pre">samplers</span></code></a> in general.</p>
+<dl class="attribute">
+<dt id="optuna.distributions.UniformDistribution.low">
+<code class="sig-name descname">low</code><a class="headerlink" href="#optuna.distributions.UniformDistribution.low" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lower endpoint of the range of the distribution. <code class="docutils literal notranslate"><span class="pre">low</span></code> is included in the range.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="optuna.distributions.UniformDistribution.high">
+<code class="sig-name descname">high</code><a class="headerlink" href="#optuna.distributions.UniformDistribution.high" title="Permalink to this definition">¶</a></dt>
+<dd><p>Upper endpoint of the range of the distribution. <code class="docutils literal notranslate"><span class="pre">high</span></code> is excluded from the range.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optuna.distributions.UniformDistribution.single">
+<code class="sig-name descname">single</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/optuna/distributions.html#UniformDistribution.single"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optuna.distributions.UniformDistribution.single" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test whether the range of this distribution contains just a single value.</p>
+<p>When this method returns <a class="reference external" href="https://docs.python.org/3/library/constants.html#True" title="(in Python v3.8)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a>, <a class="reference internal" href="samplers.html#module-optuna.samplers" title="optuna.samplers"><code class="xref py py-mod docutils literal notranslate"><span class="pre">samplers</span></code></a> always sample
+the same value from the distribution.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/constants.html#True" title="(in Python v3.8)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a> if the range of this distribution contains just a single value,
+otherwise <a class="reference external" href="https://docs.python.org/3/library/constants.html#False" title="(in Python v3.8)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">False</span></code></a>.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="optuna.distributions.LogUniformDistribution">
+<em class="property">class </em><code class="sig-prename descclassname">optuna.distributions.</code><code class="sig-name descname">LogUniformDistribution</code><span class="sig-paren">(</span><em class="sig-param">low</em>, <em class="sig-param">high</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/optuna/distributions.html#LogUniformDistribution"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optuna.distributions.LogUniformDistribution" title="Permalink to this definition">¶</a></dt>
+<dd><p>A uniform distribution in the log domain.</p>
+<p>This object is instantiated by <a class="reference internal" href="trial.html#optuna.trial.Trial.suggest_loguniform" title="optuna.trial.Trial.suggest_loguniform"><code class="xref py py-func docutils literal notranslate"><span class="pre">suggest_loguniform()</span></code></a>, and passed to
+<a class="reference internal" href="samplers.html#module-optuna.samplers" title="optuna.samplers"><code class="xref py py-mod docutils literal notranslate"><span class="pre">samplers</span></code></a> in general.</p>
+<dl class="attribute">
+<dt id="optuna.distributions.LogUniformDistribution.low">
+<code class="sig-name descname">low</code><a class="headerlink" href="#optuna.distributions.LogUniformDistribution.low" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lower endpoint of the range of the distribution. <code class="docutils literal notranslate"><span class="pre">low</span></code> is included in the range.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="optuna.distributions.LogUniformDistribution.high">
+<code class="sig-name descname">high</code><a class="headerlink" href="#optuna.distributions.LogUniformDistribution.high" title="Permalink to this definition">¶</a></dt>
+<dd><p>Upper endpoint of the range of the distribution. <code class="docutils literal notranslate"><span class="pre">high</span></code> is excluded from the range.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optuna.distributions.LogUniformDistribution.single">
+<code class="sig-name descname">single</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/optuna/distributions.html#LogUniformDistribution.single"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optuna.distributions.LogUniformDistribution.single" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test whether the range of this distribution contains just a single value.</p>
+<p>When this method returns <a class="reference external" href="https://docs.python.org/3/library/constants.html#True" title="(in Python v3.8)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a>, <a class="reference internal" href="samplers.html#module-optuna.samplers" title="optuna.samplers"><code class="xref py py-mod docutils literal notranslate"><span class="pre">samplers</span></code></a> always sample
+the same value from the distribution.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/constants.html#True" title="(in Python v3.8)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a> if the range of this distribution contains just a single value,
+otherwise <a class="reference external" href="https://docs.python.org/3/library/constants.html#False" title="(in Python v3.8)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">False</span></code></a>.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="optuna.distributions.DiscreteUniformDistribution">
+<em class="property">class </em><code class="sig-prename descclassname">optuna.distributions.</code><code class="sig-name descname">DiscreteUniformDistribution</code><span class="sig-paren">(</span><em class="sig-param">low</em>, <em class="sig-param">high</em>, <em class="sig-param">q</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/optuna/distributions.html#DiscreteUniformDistribution"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optuna.distributions.DiscreteUniformDistribution" title="Permalink to this definition">¶</a></dt>
+<dd><p>A discretized uniform distribution in the linear domain.</p>
+<p>This object is instantiated by <a class="reference internal" href="trial.html#optuna.trial.Trial.suggest_discrete_uniform" title="optuna.trial.Trial.suggest_discrete_uniform"><code class="xref py py-func docutils literal notranslate"><span class="pre">suggest_discrete_uniform()</span></code></a>, and passed
+to <a class="reference internal" href="samplers.html#module-optuna.samplers" title="optuna.samplers"><code class="xref py py-mod docutils literal notranslate"><span class="pre">samplers</span></code></a> in general.</p>
+<dl class="attribute">
+<dt id="optuna.distributions.DiscreteUniformDistribution.low">
+<code class="sig-name descname">low</code><a class="headerlink" href="#optuna.distributions.DiscreteUniformDistribution.low" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lower endpoint of the range of the distribution. <code class="docutils literal notranslate"><span class="pre">low</span></code> is included in the range.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="optuna.distributions.DiscreteUniformDistribution.high">
+<code class="sig-name descname">high</code><a class="headerlink" href="#optuna.distributions.DiscreteUniformDistribution.high" title="Permalink to this definition">¶</a></dt>
+<dd><p>Upper endpoint of the range of the distribution. <code class="docutils literal notranslate"><span class="pre">high</span></code> is included in the range.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="optuna.distributions.DiscreteUniformDistribution.q">
+<code class="sig-name descname">q</code><a class="headerlink" href="#optuna.distributions.DiscreteUniformDistribution.q" title="Permalink to this definition">¶</a></dt>
+<dd><p>A discretization step.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optuna.distributions.DiscreteUniformDistribution.single">
+<code class="sig-name descname">single</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/optuna/distributions.html#DiscreteUniformDistribution.single"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optuna.distributions.DiscreteUniformDistribution.single" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test whether the range of this distribution contains just a single value.</p>
+<p>When this method returns <a class="reference external" href="https://docs.python.org/3/library/constants.html#True" title="(in Python v3.8)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a>, <a class="reference internal" href="samplers.html#module-optuna.samplers" title="optuna.samplers"><code class="xref py py-mod docutils literal notranslate"><span class="pre">samplers</span></code></a> always sample
+the same value from the distribution.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/constants.html#True" title="(in Python v3.8)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a> if the range of this distribution contains just a single value,
+otherwise <a class="reference external" href="https://docs.python.org/3/library/constants.html#False" title="(in Python v3.8)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">False</span></code></a>.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="optuna.distributions.IntUniformDistribution">
+<em class="property">class </em><code class="sig-prename descclassname">optuna.distributions.</code><code class="sig-name descname">IntUniformDistribution</code><span class="sig-paren">(</span><em class="sig-param">low</em>, <em class="sig-param">high</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/optuna/distributions.html#IntUniformDistribution"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optuna.distributions.IntUniformDistribution" title="Permalink to this definition">¶</a></dt>
+<dd><p>A uniform distribution on integers.</p>
+<p>This object is instantiated by <a class="reference internal" href="trial.html#optuna.trial.Trial.suggest_int" title="optuna.trial.Trial.suggest_int"><code class="xref py py-func docutils literal notranslate"><span class="pre">suggest_int()</span></code></a>, and passed to
+<a class="reference internal" href="samplers.html#module-optuna.samplers" title="optuna.samplers"><code class="xref py py-mod docutils literal notranslate"><span class="pre">samplers</span></code></a> in general.</p>
+<dl class="attribute">
+<dt id="optuna.distributions.IntUniformDistribution.low">
+<code class="sig-name descname">low</code><a class="headerlink" href="#optuna.distributions.IntUniformDistribution.low" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lower endpoint of the range of the distribution. <code class="docutils literal notranslate"><span class="pre">low</span></code> is included in the range.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="optuna.distributions.IntUniformDistribution.high">
+<code class="sig-name descname">high</code><a class="headerlink" href="#optuna.distributions.IntUniformDistribution.high" title="Permalink to this definition">¶</a></dt>
+<dd><p>Upper endpoint of the range of the distribution. <code class="docutils literal notranslate"><span class="pre">high</span></code> is included in the range.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optuna.distributions.IntUniformDistribution.single">
+<code class="sig-name descname">single</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/optuna/distributions.html#IntUniformDistribution.single"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optuna.distributions.IntUniformDistribution.single" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test whether the range of this distribution contains just a single value.</p>
+<p>When this method returns <a class="reference external" href="https://docs.python.org/3/library/constants.html#True" title="(in Python v3.8)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a>, <a class="reference internal" href="samplers.html#module-optuna.samplers" title="optuna.samplers"><code class="xref py py-mod docutils literal notranslate"><span class="pre">samplers</span></code></a> always sample
+the same value from the distribution.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/constants.html#True" title="(in Python v3.8)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a> if the range of this distribution contains just a single value,
+otherwise <a class="reference external" href="https://docs.python.org/3/library/constants.html#False" title="(in Python v3.8)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">False</span></code></a>.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="optuna.distributions.CategoricalDistribution">
+<em class="property">class </em><code class="sig-prename descclassname">optuna.distributions.</code><code class="sig-name descname">CategoricalDistribution</code><span class="sig-paren">(</span><em class="sig-param">choices</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/optuna/distributions.html#CategoricalDistribution"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optuna.distributions.CategoricalDistribution" title="Permalink to this definition">¶</a></dt>
+<dd><p>A categorical distribution.</p>
+<p>This object is instantiated by <a class="reference internal" href="trial.html#optuna.trial.Trial.suggest_categorical" title="optuna.trial.Trial.suggest_categorical"><code class="xref py py-func docutils literal notranslate"><span class="pre">suggest_categorical()</span></code></a>, and
+passed to <a class="reference internal" href="samplers.html#module-optuna.samplers" title="optuna.samplers"><code class="xref py py-mod docutils literal notranslate"><span class="pre">samplers</span></code></a> in general.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>choices</strong> – Parameter value candidates.</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Not all types are guaranteed to be compatible with all storages. It is recommended to
+restrict the types of the choices to <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.8)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a>, :class”<cite>int</cite>,
+<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></a> and <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>.</p>
+</div>
+<dl class="attribute">
+<dt id="optuna.distributions.CategoricalDistribution.choices">
+<code class="sig-name descname">choices</code><a class="headerlink" href="#optuna.distributions.CategoricalDistribution.choices" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parameter value candidates.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="optuna.distributions.CategoricalDistribution.single">
+<code class="sig-name descname">single</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/optuna/distributions.html#CategoricalDistribution.single"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optuna.distributions.CategoricalDistribution.single" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test whether the range of this distribution contains just a single value.</p>
+<p>When this method returns <a class="reference external" href="https://docs.python.org/3/library/constants.html#True" title="(in Python v3.8)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a>, <a class="reference internal" href="samplers.html#module-optuna.samplers" title="optuna.samplers"><code class="xref py py-mod docutils literal notranslate"><span class="pre">samplers</span></code></a> always sample
+the same value from the distribution.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/constants.html#True" title="(in Python v3.8)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a> if the range of this distribution contains just a single value,
+otherwise <a class="reference external" href="https://docs.python.org/3/library/constants.html#False" title="(in Python v3.8)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">False</span></code></a>.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="optuna.distributions.distribution_to_json">
+<code class="sig-prename descclassname">optuna.distributions.</code><code class="sig-name descname">distribution_to_json</code><span class="sig-paren">(</span><em class="sig-param">dist</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/optuna/distributions.html#distribution_to_json"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optuna.distributions.distribution_to_json" title="Permalink to this definition">¶</a></dt>
+<dd><p>Serialize a distribution to JSON format.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>dist</strong> – A distribution to be serialized.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A JSON string of a given distribution.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="optuna.distributions.json_to_distribution">
+<code class="sig-prename descclassname">optuna.distributions.</code><code class="sig-name descname">json_to_distribution</code><span class="sig-paren">(</span><em class="sig-param">json_str</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/optuna/distributions.html#json_to_distribution"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optuna.distributions.json_to_distribution" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deserialize a distribution in JSON format.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>json_str</strong> – A JSON-serialized distribution.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A deserialized distribution.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="optuna.distributions.check_distribution_compatibility">
+<code class="sig-prename descclassname">optuna.distributions.</code><code class="sig-name descname">check_distribution_compatibility</code><span class="sig-paren">(</span><em class="sig-param">dist_old</em>, <em class="sig-param">dist_new</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/optuna/distributions.html#check_distribution_compatibility"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optuna.distributions.check_distribution_compatibility" title="Permalink to this definition">¶</a></dt>
+<dd><p>A function to check compatibility of two distributions.</p>
+<p>Note that this method is not supposed to be called by library users.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dist_old</strong> – A distribution previously recorded in storage.</p></li>
+<li><p><strong>dist_new</strong> – A distribution newly added to storage.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>True denotes given distributions are compatible. Otherwise, they are not.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="exceptions.html" class="btn btn-neutral float-right" title="Exceptions" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="cli.html" class="btn btn-neutral float-left" title="Command Line Interface" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Optuna Contributors.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+    <a href="../privacy.html">Privacy Policy</a>.
+     
+
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

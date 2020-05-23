@@ -1,0 +1,684 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Integration &mdash; Optuna 1.2.0 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Logging" href="logging.html" />
+    <link rel="prev" title="Hyperparameter Importance" href="importance.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Optuna
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.2.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial/index.html">Tutorial</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">API Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="cli.html">Command Line Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="distributions.html">Distributions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exceptions.html">Exceptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="importance.html">Hyperparameter Importance</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="logging.html">Logging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="multi_objective/index.html">Multi-objective</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pruners.html">Pruners</a></li>
+<li class="toctree-l2"><a class="reference internal" href="samplers.html">Samplers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="storages.html">Storages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structs.html">Structs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="study.html">Study</a></li>
+<li class="toctree-l2"><a class="reference internal" href="trial.html">Trial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="visualization.html">Visualization</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">FAQ</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Optuna</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">API Reference</a> &raquo;</li>
+        
+      <li>Integration</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/reference/integration.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <span class="target" id="module-optuna.integration"></span><div class="section" id="integration">
+<h1>Integration<a class="headerlink" href="#integration" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="optuna.integration.ChainerPruningExtension">
+<em class="property">class </em><code class="sig-prename descclassname">optuna.integration.</code><code class="sig-name descname">ChainerPruningExtension</code><span class="sig-paren">(</span><em class="sig-param">trial</em>, <em class="sig-param">observation_key</em>, <em class="sig-param">pruner_trigger</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/optuna/integration/chainer.html#ChainerPruningExtension"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optuna.integration.ChainerPruningExtension" title="Permalink to this definition">¶</a></dt>
+<dd><p>Chainer extension to prune unpromising trials.</p>
+<p class="rubric">Example</p>
+<p>Add a pruning extension which observes validation losses to
+<a class="reference external" href="https://docs.chainer.org/en/stable/reference/generated/chainer.training.Trainer.html">Chainer Trainer</a>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">trainer</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span>
+    <span class="n">ChainerPruningExtension</span><span class="p">(</span><span class="n">trial</span><span class="p">,</span> <span class="s1">&#39;validation/main/loss&#39;</span><span class="p">,</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;epoch&#39;</span><span class="p">)))</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>trial</strong> – A <a class="reference internal" href="trial.html#optuna.trial.Trial" title="optuna.trial.Trial"><code class="xref py py-class docutils literal notranslate"><span class="pre">Trial</span></code></a> corresponding to the current evaluation of the
+objective function.</p></li>
+<li><p><strong>observation_key</strong> – An evaluation metric for pruning, e.g., <code class="docutils literal notranslate"><span class="pre">main/loss</span></code> and
+<code class="docutils literal notranslate"><span class="pre">validation/main/accuracy</span></code>. Please refer to
+<a class="reference external" href="https://docs.chainer.org/en/stable/reference/util/generated/chainer.Reporter.html">chainer.Reporter reference</a> for further details.</p></li>
+<li><p><strong>pruner_trigger</strong> – <p>A trigger to execute pruning. <code class="docutils literal notranslate"><span class="pre">pruner_trigger</span></code> is an instance of
+<a class="reference external" href="https://docs.chainer.org/en/stable/reference/generated/chainer.training.triggers.IntervalTrigger.html">IntervalTrigger</a> or
+<a class="reference external" href="https://docs.chainer.org/en/stable/reference/generated/chainer.training.triggers.ManualScheduleTrigger.html">ManualScheduleTrigger</a>. <a class="reference external" href="https://docs.chainer.org/en/stable/reference/generated/chainer.training.triggers.IntervalTrigger.html">IntervalTrigger</a> can be specified by a tuple of the interval length and its
+unit like <code class="docutils literal notranslate"><span class="pre">(1,</span> <span class="pre">'epoch')</span></code>.</p>
+</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="optuna.integration.ChainerMNStudy">
+<em class="property">class </em><code class="sig-prename descclassname">optuna.integration.</code><code class="sig-name descname">ChainerMNStudy</code><span class="sig-paren">(</span><em class="sig-param">study</em>, <em class="sig-param">comm</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/optuna/integration/chainermn.html#ChainerMNStudy"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optuna.integration.ChainerMNStudy" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper of <a class="reference internal" href="study.html#optuna.study.Study" title="optuna.study.Study"><code class="xref py py-class docutils literal notranslate"><span class="pre">Study</span></code></a> to incorporate Optuna with ChainerMN.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><code class="xref py py-class docutils literal notranslate"><span class="pre">ChainerMNStudy</span></code> provides the same interface as
+<a class="reference internal" href="study.html#optuna.study.Study" title="optuna.study.Study"><code class="xref py py-class docutils literal notranslate"><span class="pre">Study</span></code></a>. Please refer to <a class="reference internal" href="study.html#optuna.study.Study" title="optuna.study.Study"><code class="xref py py-class docutils literal notranslate"><span class="pre">optuna.study.Study</span></code></a> for further
+details.</p>
+</div>
+<p class="rubric">Example</p>
+<p>Optimize an objective function that trains neural network written with ChainerMN.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">comm</span> <span class="o">=</span> <span class="n">chainermn</span><span class="o">.</span><span class="n">create_communicator</span><span class="p">(</span><span class="s1">&#39;naive&#39;</span><span class="p">)</span>
+<span class="n">study</span> <span class="o">=</span> <span class="n">optuna</span><span class="o">.</span><span class="n">load_study</span><span class="p">(</span><span class="n">study_name</span><span class="p">,</span> <span class="n">storage_url</span><span class="p">)</span>
+<span class="n">chainermn_study</span> <span class="o">=</span> <span class="n">optuna</span><span class="o">.</span><span class="n">integration</span><span class="o">.</span><span class="n">ChainerMNStudy</span><span class="p">(</span><span class="n">study</span><span class="p">,</span> <span class="n">comm</span><span class="p">)</span>
+<span class="n">chainermn_study</span><span class="o">.</span><span class="n">optimize</span><span class="p">(</span><span class="n">objective</span><span class="p">,</span> <span class="n">n_trials</span><span class="o">=</span><span class="mi">25</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>study</strong> – A <a class="reference internal" href="study.html#optuna.study.Study" title="optuna.study.Study"><code class="xref py py-class docutils literal notranslate"><span class="pre">Study</span></code></a> object.</p></li>
+<li><p><strong>comm</strong> – A <a class="reference external" href="https://docs.chainer.org/en/stable/chainermn/reference/index.html#communicators">ChainerMN communicator</a>.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="method">
+<dt id="optuna.integration.ChainerMNStudy.optimize">
+<code class="sig-name descname">optimize</code><span class="sig-paren">(</span><em class="sig-param">func</em>, <em class="sig-param">n_trials=None</em>, <em class="sig-param">timeout=None</em>, <em class="sig-param">catch=()</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/optuna/integration/chainermn.html#ChainerMNStudy.optimize"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optuna.integration.ChainerMNStudy.optimize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Optimize an objective function.</p>
+<p>This method provides the same interface as <a class="reference internal" href="study.html#optuna.study.Study.optimize" title="optuna.study.Study.optimize"><code class="xref py py-func docutils literal notranslate"><span class="pre">optuna.study.Study.optimize()</span></code></a> except
+the absence of <code class="docutils literal notranslate"><span class="pre">n_jobs</span></code> argument.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="optuna.integration.CmaEsSampler">
+<em class="property">class </em><code class="sig-prename descclassname">optuna.integration.</code><code class="sig-name descname">CmaEsSampler</code><span class="sig-paren">(</span><em class="sig-param">x0=None</em>, <em class="sig-param">sigma0=None</em>, <em class="sig-param">cma_stds=None</em>, <em class="sig-param">seed=None</em>, <em class="sig-param">cma_opts=None</em>, <em class="sig-param">n_startup_trials=1</em>, <em class="sig-param">independent_sampler=None</em>, <em class="sig-param">warn_independent_sampling=True</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/optuna/integration/cma.html#CmaEsSampler"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optuna.integration.CmaEsSampler" title="Permalink to this definition">¶</a></dt>
+<dd><p>A Sampler using cma library as the backend.</p>
+<p class="rubric">Example</p>
+<p>Optimize a simple quadratic function by using <a class="reference internal" href="#optuna.integration.CmaEsSampler" title="optuna.integration.CmaEsSampler"><code class="xref py py-class docutils literal notranslate"><span class="pre">CmaEsSampler</span></code></a>.</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">optuna</span>
+
+<span class="k">def</span> <span class="nf">objective</span><span class="p">(</span><span class="n">trial</span><span class="p">):</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">trial</span><span class="o">.</span><span class="n">suggest_uniform</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">trial</span><span class="o">.</span><span class="n">suggest_int</span><span class="p">(</span><span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">y</span>
+
+<span class="n">sampler</span> <span class="o">=</span> <span class="n">optuna</span><span class="o">.</span><span class="n">integration</span><span class="o">.</span><span class="n">CmaEsSampler</span><span class="p">()</span>
+<span class="n">study</span> <span class="o">=</span> <span class="n">optuna</span><span class="o">.</span><span class="n">create_study</span><span class="p">(</span><span class="n">sampler</span><span class="o">=</span><span class="n">sampler</span><span class="p">)</span>
+<span class="n">study</span><span class="o">.</span><span class="n">optimize</span><span class="p">(</span><span class="n">objective</span><span class="p">,</span> <span class="n">n_trials</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Note that parallel execution of trials may affect the optimization performance of CMA-ES,
+especially if the number of trials running in parallel exceeds the population size.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x0</strong> – A dictionary of an initial parameter values for CMA-ES. By default, the mean of <code class="docutils literal notranslate"><span class="pre">low</span></code>
+and <code class="docutils literal notranslate"><span class="pre">high</span></code> for each distribution is used.
+Please refer to <a class="reference external" href="http://cma.gforge.inria.fr/apidocs-pycma/cma.evolution_strategy.CMAEvolutionStrategy.html">cma.CMAEvolutionStrategy</a> for further details of <code class="docutils literal notranslate"><span class="pre">x0</span></code>.</p></li>
+<li><p><strong>sigma0</strong> – Initial standard deviation of CMA-ES. By default, <code class="docutils literal notranslate"><span class="pre">sigma0</span></code> is set to
+<code class="docutils literal notranslate"><span class="pre">min_range</span> <span class="pre">/</span> <span class="pre">6</span></code>, where <code class="docutils literal notranslate"><span class="pre">min_range</span></code> denotes the minimum range of the distributions
+in the search space. If distribution is categorical, <code class="docutils literal notranslate"><span class="pre">min_range</span></code> is
+<code class="docutils literal notranslate"><span class="pre">len(choices)</span> <span class="pre">-</span> <span class="pre">1</span></code>.
+Please refer to <a class="reference external" href="http://cma.gforge.inria.fr/apidocs-pycma/cma.evolution_strategy.CMAEvolutionStrategy.html">cma.CMAEvolutionStrategy</a> for further details of <code class="docutils literal notranslate"><span class="pre">sigma0</span></code>.</p></li>
+<li><p><strong>cma_stds</strong> – A dictionary of multipliers of sigma0 for each parameters. The default value is 1.0.
+Please refer to <a class="reference external" href="http://cma.gforge.inria.fr/apidocs-pycma/cma.evolution_strategy.CMAEvolutionStrategy.html">cma.CMAEvolutionStrategy</a> for further details of <code class="docutils literal notranslate"><span class="pre">cma_stds</span></code>.</p></li>
+<li><p><strong>seed</strong> – A random seed for CMA-ES.</p></li>
+<li><p><strong>cma_opts</strong> – <p>Options passed to the constructor of <a class="reference external" href="http://cma.gforge.inria.fr/apidocs-pycma/cma.evolution_strategy.CMAEvolutionStrategy.html">cma.CMAEvolutionStrategy</a> class.</p>
+<p>Note that <code class="docutils literal notranslate"><span class="pre">BoundaryHandler</span></code>, <code class="docutils literal notranslate"><span class="pre">bounds</span></code>, <code class="docutils literal notranslate"><span class="pre">CMA_stds</span></code> and <code class="docutils literal notranslate"><span class="pre">seed</span></code> arguments in
+<code class="docutils literal notranslate"><span class="pre">cma_opts</span></code> will be ignored because it is added by
+<a class="reference internal" href="#optuna.integration.CmaEsSampler" title="optuna.integration.CmaEsSampler"><code class="xref py py-class docutils literal notranslate"><span class="pre">CmaEsSampler</span></code></a> automatically.</p>
+</p></li>
+<li><p><strong>n_startup_trials</strong> – The independent sampling is used instead of the CMA-ES algorithm until the given number
+of trials finish in the same study.</p></li>
+<li><p><strong>independent_sampler</strong> – <p>A <a class="reference internal" href="samplers.html#optuna.samplers.BaseSampler" title="optuna.samplers.BaseSampler"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseSampler</span></code></a> instance that is used for independent
+sampling. The parameters not contained in the relative search space are sampled
+by this sampler.
+The search space for <a class="reference internal" href="#optuna.integration.CmaEsSampler" title="optuna.integration.CmaEsSampler"><code class="xref py py-class docutils literal notranslate"><span class="pre">CmaEsSampler</span></code></a> is determined by
+<a class="reference internal" href="samplers.html#optuna.samplers.intersection_search_space" title="optuna.samplers.intersection_search_space"><code class="xref py py-func docutils literal notranslate"><span class="pre">intersection_search_space()</span></code></a>.</p>
+<p>If <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.8)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a> is specified, <a class="reference internal" href="samplers.html#optuna.samplers.RandomSampler" title="optuna.samplers.RandomSampler"><code class="xref py py-class docutils literal notranslate"><span class="pre">RandomSampler</span></code></a> is used
+as the default.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="samplers.html#module-optuna.samplers" title="optuna.samplers"><code class="xref py py-class docutils literal notranslate"><span class="pre">optuna.samplers</span></code></a> module provides built-in independent samplers
+such as <a class="reference internal" href="samplers.html#optuna.samplers.RandomSampler" title="optuna.samplers.RandomSampler"><code class="xref py py-class docutils literal notranslate"><span class="pre">RandomSampler</span></code></a> and
+<a class="reference internal" href="samplers.html#optuna.samplers.TPESampler" title="optuna.samplers.TPESampler"><code class="xref py py-class docutils literal notranslate"><span class="pre">TPESampler</span></code></a>.</p>
+</div>
+</p></li>
+<li><p><strong>warn_independent_sampling</strong> – <p>If this is <a class="reference external" href="https://docs.python.org/3/library/constants.html#True" title="(in Python v3.8)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a>, a warning message is emitted when
+the value of a parameter is sampled by using an independent sampler.</p>
+<p>Note that the parameters of the first trial in a study are always sampled
+via an independent sampler, so no warning messages are emitted in this case.</p>
+</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="optuna.integration.FastAIPruningCallback">
+<em class="property">class </em><code class="sig-prename descclassname">optuna.integration.</code><code class="sig-name descname">FastAIPruningCallback</code><span class="sig-paren">(</span><em class="sig-param">learn</em>, <em class="sig-param">trial</em>, <em class="sig-param">monitor</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/optuna/integration/fastai.html#FastAIPruningCallback"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optuna.integration.FastAIPruningCallback" title="Permalink to this definition">¶</a></dt>
+<dd><p>FastAI callback to prune unpromising trials for fastai.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This callback is for fastai&lt;2.0, not the coming version developed in fastai/fastai_dev.</p>
+</div>
+<p class="rubric">Example</p>
+<p>Add a pruning callback which monitors validation loss directly to <code class="docutils literal notranslate"><span class="pre">Learner</span></code>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># If registering this callback in construction</span>
+<span class="kn">from</span> <span class="nn">functools</span> <span class="k">import</span> <span class="n">partial</span>
+
+<span class="n">learn</span> <span class="o">=</span> <span class="n">Learner</span><span class="p">(</span>
+    <span class="n">data</span><span class="p">,</span> <span class="n">model</span><span class="p">,</span>
+    <span class="n">callback_fns</span><span class="o">=</span><span class="p">[</span><span class="n">partial</span><span class="p">(</span><span class="n">FastAIPruningCallback</span><span class="p">,</span> <span class="n">trial</span><span class="o">=</span><span class="n">trial</span><span class="p">,</span> <span class="n">monitor</span><span class="o">=</span><span class="s1">&#39;valid_loss&#39;</span><span class="p">)])</span>
+</pre></div>
+</div>
+<p class="rubric">Example</p>
+<p>Register a pruning callback to <code class="docutils literal notranslate"><span class="pre">learn.fit</span></code> and <code class="docutils literal notranslate"><span class="pre">learn.fit_one_cycle</span></code>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">learn</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">n_epochs</span><span class="p">,</span> <span class="n">callbacks</span><span class="o">=</span><span class="p">[</span><span class="n">FastAIPruningCallback</span><span class="p">(</span><span class="n">learn</span><span class="p">,</span> <span class="n">trial</span><span class="p">,</span> <span class="s1">&#39;valid_loss&#39;</span><span class="p">)])</span>
+<span class="n">learn</span><span class="o">.</span><span class="n">fit_one_cycle</span><span class="p">(</span>
+    <span class="n">n_epochs</span><span class="p">,</span> <span class="n">cyc_len</span><span class="p">,</span> <span class="n">max_lr</span><span class="p">,</span>
+    <span class="n">callbacks</span><span class="o">=</span><span class="p">[</span><span class="n">FastAIPruningCallback</span><span class="p">(</span><span class="n">learn</span><span class="p">,</span> <span class="n">trial</span><span class="p">,</span> <span class="s1">&#39;valid_loss&#39;</span><span class="p">)])</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>learn</strong> – <a class="reference external" href="https://docs.fast.ai/basic_train.html#Learner">fastai.basic_train.Learner</a>.</p></li>
+<li><p><strong>trial</strong> – A <a class="reference internal" href="trial.html#optuna.trial.Trial" title="optuna.trial.Trial"><code class="xref py py-class docutils literal notranslate"><span class="pre">Trial</span></code></a> corresponding to the current
+evaluation of the objective function.</p></li>
+<li><p><strong>monitor</strong> – An evaluation metric for pruning, e.g. <code class="docutils literal notranslate"><span class="pre">valid_loss</span></code> and <code class="docutils literal notranslate"><span class="pre">Accuracy</span></code>.
+Please refer to <a class="reference external" href="https://docs.fast.ai/callback.html#Callback">fastai.Callback reference</a> for further
+details.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="optuna.integration.PyTorchIgnitePruningHandler">
+<em class="property">class </em><code class="sig-prename descclassname">optuna.integration.</code><code class="sig-name descname">PyTorchIgnitePruningHandler</code><span class="sig-paren">(</span><em class="sig-param">trial</em>, <em class="sig-param">metric</em>, <em class="sig-param">trainer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/optuna/integration/pytorch_ignite.html#PyTorchIgnitePruningHandler"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optuna.integration.PyTorchIgnitePruningHandler" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyTorch Ignite handler to prune unpromising trials.</p>
+<p class="rubric">Example</p>
+<p>Add a pruning handler which observes validation accuracy.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">evaluator</span> <span class="o">=</span> <span class="n">create_supervised_evaluator</span><span class="p">(</span><span class="n">model</span><span class="p">,</span>
+                                        <span class="n">metrics</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;accuracy&#39;</span><span class="p">:</span> <span class="n">Accuracy</span><span class="p">()},</span>
+                                        <span class="n">device</span><span class="o">=</span><span class="n">device</span><span class="p">)</span>
+<span class="n">handler</span> <span class="o">=</span> <span class="n">PyTorchIgnitePruningHandler</span><span class="p">(</span><span class="n">trial</span><span class="p">,</span> <span class="s1">&#39;accuracy&#39;</span><span class="p">,</span> <span class="n">trainer</span><span class="p">)</span>
+<span class="n">evaluator</span><span class="o">.</span><span class="n">add_event_handler</span><span class="p">(</span><span class="n">Events</span><span class="o">.</span><span class="n">COMPLETED</span><span class="p">,</span> <span class="n">handler</span><span class="p">)</span>
+
+<span class="nd">@trainer</span><span class="o">.</span><span class="n">on</span><span class="p">(</span><span class="n">Events</span><span class="o">.</span><span class="n">EPOCH_COMPLETED</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">log_validation_results</span><span class="p">(</span><span class="n">engine</span><span class="p">):</span>
+    <span class="n">evaluator</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">val_loader</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>trial</strong> – A <a class="reference internal" href="trial.html#optuna.trial.Trial" title="optuna.trial.Trial"><code class="xref py py-class docutils literal notranslate"><span class="pre">Trial</span></code></a> corresponding to the current evaluation of the
+objective function.</p></li>
+<li><p><strong>metric</strong> – A name of metric for pruning, e.g., <code class="docutils literal notranslate"><span class="pre">accuracy</span></code> and <code class="docutils literal notranslate"><span class="pre">loss</span></code>.</p></li>
+<li><p><strong>trainer</strong> – A trainer engine of PyTorch Ignite. Please refer to <a class="reference external" href="https://pytorch.org/ignite/engine.html#ignite.engine.Engine">ignite.engine.Engine reference</a> for further details.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="optuna.integration.KerasPruningCallback">
+<em class="property">class </em><code class="sig-prename descclassname">optuna.integration.</code><code class="sig-name descname">KerasPruningCallback</code><span class="sig-paren">(</span><em class="sig-param">trial</em>, <em class="sig-param">monitor</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/optuna/integration/keras.html#KerasPruningCallback"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optuna.integration.KerasPruningCallback" title="Permalink to this definition">¶</a></dt>
+<dd><p>Keras callback to prune unpromising trials.</p>
+<p class="rubric">Example</p>
+<p>Add a pruning callback which observes validation losses.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">callbacks</span><span class="o">=</span><span class="p">[</span><span class="n">KerasPruningCallback</span><span class="p">(</span><span class="n">trial</span><span class="p">,</span> <span class="s1">&#39;val_loss&#39;</span><span class="p">)])</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>trial</strong> – A <a class="reference internal" href="trial.html#optuna.trial.Trial" title="optuna.trial.Trial"><code class="xref py py-class docutils literal notranslate"><span class="pre">Trial</span></code></a> corresponding to the current evaluation of the
+objective function.</p></li>
+<li><p><strong>monitor</strong> – An evaluation metric for pruning, e.g., <code class="docutils literal notranslate"><span class="pre">val_loss</span></code> and
+<code class="docutils literal notranslate"><span class="pre">val_acc</span></code>. Please refer to <a class="reference external" href="https://keras.io/callbacks/#callback">keras.Callback reference</a> for further details.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="optuna.integration.LightGBMPruningCallback">
+<em class="property">class </em><code class="sig-prename descclassname">optuna.integration.</code><code class="sig-name descname">LightGBMPruningCallback</code><span class="sig-paren">(</span><em class="sig-param">trial</em>, <em class="sig-param">metric</em>, <em class="sig-param">valid_name='valid_0'</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/optuna/integration/lightgbm.html#LightGBMPruningCallback"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optuna.integration.LightGBMPruningCallback" title="Permalink to this definition">¶</a></dt>
+<dd><p>Callback for LightGBM to prune unpromising trials.</p>
+<p class="rubric">Example</p>
+<p>Add a pruning callback which observes validation scores to training of a LightGBM model.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">param</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;objective&#39;</span><span class="p">:</span> <span class="s1">&#39;binary&#39;</span><span class="p">,</span> <span class="s1">&#39;metric&#39;</span><span class="p">:</span> <span class="s1">&#39;binary_error&#39;</span><span class="p">}</span>
+<span class="n">pruning_callback</span> <span class="o">=</span> <span class="n">LightGBMPruningCallback</span><span class="p">(</span><span class="n">trial</span><span class="p">,</span> <span class="s1">&#39;binary_error&#39;</span><span class="p">)</span>
+<span class="n">gbm</span> <span class="o">=</span> <span class="n">lgb</span><span class="o">.</span><span class="n">train</span><span class="p">(</span><span class="n">param</span><span class="p">,</span> <span class="n">dtrain</span><span class="p">,</span> <span class="n">valid_sets</span><span class="o">=</span><span class="p">[</span><span class="n">dtest</span><span class="p">],</span> <span class="n">callbacks</span><span class="o">=</span><span class="p">[</span><span class="n">pruning_callback</span><span class="p">])</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>trial</strong> – A <a class="reference internal" href="trial.html#optuna.trial.Trial" title="optuna.trial.Trial"><code class="xref py py-class docutils literal notranslate"><span class="pre">Trial</span></code></a> corresponding to the current evaluation of
+the objective function.</p></li>
+<li><p><strong>metric</strong> – An evaluation metric for pruning, e.g., <code class="docutils literal notranslate"><span class="pre">binary_error</span></code> and <code class="docutils literal notranslate"><span class="pre">multi_error</span></code>.
+Please refer to
+<a class="reference external" href="https://lightgbm.readthedocs.io/en/latest/Parameters.html#metric">LightGBM reference</a>
+for further details.</p></li>
+<li><p><strong>valid_name</strong> – The name of the target validation.
+Validation names are specified by <code class="docutils literal notranslate"><span class="pre">valid_names</span></code> option of
+<a class="reference external" href="https://lightgbm.readthedocs.io/en/latest/Python-API.html#lightgbm.train">train method</a>.
+If omitted, <code class="docutils literal notranslate"><span class="pre">valid_0</span></code> is used which is the default name of the first validation.
+Note that this argument will be ignored if you are calling
+<a class="reference external" href="https://lightgbm.readthedocs.io/en/latest/Python-API.html#lightgbm.cv">cv method</a>
+instead of train method.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="optuna.integration.lightgbm.train">
+<code class="sig-prename descclassname">optuna.integration.lightgbm.</code><code class="sig-name descname">train</code><span class="sig-paren">(</span><em class="sig-param">*args: Any</em>, <em class="sig-param">**kwargs: Any</em><span class="sig-paren">)</span> &#x2192; Any<a class="reference internal" href="../_modules/optuna/integration/lightgbm_tuner.html#train"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optuna.integration.lightgbm.train" title="Permalink to this definition">¶</a></dt>
+<dd><p>Wrapper of LightGBM Training API to tune hyperparameters.</p>
+<p>It tunes important hyperparameters (e.g., <cite>min_child_samples</cite> and <cite>feature_fraction</cite>) in a
+stepwise manner. Arguments and keyword arguments for <a class="reference external" href="https://lightgbm.readthedocs.io/en/latest/pythonapi/lightgbm.train.html">lightgbm.train()</a> can be passed.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Added in v0.18.0 as an experimental feature. The interface may change in newer versions
+without prior notice. See <a class="reference external" href="https://github.com/optuna/optuna/releases/tag/v0.18.0">https://github.com/optuna/optuna/releases/tag/v0.18.0</a>.</p>
+</div>
+</dd></dl>
+
+<dl class="class">
+<dt id="optuna.integration.MXNetPruningCallback">
+<em class="property">class </em><code class="sig-prename descclassname">optuna.integration.</code><code class="sig-name descname">MXNetPruningCallback</code><span class="sig-paren">(</span><em class="sig-param">trial</em>, <em class="sig-param">eval_metric</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/optuna/integration/mxnet.html#MXNetPruningCallback"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optuna.integration.MXNetPruningCallback" title="Permalink to this definition">¶</a></dt>
+<dd><p>MXNet callback to prune unpromising trials.</p>
+<p class="rubric">Example</p>
+<p>Add a pruning callback which observes validation accuracy.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">train_data</span><span class="o">=</span><span class="n">X</span><span class="p">,</span> <span class="n">eval_data</span><span class="o">=</span><span class="n">Y</span><span class="p">,</span>
+          <span class="n">eval_end_callback</span><span class="o">=</span><span class="n">MXNetPruningCallback</span><span class="p">(</span><span class="n">trial</span><span class="p">,</span> <span class="n">eval_metric</span><span class="o">=</span><span class="s1">&#39;accuracy&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>trial</strong> – A <a class="reference internal" href="trial.html#optuna.trial.Trial" title="optuna.trial.Trial"><code class="xref py py-class docutils literal notranslate"><span class="pre">Trial</span></code></a> corresponding to the current evaluation of the
+objective function.</p></li>
+<li><p><strong>eval_metric</strong> – An evaluation metric name for pruning, e.g., <code class="docutils literal notranslate"><span class="pre">cross-entropy</span></code> and
+<code class="docutils literal notranslate"><span class="pre">accuracy</span></code>. If using default metrics like mxnet.metrics.Accuracy, use it’s
+default metric name. For custom metrics, use the metric_name provided to
+constructor. Please refer to <a class="reference external" href="https://mxnet.apache.org/api/python/metric/metric.html">mxnet.metrics reference</a> for further details.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="optuna.integration.PyTorchLightningPruningCallback">
+<em class="property">class </em><code class="sig-prename descclassname">optuna.integration.</code><code class="sig-name descname">PyTorchLightningPruningCallback</code><span class="sig-paren">(</span><em class="sig-param">trial</em>, <em class="sig-param">monitor</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/optuna/integration/pytorch_lightning.html#PyTorchLightningPruningCallback"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optuna.integration.PyTorchLightningPruningCallback" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyTorch Lightning callback to prune unpromising trials.</p>
+<p class="rubric">Example</p>
+<p>Add a pruning callback which observes validation accuracy.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">trainer</span><span class="o">.</span><span class="n">pytorch_lightning</span><span class="o">.</span><span class="n">Trainer</span><span class="p">(</span>
+    <span class="n">early_stop_callback</span><span class="o">=</span><span class="n">PyTorchLightningPruningCallback</span><span class="p">(</span><span class="n">trial</span><span class="p">,</span> <span class="n">monitor</span><span class="o">=</span><span class="s1">&#39;avg_val_acc&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>trial</strong> – A <a class="reference internal" href="trial.html#optuna.trial.Trial" title="optuna.trial.Trial"><code class="xref py py-class docutils literal notranslate"><span class="pre">Trial</span></code></a> corresponding to the current evaluation of the
+objective function.</p></li>
+<li><p><strong>monitor</strong> – An evaluation metric for pruning, e.g., <code class="docutils literal notranslate"><span class="pre">val_loss</span></code> or
+<code class="docutils literal notranslate"><span class="pre">val_acc</span></code>. The metrics are obtained from the returned dictionaries from e.g.
+<code class="docutils literal notranslate"><span class="pre">pytorch_lightning.LightningModule.training_step</span></code> or
+<code class="docutils literal notranslate"><span class="pre">pytorch_lightning.LightningModule.validation_end</span></code> and the names thus depend on
+how this dictionary is formatted.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="optuna.integration.SkoptSampler">
+<em class="property">class </em><code class="sig-prename descclassname">optuna.integration.</code><code class="sig-name descname">SkoptSampler</code><span class="sig-paren">(</span><em class="sig-param">independent_sampler=None</em>, <em class="sig-param">warn_independent_sampling=True</em>, <em class="sig-param">skopt_kwargs=None</em>, <em class="sig-param">n_startup_trials=1</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/optuna/integration/skopt.html#SkoptSampler"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optuna.integration.SkoptSampler" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sampler using Scikit-Optimize as the backend.</p>
+<p class="rubric">Example</p>
+<p>Optimize a simple quadratic function by using <a class="reference internal" href="#optuna.integration.SkoptSampler" title="optuna.integration.SkoptSampler"><code class="xref py py-class docutils literal notranslate"><span class="pre">SkoptSampler</span></code></a>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">objective</span><span class="p">(</span><span class="n">trial</span><span class="p">):</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">trial</span><span class="o">.</span><span class="n">suggest_uniform</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">trial</span><span class="o">.</span><span class="n">suggest_int</span><span class="p">(</span><span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">y</span>
+
+<span class="n">sampler</span> <span class="o">=</span> <span class="n">optuna</span><span class="o">.</span><span class="n">integration</span><span class="o">.</span><span class="n">SkoptSampler</span><span class="p">()</span>
+<span class="n">study</span> <span class="o">=</span> <span class="n">optuna</span><span class="o">.</span><span class="n">create_study</span><span class="p">(</span><span class="n">sampler</span><span class="o">=</span><span class="n">sampler</span><span class="p">)</span>
+<span class="n">study</span><span class="o">.</span><span class="n">optimize</span><span class="p">(</span><span class="n">objective</span><span class="p">,</span> <span class="n">n_trials</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>independent_sampler</strong> – <p>A <a class="reference internal" href="samplers.html#optuna.samplers.BaseSampler" title="optuna.samplers.BaseSampler"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseSampler</span></code></a> instance that is used for independent
+sampling. The parameters not contained in the relative search space are sampled
+by this sampler.
+The search space for <a class="reference internal" href="#optuna.integration.SkoptSampler" title="optuna.integration.SkoptSampler"><code class="xref py py-class docutils literal notranslate"><span class="pre">SkoptSampler</span></code></a> is determined by
+<a class="reference internal" href="samplers.html#optuna.samplers.intersection_search_space" title="optuna.samplers.intersection_search_space"><code class="xref py py-func docutils literal notranslate"><span class="pre">intersection_search_space()</span></code></a>.</p>
+<p>If <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.8)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a> is specified, <a class="reference internal" href="samplers.html#optuna.samplers.RandomSampler" title="optuna.samplers.RandomSampler"><code class="xref py py-class docutils literal notranslate"><span class="pre">RandomSampler</span></code></a> is used
+as the default.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="samplers.html#module-optuna.samplers" title="optuna.samplers"><code class="xref py py-class docutils literal notranslate"><span class="pre">optuna.samplers</span></code></a> module provides built-in independent samplers
+such as <a class="reference internal" href="samplers.html#optuna.samplers.RandomSampler" title="optuna.samplers.RandomSampler"><code class="xref py py-class docutils literal notranslate"><span class="pre">RandomSampler</span></code></a> and
+<a class="reference internal" href="samplers.html#optuna.samplers.TPESampler" title="optuna.samplers.TPESampler"><code class="xref py py-class docutils literal notranslate"><span class="pre">TPESampler</span></code></a>.</p>
+</div>
+</p></li>
+<li><p><strong>warn_independent_sampling</strong> – <p>If this is <a class="reference external" href="https://docs.python.org/3/library/constants.html#True" title="(in Python v3.8)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a>, a warning message is emitted when
+the value of a parameter is sampled by using an independent sampler.</p>
+<p>Note that the parameters of the first trial in a study are always sampled
+via an independent sampler, so no warning messages are emitted in this case.</p>
+</p></li>
+<li><p><strong>skopt_kwargs</strong> – <p>Keyword arguments passed to the constructor of
+<a class="reference external" href="https://scikit-optimize.github.io/#skopt.Optimizer">skopt.Optimizer</a>
+class.</p>
+<p>Note that <code class="docutils literal notranslate"><span class="pre">dimensions</span></code> argument in <code class="docutils literal notranslate"><span class="pre">skopt_kwargs</span></code> will be ignored
+because it is added by <a class="reference internal" href="#optuna.integration.SkoptSampler" title="optuna.integration.SkoptSampler"><code class="xref py py-class docutils literal notranslate"><span class="pre">SkoptSampler</span></code></a> automatically.</p>
+</p></li>
+<li><p><strong>n_startup_trials</strong> – The independent sampling is used until the given number of trials finish in the
+same study.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="optuna.integration.TensorFlowPruningHook">
+<em class="property">class </em><code class="sig-prename descclassname">optuna.integration.</code><code class="sig-name descname">TensorFlowPruningHook</code><span class="sig-paren">(</span><em class="sig-param">trial</em>, <em class="sig-param">estimator</em>, <em class="sig-param">metric</em>, <em class="sig-param">run_every_steps</em>, <em class="sig-param">is_higher_better=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/optuna/integration/tensorflow.html#TensorFlowPruningHook"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optuna.integration.TensorFlowPruningHook" title="Permalink to this definition">¶</a></dt>
+<dd><p>TensorFlow SessionRunHook to prune unpromising trials.</p>
+<p class="rubric">Example</p>
+<p>Add a pruning SessionRunHook for a TensorFlow’s Estimator.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pruning_hook</span> <span class="o">=</span> <span class="n">TensorFlowPruningHook</span><span class="p">(</span>
+    <span class="n">trial</span><span class="o">=</span><span class="n">trial</span><span class="p">,</span>
+    <span class="n">estimator</span><span class="o">=</span><span class="n">clf</span><span class="p">,</span>
+    <span class="n">metric</span><span class="o">=</span><span class="s2">&quot;accuracy&quot;</span><span class="p">,</span>
+    <span class="n">is_higher_better</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">run_every_steps</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="n">hooks</span> <span class="o">=</span> <span class="p">[</span><span class="n">pruning_hook</span><span class="p">]</span>
+<span class="n">tf</span><span class="o">.</span><span class="n">estimator</span><span class="o">.</span><span class="n">train_and_evaluate</span><span class="p">(</span>
+    <span class="n">clf</span><span class="p">,</span>
+    <span class="n">tf</span><span class="o">.</span><span class="n">estimator</span><span class="o">.</span><span class="n">TrainSpec</span><span class="p">(</span><span class="n">input_fn</span><span class="o">=</span><span class="n">train_input_fn</span><span class="p">,</span> <span class="n">max_steps</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span> <span class="n">hooks</span><span class="o">=</span><span class="n">hooks</span><span class="p">),</span>
+    <span class="n">eval_spec</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>trial</strong> – A <a class="reference internal" href="trial.html#optuna.trial.Trial" title="optuna.trial.Trial"><code class="xref py py-class docutils literal notranslate"><span class="pre">Trial</span></code></a> corresponding to the current evaluation of
+the objective function.</p></li>
+<li><p><strong>estimator</strong> – An estimator which you will use.</p></li>
+<li><p><strong>metric</strong> – An evaluation metric for pruning, e.g., <code class="docutils literal notranslate"><span class="pre">accuracy</span></code> and <code class="docutils literal notranslate"><span class="pre">loss</span></code>.</p></li>
+<li><p><strong>run_every_steps</strong> – An interval to watch the summary file.</p></li>
+<li><p><strong>is_higher_better</strong> – Please do not use this argument because this class refers to
+<a class="reference internal" href="structs.html#optuna.structs.StudyDirection" title="optuna.structs.StudyDirection"><code class="xref py py-class docutils literal notranslate"><span class="pre">StudyDirection</span></code></a> to check whether the current study is
+<code class="docutils literal notranslate"><span class="pre">minimize</span></code> or <code class="docutils literal notranslate"><span class="pre">maximize</span></code>.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="optuna.integration.TFKerasPruningCallback">
+<em class="property">class </em><code class="sig-prename descclassname">optuna.integration.</code><code class="sig-name descname">TFKerasPruningCallback</code><span class="sig-paren">(</span><em class="sig-param">trial</em>, <em class="sig-param">monitor</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/optuna/integration/tfkeras.html#TFKerasPruningCallback"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optuna.integration.TFKerasPruningCallback" title="Permalink to this definition">¶</a></dt>
+<dd><p>tf.keras callback to prune unpromising trials.</p>
+<p>This callback is intend to be compatible for TensorFlow v1 and v2,
+but only tested with TensorFlow v1.</p>
+<p class="rubric">Example</p>
+<p>Add a pruning callback which observes validation losses.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">callbacks</span><span class="o">=</span><span class="p">[</span><span class="n">TFKerasPruningCallback</span><span class="p">(</span><span class="n">trial</span><span class="p">,</span> <span class="s1">&#39;val_loss&#39;</span><span class="p">)])</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>trial</strong> – A <a class="reference internal" href="trial.html#optuna.trial.Trial" title="optuna.trial.Trial"><code class="xref py py-class docutils literal notranslate"><span class="pre">Trial</span></code></a> corresponding to the current evaluation of the
+objective function.</p></li>
+<li><p><strong>monitor</strong> – An evaluation metric for pruning, e.g., <code class="docutils literal notranslate"><span class="pre">val_loss</span></code> or <code class="docutils literal notranslate"><span class="pre">val_acc</span></code>.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="optuna.integration.XGBoostPruningCallback">
+<em class="property">class </em><code class="sig-prename descclassname">optuna.integration.</code><code class="sig-name descname">XGBoostPruningCallback</code><span class="sig-paren">(</span><em class="sig-param">trial</em>, <em class="sig-param">observation_key</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/optuna/integration/xgboost.html#XGBoostPruningCallback"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#optuna.integration.XGBoostPruningCallback" title="Permalink to this definition">¶</a></dt>
+<dd><p>Callback for XGBoost to prune unpromising trials.</p>
+<p class="rubric">Example</p>
+<p>Add a pruning callback which observes validation errors to training of an XGBoost model.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pruning_callback</span> <span class="o">=</span> <span class="n">XGBoostPruningCallback</span><span class="p">(</span><span class="n">trial</span><span class="p">,</span> <span class="s1">&#39;validation-error&#39;</span><span class="p">)</span>
+<span class="n">bst</span> <span class="o">=</span> <span class="n">xgb</span><span class="o">.</span><span class="n">train</span><span class="p">(</span><span class="n">param</span><span class="p">,</span> <span class="n">dtrain</span><span class="p">,</span> <span class="n">evals</span><span class="o">=</span><span class="p">[(</span><span class="n">dtest</span><span class="p">,</span> <span class="s1">&#39;validation&#39;</span><span class="p">)],</span>
+                <span class="n">callbacks</span><span class="o">=</span><span class="p">[</span><span class="n">pruning_callback</span><span class="p">])</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>trial</strong> – A <a class="reference internal" href="trial.html#optuna.trial.Trial" title="optuna.trial.Trial"><code class="xref py py-class docutils literal notranslate"><span class="pre">Trial</span></code></a> corresponding to the current evaluation of the
+objective function.</p></li>
+<li><p><strong>observation_key</strong> – An evaluation metric for pruning, e.g., <code class="docutils literal notranslate"><span class="pre">validation-error</span></code> and
+<code class="docutils literal notranslate"><span class="pre">validation-merror</span></code>. Please refer to <code class="docutils literal notranslate"><span class="pre">eval_metric</span></code> in
+<a class="reference external" href="https://xgboost.readthedocs.io/en/latest/parameter.html">XGBoost reference</a>
+for further details.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="logging.html" class="btn btn-neutral float-right" title="Logging" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="importance.html" class="btn btn-neutral float-left" title="Hyperparameter Importance" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Optuna Contributors.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+    <a href="../privacy.html">Privacy Policy</a>.
+     
+
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

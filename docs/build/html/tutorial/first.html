@@ -1,0 +1,344 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>First Optimization &mdash; Optuna 1.2.0 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Advanced Configurations" href="configurations.html" />
+    <link rel="prev" title="Tutorial" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Optuna
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.2.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Tutorial</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">First Optimization</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#quadratic-function-example">Quadratic Function Example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#study-object">Study Object</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="configurations.html">Advanced Configurations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rdb.html">Saving/Resuming Study with RDB Backend</a></li>
+<li class="toctree-l2"><a class="reference internal" href="distributed.html">Distributed Optimization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cli.html">Command-Line Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="attributes.html">User Attributes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pruning.html">Pruning Unpromising Trials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sampler.html">User-Defined Sampler</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/index.html">API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">FAQ</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Optuna</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Tutorial</a> &raquo;</li>
+        
+      <li>First Optimization</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/tutorial/first.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="first-optimization">
+<span id="firstopt"></span><h1>First Optimization<a class="headerlink" href="#first-optimization" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="quadratic-function-example">
+<h2>Quadratic Function Example<a class="headerlink" href="#quadratic-function-example" title="Permalink to this headline">¶</a></h2>
+<p>Usually, Optuna is used to optimize hyper-parameters, but as an example, let us directly optimize a quadratic function in an IPython shell.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">optuna</span>
+</pre></div>
+</div>
+<p>The objective function is what will be optimized.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">objective</span><span class="p">(</span><span class="n">trial</span><span class="p">):</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">trial</span><span class="o">.</span><span class="n">suggest_uniform</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="mi">2</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span>
+</pre></div>
+</div>
+<p>This function returns the value of <span class="math notranslate nohighlight">\((x - 2)^2\)</span>. Our goal is to find the value of <code class="docutils literal notranslate"><span class="pre">x</span></code> that minimizes the output of the <code class="docutils literal notranslate"><span class="pre">objective</span></code> function. This is the “optimization.” During the optimization, Optuna repeatedly calls and evaluates the objective function with different values of <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p>
+<p>A <a class="reference internal" href="../reference/trial.html#optuna.trial.Trial" title="optuna.trial.Trial"><code class="xref py py-class docutils literal notranslate"><span class="pre">Trial</span></code></a> object corresponds to a single execution of the objective function and is internally instantiated upon each invocation of the function.</p>
+<p>The <cite>suggest</cite> APIs (for example, <a class="reference internal" href="../reference/trial.html#optuna.trial.Trial.suggest_uniform" title="optuna.trial.Trial.suggest_uniform"><code class="xref py py-func docutils literal notranslate"><span class="pre">suggest_uniform()</span></code></a>) are called inside the objective function to obtain parameters for a trial. <a class="reference internal" href="../reference/trial.html#optuna.trial.Trial.suggest_uniform" title="optuna.trial.Trial.suggest_uniform"><code class="xref py py-func docutils literal notranslate"><span class="pre">suggest_uniform()</span></code></a> selects parameters uniformly within the range provided. In our example, from -10 to 10.</p>
+<p>To start the optimization, we create a study object and pass the objective function to method <a class="reference internal" href="../reference/study.html#optuna.study.Study.optimize" title="optuna.study.Study.optimize"><code class="xref py py-func docutils literal notranslate"><span class="pre">optimize()</span></code></a> as follows.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">study</span> <span class="o">=</span> <span class="n">optuna</span><span class="o">.</span><span class="n">create_study</span><span class="p">()</span>
+<span class="n">study</span><span class="o">.</span><span class="n">optimize</span><span class="p">(</span><span class="n">objective</span><span class="p">,</span> <span class="n">n_trials</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Out:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">[I 2020-04-08 10:42:09,028] Finished trial#0 with value: 25.77382032395108 with parameters: {&#39;x&#39;: 7.076792326257898}. Best is trial#0 with value: 25.77382032395108.</span>
+<span class="go">[I 2020-04-08 10:42:09,064] Finished trial#1 with value: 1.5189812248635903 with parameters: {&#39;x&#39;: 0.7675304365366298}. Best is trial#1 with value: 1.5189812248635903.</span>
+<span class="go">[I 2020-04-08 10:42:09,106] Finished trial#2 with value: 34.4074691838153 with parameters: {&#39;x&#39;: -3.865788027521562}. Best is trial#1 with value: 1.5189812248635903.</span>
+<span class="go">[I 2020-04-08 10:42:09,145] Finished trial#3 with value: 3.3601305753722657 with parameters: {&#39;x&#39;: 3.8330658949891205}. Best is trial#1 with value: 1.5189812248635903.</span>
+<span class="go">[I 2020-04-08 10:42:09,185] Finished trial#4 with value: 61.16797535698886 with parameters: {&#39;x&#39;: -5.820995803412048}. Best is trial#1 with value: 1.5189812248635903.</span>
+<span class="go">[I 2020-04-08 10:42:09,228] Finished trial#5 with value: 90.08665552769618 with parameters: {&#39;x&#39;: -7.491399028999686}. Best is trial#1 with value: 1.5189812248635903.</span>
+<span class="go">[I 2020-04-08 10:42:09,274] Finished trial#6 with value: 25.254236332163032 with parameters: {&#39;x&#39;: 7.025359323686519}. Best is trial#1 with value: 1.5189812248635903.</span>
+<span class="go">...</span>
+<span class="go">[I 2020-04-08 10:42:14,237] Finished trial#99 with value: 0.5227007740782738 with parameters: {&#39;x&#39;: 2.7229804797352926}. Best is trial#67 with value: 2.916284393762304e-06.</span>
+</pre></div>
+</div>
+<p>You can get the best parameter as follows.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">study</span><span class="o">.</span><span class="n">best_params</span>
+</pre></div>
+</div>
+<p>Out:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">{&#39;x&#39;: 2.001707713205946}</span>
+</pre></div>
+</div>
+<p>We can see that Optuna found the best <code class="docutils literal notranslate"><span class="pre">x</span></code> value <code class="docutils literal notranslate"><span class="pre">2.001707713205946</span></code>, which is close to the optimal value of <code class="docutils literal notranslate"><span class="pre">2</span></code>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When used to search for hyper-parameters in machine learning, usually the objective function would return the loss or accuracy of the model.</p>
+</div>
+</div>
+<div class="section" id="study-object">
+<h2>Study Object<a class="headerlink" href="#study-object" title="Permalink to this headline">¶</a></h2>
+<p>Let us clarify the terminology in Optuna as follows:</p>
+<ul class="simple">
+<li><p><strong>Trial</strong>: A single call of the objective function</p></li>
+<li><p><strong>Study</strong>: An optimization session, which is a set of trials</p></li>
+<li><p><strong>Parameter</strong>: A variable whose value is to be optimized, such as <code class="docutils literal notranslate"><span class="pre">x</span></code> in the above example</p></li>
+</ul>
+<p>In Optuna, we use the study object to manage optimization. Method <a class="reference internal" href="../reference/study.html#optuna.study.create_study" title="optuna.study.create_study"><code class="xref py py-func docutils literal notranslate"><span class="pre">create_study()</span></code></a> returns a study object.
+A study object has useful properties for analyzing the optimization outcome.</p>
+<p>To get the best parameter:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">study</span><span class="o">.</span><span class="n">best_params</span>
+</pre></div>
+</div>
+<p>Out:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">{&#39;x&#39;: 2.001707713205946}</span>
+</pre></div>
+</div>
+<p>To get the best value:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">study</span><span class="o">.</span><span class="n">best_value</span>
+</pre></div>
+</div>
+<p>Out:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">2.916284393762304e-06</span>
+</pre></div>
+</div>
+<p>To get the best trial:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">study</span><span class="o">.</span><span class="n">best_trial</span>
+</pre></div>
+</div>
+<p>Out:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">FrozenTrial(number=67, value=2.916284393762304e-06, datetime_start=datetime.datetime(2020, 4, 8, 10, 42, 12, 595884), datetime_complete=datetime.datetime(2020, 4, 8, 10, 42, 12, 639969), params={&#39;x&#39;: 2.001707713205946}, distributions={&#39;x&#39;: UniformDistribution(high=10, low=-10)}, user_attrs={}, system_attrs={}, intermediate_values={}, trial_id=67, state=TrialState.COMPLETE)</span>
+</pre></div>
+</div>
+<p>To get all trials:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">study</span><span class="o">.</span><span class="n">trials</span>
+</pre></div>
+</div>
+<p>Out:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">[FrozenTrial(number=0, value=25.77382032395108, datetime_start=datetime.datetime(2020, 4, 8, 10, 42, 8, 987277), datetime_complete=datetime.datetime(2020, 4, 8, 10, 42, 9, 27959), params={&#39;x&#39;: 7.076792326257898}, distributions={&#39;x&#39;: UniformDistribution(high=10, low=-10)}, user_attrs={}, system_attrs={}, intermediate_values={}, trial_id=0, state=TrialState.COMPLETE),</span>
+<span class="go"> ...</span>
+<span class="go"> user_attrs={}, system_attrs={}, intermediate_values={}, trial_id=99, state=TrialState.COMPLETE)]</span>
+</pre></div>
+</div>
+<p>To get the number of trials:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">study</span><span class="o">.</span><span class="n">trials</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Out:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">100</span>
+</pre></div>
+</div>
+<p>By executing <a class="reference internal" href="../reference/study.html#optuna.study.Study.optimize" title="optuna.study.Study.optimize"><code class="xref py py-func docutils literal notranslate"><span class="pre">optimize()</span></code></a> again, we can continue the optimization.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">study</span><span class="o">.</span><span class="n">optimize</span><span class="p">(</span><span class="n">objective</span><span class="p">,</span> <span class="n">n_trials</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>To get the updated number of trials:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">study</span><span class="o">.</span><span class="n">trials</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Out:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">200</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="configurations.html" class="btn btn-neutral float-right" title="Advanced Configurations" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral float-left" title="Tutorial" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Optuna Contributors.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+    <a href="../privacy.html">Privacy Policy</a>.
+     
+
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

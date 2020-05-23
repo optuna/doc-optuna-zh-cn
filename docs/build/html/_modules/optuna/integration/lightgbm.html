@@ -1,0 +1,337 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>optuna.integration.lightgbm &mdash; Optuna 1.2.0 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Optuna
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.2.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../tutorial/index.html">Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../reference/index.html">API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../faq.html">FAQ</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Optuna</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../index.html">Module code</a> &raquo;</li>
+        
+      <li>optuna.integration.lightgbm</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for optuna.integration.lightgbm</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">sys</span>
+
+<span class="kn">import</span> <span class="nn">optuna</span>
+
+<span class="kn">from</span> <span class="nn">optuna.integration</span> <span class="k">import</span> <span class="n">lightgbm_tuner</span> <span class="k">as</span> <span class="n">tuner</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="kn">import</span> <span class="nn">lightgbm</span> <span class="k">as</span> <span class="nn">lgb</span>  <span class="c1"># NOQA</span>
+    <span class="n">_available</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="k">except</span> <span class="ne">ImportError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="n">_import_error</span> <span class="o">=</span> <span class="n">e</span>
+    <span class="c1"># LightGBMPruningCallback is disabled because LightGBM is not available.</span>
+    <span class="n">_available</span> <span class="o">=</span> <span class="kc">False</span>
+
+
+<span class="c1"># Attach lightgbm API.</span>
+<span class="k">if</span> <span class="n">_available</span><span class="p">:</span>
+    <span class="c1"># To pass tests/integration_tests/lightgbm_tuner_tests/test_optimize.py.</span>
+    <span class="kn">from</span> <span class="nn">lightgbm</span> <span class="k">import</span> <span class="n">Dataset</span>  <span class="c1"># NOQA</span>
+    <span class="kn">from</span> <span class="nn">optuna.integration.lightgbm_tuner</span> <span class="k">import</span> <span class="n">LightGBMTuner</span>  <span class="c1"># NOQA</span>
+
+    <span class="n">_names_from_tuners</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;train&#39;</span><span class="p">,</span> <span class="s1">&#39;LGBMModel&#39;</span><span class="p">,</span> <span class="s1">&#39;LGBMClassifier&#39;</span><span class="p">,</span> <span class="s1">&#39;LGBMRegressor&#39;</span><span class="p">]</span>
+
+    <span class="c1"># API from lightgbm.</span>
+    <span class="k">for</span> <span class="n">api_name</span> <span class="ow">in</span> <span class="n">lgb</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">[</span><span class="s1">&#39;__all__&#39;</span><span class="p">]:</span>
+        <span class="k">if</span> <span class="n">api_name</span> <span class="ow">in</span> <span class="n">_names_from_tuners</span><span class="p">:</span>
+            <span class="k">continue</span>
+        <span class="nb">setattr</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">modules</span><span class="p">[</span><span class="vm">__name__</span><span class="p">],</span> <span class="n">api_name</span><span class="p">,</span> <span class="n">lgb</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">[</span><span class="n">api_name</span><span class="p">])</span>
+
+    <span class="c1"># API from lightgbm_tuner.</span>
+    <span class="k">for</span> <span class="n">api_name</span> <span class="ow">in</span> <span class="n">_names_from_tuners</span><span class="p">:</span>
+        <span class="nb">setattr</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">modules</span><span class="p">[</span><span class="vm">__name__</span><span class="p">],</span> <span class="n">api_name</span><span class="p">,</span> <span class="n">tuner</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">[</span><span class="n">api_name</span><span class="p">])</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="c1"># To create docstring of train.</span>
+    <span class="nb">setattr</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">modules</span><span class="p">[</span><span class="vm">__name__</span><span class="p">],</span> <span class="s1">&#39;train&#39;</span><span class="p">,</span> <span class="n">tuner</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">[</span><span class="s1">&#39;train&#39;</span><span class="p">])</span>
+
+
+<div class="viewcode-block" id="LightGBMPruningCallback"><a class="viewcode-back" href="../../../reference/integration.html#optuna.integration.LightGBMPruningCallback">[docs]</a><span class="k">class</span> <span class="nc">LightGBMPruningCallback</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Callback for LightGBM to prune unpromising trials.</span>
+
+<span class="sd">    Example:</span>
+
+<span class="sd">        Add a pruning callback which observes validation scores to training of a LightGBM model.</span>
+
+<span class="sd">        .. code::</span>
+
+<span class="sd">                param = {&#39;objective&#39;: &#39;binary&#39;, &#39;metric&#39;: &#39;binary_error&#39;}</span>
+<span class="sd">                pruning_callback = LightGBMPruningCallback(trial, &#39;binary_error&#39;)</span>
+<span class="sd">                gbm = lgb.train(param, dtrain, valid_sets=[dtest], callbacks=[pruning_callback])</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        trial:</span>
+<span class="sd">            A :class:`~optuna.trial.Trial` corresponding to the current evaluation of</span>
+<span class="sd">            the objective function.</span>
+<span class="sd">        metric:</span>
+<span class="sd">            An evaluation metric for pruning, e.g., ``binary_error`` and ``multi_error``.</span>
+<span class="sd">            Please refer to</span>
+<span class="sd">            `LightGBM reference</span>
+<span class="sd">            &lt;https://lightgbm.readthedocs.io/en/latest/Parameters.html#metric&gt;`_</span>
+<span class="sd">            for further details.</span>
+<span class="sd">        valid_name:</span>
+<span class="sd">            The name of the target validation.</span>
+<span class="sd">            Validation names are specified by ``valid_names`` option of</span>
+<span class="sd">            `train method</span>
+<span class="sd">            &lt;https://lightgbm.readthedocs.io/en/latest/Python-API.html#lightgbm.train&gt;`_.</span>
+<span class="sd">            If omitted, ``valid_0`` is used which is the default name of the first validation.</span>
+<span class="sd">            Note that this argument will be ignored if you are calling</span>
+<span class="sd">            `cv method &lt;https://lightgbm.readthedocs.io/en/latest/Python-API.html#lightgbm.cv&gt;`_</span>
+<span class="sd">            instead of train method.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">trial</span><span class="p">,</span> <span class="n">metric</span><span class="p">,</span> <span class="n">valid_name</span><span class="o">=</span><span class="s1">&#39;valid_0&#39;</span><span class="p">):</span>
+        <span class="c1"># type: (optuna.trial.Trial, str, str) -&gt; None</span>
+
+        <span class="n">_check_lightgbm_availability</span><span class="p">()</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_trial</span> <span class="o">=</span> <span class="n">trial</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_valid_name</span> <span class="o">=</span> <span class="n">valid_name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_metric</span> <span class="o">=</span> <span class="n">metric</span>
+
+    <span class="k">def</span> <span class="nf">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">env</span><span class="p">):</span>
+        <span class="c1"># type: (lgb.callback.CallbackEnv) -&gt; None</span>
+
+        <span class="c1"># If this callback has been passed to `lightgbm.cv` function,</span>
+        <span class="c1"># the value of `is_cv` becomes `True`. See also:</span>
+        <span class="c1"># https://github.com/Microsoft/LightGBM/blob/v2.2.2/python-package/lightgbm/engine.py#L329</span>
+        <span class="c1"># Note that `5` is not the number of folds but the length of sequence.</span>
+        <span class="n">is_cv</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">env</span><span class="o">.</span><span class="n">evaluation_result_list</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">env</span><span class="o">.</span><span class="n">evaluation_result_list</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">==</span> <span class="mi">5</span>
+        <span class="k">if</span> <span class="n">is_cv</span><span class="p">:</span>
+            <span class="n">target_valid_name</span> <span class="o">=</span> <span class="s1">&#39;cv_agg&#39;</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">target_valid_name</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_valid_name</span>
+
+        <span class="k">for</span> <span class="n">evaluation_result</span> <span class="ow">in</span> <span class="n">env</span><span class="o">.</span><span class="n">evaluation_result_list</span><span class="p">:</span>
+            <span class="n">valid_name</span><span class="p">,</span> <span class="n">metric</span><span class="p">,</span> <span class="n">current_score</span><span class="p">,</span> <span class="n">is_higher_better</span> <span class="o">=</span> <span class="n">evaluation_result</span><span class="p">[:</span><span class="mi">4</span><span class="p">]</span>
+            <span class="k">if</span> <span class="n">valid_name</span> <span class="o">!=</span> <span class="n">target_valid_name</span> <span class="ow">or</span> <span class="n">metric</span> <span class="o">!=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_metric</span><span class="p">:</span>
+                <span class="k">continue</span>
+
+            <span class="k">if</span> <span class="n">is_higher_better</span><span class="p">:</span>
+                <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_trial</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">get_study_direction</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_trial</span><span class="o">.</span><span class="n">study</span><span class="o">.</span><span class="n">_study_id</span><span class="p">)</span> <span class="o">!=</span> \
+                        <span class="n">optuna</span><span class="o">.</span><span class="n">structs</span><span class="o">.</span><span class="n">StudyDirection</span><span class="o">.</span><span class="n">MAXIMIZE</span><span class="p">:</span>
+                    <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                        <span class="s2">&quot;The intermediate values are inconsistent with the objective values in &quot;</span>
+                        <span class="s2">&quot;terms of study directions. Please specify a metric to be minimized for &quot;</span>
+                        <span class="s2">&quot;LightGBMPruningCallback.&quot;</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_trial</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">get_study_direction</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_trial</span><span class="o">.</span><span class="n">study</span><span class="o">.</span><span class="n">_study_id</span><span class="p">)</span> <span class="o">!=</span> \
+                        <span class="n">optuna</span><span class="o">.</span><span class="n">structs</span><span class="o">.</span><span class="n">StudyDirection</span><span class="o">.</span><span class="n">MINIMIZE</span><span class="p">:</span>
+                    <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                        <span class="s2">&quot;The intermediate values are inconsistent with the objective values in &quot;</span>
+                        <span class="s2">&quot;terms of study directions. Please specify a metric to be maximized for &quot;</span>
+                        <span class="s2">&quot;LightGBMPruningCallback.&quot;</span><span class="p">)</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">_trial</span><span class="o">.</span><span class="n">report</span><span class="p">(</span><span class="n">current_score</span><span class="p">,</span> <span class="n">step</span><span class="o">=</span><span class="n">env</span><span class="o">.</span><span class="n">iteration</span><span class="p">)</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_trial</span><span class="o">.</span><span class="n">should_prune</span><span class="p">():</span>
+                <span class="n">message</span> <span class="o">=</span> <span class="s2">&quot;Trial was pruned at iteration </span><span class="si">{}</span><span class="s2">.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">env</span><span class="o">.</span><span class="n">iteration</span><span class="p">)</span>
+                <span class="k">raise</span> <span class="n">optuna</span><span class="o">.</span><span class="n">exceptions</span><span class="o">.</span><span class="n">TrialPruned</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
+
+            <span class="k">return</span> <span class="kc">None</span>
+
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+            <span class="s1">&#39;The entry associated with the validation name &quot;</span><span class="si">{}</span><span class="s1">&quot; and the metric name &quot;</span><span class="si">{}</span><span class="s1">&quot; &#39;</span>
+            <span class="s1">&#39;is not found in the evaluation result list </span><span class="si">{}</span><span class="s1">.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                <span class="n">target_valid_name</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_metric</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">env</span><span class="o">.</span><span class="n">evaluation_result_list</span><span class="p">)))</span></div>
+
+
+<span class="k">def</span> <span class="nf">_check_lightgbm_availability</span><span class="p">():</span>
+    <span class="c1"># type: () -&gt; None</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">_available</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ImportError</span><span class="p">(</span>
+            <span class="s1">&#39;LightGBM is not available. Please install LightGBM to use this feature. &#39;</span>
+            <span class="s1">&#39;LightGBM can be installed by executing `$ pip install lightgbm`. &#39;</span>
+            <span class="s1">&#39;For further information, please refer to the installation guide of LightGBM. &#39;</span>
+            <span class="s1">&#39;(The actual import error is as follows: &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">_import_error</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;)&#39;</span><span class="p">)</span>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Optuna Contributors.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+    <a href="../../../privacy.html">Privacy Policy</a>.
+     
+
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

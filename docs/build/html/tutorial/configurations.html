@@ -1,0 +1,302 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Advanced Configurations &mdash; Optuna 1.2.0 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Saving/Resuming Study with RDB Backend" href="rdb.html" />
+    <link rel="prev" title="First Optimization" href="first.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Optuna
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.2.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Tutorial</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="first.html">First Optimization</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Advanced Configurations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#defining-parameter-spaces">Defining Parameter Spaces</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#branches-and-loops">Branches and Loops</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#note-on-the-number-of-parameters">Note on the Number of Parameters</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#arguments-for-study-optimize">Arguments for <cite>Study.optimize</cite></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="rdb.html">Saving/Resuming Study with RDB Backend</a></li>
+<li class="toctree-l2"><a class="reference internal" href="distributed.html">Distributed Optimization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cli.html">Command-Line Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="attributes.html">User Attributes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pruning.html">Pruning Unpromising Trials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sampler.html">User-Defined Sampler</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/index.html">API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">FAQ</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Optuna</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Tutorial</a> &raquo;</li>
+        
+      <li>Advanced Configurations</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/tutorial/configurations.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="advanced-configurations">
+<span id="configurations"></span><h1>Advanced Configurations<a class="headerlink" href="#advanced-configurations" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="defining-parameter-spaces">
+<h2>Defining Parameter Spaces<a class="headerlink" href="#defining-parameter-spaces" title="Permalink to this headline">¶</a></h2>
+<p>Optuna supports five kinds of parameters.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">objective</span><span class="p">(</span><span class="n">trial</span><span class="p">):</span>
+    <span class="c1"># Categorical parameter</span>
+    <span class="n">optimizer</span> <span class="o">=</span> <span class="n">trial</span><span class="o">.</span><span class="n">suggest_categorical</span><span class="p">(</span><span class="s1">&#39;optimizer&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;MomentumSGD&#39;</span><span class="p">,</span> <span class="s1">&#39;Adam&#39;</span><span class="p">])</span>
+
+    <span class="c1"># Int parameter</span>
+    <span class="n">num_layers</span> <span class="o">=</span> <span class="n">trial</span><span class="o">.</span><span class="n">suggest_int</span><span class="p">(</span><span class="s1">&#39;num_layers&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+
+    <span class="c1"># Uniform parameter</span>
+    <span class="n">dropout_rate</span> <span class="o">=</span> <span class="n">trial</span><span class="o">.</span><span class="n">suggest_uniform</span><span class="p">(</span><span class="s1">&#39;dropout_rate&#39;</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span>
+
+    <span class="c1"># Loguniform parameter</span>
+    <span class="n">learning_rate</span> <span class="o">=</span> <span class="n">trial</span><span class="o">.</span><span class="n">suggest_loguniform</span><span class="p">(</span><span class="s1">&#39;learning_rate&#39;</span><span class="p">,</span> <span class="mf">1e-5</span><span class="p">,</span> <span class="mf">1e-2</span><span class="p">)</span>
+
+    <span class="c1"># Discrete-uniform parameter</span>
+    <span class="n">drop_path_rate</span> <span class="o">=</span> <span class="n">trial</span><span class="o">.</span><span class="n">suggest_discrete_uniform</span><span class="p">(</span><span class="s1">&#39;drop_path_rate&#39;</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">)</span>
+
+    <span class="o">...</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="branches-and-loops">
+<h2>Branches and Loops<a class="headerlink" href="#branches-and-loops" title="Permalink to this headline">¶</a></h2>
+<p>You can use branches or loops depending on the parameter values.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">objective</span><span class="p">(</span><span class="n">trial</span><span class="p">):</span>
+    <span class="n">classifier_name</span> <span class="o">=</span> <span class="n">trial</span><span class="o">.</span><span class="n">suggest_categorical</span><span class="p">(</span><span class="s1">&#39;classifier&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;SVC&#39;</span><span class="p">,</span> <span class="s1">&#39;RandomForest&#39;</span><span class="p">])</span>
+    <span class="k">if</span> <span class="n">classifier_name</span> <span class="o">==</span> <span class="s1">&#39;SVC&#39;</span><span class="p">:</span>
+        <span class="n">svc_c</span> <span class="o">=</span> <span class="n">trial</span><span class="o">.</span><span class="n">suggest_loguniform</span><span class="p">(</span><span class="s1">&#39;svc_c&#39;</span><span class="p">,</span> <span class="mf">1e-10</span><span class="p">,</span> <span class="mf">1e10</span><span class="p">)</span>
+        <span class="n">classifier_obj</span> <span class="o">=</span> <span class="n">sklearn</span><span class="o">.</span><span class="n">svm</span><span class="o">.</span><span class="n">SVC</span><span class="p">(</span><span class="n">C</span><span class="o">=</span><span class="n">svc_c</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">rf_max_depth</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">trial</span><span class="o">.</span><span class="n">suggest_loguniform</span><span class="p">(</span><span class="s1">&#39;rf_max_depth&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">32</span><span class="p">))</span>
+        <span class="n">classifier_obj</span> <span class="o">=</span> <span class="n">sklearn</span><span class="o">.</span><span class="n">ensemble</span><span class="o">.</span><span class="n">RandomForestClassifier</span><span class="p">(</span><span class="n">max_depth</span><span class="o">=</span><span class="n">rf_max_depth</span><span class="p">)</span>
+
+    <span class="o">...</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">create_model</span><span class="p">(</span><span class="n">trial</span><span class="p">):</span>
+    <span class="n">n_layers</span> <span class="o">=</span> <span class="n">trial</span><span class="o">.</span><span class="n">suggest_int</span><span class="p">(</span><span class="s1">&#39;n_layers&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+
+    <span class="n">layers</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_layers</span><span class="p">):</span>
+        <span class="n">n_units</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">trial</span><span class="o">.</span><span class="n">suggest_loguniform</span><span class="p">(</span><span class="s1">&#39;n_units_l{}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">),</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">128</span><span class="p">))</span>
+        <span class="n">layers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">L</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="bp">None</span><span class="p">,</span> <span class="n">n_units</span><span class="p">))</span>
+        <span class="n">layers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">F</span><span class="o">.</span><span class="n">relu</span><span class="p">)</span>
+    <span class="n">layers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">L</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="bp">None</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+
+    <span class="k">return</span> <span class="n">chainer</span><span class="o">.</span><span class="n">Sequential</span><span class="p">(</span><span class="o">*</span><span class="n">layers</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Please also refer to <a class="reference external" href="https://github.com/optuna/optuna/tree/master/examples">examples</a>.</p>
+<div class="section" id="note-on-the-number-of-parameters">
+<h3>Note on the Number of Parameters<a class="headerlink" href="#note-on-the-number-of-parameters" title="Permalink to this headline">¶</a></h3>
+<p>The difficulty of optimization increases roughly exponentially with regard to the number of parameters. That is, the number of necessary trials increases exponentially when you increase the number of parameters, so it is recommended to not add unimportant parameters.</p>
+</div>
+</div>
+<div class="section" id="arguments-for-study-optimize">
+<h2>Arguments for <cite>Study.optimize</cite><a class="headerlink" href="#arguments-for-study-optimize" title="Permalink to this headline">¶</a></h2>
+<p>The method <a class="reference internal" href="../reference/study.html#optuna.study.Study.optimize" title="optuna.study.Study.optimize"><code class="xref py py-func docutils literal notranslate"><span class="pre">optimize()</span></code></a> (and <code class="docutils literal notranslate"><span class="pre">optuna</span> <span class="pre">study</span> <span class="pre">optimize</span></code> CLI command as well)
+has several useful options such as <code class="docutils literal notranslate"><span class="pre">timeout</span></code>.
+For details, please refer to the API reference for <a class="reference internal" href="../reference/study.html#optuna.study.Study.optimize" title="optuna.study.Study.optimize"><code class="xref py py-func docutils literal notranslate"><span class="pre">optimize()</span></code></a>.</p>
+<p><strong>FYI</strong>: If you give neither <code class="docutils literal notranslate"><span class="pre">n_trials</span></code> nor <code class="docutils literal notranslate"><span class="pre">timeout</span></code> options, the optimization continues until it receives a termination signal such as Ctrl+C or SIGTERM.
+This is useful for use cases such as when it is hard to estimate the computational costs required to optimize your objective function.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="rdb.html" class="btn btn-neutral float-right" title="Saving/Resuming Study with RDB Backend" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="first.html" class="btn btn-neutral float-left" title="First Optimization" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Optuna Contributors.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+    <a href="../privacy.html">Privacy Policy</a>.
+     
+
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

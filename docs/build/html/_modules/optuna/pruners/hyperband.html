@@ -1,0 +1,384 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>optuna.pruners.hyperband &mdash; Optuna 1.2.0 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Optuna
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.2.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../tutorial/index.html">Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../reference/index.html">API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../faq.html">FAQ</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Optuna</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../index.html">Module code</a> &raquo;</li>
+        
+      <li>optuna.pruners.hyperband</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for optuna.pruners.hyperband</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">optuna</span>
+<span class="kn">from</span> <span class="nn">optuna._experimental</span> <span class="k">import</span> <span class="n">experimental</span>
+<span class="kn">from</span> <span class="nn">optuna</span> <span class="k">import</span> <span class="n">logging</span>
+<span class="kn">from</span> <span class="nn">optuna.pruners.base</span> <span class="k">import</span> <span class="n">BasePruner</span>
+<span class="kn">from</span> <span class="nn">optuna.pruners.successive_halving</span> <span class="k">import</span> <span class="n">SuccessiveHalvingPruner</span>
+<span class="kn">from</span> <span class="nn">optuna</span> <span class="k">import</span> <span class="n">type_checking</span>
+
+<span class="k">if</span> <span class="n">type_checking</span><span class="o">.</span><span class="n">TYPE_CHECKING</span><span class="p">:</span>
+    <span class="kn">from</span> <span class="nn">typing</span> <span class="k">import</span> <span class="n">List</span>  <span class="c1"># NOQA</span>
+
+    <span class="kn">from</span> <span class="nn">optuna</span> <span class="k">import</span> <span class="n">structs</span>  <span class="c1"># NOQA</span>
+
+<span class="n">_logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">get_logger</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+
+
+<div class="viewcode-block" id="HyperbandPruner"><a class="viewcode-back" href="../../../reference/pruners.html#optuna.pruners.HyperbandPruner">[docs]</a><span class="nd">@experimental</span><span class="p">(</span><span class="s2">&quot;1.1.0&quot;</span><span class="p">)</span>
+<span class="k">class</span> <span class="nc">HyperbandPruner</span><span class="p">(</span><span class="n">BasePruner</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Pruner using Hyperband.</span>
+
+<span class="sd">    As SuccessiveHalving (SHA) requires the number of configurations</span>
+<span class="sd">    :math:`n` as its hyperparameter.  For a given finite budget :math:`B`,</span>
+<span class="sd">    all the configurations have the resources of :math:`B \\over n` on average.</span>
+<span class="sd">    As you can see, there will be a trade-off of :math:`B` and :math:`B \\over n`.</span>
+<span class="sd">    `Hyperband &lt;http://www.jmlr.org/papers/volume18/16-558/16-558.pdf&gt;`_ attacks this trade-off</span>
+<span class="sd">    by trying different :math:`n` values for a fixed budget.</span>
+<span class="sd">    Note that this implementation does not take as inputs the maximum amount of resource to</span>
+<span class="sd">    a single SHA noted as :math:`R` in the paper.</span>
+
+<span class="sd">    .. note::</span>
+<span class="sd">        * In the Hyperband paper, the counterpart of :class:`~optuna.samplers.RandomSampler`</span>
+<span class="sd">          is used.</span>
+<span class="sd">        * Optuna uses :class:`~optuna.samplers.TPESampler` by default.</span>
+<span class="sd">        * `The benchmark result</span>
+<span class="sd">          &lt;https://github.com/optuna/optuna/pull/828#issuecomment-575457360&gt;`_</span>
+<span class="sd">          shows that :class:`optuna.pruners.HyperbandPruner` supports both samplers.</span>
+
+<span class="sd">    .. note::</span>
+<span class="sd">        If you use ``HyperbandPruner`` with :class:`~optuna.samplers.TPESampler`,</span>
+<span class="sd">        it&#39;s recommended to consider to set larger ``n_trials`` or ``timeout`` to make full use of</span>
+<span class="sd">        the characteristics of :class:`~optuna.samplers.TPESampler`</span>
+<span class="sd">        because :class:`~optuna.samplers.TPESampler` uses some (by default, :math:`10`)</span>
+<span class="sd">        :class:`~optuna.trial.Trial`\\ s for its startup.</span>
+
+<span class="sd">        As Hyperband runs multiple :class:`~optuna.pruners.SuccessiveHalvingPruner` and collect</span>
+<span class="sd">        trials based on the current :class:`~optuna.trial.Trial`\\ &#39;s bracket ID, each bracket</span>
+<span class="sd">        needs to observe more than :math:`10` :class:`~optuna.trial.Trial`\\ s</span>
+<span class="sd">        for :class:`~optuna.samplers.TPESampler` to adapt its search space.</span>
+
+<span class="sd">        Thus, for example, if ``HyperbandPruner`` has :math:`4` pruners in it,</span>
+<span class="sd">        at least :math:`4 \\times 10` pruners are consumed for startup.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        min_resource:</span>
+<span class="sd">            A parameter for specifying the minimum resource allocated to a trial noted as :math:`r`</span>
+<span class="sd">            in the paper.</span>
+<span class="sd">            See the details for :class:`~optuna.pruners.SuccessiveHalvingPruner`.</span>
+<span class="sd">        reduction_factor:</span>
+<span class="sd">            A parameter for specifying reduction factor of promotable trials noted as</span>
+<span class="sd">            :math:`\\eta` in the paper. See the details for</span>
+<span class="sd">            :class:`~optuna.pruners.SuccessiveHalvingPruner`.</span>
+<span class="sd">        n_brackets:</span>
+<span class="sd">            The number of :class:`~optuna.pruners.SuccessiveHalvingPruner`\\ s (brackets).</span>
+<span class="sd">            Defaults to :math`4`. See</span>
+<span class="sd">            https://github.com/optuna/optuna/pull/809#discussion_r361363897.</span>
+<span class="sd">        min_early_stopping_rate_low:</span>
+<span class="sd">            A parameter for specifying the minimum early-stopping rate.</span>
+<span class="sd">            This parameter is related to a parameter that is referred to as :math:`r` and used in</span>
+<span class="sd">            `Asynchronous SuccessiveHalving paper &lt;http://arxiv.org/abs/1810.05934&gt;`_.</span>
+<span class="sd">            The minimum early stopping rate for :math:`i` th bracket is :math:`i + s`.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">,</span>
+            <span class="n">min_resource</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+            <span class="n">reduction_factor</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
+            <span class="n">n_brackets</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span>
+            <span class="n">min_early_stopping_rate_low</span><span class="o">=</span><span class="mi">0</span>
+    <span class="p">):</span>
+        <span class="c1"># type: (int, int, int, int) -&gt; None</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_pruners</span> <span class="o">=</span> <span class="p">[]</span>  <span class="c1"># type: List[SuccessiveHalvingPruner]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_reduction_factor</span> <span class="o">=</span> <span class="n">reduction_factor</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_resource_budget</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_n_brackets</span> <span class="o">=</span> <span class="n">n_brackets</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_bracket_resource_budgets</span> <span class="o">=</span> <span class="p">[]</span>  <span class="c1"># type: List[int]</span>
+
+        <span class="n">_logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;Hyperband has </span><span class="si">{}</span><span class="s1"> brackets&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_n_brackets</span><span class="p">))</span>
+
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_brackets</span><span class="p">):</span>
+            <span class="n">bracket_resource_budget</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_calc_bracket_resource_budget</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">n_brackets</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_resource_budget</span> <span class="o">+=</span> <span class="n">bracket_resource_budget</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_bracket_resource_budgets</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">bracket_resource_budget</span><span class="p">)</span>
+
+            <span class="c1"># N.B. (crcrpar): `min_early_stopping_rate` has the information of `bracket_index`.</span>
+            <span class="n">min_early_stopping_rate</span> <span class="o">=</span> <span class="n">min_early_stopping_rate_low</span> <span class="o">+</span> <span class="n">i</span>
+
+            <span class="n">_logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span>
+                <span class="s1">&#39;</span><span class="si">{}</span><span class="s1">th bracket has minimum early stopping rate of </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                    <span class="n">i</span><span class="p">,</span> <span class="n">min_early_stopping_rate</span><span class="p">))</span>
+
+            <span class="n">pruner</span> <span class="o">=</span> <span class="n">SuccessiveHalvingPruner</span><span class="p">(</span>
+                <span class="n">min_resource</span><span class="o">=</span><span class="n">min_resource</span><span class="p">,</span>
+                <span class="n">reduction_factor</span><span class="o">=</span><span class="n">reduction_factor</span><span class="p">,</span>
+                <span class="n">min_early_stopping_rate</span><span class="o">=</span><span class="n">min_early_stopping_rate</span><span class="p">,</span>
+            <span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_pruners</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">pruner</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">prune</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">study</span><span class="p">,</span> <span class="n">trial</span><span class="p">):</span>
+        <span class="c1"># type: (optuna.study.Study, structs.FrozenTrial) -&gt; bool</span>
+
+        <span class="n">i</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_bracket_id</span><span class="p">(</span><span class="n">study</span><span class="p">,</span> <span class="n">trial</span><span class="p">)</span>
+        <span class="n">_logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{}</span><span class="s1">th bracket is selected&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+        <span class="n">bracket_study</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_create_bracket_study</span><span class="p">(</span><span class="n">study</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_pruners</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">prune</span><span class="p">(</span><span class="n">bracket_study</span><span class="p">,</span> <span class="n">trial</span><span class="p">)</span>
+
+    <span class="c1"># TODO(crcrpar): Improve resource computation/allocation algorithm.</span>
+    <span class="k">def</span> <span class="nf">_calc_bracket_resource_budget</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pruner_index</span><span class="p">,</span> <span class="n">n_brackets</span><span class="p">):</span>
+        <span class="c1"># type: (int, int) -&gt; int</span>
+
+        <span class="n">n</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_reduction_factor</span> <span class="o">**</span> <span class="p">(</span><span class="n">n_brackets</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">n</span> <span class="o">+</span> <span class="p">(</span><span class="n">n</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">n_brackets</span> <span class="o">-</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">pruner_index</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_get_bracket_id</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">study</span><span class="p">,</span> <span class="n">trial</span><span class="p">):</span>
+        <span class="c1"># type: (optuna.study.Study, structs.FrozenTrial) -&gt; int</span>
+        <span class="sd">&quot;&quot;&quot;Computes the index of bracket for a trial of ``trial_number``.</span>
+
+<span class="sd">        The index of a bracket is noted as :math:`s` in</span>
+<span class="sd">        `Hyperband paper &lt;http://www.jmlr.org/papers/volume18/16-558/16-558.pdf&gt;`_.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">n</span> <span class="o">=</span> <span class="nb">hash</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{}</span><span class="s1">_</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">study</span><span class="o">.</span><span class="n">study_name</span><span class="p">,</span> <span class="n">trial</span><span class="o">.</span><span class="n">number</span><span class="p">))</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">_resource_budget</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_n_brackets</span><span class="p">):</span>
+            <span class="n">n</span> <span class="o">-=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_bracket_resource_budgets</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+            <span class="k">if</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">i</span>
+
+        <span class="k">assert</span> <span class="kc">False</span><span class="p">,</span> <span class="s1">&#39;This line should be unreachable.&#39;</span>
+
+    <span class="k">def</span> <span class="nf">_create_bracket_study</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">study</span><span class="p">,</span> <span class="n">bracket_index</span><span class="p">):</span>
+        <span class="c1"># type: (optuna.study.Study, int) -&gt; optuna.study.Study</span>
+
+        <span class="c1"># This class is assumed to be passed to</span>
+        <span class="c1"># `SuccessiveHalvingPruner.prune` in which `get_trials`,</span>
+        <span class="c1"># `direction`, and `storage` are used.</span>
+        <span class="c1"># But for safety, prohibit the other attributes explicitly.</span>
+        <span class="k">class</span> <span class="nc">_BracketStudy</span><span class="p">(</span><span class="n">optuna</span><span class="o">.</span><span class="n">study</span><span class="o">.</span><span class="n">Study</span><span class="p">):</span>
+
+            <span class="n">_VALID_ATTRS</span> <span class="o">=</span> <span class="p">(</span>
+                <span class="s1">&#39;get_trials&#39;</span><span class="p">,</span> <span class="s1">&#39;direction&#39;</span><span class="p">,</span> <span class="s1">&#39;_storage&#39;</span><span class="p">,</span> <span class="s1">&#39;_study_id&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;pruner&#39;</span><span class="p">,</span> <span class="s1">&#39;study_name&#39;</span><span class="p">,</span> <span class="s1">&#39;_bracket_id&#39;</span><span class="p">,</span> <span class="s1">&#39;sampler&#39;</span>
+            <span class="p">)</span>
+
+            <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">study</span><span class="p">,</span> <span class="n">bracket_id</span><span class="p">):</span>
+                <span class="c1"># type: (optuna.study.Study, int) -&gt; None</span>
+
+                <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span>
+                    <span class="n">study_name</span><span class="o">=</span><span class="n">study</span><span class="o">.</span><span class="n">study_name</span><span class="p">,</span>
+                    <span class="n">storage</span><span class="o">=</span><span class="n">study</span><span class="o">.</span><span class="n">_storage</span><span class="p">,</span>
+                    <span class="n">sampler</span><span class="o">=</span><span class="n">study</span><span class="o">.</span><span class="n">sampler</span><span class="p">,</span>
+                    <span class="n">pruner</span><span class="o">=</span><span class="n">study</span><span class="o">.</span><span class="n">pruner</span>
+                <span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_bracket_id</span> <span class="o">=</span> <span class="n">bracket_id</span>
+
+            <span class="k">def</span> <span class="nf">get_trials</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">deepcopy</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+                <span class="c1"># type: (bool) -&gt; List[structs.FrozenTrial]</span>
+
+                <span class="n">trials</span> <span class="o">=</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">get_trials</span><span class="p">(</span><span class="n">deepcopy</span><span class="o">=</span><span class="n">deepcopy</span><span class="p">)</span>
+                <span class="n">pruner</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">pruner</span>
+                <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">pruner</span><span class="p">,</span> <span class="n">HyperbandPruner</span><span class="p">)</span>
+                <span class="k">return</span> <span class="p">[</span>
+                    <span class="n">t</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">trials</span>
+                    <span class="k">if</span> <span class="n">pruner</span><span class="o">.</span><span class="n">_get_bracket_id</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">t</span><span class="p">)</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">_bracket_id</span>
+                <span class="p">]</span>
+
+            <span class="k">def</span> <span class="nf">__getattribute__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">attr_name</span><span class="p">):</span>  <span class="c1"># type: ignore</span>
+                <span class="k">if</span> <span class="n">attr_name</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">_BracketStudy</span><span class="o">.</span><span class="n">_VALID_ATTRS</span><span class="p">:</span>
+                    <span class="k">raise</span> <span class="ne">AttributeError</span><span class="p">(</span>
+                        <span class="s2">&quot;_BracketStudy does not have attribute of &#39;</span><span class="si">{}</span><span class="s2">&#39;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">attr_name</span><span class="p">))</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="k">return</span> <span class="nb">object</span><span class="o">.</span><span class="fm">__getattribute__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">attr_name</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">_BracketStudy</span><span class="p">(</span><span class="n">study</span><span class="p">,</span> <span class="n">bracket_index</span><span class="p">)</span></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Optuna Contributors.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+    <a href="../../../privacy.html">Privacy Policy</a>.
+     
+
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
