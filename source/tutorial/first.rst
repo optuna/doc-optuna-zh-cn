@@ -1,19 +1,19 @@
 .. _firstopt:
 
-First Optimization
+第一个优化例子
 ==================
 
 
-Quadratic Function Example
+二次函数的例子
 --------------------------
 
-Usually, Optuna is used to optimize hyper-parameters, but as an example, let us directly optimize a quadratic function in an IPython shell.
+Optuna 通常用于优化超参数，但是为了举例说明，我们将直接在 IPython shell 中优化一个二次函数。
 
 .. code-block:: python
 
     import optuna
 
-The objective function is what will be optimized.
+目标 (objective) 函数便是待优化的函数。
 
 .. code-block:: python
 
@@ -21,21 +21,20 @@ The objective function is what will be optimized.
         x = trial.suggest_uniform('x', -10, 10)
         return (x - 2) ** 2
 
+该函数的返回值是 :math:`(x - 2)^2`. 我们的目标是找到一个 ``x``，使 ``objective`` 函数的输出最小。这被称为 "optimization" (优化)。 在优化过程中，Optuna 反复调用目标函数，在不同的 ``x`` 下对其进行求值。
 
-This function returns the value of :math:`(x - 2)^2`. Our goal is to find the value of ``x`` that minimizes the output of the ``objective`` function. This is the "optimization." During the optimization, Optuna repeatedly calls and evaluates the objective function with different values of ``x``.
+一个 :class:`~optuna.trial.Trial` 对应着目标函数的单次执行。在每次调用该函数的时候，它都被内部实例化一次。
 
-A :class:`~optuna.trial.Trial` object corresponds to a single execution of the objective function and is internally instantiated upon each invocation of the function.
+而 `suggest` API (例如 :func:`~optuna.trial.Trial.suggest_uniform`) 在目标函数内部被调用。它被用于获取单个 trial 的参数。在上面的例子中，:func:`~optuna.trial.Trial.suggest_uniform` 在给定的范围（``-10`` 到 ``10``）内均匀地选择参数。
 
-The `suggest` APIs (for example, :func:`~optuna.trial.Trial.suggest_uniform`) are called inside the objective function to obtain parameters for a trial. :func:`~optuna.trial.Trial.suggest_uniform` selects parameters uniformly within the range provided. In our example, from -10 to 10.
-
-To start the optimization, we create a study object and pass the objective function to method :func:`~optuna.study.Study.optimize` as follows.
+为了开始优化过程，我们将创建一个 study 对象，并将目标函数传递给它的一个方法 :func:`~optuna.study.Study.optimize`：
 
 .. code-block:: python
 
     study = optuna.create_study()
     study.optimize(objective, n_trials=100)
 
-Out:
+输出:
 
 .. code-block:: console
 
@@ -49,78 +48,78 @@ Out:
     ...
     [I 2020-04-08 10:42:14,237] Finished trial#99 with value: 0.5227007740782738 with parameters: {'x': 2.7229804797352926}. Best is trial#67 with value: 2.916284393762304e-06.
 
-You can get the best parameter as follows.
+最佳参数可以通过如下方式获得：
 
 .. code-block:: python
 
     study.best_params
 
-Out:
+输出:
 
 .. code-block:: console
 
     {'x': 2.001707713205946}
 
-We can see that Optuna found the best ``x`` value ``2.001707713205946``, which is close to the optimal value of ``2``.
+可以看到，Optuna 找到的最佳 ``x``的值 是 ``2.001707713205946``. 这非常靠近实际的最优值 ``2``.
 
 .. note::
+    当Optuna被用于机器学习中的超参数搜索时，目标函数通常是对应模型的损失 (loss) 或者准确度 (accuracy).
     When used to search for hyper-parameters in machine learning, usually the objective function would return the loss or accuracy of the model.
 
-Study Object
+Study 对象
 ------------
 
-Let us clarify the terminology in Optuna as follows:
+下面是几个常用术语：
 
-* **Trial**: A single call of the objective function
-* **Study**: An optimization session, which is a set of trials
-* **Parameter**: A variable whose value is to be optimized, such as ``x`` in the above example
+* **Trial**: 目标函数的单次调用
+* **Study**: 一次优化过程，包含一系列的 rials.
+* **Parameter**: 待优化的参数，比如上面例子中的 ``x``.
 
-In Optuna, we use the study object to manage optimization. Method :func:`~optuna.study.create_study` returns a study object.
-A study object has useful properties for analyzing the optimization outcome.
+在 Optuna 中，我们用 study 对象来管理优化过程。 :func:`~optuna.study.create_study` 方法会返回一个 study 对象。该对象包含若干有用的属性，可以用于分析优化结果。
 
-To get the best parameter:
+获得最佳参数:
 
 .. code-block:: python
 
     study.best_params
 
-Out:
+输出:
 
 .. code-block:: console
 
     {'x': 2.001707713205946}
 
-To get the best value:
+获得最佳目标函数值:
 
 .. code-block:: python
 
     study.best_value
 
-Out:
+输出:
 
 .. code-block:: console
 
     2.916284393762304e-06
 
-To get the best trial:
+获得最佳 trial:
 
 .. code-block:: python
 
     study.best_trial
 
-Out:
+输出:
 
 .. code-block:: console
 
     FrozenTrial(number=67, value=2.916284393762304e-06, datetime_start=datetime.datetime(2020, 4, 8, 10, 42, 12, 595884), datetime_complete=datetime.datetime(2020, 4, 8, 10, 42, 12, 639969), params={'x': 2.001707713205946}, distributions={'x': UniformDistribution(high=10, low=-10)}, user_attrs={}, system_attrs={}, intermediate_values={}, trial_id=67, state=TrialState.COMPLETE)
 
-To get all trials:
+获得所有 trials:
 
 .. code-block:: python
 
     study.trials
 
-Out:
+输出:
 
 .. code-block:: console
 
@@ -128,31 +127,31 @@ Out:
      ...
      user_attrs={}, system_attrs={}, intermediate_values={}, trial_id=99, state=TrialState.COMPLETE)]
 
-To get the number of trials:
+获得 trial 的数量:
 
 .. code-block:: python
 
     len(study.trials)
 
-Out:
+输出:
 
 .. code-block:: console
 
     100
 
-By executing :func:`~optuna.study.Study.optimize` again, we can continue the optimization.
+（在优化结束后）通过再次执行 :func:`~optuna.study.Study.optimize`，我们可以继续优化过程。
 
 .. code-block:: python
 
     study.optimize(objective, n_trials=100)
 
-To get the updated number of trials:
+获得更新（再次优化后）的 trial 数量：
 
 .. code-block:: python
 
     len(study.trials)
 
-Out:
+输出:
 
 .. code-block:: console
 
