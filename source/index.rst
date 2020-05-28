@@ -29,10 +29,10 @@ Optuna 有如下现代化的功能：
 
     import ...
 
-    # Define an objective function to be minimized.
+    # 定义待优化的目标函数
     def objective(trial):
 
-        # Invoke suggest methods of a Trial object to generate hyperparameters.
+        # 调用 suggest 方法用于给该 Trial 生成超参数。
         regressor_name = trial.suggest_categorical('classifier', ['SVR', 'RandomForest'])
         if regressor_name == 'SVR':
             svr_c = trial.suggest_loguniform('svr_c', 1e-10, 1e10)
@@ -49,10 +49,10 @@ Optuna 有如下现代化的功能：
 
         error = sklearn.metrics.mean_squared_error(y_val, y_pred)
 
-        return error  # An objective value linked with the Trial object.
+        return error  # Trial 对象对应的目标函数值.
 
-    study = optuna.create_study()  # Create a new study.
-    study.optimize(objective, n_trials=100)  # Invoke optimization of the objective function.
+    study = optuna.create_study()  # 创建新study.
+    study.optimize(objective, n_trials=100)  # 开始目标函数的优化过程。
 
 Communication
 -------------
