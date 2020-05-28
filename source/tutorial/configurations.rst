@@ -1,37 +1,38 @@
 .. _configurations:
 
-Advanced Configurations
+高级配置
 =======================
 
-Defining Parameter Spaces
+定义参数空间
 -------------------------
 
+Optuna 支持五种类型的参数
 Optuna supports five kinds of parameters.
 
 .. code-block:: python
 
     def objective(trial):
-        # Categorical parameter
+        # 类别参数
         optimizer = trial.suggest_categorical('optimizer', ['MomentumSGD', 'Adam'])
 
-        # Int parameter
+        # 整形参数
         num_layers = trial.suggest_int('num_layers', 1, 3)
 
-        # Uniform parameter
+        # 均匀分布参数
         dropout_rate = trial.suggest_uniform('dropout_rate', 0.0, 1.0)
 
-        # Loguniform parameter
+        # 对数均匀分布参数
         learning_rate = trial.suggest_loguniform('learning_rate', 1e-5, 1e-2)
 
-        # Discrete-uniform parameter
+        # 离散均匀分布参数
         drop_path_rate = trial.suggest_discrete_uniform('drop_path_rate', 0.0, 1.0, 0.1)
 
         ...
 
-Branches and Loops
-------------------
+分支 (Branches) 与 循环 (Loops)
+-----------------------------------
 
-You can use branches or loops depending on the parameter values.
+根据不同的参数值，你可以选择使用分支或者循环。
 
 .. code-block:: python
 
@@ -60,21 +61,19 @@ You can use branches or loops depending on the parameter values.
 
         return chainer.Sequential(*layers)
 
-Please also refer to `examples <https://github.com/optuna/optuna/tree/master/examples>`_.
+更多例子见 `examples <https://github.com/optuna/optuna/tree/master/examples>`_.
 
 
-Note on the Number of Parameters
+参数个数的注意事项
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The difficulty of optimization increases roughly exponentially with regard to the number of parameters. That is, the number of necessary trials increases exponentially when you increase the number of parameters, so it is recommended to not add unimportant parameters.
+随着参数个数的增长，优化的难度约成指数增长。也就是说，当你增加参数的个数的时候，优化所需要的 trial 个数会呈指数增长。因此我们推荐不要增加不必要的参数。
 
 
-Arguments for `Study.optimize`
+`Study.optimize` 的参数
 --------------------------------
 
-The method :func:`~optuna.study.Study.optimize` (and ``optuna study optimize`` CLI command as well)
-has several useful options such as ``timeout``.
-For details, please refer to the API reference for :func:`~optuna.study.Study.optimize`.
+:func:`~optuna.study.Study.optimize` (还有命令 ``optuna study optimize``) 有着数个有用的参数，比如``timeout``. 具体细节见 :func:`~optuna.study.Study.optimize` 的API参考资料。
 
-**FYI**: If you give neither ``n_trials`` nor ``timeout`` options, the optimization continues until it receives a termination signal such as Ctrl+C or SIGTERM.
-This is useful for use cases such as when it is hard to estimate the computational costs required to optimize your objective function.
+**供參考**: 如果既没有给出 ``n_trials`` 也没有给出 ``timeout`` 参数的话，优化过程将一直持续下去，直到接收到一个诸如 Ctrl+C 或 SIGTERM 的终止信号。
+这在难以估算优化目标函数所需的计算成本的情况时是有用的。
