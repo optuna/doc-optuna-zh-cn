@@ -14,7 +14,7 @@ RDB后端可以实现持久化实验（即保存和恢复 study）以及访问 s
 
 
 新建 Study
----------
+-------------
 
 通过调用函数 :func:`~optuna.study.create_study`，我们可以创建一个持久化的 study.
 创建新 study 会自动初始化一个 SQLite 文件 ``example.db``.
