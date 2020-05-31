@@ -1,17 +1,17 @@
 .. _pruning:
 
-Pruning Unpromising Trials
-==========================
+对无望的 Trial 进行剪枝 (Pruning)
+====================================
+该功能可以在训练的早期阶段自动终止无望的 Trial (a.k.a., 自动化 early-stopping).
+Optuna 提供了一些接口，可以用于在迭代训练算法中简洁地实现剪枝 (Pruning)。
 
-This feature automatically stops unpromising trials at the early stages of the training (a.k.a., automated early-stopping).
-Optuna provides interfaces to concisely implement the pruning mechanism in iterative training algorithms.
 
+开启 Pruner
+---------------------
 
-Activating Pruners
-------------------
-To turn on the pruning feature, you need to call :func:`~optuna.trial.Trial.report` and :func:`~optuna.trial.Trial.should_prune` after each step of the iterative training.
-:func:`~optuna.trial.Trial.report` periodically monitors the intermediate objective values.
-:func:`~optuna.trial.Trial.should_prune` decides termination of the trial that does not meet a predefined condition.
+为了打开 Pruning 功能，你需要在迭代式训练的每一步完成后调用函数 :func:`~optuna.trial.Trial.report` 和 :func:`~optuna.trial.Trial.should_prune` 
+:func:`~optuna.trial.Trial.report` 定期监测这个过程中的目标函数值。
+:func:`~optuna.trial.Trial.should_prune` 根据提前定义好的条件，判定该 trial 是否需要终止。
 
 .. code-block:: python
 
@@ -45,12 +45,12 @@ To turn on the pruning feature, you need to call :func:`~optuna.trial.Trial.repo
 
         return 1.0 - clf.score(valid_x, valid_y)
 
-    # Set up the median stopping rule as the pruning condition.
+    # 将中位数终止规则作为 pruning 条件。
     study = optuna.create_study(pruner=optuna.pruners.MedianPruner())
     study.optimize(objective, n_trials=20)
 
 
-Executing the script above:
+运行上述脚本:
 
 .. code-block:: bash
 
@@ -67,13 +67,12 @@ Executing the script above:
     [I 2018-11-21 17:27:59,202] Setting status of trial#9 as TrialState.PRUNED.
     ...
 
-We can see ``Setting status of trial#{} as TrialState.PRUNED`` in the log messages.
-This means several trials are stopped before they finish all iterations.
+我们可以在输出信息中看到 ``Setting status of trial#{} as TrialState.PRUNED``.
+这意味着这些 trial 在他们完成迭代之前就被终止了。
 
-
-Integration Modules for Pruning
--------------------------------
-To implement pruning mechanism in much simpler forms, Optuna provides integration modules for the following libraries.
+用于 Pruning 的集成模块
+--------------------------
+为了能更加方便地实现 pruning, Optuna 为以下框架提供了集成模块。
 
 - XGBoost: :class:`optuna.integration.XGBoostPruningCallback`
 - LightGBM: :class:`optuna.integration.LightGBMPruningCallback`
@@ -86,8 +85,8 @@ To implement pruning mechanism in much simpler forms, Optuna provides integratio
 - PyTorch Lightning :class:`optuna.integration.PyTorchLightningPruningCallback`
 - FastAI :class:`optuna.integration.FastAIPruningCallback`
 
-For example, :class:`~optuna.integration.XGBoostPruningCallback` introduces pruning without directly changing the logic of training iteration.
-(See also `example <https://github.com/optuna/optuna/blob/master/examples/pruning/xgboost_integration.py>`_ for the entire script.)
+比如, :class:`~optuna.integration.XGBoostPruningCallback` 在无需修改训练迭代逻辑的情况下引入了 pruning.
+(完整脚本见 `example <https://github.com/optuna/optuna/blob/master/examples/pruning/xgboost_integration.py>`_ .)
 
 .. code-block:: python
 
