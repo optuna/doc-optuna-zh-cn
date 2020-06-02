@@ -4,21 +4,21 @@ FAQ
 .. contents::
     :local:
 
-Can I use Optuna with X? (where X is your favorite ML library)
+某某库可以和 Optuna 配合使用吗？（某某是你最爱的机器学习库）
 --------------------------------------------------------------
 
-Optuna is compatible with most ML libraries, and it's easy to use Optuna with those.
-Please refer to `examples <https://github.com/optuna/optuna/tree/master/examples>`_.
+Optuna 和绝大多数ML库兼容，并且很容易同他们配合使用。
+参见 `examples <https://github.com/optuna/optuna/tree/master/examples>`_.
 
 
 .. _objective-func-additional-args:
 
-How to define objective functions that have own arguments?
+如何定义带有独有参数的目标函数？
 ----------------------------------------------------------
 
-There are two ways to realize it.
+有两种方法可以实现这类函数。
 
-First, callable classes can be used for that purpose as follows:
+首先，如下的可调用的 objective 类具有这个功能：
 
 .. code-block:: python
 
@@ -35,71 +35,69 @@ First, callable classes can be used for that purpose as follows:
             x = trial.suggest_uniform('x', self.min_x, self.max_x)
             return (x - 2) ** 2
 
-    # Execute an optimization by using an `Objective` instance.
+    # 通过使用一个 `Objective` 实例来执行优化过程。
     study = optuna.create_study()
     study.optimize(Objective(-100, 100), n_trials=100)
 
 
-Second, you can use ``lambda`` or ``functools.partial`` for creating functions (closures) that hold extra arguments.
-Below is an example that uses ``lambda``:
+其次，你可以用 ``lambda`` 或者 ``functools.partial`` 来创建带有额外参数的函数（闭包）。 
+下面是一个使用了 ``lambda`` 的例子：
 
 .. code-block:: python
 
     import optuna
 
-    # Objective function that takes three arguments.
+    # 带有三个参数的目标函数。
     def objective(trial, min_x, max_x):
         x = trial.suggest_uniform('x', min_x, max_x)
         return (x - 2) ** 2
 
-    # Extra arguments.
+    # 额外参数。
     min_x = -100
     max_x = 100
 
-    # Execute an optimization by using the above objective function wrapped by `lambda`.
+    # 通过 `lambda` 将目标函数包起来用于优化过程。
     study = optuna.create_study()
     study.optimize(lambda trial: objective(trial, min_x, max_x), n_trials=100)
 
-Please also refer to `sklearn_addtitional_args.py <https://github.com/optuna/optuna/blob/master/examples/sklearn_additional_args.py>`_ example.
+其他例子参见 `sklearn_addtitional_args.py <https://github.com/optuna/optuna/blob/master/examples/sklearn_additional_args.py>`_ .
 
 
-Can I use Optuna without remote RDB servers?
+没有远程 RDB 的情况下可以使用 Optuna 吗？
 --------------------------------------------
 
-Yes, it's possible.
+可以。
 
-In the simplest form, Optuna works with in-memory storage:
+在最简单的情况下，Optuna 使用内存 (in-memory) 存储：
 
 .. code-block:: python
 
     study = optuna.create_study()
     study.optimize(objective)
 
-
-If you want to save and resume studies,  it's handy to use SQLite as the local storage:
+如果你想能保存和恢复 study 的化，将 SQLite 作为本地存储也是很方便的：
 
 .. code-block:: python
 
     study = optuna.create_study(study_name='foo_study', storage='sqlite:///example.db')
     study.optimize(objective)  # The state of `study` will be persisted to the local SQLite file.
 
-Please see :ref:`rdb` for more details.
+更多细节请参考 :ref:`rdb`.
 
 
-How can I save and resume studies?
+如何保存和恢复 study？
 ----------------------------------------------------
 
-There are two ways of persisting studies, which depends if you are using
-in-memory storage (default) or remote databases (RDB). In-memory studies can be
-saved and loaded like usual Python objects using ``pickle`` or ``joblib``. For
-example, using ``joblib``:
+有两种方法可以将 study 持久化。具体采用哪种取决于你是使用内存存储 (in-memory) 还是远程数据库存储 (RDB).
+通过 ``pickle`` 或者 ``joblib``, 采用了内存存储的 study 可以和普通的 Python 对象一样被存储和加载。
+比如用 ``joblib`` 的话：
 
 .. code-block:: python
 
     study = optuna.create_study()
     joblib.dump(study, 'study.pkl')
 
-And to resume the study:
+恢复 study:
 
 .. code-block:: python
 
@@ -110,15 +108,15 @@ And to resume the study:
     for key, value in study.best_trial.params.items():
         print(f'    {key}: {value}')
 
-If you are using RDBs, see :ref:`rdb` for more details.
+如果你用的是 RDB, 具体细节请参考 :ref:`rdb`.
 
-How to suppress log messages of Optuna?
+如何禁用 Optuna 的日志信息？
 ---------------------------------------
 
-By default, Optuna shows log messages at the ``optuna.logging.INFO`` level.
-You can change logging levels by using  :func:`optuna.logging.set_verbosity`.
+默认情况下，Optuna 打印处于 ``optuna.logging.INFO`` 层级的日志信息。
+通过设置  :func:`optuna.logging.set_verbosity`, 你可以改变这个层级。
 
-For instance, you can stop showing each trial result as follows:
+比如，下面的代码可以终止打印每一个trial的结果：
 
 .. code-block:: python
 
@@ -129,7 +127,7 @@ For instance, you can stop showing each trial result as follows:
     # Logs like '[I 2018-12-05 11:41:42,324] Finished a trial resulted in value:...' are disabled.
 
 
-Please refer to :class:`optuna.logging` for further details.
+更多的细节请参考  :class:`optuna.logging`.
 
 
 How to save machine learning models trained in objective functions?
