@@ -29,7 +29,7 @@ Optuna 有如下现代化的功能：
 
     import ...
 
-    # 定义待优化的目标函数
+    # 定义待优化的目标函数。
     def objective(trial):
 
         # 调用 suggest 方法用于给该 Trial 生成超参数。
@@ -49,7 +49,7 @@ Optuna 有如下现代化的功能：
 
         error = sklearn.metrics.mean_squared_error(y_val, y_pred)
 
-        return error  # Trial 对象对应的目标函数值.
+        return error  # Trial 对象对应的目标函数值。
 
     study = optuna.create_study()  # 创建新study.
     study.optimize(objective, n_trials=100)  # 开始目标函数的优化过程。
