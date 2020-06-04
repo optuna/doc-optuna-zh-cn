@@ -130,15 +130,14 @@ Optuna 和绝大多数ML库兼容，并且很容易同他们配合使用。
 更多的细节请参考  :class:`optuna.logging`.
 
 
-How to save machine learning models trained in objective functions?
--------------------------------------------------------------------
+如何在目标函数中保存训练好的机器学习模型？
+-------------------------------------------
 
-Optuna saves hyperparameter values with its corresponding objective value to storage,
-but it discards intermediate objects such as machine learning models and neural network weights.
-To save models or weights, please use features of the machine learning library you used.
+Optuna 会保存超参数和对应的目标函数值到存储对象中，但是它不会存储诸如机器学习模型或者网络权重这样的中间对象。
+要保存模型或者权重的话，请利用你正在使用的机器学习库提供的对应功能。
 
-We recommend saving :obj:`optuna.trial.Trial.number` with a model in order to identify its corresponding trial.
-For example, you can save SVM models trained in the objective function as follows:
+在保存模型的时候，我们推荐将 :obj:`optuna.trial.Trial.number` 一同存储。这样易于之后确认对应的 trial.
+比如，你可以用以下方式在目标函数中保存训练好的 SVM 模型：
 
 .. code-block:: python
 
@@ -147,7 +146,7 @@ For example, you can save SVM models trained in the objective function as follow
         clf = sklearn.svm.SVC(C=svc_c)
         clf.fit(X_train, y_train)
 
-        # Save a trained model to a file.
+        # 将训练好的模型保存到文件。
         with open('{}.pickle'.format(trial.number), 'wb') as fout:
             pickle.dump(clf, fout)
         return 1.0 - accuracy_score(y_valid, clf.predict(X_valid))
@@ -156,16 +155,16 @@ For example, you can save SVM models trained in the objective function as follow
     study = optuna.create_study()
     study.optimize(objective, n_trials=100)
 
-    # Load the best model.
+    # 加载最佳模型。
     with open('{}.pickle'.format(study.best_trial.number), 'rb') as fin:
         best_clf = pickle.load(fin)
     print(accuracy_score(y_valid, best_clf.predict(X_valid)))
 
 
-How can I obtain reproducible optimization results?
+如何获得可复现的优化结果？
 ---------------------------------------------------
 
-To make the parameters suggested by Optuna reproducible, you can specify a fixed random seed via ``seed`` argument of :class:`~optuna.samplers.RandomSampler` or :class:`~optuna.samplers.TPESampler` as follows:
+要让 Optuna 生成的参数可复现的话，你可以通过设置 :class:`~optuna.samplers.RandomSampler` 或者 :class:`~optuna.samplers.TPESampler` 中的参数 ``seed`` 来指定一个固定的随机数种子：
 
 .. code-block:: python
 
@@ -173,35 +172,34 @@ To make the parameters suggested by Optuna reproducible, you can specify a fixed
     study = optuna.create_study(sampler=sampler)
     study.optimize(objective)
 
-However, there are two caveats.
+但是这么做的话有两个风险。
 
-First, when optimizing a study in distributed or parallel mode, there is inherent non-determinism.
-Thus it is very difficult to reproduce the same results in such condition.
-We recommend executing optimization of a study sequentially if you would like to reproduce the result.
+首先，如果一个 study 的优化过程本身是分布式的或者并行的，那么这个过程中存在着固有的不确定性。
+因此，在这种情况下我们很难复现出同样的结果。
+如果你想复现结果的话，我们建议用顺序执行的方式来优化你的 study.
 
-Second, if your objective function behaves in a non-deterministic way (i.e., it does not return the same value even if the same parameters were suggested), you cannot reproduce an optimization.
-To deal with this problem, please set an option (e.g., random seed) to make the behavior deterministic if your optimization target (e.g., an ML library) provides it.
+其次，如果你的目标函数的行为本身就是不确定的（也就是说，即使送入同样的参数，其返回值也不是唯一的），那么你就无法复现这个优化过程。
+要解决这个问题的话，请设置一个选项（比如随机数种子）来让你的优化目标的行为变成确定性的，前提是你用的机器学习库支持这一功能。
 
-
-How are exceptions from trials handled?
+Trial 抛出的异常是如何处理的？
 ---------------------------------------
 
-Trials that raise exceptions without catching them will be treated as failures, i.e. with the :obj:`~optuna.trial.TrialState.FAIL` status.
+那些抛出异常却没有对应的捕获机制的 trial 会被视作失败的 trial, 也就是处于 :obj:`~optuna.trial.TrialState.FAIL` 状态的 trial.
 
-By default, all exceptions except :class:`~optuna.exceptions.TrialPruned` raised in objective functions are propagated to the caller of :func:`~optuna.study.Study.optimize`.
-In other words, studies are aborted when such exceptions are raised.
-It might be desirable to continue a study with the remaining trials.
-To do so, you can specify in :func:`~optuna.study.Study.optimize` which exception types to catch using the ``catch`` argument.
-Exceptions of these types are caught inside the study and will not propagate further.
+在默认情况下，除了目标函数中抛出的 :class:`~optuna.exceptions.TrialPruned`, 其他所有异常都会被传回给调用函数 :func:`~optuna.study.Study.optimize`.
+换句话说，当此类异常被抛出时，对应的 study 就会被终止。
+但有时候我们希望能用剩余的 trial 将该 study 继续下去。
+要这么做的话，你得通过 :func:`~optuna.study.Study.optimize` 函数中的 ``catch`` 参数来指定要捕获的异常类型。
+这样，此类异常就会在 study 内部被捕获，而不会继续向外层传递。
 
-You can find the failed trials in log messages.
+你可以在日志信息里找到失败的 trial.
 
 .. code-block:: sh
 
     [W 2018-12-07 16:38:36,889] Setting status of trial#0 as TrialState.FAIL because of \
     the following error: ValueError('A sample error in objective.')
 
-You can also find the failed trials by checking the trial states as follows:
+也可以用如下方式来找出失败的 trial:
 
 .. code-block:: python
 
@@ -215,15 +213,15 @@ You can also find the failed trials by checking the trial states as follows:
 
 .. seealso::
 
-    The ``catch`` argument in :func:`~optuna.study.Study.optimize`.
+    :func:`~optuna.study.Study.optimize` 中的参数 ``catch``.
 
 
-How are NaNs returned by trials handled?
+Trial 返回的 NaN 是如何处理的？
 ----------------------------------------
 
-Trials that return :obj:`NaN` (``float('nan')``) are treated as failures, but they will not abort studies.
+返回 NaN 的 trial 被视为失败的 trial, 但是它们并不会导致 study 被终止。
 
-Trials which return :obj:`NaN` are shown as follows:
+这些 trial 在日志里长这样：
 
 .. code-block:: sh
 
