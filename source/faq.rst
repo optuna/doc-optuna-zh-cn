@@ -229,48 +229,48 @@ Trial 返回的 NaN 是如何处理的？
     objective function returned nan.
 
 
-What happens when I dynamically alter a search space?
------------------------------------------------------
+动态地改变搜索空间会导致怎样的结果？
+-------------------------------------------
 
-Since parameters search spaces are specified in each call to the suggestion API, e.g.
-:func:`~optuna.trial.Trial.suggest_uniform` and :func:`~optuna.trial.Trial.suggest_int`,
-it is possible to in a single study alter the range by sampling parameters from different search
-spaces in different trials.
-The behavior when altered is defined by each sampler individually.
+由于参数空间只在调用 suggestion API (比如 :func:`~optuna.trial.Trial.suggest_uniform` 和 :func:`~optuna.trial.Trial.suggest_int`) 的时候才会被确定，
+因此，即使在同一个 study 中，我们也可以通过在不同 trial 里对不同的参数空间进行采样来实现对搜索空间的改变。
+
+参数空间改变之后的行为是由 sampler 来决定的。
 
 .. note::
+    关于 TPE sampler 的 讨论：https://github.com/optuna/optuna/issues/822
 
-    Discussion about the TPE sampler. https://github.com/optuna/optuna/issues/822
 
-
-How can I use two GPUs for evaluating two trials simultaneously?
+如何用两块 GPU 同时对两个 trial 进行求值？
 ----------------------------------------------------------------
 
-If your optimization target supports GPU (CUDA) acceleration and you want to specify which GPU is used, the easiest way is to set ``CUDA_VISIBLE_DEVICES`` environment variable:
+如果你的优化目标支持 GPU (CUDA) 加速，你又想指定优化所用的 GPU 的话，
+设置 ``CUDA_VISIBLE_DEVICES`` 环境变量可能是实现这一目标最轻松的方式了：
 
 .. code-block:: bash
 
-    # On a terminal.
+    # 打开一个命令行窗口。
     #
-    # Specify to use the first GPU, and run an optimization.
+    # 指定使用第一块 GPU 来跑优化。
     $ export CUDA_VISIBLE_DEVICES=0
     $ optuna study optimize foo.py objective --study foo --storage sqlite:///example.db
 
-    # On another terminal.
+    # 打开一个新的命令行窗口。
     #
-    # Specify to use the second GPU, and run another optimization.
+    # 指定第二块 GPU 用于跑新的优化。
     $ export CUDA_VISIBLE_DEVICES=1
     $ optuna study optimize bar.py objective --study bar --storage sqlite:///example.db
 
-Please refer to `CUDA C Programming Guide <https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#env-vars>`_ for further details.
+更多细节见 `CUDA C Programming Guide <https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#env-vars>`_.
 
 
-How can I test my objective functions?
+如何对目标函数进行测试？
 --------------------------------------
 
-When you test objective functions, you may prefer fixed parameter values to sampled ones.
-In that case, you can use :class:`~optuna.trial.FixedTrial`, which suggests fixed parameter values based on a given dictionary of parameters.
-For instance, you can input arbitrary values of :math:`x` and :math:`y` to the objective function :math:`x + y` as follows:
+在对目标函数的测试中，我们总倾向于使用固定的，而不是随机采样的参数。
+这时，你可以选择用 :class:`~optuna.trial.FixedTrial` 作为目标函数的输入参数。
+它会从一个给定的参数字典中送入固定的参数值。
+比如，针对函数 :math:`x + y`, 你可以用如下方式送入两个任意的 :math:`x` 和 :math:`y`:
 
 .. code-block:: python
 
@@ -282,12 +282,11 @@ For instance, you can input arbitrary values of :math:`x` and :math:`y` to the o
     objective(FixedTrial({'x': 1.0, 'y': -1}))  # 0.0
     objective(FixedTrial({'x': -1.0, 'y': -4}))  # -5.0
 
-
-Using :class:`~optuna.trial.FixedTrial`, you can write unit tests as follows:
+如果使用 :class:`~optuna.trial.FixedTrial` 的话，你也可以用如下方式写单元测试：
 
 .. code-block:: python
 
-    # A test function of pytest
+    # 一个 pytest 的测试函数。
     def test_objective():
         assert 1.0 == objective(FixedTrial({'x': 1.0, 'y': 0}))
         assert -1.0 == objective(FixedTrial({'x': 0.0, 'y': -1}))
