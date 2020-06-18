@@ -1,0 +1,4524 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018, Optuna Contributors.
+# This file is distributed under the same license as the Optuna package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Optuna 1.4.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-06-17 19:47-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../source/reference/cli.rst:2
+msgid "Command Line Interface"
+msgstr ""
+
+#: ../../<_OptunaApp>:1
+msgid "show program's version number and exit"
+msgstr ""
+
+#: ../../<_OptunaApp>:1
+msgid "Increase verbosity of output. Can be repeated."
+msgstr ""
+
+#: ../../<_OptunaApp>:1
+msgid "Suppress output except warnings and errors."
+msgstr ""
+
+#: ../../<_OptunaApp>:1
+msgid "Specify a file to log output. Disabled by default."
+msgstr ""
+
+#: ../../<_OptunaApp>:1
+msgid "Show tracebacks on errors."
+msgstr ""
+
+#: ../../<_OptunaApp>:1
+msgid "DB URL. (e.g. sqlite:///example.db)"
+msgstr ""
+
+msgid "create-study"
+msgstr ""
+
+#: ../../<_CreateStudy>:1
+msgid "Create a new study."
+msgstr ""
+
+#: ../../<_CreateStudy>:1 ../../<_Dashboard>:1 ../../<_DeleteStudy>:1
+#: ../../<_StudyOptimize>:1 ../../<_StudySetUserAttribute>:1
+msgid "A human-readable name of a study to distinguish it from others."
+msgstr ""
+
+#: ../../<_CreateStudy>:1
+msgid ""
+"Set direction of optimization to a new study. Set 'minimize' for "
+"minimization and 'maximize' for maximization."
+msgstr ""
+
+#: ../../<_CreateStudy>:1
+msgid ""
+"If specified, the creation of the study is skipped without any error when"
+" the study name is duplicated."
+msgstr ""
+
+#: ../../<_CreateStudy>:1 ../../<_Dashboard>:1 ../../<_DeleteStudy>:1
+#: ../../<_StorageUpgrade>:1 ../../<_Studies>:1 ../../<_StudyOptimize>:1
+#: ../../<_StudySetUserAttribute>:1
+msgid "This command is provided by the optuna plugin."
+msgstr ""
+
+msgid "dashboard"
+msgstr ""
+
+#: ../../<_Dashboard>:1
+msgid "Launch web dashboard (beta)."
+msgstr ""
+
+#: ../../<_Dashboard>:1 ../../<_StudyOptimize>:1
+#: ../../<_StudySetUserAttribute>:1
+msgid "This argument is deprecated. Use --study-name instead."
+msgstr ""
+
+#: ../../<_Dashboard>:1
+msgid ""
+"Output HTML file path. If it is not given, a HTTP server starts and the "
+"dashboard is served."
+msgstr ""
+
+#: ../../<_Dashboard>:1
+msgid ""
+"Allow websocket access from the specified host(s).Internally, it is used "
+"as the value of bokeh's --allow-websocket-origin option. Please refer to "
+"https://bokeh.pydata.org/en/latest/docs/reference/command/subcommands/serve.html"
+" for more details."
+msgstr ""
+
+msgid "delete-study"
+msgstr ""
+
+#: ../../<_DeleteStudy>:1
+msgid "Delete a specified study."
+msgstr ""
+
+msgid "storage upgrade"
+msgstr ""
+
+#: ../../<_StorageUpgrade>:1
+msgid "Upgrade the schema of a storage."
+msgstr ""
+
+msgid "studies"
+msgstr ""
+
+#: ../../<_Studies>:1
+msgid "Show a list of studies."
+msgstr ""
+
+#: ../../<_Studies>:1
+msgid "the output format, defaults to table"
+msgstr ""
+
+#: ../../<_Studies>:1
+msgid "specify the column(s) to include, can be repeated to show multiple columns"
+msgstr ""
+
+#: ../../<_Studies>:1
+msgid "when to include quotes, defaults to nonnumeric"
+msgstr ""
+
+#: ../../<_Studies>:1
+msgid "whether to disable indenting the JSON"
+msgstr ""
+
+#: ../../<_Studies>:1
+msgid ""
+"Maximum display width, <1 to disable. You can also use the "
+"CLIFF_MAX_TERM_WIDTH environment variable, but the parameter takes "
+"precedence."
+msgstr ""
+
+#: ../../<_Studies>:1
+msgid ""
+"Fit the table to the display width. Implied if --max-width greater than "
+"0. Set the environment variable CLIFF_FIT_WIDTH=1 to always enable"
+msgstr ""
+
+#: ../../<_Studies>:1
+msgid "Print empty table if there is no data to show."
+msgstr ""
+
+#: ../../<_Studies>:1
+msgid ""
+"specify the column(s) to sort the data (columns specified first have a "
+"priority, non-existing columns are ignored), can be repeated"
+msgstr ""
+
+msgid "study optimize"
+msgstr ""
+
+#: ../../<_StudyOptimize>:1
+msgid "Start optimization of a study. Deprecated since version 2.0.0."
+msgstr ""
+
+#: ../../<_StudyOptimize>:1
+msgid ""
+"The number of trials. If this argument is not given, as many trials run "
+"as possible."
+msgstr ""
+
+#: ../../<_StudyOptimize>:1
+msgid ""
+"Stop study after the given number of second(s). If this argument is not "
+"given, as many trials run as possible."
+msgstr ""
+
+#: ../../<_StudyOptimize>:1
+msgid ""
+"The number of parallel jobs. If this argument is set to -1, the number is"
+" set to CPU counts."
+msgstr ""
+
+#: ../../<_StudyOptimize>:1
+msgid "Python script file where the objective function resides."
+msgstr ""
+
+#: ../../<_StudyOptimize>:1
+msgid "The method name of the objective function."
+msgstr ""
+
+msgid "study set-user-attr"
+msgstr ""
+
+#: ../../<_StudySetUserAttribute>:1
+msgid "Set a user attribute to a study."
+msgstr ""
+
+#: ../../<_StudySetUserAttribute>:1
+msgid "Key of the user attribute."
+msgstr ""
+
+#: ../../<_StudySetUserAttribute>:1
+msgid "Value to be set."
+msgstr ""
+
+#: ../../source/reference/core.rst:4
+msgid "Core"
+msgstr ""
+
+#: of optuna.create_study:1 optuna.study.create_study:1
+msgid "Create a new :class:`~optuna.study.Study`."
+msgstr ""
+
+#: of optuna.create_study optuna.delete_study
+#: optuna.distributions.CategoricalDistribution
+#: optuna.distributions.check_distribution_compatibility
+#: optuna.distributions.distribution_to_json
+#: optuna.distributions.json_to_distribution optuna.get_all_study_summaries
+#: optuna.importance.FanovaImportanceEvaluator.evaluate
+#: optuna.importance.MeanDecreaseImpurityImportanceEvaluator
+#: optuna.importance.MeanDecreaseImpurityImportanceEvaluator.evaluate
+#: optuna.importance.get_param_importances optuna.integration.AllenNLPExecutor
+#: optuna.integration.ChainerMNStudy optuna.integration.ChainerPruningExtension
+#: optuna.integration.CmaEsSampler optuna.integration.FastAIPruningCallback
+#: optuna.integration.KerasPruningCallback
+#: optuna.integration.LightGBMPruningCallback optuna.integration.MLflowCallback
+#: optuna.integration.MXNetPruningCallback optuna.integration.OptunaSearchCV
+#: optuna.integration.OptunaSearchCV.fit
+#: optuna.integration.OptunaSearchCV.score
+#: optuna.integration.PyTorchIgnitePruningHandler
+#: optuna.integration.PyTorchLightningPruningCallback
+#: optuna.integration.SkoptSampler optuna.integration.TFKerasPruningCallback
+#: optuna.integration.TensorFlowPruningHook
+#: optuna.integration.XGBoostPruningCallback
+#: optuna.integration.allennlp.dump_best_config
+#: optuna.integration.lightgbm.LightGBMTuner
+#: optuna.integration.lightgbm.LightGBMTunerCV optuna.load_study
+#: optuna.logging.set_verbosity
+#: optuna.multi_objective.samplers.BaseMultiObjectiveSampler.infer_relative_search_space
+#: optuna.multi_objective.samplers.BaseMultiObjectiveSampler.sample_independent
+#: optuna.multi_objective.samplers.BaseMultiObjectiveSampler.sample_relative
+#: optuna.multi_objective.samplers.NSGAIIMultiObjectiveSampler
+#: optuna.multi_objective.study.MultiObjectiveStudy.enqueue_trial
+#: optuna.multi_objective.study.MultiObjectiveStudy.get_trials
+#: optuna.multi_objective.study.MultiObjectiveStudy.set_user_attr
+#: optuna.multi_objective.study.create_study
+#: optuna.multi_objective.study.load_study
+#: optuna.multi_objective.trial.MultiObjectiveTrial
+#: optuna.multi_objective.trial.MultiObjectiveTrial.report
+#: optuna.multi_objective.visualization.plot_pareto_front
+#: optuna.pruners.BasePruner.prune optuna.pruners.HyperbandPruner
+#: optuna.pruners.MedianPruner optuna.pruners.PercentilePruner
+#: optuna.pruners.SuccessiveHalvingPruner
+#: optuna.samplers.BaseSampler.infer_relative_search_space
+#: optuna.samplers.BaseSampler.sample_independent
+#: optuna.samplers.BaseSampler.sample_relative optuna.samplers.CmaEsSampler
+#: optuna.samplers.GridSampler
+#: optuna.samplers.IntersectionSearchSpace.calculate optuna.samplers.TPESampler
+#: optuna.samplers.intersection_search_space optuna.storages.RDBStorage
+#: optuna.storages.RedisStorage optuna.study.Study.enqueue_trial
+#: optuna.study.Study.get_trials optuna.study.Study.optimize
+#: optuna.study.Study.set_user_attr optuna.study.Study.trials_dataframe
+#: optuna.study.create_study optuna.study.delete_study
+#: optuna.study.get_all_study_summaries optuna.study.load_study
+#: optuna.trial.FixedTrial optuna.trial.Trial optuna.trial.Trial.report
+#: optuna.trial.Trial.set_user_attr optuna.trial.Trial.suggest_categorical
+#: optuna.trial.Trial.suggest_discrete_uniform optuna.trial.Trial.suggest_float
+#: optuna.trial.Trial.suggest_int optuna.trial.Trial.suggest_loguniform
+#: optuna.trial.Trial.suggest_uniform optuna.visualization.plot_contour
+#: optuna.visualization.plot_intermediate_values
+#: optuna.visualization.plot_optimization_history
+#: optuna.visualization.plot_parallel_coordinate
+#: optuna.visualization.plot_param_importances optuna.visualization.plot_slice
+msgid "Parameters"
+msgstr ""
+
+#: of optuna.create_study:3 optuna.multi_objective.study.create_study:7
+#: optuna.study.create_study:3
+msgid ""
+"Database URL. If this argument is set to None, in-memory storage is used,"
+" and the :class:`~optuna.study.Study` will not be persistent.  .. note::"
+"     When a database URL is passed, Optuna internally uses `SQLAlchemy`_ "
+"to handle     the database. Please refer to `SQLAlchemy's document`_ for "
+"further details.     If you want to specify non-default options to "
+"`SQLAlchemy Engine`_, you can     instantiate "
+":class:`~optuna.storages.RDBStorage` with your desired options and     "
+"pass it to the ``storage`` argument instead of a URL.   .. _SQLAlchemy: "
+"https://www.sqlalchemy.org/  .. _SQLAlchemy's document:      "
+"https://docs.sqlalchemy.org/en/latest/core/engines.html#database-urls  .."
+" _SQLAlchemy Engine: "
+"https://docs.sqlalchemy.org/en/latest/core/engines.html"
+msgstr ""
+
+#: of optuna.create_study:3 optuna.multi_objective.study.create_study:7
+#: optuna.study.create_study:3
+msgid ""
+"Database URL. If this argument is set to None, in-memory storage is used,"
+" and the :class:`~optuna.study.Study` will not be persistent."
+msgstr ""
+
+#: of optuna.create_study:7 optuna.multi_objective.study.create_study:11
+#: optuna.study.create_study:7
+msgid ""
+"When a database URL is passed, Optuna internally uses `SQLAlchemy`_ to "
+"handle the database. Please refer to `SQLAlchemy's document`_ for further"
+" details. If you want to specify non-default options to `SQLAlchemy "
+"Engine`_, you can instantiate :class:`~optuna.storages.RDBStorage` with "
+"your desired options and pass it to the ``storage`` argument instead of a"
+" URL."
+msgstr ""
+
+#: of optuna.create_study:17 optuna.load_study:6 optuna.study.create_study:17
+#: optuna.study.load_study:6
+msgid ""
+"A sampler object that implements background algorithm for value "
+"suggestion. If :obj:`None` is specified, "
+":class:`~optuna.samplers.TPESampler` is used as the default. See also "
+":class:`~optuna.samplers`."
+msgstr ""
+
+#: of optuna.create_study:20 optuna.study.create_study:20
+msgid ""
+"A pruner object that decides early stopping of unpromising trials. See "
+"also :class:`~optuna.pruners`."
+msgstr ""
+
+#: of optuna.create_study:22 optuna.multi_objective.study.create_study:5
+#: optuna.study.create_study:22
+msgid ""
+"Study's name. If this argument is set to None, a unique name is generated"
+" automatically."
+msgstr ""
+
+#: of optuna.create_study:24 optuna.study.create_study:24
+msgid ""
+"Direction of optimization. Set ``minimize`` for minimization and "
+"``maximize`` for maximization."
+msgstr ""
+
+#: of optuna.create_study:26 optuna.multi_objective.study.create_study:25
+#: optuna.study.create_study:26
+msgid ""
+"Flag to control the behavior to handle a conflict of study names. In the "
+"case where a study named ``study_name`` already exists in the "
+"``storage``, a :class:`~optuna.exceptions.DuplicatedStudyError` is raised"
+" if ``load_if_exists`` is set to :obj:`False`. Otherwise, the creation of"
+" the study is skipped, and the existing one is returned."
+msgstr ""
+
+#: of optuna.create_study optuna.distributions.CategoricalDistribution.single
+#: optuna.distributions.DiscreteUniformDistribution.single
+#: optuna.distributions.IntLogUniformDistribution.single
+#: optuna.distributions.IntUniformDistribution.single
+#: optuna.distributions.LogUniformDistribution.single
+#: optuna.distributions.UniformDistribution.single
+#: optuna.distributions.check_distribution_compatibility
+#: optuna.distributions.distribution_to_json
+#: optuna.distributions.json_to_distribution optuna.get_all_study_summaries
+#: optuna.importance.FanovaImportanceEvaluator.evaluate
+#: optuna.importance.MeanDecreaseImpurityImportanceEvaluator.evaluate
+#: optuna.importance.get_param_importances
+#: optuna.integration.OptunaSearchCV.fit
+#: optuna.integration.OptunaSearchCV.score optuna.logging.get_verbosity
+#: optuna.multi_objective.samplers.BaseMultiObjectiveSampler.infer_relative_search_space
+#: optuna.multi_objective.samplers.BaseMultiObjectiveSampler.sample_independent
+#: optuna.multi_objective.samplers.BaseMultiObjectiveSampler.sample_relative
+#: optuna.multi_objective.study.MultiObjectiveStudy.directions
+#: optuna.multi_objective.study.MultiObjectiveStudy.get_pareto_front_trials
+#: optuna.multi_objective.study.MultiObjectiveStudy.get_trials
+#: optuna.multi_objective.study.MultiObjectiveStudy.n_objectives
+#: optuna.multi_objective.study.MultiObjectiveStudy.sampler
+#: optuna.multi_objective.study.MultiObjectiveStudy.trials
+#: optuna.multi_objective.study.MultiObjectiveStudy.user_attrs
+#: optuna.multi_objective.study.create_study
+#: optuna.multi_objective.study.load_study
+#: optuna.multi_objective.trial.MultiObjectiveTrial.datetime_start
+#: optuna.multi_objective.trial.MultiObjectiveTrial.distributions
+#: optuna.multi_objective.trial.MultiObjectiveTrial.number
+#: optuna.multi_objective.trial.MultiObjectiveTrial.params
+#: optuna.multi_objective.trial.MultiObjectiveTrial.user_attrs
+#: optuna.multi_objective.visualization.plot_pareto_front
+#: optuna.pruners.BasePruner.prune
+#: optuna.samplers.BaseSampler.infer_relative_search_space
+#: optuna.samplers.BaseSampler.sample_independent
+#: optuna.samplers.BaseSampler.sample_relative
+#: optuna.samplers.IntersectionSearchSpace.calculate
+#: optuna.samplers.TPESampler.hyperopt_parameters
+#: optuna.samplers.intersection_search_space
+#: optuna.structs.FrozenTrial.duration optuna.study.Study.best_params
+#: optuna.study.Study.best_trial optuna.study.Study.best_value
+#: optuna.study.Study.direction optuna.study.Study.get_trials
+#: optuna.study.Study.trials optuna.study.Study.trials_dataframe
+#: optuna.study.Study.user_attrs optuna.study.create_study
+#: optuna.study.get_all_study_summaries optuna.trial.FrozenTrial.duration
+#: optuna.trial.Trial.datetime_start optuna.trial.Trial.distributions
+#: optuna.trial.Trial.number optuna.trial.Trial.params
+#: optuna.trial.Trial.should_prune optuna.trial.Trial.suggest_categorical
+#: optuna.trial.Trial.suggest_discrete_uniform optuna.trial.Trial.suggest_float
+#: optuna.trial.Trial.suggest_loguniform optuna.trial.Trial.suggest_uniform
+#: optuna.trial.Trial.user_attrs optuna.visualization.is_available
+#: optuna.visualization.plot_contour
+#: optuna.visualization.plot_intermediate_values
+#: optuna.visualization.plot_optimization_history
+#: optuna.visualization.plot_parallel_coordinate
+#: optuna.visualization.plot_param_importances optuna.visualization.plot_slice
+msgid "Returns"
+msgstr ""
+
+#: of optuna.create_study:32 optuna.integration.ChainerMNStudy:13
+#: optuna.study.create_study:32 optuna.trial.Trial:11
+msgid "A :class:`~optuna.study.Study` object."
+msgstr ""
+
+#: ../../source/reference/core.rst:9
+msgid "This is an alias for :func:`optuna.study.create_study`."
+msgstr ""
+
+#: of optuna.load_study:1 optuna.study.load_study:1
+msgid ""
+"Load the existing :class:`~optuna.study.Study` that has the specified "
+"name."
+msgstr ""
+
+#: of optuna.load_study:3 optuna.multi_objective.study.load_study:3
+#: optuna.study.load_study:3
+msgid "Study's name. Each study has a unique name as an identifier."
+msgstr ""
+
+#: of optuna.delete_study:4 optuna.get_all_study_summaries:3
+#: optuna.load_study:4 optuna.study.delete_study:4
+#: optuna.study.get_all_study_summaries:3 optuna.study.load_study:4
+msgid ""
+"Database URL such as ``sqlite:///example.db``. Please see also the "
+"documentation of :func:`~optuna.study.create_study` for further details."
+msgstr ""
+
+#: of optuna.load_study:9 optuna.study.load_study:9
+msgid ""
+"A pruner object that decides early stopping of unpromising trials. If "
+":obj:`None` is specified, :class:`~optuna.pruners.MedianPruner` is used "
+"as the default. See also :class:`~optuna.pruners`."
+msgstr ""
+
+#: ../../source/reference/core.rst:14
+msgid "This is an alias for :func:`optuna.study.load_study`."
+msgstr ""
+
+#: of optuna.delete_study:1 optuna.study.delete_study:1
+msgid "Delete a :class:`~optuna.study.Study` object."
+msgstr ""
+
+#: of optuna.delete_study:3 optuna.study.delete_study:3
+msgid "Study's name."
+msgstr ""
+
+#: ../../source/reference/core.rst:19
+msgid "This is an alias for :func:`optuna.study.delete_study`."
+msgstr ""
+
+#: of optuna.get_all_study_summaries:1 optuna.study.get_all_study_summaries:1
+msgid "Get all history of studies stored in a specified storage."
+msgstr ""
+
+#: of optuna.get_all_study_summaries:6 optuna.study.get_all_study_summaries:6
+msgid ""
+"List of study history summarized as :class:`~optuna.study.StudySummary` "
+"objects."
+msgstr ""
+
+#: ../../source/reference/core.rst:24
+msgid "This is an alias for :func:`optuna.study.get_all_study_summaries`."
+msgstr ""
+
+#: of optuna.TrialPruned:1 optuna.exceptions.TrialPruned:1
+msgid "Exception for pruned trials."
+msgstr ""
+
+#: of optuna.TrialPruned:3 optuna.exceptions.TrialPruned:3
+msgid ""
+"This error tells a trainer that the current :class:`~optuna.trial.Trial` "
+"was pruned. It is supposed to be raised after "
+":func:`optuna.trial.Trial.should_prune` as shown in the following "
+"example."
+msgstr ""
+
+#: of optuna.TrialPruned:8 optuna.exceptions.TrialPruned:8
+#: optuna.integration.CmaEsSampler:4
+#: optuna.integration.FastAIPruningCallback:11
+#: optuna.integration.MLflowCallback:8 optuna.integration.SkoptSampler:4
+#: optuna.logging.disable_default_handler:4 optuna.logging.enable_propagation:7
+#: optuna.multi_objective.samplers.RandomMultiObjectiveSampler:8
+#: optuna.multi_objective.visualization.plot_pareto_front:4
+#: optuna.pruners.HyperbandPruner:45 optuna.pruners.MedianPruner:7
+#: optuna.pruners.NopPruner:4 optuna.pruners.PercentilePruner:6
+#: optuna.pruners.SuccessiveHalvingPruner:16 optuna.pruners.ThresholdPruner:7
+#: optuna.samplers.CmaEsSampler:4 optuna.samplers.GridSampler:7
+#: optuna.samplers.RandomSampler:7 optuna.samplers.TPESampler:19
+#: optuna.samplers.TPESampler.hyperopt_parameters:7
+#: optuna.storages.RDBStorage:7 optuna.storages.RedisStorage:7
+#: optuna.study.Study.enqueue_trial:7 optuna.study.Study.trials_dataframe:8
+#: optuna.trial.FixedTrial:10 optuna.trial.Trial.report:15
+#: optuna.trial.Trial.set_user_attr:6 optuna.trial.Trial.suggest_categorical:6
+#: optuna.trial.Trial.suggest_discrete_uniform:13
+#: optuna.trial.Trial.suggest_float:15 optuna.trial.Trial.suggest_int:6
+#: optuna.trial.Trial.suggest_loguniform:8 optuna.trial.Trial.suggest_uniform:8
+#: optuna.visualization.plot_contour:6
+#: optuna.visualization.plot_intermediate_values:4
+#: optuna.visualization.plot_optimization_history:4
+#: optuna.visualization.plot_parallel_coordinate:6
+#: optuna.visualization.plot_param_importances:4
+#: optuna.visualization.plot_slice:6
+msgid "Example"
+msgstr ""
+
+#: ../../source/reference/core.rst:30
+msgid "This is an alias for :class:`optuna.exceptions.TrialPruned`."
+msgstr ""
+
+#: ../../source/reference/distributions.rst:4
+msgid "Distributions"
+msgstr ""
+
+#: of optuna.distributions.UniformDistribution:1
+msgid "A uniform distribution in the linear domain."
+msgstr ""
+
+#: of optuna.distributions.UniformDistribution:3
+msgid ""
+"This object is instantiated by "
+":func:`~optuna.trial.Trial.suggest_uniform`, and passed to "
+":mod:`~optuna.samplers` in general."
+msgstr ""
+
+#: of optuna.distributions.DiscreteUniformDistribution:13
+#: optuna.distributions.IntLogUniformDistribution:14
+#: optuna.distributions.IntUniformDistribution:14
+#: optuna.distributions.LogUniformDistribution:8
+#: optuna.distributions.UniformDistribution:8
+msgid ""
+"Lower endpoint of the range of the distribution. ``low`` is included in "
+"the range."
+msgstr ""
+
+#: of optuna.distributions.LogUniformDistribution:12
+#: optuna.distributions.UniformDistribution:12
+msgid ""
+"Upper endpoint of the range of the distribution. ``high`` is excluded "
+"from the range."
+msgstr ""
+
+#: of optuna.distributions.CategoricalDistribution.single:1
+#: optuna.distributions.DiscreteUniformDistribution.single:1
+#: optuna.distributions.IntLogUniformDistribution.single:1
+#: optuna.distributions.IntUniformDistribution.single:1
+#: optuna.distributions.LogUniformDistribution.single:1
+#: optuna.distributions.UniformDistribution.single:1
+msgid "Test whether the range of this distribution contains just a single value."
+msgstr ""
+
+#: of optuna.distributions.CategoricalDistribution.single:3
+#: optuna.distributions.DiscreteUniformDistribution.single:3
+#: optuna.distributions.IntLogUniformDistribution.single:3
+#: optuna.distributions.IntUniformDistribution.single:3
+#: optuna.distributions.LogUniformDistribution.single:3
+#: optuna.distributions.UniformDistribution.single:3
+msgid ""
+"When this method returns :obj:`True`, :mod:`~optuna.samplers` always "
+"sample the same value from the distribution."
+msgstr ""
+
+#: of optuna.distributions.CategoricalDistribution.single:6
+#: optuna.distributions.DiscreteUniformDistribution.single:6
+#: optuna.distributions.IntLogUniformDistribution.single:6
+#: optuna.distributions.IntUniformDistribution.single:6
+#: optuna.distributions.LogUniformDistribution.single:6
+#: optuna.distributions.UniformDistribution.single:6
+msgid ""
+":obj:`True` if the range of this distribution contains just a single "
+"value, otherwise :obj:`False`."
+msgstr ""
+
+#: of optuna.distributions.LogUniformDistribution:1
+msgid "A uniform distribution in the log domain."
+msgstr ""
+
+#: of optuna.distributions.LogUniformDistribution:3
+msgid ""
+"This object is instantiated by "
+":func:`~optuna.trial.Trial.suggest_loguniform`, and passed to "
+":mod:`~optuna.samplers` in general."
+msgstr ""
+
+#: of optuna.distributions.DiscreteUniformDistribution:1
+msgid "A discretized uniform distribution in the linear domain."
+msgstr ""
+
+#: of optuna.distributions.DiscreteUniformDistribution:3
+msgid ""
+"This object is instantiated by "
+":func:`~optuna.trial.Trial.suggest_discrete_uniform`, and passed to "
+":mod:`~optuna.samplers` in general."
+msgstr ""
+
+#: of optuna.distributions.DiscreteUniformDistribution:7
+msgid ""
+"If the range :math:`[\\mathsf{low}, \\mathsf{high}]` is not divisible by "
+":math:`q`, :math:`\\mathsf{high}` will be replaced with the maximum of "
+":math:`k q + \\mathsf{low} \\lt \\mathsf{high}`, where :math:`k` is an "
+"integer."
+msgstr ""
+
+#: of optuna.distributions.DiscreteUniformDistribution:17
+#: optuna.distributions.IntLogUniformDistribution:18
+#: optuna.distributions.IntUniformDistribution:18
+msgid ""
+"Upper endpoint of the range of the distribution. ``high`` is included in "
+"the range."
+msgstr ""
+
+#: of optuna.distributions.DiscreteUniformDistribution:21
+msgid "A discretization step."
+msgstr ""
+
+#: of optuna.distributions.IntUniformDistribution:1
+msgid "A uniform distribution on integers."
+msgstr ""
+
+#: of optuna.distributions.IntLogUniformDistribution:3
+#: optuna.distributions.IntUniformDistribution:3
+msgid ""
+"This object is instantiated by :func:`~optuna.trial.Trial.suggest_int`, "
+"and passed to :mod:`~optuna.samplers` in general."
+msgstr ""
+
+#: of optuna.distributions.IntLogUniformDistribution:7
+#: optuna.distributions.IntUniformDistribution:7
+msgid ""
+"If the range :math:`[\\mathsf{low}, \\mathsf{high}]` is not divisible by "
+":math:`\\mathsf{step}`, :math:`\\mathsf{high}` will be replaced with the "
+"maximum of :math:`k \\times \\mathsf{step} + \\mathsf{low} \\lt "
+"\\mathsf{high}`, where :math:`k` is an integer."
+msgstr ""
+
+#: of optuna.distributions.IntLogUniformDistribution:22
+#: optuna.distributions.IntUniformDistribution:22
+msgid "A step for spacing between values."
+msgstr ""
+
+#: of optuna.distributions.IntLogUniformDistribution:1
+msgid "A uniform distribution on integers in the log domain."
+msgstr ""
+
+#: of optuna.distributions.CategoricalDistribution:1
+msgid "A categorical distribution."
+msgstr ""
+
+#: of optuna.distributions.CategoricalDistribution:3
+msgid ""
+"This object is instantiated by "
+":func:`~optuna.trial.Trial.suggest_categorical`, and passed to "
+":mod:`~optuna.samplers` in general."
+msgstr ""
+
+#: of optuna.distributions.CategoricalDistribution:6
+#: optuna.distributions.CategoricalDistribution:16
+#: optuna.trial.Trial.suggest_categorical:32
+msgid "Parameter value candidates."
+msgstr ""
+
+#: of optuna.distributions.CategoricalDistribution:10
+msgid ""
+"Not all types are guaranteed to be compatible with all storages. It is "
+"recommended to restrict the types of the choices to :obj:`None`, "
+":class:`bool`, :class:`int`, :class:`float` and :class:`str`."
+msgstr ""
+
+#: of optuna.distributions.distribution_to_json:1
+msgid "Serialize a distribution to JSON format."
+msgstr ""
+
+#: of optuna.distributions.distribution_to_json:3
+msgid "A distribution to be serialized."
+msgstr ""
+
+#: of optuna.distributions.distribution_to_json:5
+msgid "A JSON string of a given distribution."
+msgstr ""
+
+#: of optuna.distributions.json_to_distribution:1
+msgid "Deserialize a distribution in JSON format."
+msgstr ""
+
+#: of optuna.distributions.json_to_distribution:3
+msgid "A JSON-serialized distribution."
+msgstr ""
+
+#: of optuna.distributions.json_to_distribution:5
+msgid "A deserialized distribution."
+msgstr ""
+
+#: of optuna.distributions.check_distribution_compatibility:1
+msgid "A function to check compatibility of two distributions."
+msgstr ""
+
+#: of optuna.distributions.check_distribution_compatibility:3
+msgid "Note that this method is not supposed to be called by library users."
+msgstr ""
+
+#: of optuna.distributions.check_distribution_compatibility:5
+msgid "A distribution previously recorded in storage."
+msgstr ""
+
+#: of optuna.distributions.check_distribution_compatibility:6
+msgid "A distribution newly added to storage."
+msgstr ""
+
+#: of optuna.distributions.check_distribution_compatibility:8
+msgid "True denotes given distributions are compatible. Otherwise, they are not."
+msgstr ""
+
+#: ../../source/reference/exceptions.rst:4
+msgid "Exceptions"
+msgstr ""
+
+#: of optuna.exceptions.OptunaError:1
+msgid "Base class for Optuna specific errors."
+msgstr ""
+
+#: ../../source/reference/exceptions.rst:13
+msgid "The alias also exists as :class:`optuna.TrialPruned`."
+msgstr ""
+
+#: of optuna.exceptions.CLIUsageError:1
+msgid "Exception for CLI."
+msgstr ""
+
+#: of optuna.exceptions.CLIUsageError:3
+msgid "CLI raises this exception when it receives invalid configuration."
+msgstr ""
+
+#: of optuna.exceptions.StorageInternalError:1
+msgid "Exception for storage operation."
+msgstr ""
+
+#: of optuna.exceptions.StorageInternalError:3
+msgid "This error is raised when an operation failed in backend DB of storage."
+msgstr ""
+
+#: of optuna.exceptions.DuplicatedStudyError:1
+msgid "Exception for a duplicated study name."
+msgstr ""
+
+#: of optuna.exceptions.DuplicatedStudyError:3
+msgid ""
+"This error is raised when a specified study name already exists in the "
+"storage."
+msgstr ""
+
+#: ../../source/reference/importance.rst:4
+msgid "Hyperparameter Importance"
+msgstr ""
+
+#: of optuna.importance.FanovaImportanceEvaluator.evaluate:1
+#: optuna.importance.MeanDecreaseImpurityImportanceEvaluator.evaluate:1
+#: optuna.importance.get_param_importances:1
+msgid ""
+"Evaluate parameter importances based on completed trials in the given "
+"study."
+msgstr ""
+
+#: of optuna.importance.get_param_importances:3
+msgid ""
+"The parameter importances are returned as a dictionary where the keys "
+"consist of parameter names and their values importances. The importances "
+"are represented by floating point numbers that sum to 1.0 over the entire"
+" dictionary. The higher the value, the more important. The returned "
+"dictionary is of type :class:`collections.OrderedDict` and is ordered by "
+"its values in a descending order."
+msgstr ""
+
+#: of optuna.importance.get_param_importances:11
+msgid ""
+"If ``params`` is :obj:`None`, all parameter that are present in all of "
+"the completed trials are assessed. This implies that conditional "
+"parameters will be excluded from the evaluation. To assess the "
+"importances of conditional parameters, a :obj:`list` of parameter names "
+"can be specified via ``params``. If specified, only completed trials that"
+" contain all of the parameters will be considered. If no such trials are "
+"found, an error will be raised."
+msgstr ""
+
+#: of optuna.importance.get_param_importances:19
+msgid ""
+"If the given study does not contain completed trials, an error will be "
+"raised."
+msgstr ""
+
+#: of optuna.importance.get_param_importances:23
+msgid ""
+"If ``params`` is specified as an empty list, an empty dictionary is "
+"returned."
+msgstr ""
+
+#: of optuna.importance.get_param_importances:27
+msgid ""
+"See :func:`~optuna.visualization.plot_param_importances` to plot "
+"importances."
+msgstr ""
+
+#: of optuna.importance.FanovaImportanceEvaluator.evaluate:12
+#: optuna.importance.MeanDecreaseImpurityImportanceEvaluator.evaluate:12
+#: optuna.importance.get_param_importances:29
+#: optuna.visualization.plot_param_importances:32
+msgid "An optimized study."
+msgstr ""
+
+#: of optuna.importance.get_param_importances:30
+#: optuna.visualization.plot_param_importances:33
+msgid ""
+"An importance evaluator object that specifies which algorithm to base the"
+" importance assessment on. Defaults to "
+":class:`~optuna.importance._mean_decrease_impurity.MeanDecreaseImpurityImportanceEvaluator`."
+msgstr ""
+
+#: of optuna.importance.FanovaImportanceEvaluator.evaluate:13
+#: optuna.importance.MeanDecreaseImpurityImportanceEvaluator.evaluate:13
+#: optuna.importance.get_param_importances:34
+#: optuna.visualization.plot_param_importances:37
+msgid ""
+"A list of names of parameters to assess. If :obj:`None`, all parameters "
+"that are present in all of the completed trials are assessed."
+msgstr ""
+
+#: of optuna.importance.FanovaImportanceEvaluator.evaluate:17
+#: optuna.importance.MeanDecreaseImpurityImportanceEvaluator.evaluate:17
+#: optuna.importance.get_param_importances:38
+msgid ""
+"An :class:`collections.OrderedDict` where the keys are parameter names "
+"and the values are assessed importances."
+msgstr ""
+
+#: of optuna.importance.FanovaImportanceEvaluator:13
+#: optuna.importance.get_param_importances:42
+msgid ""
+"Added in v1.3.0 as an experimental feature. The interface may change in "
+"newer versions without prior notice. See "
+"https://github.com/optuna/optuna/releases/tag/v1.3.0."
+msgstr ""
+
+#: of optuna.importance.FanovaImportanceEvaluator:1
+msgid "fANOVA parameter importance evaluator."
+msgstr ""
+
+#: of optuna.importance.FanovaImportanceEvaluator:5
+msgid "Requires the `fanova <https://github.com/automl/fanova>`_ Python package."
+msgstr ""
+
+#: of optuna.importance.FanovaImportanceEvaluator:9
+msgid ""
+"`An Efficient Approach for Assessing Hyperparameter Importance "
+"<http://proceedings.mlr.press/v32/hutter14.html>`_."
+msgstr ""
+
+#: of optuna.importance.FanovaImportanceEvaluator.evaluate:5
+#: optuna.importance.MeanDecreaseImpurityImportanceEvaluator.evaluate:5
+msgid "This method is not meant to be called by library users."
+msgstr ""
+
+#: of optuna.importance.FanovaImportanceEvaluator.evaluate:9
+#: optuna.importance.MeanDecreaseImpurityImportanceEvaluator.evaluate:9
+msgid ""
+"Please refer to :func:`~optuna.importance.get_param_importances` for how "
+"a concrete evaluator should implement this method."
+msgstr ""
+
+#: of optuna.importance.MeanDecreaseImpurityImportanceEvaluator:1
+msgid "Mean Decrease Impurity (MDI) parameter importance evaluator."
+msgstr ""
+
+#: of optuna.importance.MeanDecreaseImpurityImportanceEvaluator:3
+msgid ""
+"This evaluator fits a random forest that predicts objective values given "
+"hyperparameter configurations. Feature importances are then computed "
+"using MDI."
+msgstr ""
+
+#: of optuna.importance.MeanDecreaseImpurityImportanceEvaluator:8
+msgid ""
+"This evaluator requires the `sklean <https://scikit-learn.org/stable/>`_ "
+"Python package and is based on "
+"`sklearn.ensemble.RandomForestClassifier.feature_importances_ <https"
+"://scikit-"
+"learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html#sklearn.ensemble.RandomForestClassifier.feature_importances_>`_."
+msgstr ""
+
+#: of optuna.importance.MeanDecreaseImpurityImportanceEvaluator:12
+msgid "Number of trees in the random forest."
+msgstr ""
+
+#: of optuna.importance.MeanDecreaseImpurityImportanceEvaluator:13
+msgid "The maximum depth of each tree in the random forest."
+msgstr ""
+
+#: of optuna.importance.MeanDecreaseImpurityImportanceEvaluator:14
+msgid "Seed for the random forest."
+msgstr ""
+
+#: of optuna.importance.MeanDecreaseImpurityImportanceEvaluator:17
+#: optuna.integration.lightgbm.LightGBMTuner:37
+#: optuna.integration.lightgbm.LightGBMTunerCV:32
+#: optuna.multi_objective.samplers.NSGAIIMultiObjectiveSampler:21
+#: optuna.visualization.plot_param_importances:44
+msgid ""
+"Added in v1.5.0 as an experimental feature. The interface may change in "
+"newer versions without prior notice. See "
+"https://github.com/optuna/optuna/releases/tag/v1.5.0."
+msgstr ""
+
+#: ../../source/reference/index.rst:2
+msgid "API Reference"
+msgstr ""
+
+#: ../../source/reference/integration.rst:4
+msgid "Integration"
+msgstr ""
+
+#: of optuna.integration.ChainerPruningExtension:1
+msgid "Chainer extension to prune unpromising trials."
+msgstr ""
+
+#: of optuna.integration.ChainerPruningExtension:3
+msgid ""
+"See `the example <https://github.com/optuna/optuna/blob/master/ "
+"examples/pruning/chainer_integration.py>`__ if you want to add a pruning "
+"extension which observes validation accuracy of a `Chainer Trainer "
+"<https://docs.chainer.org/en/stable/ "
+"reference/generated/chainer.training.Trainer.html>`_."
+msgstr ""
+
+#: of optuna.integration.AllenNLPExecutor:11
+#: optuna.integration.ChainerPruningExtension:9
+#: optuna.integration.FastAIPruningCallback:22
+#: optuna.integration.KerasPruningCallback:7
+#: optuna.integration.LightGBMPruningCallback:8
+#: optuna.integration.MXNetPruningCallback:7
+#: optuna.integration.PyTorchIgnitePruningHandler:7
+#: optuna.integration.PyTorchLightningPruningCallback:7
+#: optuna.integration.TFKerasPruningCallback:10
+#: optuna.integration.TensorFlowPruningHook:7
+#: optuna.integration.XGBoostPruningCallback:8
+msgid ""
+"A :class:`~optuna.trial.Trial` corresponding to the current evaluation of"
+" the objective function."
+msgstr ""
+
+#: of optuna.integration.ChainerPruningExtension:11
+msgid ""
+"An evaluation metric for pruning, e.g., ``main/loss`` and "
+"``validation/main/accuracy``. Please refer to `chainer.Reporter reference"
+" <https://docs.chainer.org/en/stable/reference/ "
+"util/generated/chainer.Reporter.html>`_ for further details."
+msgstr ""
+
+#: of optuna.integration.ChainerPruningExtension:15
+msgid ""
+"A trigger to execute pruning. ``pruner_trigger`` is an instance of "
+"`IntervalTrigger <https://docs.chainer.org/en/stable/reference/generated/"
+" chainer.training.triggers.IntervalTrigger.html>`_ or "
+"`ManualScheduleTrigger "
+"<https://docs.chainer.org/en/stable/reference/generated/ "
+"chainer.training.triggers.ManualScheduleTrigger.html>`_. `IntervalTrigger"
+" <https:// "
+"docs.chainer.org/en/stable/reference/generated/chainer.training.triggers."
+" IntervalTrigger.html>`_ can be specified by a tuple of the interval "
+"length and its unit like ``(1, 'epoch')``."
+msgstr ""
+
+#: of optuna.integration.ChainerMNStudy:1
+msgid ""
+"A wrapper of :class:`~optuna.study.Study` to incorporate Optuna with "
+"ChainerMN."
+msgstr ""
+
+#: of optuna.integration.ChainerMNStudy:4
+msgid ""
+":class:`~optuna.integration.chainermn.ChainerMNStudy` provides the same "
+"interface as :class:`~optuna.study.Study`. Please refer to "
+":class:`optuna.study.Study` for further details."
+msgstr ""
+
+#: of optuna.integration.ChainerMNStudy:8
+msgid ""
+"See `the example <https://github.com/optuna/optuna/blob/master/ "
+"examples/pruning/chainermn_integration.py>`__ if you want to optimize an "
+"objective function that trains neural network written with ChainerMN."
+msgstr ""
+
+#: of optuna.integration.ChainerMNStudy:14
+msgid ""
+"A `ChainerMN communicator "
+"<https://docs.chainer.org/en/stable/chainermn/reference/ "
+"index.html#communicators>`_."
+msgstr ""
+
+#: of optuna.integration.ChainerMNStudy.optimize:1
+#: optuna.multi_objective.study.MultiObjectiveStudy.optimize:1
+#: optuna.study.Study.optimize:1
+msgid "Optimize an objective function."
+msgstr ""
+
+#: of optuna.integration.ChainerMNStudy.optimize:3
+msgid ""
+"This method provides the same interface as "
+":func:`optuna.study.Study.optimize` except the absence of ``n_jobs`` "
+"argument."
+msgstr ""
+
+#: of optuna.integration.CmaEsSampler:1
+msgid "A Sampler using cma library as the backend."
+msgstr ""
+
+#: of optuna.integration.CmaEsSampler:5
+msgid ""
+"Optimize a simple quadratic function by using "
+":class:`~optuna.integration.CmaEsSampler`."
+msgstr ""
+
+#: of optuna.integration.CmaEsSampler:20
+msgid ""
+"Note that parallel execution of trials may affect the optimization "
+"performance of CMA-ES, especially if the number of trials running in "
+"parallel exceeds the population size."
+msgstr ""
+
+#: of optuna.integration.CmaEsSampler:23
+msgid ""
+"A dictionary of an initial parameter values for CMA-ES. By default, the "
+"mean of ``low`` and ``high`` for each distribution is used. Please refer "
+"to cma.CMAEvolutionStrategy_ for further details of ``x0``."
+msgstr ""
+
+#: of optuna.integration.CmaEsSampler:26
+msgid ""
+"Initial standard deviation of CMA-ES. By default, ``sigma0`` is set to "
+"``min_range / 6``, where ``min_range`` denotes the minimum range of the "
+"distributions in the search space. If distribution is categorical, "
+"``min_range`` is ``len(choices) - 1``. Please refer to "
+"cma.CMAEvolutionStrategy_ for further details of ``sigma0``."
+msgstr ""
+
+#: of optuna.integration.CmaEsSampler:31
+msgid ""
+"A dictionary of multipliers of sigma0 for each parameters. The default "
+"value is 1.0. Please refer to cma.CMAEvolutionStrategy_ for further "
+"details of ``cma_stds``."
+msgstr ""
+
+#: of optuna.integration.CmaEsSampler:33 optuna.samplers.CmaEsSampler:36
+msgid "A random seed for CMA-ES."
+msgstr ""
+
+#: of optuna.integration.CmaEsSampler:34
+msgid ""
+"Options passed to the constructor of cma.CMAEvolutionStrategy_ class.  "
+"Note that ``BoundaryHandler``, ``bounds``, ``CMA_stds`` and ``seed`` "
+"arguments in ``cma_opts`` will be ignored because it is added by "
+":class:`~optuna.integration.CmaEsSampler` automatically."
+msgstr ""
+
+#: of optuna.integration.CmaEsSampler:34
+msgid "Options passed to the constructor of cma.CMAEvolutionStrategy_ class."
+msgstr ""
+
+#: of optuna.integration.CmaEsSampler:36
+msgid ""
+"Note that ``BoundaryHandler``, ``bounds``, ``CMA_stds`` and ``seed`` "
+"arguments in ``cma_opts`` will be ignored because it is added by "
+":class:`~optuna.integration.CmaEsSampler` automatically."
+msgstr ""
+
+#: of optuna.integration.CmaEsSampler:39 optuna.samplers.CmaEsSampler:37
+msgid ""
+"The independent sampling is used instead of the CMA-ES algorithm until "
+"the given number of trials finish in the same study."
+msgstr ""
+
+#: of optuna.integration.CmaEsSampler:41
+msgid ""
+"A :class:`~optuna.samplers.BaseSampler` instance that is used for "
+"independent sampling. The parameters not contained in the relative search"
+" space are sampled by this sampler. The search space for "
+":class:`~optuna.integration.CmaEsSampler` is determined by "
+":func:`~optuna.samplers.intersection_search_space()`.  If :obj:`None` is "
+"specified, :class:`~optuna.samplers.RandomSampler` is used as the "
+"default.  .. seealso::     :class:`optuna.samplers` module provides "
+"built-in independent samplers     such as "
+":class:`~optuna.samplers.RandomSampler` and     "
+":class:`~optuna.samplers.TPESampler`."
+msgstr ""
+
+#: of optuna.integration.CmaEsSampler:41
+msgid ""
+"A :class:`~optuna.samplers.BaseSampler` instance that is used for "
+"independent sampling. The parameters not contained in the relative search"
+" space are sampled by this sampler. The search space for "
+":class:`~optuna.integration.CmaEsSampler` is determined by "
+":func:`~optuna.samplers.intersection_search_space()`."
+msgstr ""
+
+#: of optuna.integration.CmaEsSampler:47 optuna.integration.SkoptSampler:26
+#: optuna.samplers.CmaEsSampler:45
+msgid ""
+"If :obj:`None` is specified, :class:`~optuna.samplers.RandomSampler` is "
+"used as the default."
+msgstr ""
+
+#: of optuna.integration.CmaEsSampler:51 optuna.integration.SkoptSampler:30
+#: optuna.samplers.CmaEsSampler:49
+msgid ""
+":class:`optuna.samplers` module provides built-in independent samplers "
+"such as :class:`~optuna.samplers.RandomSampler` and "
+":class:`~optuna.samplers.TPESampler`."
+msgstr ""
+
+#: of optuna.integration.CmaEsSampler:54 optuna.integration.SkoptSampler:33
+#: optuna.samplers.CmaEsSampler:52
+msgid ""
+"If this is :obj:`True`, a warning message is emitted when the value of a "
+"parameter is sampled by using an independent sampler.  Note that the "
+"parameters of the first trial in a study are always sampled via an "
+"independent sampler, so no warning messages are emitted in this case."
+msgstr ""
+
+#: of optuna.integration.CmaEsSampler:54 optuna.integration.SkoptSampler:33
+#: optuna.samplers.CmaEsSampler:52
+msgid ""
+"If this is :obj:`True`, a warning message is emitted when the value of a "
+"parameter is sampled by using an independent sampler."
+msgstr ""
+
+#: of optuna.integration.CmaEsSampler:57 optuna.integration.SkoptSampler:36
+#: optuna.samplers.CmaEsSampler:55
+msgid ""
+"Note that the parameters of the first trial in a study are always sampled"
+" via an independent sampler, so no warning messages are emitted in this "
+"case."
+msgstr ""
+
+#: of optuna.integration.CmaEsSampler.reseed_rng:1
+#: optuna.integration.SkoptSampler.reseed_rng:1
+#: optuna.samplers.BaseSampler.reseed_rng:1
+#: optuna.samplers.CmaEsSampler.reseed_rng:1
+#: optuna.samplers.RandomSampler.reseed_rng:1
+#: optuna.samplers.TPESampler.reseed_rng:1
+msgid "Reseed sampler's random number generator."
+msgstr ""
+
+#: of optuna.integration.CmaEsSampler.reseed_rng:3
+#: optuna.integration.SkoptSampler.reseed_rng:3
+#: optuna.samplers.BaseSampler.reseed_rng:3
+#: optuna.samplers.CmaEsSampler.reseed_rng:3
+#: optuna.samplers.RandomSampler.reseed_rng:3
+#: optuna.samplers.TPESampler.reseed_rng:3
+msgid ""
+"This method is called by the :class:`~optuna.study.Study` instance if "
+"trials are executed in parallel with the option ``n_jobs>1``. In that "
+"case, the sampler instance will be replicated including the state of the "
+"random number generator, and they may suggest the same values. To prevent"
+" this issue, this method assigns a different seed to each random number "
+"generator."
+msgstr ""
+
+#: of optuna.integration.FastAIPruningCallback:1
+msgid "FastAI callback to prune unpromising trials for fastai."
+msgstr ""
+
+#: of optuna.integration.FastAIPruningCallback:4
+msgid ""
+"This callback is for fastai<2.0, not the coming version developed in "
+"fastai/fastai_dev."
+msgstr ""
+
+#: of optuna.integration.FastAIPruningCallback:6
+msgid ""
+"See `the example <https://github.com/optuna/optuna/blob/master/ "
+"examples/fastai_simple.py>`__ if you want to add a pruning callback which"
+" monitors validation loss of a ``Learner``."
+msgstr ""
+
+#: of optuna.integration.FastAIPruningCallback:12
+msgid "Register a pruning callback to ``learn.fit`` and ``learn.fit_one_cycle``."
+msgstr ""
+
+#: of optuna.integration.FastAIPruningCallback:21
+msgid ""
+"`fastai.basic_train.Learner "
+"<https://docs.fast.ai/basic_train.html#Learner>`_."
+msgstr ""
+
+#: of optuna.integration.FastAIPruningCallback:24
+msgid ""
+"An evaluation metric for pruning, e.g. ``valid_loss`` and ``Accuracy``. "
+"Please refer to `fastai.Callback reference "
+"<https://docs.fast.ai/callback.html#Callback>`_ for further details."
+msgstr ""
+
+#: of optuna.integration.PyTorchIgnitePruningHandler:1
+msgid "PyTorch Ignite handler to prune unpromising trials."
+msgstr ""
+
+#: of optuna.integration.PyTorchIgnitePruningHandler:3
+msgid ""
+"See `the example <https://github.com/optuna/optuna/blob/master/ "
+"examples/pytorch_ignite_simple.py>`__ if you want to add a pruning "
+"handler which observes validation accuracy."
+msgstr ""
+
+#: of optuna.integration.PyTorchIgnitePruningHandler:9
+msgid "A name of metric for pruning, e.g., ``accuracy`` and ``loss``."
+msgstr ""
+
+#: of optuna.integration.PyTorchIgnitePruningHandler:10
+msgid ""
+"A trainer engine of PyTorch Ignite. Please refer to `ignite.engine.Engine"
+" reference "
+"<https://pytorch.org/ignite/engine.html#ignite.engine.Engine>`_ for "
+"further details."
+msgstr ""
+
+#: of optuna.integration.KerasPruningCallback:1
+msgid "Keras callback to prune unpromising trials."
+msgstr ""
+
+#: of optuna.integration.KerasPruningCallback:3
+msgid ""
+"See `the example <https://github.com/optuna/optuna/blob/master/ "
+"examples/pruning/keras_integration.py>`__ if you want to add a pruning "
+"callback which observes validation accuracy."
+msgstr ""
+
+#: of optuna.integration.KerasPruningCallback:9
+msgid ""
+"An evaluation metric for pruning, e.g., ``val_loss`` and "
+"``val_accuracy``. Please refer to `keras.Callback reference "
+"<https://keras.io/callbacks/#callback>`_ for further details."
+msgstr ""
+
+#: of optuna.integration.KerasPruningCallback:12
+msgid ""
+"Check if trial should be pruned every n-th epoch. By default "
+"``interval=1`` and pruning is performed after every epoch. Increase "
+"``interval`` to run several epochs faster before applying pruning."
+msgstr ""
+
+#: of optuna.integration.LightGBMPruningCallback:1
+msgid "Callback for LightGBM to prune unpromising trials."
+msgstr ""
+
+#: of optuna.integration.LightGBMPruningCallback:3
+msgid ""
+"See `the example <https://github.com/optuna/optuna/blob/master/ "
+"examples/pruning/lightgbm_integration.py>`__ if you want to add a pruning"
+" callback which observes AUC of a LightGBM model."
+msgstr ""
+
+#: of optuna.integration.LightGBMPruningCallback:10
+msgid ""
+"An evaluation metric for pruning, e.g., ``binary_error`` and "
+"``multi_error``. Please refer to `LightGBM reference "
+"<https://lightgbm.readthedocs.io/en/latest/Parameters.html#metric>`_ for "
+"further details."
+msgstr ""
+
+#: of optuna.integration.LightGBMPruningCallback:15
+msgid ""
+"The name of the target validation. Validation names are specified by "
+"``valid_names`` option of `train method "
+"<https://lightgbm.readthedocs.io/en/latest/Python-"
+"API.html#lightgbm.train>`_. If omitted, ``valid_0`` is used which is the "
+"default name of the first validation. Note that this argument will be "
+"ignored if you are calling `cv method "
+"<https://lightgbm.readthedocs.io/en/latest/Python-API.html#lightgbm.cv>`_"
+" instead of train method."
+msgstr ""
+
+#: of optuna.integration.lightgbm.train:1
+msgid "Wrapper of LightGBM Training API to tune hyperparameters."
+msgstr ""
+
+#: of optuna.integration.lightgbm.train:3
+msgid ""
+"It tunes important hyperparameters (e.g., ``min_child_samples`` and "
+"``feature_fraction``) in a stepwise manner. It is a drop-in replacement "
+"for `lightgbm.train()`_. See `a simple example of LightGBM Tuner "
+"<https://github.com/optuna/optuna/blob/master/examples/lig "
+"htgbm_tuner_simple.py>`_ which optimizes the validation log loss of "
+"cancer detection."
+msgstr ""
+
+#: of optuna.integration.lightgbm.train:8
+msgid ""
+":func:`~optuna.integration.lightgbm.train` is a wrapper function of "
+":class:`~optuna.integration.lightgbm.LightGBMTuner`. To use feature in "
+"Optuna such as suspended/resumed optimization and/or parallelization, "
+"refer to :class:`~optuna.integration.lightgbm.LightGBMTuner` instead of "
+"this function."
+msgstr ""
+
+#: of optuna.integration.lightgbm.train:13
+msgid "Arguments and keyword arguments for `lightgbm.train()`_ can be passed."
+msgstr ""
+
+#: of optuna.integration.lightgbm.train:18
+msgid ""
+"Added in v0.18.0 as an experimental feature. The interface may change in "
+"newer versions without prior notice. See "
+"https://github.com/optuna/optuna/releases/tag/v0.18.0."
+msgstr ""
+
+#: of optuna.integration.lightgbm.LightGBMTuner:1
+msgid "Hyperparameter tuner for LightGBM."
+msgstr ""
+
+#: of optuna.integration.lightgbm.LightGBMTuner:3
+msgid ""
+"It optimizes the following hyperparameters in a stepwise manner: "
+"``lambda_l1``, ``lambda_l2``, ``num_leaves``, ``feature_fraction``, "
+"``bagging_fraction``, ``bagging_freq`` and ``min_child_samples``."
+msgstr ""
+
+#: of optuna.integration.lightgbm.LightGBMTuner:7
+msgid ""
+"You can find the details of the algorithm and benchmark results in `this "
+"blog article <https:/ /medium.com/optuna/lightgbm-tuner-new-optuna-"
+"integration-for-hyperparameter-optimization-8b709 5e99258>`_ by `Kohei "
+"Ozaki <https://www.kaggle.com/confirm>`_, a Kaggle Grandmaster."
+msgstr ""
+
+#: of optuna.integration.lightgbm.LightGBMTuner:11
+msgid ""
+"Arguments and keyword arguments for `lightgbm.train() "
+"<https://lightgbm.readthedocs.io/en/latest/pythonapi/lightgbm.train.html>`_"
+" can be passed. The arguments that only "
+":class:`~optuna.integration.lightgbm.LightGBMTuner` has are listed below:"
+msgstr ""
+
+#: of optuna.integration.lightgbm.LightGBMTuner:16
+#: optuna.integration.lightgbm.LightGBMTunerCV:16
+msgid "A time budget for parameter tuning in seconds."
+msgstr ""
+
+#: of optuna.integration.lightgbm.LightGBMTuner:17
+#: optuna.integration.lightgbm.LightGBMTunerCV:17
+msgid ""
+"A :class:`~optuna.study.Study` instance to store optimization results. "
+"The :class:`~optuna.trial.Trial` instances in it has the following user "
+"attributes: ``elapsed_secs`` is the elapsed time since the optimization "
+"starts. ``average_iteration_time`` is the average time of iteration to "
+"train the booster model in the trial. ``lgbm_params`` is a JSON-"
+"serialized dictionary of LightGBM parameters used in the trial."
+msgstr ""
+
+#: of optuna.integration.lightgbm.LightGBMTuner:23
+#: optuna.integration.lightgbm.LightGBMTunerCV:23
+msgid ""
+"List of Optuna callback functions that are invoked at the end of each "
+"trial. Each function must accept two parameters with the following types "
+"in this order: :class:`~optuna.study.Study` and "
+":class:`~optuna.FrozenTrial`. Please note that this is not a "
+"``callbacks`` argument of `lightgbm.train()`_ ."
+msgstr ""
+
+#: of optuna.integration.lightgbm.LightGBMTuner:27
+msgid ""
+"A directory to save boosters. By default, it is set to :obj:`None` and no"
+" boosters are saved. Please set shared directory (e.g., directories on "
+"NFS) if you want to access "
+":meth:`~optuna.integration.LightGBMTuner.get_best_booster` in distributed"
+" environments. Otherwise, it may raise :obj:`ValueError`. If the "
+"directory does not exist, it will be created. The filenames of the "
+"boosters will be ``{model_dir}/{trial_number}.pkl`` (e.g., "
+"``./boosters/0.pkl``)."
+msgstr ""
+
+#: of optuna.integration.lightgbm.LightGBMTuner.best_booster:1
+#: optuna.integration.lightgbm.LightGBMTuner.get_best_booster:1
+msgid "Return the best booster."
+msgstr ""
+
+#: of optuna.integration.lightgbm.LightGBMTuner.best_booster:3
+msgid ""
+"Please get the best booster via "
+":class:`~optuna.integration.lightgbm.LightGBMTuner.get_best_booster` "
+"instead."
+msgstr ""
+
+#: of optuna.integration.lightgbm.LightGBMTuner.best_params:1
+#: optuna.integration.lightgbm.LightGBMTunerCV.best_params:1
+msgid "Return parameters of the best booster."
+msgstr ""
+
+#: of optuna.integration.lightgbm.LightGBMTuner.best_score:1
+#: optuna.integration.lightgbm.LightGBMTunerCV.best_score:1
+msgid "Return the score of the best booster."
+msgstr ""
+
+#: of optuna.integration.lightgbm.LightGBMTuner.get_best_booster:3
+msgid ""
+"If the best booster cannot be found, :class:`ValueError` will be raised. "
+"To prevent the errors, please save boosters by specifying the "
+"``model_dir`` arguments of "
+":meth:`~optuna.integration.lightgbm.LightGBMTuner.__init__` when you "
+"resume tuning or you run tuning in parallel."
+msgstr ""
+
+#: of optuna.integration.lightgbm.LightGBMTuner.run:1
+#: optuna.integration.lightgbm.LightGBMTunerCV.run:1
+msgid "Perform the hyperparameter-tuning with given parameters."
+msgstr ""
+
+#: of optuna.integration.lightgbm.LightGBMTunerCV:1
+msgid "Hyperparameter tuner for LightGBM with cross-validation."
+msgstr ""
+
+#: of optuna.integration.lightgbm.LightGBMTunerCV:3
+msgid ""
+"It employs the same stepwise approach as "
+":class:`~optuna.integration.lightgbm.LightGBMTuner`. "
+":class:`~optuna.integration.lightgbm.LightGBMTunerCV` invokes "
+"`lightgbm.cv()`_ to train and validate boosters while "
+":class:`~optuna.integration.lightgbm.LightGBMTuner` invokes "
+"`lightgbm.train()`_. See `a simple example "
+"<https://github.com/optuna/optuna/blob/master/examples/lightgbm_tuner_cv."
+" py>`_ which optimizes the validation log loss of cancer detection."
+msgstr ""
+
+#: of optuna.integration.lightgbm.LightGBMTunerCV:11
+msgid ""
+"Arguments and keyword arguments for `lightgbm.cv()`_ can be passed except"
+" ``metrics``, ``init_model`` and ``eval_train_metric``. The arguments "
+"that only :class:`~optuna.integration.lightgbm.LightGBMTunerCV` has are "
+"listed below:"
+msgstr ""
+
+#: of optuna.integration.MLflowCallback:1
+msgid "Callback to track Optuna trials with MLflow."
+msgstr ""
+
+#: of optuna.integration.MLflowCallback:3
+msgid ""
+"This callback adds relevant information that is tracked by Optuna to "
+"MLflow. The MLflow experiment will be named after the Optuna study name."
+msgstr ""
+
+#: of optuna.integration.MLflowCallback:9
+msgid "Add MLflow callback to Optuna optimization."
+msgstr ""
+
+#: of optuna.integration.MLflowCallback:46
+msgid ""
+"The URI of the MLflow tracking server.  Please refer to "
+"`mlflow.set_tracking_uri "
+"<https://www.mlflow.org/docs/latest/python_api/mlflow.html#mlflow.set_tracking_uri>`_"
+" for more details."
+msgstr ""
+
+#: of optuna.integration.MLflowCallback:46
+msgid "The URI of the MLflow tracking server."
+msgstr ""
+
+#: of optuna.integration.MLflowCallback:48
+msgid ""
+"Please refer to `mlflow.set_tracking_uri "
+"<https://www.mlflow.org/docs/latest/python_api/mlflow.html#mlflow.set_tracking_uri>`_"
+" for more details."
+msgstr ""
+
+#: of optuna.integration.MLflowCallback:51
+msgid ""
+"Name of the metric. Since the metric itself is just a number, "
+"`metric_name` can be used to give it a name. So you know later if it was "
+"roc-auc or accuracy."
+msgstr ""
+
+#: of optuna.integration.AllenNLPExecutor:24
+#: optuna.integration.MLflowCallback:56
+#: optuna.multi_objective.samplers.BaseMultiObjectiveSampler:8
+#: optuna.multi_objective.samplers.RandomMultiObjectiveSampler:29
+#: optuna.multi_objective.study.MultiObjectiveStudy:13
+#: optuna.multi_objective.study.create_study:34
+#: optuna.multi_objective.study.load_study:14
+#: optuna.multi_objective.trial.FrozenMultiObjectiveTrial:47
+#: optuna.multi_objective.trial.MultiObjectiveTrial:14
+#: optuna.storages.RedisStorage:33 optuna.study.Study.stop:11
+msgid ""
+"Added in v1.4.0 as an experimental feature. The interface may change in "
+"newer versions without prior notice. See "
+"https://github.com/optuna/optuna/releases/tag/v1.4.0."
+msgstr ""
+
+#: of optuna.integration.MXNetPruningCallback:1
+msgid "MXNet callback to prune unpromising trials."
+msgstr ""
+
+#: of optuna.integration.MXNetPruningCallback:3
+msgid ""
+"See `the example <https://github.com/optuna/optuna/blob/master/ "
+"examples/pruning/mxnet_integration.py>`__ if you want to add a pruning "
+"callback which observes accuracy."
+msgstr ""
+
+#: of optuna.integration.MXNetPruningCallback:9
+msgid ""
+"An evaluation metric name for pruning, e.g., ``cross-entropy`` and "
+"``accuracy``. If using default metrics like mxnet.metrics.Accuracy, use "
+"it's default metric name. For custom metrics, use the metric_name "
+"provided to constructor. Please refer to `mxnet.metrics reference "
+"<https://mxnet.apache.org/api/python/metric/metric.html>`_ for further "
+"details."
+msgstr ""
+
+#: of optuna.integration.PyTorchLightningPruningCallback:1
+msgid "PyTorch Lightning callback to prune unpromising trials."
+msgstr ""
+
+#: of optuna.integration.PyTorchLightningPruningCallback:3
+msgid ""
+"See `the example <https://github.com/optuna/optuna/blob/master/ "
+"examples/pytorch_lightning_simple.py>`__ if you want to add a pruning "
+"callback which observes accuracy."
+msgstr ""
+
+#: of optuna.integration.PyTorchLightningPruningCallback:9
+msgid ""
+"An evaluation metric for pruning, e.g., ``val_loss`` or ``val_acc``. The "
+"metrics are obtained from the returned dictionaries from e.g. "
+"``pytorch_lightning.LightningModule.training_step`` or "
+"``pytorch_lightning.LightningModule.validation_end`` and the names thus "
+"depend on how this dictionary is formatted."
+msgstr ""
+
+#: of optuna.integration.SkoptSampler:1
+msgid "Sampler using Scikit-Optimize as the backend."
+msgstr ""
+
+#: of optuna.integration.SkoptSampler:5
+msgid ""
+"Optimize a simple quadratic function by using "
+":class:`~optuna.integration.SkoptSampler`."
+msgstr ""
+
+#: of optuna.integration.SkoptSampler:20
+msgid ""
+"A :class:`~optuna.samplers.BaseSampler` instance that is used for "
+"independent sampling. The parameters not contained in the relative search"
+" space are sampled by this sampler. The search space for "
+":class:`~optuna.integration.SkoptSampler` is determined by "
+":func:`~optuna.samplers.intersection_search_space()`.  If :obj:`None` is "
+"specified, :class:`~optuna.samplers.RandomSampler` is used as the "
+"default.  .. seealso::     :class:`optuna.samplers` module provides "
+"built-in independent samplers     such as "
+":class:`~optuna.samplers.RandomSampler` and     "
+":class:`~optuna.samplers.TPESampler`."
+msgstr ""
+
+#: of optuna.integration.SkoptSampler:20
+msgid ""
+"A :class:`~optuna.samplers.BaseSampler` instance that is used for "
+"independent sampling. The parameters not contained in the relative search"
+" space are sampled by this sampler. The search space for "
+":class:`~optuna.integration.SkoptSampler` is determined by "
+":func:`~optuna.samplers.intersection_search_space()`."
+msgstr ""
+
+#: of optuna.integration.SkoptSampler:38
+msgid ""
+"Keyword arguments passed to the constructor of `skopt.Optimizer <https"
+"://scikit-optimize.github.io/#skopt.Optimizer>`_ class.  Note that "
+"``dimensions`` argument in ``skopt_kwargs`` will be ignored because it is"
+" added by :class:`~optuna.integration.SkoptSampler` automatically."
+msgstr ""
+
+#: of optuna.integration.SkoptSampler:38
+msgid ""
+"Keyword arguments passed to the constructor of `skopt.Optimizer <https"
+"://scikit-optimize.github.io/#skopt.Optimizer>`_ class."
+msgstr ""
+
+#: of optuna.integration.SkoptSampler:42
+msgid ""
+"Note that ``dimensions`` argument in ``skopt_kwargs`` will be ignored "
+"because it is added by :class:`~optuna.integration.SkoptSampler` "
+"automatically."
+msgstr ""
+
+#: of optuna.integration.SkoptSampler:44
+msgid ""
+"The independent sampling is used until the given number of trials finish "
+"in the same study."
+msgstr ""
+
+#: of optuna.integration.TensorFlowPruningHook:1
+msgid "TensorFlow SessionRunHook to prune unpromising trials."
+msgstr ""
+
+#: of optuna.integration.TensorFlowPruningHook:3
+msgid ""
+"See `the example <https://github.com/optuna/optuna/blob/master/examples/ "
+"pruning/tensorflow_estimator_integration.py>`_ if you want to add a "
+"pruning hook to TensorFlow's estimator."
+msgstr ""
+
+#: of optuna.integration.TensorFlowPruningHook:9
+msgid "An estimator which you will use."
+msgstr ""
+
+#: of optuna.integration.TensorFlowPruningHook:10
+msgid "An evaluation metric for pruning, e.g., ``accuracy`` and ``loss``."
+msgstr ""
+
+#: of optuna.integration.TensorFlowPruningHook:11
+msgid "An interval to watch the summary file."
+msgstr ""
+
+#: of optuna.integration.TFKerasPruningCallback:1
+msgid "tf.keras callback to prune unpromising trials."
+msgstr ""
+
+#: of optuna.integration.TFKerasPruningCallback:3
+msgid ""
+"This callback is intend to be compatible for TensorFlow v1 and v2, but "
+"only tested with TensorFlow v1."
+msgstr ""
+
+#: of optuna.integration.TFKerasPruningCallback:6
+msgid ""
+"See `the example <https://github.com/optuna/optuna/blob/master/ "
+"examples/pruning/tfkeras_integration.py>`__ if you want to add a pruning "
+"callback which observes the validation accuracy."
+msgstr ""
+
+#: of optuna.integration.TFKerasPruningCallback:12
+msgid "An evaluation metric for pruning, e.g., ``val_loss`` or ``val_acc``."
+msgstr ""
+
+#: of optuna.integration.XGBoostPruningCallback:1
+msgid "Callback for XGBoost to prune unpromising trials."
+msgstr ""
+
+#: of optuna.integration.XGBoostPruningCallback:3
+msgid ""
+"See `the example <https://github.com/optuna/optuna/blob/master/ "
+"examples/pruning/xgboost_integration.py>`__ if you want to add a pruning "
+"callback which observes validation AUC of a XGBoost model."
+msgstr ""
+
+#: of optuna.integration.XGBoostPruningCallback:10
+msgid ""
+"An evaluation metric for pruning, e.g., ``validation-error`` and "
+"``validation-merror``. When using the Scikit-Learn API, the index number "
+"of ``eval_set`` must be included in the ``observation_key``, e.g., "
+"``validation_0-error`` and ``validation_0-merror``. Please refer to "
+"``eval_metric`` in `XGBoost reference "
+"<https://xgboost.readthedocs.io/en/latest/parameter.html>`_ for further "
+"details."
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV:1
+msgid "Hyperparameter search with cross-validation."
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV:5
+msgid "This feature is experimental. The interface may be changed in the future."
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV:7
+msgid ""
+"Object to use to fit the data. This is assumed to implement the scikit-"
+"learn estimator interface. Either this needs to provide ``score``, or "
+"``scoring`` must be passed."
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV:10
+msgid ""
+"Dictionary where keys are parameters and values are distributions. "
+"Distributions are assumed to implement the optuna distribution interface."
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV:13
+msgid ""
+"Cross-validation strategy. Possible inputs for cv are:  - integer to "
+"specify the number of folds in a CV splitter, - a CV splitter, - an "
+"iterable yielding (train, validation) splits as arrays of indices.  For "
+"integer, if :obj:`estimator` is a classifier and :obj:`y` is either "
+"binary or multiclass, ``sklearn.model_selection.StratifiedKFold`` is "
+"used. otherwise, ``sklearn.model_selection.KFold`` is used."
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV:13
+msgid "Cross-validation strategy. Possible inputs for cv are:"
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV:15
+msgid "integer to specify the number of folds in a CV splitter,"
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV:16
+msgid "a CV splitter,"
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV:17
+msgid "an iterable yielding (train, validation) splits as arrays of indices."
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV:19
+msgid ""
+"For integer, if :obj:`estimator` is a classifier and :obj:`y` is either "
+"binary or multiclass, ``sklearn.model_selection.StratifiedKFold`` is "
+"used. otherwise, ``sklearn.model_selection.KFold`` is used."
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV:23
+msgid ""
+"If :obj:`True`, pruning is performed in the case where the underlying "
+"estimator supports ``partial_fit``."
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV:25
+msgid ""
+"Value to assign to the score if an error occurs in fitting. If 'raise', "
+"the error is raised. If numeric, ``sklearn.exceptions.FitFailedWarning`` "
+"is raised. This does not affect the refit step, which will always raise "
+"the error."
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV:29
+msgid ""
+"Maximum number of epochs. This is only used if the underlying estimator "
+"supports ``partial_fit``."
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV:31
+msgid "Number of parallel jobs. :obj:`-1` means using all processors."
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV:32
+msgid ""
+"Number of trials. If :obj:`None`, there is no limitation on the number of"
+" trials. If :obj:`timeout` is also set to :obj:`None`, the study "
+"continues to create trials until it receives a termination signal such as"
+" Ctrl+C or SIGTERM. This trades off runtime vs quality of the solution."
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV:37
+msgid ""
+"Seed of the pseudo random number generator. If int, this is the seed used"
+" by the random number generator. If ``numpy.random.RandomState`` object, "
+"this is the random number generator. If :obj:`None`, the global random "
+"state from ``numpy.random`` is used."
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV:42
+msgid ""
+"If :obj:`True`, refit the estimator with the best found hyperparameters. "
+"The refitted estimator is made available at the ``best_estimator_`` "
+"attribute and permits using ``predict`` directly."
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV:46
+msgid ""
+"If :obj:`True`, training scores will be included. Computing training "
+"scores is used to get insights on how different hyperparameter settings "
+"impact the overfitting/underfitting trade-off. However computing training"
+" scores can be computationally expensive and is not strictly required to "
+"select the hyperparameters that yield the best generalization "
+"performance."
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV:53
+msgid ""
+"String or callable to evaluate the predictions on the validation data. If"
+" :obj:`None`, ``score`` on the estimator is used."
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV:55
+msgid ""
+"Study corresponds to the optimization task. If :obj:`None`, a new study "
+"is created."
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV:57
+msgid ""
+"Proportion of samples that are used during hyperparameter search.  - If "
+"int, then draw ``subsample`` samples. - If float, then draw ``subsample``"
+" * ``X.shape[0]`` samples."
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV:57
+msgid "Proportion of samples that are used during hyperparameter search."
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV:59
+msgid "If int, then draw ``subsample`` samples."
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV:60
+msgid "If float, then draw ``subsample`` * ``X.shape[0]`` samples."
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV:61
+msgid ""
+"Time limit in seconds for the search of appropriate models. If "
+":obj:`None`, the study is executed without time limitation. If "
+":obj:`n_trials` is also set to :obj:`None`, the study continues to create"
+" trials until it receives a termination signal such as Ctrl+C or SIGTERM."
+" This trades off runtime vs quality of the solution."
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV:67
+msgid "Verbosity level. The higher, the more messages."
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV:71
+msgid ""
+"Estimator that was chosen by the search. This is present only if "
+"``refit`` is set to :obj:`True`."
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV:76
+msgid "Number of cross-validation splits."
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV:80
+msgid ""
+"Time for refitting the best estimator. This is present only if ``refit`` "
+"is set to :obj:`True`."
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV:85
+msgid "Indices of samples that are used during hyperparameter search."
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV:89
+msgid "Scorer function."
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV:93
+msgid "Actual study."
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV:96
+msgid "Examples"
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV.best_index_:1
+msgid "Index which corresponds to the best candidate parameter setting."
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV.best_params_:1
+msgid "Parameters of the best trial in the :class:`~optuna.study.Study`."
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV.best_score_:1
+msgid "Mean cross-validated score of the best estimator."
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV.best_trial_:1
+msgid "Best trial in the :class:`~optuna.study.Study`."
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV.classes_:1
+msgid "Class labels."
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV.decision_function:1
+msgid "Call ``decision_function`` on the best estimator."
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV.decision_function:3
+msgid ""
+"This is available only if the underlying estimator supports "
+"``decision_function`` and ``refit`` is set to :obj:`True`."
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV.fit:1
+msgid "Run fit with all sets of parameters."
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV.fit:3
+msgid "Training data."
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV.fit:4
+#: optuna.integration.OptunaSearchCV.score:4
+msgid "Target variable."
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV.fit:5
+msgid ""
+"Group labels for the samples used while splitting the dataset into "
+"train/validation set."
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV.fit:7
+msgid "Parameters passed to ``fit`` on the estimator."
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV.fit:9
+msgid "Return self."
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV.fit
+#: optuna.integration.OptunaSearchCV.score
+msgid "Return type"
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV.inverse_transform:1
+msgid "Call ``inverse_transform`` on the best estimator."
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV.inverse_transform:3
+msgid ""
+"This is available only if the underlying estimator supports "
+"``inverse_transform`` and ``refit`` is set to :obj:`True`."
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV.n_trials_:1
+msgid "Actual number of trials."
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV.predict:1
+msgid "Call ``predict`` on the best estimator."
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV.predict:3
+msgid ""
+"This is available only if the underlying estimator supports ``predict`` "
+"and ``refit`` is set to :obj:`True`."
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV.predict_log_proba:1
+msgid "Call ``predict_log_proba`` on the best estimator."
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV.predict_log_proba:3
+msgid ""
+"This is available only if the underlying estimator supports "
+"``predict_log_proba`` and ``refit`` is set to :obj:`True`."
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV.predict_proba:1
+msgid "Call ``predict_proba`` on the best estimator."
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV.predict_proba:3
+msgid ""
+"This is available only if the underlying estimator supports "
+"``predict_proba`` and ``refit`` is set to :obj:`True`."
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV.score:1
+msgid "Return the score on the given data."
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV.score:3
+msgid "Data."
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV.score:6
+msgid "Scaler score."
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV.score_samples:1
+msgid "Call ``score_samples`` on the best estimator."
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV.score_samples:3
+msgid ""
+"This is available only if the underlying estimator supports "
+"``score_samples`` and ``refit`` is set to :obj:`True`."
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV.set_user_attr:1
+msgid "Call ``set_user_attr`` on the :class:`~optuna.study.Study`."
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV.transform:1
+msgid "Call ``transform`` on the best estimator."
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV.transform:3
+msgid ""
+"This is available only if the underlying estimator supports ``transform``"
+" and ``refit`` is set to :obj:`True`."
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV.trials_:1
+msgid "All trials in the :class:`~optuna.study.Study`."
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV.trials_dataframe:1
+msgid "Call ``trials_dataframe`` on the :class:`~optuna.study.Study`."
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV.user_attrs_:1
+msgid "User attributes in the :class:`~optuna.study.Study`."
+msgstr ""
+
+#: of optuna.integration.AllenNLPExecutor:1
+msgid "AllenNLP extension to use optuna with Jsonnet config file."
+msgstr ""
+
+#: of optuna.integration.AllenNLPExecutor:3
+msgid ""
+"This feature is experimental since AllenNLP major release will come soon."
+" The interface may change without prior notice to correspond to the "
+"update."
+msgstr ""
+
+#: of optuna.integration.AllenNLPExecutor:6
+msgid ""
+"See the examples of `objective function "
+"<https://github.com/optuna/optuna/blob/ "
+"master/examples/allennlp/allennlp_jsonnet.py>`_ and `config file "
+"<https://github.com/optuna/optuna/blob/master/ "
+"examples/allennlp/classifier.jsonnet>`_."
+msgstr ""
+
+#: of optuna.integration.AllenNLPExecutor:13
+msgid ""
+"Config file for AllenNLP. Hyperparameters should be masked with "
+"``std.extVar``. Please refer to `the config example "
+"<https://github.com/allenai/allentune/blob/ "
+"master/examples/classifier.jsonnet>`_."
+msgstr ""
+
+#: of optuna.integration.AllenNLPExecutor:17
+msgid "A path which model weights and logs are saved."
+msgstr ""
+
+#: of optuna.integration.AllenNLPExecutor:18
+msgid "An evaluation metric for the result of ``objective``."
+msgstr ""
+
+#: of optuna.integration.AllenNLPExecutor:19
+msgid ""
+"Additional packages to include. For more information, please see "
+"`AllenNLP documentation "
+"<https://docs.allennlp.org/master/api/commands/train/>`_."
+msgstr ""
+
+#: of optuna.integration.AllenNLPExecutor.run:1
+msgid "Train a model using AllenNLP."
+msgstr ""
+
+#: of optuna.integration.allennlp.dump_best_config:1
+msgid ""
+"Save JSON config file after updating with parameters from the best trial "
+"in the study."
+msgstr ""
+
+#: of optuna.integration.allennlp.dump_best_config:3
+msgid ""
+"Input Jsonnet config file used with "
+":class:`~optuna.integration.AllenNLPExecutor`."
+msgstr ""
+
+#: of optuna.integration.allennlp.dump_best_config:5
+msgid "Output JSON config file."
+msgstr ""
+
+#: of optuna.integration.allennlp.dump_best_config:6
+msgid ""
+"Instance of :class:`~optuna.study.Study`. Note that "
+":func:`~optuna.study.Study.optimize` must have been called."
+msgstr ""
+
+#: ../../source/reference/logging.rst:4
+msgid "Logging"
+msgstr ""
+
+#: of optuna.logging.get_verbosity:1
+msgid "Return the current level for the Optuna's root logger."
+msgstr ""
+
+#: of optuna.logging.get_verbosity:3 optuna.logging.set_verbosity:3
+msgid "Logging level, e.g., ``optuna.logging.DEBUG`` and ``optuna.logging.INFO``."
+msgstr ""
+
+#: of optuna.logging.get_verbosity:6
+msgid "Optuna has following logging levels:"
+msgstr ""
+
+#: of optuna.logging.get_verbosity:8
+msgid "``optuna.logging.CRITICAL``, ``optuna.logging.FATAL``"
+msgstr ""
+
+#: of optuna.logging.get_verbosity:9
+msgid "``optuna.logging.ERROR``"
+msgstr ""
+
+#: of optuna.logging.get_verbosity:10
+msgid "``optuna.logging.WARNING``, ``optuna.logging.WARN``"
+msgstr ""
+
+#: of optuna.logging.get_verbosity:11
+msgid "``optuna.logging.INFO``"
+msgstr ""
+
+#: of optuna.logging.get_verbosity:12
+msgid "``optuna.logging.DEBUG``"
+msgstr ""
+
+#: of optuna.logging.set_verbosity:1
+msgid "Set the level for the Optuna's root logger."
+msgstr ""
+
+#: of optuna.logging.disable_default_handler:1
+msgid "Disable the default handler of the Optuna's root logger."
+msgstr ""
+
+#: of optuna.logging.disable_default_handler:5
+msgid "Stop and then resume logging to :obj:`sys.stderr`."
+msgstr ""
+
+#: of optuna.logging.enable_default_handler:1
+msgid "Enable the default handler of the Optuna's root logger."
+msgstr ""
+
+#: of optuna.logging.enable_default_handler:3
+msgid ""
+"Please refer to the example shown in "
+":func:`~optuna.logging.disable_default_handler()`."
+msgstr ""
+
+#: of optuna.logging.disable_propagation:1
+msgid "Disable propagation of the library log outputs."
+msgstr ""
+
+#: of optuna.logging.disable_propagation:3
+msgid "Note that log propagation is disabled by default."
+msgstr ""
+
+#: of optuna.logging.enable_propagation:1
+msgid "Enable propagation of the library log outputs."
+msgstr ""
+
+#: of optuna.logging.enable_propagation:3
+msgid ""
+"Please disable the Optuna's default handler to prevent double logging if "
+"the root logger has been configured."
+msgstr ""
+
+#: of optuna.logging.enable_propagation:8
+msgid ""
+"Propagate all log output to the root logger in order to save them to the "
+"file."
+msgstr ""
+
+#: ../../source/reference/multi_objective/index.rst:4
+msgid "Multi-objective"
+msgstr ""
+
+#: ../../source/reference/multi_objective/samplers.rst:4
+#: ../../source/reference/samplers.rst:4
+msgid "Samplers"
+msgstr ""
+
+#: of optuna.multi_objective.samplers.BaseMultiObjectiveSampler:1
+msgid "Base class for multi-objective samplers."
+msgstr ""
+
+#: of optuna.multi_objective.samplers.BaseMultiObjectiveSampler:3
+msgid ""
+"The abstract methods of this class are the same as ones defined by "
+":class:`~optuna.samplers.BaseSampler` except for taking multi-objective "
+"versions of study and trial instances as the arguments."
+msgstr ""
+
+#: of
+#: optuna.multi_objective.samplers.BaseMultiObjectiveSampler.infer_relative_search_space:1
+#: optuna.samplers.BaseSampler.infer_relative_search_space:1
+msgid ""
+"Infer the search space that will be used by relative sampling in the "
+"target trial."
+msgstr ""
+
+#: of
+#: optuna.multi_objective.samplers.BaseMultiObjectiveSampler.infer_relative_search_space:3
+msgid ""
+"This method is called right before "
+":func:`~optuna.multi_objective.samplers.BaseMultiObjectiveSampler.sample_relative`"
+" method, and the search space returned by this method is passed to it. "
+"The parameters not contained in the search space will be sampled by using"
+" "
+":func:`~optuna.multi_objective.samplers.BaseMultiObjectiveSampler.sample_independent`"
+" method."
+msgstr ""
+
+#: of
+#: optuna.multi_objective.samplers.BaseMultiObjectiveSampler.infer_relative_search_space:10
+#: optuna.multi_objective.samplers.BaseMultiObjectiveSampler.sample_independent:8
+#: optuna.multi_objective.samplers.BaseMultiObjectiveSampler.sample_relative:7
+#: optuna.samplers.BaseSampler.infer_relative_search_space:8
+#: optuna.samplers.BaseSampler.sample_independent:13
+#: optuna.samplers.BaseSampler.sample_relative:12
+msgid "Target study object."
+msgstr ""
+
+#: of
+#: optuna.multi_objective.samplers.BaseMultiObjectiveSampler.infer_relative_search_space:11
+#: optuna.multi_objective.samplers.BaseMultiObjectiveSampler.sample_independent:9
+#: optuna.multi_objective.samplers.BaseMultiObjectiveSampler.sample_relative:8
+msgid "Target trial object."
+msgstr ""
+
+#: of
+#: optuna.multi_objective.samplers.BaseMultiObjectiveSampler.infer_relative_search_space:13
+#: optuna.samplers.BaseSampler.infer_relative_search_space:12
+#: optuna.samplers.IntersectionSearchSpace.calculate:9
+#: optuna.samplers.intersection_search_space:20
+msgid "A dictionary containing the parameter names and parameter's distributions."
+msgstr ""
+
+#: of
+#: optuna.multi_objective.samplers.BaseMultiObjectiveSampler.infer_relative_search_space:16
+msgid ""
+"Please refer to :func:`~optuna.samplers.intersection_search_space` as an "
+"implementation of "
+":func:`~optuna.multi_objective.samplers.BaseMultiObjectiveSampler.infer_relative_search_space`."
+msgstr ""
+
+#: of
+#: optuna.multi_objective.samplers.BaseMultiObjectiveSampler.sample_independent:1
+#: optuna.samplers.BaseSampler.sample_independent:1
+msgid "Sample a parameter for a given distribution."
+msgstr ""
+
+#: of
+#: optuna.multi_objective.samplers.BaseMultiObjectiveSampler.sample_independent:3
+msgid ""
+"This method is called only for the parameters not contained in the search"
+" space returned by "
+":func:`~optuna.multi_objective.samplers.MultiObjectiveBaseSampler.sample_relative`"
+" method. This method is suitable for sampling algorithms that do not use "
+"the relationship between parameters such as random sampling."
+msgstr ""
+
+#: of
+#: optuna.multi_objective.samplers.BaseMultiObjectiveSampler.sample_independent:10
+#: optuna.samplers.BaseSampler.sample_independent:16
+msgid "Name of the sampled parameter."
+msgstr ""
+
+#: of
+#: optuna.multi_objective.samplers.BaseMultiObjectiveSampler.sample_independent:11
+#: optuna.samplers.BaseSampler.sample_independent:17
+msgid ""
+"Distribution object that specifies a prior and/or scale of the sampling "
+"algorithm."
+msgstr ""
+
+#: of
+#: optuna.multi_objective.samplers.BaseMultiObjectiveSampler.sample_independent:13
+#: optuna.samplers.BaseSampler.sample_independent:19
+msgid "A parameter value."
+msgstr ""
+
+#: of
+#: optuna.multi_objective.samplers.BaseMultiObjectiveSampler.sample_relative:1
+#: optuna.samplers.BaseSampler.sample_relative:1
+msgid "Sample parameters in a given search space."
+msgstr ""
+
+#: of
+#: optuna.multi_objective.samplers.BaseMultiObjectiveSampler.sample_relative:3
+msgid ""
+"This method is called once at the beginning of each trial, i.e., right "
+"before the evaluation of the objective function. This method is suitable "
+"for sampling algorithms that use the relationship between parameters."
+msgstr ""
+
+#: of
+#: optuna.multi_objective.samplers.BaseMultiObjectiveSampler.sample_relative:9
+msgid ""
+"The search space returned by "
+":func:`~optuna.multi_objective.samplers.BaseMultiObjectiveSampler.infer_relative_search_space`."
+msgstr ""
+
+#: of
+#: optuna.multi_objective.samplers.BaseMultiObjectiveSampler.sample_relative:12
+#: optuna.samplers.BaseSampler.sample_relative:18
+msgid "A dictionary containing the parameter names and the values."
+msgstr ""
+
+#: of optuna.multi_objective.samplers.NSGAIIMultiObjectiveSampler:1
+msgid "Multi-objective sampler using the NSGA-II algorithm."
+msgstr ""
+
+#: of optuna.multi_objective.samplers.NSGAIIMultiObjectiveSampler:3
+msgid ""
+"NSGA-II stands for \"Nondominated Sorting Genetic Algorithm II\", which "
+"is a well known, fast and elitist multi-objective genetic algorithm."
+msgstr ""
+
+#: of optuna.multi_objective.samplers.NSGAIIMultiObjectiveSampler:6
+msgid ""
+"For further information about NSGA-II, please refer to the following "
+"paper:"
+msgstr ""
+
+#: of optuna.multi_objective.samplers.NSGAIIMultiObjectiveSampler:8
+msgid ""
+"`A fast and elitist multiobjective genetic algorithm: NSGA-II "
+"<https://ieeexplore.ieee.org/document/996017>`_"
+msgstr ""
+
+#: of optuna.multi_objective.samplers.NSGAIIMultiObjectiveSampler:11
+msgid "Number of individuals (trials) in a generation."
+msgstr ""
+
+#: of optuna.multi_objective.samplers.NSGAIIMultiObjectiveSampler:12
+msgid ""
+"Probability of mutating each parameter when creating a new individual. If"
+" :obj:`None` is specified, the value ``1.0 / len(parent_trial.params)`` "
+"is used where ``parent_trial`` is the parent trial of the target "
+"individual."
+msgstr ""
+
+#: of optuna.multi_objective.samplers.NSGAIIMultiObjectiveSampler:15
+msgid ""
+"Probability that a crossover (parameters swapping between parents) will "
+"occur when creating a new individual."
+msgstr ""
+
+#: of optuna.multi_objective.samplers.NSGAIIMultiObjectiveSampler:17
+msgid "Probability of swapping each parameter of the parents during crossover."
+msgstr ""
+
+#: of optuna.multi_objective.samplers.NSGAIIMultiObjectiveSampler:18
+#: optuna.samplers.TPESampler:61
+msgid "Seed for random number generator."
+msgstr ""
+
+#: of optuna.multi_objective.samplers.RandomMultiObjectiveSampler:1
+msgid "Multi-objective sampler using random sampling."
+msgstr ""
+
+#: of optuna.multi_objective.samplers.RandomMultiObjectiveSampler:3
+msgid ""
+"This sampler is based on *independent sampling*. See also "
+":class:`~optuna.multi_objective.samplers.BaseMultiObjectiveSampler` for "
+"more details of 'independent sampling'."
+msgstr ""
+
+#: of optuna.multi_objective.samplers.RandomMultiObjectiveSampler:26
+#: optuna.samplers.RandomSampler:22
+msgid "Args:"
+msgstr ""
+
+#: of optuna.multi_objective.samplers.RandomMultiObjectiveSampler:26
+#: optuna.samplers.RandomSampler:21
+msgid "seed: Seed for random number generator."
+msgstr ""
+
+#: ../../source/reference/multi_objective/study.rst:4
+#: ../../source/reference/study.rst:4
+msgid "Study"
+msgstr ""
+
+#: of optuna.multi_objective.study.MultiObjectiveStudy:1
+msgid ""
+"A study corresponds to a multi-objective optimization task, i.e., a set "
+"of trials."
+msgstr ""
+
+#: of optuna.multi_objective.study.MultiObjectiveStudy:3
+msgid ""
+"This object provides interfaces to run a new "
+":class:`~optuna.multi_objective.trial.Trial`, access trials' history, "
+"set/get user-defined attributes of the study itself."
+msgstr ""
+
+#: of optuna.multi_objective.study.MultiObjectiveStudy:7
+msgid ""
+"Note that the direct use of this constructor is not recommended. To "
+"create and load a study, please refer to the documentation of "
+":func:`~optuna.multi_objective.study.create_study` and "
+":func:`~optuna.multi_objective.study.load_study` respectively."
+msgstr ""
+
+#: of optuna.multi_objective.study.MultiObjectiveStudy.directions:1
+msgid "Return the optimization direction list."
+msgstr ""
+
+#: of optuna.multi_objective.study.MultiObjectiveStudy.directions:3
+msgid "A list that contains the optimization direction for each objective value."
+msgstr ""
+
+#: of optuna.multi_objective.study.MultiObjectiveStudy.enqueue_trial:1
+#: optuna.study.Study.enqueue_trial:1
+msgid "Enqueue a trial with given parameter values."
+msgstr ""
+
+#: of optuna.multi_objective.study.MultiObjectiveStudy.enqueue_trial:3
+#: optuna.study.Study.enqueue_trial:3
+msgid ""
+"You can fix the next sampling parameters which will be evaluated in your "
+"objective function."
+msgstr ""
+
+#: of optuna.multi_objective.study.MultiObjectiveStudy.enqueue_trial:6
+msgid ""
+"Please refer to the documentation of "
+":func:`optuna.study.Study.enqueue_trial` for further details."
+msgstr ""
+
+#: of optuna.multi_objective.study.MultiObjectiveStudy.enqueue_trial:9
+#: optuna.study.Study.enqueue_trial:24
+msgid "Parameter values to pass your objective function."
+msgstr ""
+
+#: of
+#: optuna.multi_objective.study.MultiObjectiveStudy.get_pareto_front_trials:1
+msgid "Return trials located at the pareto front in the study."
+msgstr ""
+
+#: of
+#: optuna.multi_objective.study.MultiObjectiveStudy.get_pareto_front_trials:3
+msgid ""
+"A trial is located at the pareto front if there are no trials that "
+"dominate the trial. It's called that a trial ``t0`` dominates another "
+"trial ``t1`` if ``all(v0 <= v1) for v0, v1 in zip(t0.values, t1.values)``"
+" and ``any(v0 < v1) for v0, v1 in zip(t0.values, t1.values)`` are held."
+msgstr ""
+
+#: of
+#: optuna.multi_objective.study.MultiObjectiveStudy.get_pareto_front_trials:8
+#: optuna.multi_objective.study.MultiObjectiveStudy.get_trials:14
+#: optuna.multi_objective.study.MultiObjectiveStudy.trials:7
+msgid ""
+"A list of "
+":class:`~optuna.multi_objective.trial.FrozenMultiObjectiveTrial` objects."
+msgstr ""
+
+#: of optuna.multi_objective.study.MultiObjectiveStudy.get_trials:1
+#: optuna.multi_objective.study.MultiObjectiveStudy.trials:1
+#: optuna.study.Study.get_trials:1 optuna.study.Study.trials:1
+msgid "Return all trials in the study."
+msgstr ""
+
+#: of optuna.multi_objective.study.MultiObjectiveStudy.get_trials:3
+#: optuna.multi_objective.study.MultiObjectiveStudy.trials:3
+#: optuna.study.Study.get_trials:3 optuna.study.Study.trials:3
+msgid "The returned trials are ordered by trial number."
+msgstr ""
+
+#: of optuna.multi_objective.study.MultiObjectiveStudy.get_trials:5
+msgid ""
+"For library users, it's recommended to use more handy "
+":attr:`~optuna.multi_objective.study.MultiObjectiveStudy.trials` property"
+" to get the trials instead."
+msgstr ""
+
+#: of optuna.multi_objective.study.MultiObjectiveStudy.get_trials:9
+#: optuna.study.Study.get_trials:8
+msgid ""
+"Flag to control whether to apply ``copy.deepcopy()`` to the trials. Note "
+"that if you set the flag to :obj:`False`, you shouldn't mutate any fields"
+" of the returned trial. Otherwise the internal state of the study may "
+"corrupt and unexpected behavior may happen."
+msgstr ""
+
+#: of optuna.multi_objective.study.MultiObjectiveStudy.n_objectives:1
+msgid "Return the number of objectives."
+msgstr ""
+
+#: of optuna.multi_objective.study.MultiObjectiveStudy.n_objectives:3
+msgid "Number of objectives."
+msgstr ""
+
+#: of optuna.multi_objective.study.MultiObjectiveStudy.optimize:3
+msgid ""
+"This method is the same as :func:`optuna.study.Study.optimize` except for"
+" taking an objective function that returns multi-objective values as the "
+"argument."
+msgstr ""
+
+#: of optuna.multi_objective.study.MultiObjectiveStudy.optimize:6
+msgid ""
+"Please refer to the documentation of :func:`optuna.study.Study.optimize` "
+"for further details."
+msgstr ""
+
+#: of optuna.multi_objective.study.MultiObjectiveStudy.sampler:1
+msgid "Return the sampler."
+msgstr ""
+
+#: of optuna.multi_objective.study.MultiObjectiveStudy.sampler:3
+msgid "A :class:`~multi_objective.samplers.BaseMultiObjectiveSampler` object."
+msgstr ""
+
+#: of optuna.multi_objective.study.MultiObjectiveStudy.set_user_attr:1
+#: optuna.study.Study.set_user_attr:1
+msgid "Set a user attribute to the study."
+msgstr ""
+
+#: of optuna.multi_objective.study.MultiObjectiveStudy.set_user_attr:3
+#: optuna.study.Study.set_user_attr:3 optuna.trial.Trial.set_user_attr:36
+msgid "A key string of the attribute."
+msgstr ""
+
+#: of optuna.multi_objective.study.MultiObjectiveStudy.set_user_attr:4
+#: optuna.study.Study.set_user_attr:4 optuna.trial.Trial.set_user_attr:37
+msgid "A value of the attribute. The value should be JSON serializable."
+msgstr ""
+
+#: of optuna.multi_objective.study.MultiObjectiveStudy.trials:5
+#: optuna.study.Study.trials:5
+msgid "This is a short form of ``self.get_trials(deepcopy=True)``."
+msgstr ""
+
+#: of optuna.multi_objective.study.MultiObjectiveStudy.user_attrs:1
+#: optuna.multi_objective.trial.MultiObjectiveTrial.user_attrs:1
+#: optuna.study.Study.user_attrs:1 optuna.trial.Trial.user_attrs:1
+msgid "Return user attributes."
+msgstr ""
+
+#: of optuna.multi_objective.study.MultiObjectiveStudy.user_attrs:3
+#: optuna.multi_objective.trial.MultiObjectiveTrial.user_attrs:3
+#: optuna.study.Study.user_attrs:3 optuna.trial.Trial.user_attrs:3
+msgid "A dictionary containing all user attributes."
+msgstr ""
+
+#: of optuna.multi_objective.study.create_study:1
+msgid "Create a new :class:`~optuna.multi_objective.study.MultiObjectiveStudy`."
+msgstr ""
+
+#: of optuna.multi_objective.study.create_study:3
+msgid ""
+"Optimization direction for each objective value. Set ``minimize`` for "
+"minimization and ``maximize`` for maximization."
+msgstr ""
+
+#: of optuna.multi_objective.study.create_study:21
+msgid ""
+"A sampler object that implements background algorithm for value "
+"suggestion. If :obj:`None` is specified, "
+":class:`~optuna.multi_objective.samplers.NSGAIIMultiObjectiveSampler` is "
+"used as the default. See also :class:`~optuna.multi_objective.samplers`."
+msgstr ""
+
+#: of optuna.multi_objective.study.create_study:31
+#: optuna.multi_objective.study.load_study:11
+msgid "A :class:`~optuna.multi_objective.study.MultiObjectiveStudy` object."
+msgstr ""
+
+#: of optuna.multi_objective.study.load_study:1
+msgid ""
+"Load the existing :class:`MultiObjectiveStudy` that has the specified "
+"name."
+msgstr ""
+
+#: of optuna.multi_objective.study.load_study:4
+msgid ""
+"Database URL such as ``sqlite:///example.db``. Please see also the "
+"documentation of :func:`~optuna.multi_objective.study.create_study` for "
+"further details."
+msgstr ""
+
+#: of optuna.multi_objective.study.load_study:6
+msgid ""
+"A sampler object that implements background algorithm for value "
+"suggestion. If :obj:`None` is specified, "
+":class:`~optuna.multi_objective.samplers.RandomMultiObjectiveSampler` is "
+"used as the default. See also :class:`~optuna.multi_objective.samplers`."
+msgstr ""
+
+#: ../../source/reference/multi_objective/trial.rst:4
+#: ../../source/reference/trial.rst:5
+msgid "Trial"
+msgstr ""
+
+#: of optuna.multi_objective.trial.MultiObjectiveTrial:1 optuna.trial.Trial:1
+msgid "A trial is a process of evaluating an objective function."
+msgstr ""
+
+#: of optuna.multi_objective.trial.MultiObjectiveTrial:3 optuna.trial.Trial:3
+msgid ""
+"This object is passed to an objective function and provides interfaces to"
+" get parameter suggestion, manage the trial's state, and set/get user-"
+"defined attributes of the trial."
+msgstr ""
+
+#: of optuna.multi_objective.trial.MultiObjectiveTrial:6
+msgid ""
+"Note that the direct use of this constructor is not recommended. This "
+"object is seamlessly instantiated and passed to the objective function "
+"behind the "
+":func:`optuna.multi_objective.study.MultiObjectiveStudy.optimize()` "
+"method; hence library users do not care about instantiation of this "
+"object."
+msgstr ""
+
+#: of optuna.multi_objective.trial.MultiObjectiveTrial:11
+msgid "A :class:`~optuna.trial.Trial` object."
+msgstr ""
+
+#: of optuna.multi_objective.trial.MultiObjectiveTrial.datetime_start:1
+#: optuna.trial.Trial.datetime_start:1
+msgid "Return start datetime."
+msgstr ""
+
+#: of optuna.multi_objective.trial.MultiObjectiveTrial.datetime_start:3
+#: optuna.structs.FrozenTrial:23 optuna.trial.FrozenTrial:18
+#: optuna.trial.Trial.datetime_start:3
+msgid "Datetime where the :class:`~optuna.trial.Trial` started."
+msgstr ""
+
+#: of optuna.multi_objective.trial.MultiObjectiveTrial.distributions:1
+#: optuna.trial.Trial.distributions:1
+msgid "Return distributions of parameters to be optimized."
+msgstr ""
+
+#: of optuna.multi_objective.trial.MultiObjectiveTrial.distributions:3
+#: optuna.trial.Trial.distributions:3
+msgid "A dictionary containing all distributions."
+msgstr ""
+
+#: of optuna.multi_objective.trial.MultiObjectiveTrial.number:1
+#: optuna.trial.Trial.number:1
+msgid "Return trial's number which is consecutive and unique in a study."
+msgstr ""
+
+#: of optuna.multi_objective.trial.MultiObjectiveTrial.number:3
+#: optuna.trial.Trial.number:3
+msgid "A trial number."
+msgstr ""
+
+#: of optuna.multi_objective.trial.MultiObjectiveTrial.params:1
+#: optuna.trial.Trial.params:1
+msgid "Return parameters to be optimized."
+msgstr ""
+
+#: of optuna.multi_objective.trial.MultiObjectiveTrial.params:3
+#: optuna.trial.FixedTrial:27 optuna.trial.Trial.params:3
+msgid "A dictionary containing all parameters."
+msgstr ""
+
+#: of optuna.multi_objective.trial.MultiObjectiveTrial.report:1
+msgid "Report intermediate objective function values for a given step."
+msgstr ""
+
+#: of optuna.multi_objective.trial.MultiObjectiveTrial.report:3
+#: optuna.trial.Trial.report:3
+msgid ""
+"The reported values are used by the pruners to determine whether this "
+"trial should be pruned."
+msgstr ""
+
+#: of optuna.multi_objective.trial.MultiObjectiveTrial.report:7
+#: optuna.trial.Trial.report:7
+msgid "Please refer to :class:`~optuna.pruners.BasePruner`."
+msgstr ""
+
+#: of optuna.multi_objective.trial.MultiObjectiveTrial.report:10
+msgid ""
+"The reported values are converted to ``float`` type by applying "
+"``float()`` function internally. Thus, it accepts all float-like types "
+"(e.g., ``numpy.float32``). If the conversion fails, a ``TypeError`` is "
+"raised."
+msgstr ""
+
+#: of optuna.multi_objective.trial.MultiObjectiveTrial.report:14
+msgid "Intermediate objective function values for a given step."
+msgstr ""
+
+#: of optuna.multi_objective.trial.MultiObjectiveTrial.report:15
+#: optuna.trial.Trial.report:46
+msgid "Step of the trial (e.g., Epoch of neural network training)."
+msgstr ""
+
+#: of optuna.multi_objective.trial.MultiObjectiveTrial.set_user_attr:1
+#: optuna.trial.Trial.set_user_attr:1
+msgid "Set user attributes to the trial."
+msgstr ""
+
+#: of optuna.multi_objective.trial.MultiObjectiveTrial.set_user_attr:3
+msgid ""
+"Please refer to the documentation of "
+":func:`optuna.trial.Trial.set_user_attr` for further details."
+msgstr ""
+
+#: of optuna.multi_objective.trial.MultiObjectiveTrial.suggest_categorical:1
+#: optuna.trial.Trial.suggest_categorical:1
+msgid "Suggest a value for the categorical parameter."
+msgstr ""
+
+#: of optuna.multi_objective.trial.MultiObjectiveTrial.suggest_categorical:3
+msgid ""
+"Please refer to the documentation of "
+":func:`optuna.trial.Trial.suggest_categorical` for further details."
+msgstr ""
+
+#: of
+#: optuna.multi_objective.trial.MultiObjectiveTrial.suggest_discrete_uniform:1
+#: optuna.trial.Trial.suggest_discrete_uniform:1
+msgid "Suggest a value for the discrete parameter."
+msgstr ""
+
+#: of
+#: optuna.multi_objective.trial.MultiObjectiveTrial.suggest_discrete_uniform:3
+msgid ""
+"Please refer to the documentation of "
+":func:`optuna.trial.Trial.suggest_discrete_uniform` for further details."
+msgstr ""
+
+#: of optuna.multi_objective.trial.MultiObjectiveTrial.suggest_float:1
+#: optuna.trial.Trial.suggest_float:1
+msgid "Suggest a value for the floating point parameter."
+msgstr ""
+
+#: of optuna.multi_objective.trial.MultiObjectiveTrial.suggest_float:3
+msgid ""
+"Please refer to the documentation of "
+":func:`optuna.trial.Trial.suggest_float` for further details."
+msgstr ""
+
+#: of optuna.multi_objective.trial.MultiObjectiveTrial.suggest_int:1
+#: optuna.trial.Trial.suggest_int:1
+msgid "Suggest a value for the integer parameter."
+msgstr ""
+
+#: of optuna.multi_objective.trial.MultiObjectiveTrial.suggest_int:3
+msgid ""
+"Please refer to the documentation of "
+":func:`optuna.trial.Trial.suggest_int` for further details."
+msgstr ""
+
+#: of optuna.multi_objective.trial.MultiObjectiveTrial.suggest_loguniform:1
+#: optuna.multi_objective.trial.MultiObjectiveTrial.suggest_uniform:1
+#: optuna.trial.Trial.suggest_loguniform:1 optuna.trial.Trial.suggest_uniform:1
+msgid "Suggest a value for the continuous parameter."
+msgstr ""
+
+#: of optuna.multi_objective.trial.MultiObjectiveTrial.suggest_loguniform:3
+msgid ""
+"Please refer to the documentation of "
+":func:`optuna.trial.Trial.suggest_loguniform` for further details."
+msgstr ""
+
+#: of optuna.multi_objective.trial.MultiObjectiveTrial.suggest_uniform:3
+msgid ""
+"Please refer to the documentation of "
+":func:`optuna.trial.Trial.suggest_uniform` for further details."
+msgstr ""
+
+#: of optuna.multi_objective.trial.FrozenMultiObjectiveTrial:1
+msgid ""
+"Status and results of a "
+":class:`~optuna.multi_objective.trial.MultiObjectiveTrial`."
+msgstr ""
+
+#: of optuna.multi_objective.trial.FrozenMultiObjectiveTrial:5
+msgid ""
+"Unique and consecutive number of "
+":class:`~optuna.multi_objective.trial.MultiObjectiveTrial` for each "
+":class:`~optuna.multi_objective.study.MultiObjectiveStudy`. Note that "
+"this field uses zero-based numbering."
+msgstr ""
+
+#: of optuna.multi_objective.trial.FrozenMultiObjectiveTrial:12
+msgid ""
+":class:`~optuna.trial.TrialState` of the "
+":class:`~optuna.multi_objective.trial.MultiObjectiveTrial`."
+msgstr ""
+
+#: of optuna.multi_objective.trial.FrozenMultiObjectiveTrial:17
+msgid ""
+"Objective values of the "
+":class:`~optuna.multi_objective.trial.MultiObjectiveTrial`."
+msgstr ""
+
+#: of optuna.multi_objective.trial.FrozenMultiObjectiveTrial:21
+msgid ""
+"Datetime where the "
+":class:`~optuna.multi_objective.trial.MultiObjectiveTrial` started."
+msgstr ""
+
+#: of optuna.multi_objective.trial.FrozenMultiObjectiveTrial:25
+msgid ""
+"Datetime where the "
+":class:`~optuna.multi_objective.trial.MultiObjectiveTrial` finished."
+msgstr ""
+
+#: of optuna.multi_objective.trial.FrozenMultiObjectiveTrial:29
+#: optuna.structs.FrozenTrial:31 optuna.trial.FrozenTrial:26
+msgid "Dictionary that contains suggested parameters."
+msgstr ""
+
+#: of optuna.multi_objective.trial.FrozenMultiObjectiveTrial:33
+#: optuna.structs.FrozenTrial.distributions:1
+#: optuna.trial.FrozenTrial.distributions:1
+msgid "Dictionary that contains the distributions of :attr:`params`."
+msgstr ""
+
+#: of optuna.multi_objective.trial.FrozenMultiObjectiveTrial:37
+msgid ""
+"Dictionary that contains the attributes of the "
+":class:`~optuna.multi_objective.trial.MultiObjectiveTrial` set with "
+":func:`optuna.multi_objective.trial.MultiObjectiveTrial.set_user_attr`."
+msgstr ""
+
+#: of optuna.multi_objective.trial.FrozenMultiObjectiveTrial:43
+msgid ""
+"Intermediate objective values set with "
+":func:`optuna.multi_objective.trial.MultiObjectiveTrial.report`."
+msgstr ""
+
+#: ../../source/reference/multi_objective/visualization.rst:4
+#: ../../source/reference/visualization.rst:5
+msgid "Visualization"
+msgstr ""
+
+#: ../../source/reference/multi_objective/visualization.rst:7
+msgid ""
+":mod:`~optuna.multi_objective.visualization` module uses plotly to create"
+" figures, but `JupyterLab`_ cannot render them by default. Please follow "
+"this `installation guide`_ to show figures in `JupyterLab`_."
+msgstr ""
+
+#: of optuna.multi_objective.visualization.plot_pareto_front:1
+msgid "Plot the pareto front of a study."
+msgstr ""
+
+#: of optuna.multi_objective.visualization.plot_pareto_front:5
+msgid "The following code snippet shows how to plot the pareto front of a study."
+msgstr ""
+
+#: of optuna.multi_objective.visualization.plot_pareto_front:29
+msgid ""
+"A :class:`~optuna.multi_objective.study.MultiObjectiveStudy` object whose"
+" trials are plotted for their objective values."
+msgstr ""
+
+#: of optuna.multi_objective.visualization.plot_pareto_front:31
+msgid ""
+"Objective name list used as the axis titles. If :obj:`None` is specified,"
+" \"Objective {objective_index}\" is used instead."
+msgstr ""
+
+#: of optuna.multi_objective.visualization.plot_pareto_front:34
+#: optuna.visualization.plot_contour:32
+#: optuna.visualization.plot_intermediate_values:47
+#: optuna.visualization.plot_optimization_history:30
+#: optuna.visualization.plot_parallel_coordinate:33
+#: optuna.visualization.plot_param_importances:41
+#: optuna.visualization.plot_slice:32
+msgid "A :class:`plotly.graph_objs.Figure` object."
+msgstr ""
+
+#: of optuna.multi_objective.visualization.plot_pareto_front
+#: optuna.study.Study.stop optuna.trial.Trial.suggest_float
+#: optuna.trial.Trial.suggest_int
+msgid "Raises"
+msgstr ""
+
+#: of optuna.multi_objective.visualization.plot_pareto_front:36
+msgid "If the number of objectives of ``study`` isn't 2 or 3."
+msgstr ""
+
+#: of optuna.multi_objective.visualization.plot_pareto_front:39
+msgid ""
+"Added in v2.0.0 as an experimental feature. The interface may change in "
+"newer versions without prior notice. See "
+"https://github.com/optuna/optuna/releases/tag/v2.0.0."
+msgstr ""
+
+#: ../../source/reference/pruners.rst:4
+msgid "Pruners"
+msgstr ""
+
+#: of optuna.pruners.BasePruner:1
+msgid "Base class for pruners."
+msgstr ""
+
+#: of optuna.pruners.BasePruner.prune:1
+msgid "Judge whether the trial should be pruned based on the reported values."
+msgstr ""
+
+#: of optuna.pruners.BasePruner.prune:3
+msgid ""
+"Note that this method is not supposed to be called by library users. "
+"Instead, :func:`optuna.trial.Trial.report` and "
+":func:`optuna.trial.Trial.should_prune` provide user interfaces to "
+"implement pruning mechanism in an objective function."
+msgstr ""
+
+#: of optuna.pruners.BasePruner.prune:7
+msgid "Study object of the target study."
+msgstr ""
+
+#: of optuna.pruners.BasePruner.prune:8
+msgid ""
+"FrozenTrial object of the target trial. Take a copy before modifying this"
+" object."
+msgstr ""
+
+#: of optuna.pruners.BasePruner.prune:11
+msgid "A boolean value representing whether the trial should be pruned."
+msgstr ""
+
+#: of optuna.pruners.MedianPruner:1
+msgid "Pruner using the median stopping rule."
+msgstr ""
+
+#: of optuna.pruners.MedianPruner:3
+msgid ""
+"Prune if the trial's best intermediate result is worse than median of "
+"intermediate results of previous trials at the same step."
+msgstr ""
+
+#: of optuna.pruners.MedianPruner:8
+msgid "We minimize an objective function with the median stopping rule."
+msgstr ""
+
+#: of optuna.pruners.MedianPruner:45 optuna.pruners.PercentilePruner:44
+msgid ""
+"Pruning is disabled until the given number of trials finish in the same "
+"study."
+msgstr ""
+
+#: of optuna.pruners.MedianPruner:46 optuna.pruners.PercentilePruner:45
+#: optuna.pruners.ThresholdPruner:50
+msgid "Pruning is disabled until the trial exceeds the given number of step."
+msgstr ""
+
+#: of optuna.pruners.MedianPruner:47
+msgid ""
+"Interval in number of steps between the pruning checks, offset by the "
+"warmup steps. If no value has been reported at the time of a pruning "
+"check, that particular check will be postponed until a value is reported."
+msgstr ""
+
+#: of optuna.pruners.NopPruner:1
+msgid "Pruner which never prunes trials."
+msgstr ""
+
+#: of optuna.pruners.PercentilePruner:1
+msgid "Pruner to keep the specified percentile of the trials."
+msgstr ""
+
+#: of optuna.pruners.PercentilePruner:3
+msgid ""
+"Prune if the best intermediate value is in the bottom percentile among "
+"trials at the same step."
+msgstr ""
+
+#: of optuna.pruners.PercentilePruner:42
+msgid ""
+"Percentile which must be between 0 and 100 inclusive (e.g., When given "
+"25.0, top of 25th percentile trials are kept)."
+msgstr ""
+
+#: of optuna.pruners.PercentilePruner:46 optuna.pruners.ThresholdPruner:52
+msgid ""
+"Interval in number of steps between the pruning checks, offset by the "
+"warmup steps. If no value has been reported at the time of a pruning "
+"check, that particular check will be postponed until a value is reported."
+" Value must be at least 1."
+msgstr ""
+
+#: of optuna.pruners.SuccessiveHalvingPruner:1
+msgid "Pruner using Asynchronous Successive Halving Algorithm."
+msgstr ""
+
+#: of optuna.pruners.SuccessiveHalvingPruner:3
+msgid ""
+"`Successive Halving <https://arxiv.org/abs/1502.07943>`_ is a bandit-"
+"based algorithm to identify the best one among multiple configurations. "
+"This class implements an asynchronous version of Successive Halving. "
+"Please refer to the paper of `Asynchronous Successive Halving "
+"<http://arxiv.org/abs/1810.05934>`_ for detailed descriptions."
+msgstr ""
+
+#: of optuna.pruners.SuccessiveHalvingPruner:8
+msgid ""
+"Note that, this class does not take care of the parameter for the maximum"
+" resource, referred to as :math:`R` in the paper. The maximum resource "
+"allocated to a trial is typically limited inside the objective function "
+"(e.g., ``step`` number in `simple.py "
+"<https://github.com/optuna/optuna/tree/c5777b3e/examples/pruning/simple.py#L31>`_,"
+" ``EPOCH`` number in `chainer_integration.py "
+"<https://github.com/optuna/optuna/tree/c5777b3e/examples/pruning/chainer_integration.py#L65>`_)."
+msgstr ""
+
+#: of optuna.pruners.SuccessiveHalvingPruner:17
+msgid "We minimize an objective function with ``SuccessiveHalvingPruner``."
+msgstr ""
+
+#: of optuna.pruners.SuccessiveHalvingPruner:52
+msgid ""
+"A parameter for specifying the minimum resource allocated to a trial (in "
+"the `paper <http://arxiv.org/abs/1810.05934>`_ this parameter is referred"
+" to as :math:`r`). This parameter defaults to 'auto' where the value is "
+"determined based on a heuristic that looks at the number of required "
+"steps for the first trial to complete.  A trial is never pruned until it "
+"executes :math:`\\mathsf{min}\\_\\mathsf{resource} \\times "
+"\\mathsf{reduction}\\_\\mathsf{factor}^{ "
+"\\mathsf{min}\\_\\mathsf{early}\\_\\mathsf{stopping}\\_\\mathsf{rate}}` "
+"steps (i.e., the completion point of the first rung). When the trial "
+"completes the first rung, it will be promoted to the next rung only if "
+"the value of the trial is placed in the top :math:`{1 \\over "
+"\\mathsf{reduction}\\_\\mathsf{factor}}` fraction of the all trials that "
+"already have reached the point (otherwise it will be pruned there). If "
+"the trial won the competition, it runs until the next completion point "
+"(i.e., :math:`\\mathsf{min}\\_\\mathsf{resource} \\times "
+"\\mathsf{reduction}\\_\\mathsf{factor}^{ "
+"(\\mathsf{min}\\_\\mathsf{early}\\_\\mathsf{stopping}\\_\\mathsf{rate} + "
+"\\mathsf{rung})}` steps) and repeats the same procedure.  .. note::     "
+"If the step of the last intermediate value may change with each trial, "
+"please     manually specify the minimum possible step to "
+"``min_resource``."
+msgstr ""
+
+#: of optuna.pruners.SuccessiveHalvingPruner:52
+msgid ""
+"A parameter for specifying the minimum resource allocated to a trial (in "
+"the `paper <http://arxiv.org/abs/1810.05934>`_ this parameter is referred"
+" to as :math:`r`). This parameter defaults to 'auto' where the value is "
+"determined based on a heuristic that looks at the number of required "
+"steps for the first trial to complete."
+msgstr ""
+
+#: of optuna.pruners.SuccessiveHalvingPruner:58
+msgid ""
+"A trial is never pruned until it executes "
+":math:`\\mathsf{min}\\_\\mathsf{resource} \\times "
+"\\mathsf{reduction}\\_\\mathsf{factor}^{ "
+"\\mathsf{min}\\_\\mathsf{early}\\_\\mathsf{stopping}\\_\\mathsf{rate}}` "
+"steps (i.e., the completion point of the first rung). When the trial "
+"completes the first rung, it will be promoted to the next rung only if "
+"the value of the trial is placed in the top :math:`{1 \\over "
+"\\mathsf{reduction}\\_\\mathsf{factor}}` fraction of the all trials that "
+"already have reached the point (otherwise it will be pruned there). If "
+"the trial won the competition, it runs until the next completion point "
+"(i.e., :math:`\\mathsf{min}\\_\\mathsf{resource} \\times "
+"\\mathsf{reduction}\\_\\mathsf{factor}^{ "
+"(\\mathsf{min}\\_\\mathsf{early}\\_\\mathsf{stopping}\\_\\mathsf{rate} + "
+"\\mathsf{rung})}` steps) and repeats the same procedure."
+msgstr ""
+
+#: of optuna.pruners.SuccessiveHalvingPruner:75
+msgid ""
+"If the step of the last intermediate value may change with each trial, "
+"please manually specify the minimum possible step to ``min_resource``."
+msgstr ""
+
+#: of optuna.pruners.SuccessiveHalvingPruner:77
+msgid ""
+"A parameter for specifying reduction factor of promotable trials (in the "
+"`paper <http://arxiv.org/abs/1810.05934>`_ this parameter is referred to "
+"as :math:`\\eta`).  At the completion point of each rung, about :math:`{1"
+" \\over \\mathsf{reduction}\\_\\mathsf{factor}}` trials will be promoted."
+msgstr ""
+
+#: of optuna.pruners.SuccessiveHalvingPruner:82
+msgid ""
+"A parameter for specifying the minimum early-stopping rate (in the `paper"
+" <http://arxiv.org/abs/1810.05934>`_ this parameter is referred to as "
+":math:`s`)."
+msgstr ""
+
+#: of optuna.pruners.HyperbandPruner:1
+msgid "Pruner using Hyperband."
+msgstr ""
+
+#: of optuna.pruners.HyperbandPruner:3
+msgid ""
+"As SuccessiveHalving (SHA) requires the number of configurations "
+":math:`n` as its hyperparameter.  For a given finite budget :math:`B`, "
+"all the configurations have the resources of :math:`B \\over n` on "
+"average. As you can see, there will be a trade-off of :math:`B` and "
+":math:`B \\over n`. `Hyperband "
+"<http://www.jmlr.org/papers/volume18/16-558/16-558.pdf>`_ attacks this "
+"trade-off by trying different :math:`n` values for a fixed budget."
+msgstr ""
+
+#: of optuna.pruners.HyperbandPruner:11
+msgid ""
+"In the Hyperband paper, the counterpart of "
+":class:`~optuna.samplers.RandomSampler` is used."
+msgstr ""
+
+#: of optuna.pruners.HyperbandPruner:13
+msgid "Optuna uses :class:`~optuna.samplers.TPESampler` by default."
+msgstr ""
+
+#: of optuna.pruners.HyperbandPruner:14
+msgid ""
+"`The benchmark result "
+"<https://github.com/optuna/optuna/pull/828#issuecomment-575457360>`_ "
+"shows that :class:`optuna.pruners.HyperbandPruner` supports both "
+"samplers."
+msgstr ""
+
+#: of optuna.pruners.HyperbandPruner:19
+msgid ""
+"If you use ``HyperbandPruner`` with :class:`~optuna.samplers.TPESampler`,"
+" it's recommended to consider to set larger ``n_trials`` or ``timeout`` "
+"to make full use of the characteristics of "
+":class:`~optuna.samplers.TPESampler` because "
+":class:`~optuna.samplers.TPESampler` uses some (by default, :math:`10`) "
+":class:`~optuna.trial.Trial`\\ s for its startup."
+msgstr ""
+
+#: of optuna.pruners.HyperbandPruner:25
+msgid ""
+"As Hyperband runs multiple "
+":class:`~optuna.pruners.SuccessiveHalvingPruner` and collect trials based"
+" on the current :class:`~optuna.trial.Trial`\\ 's bracket ID, each "
+"bracket needs to observe more than :math:`10` "
+":class:`~optuna.trial.Trial`\\ s for :class:`~optuna.samplers.TPESampler`"
+" to adapt its search space."
+msgstr ""
+
+#: of optuna.pruners.HyperbandPruner:30
+msgid ""
+"Thus, for example, if ``HyperbandPruner`` has :math:`4` pruners in it, at"
+" least :math:`4 \\times 10` trials are consumed for startup."
+msgstr ""
+
+#: of optuna.pruners.HyperbandPruner:34
+msgid ""
+"Hyperband has several :class:`~optuna.pruners.SuccessiveHalvingPruner`. "
+"Each :class:`~optuna.pruners.SuccessiveHalvingPruner` is referred as "
+"\"bracket\" in the original paper. The number of brackets is an important"
+" factor to control the early stopping behavior of Hyperband and is "
+"automatically determined by ``min_resource``, ``max_resource`` and "
+"``reduction_factor`` as `The number of brackets = "
+"floor(log_{reduction_factor}(max_resource / min_resource)) + 1`. Please "
+"set ``reduction_factor`` so that the number of brackets is not too large　"
+"(about 4 ~ 6 in most use cases).　Please see Section 3.6 of the `original "
+"paper <http://www.jmlr.org/papers/volume18/16-558/16-558.pdf>`_ for the "
+"detail."
+msgstr ""
+
+#: of optuna.pruners.HyperbandPruner:46
+msgid "We minimize an objective function with Hyperband pruning algorithm."
+msgstr ""
+
+#: of optuna.pruners.HyperbandPruner:87
+msgid ""
+"A parameter for specifying the minimum resource allocated to a trial "
+"noted as :math:`r` in the paper. A smaller :math:`r` will give a result "
+"faster, but a larger :math:`r` will give a better guarantee of successful"
+" judging between configurations. See the details for "
+":class:`~optuna.pruners.SuccessiveHalvingPruner`."
+msgstr ""
+
+#: of optuna.pruners.HyperbandPruner:91
+msgid ""
+"A parameter for specifying the maximum resource allocated to a trial. "
+":math:`R` in the paper corresponds to ``max_resource / min_resource``. "
+"This value represents and should match the maximum iteration steps (e.g.,"
+" the number of epochs for neural networks). When this argument is "
+"\"auto\", the maximum resource is estimated according to the completed "
+"trials. The default value of this argument is \"auto\".  .. note::     "
+"With \"auto\", the maximum resource will be the largest step reported by"
+"     :meth:`~optuna.trial.Trial.report` in the first, or one of the first"
+" if trained in     parallel, completed trial. No trials will be pruned "
+"until the maximum resource is     determined.  .. note::     If the step "
+"of the last intermediate value may change with each trial, please     "
+"manually specify the maximum possible step to ``max_resource``."
+msgstr ""
+
+#: of optuna.pruners.HyperbandPruner:91
+msgid ""
+"A parameter for specifying the maximum resource allocated to a trial. "
+":math:`R` in the paper corresponds to ``max_resource / min_resource``. "
+"This value represents and should match the maximum iteration steps (e.g.,"
+" the number of epochs for neural networks). When this argument is "
+"\"auto\", the maximum resource is estimated according to the completed "
+"trials. The default value of this argument is \"auto\"."
+msgstr ""
+
+#: of optuna.pruners.HyperbandPruner:98
+msgid ""
+"With \"auto\", the maximum resource will be the largest step reported by "
+":meth:`~optuna.trial.Trial.report` in the first, or one of the first if "
+"trained in parallel, completed trial. No trials will be pruned until the "
+"maximum resource is determined."
+msgstr ""
+
+#: of optuna.pruners.HyperbandPruner:104
+msgid ""
+"If the step of the last intermediate value may change with each trial, "
+"please manually specify the maximum possible step to ``max_resource``."
+msgstr ""
+
+#: of optuna.pruners.HyperbandPruner:106
+msgid ""
+"A parameter for specifying reduction factor of promotable trials noted as"
+" :math:`\\eta` in the paper. See the details for "
+":class:`~optuna.pruners.SuccessiveHalvingPruner`."
+msgstr ""
+
+#: of optuna.pruners.HyperbandPruner:111
+msgid ""
+"Added in v1.1.0 as an experimental feature. The interface may change in "
+"newer versions without prior notice. See "
+"https://github.com/optuna/optuna/releases/tag/v1.1.0."
+msgstr ""
+
+#: of optuna.pruners.ThresholdPruner:1
+msgid "Pruner to detect outlying metrics of the trials."
+msgstr ""
+
+#: of optuna.pruners.ThresholdPruner:3
+msgid ""
+"Prune if a metric exceeds upper threshold, falls behind lower threshold "
+"or reaches ``nan``."
+msgstr ""
+
+#: of optuna.pruners.ThresholdPruner:53
+msgid "Args"
+msgstr ""
+
+#: of optuna.pruners.ThresholdPruner:44
+msgid "lower:"
+msgstr ""
+
+#: of optuna.pruners.ThresholdPruner:44
+msgid ""
+"A minimum value which determines whether pruner prunes or not. If an "
+"intermediate value is smaller than lower, it prunes."
+msgstr ""
+
+#: of optuna.pruners.ThresholdPruner:47
+msgid "upper:"
+msgstr ""
+
+#: of optuna.pruners.ThresholdPruner:47
+msgid ""
+"A maximum value which determines whether pruner prunes or not. If an "
+"intermediate value is larger than upper, it prunes."
+msgstr ""
+
+#: of optuna.pruners.ThresholdPruner:49
+msgid "n_warmup_steps:"
+msgstr ""
+
+#: of optuna.pruners.ThresholdPruner:53
+msgid "interval_steps:"
+msgstr ""
+
+#: of optuna.samplers.BaseSampler:1
+msgid "Base class for samplers."
+msgstr ""
+
+#: of optuna.samplers.BaseSampler:3
+msgid ""
+"Optuna combines two types of sampling strategies, which are called "
+"*relative sampling* and *independent sampling*."
+msgstr ""
+
+#: of optuna.samplers.BaseSampler:6
+msgid ""
+"*The relative sampling* determines values of multiple parameters "
+"simultaneously so that sampling algorithms can use relationship between "
+"parameters (e.g., correlation). Target parameters of the relative "
+"sampling are described in a relative search space, which is determined by"
+" :func:`~optuna.samplers.BaseSampler.infer_relative_search_space`."
+msgstr ""
+
+#: of optuna.samplers.BaseSampler:11
+msgid ""
+"*The independent sampling* determines a value of a single parameter "
+"without considering any relationship between parameters. Target "
+"parameters of the independent sampling are the parameters not described "
+"in the relative search space."
+msgstr ""
+
+#: of optuna.samplers.BaseSampler:15
+msgid ""
+"More specifically, parameters are sampled by the following procedure. At "
+"the beginning of a trial, "
+":meth:`~optuna.samplers.BaseSampler.infer_relative_search_space` is "
+"called to determine the relative search space for the trial. Then, "
+":meth:`~optuna.samplers.BaseSampler.sample_relative` is invoked to sample"
+" parameters from the relative search space. During the execution of the "
+"objective function, "
+":meth:`~optuna.samplers.BaseSampler.sample_independent` is used to sample"
+" parameters that don't belong to the relative search space."
+msgstr ""
+
+#: of optuna.samplers.BaseSampler:23
+msgid ""
+"The following figure depicts the lifetime of a trial and how the above "
+"three methods are called in the trial."
+msgstr ""
+
+#: of optuna.samplers.BaseSampler.infer_relative_search_space:3
+msgid ""
+"This method is called right before "
+":func:`~optuna.samplers.BaseSampler.sample_relative` method, and the "
+"search space returned by this method is pass to it. The parameters not "
+"contained in the search space will be sampled by using "
+":func:`~optuna.samplers.BaseSampler.sample_independent` method."
+msgstr ""
+
+#: of optuna.samplers.BaseSampler.infer_relative_search_space:9
+#: optuna.samplers.BaseSampler.sample_independent:14
+#: optuna.samplers.BaseSampler.sample_relative:13
+msgid "Target trial object. Take a copy before modifying this object."
+msgstr ""
+
+#: of optuna.samplers.BaseSampler.infer_relative_search_space:15
+msgid ""
+"Please refer to :func:`~optuna.samplers.intersection_search_space` as an "
+"implementation of "
+":func:`~optuna.samplers.BaseSampler.infer_relative_search_space`."
+msgstr ""
+
+#: of optuna.samplers.BaseSampler.sample_independent:3
+msgid ""
+"This method is called only for the parameters not contained in the search"
+" space returned by :func:`~optuna.samplers.BaseSampler.sample_relative` "
+"method. This method is suitable for sampling algorithms that do not use "
+"relationship between parameters such as random sampling and TPE."
+msgstr ""
+
+#: of optuna.samplers.BaseSampler.sample_independent:9
+#: optuna.samplers.BaseSampler.sample_relative:8
+msgid ""
+"The failed trials are ignored by any build-in samplers when they sample "
+"new parameters. Thus, failed trials are regarded as deleted in the "
+"samplers' perspective."
+msgstr ""
+
+#: of optuna.samplers.BaseSampler.sample_relative:3
+msgid ""
+"This method is called once at the beginning of each trial, i.e., right "
+"before the evaluation of the objective function. This method is suitable "
+"for sampling algorithms that use relationship between parameters such as "
+"Gaussian Process and CMA-ES."
+msgstr ""
+
+#: of optuna.samplers.BaseSampler.sample_relative:15
+msgid ""
+"The search space returned by "
+":func:`~optuna.samplers.BaseSampler.infer_relative_search_space`."
+msgstr ""
+
+#: of optuna.samplers.GridSampler:1
+msgid "Sampler using grid search."
+msgstr ""
+
+#: of optuna.samplers.GridSampler:3
+msgid ""
+"With :class:`~optuna.samplers.GridSampler`, the trials suggest all "
+"combinations of parameters in the given search space during the study."
+msgstr ""
+
+#: of optuna.samplers.GridSampler:26
+msgid ""
+":class:`~optuna.samplers.GridSampler` raises an error if all combinations"
+" in the passed ``search_space`` has already been evaluated. Please make "
+"sure that unnecessary trials do not run during optimization by properly "
+"setting ``n_trials`` in the :func:`~optuna.study.Study.optimize` method."
+msgstr ""
+
+#: of optuna.samplers.GridSampler:33
+msgid ""
+":class:`~optuna.samplers.GridSampler` does not take care of a parameter's"
+" quantization specified by discrete suggest methods but just samples one "
+"of values specified in the search space. E.g., in the following code "
+"snippet, either of ``-0.5`` or ``0.5`` is sampled as ``x`` instead of an "
+"integer point."
+msgstr ""
+
+#: of optuna.samplers.GridSampler:52
+msgid ""
+"A dictionary whose key and value are a parameter name and the "
+"corresponding candidates of values, respectively."
+msgstr ""
+
+#: of optuna.samplers.GridSampler:56 optuna.study.Study.enqueue_trial:27
+msgid ""
+"Added in v1.2.0 as an experimental feature. The interface may change in "
+"newer versions without prior notice. See "
+"https://github.com/optuna/optuna/releases/tag/v1.2.0."
+msgstr ""
+
+#: of optuna.samplers.RandomSampler:1
+msgid "Sampler using random sampling."
+msgstr ""
+
+#: of optuna.samplers.RandomSampler:3 optuna.samplers.TPESampler:3
+msgid ""
+"This sampler is based on *independent sampling*. See also "
+":class:`~optuna.samplers.BaseSampler` for more details of 'independent "
+"sampling'."
+msgstr ""
+
+#: of optuna.samplers.TPESampler:1
+msgid "Sampler using TPE (Tree-structured Parzen Estimator) algorithm."
+msgstr ""
+
+#: of optuna.samplers.TPESampler:6
+msgid ""
+"On each trial, for each parameter, TPE fits one Gaussian Mixture Model "
+"(GMM) ``l(x)`` to the set of parameter values associated with the best "
+"objective values, and another GMM ``g(x)`` to the remaining parameter "
+"values. It chooses the parameter value ``x`` that maximizes the ratio "
+"``l(x)/g(x)``."
+msgstr ""
+
+#: of optuna.samplers.TPESampler:11
+msgid ""
+"For further information about TPE algorithm, please refer to the "
+"following papers:"
+msgstr ""
+
+#: of optuna.samplers.TPESampler:13
+msgid ""
+"`Algorithms for Hyper-Parameter Optimization "
+"<https://papers.nips.cc/paper/4443-algorithms-for-hyper-parameter-"
+"optimization.pdf>`_"
+msgstr ""
+
+#: of optuna.samplers.TPESampler:15
+msgid ""
+"`Making a Science of Model Search: Hyperparameter Optimization in "
+"Hundreds of Dimensions for Vision Architectures "
+"<http://proceedings.mlr.press/v28/bergstra13.pdf>`_"
+msgstr ""
+
+#: of optuna.samplers.TPESampler:32
+msgid ""
+"Enhance the stability of Parzen estimator by imposing a Gaussian prior "
+"when :obj:`True`. The prior is only effective if the sampling "
+"distribution is either "
+":class:`~optuna.distributions.UniformDistribution`, "
+":class:`~optuna.distributions.DiscreteUniformDistribution`, "
+":class:`~optuna.distributions.LogUniformDistribution`, "
+":class:`~optuna.distributions.IntUniformDistribution`, or "
+":class:`~optuna.distributions.IntLogUniformDistribution`."
+msgstr ""
+
+#: of optuna.samplers.TPESampler:39
+msgid ""
+"The weight of the prior. This argument is used in "
+":class:`~optuna.distributions.UniformDistribution`, "
+":class:`~optuna.distributions.DiscreteUniformDistribution`, "
+":class:`~optuna.distributions.LogUniformDistribution`, "
+":class:`~optuna.distributions.IntUniformDistribution`, "
+":class:`~optuna.distributions.IntLogUniformDistribution`, and "
+":class:`~optuna.distributions.CategoricalDistribution`."
+msgstr ""
+
+#: of optuna.samplers.TPESampler:46
+msgid ""
+"Enable a heuristic to limit the smallest variances of Gaussians used in "
+"the Parzen estimator."
+msgstr ""
+
+#: of optuna.samplers.TPESampler:48
+msgid ""
+"Take endpoints of domains into account when calculating variances of "
+"Gaussians in Parzen estimator. See the original paper for details on the "
+"heuristics to calculate the variances."
+msgstr ""
+
+#: of optuna.samplers.TPESampler:51
+msgid ""
+"The random sampling is used instead of the TPE algorithm until the given "
+"number of trials finish in the same study."
+msgstr ""
+
+#: of optuna.samplers.TPESampler:53
+msgid "Number of candidate samples used to calculate the expected improvement."
+msgstr ""
+
+#: of optuna.samplers.TPESampler:54
+msgid ""
+"A function that takes the number of finished trials and returns the "
+"number of trials to form a density function for samples with low grains. "
+"See the original paper for more details."
+msgstr ""
+
+#: of optuna.samplers.TPESampler:57
+msgid ""
+"A function that takes the number of finished trials and returns a weight "
+"for them. See `Making a Science of Model Search: Hyperparameter "
+"Optimization in Hundreds of Dimensions for Vision Architectures "
+"<http://proceedings.mlr.press/v28/bergstra13.pdf>`_ for more details."
+msgstr ""
+
+#: of optuna.samplers.TPESampler.hyperopt_parameters:1
+msgid "Return the the default parameters of hyperopt (v0.1.2)."
+msgstr ""
+
+#: of optuna.samplers.TPESampler.hyperopt_parameters:3
+msgid ""
+":class:`~optuna.samplers.TPESampler` can be instantiated with the "
+"parameters returned by this method."
+msgstr ""
+
+#: of optuna.samplers.TPESampler.hyperopt_parameters:8
+msgid ""
+"Create a :class:`~optuna.samplers.TPESampler` instance with the default "
+"parameters of `hyperopt "
+"<https://github.com/hyperopt/hyperopt/tree/0.1.2>`_."
+msgstr ""
+
+#: of optuna.samplers.TPESampler.hyperopt_parameters:24
+msgid "A dictionary containing the default parameters of hyperopt."
+msgstr ""
+
+#: of optuna.samplers.CmaEsSampler:1
+msgid "A Sampler using CMA-ES algorithm."
+msgstr ""
+
+#: of optuna.samplers.CmaEsSampler:5
+msgid ""
+"Optimize a simple quadratic function by using "
+":class:`~optuna.samplers.CmaEsSampler`."
+msgstr ""
+
+#: of optuna.samplers.CmaEsSampler:20
+msgid ""
+"Please note that this sampler does not support CategoricalDistribution. "
+"If your search space contains categorical parameters, I recommend you to "
+"use :class:`~optuna.samplers.TPESampler` instead. Furthermore, there is "
+"room for performance improvements in parallel optimization settings. This"
+" sampler cannot use some trials for updating the parameters of "
+"multivariate normal distribution."
+msgstr ""
+
+#: of optuna.samplers.CmaEsSampler:28
+msgid ""
+"You can also use :class:`optuna.integration.CmaEsSampler` which is a "
+"sampler using cma library as the backend."
+msgstr ""
+
+#: of optuna.samplers.CmaEsSampler:31
+msgid ""
+"A dictionary of an initial parameter values for CMA-ES. By default, the "
+"mean of ``low`` and ``high`` for each distribution is used."
+msgstr ""
+
+#: of optuna.samplers.CmaEsSampler:33
+msgid ""
+"Initial standard deviation of CMA-ES. By default, ``sigma0`` is set to "
+"``min_range / 6``, where ``min_range`` denotes the minimum range of the "
+"distributions in the search space."
+msgstr ""
+
+#: of optuna.samplers.CmaEsSampler:39
+msgid ""
+"A :class:`~optuna.samplers.BaseSampler` instance that is used for "
+"independent sampling. The parameters not contained in the relative search"
+" space are sampled by this sampler. The search space for "
+":class:`~optuna.samplers.CmaEsSampler` is determined by "
+":func:`~optuna.samplers.intersection_search_space()`.  If :obj:`None` is "
+"specified, :class:`~optuna.samplers.RandomSampler` is used as the "
+"default.  .. seealso::     :class:`optuna.samplers` module provides "
+"built-in independent samplers     such as "
+":class:`~optuna.samplers.RandomSampler` and     "
+":class:`~optuna.samplers.TPESampler`."
+msgstr ""
+
+#: of optuna.samplers.CmaEsSampler:39
+msgid ""
+"A :class:`~optuna.samplers.BaseSampler` instance that is used for "
+"independent sampling. The parameters not contained in the relative search"
+" space are sampled by this sampler. The search space for "
+":class:`~optuna.samplers.CmaEsSampler` is determined by "
+":func:`~optuna.samplers.intersection_search_space()`."
+msgstr ""
+
+#: of optuna.samplers.IntersectionSearchSpace:1
+msgid ""
+"A class to calculate the intersection search space of a "
+":class:`~optuna.study.BaseStudy`."
+msgstr ""
+
+#: of optuna.samplers.IntersectionSearchSpace:3
+#: optuna.samplers.intersection_search_space:3
+msgid ""
+"Intersection search space contains the intersection of parameter "
+"distributions that have been suggested in the completed trials of the "
+"study so far. If there are multiple parameters that have the same name "
+"but different distributions, neither is included in the resulting search "
+"space (i.e., the parameters with dynamic value ranges are excluded)."
+msgstr ""
+
+#: of optuna.samplers.IntersectionSearchSpace:9
+msgid ""
+"Note that an instance of this class is supposed to be used for only one "
+"study. If different studies are passed to "
+":func:`~optuna.samplers.IntersectionSearchSpace.calculate`, a "
+":obj:`ValueError` is raised."
+msgstr ""
+
+#: of optuna.samplers.IntersectionSearchSpace.calculate:1
+msgid ""
+"Returns the intersection search space of the "
+":class:`~optuna.study.BaseStudy`."
+msgstr ""
+
+#: of optuna.samplers.IntersectionSearchSpace.calculate:3
+#: optuna.samplers.intersection_search_space:14
+msgid "A study with completed trials."
+msgstr ""
+
+#: of optuna.samplers.IntersectionSearchSpace.calculate:4
+#: optuna.samplers.intersection_search_space:15
+msgid ""
+"A boolean flag determining the return type. If :obj:`False`, the returned"
+" object will be a :obj:`dict`. If :obj:`True`, the returned object will "
+"be an :obj:`collections.OrderedDict` sorted by keys, i.e. parameter "
+"names."
+msgstr ""
+
+#: of optuna.samplers.intersection_search_space:1
+msgid ""
+"Return the intersection search space of the "
+":class:`~optuna.study.BaseStudy`."
+msgstr ""
+
+#: of optuna.samplers.intersection_search_space:10
+msgid ""
+":class:`~optuna.samplers.IntersectionSearchSpace` provides the same "
+"functionality with a much faster way. Please consider using it if you "
+"want to reduce execution time as much as possible."
+msgstr ""
+
+#: ../../source/reference/storages.rst:4
+msgid "Storages"
+msgstr ""
+
+#: of optuna.storages.RDBStorage:1
+msgid "Storage class for RDB backend."
+msgstr ""
+
+#: of optuna.storages.RDBStorage:3 optuna.storages.RedisStorage:3
+msgid ""
+"Note that library users can instantiate this class, but the attributes "
+"provided by this class are not supposed to be directly accessed by them."
+msgstr ""
+
+#: of optuna.storages.RDBStorage:8
+msgid ""
+"Create an :class:`~optuna.storages.RDBStorage` instance with customized "
+"``pool_size`` and ``timeout`` settings."
+msgstr ""
+
+#: of optuna.storages.RDBStorage:32
+msgid "URL of the storage."
+msgstr ""
+
+#: of optuna.storages.RDBStorage:33
+msgid ""
+"A dictionary of keyword arguments that is passed to "
+"`sqlalchemy.engine.create_engine`_ function."
+msgstr ""
+
+#: of optuna.storages.RDBStorage:35
+msgid "Flag to skip schema compatibility check if set to True."
+msgstr ""
+
+#: of optuna.storages.RDBStorage:41
+msgid ""
+"If you use MySQL, `pool_pre_ping`_ will be set to :obj:`True` by default "
+"to prevent connection timeout. You can turn it off with "
+"``engine_kwargs['pool_pre_ping']=False``, but it is recommended to keep "
+"the setting if execution time of your objective function is longer than "
+"the `wait_timeout` of your MySQL configuration."
+msgstr ""
+
+#: of optuna.storages.RedisStorage:1
+msgid "Storage class for Redis backend."
+msgstr ""
+
+#: of optuna.storages.RedisStorage:8
+msgid ""
+"We create an :class:`~optuna.storages.RedisStorage` instance using the "
+"given redis database URL."
+msgstr ""
+
+#: of optuna.storages.RedisStorage:25
+msgid ""
+"URL of the redis storage, password and db are optional. (ie: "
+"redis://localhost:6379)"
+msgstr ""
+
+#: of optuna.storages.RedisStorage:28
+msgid ""
+"If you use plan to use Redis as a storage mechanism for optuna, make sure"
+" Redis in installed and running. Please execute ``$ pip install -U "
+"redis`` to install redis python library."
+msgstr ""
+
+#: ../../source/reference/structs.rst:4
+msgid "Structs"
+msgstr ""
+
+#: of optuna.structs.TrialState:1 optuna.trial.TrialState:1
+msgid "State of a :class:`~optuna.trial.Trial`."
+msgstr ""
+
+#: of optuna.structs.TrialState:5 optuna.trial.TrialState:5
+msgid "The :class:`~optuna.trial.Trial` is running."
+msgstr ""
+
+#: of optuna.structs.TrialState:9 optuna.trial.TrialState:9
+msgid "The :class:`~optuna.trial.Trial` has been finished without any error."
+msgstr ""
+
+#: of optuna.structs.TrialState:13 optuna.trial.TrialState:13
+msgid ""
+"The :class:`~optuna.trial.Trial` has been pruned with "
+":class:`~optuna.exceptions.TrialPruned`."
+msgstr ""
+
+#: of optuna.structs.TrialState:18 optuna.trial.TrialState:18
+msgid "The :class:`~optuna.trial.Trial` has failed due to an uncaught error."
+msgstr ""
+
+#: ../../source/reference/structs.rst:9
+msgid ""
+"This class is deprecated. Please use :class:`~optuna.trial.TrialState` "
+"instead."
+msgstr ""
+
+#: of optuna.structs.StudyDirection:1 optuna.study.StudyDirection:1
+msgid "Direction of a :class:`~optuna.study.Study`."
+msgstr ""
+
+#: of optuna.structs.StudyDirection:5 optuna.study.StudyDirection:5
+msgid "Direction has not been set."
+msgstr ""
+
+#: of optuna.structs.StudyDirection:9 optuna.study.StudyDirection:9
+msgid ":class:`~optuna.study.Study` minimizes the objective function."
+msgstr ""
+
+#: of optuna.structs.StudyDirection:13 optuna.study.StudyDirection:13
+msgid ":class:`~optuna.study.Study` maximizes the objective function."
+msgstr ""
+
+#: ../../source/reference/structs.rst:15
+msgid ""
+"This class is deprecated. Please use "
+":class:`~optuna.study.StudyDirection` instead."
+msgstr ""
+
+#: of optuna.structs.FrozenTrial:1 optuna.trial.FrozenTrial:1
+msgid "Status and results of a :class:`~optuna.trial.Trial`."
+msgstr ""
+
+#: of optuna.structs.FrozenTrial:5
+msgid ""
+"This class was moved to :mod:`~optuna.trial`. Please use "
+":class:`~optuna.trial.FrozenTrial` instead."
+msgstr ""
+
+#: of optuna.structs.FrozenTrial:10 optuna.trial.FrozenTrial:5
+msgid ""
+"Unique and consecutive number of :class:`~optuna.trial.Trial` for each "
+":class:`~optuna.study.Study`. Note that this field uses zero-based "
+"numbering."
+msgstr ""
+
+#: of optuna.structs.FrozenTrial:15 optuna.trial.FrozenTrial:10
+msgid ":class:`TrialState` of the :class:`~optuna.trial.Trial`."
+msgstr ""
+
+#: of optuna.structs.FrozenTrial:19 optuna.trial.FrozenTrial:14
+msgid "Objective value of the :class:`~optuna.trial.Trial`."
+msgstr ""
+
+#: of optuna.structs.FrozenTrial:27 optuna.trial.FrozenTrial:22
+msgid "Datetime where the :class:`~optuna.trial.Trial` finished."
+msgstr ""
+
+#: of optuna.structs.FrozenTrial:35 optuna.trial.FrozenTrial:30
+msgid ""
+"Dictionary that contains the attributes of the "
+":class:`~optuna.trial.Trial` set with "
+":func:`optuna.trial.Trial.set_user_attr`."
+msgstr ""
+
+#: of optuna.structs.FrozenTrial:40 optuna.trial.FrozenTrial:35
+msgid "Intermediate objective values set with :func:`optuna.trial.Trial.report`."
+msgstr ""
+
+#: of optuna.structs.FrozenTrial.duration:1 optuna.trial.FrozenTrial.duration:1
+msgid "Return the elapsed time taken to complete the trial."
+msgstr ""
+
+#: of optuna.structs.FrozenTrial.duration:3 optuna.trial.FrozenTrial.duration:3
+msgid "The duration."
+msgstr ""
+
+#: of optuna.structs.StudySummary:1 optuna.study.StudySummary:1
+msgid "Basic attributes and aggregated results of a :class:`~optuna.study.Study`."
+msgstr ""
+
+#: of optuna.structs.StudySummary:5
+msgid ""
+"This class was moved to :mod:`~optuna.study`. Please use "
+":class:`~optuna.study.StudySummary` instead."
+msgstr ""
+
+#: of optuna.structs.StudySummary:8 optuna.study.StudySummary:3
+msgid "See also :func:`optuna.study.get_all_study_summaries`."
+msgstr ""
+
+#: of optuna.structs.StudySummary:12 optuna.study.StudySummary:7
+msgid "Name of the :class:`~optuna.study.Study`."
+msgstr ""
+
+#: of optuna.structs.StudySummary:16 optuna.study.StudySummary:11
+msgid ":class:`~optuna.study.StudyDirection` of the :class:`~optuna.study.Study`."
+msgstr ""
+
+#: of optuna.structs.StudySummary:20 optuna.study.StudySummary:15
+msgid ""
+":class:`FrozenTrial` with best objective value in the "
+":class:`~optuna.study.Study`."
+msgstr ""
+
+#: of optuna.structs.StudySummary:24 optuna.study.StudySummary:19
+msgid ""
+"Dictionary that contains the attributes of the "
+":class:`~optuna.study.Study` set with "
+":func:`optuna.study.Study.set_user_attr`."
+msgstr ""
+
+#: of optuna.structs.StudySummary:29 optuna.study.StudySummary:24
+msgid ""
+"Dictionary that contains the attributes of the "
+":class:`~optuna.study.Study` internally set by Optuna."
+msgstr ""
+
+#: of optuna.structs.StudySummary:34 optuna.study.StudySummary:29
+msgid "The number of trials ran in the :class:`~optuna.study.Study`."
+msgstr ""
+
+#: of optuna.structs.StudySummary:38 optuna.study.StudySummary:33
+msgid "Datetime where the :class:`~optuna.study.Study` started."
+msgstr ""
+
+#: of optuna.study.Study:1
+msgid "A study corresponds to an optimization task, i.e., a set of trials."
+msgstr ""
+
+#: of optuna.study.Study:3
+msgid ""
+"This object provides interfaces to run a new "
+":class:`~optuna.trial.Trial`, access trials' history, set/get user-"
+"defined attributes of the study itself."
+msgstr ""
+
+#: of optuna.study.Study:6
+msgid ""
+"Note that the direct use of this constructor is not recommended. To "
+"create and load a study, please refer to the documentation of "
+":func:`~optuna.study.create_study` and :func:`~optuna.study.load_study` "
+"respectively."
+msgstr ""
+
+#: of optuna.study.Study.best_params:1
+msgid "Return parameters of the best trial in the study."
+msgstr ""
+
+#: of optuna.study.Study.best_params:3
+msgid "A dictionary containing parameters of the best trial."
+msgstr ""
+
+#: of optuna.study.Study.best_trial:1
+msgid "Return the best trial in the study."
+msgstr ""
+
+#: of optuna.study.Study.best_trial:3
+msgid "A :class:`~optuna.FrozenTrial` object of the best trial."
+msgstr ""
+
+#: of optuna.study.Study.best_value:1
+msgid "Return the best objective value in the study."
+msgstr ""
+
+#: of optuna.study.Study.best_value:3
+msgid "A float representing the best objective value."
+msgstr ""
+
+#: of optuna.study.Study.direction:1
+msgid "Return the direction of the study."
+msgstr ""
+
+#: of optuna.study.Study.direction:3
+msgid "A :class:`~optuna.study.StudyDirection` object."
+msgstr ""
+
+#: of optuna.study.Study.get_trials:5
+msgid ""
+"For library users, it's recommended to use more handy "
+":attr:`~optuna.study.Study.trials` property to get the trials instead."
+msgstr ""
+
+#: of optuna.study.Study.get_trials:13 optuna.study.Study.trials:7
+msgid "A list of :class:`~optuna.FrozenTrial` objects."
+msgstr ""
+
+#: of optuna.study.Study.optimize:3
+msgid ""
+"Optimization is done by choosing a suitable set of hyperparameter values "
+"from a given range. Uses a sampler which implements the task of value "
+"suggestion based on a specified distribution. The sampler is specified in"
+" :func:`~optuna.study.create_study` and the default choice for the "
+"sampler is TPE. See also :class:`~optuna.samplers.TPESampler` for more "
+"details on 'TPE'."
+msgstr ""
+
+#: of optuna.study.Study.optimize:9
+msgid "A callable that implements objective function."
+msgstr ""
+
+#: of optuna.study.Study.optimize:10
+msgid ""
+"The number of trials. If this argument is set to :obj:`None`, there is no"
+" limitation on the number of trials. If :obj:`timeout` is also set to "
+":obj:`None`, the study continues to create trials until it receives a "
+"termination signal such as Ctrl+C or SIGTERM."
+msgstr ""
+
+#: of optuna.study.Study.optimize:14
+msgid ""
+"Stop study after the given number of second(s). If this argument is set "
+"to :obj:`None`, the study is executed without time limitation. If "
+":obj:`n_trials` is also set to :obj:`None`, the study continues to create"
+" trials until it receives a termination signal such as Ctrl+C or SIGTERM."
+msgstr ""
+
+#: of optuna.study.Study.optimize:18
+msgid ""
+"The number of parallel jobs. If this argument is set to :obj:`-1`, the "
+"number is set to CPU count."
+msgstr ""
+
+#: of optuna.study.Study.optimize:20
+msgid ""
+"A study continues to run even when a trial raises one of the exceptions "
+"specified in this argument. Default is an empty tuple, i.e. the study "
+"will stop for any exception except for "
+":class:`~optuna.exceptions.TrialPruned`."
+msgstr ""
+
+#: of optuna.study.Study.optimize:23
+msgid ""
+"List of callback functions that are invoked at the end of each trial. "
+"Each function must accept two parameters with the following types in this"
+" order: :class:`~optuna.study.Study` and :class:`~optuna.FrozenTrial`."
+msgstr ""
+
+#: of optuna.study.Study.optimize:26
+msgid ""
+"Flag to determine whether to automatically run garbage collection after "
+"each trial. Set to :obj:`True` to run the garbage collection, "
+":obj:`False` otherwise. When it runs, it runs a full collection by "
+"internally calling :func:`gc.collect`. If you see an increase in memory "
+"consumption over several trials, try setting this flag to :obj:`True`."
+msgstr ""
+
+#: of optuna.study.Study.optimize:31
+msgid ""
+"Flag to show progress bars or not. To disable progress bar, set this "
+"``False``. Currently, progress bar is experimental feature and disabled "
+"when ``n_jobs`` :math:`\\ne 1`."
+msgstr ""
+
+#: of optuna.study.Study.stop:1
+msgid "Exit from the current optimization loop after the running trials finish."
+msgstr ""
+
+#: of optuna.study.Study.stop:3
+msgid ""
+"This method lets the running :meth:`~optuna.study.Study.optimize` method "
+"return immediately after all trials which the "
+":meth:`~optuna.study.Study.optimize` method spawned finishes. This method"
+" does not affect any behaviors of parallel or successive study processes."
+msgstr ""
+
+#: of optuna.study.Study.stop:8
+msgid "If this method is called outside an objective function or callback."
+msgstr ""
+
+#: of optuna.study.Study.trials_dataframe:1
+msgid "Export trials as a pandas DataFrame_."
+msgstr ""
+
+#: of optuna.study.Study.trials_dataframe:3
+msgid ""
+"The DataFrame_ provides various features to analyze studies. It is also "
+"useful to draw a histogram of objective values and to export trials as a "
+"CSV file. If there are no trials, an empty DataFrame_ is returned."
+msgstr ""
+
+#: of optuna.study.Study.trials_dataframe:26
+msgid ""
+"Specifies field names of :class:`~optuna.FrozenTrial` to include them to "
+"a DataFrame of trials."
+msgstr ""
+
+#: of optuna.study.Study.trials_dataframe:28
+msgid ""
+"Specifies whether the returned DataFrame_ employs MultiIndex_ or not. "
+"Columns that are hierarchical by nature such as ``(params, x)`` will be "
+"flattened to ``params_x`` when set to :obj:`False`."
+msgstr ""
+
+#: of optuna.study.Study.trials_dataframe:32
+msgid "A pandas DataFrame_ of trials in the :class:`~optuna.study.Study`."
+msgstr ""
+
+#: ../../source/reference/study.rst:14
+msgid "The alias also exists as :func:`optuna.create_study`."
+msgstr ""
+
+#: ../../source/reference/study.rst:19
+msgid "The alias also exists as :func:`optuna.load_study`."
+msgstr ""
+
+#: ../../source/reference/study.rst:24
+msgid "The alias also exists as :func:`optuna.delete_study`."
+msgstr ""
+
+#: ../../source/reference/study.rst:29
+msgid "The alias also exists as :func:`optuna.get_all_study_summaries`."
+msgstr ""
+
+#: of optuna.trial.Trial:6
+msgid ""
+"Note that the direct use of this constructor is not recommended. This "
+"object is seamlessly instantiated and passed to the objective function "
+"behind the :func:`optuna.study.Study.optimize()` method; hence library "
+"users do not care about instantiation of this object."
+msgstr ""
+
+#: of optuna.trial.Trial:12
+msgid "A trial ID that is automatically generated."
+msgstr ""
+
+#: of optuna.trial.Trial.report:1
+msgid "Report an objective function value for a given step."
+msgstr ""
+
+#: of optuna.trial.Trial.report:10
+msgid ""
+"The reported value is converted to ``float`` type by applying ``float()``"
+" function internally. Thus, it accepts all float-like types (e.g., "
+"``numpy.float32``). If the conversion fails, a ``TypeError`` is raised."
+msgstr ""
+
+#: of optuna.trial.Trial.report:16
+msgid ""
+"Report intermediate scores of `SGDClassifier <https://scikit-"
+"learn.org/stable/modules/ "
+"generated/sklearn.linear_model.SGDClassifier.html>`_ training."
+msgstr ""
+
+#: of optuna.trial.Trial.report:45
+msgid "A value returned from the objective function."
+msgstr ""
+
+#: of optuna.trial.Trial.set_user_attr:3
+msgid ""
+"The user attributes in the trial can be access via "
+":func:`optuna.trial.Trial.user_attrs`."
+msgstr ""
+
+#: of optuna.trial.Trial.set_user_attr:7
+msgid "Save fixed hyperparameters of neural network training."
+msgstr ""
+
+#: of optuna.trial.Trial.should_prune:1
+msgid "Suggest whether the trial should be pruned or not."
+msgstr ""
+
+#: of optuna.trial.Trial.should_prune:3
+msgid ""
+"The suggestion is made by a pruning algorithm associated with the trial "
+"and is based on previously reported values. The algorithm can be "
+"specified when constructing a :class:`~optuna.study.Study`."
+msgstr ""
+
+#: of optuna.trial.Trial.should_prune:8
+msgid ""
+"If no values have been reported, the algorithm cannot make meaningful "
+"suggestions. Similarly, if this method is called multiple times with the "
+"exact same set of reported values, the suggestions will be the same."
+msgstr ""
+
+#: of optuna.trial.Trial.should_prune:13
+msgid "Please refer to the example code in :func:`optuna.trial.Trial.report`."
+msgstr ""
+
+#: of optuna.trial.Trial.should_prune:15
+msgid ""
+"A boolean value. If :obj:`True`, the trial should be pruned according to "
+"the configured pruning algorithm. Otherwise, the trial should continue."
+msgstr ""
+
+#: of optuna.trial.Trial.suggest_categorical:3
+msgid "The value is sampled from ``choices``."
+msgstr ""
+
+#: of optuna.trial.Trial.suggest_categorical:7
+msgid ""
+"Suggest a kernel function of `SVC <https://scikit-"
+"learn.org/stable/modules/generated/ sklearn.svm.SVC.html>`_."
+msgstr ""
+
+#: of optuna.trial.Trial.suggest_categorical:31
+#: optuna.trial.Trial.suggest_discrete_uniform:39
+#: optuna.trial.Trial.suggest_float:46 optuna.trial.Trial.suggest_int:31
+#: optuna.trial.Trial.suggest_loguniform:33
+#: optuna.trial.Trial.suggest_uniform:34
+msgid "A parameter name."
+msgstr ""
+
+#: of optuna.trial.Trial.suggest_categorical:35
+msgid ":class:`~optuna.distributions.CategoricalDistribution`."
+msgstr ""
+
+#: of optuna.trial.Trial.suggest_categorical:37
+msgid "A suggested value."
+msgstr ""
+
+#: of optuna.trial.Trial.suggest_discrete_uniform:3
+msgid ""
+"The value is sampled from the range :math:`[\\mathsf{low}, "
+"\\mathsf{high}]`, and the step of discretization is :math:`q`. More "
+"specifically, this method returns one of the values in the sequence "
+":math:`\\mathsf{low}, \\mathsf{low} + q, \\mathsf{low} + 2 q, \\dots, "
+"\\mathsf{low} + k q \\le \\mathsf{high}`, where :math:`k` denotes an "
+"integer. Note that :math:`high` may be changed due to round-off errors if"
+" :math:`q` is not an integer. Please check warning messages to find the "
+"changed values."
+msgstr ""
+
+#: of optuna.trial.Trial.suggest_discrete_uniform:14
+msgid ""
+"Suggest a fraction of samples used for fitting the individual learners of"
+" `GradientBoostingClassifier <https://scikit-"
+"learn.org/stable/modules/generated/ "
+"sklearn.ensemble.GradientBoostingClassifier.html>`_."
+msgstr ""
+
+#: of optuna.trial.Trial.suggest_discrete_uniform:40
+#: optuna.trial.Trial.suggest_float:47 optuna.trial.Trial.suggest_int:32
+#: optuna.trial.Trial.suggest_loguniform:34
+#: optuna.trial.Trial.suggest_uniform:35
+msgid ""
+"Lower endpoint of the range of suggested values. ``low`` is included in "
+"the range."
+msgstr ""
+
+#: of optuna.trial.Trial.suggest_discrete_uniform:41
+#: optuna.trial.Trial.suggest_int:33
+msgid ""
+"Upper endpoint of the range of suggested values. ``high`` is included in "
+"the range."
+msgstr ""
+
+#: of optuna.trial.Trial.suggest_discrete_uniform:42
+#: optuna.trial.Trial.suggest_float:50 optuna.trial.Trial.suggest_int:34
+msgid "A step of discretization."
+msgstr ""
+
+#: of optuna.trial.Trial.suggest_discrete_uniform:44
+#: optuna.trial.Trial.suggest_float:66 optuna.trial.Trial.suggest_loguniform:38
+#: optuna.trial.Trial.suggest_uniform:39
+msgid "A suggested float value."
+msgstr ""
+
+#: of optuna.trial.Trial.suggest_float:3
+msgid ""
+"Note that this is a wrapper method for "
+":func:`~optuna.trial.Trial.suggest_uniform`, "
+":func:`~optuna.trial.Trial.suggest_loguniform` and "
+":func:`~optuna.trial.Trial.suggest_discrete_uniform`."
+msgstr ""
+
+#: of optuna.trial.Trial.suggest_float:10
+msgid ""
+"Please see also :func:`~optuna.trial.Trial.suggest_uniform`, "
+":func:`~optuna.trial.Trial.suggest_loguniform` and "
+":func:`~optuna.trial.Trial.suggest_discrete_uniform`."
+msgstr ""
+
+#: of optuna.trial.Trial.suggest_float:16
+msgid ""
+"Suggest a momentum, learning rate and scaling factor of learning rate for"
+" neural network training."
+msgstr ""
+
+#: of optuna.trial.Trial.suggest_float:48
+#: optuna.trial.Trial.suggest_loguniform:35
+#: optuna.trial.Trial.suggest_uniform:36
+msgid ""
+"Upper endpoint of the range of suggested values. ``high`` is excluded "
+"from the range."
+msgstr ""
+
+#: of optuna.trial.Trial.suggest_float:50
+msgid ""
+"A step of discretization.  .. note::     The ``step`` and ``log`` "
+"arguments cannot be used at the same time. To set     the ``step`` "
+"argument to a float number, set the ``log`` argument to ``False``."
+msgstr ""
+
+#: of optuna.trial.Trial.suggest_float:53
+msgid ""
+"The ``step`` and ``log`` arguments cannot be used at the same time. To "
+"set the ``step`` argument to a float number, set the ``log`` argument to "
+"``False``."
+msgstr ""
+
+#: of optuna.trial.Trial.suggest_float:55
+msgid ""
+"A flag to sample the value from the log domain or not. If ``log`` is "
+"true, the value is sampled from the range in the log domain. Otherwise, "
+"the value is sampled from the range in the linear domain. See also "
+":func:`suggest_uniform` and :func:`suggest_loguniform`.  .. note::     "
+"The ``step`` and ``log`` arguments cannot be used at the same time. To "
+"set     the ``log`` argument to ``True``, set the ``step`` argument to "
+"``None``."
+msgstr ""
+
+#: of optuna.trial.Trial.suggest_float:55
+msgid ""
+"A flag to sample the value from the log domain or not. If ``log`` is "
+"true, the value is sampled from the range in the log domain. Otherwise, "
+"the value is sampled from the range in the linear domain. See also "
+":func:`suggest_uniform` and :func:`suggest_loguniform`."
+msgstr ""
+
+#: of optuna.trial.Trial.suggest_float:61
+msgid ""
+"The ``step`` and ``log`` arguments cannot be used at the same time. To "
+"set the ``log`` argument to ``True``, set the ``step`` argument to "
+"``None``."
+msgstr ""
+
+#: of optuna.trial.Trial.suggest_float:64
+msgid "If ``step is not None`` and ``log = True`` are specified."
+msgstr ""
+
+#: of optuna.trial.Trial.suggest_int:3
+msgid ""
+"The value is sampled from the integers in :math:`[\\mathsf{low}, "
+"\\mathsf{high}]`."
+msgstr ""
+
+#: of optuna.trial.Trial.suggest_int:7
+msgid ""
+"Suggest the number of trees in `RandomForestClassifier <https://scikit-"
+"learn.org/ "
+"stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html>`_."
+msgstr ""
+
+#: of optuna.trial.Trial.suggest_int:34
+msgid ""
+"A step of discretization.  .. note::     Note that :math:`\\mathsf{high}`"
+" is modified if the range is not divisible by     :math:`\\mathsf{step}`."
+" Please check the warning messages to find the changed     values.  .. "
+"note::     The method returns one of the values in the sequence     "
+":math:`\\mathsf{low}, \\mathsf{low} + \\mathsf{step}, \\mathsf{low} + 2 *"
+"     \\mathsf{step}, \\dots, \\mathsf{low} + k * \\mathsf{step} \\le     "
+"\\mathsf{high}`, where :math:`k` denotes an integer.  .. note::     The "
+"``step != 1`` and ``log`` arguments cannot be used at the same time.     "
+"To set the ``step`` argument :math:`\\mathsf{step} \\ge 2`, set the     "
+"``log`` argument to ``False``."
+msgstr ""
+
+#: of optuna.trial.Trial.suggest_int:37
+msgid ""
+"Note that :math:`\\mathsf{high}` is modified if the range is not "
+"divisible by :math:`\\mathsf{step}`. Please check the warning messages to"
+" find the changed values."
+msgstr ""
+
+#: of optuna.trial.Trial.suggest_int:42
+msgid ""
+"The method returns one of the values in the sequence "
+":math:`\\mathsf{low}, \\mathsf{low} + \\mathsf{step}, \\mathsf{low} + 2 *"
+" \\mathsf{step}, \\dots, \\mathsf{low} + k * \\mathsf{step} \\le "
+"\\mathsf{high}`, where :math:`k` denotes an integer."
+msgstr ""
+
+#: of optuna.trial.Trial.suggest_int:48
+msgid ""
+"The ``step != 1`` and ``log`` arguments cannot be used at the same time. "
+"To set the ``step`` argument :math:`\\mathsf{step} \\ge 2`, set the "
+"``log`` argument to ``False``."
+msgstr ""
+
+#: of optuna.trial.Trial.suggest_int:51
+msgid ""
+"A flag to sample the value from the log domain or not.  .. note::     If "
+"``log`` is true, at first, the range of suggested values is divided into"
+"     grid points of width 1. The range of suggested values is then "
+"converted to     a log domain, from which a value is sampled. The "
+"uniformly sampled     value is re-converted to the original domain and "
+"rounded to the nearest grid     point that we just split, and the "
+"suggested value is determined.     For example, if `low = 2` and `high = "
+"8`, then the range of suggested values is     `[2, 3, 4, 5, 6, 7, 8]` and"
+" lower values tend to be more sampled than higher     values.  .. note::"
+"     The ``step != 1`` and ``log`` arguments cannot be used at the same "
+"time.     To set the ``log`` argument to ``True``, set the ``step`` "
+"argument to 1."
+msgstr ""
+
+#: of optuna.trial.Trial.suggest_int:51
+msgid "A flag to sample the value from the log domain or not."
+msgstr ""
+
+#: of optuna.trial.Trial.suggest_int:54
+msgid ""
+"If ``log`` is true, at first, the range of suggested values is divided "
+"into grid points of width 1. The range of suggested values is then "
+"converted to a log domain, from which a value is sampled. The uniformly "
+"sampled value is re-converted to the original domain and rounded to the "
+"nearest grid point that we just split, and the suggested value is "
+"determined. For example, if `low = 2` and `high = 8`, then the range of "
+"suggested values is `[2, 3, 4, 5, 6, 7, 8]` and lower values tend to be "
+"more sampled than higher values."
+msgstr ""
+
+#: of optuna.trial.Trial.suggest_int:64
+msgid ""
+"The ``step != 1`` and ``log`` arguments cannot be used at the same time. "
+"To set the ``log`` argument to ``True``, set the ``step`` argument to 1."
+msgstr ""
+
+#: of optuna.trial.Trial.suggest_int:67
+msgid "If ``step != 1`` and ``log = True`` are specified."
+msgstr ""
+
+#: of optuna.trial.Trial.suggest_loguniform:3
+msgid ""
+"The value is sampled from the range :math:`[\\mathsf{low}, "
+"\\mathsf{high})` in the log domain. When :math:`\\mathsf{low} = "
+"\\mathsf{high}`, the value of :math:`\\mathsf{low}` will be returned."
+msgstr ""
+
+#: of optuna.trial.Trial.suggest_loguniform:9
+msgid ""
+"Suggest penalty parameter ``C`` of `SVC <https://scikit-"
+"learn.org/stable/modules/ generated/sklearn.svm.SVC.html>`_."
+msgstr ""
+
+#: of optuna.trial.Trial.suggest_uniform:3
+msgid ""
+"The value is sampled from the range :math:`[\\mathsf{low}, "
+"\\mathsf{high})` in the linear domain. When :math:`\\mathsf{low} = "
+"\\mathsf{high}`, the value of :math:`\\mathsf{low}` will be returned."
+msgstr ""
+
+#: of optuna.trial.Trial.suggest_uniform:9
+msgid "Suggest a momentum for neural network training."
+msgstr ""
+
+#: of optuna.trial.FixedTrial:1
+msgid "A trial class which suggests a fixed value for each parameter."
+msgstr ""
+
+#: of optuna.trial.FixedTrial:3
+msgid ""
+"This object has the same methods as :class:`~optuna.trial.Trial`, and it "
+"suggests pre-defined parameter values. The parameter values can be "
+"determined at the construction of the :class:`~optuna.trial.FixedTrial` "
+"object. In contrast to :class:`~optuna.trial.Trial`, "
+":class:`~optuna.trial.FixedTrial` does not depend on "
+":class:`~optuna.study.Study`, and it is useful for deploying optimization"
+" results."
+msgstr ""
+
+#: of optuna.trial.FixedTrial:11
+msgid "Evaluate an objective function with parameter values given by a user."
+msgstr ""
+
+#: of optuna.trial.FixedTrial:25
+msgid ""
+"Please refer to :class:`~optuna.trial.Trial` for details of methods and "
+"properties."
+msgstr ""
+
+#: of optuna.trial.FixedTrial:28
+msgid "A trial number. Defaults to ``0``."
+msgstr ""
+
+#: ../../source/reference/visualization.rst:8
+msgid ""
+":mod:`~optuna.visualization` module uses plotly to create figures, but "
+"`JupyterLab`_ cannot render them by default. Please follow this "
+"`installation guide`_ to show figures in `JupyterLab`_."
+msgstr ""
+
+#: of optuna.visualization.plot_contour:1
+msgid "Plot the parameter relationship as contour plot in a study."
+msgstr ""
+
+#: of optuna.visualization.plot_contour:3
+#: optuna.visualization.plot_parallel_coordinate:3
+#: optuna.visualization.plot_slice:3
+msgid ""
+"Note that, If a parameter contains missing values, a trial with missing "
+"values is not plotted."
+msgstr ""
+
+#: of optuna.visualization.plot_contour:7
+msgid ""
+"The following code snippet shows how to plot the parameter relationship "
+"as contour plot."
+msgstr ""
+
+#: of optuna.visualization.plot_contour:28
+#: optuna.visualization.plot_optimization_history:27
+#: optuna.visualization.plot_parallel_coordinate:29
+#: optuna.visualization.plot_slice:28
+msgid ""
+"A :class:`~optuna.study.Study` object whose trials are plotted for their "
+"objective values."
+msgstr ""
+
+#: of optuna.visualization.plot_contour:30
+#: optuna.visualization.plot_parallel_coordinate:31
+#: optuna.visualization.plot_slice:30
+msgid "Parameter list to visualize. The default is all parameters."
+msgstr ""
+
+#: of optuna.visualization.plot_intermediate_values:1
+msgid "Plot intermediate values of all trials in a study."
+msgstr ""
+
+#: of optuna.visualization.plot_intermediate_values:5
+msgid "The following code snippet shows how to plot intermediate values."
+msgstr ""
+
+#: of optuna.visualization.plot_intermediate_values:44
+msgid ""
+"A :class:`~optuna.study.Study` object whose trials are plotted for their "
+"intermediate values."
+msgstr ""
+
+#: of optuna.visualization.plot_optimization_history:1
+msgid "Plot optimization history of all trials in a study."
+msgstr ""
+
+#: of optuna.visualization.plot_optimization_history:5
+msgid "The following code snippet shows how to plot optimization history."
+msgstr ""
+
+#: of optuna.visualization.plot_parallel_coordinate:1
+msgid "Plot the high-dimentional parameter relationships in a study."
+msgstr ""
+
+#: of optuna.visualization.plot_parallel_coordinate:7
+msgid ""
+"The following code snippet shows how to plot the high-dimentional "
+"parameter relationships."
+msgstr ""
+
+#: of optuna.visualization.plot_param_importances:1
+msgid "Plot hyperparameter importances."
+msgstr ""
+
+#: of optuna.visualization.plot_param_importances:5
+msgid "The following code snippet shows how to plot hyperparameter importances."
+msgstr ""
+
+#: of optuna.visualization.plot_param_importances:30
+msgid ""
+"This function visualizes the results of "
+":func:`optuna.importance.get_param_importances`."
+msgstr ""
+
+#: of optuna.visualization.plot_slice:1
+msgid "Plot the parameter relationship as slice plot in a study."
+msgstr ""
+
+#: of optuna.visualization.plot_slice:7
+msgid ""
+"The following code snippet shows how to plot the parameter relationship "
+"as slice plot."
+msgstr ""
+
+#: of optuna.visualization.is_available:1
+msgid "Returns whether visualization is available or not."
+msgstr ""
+
+#: of optuna.visualization.is_available:5
+msgid ""
+":mod:`~optuna.visualization` module depends on plotly version 4.0.0 or "
+"higher. If a supported version of plotly isn't installed in your "
+"environment, this function will return :obj:`False`. In such case, please"
+" execute ``$ pip install -U plotly>=4.0.0`` to install plotly."
+msgstr ""
+
+#: of optuna.visualization.is_available:10
+msgid ":obj:`True` if visualization is available, :obj:`False` otherwise."
+msgstr ""
+

@@ -1,0 +1,79 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018, Optuna Contributors.
+# This file is distributed under the same license as the Optuna package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Optuna 1.4.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-06-17 19:47-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../source/tutorial/configurations.rst:4
+msgid "Advanced Configurations"
+msgstr "高级配置"
+
+#: ../../source/tutorial/configurations.rst:7
+msgid "Defining Parameter Spaces"
+msgstr "定义参数空间"
+
+#: ../../source/tutorial/configurations.rst:9
+msgid "Optuna supports five kinds of parameters."
+msgstr "Optuna 支持五种类型的参数。"
+
+#: ../../source/tutorial/configurations.rst:32
+msgid "Branches and Loops"
+msgstr "分支 (Branches) 与 循环 (Loops)"
+
+#: ../../source/tutorial/configurations.rst:34
+msgid "You can use branches or loops depending on the parameter values."
+msgstr "根据不同的参数值，你可以选择使用分支或者循环。"
+
+#: ../../source/tutorial/configurations.rst:63
+msgid ""
+"Please also refer to `examples "
+"<https://github.com/optuna/optuna/tree/master/examples>`_."
+msgstr "更多例子见 `examples <https://github.com/optuna/optuna/tree/master/examples>`_."
+
+#: ../../source/tutorial/configurations.rst:67
+msgid "Note on the Number of Parameters"
+msgstr "参数个数的注意事项"
+
+#: ../../source/tutorial/configurations.rst:69
+msgid ""
+"The difficulty of optimization increases roughly exponentially with "
+"regard to the number of parameters. That is, the number of necessary "
+"trials increases exponentially when you increase the number of "
+"parameters, so it is recommended to not add unimportant parameters."
+msgstr "随着参数个数的增长，优化的难度约成指数增长。也就是说，当你增加参数的个数的时候，优化所需要的 trial 个数会呈指数增长。因此我们推荐不要增加不必要的参数。"
+
+#: ../../source/tutorial/configurations.rst:73
+msgid "Arguments for `Study.optimize`"
+msgstr "`Study.optimize` 的参数"
+
+#: ../../source/tutorial/configurations.rst:75
+msgid ""
+"The method :func:`~optuna.study.Study.optimize` (and ``optuna study "
+"optimize`` CLI command as well) has several useful options such as "
+"``timeout``. For details, please refer to the API reference for "
+":func:`~optuna.study.Study.optimize`."
+msgstr ":func:`~optuna.study.Study.optimize` (还有命令 ``optuna study optimize``) 有着数个有用的参数，比如``timeout``. 具体细节见 :func:`~optuna.study.Study.optimize` 的API参考资料。"
+
+#: ../../source/tutorial/configurations.rst:79
+msgid ""
+"**FYI**: If you give neither ``n_trials`` nor ``timeout`` options, the "
+"optimization continues until it receives a termination signal such as "
+"Ctrl+C or SIGTERM. This is useful for use cases such as when it is hard "
+"to estimate the computational costs required to optimize your objective "
+"function."
+msgstr "**供參考**: 如果既没有给出 ``n_trials`` 也没有给出 ``timeout`` 参数的话，优化过程将一直持续下去，直到接收到一个诸如 Ctrl+C 或 SIGTERM 的终止信号。
+这在难以估算优化目标函数所需的计算成本的情况时是有用的。"
+

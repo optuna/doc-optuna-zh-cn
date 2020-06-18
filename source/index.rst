@@ -1,27 +1,36 @@
 |optunalogo|
 
-Optuna: 一个超参数优化框架
+Optuna: A hyperparameter optimization framework
 ===============================================
 
-*Optuna* 是一个特别为机器学习设计的自动超参数优化软件框架。它具有命令式的，*define-by-run* 风格的 API。由于这种 API 的存在，用 Optuna 编写的代码模块化程度很高，Optuna 的用户因此也可以动态地构造超参数的搜索空间。
+*Optuna* is an automatic hyperparameter optimization software framework,
+particularly designed for machine learning. It features an imperative,
+*define-by-run* style user API. Thanks to our *define-by-run* API, the
+code written with Optuna enjoys high modularity, and the user of Optuna
+can dynamically construct the search spaces for the hyperparameters.
 
-主要特点
+Key Features
 ------------
 
-Optuna 有如下现代化的功能：
+Optuna has modern functionalities as follows:
 
--  并行的分布式优化
--  对不理想实验 (trial) 的剪枝 (pruning)
--  轻量级、多功能和跨平台架构
+- :doc:`Lightweight, versatile, and platform agnostic architecture <tutorial/first>`
+- :doc:`Parallel distributed optimization <tutorial/distributed>`
+- :doc:`Pruning of unpromising trials <tutorial/pruning>`
 
-基本概念
+Basic Concepts
 --------------
-我们以如下方式使用 *study* 和 *trial* 这两个术语：
 
--  Study: 基于目标函数的优化过程
--  Trial: 目标函数的单次执行过程
+We use the terms *study* and *trial* as follows:
 
-请参考下面的示例代码。一个 *study* 的目的是通过多次 *trial* (例如 ``n_trials=100`` ) 来找出最佳的超参数值集（比如选择 ``classifier`` 还是 ``svm_c``）。而 Optuna 旨在加速和自动化此类 *study* 优化过程。
+-  Study: optimization based on an objective function
+-  Trial: a single execution of the objective function
+
+Please refer to sample code below. The goal of a *study* is to find out
+the optimal set of hyperparameter values (e.g., ``classifier`` and
+``svm_c``) through multiple *trials* (e.g., ``n_trials=100``). Optuna is
+a framework designed for the automation and the acceleration of the
+optimization *studies*.
 
 |Open in Colab|
 
@@ -29,10 +38,10 @@ Optuna 有如下现代化的功能：
 
     import ...
 
-    # 定义待优化的目标函数。
+    # Define an objective function to be minimized.
     def objective(trial):
 
-        # 调用 suggest 方法用于给该 Trial 生成超参数。
+        # Invoke suggest methods of a Trial object to generate hyperparameters.
         regressor_name = trial.suggest_categorical('classifier', ['SVR', 'RandomForest'])
         if regressor_name == 'SVR':
             svr_c = trial.suggest_loguniform('svr_c', 1e-10, 1e10)
@@ -49,22 +58,27 @@ Optuna 有如下现代化的功能：
 
         error = sklearn.metrics.mean_squared_error(y_val, y_pred)
 
-        return error  # Trial 对象对应的目标函数值。
+        return error  # An objective value linked with the Trial object.
 
-    study = optuna.create_study()  # 创建新study.
-    study.optimize(objective, n_trials=100)  # 开始目标函数的优化过程。
+    study = optuna.create_study()  # Create a new study.
+    study.optimize(objective, n_trials=100)  # Invoke optimization of the objective function.
 
 Communication
 -------------
 
-- 可在 `GitHub Issues <https://github.com/optuna/optuna/issues>`__ 报告bug、提feature request 和问问题。
-- 可在 `Gitter <https://gitter.im/optuna/optuna>`__ 与开发者互动.
-- 可在 `StackOverflow <https://stackoverflow.com/questions/tagged/optuna>`__ 提问。
+-  `GitHub Issues <https://github.com/optuna/optuna/issues>`__ for bug
+   reports, feature requests and questions.
+-  `Gitter <https://gitter.im/optuna/optuna>`__ for interactive chat
+   with developers.
+-  `Stack
+   Overflow <https://stackoverflow.com/questions/tagged/optuna>`__ for
+   questions.
 
-贡献
+Contribution
 ------------
 
-欢迎大家对Optuna的一切贡献！但是在发送pull request时请遵从 `contribution guide <https://github.com/optuna/optuna/blob/master/CONTRIBUTING.md>`__ 的规范.
+Any contributions to Optuna are welcome! When you send a pull request,
+please follow the `contribution guide <https://github.com/optuna/optuna/blob/master/CONTRIBUTING.md>`__.
 
 License
 -------

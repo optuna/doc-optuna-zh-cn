@@ -1,0 +1,725 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018, Optuna Contributors.
+# This file is distributed under the same license as the Optuna package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Optuna 1.4.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-06-17 19:47-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../source/tutorial/attributes.rst:4
+msgid "User Attributes"
+msgstr ""
+
+#: ../../source/tutorial/attributes.rst:6
+msgid "This feature is to annotate experiments with user-defined attributes."
+msgstr ""
+
+#: ../../source/tutorial/attributes.rst:10
+msgid "Adding User Attributes to Studies"
+msgstr ""
+
+#: ../../source/tutorial/attributes.rst:12
+msgid ""
+"A :class:`~optuna.study.Study` object provides "
+":func:`~optuna.study.Study.set_user_attr` method to register a pair of "
+"key and value as an user-defined attribute. A key is supposed to be a "
+"``str``, and a value be any object serializable with ``json.dumps``."
+msgstr ""
+
+#: ../../source/tutorial/attributes.rst:24
+msgid ""
+"We can access annotated attributes with "
+":attr:`~optuna.study.Study.user_attr` property."
+msgstr ""
+
+#: ../../source/tutorial/attributes.rst:30
+msgid ""
+":class:`~optuna.struct.StudySummary` object, which can be retrieved by "
+":func:`~optuna.study.get_all_study_summaries`, also contains user-defined"
+" attributes."
+msgstr ""
+
+#: ../../source/tutorial/attributes.rst:39
+msgid ""
+"``optuna study set-user-attr`` command, which sets an attribute via "
+"command line interface."
+msgstr ""
+
+#: ../../source/tutorial/attributes.rst:43
+msgid "Adding User Attributes to Trials"
+msgstr ""
+
+#: ../../source/tutorial/attributes.rst:45
+msgid ""
+"As with :class:`~optuna.study.Study`, a :class:`~optuna.trial.Trial` "
+"object provides :func:`~optuna.trial.Trial.set_user_attr` method. "
+"Attributes are set inside an objective function."
+msgstr ""
+
+#: ../../source/tutorial/attributes.rst:64
+msgid "We can access annotated attributes as:"
+msgstr ""
+
+#: ../../source/tutorial/attributes.rst:70
+msgid ""
+"Note that, in this example, the attribute is not annotated to a "
+":class:`~optuna.study.Study` but a single :class:`~optuna.trial.Trial`."
+msgstr ""
+
+#: ../../source/tutorial/cli.rst:4
+msgid "Command-Line Interface"
+msgstr ""
+
+#: ../../source/tutorial/cli.rst:1
+msgid "Command"
+msgstr ""
+
+#: ../../source/tutorial/cli.rst:1
+msgid "Description"
+msgstr ""
+
+#: ../../source/tutorial/cli.rst:1
+msgid "create-study"
+msgstr ""
+
+#: ../../source/tutorial/cli.rst:1
+msgid "Create a new study."
+msgstr ""
+
+#: ../../source/tutorial/cli.rst:1
+msgid "delete-study"
+msgstr ""
+
+#: ../../source/tutorial/cli.rst:1
+msgid "Delete a specified study."
+msgstr ""
+
+#: ../../source/tutorial/cli.rst:1
+msgid "dashboard"
+msgstr ""
+
+#: ../../source/tutorial/cli.rst:1
+msgid "Launch web dashboard (beta)."
+msgstr ""
+
+#: ../../source/tutorial/cli.rst:1
+msgid "storage upgrade"
+msgstr ""
+
+#: ../../source/tutorial/cli.rst:1
+msgid "Upgrade the schema of a storage."
+msgstr ""
+
+#: ../../source/tutorial/cli.rst:1
+msgid "studies"
+msgstr ""
+
+#: ../../source/tutorial/cli.rst:1
+msgid "Show a list of studies."
+msgstr ""
+
+#: ../../source/tutorial/cli.rst:1
+msgid "study optimize"
+msgstr ""
+
+#: ../../source/tutorial/cli.rst:1
+msgid "Start optimization of a study."
+msgstr ""
+
+#: ../../source/tutorial/cli.rst:1
+msgid "study set-user-attr"
+msgstr ""
+
+#: ../../source/tutorial/cli.rst:1
+msgid "Set a user attribute to a study."
+msgstr ""
+
+#: ../../source/tutorial/cli.rst:18
+msgid "Optuna provides command-line interface as shown in the above table."
+msgstr ""
+
+#: ../../source/tutorial/cli.rst:20
+msgid ""
+"Let us assume you are not in IPython shell and writing Python script "
+"files instead. It is totally fine to write scripts like the following:"
+msgstr ""
+
+#: ../../source/tutorial/cli.rst:38
+msgid ""
+"However, we can reduce boilerplate codes by using our ``optuna`` command."
+" Let us assume that ``foo.py`` contains only the following code."
+msgstr ""
+
+#: ../../source/tutorial/cli.rst:47
+msgid ""
+"Even so, we can invoke the optimization as follows. (Don't care about "
+"``--storage sqlite:///example.db`` for now, which is described in "
+":ref:`rdb`.)"
+msgstr ""
+
+#: ../../source/tutorial/cli.rst:63
+msgid ""
+"Please note that ``foo.py`` only contains the definition of the objective"
+" function. By giving the script file name and the method name of "
+"objective function to ``optuna study optimize`` command, we can invoke "
+"the optimization."
+msgstr ""
+
+#: ../../source/tutorial/configurations.rst:4
+msgid "Advanced Configurations"
+msgstr ""
+
+#: ../../source/tutorial/configurations.rst:7
+msgid "Defining Parameter Spaces"
+msgstr ""
+
+#: ../../source/tutorial/configurations.rst:9
+msgid "Optuna supports five kinds of parameters."
+msgstr ""
+
+#: ../../source/tutorial/configurations.rst:32
+msgid "Branches and Loops"
+msgstr ""
+
+#: ../../source/tutorial/configurations.rst:34
+msgid "You can use branches or loops depending on the parameter values."
+msgstr ""
+
+#: ../../source/tutorial/configurations.rst:63
+msgid ""
+"Please also refer to `examples "
+"<https://github.com/optuna/optuna/tree/master/examples>`_."
+msgstr ""
+
+#: ../../source/tutorial/configurations.rst:67
+msgid "Note on the Number of Parameters"
+msgstr ""
+
+#: ../../source/tutorial/configurations.rst:69
+msgid ""
+"The difficulty of optimization increases roughly exponentially with "
+"regard to the number of parameters. That is, the number of necessary "
+"trials increases exponentially when you increase the number of "
+"parameters, so it is recommended to not add unimportant parameters."
+msgstr ""
+
+#: ../../source/tutorial/configurations.rst:73
+msgid "Arguments for `Study.optimize`"
+msgstr ""
+
+#: ../../source/tutorial/configurations.rst:75
+msgid ""
+"The method :func:`~optuna.study.Study.optimize` (and ``optuna study "
+"optimize`` CLI command as well) has several useful options such as "
+"``timeout``. For details, please refer to the API reference for "
+":func:`~optuna.study.Study.optimize`."
+msgstr ""
+
+#: ../../source/tutorial/configurations.rst:79
+msgid ""
+"**FYI**: If you give neither ``n_trials`` nor ``timeout`` options, the "
+"optimization continues until it receives a termination signal such as "
+"Ctrl+C or SIGTERM. This is useful for use cases such as when it is hard "
+"to estimate the computational costs required to optimize your objective "
+"function."
+msgstr ""
+
+#: ../../source/tutorial/distributed.rst:4
+msgid "Distributed Optimization"
+msgstr ""
+
+#: ../../source/tutorial/distributed.rst:6
+msgid ""
+"There is no complicated setup but just sharing the same study name among "
+"nodes/processes."
+msgstr ""
+
+#: ../../source/tutorial/distributed.rst:8
+msgid ""
+"First, create a shared study using ``optuna create-study`` command (or "
+"using :func:`optuna.create_study` in a Python script)."
+msgstr ""
+
+#: ../../source/tutorial/distributed.rst:15
+msgid ""
+"Then, write an optimization script. Let's assume that ``foo.py`` contains"
+" the following code."
+msgstr ""
+
+#: ../../source/tutorial/distributed.rst:29
+msgid ""
+"Finally, run the shared study from multiple processes. For example, run "
+"``Process 1`` in a terminal, and do ``Process 2`` in another one. They "
+"get parameter suggestions based on shared trials' history."
+msgstr ""
+
+#: ../../source/tutorial/distributed.rst:33
+msgid "Process 1:"
+msgstr ""
+
+#: ../../source/tutorial/distributed.rst:42
+msgid "Process 2 (the same command as process 1):"
+msgstr ""
+
+#: ../../source/tutorial/distributed.rst:52
+msgid ""
+"We do not recommend SQLite for large scale distributed optimizations "
+"because it may cause serious performance issues. Please consider to use "
+"another database engine like PostgreSQL or MySQL."
+msgstr ""
+
+#: ../../source/tutorial/distributed.rst:55
+msgid ""
+"Please avoid putting the SQLite database on NFS when running distributed "
+"optimizations. See also: https://www.sqlite.org/faq.html#q5"
+msgstr ""
+
+#: ../../source/tutorial/first.rst:4
+msgid "First Optimization"
+msgstr ""
+
+#: ../../source/tutorial/first.rst:8
+msgid "Quadratic Function Example"
+msgstr ""
+
+#: ../../source/tutorial/first.rst:10
+msgid ""
+"Usually, Optuna is used to optimize hyper-parameters, but as an example, "
+"let us directly optimize a quadratic function in an IPython shell."
+msgstr ""
+
+#: ../../source/tutorial/first.rst:16
+msgid "The objective function is what will be optimized."
+msgstr ""
+
+#: ../../source/tutorial/first.rst:25
+msgid ""
+"This function returns the value of :math:`(x - 2)^2`. Our goal is to find"
+" the value of ``x`` that minimizes the output of the ``objective`` "
+"function. This is the \"optimization.\" During the optimization, Optuna "
+"repeatedly calls and evaluates the objective function with different "
+"values of ``x``."
+msgstr ""
+
+#: ../../source/tutorial/first.rst:27
+msgid ""
+"A :class:`~optuna.trial.Trial` object corresponds to a single execution "
+"of the objective function and is internally instantiated upon each "
+"invocation of the function."
+msgstr ""
+
+#: ../../source/tutorial/first.rst:29
+msgid ""
+"The `suggest` APIs (for example, "
+":func:`~optuna.trial.Trial.suggest_uniform`) are called inside the "
+"objective function to obtain parameters for a trial. "
+":func:`~optuna.trial.Trial.suggest_uniform` selects parameters uniformly "
+"within the range provided. In our example, from -10 to 10."
+msgstr ""
+
+#: ../../source/tutorial/first.rst:31
+msgid ""
+"To start the optimization, we create a study object and pass the "
+"objective function to method :func:`~optuna.study.Study.optimize` as "
+"follows."
+msgstr ""
+
+#: ../../source/tutorial/first.rst:38 ../../source/tutorial/first.rst:58
+#: ../../source/tutorial/first.rst:87 ../../source/tutorial/first.rst:99
+#: ../../source/tutorial/first.rst:111 ../../source/tutorial/first.rst:123
+#: ../../source/tutorial/first.rst:137 ../../source/tutorial/first.rst:155
+#: ../../source/tutorial/rdb.rst:66
+msgid "Out:"
+msgstr ""
+
+#: ../../source/tutorial/first.rst:52
+msgid "You can get the best parameter as follows."
+msgstr ""
+
+#: ../../source/tutorial/first.rst:64
+msgid ""
+"We can see that Optuna found the best ``x`` value ``2.001707713205946``, "
+"which is close to the optimal value of ``2``."
+msgstr ""
+
+#: ../../source/tutorial/first.rst:67
+msgid ""
+"When used to search for hyper-parameters in machine learning, usually the"
+" objective function would return the loss or accuracy of the model."
+msgstr ""
+
+#: ../../source/tutorial/first.rst:70
+msgid "Study Object"
+msgstr ""
+
+#: ../../source/tutorial/first.rst:72
+msgid "Let us clarify the terminology in Optuna as follows:"
+msgstr ""
+
+#: ../../source/tutorial/first.rst:74
+msgid "**Trial**: A single call of the objective function"
+msgstr ""
+
+#: ../../source/tutorial/first.rst:75
+msgid "**Study**: An optimization session, which is a set of trials"
+msgstr ""
+
+#: ../../source/tutorial/first.rst:76
+msgid ""
+"**Parameter**: A variable whose value is to be optimized, such as ``x`` "
+"in the above example"
+msgstr ""
+
+#: ../../source/tutorial/first.rst:78
+msgid ""
+"In Optuna, we use the study object to manage optimization. Method "
+":func:`~optuna.study.create_study` returns a study object. A study object"
+" has useful properties for analyzing the optimization outcome."
+msgstr ""
+
+#: ../../source/tutorial/first.rst:81
+msgid "To get the best parameter:"
+msgstr ""
+
+#: ../../source/tutorial/first.rst:93
+msgid "To get the best value:"
+msgstr ""
+
+#: ../../source/tutorial/first.rst:105
+msgid "To get the best trial:"
+msgstr ""
+
+#: ../../source/tutorial/first.rst:117
+msgid "To get all trials:"
+msgstr ""
+
+#: ../../source/tutorial/first.rst:131
+msgid "To get the number of trials:"
+msgstr ""
+
+#: ../../source/tutorial/first.rst:143
+msgid ""
+"By executing :func:`~optuna.study.Study.optimize` again, we can continue "
+"the optimization."
+msgstr ""
+
+#: ../../source/tutorial/first.rst:149
+msgid "To get the updated number of trials:"
+msgstr ""
+
+#: ../../source/tutorial/index.rst:2
+msgid "Tutorial"
+msgstr ""
+
+#: ../../source/tutorial/pruning.rst:4
+msgid "Pruning Unpromising Trials"
+msgstr ""
+
+#: ../../source/tutorial/pruning.rst:6
+msgid ""
+"This feature automatically stops unpromising trials at the early stages "
+"of the training (a.k.a., automated early-stopping). Optuna provides "
+"interfaces to concisely implement the pruning mechanism in iterative "
+"training algorithms."
+msgstr ""
+
+#: ../../source/tutorial/pruning.rst:11
+msgid "Activating Pruners"
+msgstr ""
+
+#: ../../source/tutorial/pruning.rst:12
+msgid ""
+"To turn on the pruning feature, you need to call "
+":func:`~optuna.trial.Trial.report` and "
+":func:`~optuna.trial.Trial.should_prune` after each step of the iterative"
+" training. :func:`~optuna.trial.Trial.report` periodically monitors the "
+"intermediate objective values. :func:`~optuna.trial.Trial.should_prune` "
+"decides termination of the trial that does not meet a predefined "
+"condition."
+msgstr ""
+
+#: ../../source/tutorial/pruning.rst:53
+msgid "Executing the script above:"
+msgstr ""
+
+#: ../../source/tutorial/pruning.rst:70
+msgid ""
+"``Trial 5 pruned.``, etc. in the log messages means several trials were "
+"stopped before they finished all of the iterations."
+msgstr ""
+
+#: ../../source/tutorial/pruning.rst:74
+msgid "Integration Modules for Pruning"
+msgstr ""
+
+#: ../../source/tutorial/pruning.rst:75
+msgid ""
+"To implement pruning mechanism in much simpler forms, Optuna provides "
+"integration modules for the following libraries."
+msgstr ""
+
+#: ../../source/tutorial/pruning.rst:77
+msgid "XGBoost: :class:`optuna.integration.XGBoostPruningCallback`"
+msgstr ""
+
+#: ../../source/tutorial/pruning.rst:78
+msgid "LightGBM: :class:`optuna.integration.LightGBMPruningCallback`"
+msgstr ""
+
+#: ../../source/tutorial/pruning.rst:79
+msgid "Chainer: :class:`optuna.integration.ChainerPruningExtension`"
+msgstr ""
+
+#: ../../source/tutorial/pruning.rst:80
+msgid "Keras: :class:`optuna.integration.KerasPruningCallback`"
+msgstr ""
+
+#: ../../source/tutorial/pruning.rst:81
+msgid "TensorFlow :class:`optuna.integration.TensorFlowPruningHook`"
+msgstr ""
+
+#: ../../source/tutorial/pruning.rst:82
+msgid "tf.keras :class:`optuna.integration.TFKerasPruningCallback`"
+msgstr ""
+
+#: ../../source/tutorial/pruning.rst:83
+msgid "MXNet :class:`optuna.integration.MXNetPruningCallback`"
+msgstr ""
+
+#: ../../source/tutorial/pruning.rst:84
+msgid "PyTorch Ignite :class:`optuna.integration.PyTorchIgnitePruningHandler`"
+msgstr ""
+
+#: ../../source/tutorial/pruning.rst:85
+msgid ""
+"PyTorch Lightning "
+":class:`optuna.integration.PyTorchLightningPruningCallback`"
+msgstr ""
+
+#: ../../source/tutorial/pruning.rst:86
+msgid "FastAI :class:`optuna.integration.FastAIPruningCallback`"
+msgstr ""
+
+#: ../../source/tutorial/pruning.rst:88
+msgid ""
+"For example, :class:`~optuna.integration.XGBoostPruningCallback` "
+"introduces pruning without directly changing the logic of training "
+"iteration. (See also `example "
+"<https://github.com/optuna/optuna/blob/master/examples/pruning/xgboost_integration.py>`_"
+" for the entire script.)"
+msgstr ""
+
+#: ../../source/tutorial/rdb.rst:4
+msgid "Saving/Resuming Study with RDB Backend"
+msgstr ""
+
+#: ../../source/tutorial/rdb.rst:6
+msgid ""
+"An RDB backend enables persistent experiments (i.e., to save and resume a"
+" study) as well as access to history of studies. In addition, we can run "
+"multi-node optimization tasks with this feature, which is described in "
+":ref:`distributed`."
+msgstr ""
+
+#: ../../source/tutorial/rdb.rst:9
+msgid ""
+"In this section, let's try simple examples running on a local environment"
+" with SQLite DB."
+msgstr ""
+
+#: ../../source/tutorial/rdb.rst:12
+msgid ""
+"You can also utilize other RDB backends, e.g., PostgreSQL or MySQL, by "
+"setting the storage argument to the DB's URL. Please refer to "
+"`SQLAlchemy's document "
+"<https://docs.sqlalchemy.org/en/latest/core/engines.html#database-urls>`_"
+" for how to set up the URL."
+msgstr ""
+
+#: ../../source/tutorial/rdb.rst:17
+msgid "New Study"
+msgstr ""
+
+#: ../../source/tutorial/rdb.rst:19
+msgid ""
+"We can create a persistent study by calling "
+":func:`~optuna.study.create_study` function as follows. An SQLite file "
+"``example.db`` is automatically initialized with a new study record."
+msgstr ""
+
+#: ../../source/tutorial/rdb.rst:28
+msgid ""
+"To run a study, call :func:`~optuna.study.Study.optimize` method passing "
+"an objective function."
+msgstr ""
+
+#: ../../source/tutorial/rdb.rst:39
+msgid "Resume Study"
+msgstr ""
+
+#: ../../source/tutorial/rdb.rst:41
+msgid ""
+"To resume a study, instantiate a :class:`~optuna.study.Study` object "
+"passing the study name ``example-study`` and the DB URL "
+"``sqlite:///example.db``."
+msgstr ""
+
+#: ../../source/tutorial/rdb.rst:49
+msgid "Experimental History"
+msgstr ""
+
+#: ../../source/tutorial/rdb.rst:51
+msgid ""
+"We can access histories of studies and trials via the "
+":class:`~optuna.study.Study` class. For example, we can get all trials of"
+" ``example-study`` as:"
+msgstr ""
+
+#: ../../source/tutorial/rdb.rst:60
+msgid ""
+"The method :func:`~optuna.study.Study.trials_dataframe` returns a pandas "
+"dataframe like:"
+msgstr ""
+
+#: ../../source/tutorial/rdb.rst:78
+msgid ""
+"A :class:`~optuna.study.Study` object also provides properties such as "
+":attr:`~optuna.study.Study.trials`, "
+":attr:`~optuna.study.Study.best_value`, "
+":attr:`~optuna.study.Study.best_params` (see also :ref:`firstopt`)."
+msgstr ""
+
+#: ../../source/tutorial/sampler.rst:4
+msgid "User-Defined Sampler"
+msgstr ""
+
+#: ../../source/tutorial/sampler.rst:6
+msgid "Thanks to user-defined samplers, you can:"
+msgstr ""
+
+#: ../../source/tutorial/sampler.rst:8
+msgid "experiment your own sampling algorithms,"
+msgstr ""
+
+#: ../../source/tutorial/sampler.rst:9
+msgid ""
+"implement task-specific algorithms to refine the optimization "
+"performance, or"
+msgstr ""
+
+#: ../../source/tutorial/sampler.rst:10
+msgid ""
+"wrap other optimization libraries to integrate them into Optuna pipelines"
+" (e.g., :class:`~optuna.integration.SkoptSampler`)."
+msgstr ""
+
+#: ../../source/tutorial/sampler.rst:12
+msgid ""
+"This section describes the internal behavior of sampler classes and shows"
+" an example of implementing a user-defined sampler."
+msgstr ""
+
+#: ../../source/tutorial/sampler.rst:16
+msgid "Overview of Sampler"
+msgstr ""
+
+#: ../../source/tutorial/sampler.rst:18
+msgid ""
+"A sampler has the responsibility to determine the parameter values to be "
+"evaluated in a trial. When a `suggest` API (e.g., "
+":func:`~optuna.trial.Trial.suggest_uniform`) is called inside an "
+"objective function, the corresponding distribution object (e.g., "
+":class:`~optuna.distributions.UniformDistribution`) is created "
+"internally. A sampler samples a parameter value from the distribution. "
+"The sampled value is returned to the caller of the `suggest` API and "
+"evaluated in the objective function."
+msgstr ""
+
+#: ../../source/tutorial/sampler.rst:21
+msgid ""
+"To create a new sampler, you need to define a class that inherits "
+":class:`~optuna.samplers.BaseSampler`. The base class has three abstract "
+"methods; "
+":meth:`~optuna.samplers.BaseSampler.infer_relative_search_space`, "
+":meth:`~optuna.samplers.BaseSampler.sample_relative`, and "
+":meth:`~optuna.samplers.BaseSampler.sample_independent`."
+msgstr ""
+
+#: ../../source/tutorial/sampler.rst:27
+msgid ""
+"As the method names imply, Optuna supports two types of sampling: one is "
+"**relative sampling** that can consider the correlation of the parameters"
+" in a trial, and the other is **independent sampling** that samples each "
+"parameter independently."
+msgstr ""
+
+#: ../../source/tutorial/sampler.rst:29
+msgid ""
+"At the beginning of a trial, "
+":meth:`~optuna.samplers.BaseSampler.infer_relative_search_space` is "
+"called to provide the relative search space for the trial. Then, "
+":meth:`~optuna.samplers.BaseSampler.sample_relative` is invoked to sample"
+" relative parameters from the search space. During the execution of the "
+"objective function, "
+":meth:`~optuna.samplers.BaseSampler.sample_independent` is used to sample"
+" parameters that don't belong to the relative search space."
+msgstr ""
+
+#: ../../source/tutorial/sampler.rst:32
+msgid ""
+"Please refer to the document of :class:`~optuna.samplers.BaseSampler` for"
+" further details."
+msgstr ""
+
+#: ../../source/tutorial/sampler.rst:36
+msgid "An Example: Implementing SimulatedAnnealingSampler"
+msgstr ""
+
+#: ../../source/tutorial/sampler.rst:38
+msgid ""
+"For example, the following code defines a sampler based on `Simulated "
+"Annealing (SA) <https://en.wikipedia.org/wiki/Simulated_annealing>`_:"
+msgstr ""
+
+#: ../../source/tutorial/sampler.rst:102
+msgid ""
+"In favor of code simplicity, the above implementation doesn't support "
+"some features (e.g., maximization). If you're interested in how to "
+"support those features, please see "
+"`examples/samplers/simulated_annealing.py "
+"<https://github.com/optuna/optuna/blob/master/examples/samplers/simulated_annealing_sampler.py>`_."
+msgstr ""
+
+#: ../../source/tutorial/sampler.rst:108
+msgid ""
+"You can use ``SimulatedAnnealingSampler`` in the same way as built-in "
+"samplers as follows:"
+msgstr ""
+
+#: ../../source/tutorial/sampler.rst:122
+msgid ""
+"In this optimization, the values of ``x`` and ``y`` parameters are "
+"sampled by using ``SimulatedAnnealingSampler.sample_relative`` method."
+msgstr ""
+
+#: ../../source/tutorial/sampler.rst:126
+msgid ""
+"Strictly speaking, in the first trial, "
+"``SimulatedAnnealingSampler.sample_independent`` method is used to sample"
+" parameter values. Because "
+":func:`~optuna.samplers.intersection_search_space` used in "
+"``SimulatedAnnealingSampler.infer_relative_search_space`` cannot infer "
+"the search space if there are no complete trials."
+msgstr ""
+

@@ -1,17 +1,17 @@
 .. _pruning:
 
-对无望的 Trial 进行剪枝 (Pruning)
-====================================
-该功能可以在训练的早期阶段自动终止无望的 Trial (a.k.a., 自动化 early-stopping).
-Optuna 提供了一些接口，可以用于在迭代训练算法中简洁地实现剪枝 (Pruning)。
+Pruning Unpromising Trials
+==========================
+
+This feature automatically stops unpromising trials at the early stages of the training (a.k.a., automated early-stopping).
+Optuna provides interfaces to concisely implement the pruning mechanism in iterative training algorithms.
 
 
-开启 Pruner
----------------------
-
-为了打开 Pruning 功能，你需要在迭代式训练的每一步完成后调用函数 :func:`~optuna.trial.Trial.report` 和 :func:`~optuna.trial.Trial.should_prune` 
-:func:`~optuna.trial.Trial.report` 定期监测这个过程中的目标函数值。
-:func:`~optuna.trial.Trial.should_prune` 根据提前定义好的条件，判定该 trial 是否需要终止。
+Activating Pruners
+------------------
+To turn on the pruning feature, you need to call :func:`~optuna.trial.Trial.report` and :func:`~optuna.trial.Trial.should_prune` after each step of the iterative training.
+:func:`~optuna.trial.Trial.report` periodically monitors the intermediate objective values.
+:func:`~optuna.trial.Trial.should_prune` decides termination of the trial that does not meet a predefined condition.
 
 .. code-block:: python
 
@@ -41,38 +41,38 @@ Optuna 提供了一些接口，可以用于在迭代训练算法中简洁地实�
 
             # Handle pruning based on the intermediate value.
             if trial.should_prune():
-                raise optuna.exceptions.TrialPruned()
+                raise optuna.TrialPruned()
 
         return 1.0 - clf.score(valid_x, valid_y)
 
-    # 将中位数终止规则作为 pruning 条件。
+    # Set up the median stopping rule as the pruning condition.
     study = optuna.create_study(pruner=optuna.pruners.MedianPruner())
     study.optimize(objective, n_trials=20)
 
 
-运行上述脚本:
+Executing the script above:
 
 .. code-block:: bash
 
     $ python prune.py
-    [I 2018-11-21 17:27:57,836] Finished trial#0 resulted in value: 0.052631578947368474. Current best value is 0.052631578947368474 with parameters: {'alpha': 0.011428158279113485}.
-    [I 2018-11-21 17:27:57,963] Finished trial#1 resulted in value: 0.02631578947368418. Current best value is 0.02631578947368418 with parameters: {'alpha': 0.01862693201743629}.
-    [I 2018-11-21 17:27:58,164] Finished trial#2 resulted in value: 0.21052631578947367. Current best value is 0.02631578947368418 with parameters: {'alpha': 0.01862693201743629}.
-    [I 2018-11-21 17:27:58,333] Finished trial#3 resulted in value: 0.02631578947368418. Current best value is 0.02631578947368418 with parameters: {'alpha': 0.01862693201743629}.
-    [I 2018-11-21 17:27:58,617] Finished trial#4 resulted in value: 0.23684210526315785. Current best value is 0.02631578947368418 with parameters: {'alpha': 0.01862693201743629}.
-    [I 2018-11-21 17:27:58,642] Setting status of trial#5 as TrialState.PRUNED.
-    [I 2018-11-21 17:27:58,666] Setting status of trial#6 as TrialState.PRUNED.
-    [I 2018-11-21 17:27:58,675] Setting status of trial#7 as TrialState.PRUNED.
-    [I 2018-11-21 17:27:59,183] Finished trial#8 resulted in value: 0.39473684210526316. Current best value is 0.02631578947368418 with parameters: {'alpha': 0.01862693201743629}.
-    [I 2018-11-21 17:27:59,202] Setting status of trial#9 as TrialState.PRUNED.
+    [I 2020-06-12 16:54:23,876] Trial 0 finished with value: 0.3157894736842105 and parameters: {'alpha': 0.00181467547181131}. Best is trial 0 with value: 0.3157894736842105.
+    [I 2020-06-12 16:54:23,981] Trial 1 finished with value: 0.07894736842105265 and parameters: {'alpha': 0.015378744419287613}. Best is trial 1 with value: 0.07894736842105265.
+    [I 2020-06-12 16:54:24,083] Trial 2 finished with value: 0.21052631578947367 and parameters: {'alpha': 0.04089428832878595}. Best is trial 1 with value: 0.07894736842105265.
+    [I 2020-06-12 16:54:24,185] Trial 3 finished with value: 0.052631578947368474 and parameters: {'alpha': 0.004018735937374473}. Best is trial 3 with value: 0.052631578947368474.
+    [I 2020-06-12 16:54:24,303] Trial 4 finished with value: 0.07894736842105265 and parameters: {'alpha': 2.805688697062864e-05}. Best is trial 3 with value: 0.052631578947368474.
+    [I 2020-06-12 16:54:24,315] Trial 5 pruned. 
+    [I 2020-06-12 16:54:24,355] Trial 6 pruned. 
+    [I 2020-06-12 16:54:24,511] Trial 7 finished with value: 0.052631578947368474 and parameters: {'alpha': 2.243775785299103e-05}. Best is trial 3 with value: 0.052631578947368474.
+    [I 2020-06-12 16:54:24,625] Trial 8 finished with value: 0.1842105263157895 and parameters: {'alpha': 0.007021209286214553}. Best is trial 3 with value: 0.052631578947368474.
+    [I 2020-06-12 16:54:24,629] Trial 9 pruned. 
     ...
 
-我们可以在输出信息中看到 ``Setting status of trial#{} as TrialState.PRUNED``.
-这意味着这些 trial 在他们完成迭代之前就被终止了。
+``Trial 5 pruned.``, etc. in the log messages means several trials were stopped before they finished all of the iterations.
 
-用于 Pruning 的集成模块
---------------------------
-为了能更加方便地实现 pruning, Optuna 为以下框架提供了集成模块。
+
+Integration Modules for Pruning
+-------------------------------
+To implement pruning mechanism in much simpler forms, Optuna provides integration modules for the following libraries.
 
 - XGBoost: :class:`optuna.integration.XGBoostPruningCallback`
 - LightGBM: :class:`optuna.integration.LightGBMPruningCallback`
@@ -85,8 +85,8 @@ Optuna 提供了一些接口，可以用于在迭代训练算法中简洁地实�
 - PyTorch Lightning :class:`optuna.integration.PyTorchLightningPruningCallback`
 - FastAI :class:`optuna.integration.FastAIPruningCallback`
 
-比如, :class:`~optuna.integration.XGBoostPruningCallback` 在无需修改训练迭代逻辑的情况下引入了 pruning.
-(完整脚本见 `example <https://github.com/optuna/optuna/blob/master/examples/pruning/xgboost_integration.py>`_ .)
+For example, :class:`~optuna.integration.XGBoostPruningCallback` introduces pruning without directly changing the logic of training iteration.
+(See also `example <https://github.com/optuna/optuna/blob/master/examples/pruning/xgboost_integration.py>`_ for the entire script.)
 
 .. code-block:: python
 

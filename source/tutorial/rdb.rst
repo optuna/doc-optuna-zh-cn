@@ -1,31 +1,31 @@
 .. _rdb:
 
-用 RDB 后端保存/恢复 Study
+Saving/Resuming Study with RDB Backend
 ==========================================
 
-RDB后端可以实现持久化实验（即保存和恢复 study）以及访问 study 的历史记录。
-此外，我们还可以利用这个特点来进行多节点优化。具体描述见 :ref:`distributed`.
+An RDB backend enables persistent experiments (i.e., to save and resume a study) as well as access to history of studies.
+In addition, we can run multi-node optimization tasks with this feature, which is described in :ref:`distributed`.
 
-在本部分中，我们将尝试一个在本地环境下运行SQLite DB的简单例子。
+In this section, let's try simple examples running on a local environment with SQLite DB.
 
 .. note::
-    通过设置 DB 的 storage URL 参数，你也可以使用其他的 RDB 后端，比如 PostgreSQL 或者 MySQL.
-    设置URL的方式参见 `SQLAlchemy 的文档 <https://docs.sqlalchemy.org/en/latest/core/engines.html#database-urls>`_.
+    You can also utilize other RDB backends, e.g., PostgreSQL or MySQL, by setting the storage argument to the DB's URL.
+    Please refer to `SQLAlchemy's document <https://docs.sqlalchemy.org/en/latest/core/engines.html#database-urls>`_ for how to set up the URL.
 
 
-新建 Study
--------------
+New Study
+---------
 
-通过调用函数 :func:`~optuna.study.create_study`，我们可以创建一个持久化的 study.
-创建新 study 会自动初始化一个 SQLite 文件 ``example.db``.
+We can create a persistent study by calling :func:`~optuna.study.create_study` function as follows.
+An SQLite file ``example.db`` is automatically initialized with a new study record.
 
 .. code-block:: python
 
     import optuna
-    study_name = 'example-study'  # 一个study 的唯一标识符。
+    study_name = 'example-study'  # Unique identifier of the study.
     study = optuna.create_study(study_name=study_name, storage='sqlite:///example.db')
 
-为了运行一个 study, 我们需要将目标函数传入 :func:`~optuna.study.Study.optimize` 方法并调用它。
+To run a study, call :func:`~optuna.study.Study.optimize` method passing an objective function.
 
 .. code-block:: python
 
@@ -35,21 +35,21 @@ RDB后端可以实现持久化实验（即保存和恢复 study）以及访问 s
 
     study.optimize(objective, n_trials=3)
 
-恢复 Study
+Resume Study
 ------------
 
-为了恢复 study, 首先需要初始化一个 :class:`~optuna.study.Study` 对象， 并将该study 的名字 ``example-study`` 和 DB URL参数 ``sqlite:///example.db`` 传入其中。
+To resume a study, instantiate a :class:`~optuna.study.Study` object passing the study name ``example-study`` and the DB URL ``sqlite:///example.db``.
 
 .. code-block:: python
 
     study = optuna.create_study(study_name='example-study', storage='sqlite:///example.db', load_if_exists=True)
     study.optimize(objective, n_trials=3)
 
-实验历史记录
+Experimental History
 --------------------
 
-我们可以通过 :class:`~optuna.study.Study` 类来获得 study 和对应 trials的历史记录。
-比如，下面的语句可以获取 ``example-study`` 的所有 trials.
+We can access histories of studies and trials via the :class:`~optuna.study.Study` class.
+For example, we can get all trials of ``example-study`` as:
 
 .. code-block:: python
 
@@ -57,13 +57,13 @@ RDB后端可以实现持久化实验（即保存和恢复 study）以及访问 s
     study = optuna.create_study(study_name='example-study', storage='sqlite:///example.db', load_if_exists=True)
     df = study.trials_dataframe(attrs=('number', 'value', 'params', 'state'))
 
-:func:`~optuna.study.Study.trials_dataframe` 方法会返回一个如下的 pandas dataframe：
+The method :func:`~optuna.study.Study.trials_dataframe` returns a pandas dataframe like:
 
 .. code-block:: python
 
     print(df)
 
-输出:
+Out:
 
 .. code-block:: console
 
@@ -75,11 +75,11 @@ RDB后端可以实现持久化实验（即保存和恢复 study）以及访问 s
          4       4  113.039223 -8.631991  COMPLETE
          5       5   57.319570  9.570969  COMPLETE
 
-:class:`~optuna.study.Study` 对象也有一些其他属性，比如 :attr:`~optuna.study.Study.trials`, :attr:`~optuna.study.Study.best_value` 和 :attr:`~optuna.study.Study.best_params` (见 :ref:`firstopt`).
+A :class:`~optuna.study.Study` object also provides properties such as :attr:`~optuna.study.Study.trials`, :attr:`~optuna.study.Study.best_value`, :attr:`~optuna.study.Study.best_params` (see also :ref:`firstopt`).
 
 .. code-block:: python
 
-    study.best_params  # 获取目标函数的最佳参数。
-    study.best_value  # 获取目标函数的最佳值。
-    study.best_trial  # 获得最佳 trial 的相关信息。
-    study.trials  # 获得所有 trial 的信息。
+    study.best_params  # Get best parameters for the objective function.
+    study.best_value  # Get best objective value.
+    study.best_trial  # Get best trial's information.
+    study.trials  # Get all trials' information.

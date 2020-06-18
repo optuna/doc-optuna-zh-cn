@@ -1,0 +1,100 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018, Optuna Contributors.
+# This file is distributed under the same license as the Optuna package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Optuna 1.4.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-06-17 19:47-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../source/reference/storages.rst:4
+msgid "Storages"
+msgstr ""
+
+#: of optuna.storages.RDBStorage:1
+msgid "Storage class for RDB backend."
+msgstr ""
+
+#: of optuna.storages.RDBStorage:3 optuna.storages.RedisStorage:3
+msgid ""
+"Note that library users can instantiate this class, but the attributes "
+"provided by this class are not supposed to be directly accessed by them."
+msgstr ""
+
+#: of optuna.storages.RDBStorage:7 optuna.storages.RedisStorage:7
+msgid "Example"
+msgstr ""
+
+#: of optuna.storages.RDBStorage:8
+msgid ""
+"Create an :class:`~optuna.storages.RDBStorage` instance with customized "
+"``pool_size`` and ``timeout`` settings."
+msgstr ""
+
+#: of optuna.storages.RDBStorage optuna.storages.RedisStorage
+msgid "Parameters"
+msgstr ""
+
+#: of optuna.storages.RDBStorage:32
+msgid "URL of the storage."
+msgstr ""
+
+#: of optuna.storages.RDBStorage:33
+msgid ""
+"A dictionary of keyword arguments that is passed to "
+"`sqlalchemy.engine.create_engine`_ function."
+msgstr ""
+
+#: of optuna.storages.RDBStorage:35
+msgid "Flag to skip schema compatibility check if set to True."
+msgstr ""
+
+#: of optuna.storages.RDBStorage:41
+msgid ""
+"If you use MySQL, `pool_pre_ping`_ will be set to :obj:`True` by default "
+"to prevent connection timeout. You can turn it off with "
+"``engine_kwargs['pool_pre_ping']=False``, but it is recommended to keep "
+"the setting if execution time of your objective function is longer than "
+"the `wait_timeout` of your MySQL configuration."
+msgstr ""
+
+#: of optuna.storages.RedisStorage:1
+msgid "Storage class for Redis backend."
+msgstr ""
+
+#: of optuna.storages.RedisStorage:8
+msgid ""
+"We create an :class:`~optuna.storages.RedisStorage` instance using the "
+"given redis database URL."
+msgstr ""
+
+#: of optuna.storages.RedisStorage:25
+msgid ""
+"URL of the redis storage, password and db are optional. (ie: "
+"redis://localhost:6379)"
+msgstr ""
+
+#: of optuna.storages.RedisStorage:28
+msgid ""
+"If you use plan to use Redis as a storage mechanism for optuna, make sure"
+" Redis in installed and running. Please execute ``$ pip install -U "
+"redis`` to install redis python library."
+msgstr ""
+
+#: of optuna.storages.RedisStorage:33
+msgid ""
+"Added in v1.4.0 as an experimental feature. The interface may change in "
+"newer versions without prior notice. See "
+"https://github.com/optuna/optuna/releases/tag/v1.4.0."
+msgstr ""
+

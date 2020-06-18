@@ -1,0 +1,1193 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018, Optuna Contributors.
+# This file is distributed under the same license as the Optuna package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Optuna 1.4.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-06-17 19:47-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../source/reference/integration.rst:4
+msgid "Integration"
+msgstr ""
+
+#: of optuna.integration.ChainerPruningExtension:1
+msgid "Chainer extension to prune unpromising trials."
+msgstr ""
+
+#: of optuna.integration.ChainerPruningExtension:3
+msgid ""
+"See `the example <https://github.com/optuna/optuna/blob/master/ "
+"examples/pruning/chainer_integration.py>`__ if you want to add a pruning "
+"extension which observes validation accuracy of a `Chainer Trainer "
+"<https://docs.chainer.org/en/stable/ "
+"reference/generated/chainer.training.Trainer.html>`_."
+msgstr ""
+
+#: of optuna.integration.AllenNLPExecutor optuna.integration.ChainerMNStudy
+#: optuna.integration.ChainerPruningExtension optuna.integration.CmaEsSampler
+#: optuna.integration.FastAIPruningCallback
+#: optuna.integration.KerasPruningCallback
+#: optuna.integration.LightGBMPruningCallback optuna.integration.MLflowCallback
+#: optuna.integration.MXNetPruningCallback optuna.integration.OptunaSearchCV
+#: optuna.integration.OptunaSearchCV.fit
+#: optuna.integration.OptunaSearchCV.score
+#: optuna.integration.PyTorchIgnitePruningHandler
+#: optuna.integration.PyTorchLightningPruningCallback
+#: optuna.integration.SkoptSampler optuna.integration.TFKerasPruningCallback
+#: optuna.integration.TensorFlowPruningHook
+#: optuna.integration.XGBoostPruningCallback
+#: optuna.integration.allennlp.dump_best_config
+#: optuna.integration.lightgbm.LightGBMTuner
+#: optuna.integration.lightgbm.LightGBMTunerCV
+msgid "Parameters"
+msgstr ""
+
+#: of optuna.integration.AllenNLPExecutor:11
+#: optuna.integration.ChainerPruningExtension:9
+#: optuna.integration.FastAIPruningCallback:22
+#: optuna.integration.KerasPruningCallback:7
+#: optuna.integration.LightGBMPruningCallback:8
+#: optuna.integration.MXNetPruningCallback:7
+#: optuna.integration.PyTorchIgnitePruningHandler:7
+#: optuna.integration.PyTorchLightningPruningCallback:7
+#: optuna.integration.TFKerasPruningCallback:10
+#: optuna.integration.TensorFlowPruningHook:7
+#: optuna.integration.XGBoostPruningCallback:8
+msgid ""
+"A :class:`~optuna.trial.Trial` corresponding to the current evaluation of"
+" the objective function."
+msgstr ""
+
+#: of optuna.integration.ChainerPruningExtension:11
+msgid ""
+"An evaluation metric for pruning, e.g., ``main/loss`` and "
+"``validation/main/accuracy``. Please refer to `chainer.Reporter reference"
+" <https://docs.chainer.org/en/stable/reference/ "
+"util/generated/chainer.Reporter.html>`_ for further details."
+msgstr ""
+
+#: of optuna.integration.ChainerPruningExtension:15
+msgid ""
+"A trigger to execute pruning. ``pruner_trigger`` is an instance of "
+"`IntervalTrigger <https://docs.chainer.org/en/stable/reference/generated/"
+" chainer.training.triggers.IntervalTrigger.html>`_ or "
+"`ManualScheduleTrigger "
+"<https://docs.chainer.org/en/stable/reference/generated/ "
+"chainer.training.triggers.ManualScheduleTrigger.html>`_. `IntervalTrigger"
+" <https:// "
+"docs.chainer.org/en/stable/reference/generated/chainer.training.triggers."
+" IntervalTrigger.html>`_ can be specified by a tuple of the interval "
+"length and its unit like ``(1, 'epoch')``."
+msgstr ""
+
+#: of optuna.integration.ChainerMNStudy:1
+msgid ""
+"A wrapper of :class:`~optuna.study.Study` to incorporate Optuna with "
+"ChainerMN."
+msgstr ""
+
+#: of optuna.integration.ChainerMNStudy:4
+msgid ""
+":class:`~optuna.integration.chainermn.ChainerMNStudy` provides the same "
+"interface as :class:`~optuna.study.Study`. Please refer to "
+":class:`optuna.study.Study` for further details."
+msgstr ""
+
+#: of optuna.integration.ChainerMNStudy:8
+msgid ""
+"See `the example <https://github.com/optuna/optuna/blob/master/ "
+"examples/pruning/chainermn_integration.py>`__ if you want to optimize an "
+"objective function that trains neural network written with ChainerMN."
+msgstr ""
+
+#: of optuna.integration.ChainerMNStudy:13
+msgid "A :class:`~optuna.study.Study` object."
+msgstr ""
+
+#: of optuna.integration.ChainerMNStudy:14
+msgid ""
+"A `ChainerMN communicator "
+"<https://docs.chainer.org/en/stable/chainermn/reference/ "
+"index.html#communicators>`_."
+msgstr ""
+
+#: of optuna.integration.ChainerMNStudy.optimize:1
+msgid "Optimize an objective function."
+msgstr ""
+
+#: of optuna.integration.ChainerMNStudy.optimize:3
+msgid ""
+"This method provides the same interface as "
+":func:`optuna.study.Study.optimize` except the absence of ``n_jobs`` "
+"argument."
+msgstr ""
+
+#: of optuna.integration.CmaEsSampler:1
+msgid "A Sampler using cma library as the backend."
+msgstr ""
+
+#: of optuna.integration.CmaEsSampler:4
+#: optuna.integration.FastAIPruningCallback:11
+#: optuna.integration.MLflowCallback:8 optuna.integration.SkoptSampler:4
+msgid "Example"
+msgstr ""
+
+#: of optuna.integration.CmaEsSampler:5
+msgid ""
+"Optimize a simple quadratic function by using "
+":class:`~optuna.integration.CmaEsSampler`."
+msgstr ""
+
+#: of optuna.integration.CmaEsSampler:20
+msgid ""
+"Note that parallel execution of trials may affect the optimization "
+"performance of CMA-ES, especially if the number of trials running in "
+"parallel exceeds the population size."
+msgstr ""
+
+#: of optuna.integration.CmaEsSampler:23
+msgid ""
+"A dictionary of an initial parameter values for CMA-ES. By default, the "
+"mean of ``low`` and ``high`` for each distribution is used. Please refer "
+"to cma.CMAEvolutionStrategy_ for further details of ``x0``."
+msgstr ""
+
+#: of optuna.integration.CmaEsSampler:26
+msgid ""
+"Initial standard deviation of CMA-ES. By default, ``sigma0`` is set to "
+"``min_range / 6``, where ``min_range`` denotes the minimum range of the "
+"distributions in the search space. If distribution is categorical, "
+"``min_range`` is ``len(choices) - 1``. Please refer to "
+"cma.CMAEvolutionStrategy_ for further details of ``sigma0``."
+msgstr ""
+
+#: of optuna.integration.CmaEsSampler:31
+msgid ""
+"A dictionary of multipliers of sigma0 for each parameters. The default "
+"value is 1.0. Please refer to cma.CMAEvolutionStrategy_ for further "
+"details of ``cma_stds``."
+msgstr ""
+
+#: of optuna.integration.CmaEsSampler:33
+msgid "A random seed for CMA-ES."
+msgstr ""
+
+#: of optuna.integration.CmaEsSampler:34
+msgid ""
+"Options passed to the constructor of cma.CMAEvolutionStrategy_ class.  "
+"Note that ``BoundaryHandler``, ``bounds``, ``CMA_stds`` and ``seed`` "
+"arguments in ``cma_opts`` will be ignored because it is added by "
+":class:`~optuna.integration.CmaEsSampler` automatically."
+msgstr ""
+
+#: of optuna.integration.CmaEsSampler:34
+msgid "Options passed to the constructor of cma.CMAEvolutionStrategy_ class."
+msgstr ""
+
+#: of optuna.integration.CmaEsSampler:36
+msgid ""
+"Note that ``BoundaryHandler``, ``bounds``, ``CMA_stds`` and ``seed`` "
+"arguments in ``cma_opts`` will be ignored because it is added by "
+":class:`~optuna.integration.CmaEsSampler` automatically."
+msgstr ""
+
+#: of optuna.integration.CmaEsSampler:39
+msgid ""
+"The independent sampling is used instead of the CMA-ES algorithm until "
+"the given number of trials finish in the same study."
+msgstr ""
+
+#: of optuna.integration.CmaEsSampler:41
+msgid ""
+"A :class:`~optuna.samplers.BaseSampler` instance that is used for "
+"independent sampling. The parameters not contained in the relative search"
+" space are sampled by this sampler. The search space for "
+":class:`~optuna.integration.CmaEsSampler` is determined by "
+":func:`~optuna.samplers.intersection_search_space()`.  If :obj:`None` is "
+"specified, :class:`~optuna.samplers.RandomSampler` is used as the "
+"default.  .. seealso::     :class:`optuna.samplers` module provides "
+"built-in independent samplers     such as "
+":class:`~optuna.samplers.RandomSampler` and     "
+":class:`~optuna.samplers.TPESampler`."
+msgstr ""
+
+#: of optuna.integration.CmaEsSampler:41
+msgid ""
+"A :class:`~optuna.samplers.BaseSampler` instance that is used for "
+"independent sampling. The parameters not contained in the relative search"
+" space are sampled by this sampler. The search space for "
+":class:`~optuna.integration.CmaEsSampler` is determined by "
+":func:`~optuna.samplers.intersection_search_space()`."
+msgstr ""
+
+#: of optuna.integration.CmaEsSampler:47 optuna.integration.SkoptSampler:26
+msgid ""
+"If :obj:`None` is specified, :class:`~optuna.samplers.RandomSampler` is "
+"used as the default."
+msgstr ""
+
+#: of optuna.integration.CmaEsSampler:51 optuna.integration.SkoptSampler:30
+msgid ""
+":class:`optuna.samplers` module provides built-in independent samplers "
+"such as :class:`~optuna.samplers.RandomSampler` and "
+":class:`~optuna.samplers.TPESampler`."
+msgstr ""
+
+#: of optuna.integration.CmaEsSampler:54 optuna.integration.SkoptSampler:33
+msgid ""
+"If this is :obj:`True`, a warning message is emitted when the value of a "
+"parameter is sampled by using an independent sampler.  Note that the "
+"parameters of the first trial in a study are always sampled via an "
+"independent sampler, so no warning messages are emitted in this case."
+msgstr ""
+
+#: of optuna.integration.CmaEsSampler:54 optuna.integration.SkoptSampler:33
+msgid ""
+"If this is :obj:`True`, a warning message is emitted when the value of a "
+"parameter is sampled by using an independent sampler."
+msgstr ""
+
+#: of optuna.integration.CmaEsSampler:57 optuna.integration.SkoptSampler:36
+msgid ""
+"Note that the parameters of the first trial in a study are always sampled"
+" via an independent sampler, so no warning messages are emitted in this "
+"case."
+msgstr ""
+
+#: of optuna.integration.CmaEsSampler.reseed_rng:1
+#: optuna.integration.SkoptSampler.reseed_rng:1
+msgid "Reseed sampler's random number generator."
+msgstr ""
+
+#: of optuna.integration.CmaEsSampler.reseed_rng:3
+#: optuna.integration.SkoptSampler.reseed_rng:3
+msgid ""
+"This method is called by the :class:`~optuna.study.Study` instance if "
+"trials are executed in parallel with the option ``n_jobs>1``. In that "
+"case, the sampler instance will be replicated including the state of the "
+"random number generator, and they may suggest the same values. To prevent"
+" this issue, this method assigns a different seed to each random number "
+"generator."
+msgstr ""
+
+#: of optuna.integration.FastAIPruningCallback:1
+msgid "FastAI callback to prune unpromising trials for fastai."
+msgstr ""
+
+#: of optuna.integration.FastAIPruningCallback:4
+msgid ""
+"This callback is for fastai<2.0, not the coming version developed in "
+"fastai/fastai_dev."
+msgstr ""
+
+#: of optuna.integration.FastAIPruningCallback:6
+msgid ""
+"See `the example <https://github.com/optuna/optuna/blob/master/ "
+"examples/fastai_simple.py>`__ if you want to add a pruning callback which"
+" monitors validation loss of a ``Learner``."
+msgstr ""
+
+#: of optuna.integration.FastAIPruningCallback:12
+msgid "Register a pruning callback to ``learn.fit`` and ``learn.fit_one_cycle``."
+msgstr ""
+
+#: of optuna.integration.FastAIPruningCallback:21
+msgid ""
+"`fastai.basic_train.Learner "
+"<https://docs.fast.ai/basic_train.html#Learner>`_."
+msgstr ""
+
+#: of optuna.integration.FastAIPruningCallback:24
+msgid ""
+"An evaluation metric for pruning, e.g. ``valid_loss`` and ``Accuracy``. "
+"Please refer to `fastai.Callback reference "
+"<https://docs.fast.ai/callback.html#Callback>`_ for further details."
+msgstr ""
+
+#: of optuna.integration.PyTorchIgnitePruningHandler:1
+msgid "PyTorch Ignite handler to prune unpromising trials."
+msgstr ""
+
+#: of optuna.integration.PyTorchIgnitePruningHandler:3
+msgid ""
+"See `the example <https://github.com/optuna/optuna/blob/master/ "
+"examples/pytorch_ignite_simple.py>`__ if you want to add a pruning "
+"handler which observes validation accuracy."
+msgstr ""
+
+#: of optuna.integration.PyTorchIgnitePruningHandler:9
+msgid "A name of metric for pruning, e.g., ``accuracy`` and ``loss``."
+msgstr ""
+
+#: of optuna.integration.PyTorchIgnitePruningHandler:10
+msgid ""
+"A trainer engine of PyTorch Ignite. Please refer to `ignite.engine.Engine"
+" reference "
+"<https://pytorch.org/ignite/engine.html#ignite.engine.Engine>`_ for "
+"further details."
+msgstr ""
+
+#: of optuna.integration.KerasPruningCallback:1
+msgid "Keras callback to prune unpromising trials."
+msgstr ""
+
+#: of optuna.integration.KerasPruningCallback:3
+msgid ""
+"See `the example <https://github.com/optuna/optuna/blob/master/ "
+"examples/pruning/keras_integration.py>`__ if you want to add a pruning "
+"callback which observes validation accuracy."
+msgstr ""
+
+#: of optuna.integration.KerasPruningCallback:9
+msgid ""
+"An evaluation metric for pruning, e.g., ``val_loss`` and "
+"``val_accuracy``. Please refer to `keras.Callback reference "
+"<https://keras.io/callbacks/#callback>`_ for further details."
+msgstr ""
+
+#: of optuna.integration.KerasPruningCallback:12
+msgid ""
+"Check if trial should be pruned every n-th epoch. By default "
+"``interval=1`` and pruning is performed after every epoch. Increase "
+"``interval`` to run several epochs faster before applying pruning."
+msgstr ""
+
+#: of optuna.integration.LightGBMPruningCallback:1
+msgid "Callback for LightGBM to prune unpromising trials."
+msgstr ""
+
+#: of optuna.integration.LightGBMPruningCallback:3
+msgid ""
+"See `the example <https://github.com/optuna/optuna/blob/master/ "
+"examples/pruning/lightgbm_integration.py>`__ if you want to add a pruning"
+" callback which observes AUC of a LightGBM model."
+msgstr ""
+
+#: of optuna.integration.LightGBMPruningCallback:10
+msgid ""
+"An evaluation metric for pruning, e.g., ``binary_error`` and "
+"``multi_error``. Please refer to `LightGBM reference "
+"<https://lightgbm.readthedocs.io/en/latest/Parameters.html#metric>`_ for "
+"further details."
+msgstr ""
+
+#: of optuna.integration.LightGBMPruningCallback:15
+msgid ""
+"The name of the target validation. Validation names are specified by "
+"``valid_names`` option of `train method "
+"<https://lightgbm.readthedocs.io/en/latest/Python-"
+"API.html#lightgbm.train>`_. If omitted, ``valid_0`` is used which is the "
+"default name of the first validation. Note that this argument will be "
+"ignored if you are calling `cv method "
+"<https://lightgbm.readthedocs.io/en/latest/Python-API.html#lightgbm.cv>`_"
+" instead of train method."
+msgstr ""
+
+#: of optuna.integration.lightgbm.train:1
+msgid "Wrapper of LightGBM Training API to tune hyperparameters."
+msgstr ""
+
+#: of optuna.integration.lightgbm.train:3
+msgid ""
+"It tunes important hyperparameters (e.g., ``min_child_samples`` and "
+"``feature_fraction``) in a stepwise manner. It is a drop-in replacement "
+"for `lightgbm.train()`_. See `a simple example of LightGBM Tuner "
+"<https://github.com/optuna/optuna/blob/master/examples/lig "
+"htgbm_tuner_simple.py>`_ which optimizes the validation log loss of "
+"cancer detection."
+msgstr ""
+
+#: of optuna.integration.lightgbm.train:8
+msgid ""
+":func:`~optuna.integration.lightgbm.train` is a wrapper function of "
+":class:`~optuna.integration.lightgbm.LightGBMTuner`. To use feature in "
+"Optuna such as suspended/resumed optimization and/or parallelization, "
+"refer to :class:`~optuna.integration.lightgbm.LightGBMTuner` instead of "
+"this function."
+msgstr ""
+
+#: of optuna.integration.lightgbm.train:13
+msgid "Arguments and keyword arguments for `lightgbm.train()`_ can be passed."
+msgstr ""
+
+#: of optuna.integration.lightgbm.train:18
+msgid ""
+"Added in v0.18.0 as an experimental feature. The interface may change in "
+"newer versions without prior notice. See "
+"https://github.com/optuna/optuna/releases/tag/v0.18.0."
+msgstr ""
+
+#: of optuna.integration.lightgbm.LightGBMTuner:1
+msgid "Hyperparameter tuner for LightGBM."
+msgstr ""
+
+#: of optuna.integration.lightgbm.LightGBMTuner:3
+msgid ""
+"It optimizes the following hyperparameters in a stepwise manner: "
+"``lambda_l1``, ``lambda_l2``, ``num_leaves``, ``feature_fraction``, "
+"``bagging_fraction``, ``bagging_freq`` and ``min_child_samples``."
+msgstr ""
+
+#: of optuna.integration.lightgbm.LightGBMTuner:7
+msgid ""
+"You can find the details of the algorithm and benchmark results in `this "
+"blog article <https:/ /medium.com/optuna/lightgbm-tuner-new-optuna-"
+"integration-for-hyperparameter-optimization-8b709 5e99258>`_ by `Kohei "
+"Ozaki <https://www.kaggle.com/confirm>`_, a Kaggle Grandmaster."
+msgstr ""
+
+#: of optuna.integration.lightgbm.LightGBMTuner:11
+msgid ""
+"Arguments and keyword arguments for `lightgbm.train() "
+"<https://lightgbm.readthedocs.io/en/latest/pythonapi/lightgbm.train.html>`_"
+" can be passed. The arguments that only "
+":class:`~optuna.integration.lightgbm.LightGBMTuner` has are listed below:"
+msgstr ""
+
+#: of optuna.integration.lightgbm.LightGBMTuner:16
+#: optuna.integration.lightgbm.LightGBMTunerCV:16
+msgid "A time budget for parameter tuning in seconds."
+msgstr ""
+
+#: of optuna.integration.lightgbm.LightGBMTuner:17
+#: optuna.integration.lightgbm.LightGBMTunerCV:17
+msgid ""
+"A :class:`~optuna.study.Study` instance to store optimization results. "
+"The :class:`~optuna.trial.Trial` instances in it has the following user "
+"attributes: ``elapsed_secs`` is the elapsed time since the optimization "
+"starts. ``average_iteration_time`` is the average time of iteration to "
+"train the booster model in the trial. ``lgbm_params`` is a JSON-"
+"serialized dictionary of LightGBM parameters used in the trial."
+msgstr ""
+
+#: of optuna.integration.lightgbm.LightGBMTuner:23
+#: optuna.integration.lightgbm.LightGBMTunerCV:23
+msgid ""
+"List of Optuna callback functions that are invoked at the end of each "
+"trial. Each function must accept two parameters with the following types "
+"in this order: :class:`~optuna.study.Study` and "
+":class:`~optuna.FrozenTrial`. Please note that this is not a "
+"``callbacks`` argument of `lightgbm.train()`_ ."
+msgstr ""
+
+#: of optuna.integration.lightgbm.LightGBMTuner:27
+msgid ""
+"A directory to save boosters. By default, it is set to :obj:`None` and no"
+" boosters are saved. Please set shared directory (e.g., directories on "
+"NFS) if you want to access "
+":meth:`~optuna.integration.LightGBMTuner.get_best_booster` in distributed"
+" environments. Otherwise, it may raise :obj:`ValueError`. If the "
+"directory does not exist, it will be created. The filenames of the "
+"boosters will be ``{model_dir}/{trial_number}.pkl`` (e.g., "
+"``./boosters/0.pkl``)."
+msgstr ""
+
+#: of optuna.integration.lightgbm.LightGBMTuner:37
+#: optuna.integration.lightgbm.LightGBMTunerCV:32
+msgid ""
+"Added in v1.5.0 as an experimental feature. The interface may change in "
+"newer versions without prior notice. See "
+"https://github.com/optuna/optuna/releases/tag/v1.5.0."
+msgstr ""
+
+#: of optuna.integration.lightgbm.LightGBMTuner.best_booster:1
+#: optuna.integration.lightgbm.LightGBMTuner.get_best_booster:1
+msgid "Return the best booster."
+msgstr ""
+
+#: of optuna.integration.lightgbm.LightGBMTuner.best_booster:3
+msgid ""
+"Please get the best booster via "
+":class:`~optuna.integration.lightgbm.LightGBMTuner.get_best_booster` "
+"instead."
+msgstr ""
+
+#: of optuna.integration.lightgbm.LightGBMTuner.best_params:1
+#: optuna.integration.lightgbm.LightGBMTunerCV.best_params:1
+msgid "Return parameters of the best booster."
+msgstr ""
+
+#: of optuna.integration.lightgbm.LightGBMTuner.best_score:1
+#: optuna.integration.lightgbm.LightGBMTunerCV.best_score:1
+msgid "Return the score of the best booster."
+msgstr ""
+
+#: of optuna.integration.lightgbm.LightGBMTuner.get_best_booster:3
+msgid ""
+"If the best booster cannot be found, :class:`ValueError` will be raised. "
+"To prevent the errors, please save boosters by specifying the "
+"``model_dir`` arguments of "
+":meth:`~optuna.integration.lightgbm.LightGBMTuner.__init__` when you "
+"resume tuning or you run tuning in parallel."
+msgstr ""
+
+#: of optuna.integration.lightgbm.LightGBMTuner.run:1
+#: optuna.integration.lightgbm.LightGBMTunerCV.run:1
+msgid "Perform the hyperparameter-tuning with given parameters."
+msgstr ""
+
+#: of optuna.integration.lightgbm.LightGBMTunerCV:1
+msgid "Hyperparameter tuner for LightGBM with cross-validation."
+msgstr ""
+
+#: of optuna.integration.lightgbm.LightGBMTunerCV:3
+msgid ""
+"It employs the same stepwise approach as "
+":class:`~optuna.integration.lightgbm.LightGBMTuner`. "
+":class:`~optuna.integration.lightgbm.LightGBMTunerCV` invokes "
+"`lightgbm.cv()`_ to train and validate boosters while "
+":class:`~optuna.integration.lightgbm.LightGBMTuner` invokes "
+"`lightgbm.train()`_. See `a simple example "
+"<https://github.com/optuna/optuna/blob/master/examples/lightgbm_tuner_cv."
+" py>`_ which optimizes the validation log loss of cancer detection."
+msgstr ""
+
+#: of optuna.integration.lightgbm.LightGBMTunerCV:11
+msgid ""
+"Arguments and keyword arguments for `lightgbm.cv()`_ can be passed except"
+" ``metrics``, ``init_model`` and ``eval_train_metric``. The arguments "
+"that only :class:`~optuna.integration.lightgbm.LightGBMTunerCV` has are "
+"listed below:"
+msgstr ""
+
+#: of optuna.integration.MLflowCallback:1
+msgid "Callback to track Optuna trials with MLflow."
+msgstr ""
+
+#: of optuna.integration.MLflowCallback:3
+msgid ""
+"This callback adds relevant information that is tracked by Optuna to "
+"MLflow. The MLflow experiment will be named after the Optuna study name."
+msgstr ""
+
+#: of optuna.integration.MLflowCallback:9
+msgid "Add MLflow callback to Optuna optimization."
+msgstr ""
+
+#: of optuna.integration.MLflowCallback:46
+msgid ""
+"The URI of the MLflow tracking server.  Please refer to "
+"`mlflow.set_tracking_uri "
+"<https://www.mlflow.org/docs/latest/python_api/mlflow.html#mlflow.set_tracking_uri>`_"
+" for more details."
+msgstr ""
+
+#: of optuna.integration.MLflowCallback:46
+msgid "The URI of the MLflow tracking server."
+msgstr ""
+
+#: of optuna.integration.MLflowCallback:48
+msgid ""
+"Please refer to `mlflow.set_tracking_uri "
+"<https://www.mlflow.org/docs/latest/python_api/mlflow.html#mlflow.set_tracking_uri>`_"
+" for more details."
+msgstr ""
+
+#: of optuna.integration.MLflowCallback:51
+msgid ""
+"Name of the metric. Since the metric itself is just a number, "
+"`metric_name` can be used to give it a name. So you know later if it was "
+"roc-auc or accuracy."
+msgstr ""
+
+#: of optuna.integration.AllenNLPExecutor:24
+#: optuna.integration.MLflowCallback:56
+msgid ""
+"Added in v1.4.0 as an experimental feature. The interface may change in "
+"newer versions without prior notice. See "
+"https://github.com/optuna/optuna/releases/tag/v1.4.0."
+msgstr ""
+
+#: of optuna.integration.MXNetPruningCallback:1
+msgid "MXNet callback to prune unpromising trials."
+msgstr ""
+
+#: of optuna.integration.MXNetPruningCallback:3
+msgid ""
+"See `the example <https://github.com/optuna/optuna/blob/master/ "
+"examples/pruning/mxnet_integration.py>`__ if you want to add a pruning "
+"callback which observes accuracy."
+msgstr ""
+
+#: of optuna.integration.MXNetPruningCallback:9
+msgid ""
+"An evaluation metric name for pruning, e.g., ``cross-entropy`` and "
+"``accuracy``. If using default metrics like mxnet.metrics.Accuracy, use "
+"it's default metric name. For custom metrics, use the metric_name "
+"provided to constructor. Please refer to `mxnet.metrics reference "
+"<https://mxnet.apache.org/api/python/metric/metric.html>`_ for further "
+"details."
+msgstr ""
+
+#: of optuna.integration.PyTorchLightningPruningCallback:1
+msgid "PyTorch Lightning callback to prune unpromising trials."
+msgstr ""
+
+#: of optuna.integration.PyTorchLightningPruningCallback:3
+msgid ""
+"See `the example <https://github.com/optuna/optuna/blob/master/ "
+"examples/pytorch_lightning_simple.py>`__ if you want to add a pruning "
+"callback which observes accuracy."
+msgstr ""
+
+#: of optuna.integration.PyTorchLightningPruningCallback:9
+msgid ""
+"An evaluation metric for pruning, e.g., ``val_loss`` or ``val_acc``. The "
+"metrics are obtained from the returned dictionaries from e.g. "
+"``pytorch_lightning.LightningModule.training_step`` or "
+"``pytorch_lightning.LightningModule.validation_end`` and the names thus "
+"depend on how this dictionary is formatted."
+msgstr ""
+
+#: of optuna.integration.SkoptSampler:1
+msgid "Sampler using Scikit-Optimize as the backend."
+msgstr ""
+
+#: of optuna.integration.SkoptSampler:5
+msgid ""
+"Optimize a simple quadratic function by using "
+":class:`~optuna.integration.SkoptSampler`."
+msgstr ""
+
+#: of optuna.integration.SkoptSampler:20
+msgid ""
+"A :class:`~optuna.samplers.BaseSampler` instance that is used for "
+"independent sampling. The parameters not contained in the relative search"
+" space are sampled by this sampler. The search space for "
+":class:`~optuna.integration.SkoptSampler` is determined by "
+":func:`~optuna.samplers.intersection_search_space()`.  If :obj:`None` is "
+"specified, :class:`~optuna.samplers.RandomSampler` is used as the "
+"default.  .. seealso::     :class:`optuna.samplers` module provides "
+"built-in independent samplers     such as "
+":class:`~optuna.samplers.RandomSampler` and     "
+":class:`~optuna.samplers.TPESampler`."
+msgstr ""
+
+#: of optuna.integration.SkoptSampler:20
+msgid ""
+"A :class:`~optuna.samplers.BaseSampler` instance that is used for "
+"independent sampling. The parameters not contained in the relative search"
+" space are sampled by this sampler. The search space for "
+":class:`~optuna.integration.SkoptSampler` is determined by "
+":func:`~optuna.samplers.intersection_search_space()`."
+msgstr ""
+
+#: of optuna.integration.SkoptSampler:38
+msgid ""
+"Keyword arguments passed to the constructor of `skopt.Optimizer <https"
+"://scikit-optimize.github.io/#skopt.Optimizer>`_ class.  Note that "
+"``dimensions`` argument in ``skopt_kwargs`` will be ignored because it is"
+" added by :class:`~optuna.integration.SkoptSampler` automatically."
+msgstr ""
+
+#: of optuna.integration.SkoptSampler:38
+msgid ""
+"Keyword arguments passed to the constructor of `skopt.Optimizer <https"
+"://scikit-optimize.github.io/#skopt.Optimizer>`_ class."
+msgstr ""
+
+#: of optuna.integration.SkoptSampler:42
+msgid ""
+"Note that ``dimensions`` argument in ``skopt_kwargs`` will be ignored "
+"because it is added by :class:`~optuna.integration.SkoptSampler` "
+"automatically."
+msgstr ""
+
+#: of optuna.integration.SkoptSampler:44
+msgid ""
+"The independent sampling is used until the given number of trials finish "
+"in the same study."
+msgstr ""
+
+#: of optuna.integration.TensorFlowPruningHook:1
+msgid "TensorFlow SessionRunHook to prune unpromising trials."
+msgstr ""
+
+#: of optuna.integration.TensorFlowPruningHook:3
+msgid ""
+"See `the example <https://github.com/optuna/optuna/blob/master/examples/ "
+"pruning/tensorflow_estimator_integration.py>`_ if you want to add a "
+"pruning hook to TensorFlow's estimator."
+msgstr ""
+
+#: of optuna.integration.TensorFlowPruningHook:9
+msgid "An estimator which you will use."
+msgstr ""
+
+#: of optuna.integration.TensorFlowPruningHook:10
+msgid "An evaluation metric for pruning, e.g., ``accuracy`` and ``loss``."
+msgstr ""
+
+#: of optuna.integration.TensorFlowPruningHook:11
+msgid "An interval to watch the summary file."
+msgstr ""
+
+#: of optuna.integration.TFKerasPruningCallback:1
+msgid "tf.keras callback to prune unpromising trials."
+msgstr ""
+
+#: of optuna.integration.TFKerasPruningCallback:3
+msgid ""
+"This callback is intend to be compatible for TensorFlow v1 and v2, but "
+"only tested with TensorFlow v1."
+msgstr ""
+
+#: of optuna.integration.TFKerasPruningCallback:6
+msgid ""
+"See `the example <https://github.com/optuna/optuna/blob/master/ "
+"examples/pruning/tfkeras_integration.py>`__ if you want to add a pruning "
+"callback which observes the validation accuracy."
+msgstr ""
+
+#: of optuna.integration.TFKerasPruningCallback:12
+msgid "An evaluation metric for pruning, e.g., ``val_loss`` or ``val_acc``."
+msgstr ""
+
+#: of optuna.integration.XGBoostPruningCallback:1
+msgid "Callback for XGBoost to prune unpromising trials."
+msgstr ""
+
+#: of optuna.integration.XGBoostPruningCallback:3
+msgid ""
+"See `the example <https://github.com/optuna/optuna/blob/master/ "
+"examples/pruning/xgboost_integration.py>`__ if you want to add a pruning "
+"callback which observes validation AUC of a XGBoost model."
+msgstr ""
+
+#: of optuna.integration.XGBoostPruningCallback:10
+msgid ""
+"An evaluation metric for pruning, e.g., ``validation-error`` and "
+"``validation-merror``. When using the Scikit-Learn API, the index number "
+"of ``eval_set`` must be included in the ``observation_key``, e.g., "
+"``validation_0-error`` and ``validation_0-merror``. Please refer to "
+"``eval_metric`` in `XGBoost reference "
+"<https://xgboost.readthedocs.io/en/latest/parameter.html>`_ for further "
+"details."
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV:1
+msgid "Hyperparameter search with cross-validation."
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV:5
+msgid "This feature is experimental. The interface may be changed in the future."
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV:7
+msgid ""
+"Object to use to fit the data. This is assumed to implement the scikit-"
+"learn estimator interface. Either this needs to provide ``score``, or "
+"``scoring`` must be passed."
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV:10
+msgid ""
+"Dictionary where keys are parameters and values are distributions. "
+"Distributions are assumed to implement the optuna distribution interface."
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV:13
+msgid ""
+"Cross-validation strategy. Possible inputs for cv are:  - integer to "
+"specify the number of folds in a CV splitter, - a CV splitter, - an "
+"iterable yielding (train, validation) splits as arrays of indices.  For "
+"integer, if :obj:`estimator` is a classifier and :obj:`y` is either "
+"binary or multiclass, ``sklearn.model_selection.StratifiedKFold`` is "
+"used. otherwise, ``sklearn.model_selection.KFold`` is used."
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV:13
+msgid "Cross-validation strategy. Possible inputs for cv are:"
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV:15
+msgid "integer to specify the number of folds in a CV splitter,"
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV:16
+msgid "a CV splitter,"
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV:17
+msgid "an iterable yielding (train, validation) splits as arrays of indices."
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV:19
+msgid ""
+"For integer, if :obj:`estimator` is a classifier and :obj:`y` is either "
+"binary or multiclass, ``sklearn.model_selection.StratifiedKFold`` is "
+"used. otherwise, ``sklearn.model_selection.KFold`` is used."
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV:23
+msgid ""
+"If :obj:`True`, pruning is performed in the case where the underlying "
+"estimator supports ``partial_fit``."
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV:25
+msgid ""
+"Value to assign to the score if an error occurs in fitting. If 'raise', "
+"the error is raised. If numeric, ``sklearn.exceptions.FitFailedWarning`` "
+"is raised. This does not affect the refit step, which will always raise "
+"the error."
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV:29
+msgid ""
+"Maximum number of epochs. This is only used if the underlying estimator "
+"supports ``partial_fit``."
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV:31
+msgid "Number of parallel jobs. :obj:`-1` means using all processors."
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV:32
+msgid ""
+"Number of trials. If :obj:`None`, there is no limitation on the number of"
+" trials. If :obj:`timeout` is also set to :obj:`None`, the study "
+"continues to create trials until it receives a termination signal such as"
+" Ctrl+C or SIGTERM. This trades off runtime vs quality of the solution."
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV:37
+msgid ""
+"Seed of the pseudo random number generator. If int, this is the seed used"
+" by the random number generator. If ``numpy.random.RandomState`` object, "
+"this is the random number generator. If :obj:`None`, the global random "
+"state from ``numpy.random`` is used."
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV:42
+msgid ""
+"If :obj:`True`, refit the estimator with the best found hyperparameters. "
+"The refitted estimator is made available at the ``best_estimator_`` "
+"attribute and permits using ``predict`` directly."
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV:46
+msgid ""
+"If :obj:`True`, training scores will be included. Computing training "
+"scores is used to get insights on how different hyperparameter settings "
+"impact the overfitting/underfitting trade-off. However computing training"
+" scores can be computationally expensive and is not strictly required to "
+"select the hyperparameters that yield the best generalization "
+"performance."
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV:53
+msgid ""
+"String or callable to evaluate the predictions on the validation data. If"
+" :obj:`None`, ``score`` on the estimator is used."
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV:55
+msgid ""
+"Study corresponds to the optimization task. If :obj:`None`, a new study "
+"is created."
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV:57
+msgid ""
+"Proportion of samples that are used during hyperparameter search.  - If "
+"int, then draw ``subsample`` samples. - If float, then draw ``subsample``"
+" * ``X.shape[0]`` samples."
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV:57
+msgid "Proportion of samples that are used during hyperparameter search."
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV:59
+msgid "If int, then draw ``subsample`` samples."
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV:60
+msgid "If float, then draw ``subsample`` * ``X.shape[0]`` samples."
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV:61
+msgid ""
+"Time limit in seconds for the search of appropriate models. If "
+":obj:`None`, the study is executed without time limitation. If "
+":obj:`n_trials` is also set to :obj:`None`, the study continues to create"
+" trials until it receives a termination signal such as Ctrl+C or SIGTERM."
+" This trades off runtime vs quality of the solution."
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV:67
+msgid "Verbosity level. The higher, the more messages."
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV:71
+msgid ""
+"Estimator that was chosen by the search. This is present only if "
+"``refit`` is set to :obj:`True`."
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV:76
+msgid "Number of cross-validation splits."
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV:80
+msgid ""
+"Time for refitting the best estimator. This is present only if ``refit`` "
+"is set to :obj:`True`."
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV:85
+msgid "Indices of samples that are used during hyperparameter search."
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV:89
+msgid "Scorer function."
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV:93
+msgid "Actual study."
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV:96
+msgid "Examples"
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV.best_index_:1
+msgid "Index which corresponds to the best candidate parameter setting."
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV.best_params_:1
+msgid "Parameters of the best trial in the :class:`~optuna.study.Study`."
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV.best_score_:1
+msgid "Mean cross-validated score of the best estimator."
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV.best_trial_:1
+msgid "Best trial in the :class:`~optuna.study.Study`."
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV.classes_:1
+msgid "Class labels."
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV.decision_function:1
+msgid "Call ``decision_function`` on the best estimator."
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV.decision_function:3
+msgid ""
+"This is available only if the underlying estimator supports "
+"``decision_function`` and ``refit`` is set to :obj:`True`."
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV.fit:1
+msgid "Run fit with all sets of parameters."
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV.fit:3
+msgid "Training data."
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV.fit:4
+#: optuna.integration.OptunaSearchCV.score:4
+msgid "Target variable."
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV.fit:5
+msgid ""
+"Group labels for the samples used while splitting the dataset into "
+"train/validation set."
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV.fit:7
+msgid "Parameters passed to ``fit`` on the estimator."
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV.fit
+#: optuna.integration.OptunaSearchCV.score
+msgid "Returns"
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV.fit:9
+msgid "Return self."
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV.fit
+#: optuna.integration.OptunaSearchCV.score
+msgid "Return type"
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV.inverse_transform:1
+msgid "Call ``inverse_transform`` on the best estimator."
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV.inverse_transform:3
+msgid ""
+"This is available only if the underlying estimator supports "
+"``inverse_transform`` and ``refit`` is set to :obj:`True`."
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV.n_trials_:1
+msgid "Actual number of trials."
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV.predict:1
+msgid "Call ``predict`` on the best estimator."
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV.predict:3
+msgid ""
+"This is available only if the underlying estimator supports ``predict`` "
+"and ``refit`` is set to :obj:`True`."
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV.predict_log_proba:1
+msgid "Call ``predict_log_proba`` on the best estimator."
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV.predict_log_proba:3
+msgid ""
+"This is available only if the underlying estimator supports "
+"``predict_log_proba`` and ``refit`` is set to :obj:`True`."
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV.predict_proba:1
+msgid "Call ``predict_proba`` on the best estimator."
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV.predict_proba:3
+msgid ""
+"This is available only if the underlying estimator supports "
+"``predict_proba`` and ``refit`` is set to :obj:`True`."
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV.score:1
+msgid "Return the score on the given data."
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV.score:3
+msgid "Data."
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV.score:6
+msgid "Scaler score."
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV.score_samples:1
+msgid "Call ``score_samples`` on the best estimator."
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV.score_samples:3
+msgid ""
+"This is available only if the underlying estimator supports "
+"``score_samples`` and ``refit`` is set to :obj:`True`."
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV.set_user_attr:1
+msgid "Call ``set_user_attr`` on the :class:`~optuna.study.Study`."
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV.transform:1
+msgid "Call ``transform`` on the best estimator."
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV.transform:3
+msgid ""
+"This is available only if the underlying estimator supports ``transform``"
+" and ``refit`` is set to :obj:`True`."
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV.trials_:1
+msgid "All trials in the :class:`~optuna.study.Study`."
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV.trials_dataframe:1
+msgid "Call ``trials_dataframe`` on the :class:`~optuna.study.Study`."
+msgstr ""
+
+#: of optuna.integration.OptunaSearchCV.user_attrs_:1
+msgid "User attributes in the :class:`~optuna.study.Study`."
+msgstr ""
+
+#: of optuna.integration.AllenNLPExecutor:1
+msgid "AllenNLP extension to use optuna with Jsonnet config file."
+msgstr ""
+
+#: of optuna.integration.AllenNLPExecutor:3
+msgid ""
+"This feature is experimental since AllenNLP major release will come soon."
+" The interface may change without prior notice to correspond to the "
+"update."
+msgstr ""
+
+#: of optuna.integration.AllenNLPExecutor:6
+msgid ""
+"See the examples of `objective function "
+"<https://github.com/optuna/optuna/blob/ "
+"master/examples/allennlp/allennlp_jsonnet.py>`_ and `config file "
+"<https://github.com/optuna/optuna/blob/master/ "
+"examples/allennlp/classifier.jsonnet>`_."
+msgstr ""
+
+#: of optuna.integration.AllenNLPExecutor:13
+msgid ""
+"Config file for AllenNLP. Hyperparameters should be masked with "
+"``std.extVar``. Please refer to `the config example "
+"<https://github.com/allenai/allentune/blob/ "
+"master/examples/classifier.jsonnet>`_."
+msgstr ""
+
+#: of optuna.integration.AllenNLPExecutor:17
+msgid "A path which model weights and logs are saved."
+msgstr ""
+
+#: of optuna.integration.AllenNLPExecutor:18
+msgid "An evaluation metric for the result of ``objective``."
+msgstr ""
+
+#: of optuna.integration.AllenNLPExecutor:19
+msgid ""
+"Additional packages to include. For more information, please see "
+"`AllenNLP documentation "
+"<https://docs.allennlp.org/master/api/commands/train/>`_."
+msgstr ""
+
+#: of optuna.integration.AllenNLPExecutor.run:1
+msgid "Train a model using AllenNLP."
+msgstr ""
+
+#: of optuna.integration.allennlp.dump_best_config:1
+msgid ""
+"Save JSON config file after updating with parameters from the best trial "
+"in the study."
+msgstr ""
+
+#: of optuna.integration.allennlp.dump_best_config:3
+msgid ""
+"Input Jsonnet config file used with "
+":class:`~optuna.integration.AllenNLPExecutor`."
+msgstr ""
+
+#: of optuna.integration.allennlp.dump_best_config:5
+msgid "Output JSON config file."
+msgstr ""
+
+#: of optuna.integration.allennlp.dump_best_config:6
+msgid ""
+"Instance of :class:`~optuna.study.Study`. Note that "
+":func:`~optuna.study.Study.optimize` must have been called."
+msgstr ""
+

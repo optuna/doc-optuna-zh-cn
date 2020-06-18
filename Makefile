@@ -6,7 +6,7 @@ SPHINXOPTS    = -W --keep-going
 SPHINXBUILD   = sphinx-build
 SPHINXPROJ    = Optuna
 SOURCEDIR     = source
-BUILDDIR      = ${OPTUNA_DOC_ZHCN_BUILD}
+BUILDDIR      = build
 
 # Put it first so that "make" without argument is like "make help".
 help:

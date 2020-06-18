@@ -163,3 +163,8 @@ texinfo_documents = [
 intersphinx_mapping = {'python': ('https://docs.python.org/3', None)}
 
 # -- Extension configuration -------------------------------------------------
+
+# -- translation -------------------------------------------------
+
+locale_dirs = ['locale/']   # path is example but recommended.
+gettext_compact = False     # optional.

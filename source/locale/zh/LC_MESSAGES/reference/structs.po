@@ -1,0 +1,186 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018, Optuna Contributors.
+# This file is distributed under the same license as the Optuna package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Optuna 1.4.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-06-17 19:47-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../source/reference/structs.rst:4
+msgid "Structs"
+msgstr ""
+
+#: of optuna.structs.TrialState:1
+msgid "State of a :class:`~optuna.trial.Trial`."
+msgstr ""
+
+#: of optuna.structs.TrialState:5
+msgid "The :class:`~optuna.trial.Trial` is running."
+msgstr ""
+
+#: of optuna.structs.TrialState:9
+msgid "The :class:`~optuna.trial.Trial` has been finished without any error."
+msgstr ""
+
+#: of optuna.structs.TrialState:13
+msgid ""
+"The :class:`~optuna.trial.Trial` has been pruned with "
+":class:`~optuna.exceptions.TrialPruned`."
+msgstr ""
+
+#: of optuna.structs.TrialState:18
+msgid "The :class:`~optuna.trial.Trial` has failed due to an uncaught error."
+msgstr ""
+
+#: ../../source/reference/structs.rst:9
+msgid ""
+"This class is deprecated. Please use :class:`~optuna.trial.TrialState` "
+"instead."
+msgstr ""
+
+#: of optuna.structs.StudyDirection:1
+msgid "Direction of a :class:`~optuna.study.Study`."
+msgstr ""
+
+#: of optuna.structs.StudyDirection:5
+msgid "Direction has not been set."
+msgstr ""
+
+#: of optuna.structs.StudyDirection:9
+msgid ":class:`~optuna.study.Study` minimizes the objective function."
+msgstr ""
+
+#: of optuna.structs.StudyDirection:13
+msgid ":class:`~optuna.study.Study` maximizes the objective function."
+msgstr ""
+
+#: ../../source/reference/structs.rst:15
+msgid ""
+"This class is deprecated. Please use "
+":class:`~optuna.study.StudyDirection` instead."
+msgstr ""
+
+#: of optuna.structs.FrozenTrial:1
+msgid "Status and results of a :class:`~optuna.trial.Trial`."
+msgstr ""
+
+#: of optuna.structs.FrozenTrial:5
+msgid ""
+"This class was moved to :mod:`~optuna.trial`. Please use "
+":class:`~optuna.trial.FrozenTrial` instead."
+msgstr ""
+
+#: of optuna.structs.FrozenTrial:10
+msgid ""
+"Unique and consecutive number of :class:`~optuna.trial.Trial` for each "
+":class:`~optuna.study.Study`. Note that this field uses zero-based "
+"numbering."
+msgstr ""
+
+#: of optuna.structs.FrozenTrial:15
+msgid ":class:`TrialState` of the :class:`~optuna.trial.Trial`."
+msgstr ""
+
+#: of optuna.structs.FrozenTrial:19
+msgid "Objective value of the :class:`~optuna.trial.Trial`."
+msgstr ""
+
+#: of optuna.structs.FrozenTrial:23
+msgid "Datetime where the :class:`~optuna.trial.Trial` started."
+msgstr ""
+
+#: of optuna.structs.FrozenTrial:27
+msgid "Datetime where the :class:`~optuna.trial.Trial` finished."
+msgstr ""
+
+#: of optuna.structs.FrozenTrial:31
+msgid "Dictionary that contains suggested parameters."
+msgstr ""
+
+#: of optuna.structs.FrozenTrial:35
+msgid ""
+"Dictionary that contains the attributes of the "
+":class:`~optuna.trial.Trial` set with "
+":func:`optuna.trial.Trial.set_user_attr`."
+msgstr ""
+
+#: of optuna.structs.FrozenTrial:40
+msgid "Intermediate objective values set with :func:`optuna.trial.Trial.report`."
+msgstr ""
+
+#: of optuna.structs.FrozenTrial.distributions:1
+msgid "Dictionary that contains the distributions of :attr:`params`."
+msgstr ""
+
+#: of optuna.structs.FrozenTrial.duration:1
+msgid "Return the elapsed time taken to complete the trial."
+msgstr ""
+
+#: of optuna.structs.FrozenTrial.duration
+msgid "Returns"
+msgstr ""
+
+#: of optuna.structs.FrozenTrial.duration:3
+msgid "The duration."
+msgstr ""
+
+#: of optuna.structs.StudySummary:1
+msgid "Basic attributes and aggregated results of a :class:`~optuna.study.Study`."
+msgstr ""
+
+#: of optuna.structs.StudySummary:5
+msgid ""
+"This class was moved to :mod:`~optuna.study`. Please use "
+":class:`~optuna.study.StudySummary` instead."
+msgstr ""
+
+#: of optuna.structs.StudySummary:8
+msgid "See also :func:`optuna.study.get_all_study_summaries`."
+msgstr ""
+
+#: of optuna.structs.StudySummary:12
+msgid "Name of the :class:`~optuna.study.Study`."
+msgstr ""
+
+#: of optuna.structs.StudySummary:16
+msgid ":class:`~optuna.study.StudyDirection` of the :class:`~optuna.study.Study`."
+msgstr ""
+
+#: of optuna.structs.StudySummary:20
+msgid ""
+":class:`FrozenTrial` with best objective value in the "
+":class:`~optuna.study.Study`."
+msgstr ""
+
+#: of optuna.structs.StudySummary:24
+msgid ""
+"Dictionary that contains the attributes of the "
+":class:`~optuna.study.Study` set with "
+":func:`optuna.study.Study.set_user_attr`."
+msgstr ""
+
+#: of optuna.structs.StudySummary:29
+msgid ""
+"Dictionary that contains the attributes of the "
+":class:`~optuna.study.Study` internally set by Optuna."
+msgstr ""
+
+#: of optuna.structs.StudySummary:34
+msgid "The number of trials ran in the :class:`~optuna.study.Study`."
+msgstr ""
+
+#: of optuna.structs.StudySummary:38
+msgid "Datetime where the :class:`~optuna.study.Study` started."
+msgstr ""
+

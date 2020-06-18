@@ -1,0 +1,123 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018, Optuna Contributors.
+# This file is distributed under the same license as the Optuna package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Optuna 1.4.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-06-17 19:47-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../source/tutorial/pruning.rst:4
+msgid "Pruning Unpromising Trials"
+msgstr "对无望的 Trial 进行剪枝 (Pruning)"
+
+#: ../../source/tutorial/pruning.rst:6
+msgid ""
+"This feature automatically stops unpromising trials at the early stages "
+"of the training (a.k.a., automated early-stopping). Optuna provides "
+"interfaces to concisely implement the pruning mechanism in iterative "
+"training algorithms."
+msgstr "该功能可以在训练的早期阶段自动终止无望的 Trial (a.k.a., 自动化 early-stopping). Optuna 提供了一些接口，可以用于在迭代训练算法中简洁地实现剪枝 (Pruning)。"
+
+#: ../../source/tutorial/pruning.rst:11
+msgid "Activating Pruners"
+msgstr "开启 Pruner"
+
+#: ../../source/tutorial/pruning.rst:12
+msgid ""
+"To turn on the pruning feature, you need to call "
+":func:`~optuna.trial.Trial.report` and "
+":func:`~optuna.trial.Trial.should_prune` after each step of the iterative"
+" training. :func:`~optuna.trial.Trial.report` periodically monitors the "
+"intermediate objective values. :func:`~optuna.trial.Trial.should_prune` "
+"decides termination of the trial that does not meet a predefined "
+"condition."
+msgstr ""
+"为了打开 Pruning 功能，你需要在迭代式训练的每一步完成后调用函数 :func:`~optuna.trial.Trial.report` 和 :func:`~optuna.trial.Trial.should_prune` "
+":func:`~optuna.trial.Trial.report` 定期监测这个过程中的目标函数值。"
+":func:`~optuna.trial.Trial.should_prune` 根据提前定义好的条件，判定该 trial 是否需要终止。"
+
+#: ../../source/tutorial/pruning.rst:53
+msgid "Executing the script above:"
+msgstr "运行上述脚本:"
+
+#: ../../source/tutorial/pruning.rst:70
+msgid ""
+"``Trial 5 pruned.``, etc. in the log messages means several trials were "
+"stopped before they finished all of the iterations."
+msgstr ""
+"我们可以在输出信息中看到 ``Setting status of trial#{} as TrialState.PRUNED``."
+"这意味着这些 trial 在他们完成迭代之前就被终止了。"
+
+#: ../../source/tutorial/pruning.rst:74
+msgid "Integration Modules for Pruning"
+msgstr "用于 Pruning 的集成模块"
+
+#: ../../source/tutorial/pruning.rst:75
+msgid ""
+"To implement pruning mechanism in much simpler forms, Optuna provides "
+"integration modules for the following libraries."
+msgstr "为了能更加方便地实现 pruning, Optuna 为以下框架提供了集成模块。"
+
+#: ../../source/tutorial/pruning.rst:77
+msgid "XGBoost: :class:`optuna.integration.XGBoostPruningCallback`"
+msgstr ""
+
+#: ../../source/tutorial/pruning.rst:78
+msgid "LightGBM: :class:`optuna.integration.LightGBMPruningCallback`"
+msgstr ""
+
+#: ../../source/tutorial/pruning.rst:79
+msgid "Chainer: :class:`optuna.integration.ChainerPruningExtension`"
+msgstr ""
+
+#: ../../source/tutorial/pruning.rst:80
+msgid "Keras: :class:`optuna.integration.KerasPruningCallback`"
+msgstr ""
+
+#: ../../source/tutorial/pruning.rst:81
+msgid "TensorFlow :class:`optuna.integration.TensorFlowPruningHook`"
+msgstr ""
+
+#: ../../source/tutorial/pruning.rst:82
+msgid "tf.keras :class:`optuna.integration.TFKerasPruningCallback`"
+msgstr ""
+
+#: ../../source/tutorial/pruning.rst:83
+msgid "MXNet :class:`optuna.integration.MXNetPruningCallback`"
+msgstr ""
+
+#: ../../source/tutorial/pruning.rst:84
+msgid "PyTorch Ignite :class:`optuna.integration.PyTorchIgnitePruningHandler`"
+msgstr ""
+
+#: ../../source/tutorial/pruning.rst:85
+msgid ""
+"PyTorch Lightning "
+":class:`optuna.integration.PyTorchLightningPruningCallback`"
+msgstr ""
+
+#: ../../source/tutorial/pruning.rst:86
+msgid "FastAI :class:`optuna.integration.FastAIPruningCallback`"
+msgstr ""
+
+#: ../../source/tutorial/pruning.rst:88
+msgid ""
+"For example, :class:`~optuna.integration.XGBoostPruningCallback` "
+"introduces pruning without directly changing the logic of training "
+"iteration. (See also `example "
+"<https://github.com/optuna/optuna/blob/master/examples/pruning/xgboost_integration.py>`_"
+" for the entire script.)"
+msgstr ""
+"比如, :class:`~optuna.integration.XGBoostPruningCallback` 在无需修改训练迭代逻辑的情况下引入了 pruning."
+"(完整脚本见 `example <https://github.com/optuna/optuna/blob/master/examples/pruning/xgboost_integration.py>`_ .)"
