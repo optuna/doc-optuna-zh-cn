@@ -48,7 +48,7 @@ msgstr "该分布的取值范围下界。其中 ``low`` 值是包含在取值范
 msgid ""
 "Upper endpoint of the range of the distribution. ``high`` is excluded "
 "from the range."
-msgstr ""
+msgstr "该分布的取值范围上界。其中 ``high`` 值是不包含在取值范围内的。"
 
 #: of optuna.distributions.CategoricalDistribution.single:1
 #: optuna.distributions.DiscreteUniformDistribution.single:1
@@ -57,7 +57,7 @@ msgstr ""
 #: optuna.distributions.LogUniformDistribution.single:1
 #: optuna.distributions.UniformDistribution.single:1
 msgid "Test whether the range of this distribution contains just a single value."
-msgstr ""
+msgstr "测试该分布范围内是否仅包含一个可能的值。"
 
 #: of optuna.distributions.CategoricalDistribution.single:3
 #: optuna.distributions.DiscreteUniformDistribution.single:3
@@ -69,6 +69,7 @@ msgid ""
 "When this method returns :obj:`True`, :mod:`~optuna.samplers` always "
 "sample the same value from the distribution."
 msgstr ""
+"如果该方法返回 :obj:`True`, 则 :mod:`~optuna.samplers` 总从该分布中取同一个值。"
 
 #: of optuna.distributions.CategoricalDistribution.single
 #: optuna.distributions.DiscreteUniformDistribution.single
@@ -91,29 +92,29 @@ msgstr ""
 msgid ""
 ":obj:`True` if the range of this distribution contains just a single "
 "value, otherwise :obj:`False`."
-msgstr ""
+msgstr "当分布的范围内仅包含一个值时该值为 :obj:`True`, 否则为 :obj:`False`"
 
 #: of optuna.distributions.LogUniformDistribution:1
 msgid "A uniform distribution in the log domain."
-msgstr ""
+msgstr "Log 均匀分布"
 
 #: of optuna.distributions.LogUniformDistribution:3
 msgid ""
 "This object is instantiated by "
 ":func:`~optuna.trial.Trial.suggest_loguniform`, and passed to "
 ":mod:`~optuna.samplers` in general."
-msgstr ""
+msgstr "该对象由 :func:`~optuna.trial.Trial.suggest_loguniform` 进行实例化之后会被传递到 :mod:`~optuna.samplers`"
 
 #: of optuna.distributions.DiscreteUniformDistribution:1
 msgid "A discretized uniform distribution in the linear domain."
-msgstr ""
+msgstr "线性离散均匀分布"
 
 #: of optuna.distributions.DiscreteUniformDistribution:3
 msgid ""
 "This object is instantiated by "
 ":func:`~optuna.trial.Trial.suggest_discrete_uniform`, and passed to "
 ":mod:`~optuna.samplers` in general."
-msgstr ""
+msgstr "该对象由 :func:`~optuna.trial.Trial.suggest_discrete_uniform` 进行实例化之后会被传递到 :mod:`~optuna.samplers`"
 
 #: of optuna.distributions.DiscreteUniformDistribution:7
 msgid ""
@@ -121,7 +122,7 @@ msgid ""
 ":math:`q`, :math:`\\mathsf{high}` will be replaced with the maximum of "
 ":math:`k q + \\mathsf{low} \\lt \\mathsf{high}`, where :math:`k` is an "
 "integer."
-msgstr ""
+msgstr "如果区间 :math:`[\\mathsf{low}, \\mathsf{high}]` 不能被步数 :math:`q` 整除的话， 值 :math:`\\mathsf{high}` 会被替代成 :math:`k q + \\mathsf{low} \\lt \\mathsf{high}` 的最大值，其中 :math:`k` 是整数。"
 
 #: of optuna.distributions.DiscreteUniformDistribution:17
 #: optuna.distributions.IntLogUniformDistribution:18
@@ -129,22 +130,22 @@ msgstr ""
 msgid ""
 "Upper endpoint of the range of the distribution. ``high`` is included in "
 "the range."
-msgstr ""
+msgstr "该分布的取值范围上界。其中 ``high`` 值是包含在取值范围内的。"
 
 #: of optuna.distributions.DiscreteUniformDistribution:21
 msgid "A discretization step."
-msgstr ""
+msgstr "离散化步骤。"
 
 #: of optuna.distributions.IntUniformDistribution:1
 msgid "A uniform distribution on integers."
-msgstr ""
+msgstr "整数上的均匀分布。"
 
 #: of optuna.distributions.IntLogUniformDistribution:3
 #: optuna.distributions.IntUniformDistribution:3
 msgid ""
 "This object is instantiated by :func:`~optuna.trial.Trial.suggest_int`, "
 "and passed to :mod:`~optuna.samplers` in general."
-msgstr ""
+msgstr "该对象由 :func:`~optuna.trial.Trial.suggest_int` 进行实例化之后会被传递到 :mod:`~optuna.samplers`"
 
 #: of optuna.distributions.IntLogUniformDistribution:7
 #: optuna.distributions.IntUniformDistribution:7
@@ -153,27 +154,28 @@ msgid ""
 ":math:`\\mathsf{step}`, :math:`\\mathsf{high}` will be replaced with the "
 "maximum of :math:`k \\times \\mathsf{step} + \\mathsf{low} \\lt "
 "\\mathsf{high}`, where :math:`k` is an integer."
-msgstr ""
+msgstr "如果区间 :math:`[\\mathsf{low}, \\mathsf{high}]` 不能被步数 :math:`\\mathsf{step}` 整除的话， "
+"值 :math:`\\mathsf{high}` 会被替代成 :math:`k \\times \\mathsf{step} + \\mathsf{low} \\lt \\mathsf{high}` 的最大值，其中 :math:`k` 是整数。"
 
 #: of optuna.distributions.IntLogUniformDistribution:22
 #: optuna.distributions.IntUniformDistribution:22
 msgid "A step for spacing between values."
-msgstr ""
+msgstr "取值间隔步长。"
 
 #: of optuna.distributions.IntLogUniformDistribution:1
 msgid "A uniform distribution on integers in the log domain."
-msgstr ""
+msgstr "Log 操作后的整数均匀分布。"
 
 #: of optuna.distributions.CategoricalDistribution:1
 msgid "A categorical distribution."
-msgstr ""
+msgstr "分类分布。"
 
 #: of optuna.distributions.CategoricalDistribution:3
 msgid ""
 "This object is instantiated by "
 ":func:`~optuna.trial.Trial.suggest_categorical`, and passed to "
 ":mod:`~optuna.samplers` in general."
-msgstr ""
+msgstr "该对象由 :func:`~optuna.trial.Trial.suggest_categorical` 进行实例化之后会被传递到 :mod:`~optuna.samplers`"
 
 #: of optuna.distributions.CategoricalDistribution
 #: optuna.distributions.check_distribution_compatibility
@@ -185,56 +187,56 @@ msgstr ""
 #: of optuna.distributions.CategoricalDistribution:6
 #: optuna.distributions.CategoricalDistribution:16
 msgid "Parameter value candidates."
-msgstr ""
+msgstr "可选参数值"
 
 #: of optuna.distributions.CategoricalDistribution:10
 msgid ""
 "Not all types are guaranteed to be compatible with all storages. It is "
 "recommended to restrict the types of the choices to :obj:`None`, "
 ":class:`bool`, :class:`int`, :class:`float` and :class:`str`."
-msgstr ""
+msgstr "不是所有类型的参数都一定能和optuna的存储引擎兼容，请尽量使用 :obj:`None`, :class:`bool`, :class:`int`, :class:`float` 或者 :class:`str`."
 
 #: of optuna.distributions.distribution_to_json:1
 msgid "Serialize a distribution to JSON format."
-msgstr ""
+msgstr "将分布序列化成json格式"
 
 #: of optuna.distributions.distribution_to_json:3
 msgid "A distribution to be serialized."
-msgstr ""
+msgstr "待序列化的分布"
 
 #: of optuna.distributions.distribution_to_json:5
 msgid "A JSON string of a given distribution."
-msgstr ""
+msgstr "输出的 JSON 文件名"
 
 #: of optuna.distributions.json_to_distribution:1
 msgid "Deserialize a distribution in JSON format."
-msgstr ""
+msgstr "将 JSON 格式的分布反序列化"
 
 #: of optuna.distributions.json_to_distribution:3
 msgid "A JSON-serialized distribution."
-msgstr ""
+msgstr "已序列化的分布"
 
 #: of optuna.distributions.json_to_distribution:5
 msgid "A deserialized distribution."
-msgstr ""
+msgstr "已反序列化的分布"
 
 #: of optuna.distributions.check_distribution_compatibility:1
 msgid "A function to check compatibility of two distributions."
-msgstr ""
+msgstr "检查两分布的兼容性"
 
 #: of optuna.distributions.check_distribution_compatibility:3
 msgid "Note that this method is not supposed to be called by library users."
-msgstr ""
+msgstr "注意，该方法不应由 optuna 用户来调用"
 
 #: of optuna.distributions.check_distribution_compatibility:5
 msgid "A distribution previously recorded in storage."
-msgstr ""
+msgstr "从存储内容中恢复的分布"
 
 #: of optuna.distributions.check_distribution_compatibility:6
 msgid "A distribution newly added to storage."
-msgstr ""
+msgstr "新添加到存储内容的分布"
 
 #: of optuna.distributions.check_distribution_compatibility:8
 msgid "True denotes given distributions are compatible. Otherwise, they are not."
-msgstr ""
+msgstr "如果是 True 的话，表明这些分布是兼容的，否则不兼容。"
 

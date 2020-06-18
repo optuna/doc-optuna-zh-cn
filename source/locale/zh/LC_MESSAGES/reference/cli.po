@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../source/reference/cli.rst:2
 msgid "Command Line Interface"
-msgstr "命令行界面"
+msgstr ""
 
 #: ../../<_OptunaApp>:1
 msgid "show program's version number and exit"
