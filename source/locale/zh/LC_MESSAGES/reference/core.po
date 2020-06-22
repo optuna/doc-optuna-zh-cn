@@ -23,7 +23,7 @@ msgstr ""
 
 #: of optuna.create_study:1
 msgid "Create a new :class:`~optuna.study.Study`."
-msgstr ""
+msgstr "创建新 :class:`~optuna.study.Study`."
 
 #: of optuna.create_study optuna.delete_study optuna.get_all_study_summaries
 #: optuna.load_study
@@ -50,7 +50,8 @@ msgstr ""
 msgid ""
 "Database URL. If this argument is set to None, in-memory storage is used,"
 " and the :class:`~optuna.study.Study` will not be persistent."
-msgstr ""
+msgstr "数据库 URL. 如果该参数被设置成 None, 那么Optuna将使用 in-memory 存储。"
+"此时，:class:`~optuna.study.Study` 将无法被持久化。"
 
 #: of optuna.create_study:7
 msgid ""
@@ -60,7 +61,10 @@ msgid ""
 "Engine`_, you can instantiate :class:`~optuna.storages.RDBStorage` with "
 "your desired options and pass it to the ``storage`` argument instead of a"
 " URL."
-msgstr ""
+msgstr "当数据库 URL被传入该方法后，optuna 会在内部调用  `SQLAlchemy`_ 来处理数据库。"
+"具体细节见 `SQLAlchemy's document`_ "
+"如果你想定制 `SQLAlchemy Engine`_ 的话，你可以在将 :class:`~optuna.storages.RDBStorage`  实例化时传入你想要的参数"
+"并且将该实例，而不是一个URL, 作为 ``storage`` 参数传进去。"
 
 #: of optuna.create_study:17 optuna.load_study:6
 msgid ""
@@ -68,25 +72,26 @@ msgid ""
 "suggestion. If :obj:`None` is specified, "
 ":class:`~optuna.samplers.TPESampler` is used as the default. See also "
 ":class:`~optuna.samplers`."
-msgstr ""
+msgstr "Sampler 对象负责实现参数值采样。如果该参数设置为 :obj:`None` 的话，默认 sampler 将是 :class:`~optuna.samplers.TPESampler`. "
+"具体见 :class:`~optuna.samplers`."
 
 #: of optuna.create_study:20
 msgid ""
 "A pruner object that decides early stopping of unpromising trials. See "
 "also :class:`~optuna.pruners`."
-msgstr ""
+msgstr "Prunner 对象，决定是否提前终止无望的 trial. 具体见 :class:`~optuna.pruners`."
 
 #: of optuna.create_study:22
 msgid ""
 "Study's name. If this argument is set to None, a unique name is generated"
 " automatically."
-msgstr ""
+msgstr "Study 名。如果该参数被设置成 None 的话，optuna 将自动生成一个唯一的 study name."
 
 #: of optuna.create_study:24
 msgid ""
 "Direction of optimization. Set ``minimize`` for minimization and "
 "``maximize`` for maximization."
-msgstr ""
+msgstr "优化的方向。设置成 ``minimize`` 的话就是最小化，反之 ``maximize`` 则是最大化。"
 
 #: of optuna.create_study:26
 msgid ""
@@ -95,7 +100,10 @@ msgid ""
 "``storage``, a :class:`~optuna.exceptions.DuplicatedStudyError` is raised"
 " if ``load_if_exists`` is set to :obj:`False`. Otherwise, the creation of"
 " the study is skipped, and the existing one is returned."
-msgstr ""
+msgstr "用于处理冲突的 study 名的选项。"
+"如果 `load_if_exists`` 是设置成  :obj:`False` 的话，当 ``storage`` 中已经存在了一个名为 ``study_name`` 的 study 时"
+" :class:`~optuna.exceptions.DuplicatedStudyError` 异常就会被抛出。"
+"否则，创建 study 的过程将会被跳过，而已经存在的那个 study 会被加载。"
 
 #: of optuna.create_study optuna.get_all_study_summaries
 msgid "Returns"
@@ -107,65 +115,65 @@ msgstr ""
 
 #: ../../source/reference/core.rst:9
 msgid "This is an alias for :func:`optuna.study.create_study`."
-msgstr ""
+msgstr "这是 :func:`optuna.study.create_study` 的一个别名。"
 
 #: of optuna.load_study:1
 msgid ""
 "Load the existing :class:`~optuna.study.Study` that has the specified "
 "name."
-msgstr ""
+msgstr "加载一个已经指定名称的已存在的 :class:`~optuna.study.Study`. "
 
 #: of optuna.load_study:3
 msgid "Study's name. Each study has a unique name as an identifier."
-msgstr ""
+msgstr "Study 名。每一个 study 都有一个作为标识符的唯一的名字。"
 
 #: of optuna.delete_study:4 optuna.get_all_study_summaries:3
 #: optuna.load_study:4
 msgid ""
 "Database URL such as ``sqlite:///example.db``. Please see also the "
 "documentation of :func:`~optuna.study.create_study` for further details."
-msgstr ""
+msgstr "类似 ``sqlite:///example.db`` 的数据库URL. 更多细节见 :func:`~optuna.study.create_study` 的文档。"
 
 #: of optuna.load_study:9
 msgid ""
 "A pruner object that decides early stopping of unpromising trials. If "
 ":obj:`None` is specified, :class:`~optuna.pruners.MedianPruner` is used "
 "as the default. See also :class:`~optuna.pruners`."
-msgstr ""
+msgstr "Prunner 对象，决定是否提前终止无望的 trial. 如果该选项设置成 :obj:`None`  的话, :class:`~optuna.pruners.MedianPruner` 将会作为默认 pruner 被启用。参见 :class:`~optuna.pruners`."
 
 #: ../../source/reference/core.rst:14
 msgid "This is an alias for :func:`optuna.study.load_study`."
-msgstr ""
+msgstr "这是 :func:`optuna.study.load_study` 的一个别名。"
 
 #: of optuna.delete_study:1
 msgid "Delete a :class:`~optuna.study.Study` object."
-msgstr ""
+msgstr "删除 :class:`~optuna.study.Study` 对象。"
 
 #: of optuna.delete_study:3
 msgid "Study's name."
-msgstr ""
+msgstr "Study 名。"
 
 #: ../../source/reference/core.rst:19
 msgid "This is an alias for :func:`optuna.study.delete_study`."
-msgstr ""
+msgstr "这是 :func:`optuna.study.delete_study` 的一个别名。"
 
 #: of optuna.get_all_study_summaries:1
 msgid "Get all history of studies stored in a specified storage."
-msgstr ""
+msgstr "获取指定存储内的所有 study 历史记录。"
 
 #: of optuna.get_all_study_summaries:6
 msgid ""
 "List of study history summarized as :class:`~optuna.study.StudySummary` "
 "objects."
-msgstr ""
+msgstr "以 :class:`~optuna.study.StudySummary` 形式总结的 study 列表。"
 
 #: ../../source/reference/core.rst:24
 msgid "This is an alias for :func:`optuna.study.get_all_study_summaries`."
-msgstr ""
+msgstr "这是 :func:`optuna.study.get_all_study_summaries` 的一个别名。"
 
 #: of optuna.TrialPruned:1
 msgid "Exception for pruned trials."
-msgstr ""
+msgstr "被剪枝 trial 异常。"
 
 #: of optuna.TrialPruned:3
 msgid ""
@@ -173,7 +181,7 @@ msgid ""
 "was pruned. It is supposed to be raised after "
 ":func:`optuna.trial.Trial.should_prune` as shown in the following "
 "example."
-msgstr ""
+msgstr "该报错告诉使用者当前 :class:`~optuna.trial.Trial` 已被剪枝。如下例所示，它会在 :func:`optuna.trial.Trial.should_prune` 之后被抛出："
 
 #: of optuna.TrialPruned:8
 msgid "Example"
@@ -181,5 +189,5 @@ msgstr ""
 
 #: ../../source/reference/core.rst:30
 msgid "This is an alias for :class:`optuna.exceptions.TrialPruned`."
-msgstr ""
+msgstr "这是 :func:`optuna.exceptions.TrialPruned` 的一个别名。"
 
