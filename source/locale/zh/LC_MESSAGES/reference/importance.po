@@ -27,7 +27,7 @@ msgstr ""
 msgid ""
 "Evaluate parameter importances based on completed trials in the given "
 "study."
-msgstr ""
+msgstr "根据给定 study 中完成的trial 来判断特定参数的重要性。"
 
 #: of optuna.importance.get_param_importances:3
 msgid ""
@@ -37,7 +37,10 @@ msgid ""
 " dictionary. The higher the value, the more important. The returned "
 "dictionary is of type :class:`collections.OrderedDict` and is ordered by "
 "its values in a descending order."
-msgstr ""
+msgstr "参数重要性以字典形式返回，其中键由参数名称及其重要性组成。"
+"重要性由浮点数表示，一个字典中所有的重要性之和为1.0"
+"该浮点数的值越高，其对应的参数也就越重要"
+"这个返回的字典属于 :class:`collections.OrderedDict` 类，其中的元素会按照其中值的大小降序排序。"
 
 #: of optuna.importance.get_param_importances:11
 msgid ""
@@ -48,25 +51,27 @@ msgid ""
 "can be specified via ``params``. If specified, only completed trials that"
 " contain all of the parameters will be considered. If no such trials are "
 "found, an error will be raised."
-msgstr ""
+msgstr "如果 ``params`` 被设置成 :obj:`None`, 那么所有属于已完成 trial 的参数都会被评估。"
+"这意味着，条件参数不会参与评估。要获得条件参数的重要性的话，你可以向 ``params`` 传入一个带有参数名的 :obj:`list`."
+"此时，只有包含了这些参数的trial才会被评估。如果没有发现满足这种条件的trial的话，Optuna将会抛出一个错误。"
 
 #: of optuna.importance.get_param_importances:19
 msgid ""
 "If the given study does not contain completed trials, an error will be "
 "raised."
-msgstr ""
+msgstr "如果给定的 study 不包含已完成的 trial 的话，Optuna将会抛出一个错误。"
 
 #: of optuna.importance.get_param_importances:23
 msgid ""
 "If ``params`` is specified as an empty list, an empty dictionary is "
 "returned."
-msgstr ""
+msgstr "如果 ``params`` 是一个空列表，那么将会返回一个空字典"
 
 #: of optuna.importance.get_param_importances:27
 msgid ""
 "See :func:`~optuna.visualization.plot_param_importances` to plot "
 "importances."
-msgstr ""
+msgstr "参考 :func:`~optuna.visualization.plot_param_importances` 来查看如何绘制重要性的图表。"
 
 #: of optuna.importance.FanovaImportanceEvaluator.evaluate
 #: optuna.importance.MeanDecreaseImpurityImportanceEvaluator
@@ -79,14 +84,14 @@ msgstr ""
 #: optuna.importance.MeanDecreaseImpurityImportanceEvaluator.evaluate:12
 #: optuna.importance.get_param_importances:29
 msgid "An optimized study."
-msgstr ""
+msgstr "一个已优化完的 study."
 
 #: of optuna.importance.get_param_importances:30
 msgid ""
 "An importance evaluator object that specifies which algorithm to base the"
 " importance assessment on. Defaults to "
 ":class:`~optuna.importance._mean_decrease_impurity.MeanDecreaseImpurityImportanceEvaluator`."
-msgstr ""
+msgstr "重要性求解器。该求解器指定用于评估重要性的算法。默认情况下我们会使用 :class:`~optuna.importance._mean_decrease_impurity.MeanDecreaseImpurityImportanceEvaluator`."
 
 #: of optuna.importance.FanovaImportanceEvaluator.evaluate:13
 #: optuna.importance.MeanDecreaseImpurityImportanceEvaluator.evaluate:13
@@ -94,7 +99,7 @@ msgstr ""
 msgid ""
 "A list of names of parameters to assess. If :obj:`None`, all parameters "
 "that are present in all of the completed trials are assessed."
-msgstr ""
+msgstr "参与评估的参数名列表。如果设置成  :obj:`None` 的话，所有的属于已完成 trial 的参数都会被评估。"
 
 #: of optuna.importance.FanovaImportanceEvaluator.evaluate
 #: optuna.importance.MeanDecreaseImpurityImportanceEvaluator.evaluate
@@ -108,7 +113,7 @@ msgstr ""
 msgid ""
 "An :class:`collections.OrderedDict` where the keys are parameter names "
 "and the values are assessed importances."
-msgstr ""
+msgstr "一个  :class:`collections.OrderedDict`  类。它的键都是被评估过重要性的参数名。"
 
 #: of optuna.importance.FanovaImportanceEvaluator:13
 #: optuna.importance.get_param_importances:42
@@ -116,21 +121,21 @@ msgid ""
 "Added in v1.3.0 as an experimental feature. The interface may change in "
 "newer versions without prior notice. See "
 "https://github.com/optuna/optuna/releases/tag/v1.3.0."
-msgstr ""
+msgstr "v1.3.0 版本中新加入的试验性特征。在未来的版本中，该接口可能在没有预先告知的情况下改变。 具体参见 https://github.com/optuna/optuna/releases/tag/v1.3.0."
 
 #: of optuna.importance.FanovaImportanceEvaluator:1
 msgid "fANOVA parameter importance evaluator."
-msgstr ""
+msgstr "fANOVA 参数重要性求解器"
 
 #: of optuna.importance.FanovaImportanceEvaluator:5
 msgid "Requires the `fanova <https://github.com/automl/fanova>`_ Python package."
-msgstr ""
+msgstr "依赖 `fanova <https://github.com/automl/fanova>` 包。"
 
 #: of optuna.importance.FanovaImportanceEvaluator:9
 msgid ""
 "`An Efficient Approach for Assessing Hyperparameter Importance "
 "<http://proceedings.mlr.press/v32/hutter14.html>`_."
-msgstr ""
+msgstr "一种便捷的评估超参数重要性的途径 <http://proceedings.mlr.press/v32/hutter14.html>`_."
 
 #: of optuna.importance.FanovaImportanceEvaluator.evaluate:5
 #: optuna.importance.MeanDecreaseImpurityImportanceEvaluator.evaluate:5
@@ -142,18 +147,18 @@ msgstr ""
 msgid ""
 "Please refer to :func:`~optuna.importance.get_param_importances` for how "
 "a concrete evaluator should implement this method."
-msgstr ""
+msgstr "参考 :func:`~optuna.importance.get_param_importances` 来看如何实现一个具体的求解器。"
 
 #: of optuna.importance.MeanDecreaseImpurityImportanceEvaluator:1
 msgid "Mean Decrease Impurity (MDI) parameter importance evaluator."
-msgstr ""
+msgstr "Mean Decrease Impurity (MDI) 参数重要性求解器。"
 
 #: of optuna.importance.MeanDecreaseImpurityImportanceEvaluator:3
 msgid ""
 "This evaluator fits a random forest that predicts objective values given "
 "hyperparameter configurations. Feature importances are then computed "
 "using MDI."
-msgstr ""
+msgstr "该求解器会拟合一个随机森林用于根据给定的超参数设置预测目标函数值。然后特征重要性会通过 MDI 求解。"
 
 #: of optuna.importance.MeanDecreaseImpurityImportanceEvaluator:8
 msgid ""
@@ -162,24 +167,25 @@ msgid ""
 "`sklearn.ensemble.RandomForestClassifier.feature_importances_ <https"
 "://scikit-"
 "learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html#sklearn.ensemble.RandomForestClassifier.feature_importances_>`_."
-msgstr ""
+msgstr "该求解器依赖 `sklean <https://scikit-learn.org/stable/>`_  包，它是基于 "
+"`sklearn.ensemble.RandomForestClassifier.feature_importances_ <https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html#sklearn.ensemble.RandomForestClassifier.feature_importances_>`_ 构建的。"
 
 #: of optuna.importance.MeanDecreaseImpurityImportanceEvaluator:12
 msgid "Number of trees in the random forest."
-msgstr ""
+msgstr "随机森林中的树数目。"
 
 #: of optuna.importance.MeanDecreaseImpurityImportanceEvaluator:13
 msgid "The maximum depth of each tree in the random forest."
-msgstr ""
+msgstr "该随机森林中树的最大深度。"
 
 #: of optuna.importance.MeanDecreaseImpurityImportanceEvaluator:14
 msgid "Seed for the random forest."
-msgstr ""
+msgstr "该随机森林的种子。"
 
 #: of optuna.importance.MeanDecreaseImpurityImportanceEvaluator:17
 msgid ""
 "Added in v1.5.0 as an experimental feature. The interface may change in "
 "newer versions without prior notice. See "
 "https://github.com/optuna/optuna/releases/tag/v1.5.0."
-msgstr ""
+msgstr "该特征在 v1.5.0 中被作为实验特征加入。在未来的版本中，该接口可能在没有预先告知的情况下改变。具体参见 https://github.com/optuna/optuna/releases/tag/v1.5.0."
 
