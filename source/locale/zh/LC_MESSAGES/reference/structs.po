@@ -23,70 +23,70 @@ msgstr ""
 
 #: of optuna.structs.TrialState:1
 msgid "State of a :class:`~optuna.trial.Trial`."
-msgstr ""
+msgstr ":class:`~optuna.trial.Trial` 的状态"
 
 #: of optuna.structs.TrialState:5
 msgid "The :class:`~optuna.trial.Trial` is running."
-msgstr ""
+msgstr "运行中的 :class:`~optuna.trial.Trial`."
 
 #: of optuna.structs.TrialState:9
 msgid "The :class:`~optuna.trial.Trial` has been finished without any error."
-msgstr ""
+msgstr "已完成且未触发错误的 :class:`~optuna.trial.Trial`."
 
 #: of optuna.structs.TrialState:13
 msgid ""
 "The :class:`~optuna.trial.Trial` has been pruned with "
 ":class:`~optuna.exceptions.TrialPruned`."
-msgstr ""
+msgstr "已经被 :class:`~optuna.exceptions.TrialPruned` 剪枝的 :class:`~optuna.trial.Trial`."
 
 #: of optuna.structs.TrialState:18
 msgid "The :class:`~optuna.trial.Trial` has failed due to an uncaught error."
-msgstr ""
+msgstr "由于未捕获的错误，该 :class:`~optuna.trial.Trial` 已经失败。"
 
 #: ../../source/reference/structs.rst:9
 msgid ""
 "This class is deprecated. Please use :class:`~optuna.trial.TrialState` "
 "instead."
-msgstr ""
+msgstr "该类已废弃。请改用 :class:`~optuna.trial.TrialState`."
 
 #: of optuna.structs.StudyDirection:1
 msgid "Direction of a :class:`~optuna.study.Study`."
-msgstr ""
+msgstr ":class:`~optuna.study.Study` 的方向。 "
 
 #: of optuna.structs.StudyDirection:5
 msgid "Direction has not been set."
-msgstr ""
+msgstr "方向未设置。"
 
 #: of optuna.structs.StudyDirection:9
 msgid ":class:`~optuna.study.Study` minimizes the objective function."
-msgstr ""
+msgstr ":class:`~optuna.study.Study` 将最小化目标函数"
 
 #: of optuna.structs.StudyDirection:13
 msgid ":class:`~optuna.study.Study` maximizes the objective function."
-msgstr ""
+msgstr ":class:`~optuna.study.Study` 将最大化目标函数。"
 
 #: ../../source/reference/structs.rst:15
 msgid ""
 "This class is deprecated. Please use "
 ":class:`~optuna.study.StudyDirection` instead."
-msgstr ""
+msgstr "该类已废弃，请改用 :class:`~optuna.study.StudyDirection`."
 
 #: of optuna.structs.FrozenTrial:1
 msgid "Status and results of a :class:`~optuna.trial.Trial`."
-msgstr ""
+msgstr ":class:`~optuna.trial.Trial` 的状态和返回结果。"
 
 #: of optuna.structs.FrozenTrial:5
 msgid ""
 "This class was moved to :mod:`~optuna.trial`. Please use "
 ":class:`~optuna.trial.FrozenTrial` instead."
-msgstr ""
+msgstr "该类已经迁移至 :mod:`~optuna.trial`, 请改用 :class:`~optuna.trial.FrozenTrial`."
 
 #: of optuna.structs.FrozenTrial:10
 msgid ""
 "Unique and consecutive number of :class:`~optuna.trial.Trial` for each "
 ":class:`~optuna.study.Study`. Note that this field uses zero-based "
 "numbering."
-msgstr ""
+msgstr "对于每一个 :class:`~optuna.study.Study` 设立的从 0 开始计数的 :class:`~optuna.trial.Trial` 编号。"
 
 #: of optuna.structs.FrozenTrial:15
 msgid ":class:`TrialState` of the :class:`~optuna.trial.Trial`."
@@ -98,34 +98,34 @@ msgstr ""
 
 #: of optuna.structs.FrozenTrial:23
 msgid "Datetime where the :class:`~optuna.trial.Trial` started."
-msgstr ""
+msgstr ":class:`~optuna.trial.Trial` 的开始时间。"
 
 #: of optuna.structs.FrozenTrial:27
 msgid "Datetime where the :class:`~optuna.trial.Trial` finished."
-msgstr ""
+msgstr ":class:`~optuna.trial.Trial` 的结束时间。"
 
 #: of optuna.structs.FrozenTrial:31
 msgid "Dictionary that contains suggested parameters."
-msgstr ""
+msgstr "包含了 suggested 参数集的字典。"
 
 #: of optuna.structs.FrozenTrial:35
 msgid ""
 "Dictionary that contains the attributes of the "
 ":class:`~optuna.trial.Trial` set with "
 ":func:`optuna.trial.Trial.set_user_attr`."
-msgstr ""
+msgstr "该字典包含了一个 :class:`~optuna.trial.Trial` 中所有用 :func:`optuna.trial.Trial.set_user_attr` 来设置的属性。"
 
 #: of optuna.structs.FrozenTrial:40
 msgid "Intermediate objective values set with :func:`optuna.trial.Trial.report`."
-msgstr ""
+msgstr "用 :func:`optuna.trial.Trial.report` 设置的中间目标函数值。"
 
 #: of optuna.structs.FrozenTrial.distributions:1
 msgid "Dictionary that contains the distributions of :attr:`params`."
-msgstr ""
+msgstr "包含了 :attr:`params` 分布的字典。"
 
 #: of optuna.structs.FrozenTrial.duration:1
 msgid "Return the elapsed time taken to complete the trial."
-msgstr ""
+msgstr "返回完成一个 trial 所消耗的时间。"
 
 #: of optuna.structs.FrozenTrial.duration
 msgid "Returns"
@@ -137,17 +137,17 @@ msgstr ""
 
 #: of optuna.structs.StudySummary:1
 msgid "Basic attributes and aggregated results of a :class:`~optuna.study.Study`."
-msgstr ""
+msgstr ":class:`~optuna.study.Study` 的基础属性和整合结果。"
 
 #: of optuna.structs.StudySummary:5
 msgid ""
 "This class was moved to :mod:`~optuna.study`. Please use "
 ":class:`~optuna.study.StudySummary` instead."
-msgstr ""
+msgstr "该类已经迁移到 :mod:`~optuna.study`, 请改用 :class:`~optuna.study.StudySummary`."
 
 #: of optuna.structs.StudySummary:8
 msgid "See also :func:`optuna.study.get_all_study_summaries`."
-msgstr ""
+msgstr "见 :func:`optuna.study.get_all_study_summaries`."
 
 #: of optuna.structs.StudySummary:12
 msgid "Name of the :class:`~optuna.study.Study`."
@@ -161,7 +161,7 @@ msgstr ""
 msgid ""
 ":class:`FrozenTrial` with best objective value in the "
 ":class:`~optuna.study.Study`."
-msgstr ""
+msgstr "一个 :class:`~optuna.study.Study` 中有着最佳目标函数值的 :class:`FrozenTrial` ."
 
 #: of optuna.structs.StudySummary:24
 msgid ""
@@ -174,13 +174,13 @@ msgstr ""
 msgid ""
 "Dictionary that contains the attributes of the "
 ":class:`~optuna.study.Study` internally set by Optuna."
-msgstr ""
+msgstr "该字典包含了一个 :class:`~optuna.study.Study` 中所有由 optuna 内部设置的属性。"
 
 #: of optuna.structs.StudySummary:34
 msgid "The number of trials ran in the :class:`~optuna.study.Study`."
-msgstr ""
+msgstr "一个 :class:`~optuna.study.Study` trials 的数量。"
 
 #: of optuna.structs.StudySummary:38
 msgid "Datetime where the :class:`~optuna.study.Study` started."
-msgstr ""
+msgstr ":class:`~optuna.study.Study` 的开始时间。"
 

@@ -121,7 +121,7 @@ msgid ""
 "Added in v1.3.0 as an experimental feature. The interface may change in "
 "newer versions without prior notice. See "
 "https://github.com/optuna/optuna/releases/tag/v1.3.0."
-msgstr "v1.3.0 版本中新加入的试验性特征。在未来的版本中，该接口可能在没有预先告知的情况下改变。 具体参见 https://github.com/optuna/optuna/releases/tag/v1.3.0."
+msgstr "v1.3.0 版本中新加入的试验性特性。在未来的版本中，该接口可能在没有预先告知的情况下改变。 具体参见 https://github.com/optuna/optuna/releases/tag/v1.3.0."
 
 #: of optuna.importance.FanovaImportanceEvaluator:1
 msgid "fANOVA parameter importance evaluator."
@@ -158,7 +158,7 @@ msgid ""
 "This evaluator fits a random forest that predicts objective values given "
 "hyperparameter configurations. Feature importances are then computed "
 "using MDI."
-msgstr "该求解器会拟合一个随机森林用于根据给定的超参数设置预测目标函数值。然后特征重要性会通过 MDI 求解。"
+msgstr "该求解器会拟合一个随机森林用于根据给定的超参数设置预测目标函数值。然后特性重要性会通过 MDI 求解。"
 
 #: of optuna.importance.MeanDecreaseImpurityImportanceEvaluator:8
 msgid ""
@@ -187,5 +187,5 @@ msgid ""
 "Added in v1.5.0 as an experimental feature. The interface may change in "
 "newer versions without prior notice. See "
 "https://github.com/optuna/optuna/releases/tag/v1.5.0."
-msgstr "该特征在 v1.5.0 中被作为实验特征加入。在未来的版本中，该接口可能在没有预先告知的情况下改变。具体参见 https://github.com/optuna/optuna/releases/tag/v1.5.0."
+msgstr "该特性在 v1.5.0 中被作为实验特性加入。在未来的版本中，该接口可能在没有预先告知的情况下改变。具体参见 https://github.com/optuna/optuna/releases/tag/v1.5.0."
 
