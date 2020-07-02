@@ -23,11 +23,11 @@ msgstr ""
 
 #: of optuna.pruners.BasePruner:1
 msgid "Base class for pruners."
-msgstr ""
+msgstr "Pruner 基类"
 
 #: of optuna.pruners.BasePruner.prune:1
 msgid "Judge whether the trial should be pruned based on the reported values."
-msgstr ""
+msgstr "根据报告的值判断是否应对该 trial 剪枝。"
 
 #: of optuna.pruners.BasePruner.prune:3
 msgid ""
@@ -35,7 +35,8 @@ msgid ""
 "Instead, :func:`optuna.trial.Trial.report` and "
 ":func:`optuna.trial.Trial.should_prune` provide user interfaces to "
 "implement pruning mechanism in an objective function."
-msgstr ""
+msgstr "注意，该方法不应由库用户调用。相反，:func:`optuna.trial.Trial.report` 和 "
+":func:`optuna.trial.Trial.should_prune` 提供了接口给用户以在目标函数中实施剪枝机制。"
 
 #: of optuna.pruners.BasePruner.prune optuna.pruners.HyperbandPruner
 #: optuna.pruners.MedianPruner optuna.pruners.PercentilePruner
@@ -45,13 +46,13 @@ msgstr ""
 
 #: of optuna.pruners.BasePruner.prune:7
 msgid "Study object of the target study."
-msgstr ""
+msgstr "目标 study 的 study 对象。"
 
 #: of optuna.pruners.BasePruner.prune:8
 msgid ""
 "FrozenTrial object of the target trial. Take a copy before modifying this"
 " object."
-msgstr ""
+msgstr "目标 trial 的 FrozenTrial 对象。 修改此对象之前需先对其进行复制操作。"
 
 #: of optuna.pruners.BasePruner.prune
 msgid "Returns"
@@ -59,17 +60,17 @@ msgstr ""
 
 #: of optuna.pruners.BasePruner.prune:11
 msgid "A boolean value representing whether the trial should be pruned."
-msgstr ""
+msgstr "一个布尔值，表示是否应对该试验进行剪枝。"
 
 #: of optuna.pruners.MedianPruner:1
 msgid "Pruner using the median stopping rule."
-msgstr ""
+msgstr "使用中值停止规则 的 pruner."
 
 #: of optuna.pruners.MedianPruner:3
 msgid ""
 "Prune if the trial's best intermediate result is worse than median of "
 "intermediate results of previous trials at the same step."
-msgstr ""
+msgstr "如果该试验的最佳中间结果比同一步骤中先前试验的中间结果的中值差，则进行剪枝。"
 
 #: of optuna.pruners.HyperbandPruner:45 optuna.pruners.MedianPruner:7
 #: optuna.pruners.NopPruner:4 optuna.pruners.PercentilePruner:6
@@ -79,18 +80,18 @@ msgstr ""
 
 #: of optuna.pruners.MedianPruner:8
 msgid "We minimize an objective function with the median stopping rule."
-msgstr ""
+msgstr "我们用中值停止规则最小化目标函数。"
 
 #: of optuna.pruners.MedianPruner:45 optuna.pruners.PercentilePruner:44
 msgid ""
 "Pruning is disabled until the given number of trials finish in the same "
 "study."
-msgstr ""
+msgstr "剪枝将被禁用，直到在同一 study 中完成给定的 trial 次数为止。"
 
 #: of optuna.pruners.MedianPruner:46 optuna.pruners.PercentilePruner:45
 #: optuna.pruners.ThresholdPruner:50
 msgid "Pruning is disabled until the trial exceeds the given number of step."
-msgstr ""
+msgstr "在 trial 超过给定步骤数之前，将禁用剪枝功能。"
 
 #: of optuna.pruners.MedianPruner:47
 msgid ""
@@ -98,26 +99,26 @@ msgid ""
 "warmup steps. If no value has been reported at the time of a pruning "
 "check, that particular check will be postponed until a value is reported."
 msgstr ""
-
+"不同剪枝检查之间的间隔步骤，预热步骤不算在其中。 如果在剪枝检查时未报告任何值，则该特定检查将被推迟，直到报告了一个值"
 #: of optuna.pruners.NopPruner:1
 msgid "Pruner which never prunes trials."
-msgstr ""
+msgstr "不修剪 trial 的 pruner."
 
 #: of optuna.pruners.PercentilePruner:1
 msgid "Pruner to keep the specified percentile of the trials."
-msgstr ""
+msgstr "保留指定百分位 trial 的 pruner."
 
 #: of optuna.pruners.PercentilePruner:3
 msgid ""
 "Prune if the best intermediate value is in the bottom percentile among "
 "trials at the same step."
-msgstr ""
+msgstr "如果在同一步骤的 trial 中，最佳中间值位于最低百分位数，则进行剪枝。"
 
 #: of optuna.pruners.PercentilePruner:42
 msgid ""
 "Percentile which must be between 0 and 100 inclusive (e.g., When given "
 "25.0, top of 25th percentile trials are kept)."
-msgstr ""
+msgstr "百分位数必须介于 0 到 100 之间（例如，如果给定 25.0，保留第25个百分位数 trial 的顶部）。"
 
 #: of optuna.pruners.PercentilePruner:46 optuna.pruners.ThresholdPruner:52
 msgid ""
@@ -125,11 +126,13 @@ msgid ""
 "warmup steps. If no value has been reported at the time of a pruning "
 "check, that particular check will be postponed until a value is reported."
 " Value must be at least 1."
-msgstr ""
+msgstr "不同剪枝检查之间的间隔步骤，预热步骤不算在其中。 如果在剪枝检查时未报告任何值，则该特定检查将被推迟，直到报告了一个值。"
+"该值最小为1."
+
 
 #: of optuna.pruners.SuccessiveHalvingPruner:1
 msgid "Pruner using Asynchronous Successive Halving Algorithm."
-msgstr ""
+msgstr "使用异步连续减半算法的 pruner."
 
 #: of optuna.pruners.SuccessiveHalvingPruner:3
 msgid ""
@@ -138,7 +141,11 @@ msgid ""
 "This class implements an asynchronous version of Successive Halving. "
 "Please refer to the paper of `Asynchronous Successive Halving "
 "<http://arxiv.org/abs/1810.05934>`_ for detailed descriptions."
-msgstr ""
+msgstr "`Successive Halving <https://arxiv.org/abs/1502.07943>`_ 是一种基于 bandit 的算法，用于识别多种配置中的最佳配置。"
+"该类实现了异步版本的 Successive Halving "
+"详细描述请参考 `Asynchronous Successive Halving "
+"<http://arxiv.org/abs/1810.05934>`_ "
+
 
 #: of optuna.pruners.SuccessiveHalvingPruner:8
 msgid ""
@@ -149,11 +156,15 @@ msgid ""
 "<https://github.com/optuna/optuna/tree/c5777b3e/examples/pruning/simple.py#L31>`_,"
 " ``EPOCH`` number in `chainer_integration.py "
 "<https://github.com/optuna/optuna/tree/c5777b3e/examples/pruning/chainer_integration.py#L65>`_)."
-msgstr ""
+msgstr "注意，该类并不关心最大资源的参数（文中以 :math:`R` 来表示）。"
+"给每个 trial 分配的最大资源限制通常是在目标函数内部完成的。"
+"(e.g., `simple.py "
+"<https://github.com/optuna/optuna/tree/c5777b3e/examples/pruning/simple.py#L31>`_ 的 ``step`` 和"
+" `chainer_integration.py ` 中的 ``EPOCH``."
 
 #: of optuna.pruners.SuccessiveHalvingPruner:17
 msgid "We minimize an objective function with ``SuccessiveHalvingPruner``."
-msgstr ""
+msgstr "我们使用 ``SuccessiveHalvingPruner`` 来最小化目标函数。"
 
 #: of optuna.pruners.SuccessiveHalvingPruner:52
 msgid ""
@@ -178,7 +189,24 @@ msgid ""
 "If the step of the last intermediate value may change with each trial, "
 "please     manually specify the minimum possible step to "
 "``min_resource``."
-msgstr ""
+msgstr "用于指定分配给单个 trial 的最小资源 (在 "
+"`paper <http://arxiv.org/abs/1810.05934>`_ 中 该参数是 "
+" :math:`r`)."
+"默认情况下，该参数是 'auto', 此时，其值是由一个启发式算法设定的，该算法会观察完成第一个 trial 所需要的步数。"
+"除非执行了 :math:`\\mathsf{min}\\_\\mathsf{resource} \\times "
+"\\mathsf{reduction}\\_\\mathsf{factor}^{ "
+"\\mathsf{min}\\_\\mathsf{early}\\_\\mathsf{stopping}\\_\\mathsf{rate}}` 步 (也就是第一级的完成点), 否则该 trial 不会被剪枝。 "
+"如果一个 trial 完成了第一级，它不会跳入下一级，除非该 trial 的值 处于所有已抵达该点（否则就被剪枝了）的trial :math:`{1 \\over "
+"\\mathsf{reduction}\\_\\mathsf{factor}}` 的顶部。"
+"如果该 trial 赢得了竞争，他就会一只运行知道下一个完成点到来 "
+"(也就是 :math:`\\mathsf{min}\\_\\mathsf{resource} \\times "
+"\\mathsf{reduction}\\_\\mathsf{factor}^{ "
+"(\\mathsf{min}\\_\\mathsf{early}\\_\\mathsf{stopping}\\_\\mathsf{rate} + "
+"\\mathsf{rung})}` 步) 并且重复上一个过程。 .. note::     "
+"如果每个 trial 的最后中间值的步骤不同的话，"
+"请     手动设定最小的可能步骤 ``min_resource``."
+
+
 
 #: of optuna.pruners.SuccessiveHalvingPruner:52
 msgid ""
@@ -187,7 +215,10 @@ msgid ""
 " to as :math:`r`). This parameter defaults to 'auto' where the value is "
 "determined based on a heuristic that looks at the number of required "
 "steps for the first trial to complete."
-msgstr ""
+msgstr "用于指定分配给单个 trial 的最小资源 (在 "
+"`paper <http://arxiv.org/abs/1810.05934>`_ 中 该参数是 "
+" :math:`r`)."
+"默认情况下，该参数是 'auto', 此时，其值是由一个启发式算法设定的，该算法会观察完成第一个 trial 所需要的步数。"
 
 #: of optuna.pruners.SuccessiveHalvingPruner:58
 msgid ""
@@ -206,12 +237,25 @@ msgid ""
 "(\\mathsf{min}\\_\\mathsf{early}\\_\\mathsf{stopping}\\_\\mathsf{rate} + "
 "\\mathsf{rung})}` steps) and repeats the same procedure."
 msgstr ""
+"除非执行了 :math:`\\mathsf{min}\\_\\mathsf{resource} \\times "
+"\\mathsf{reduction}\\_\\mathsf{factor}^{ "
+"\\mathsf{min}\\_\\mathsf{early}\\_\\mathsf{stopping}\\_\\mathsf{rate}}` 步 (也就是第一级的完成点), 否则该 trial 不会被剪枝。 "
+"如果一个 trial 完成了第一级，它不会跳入下一级，除非该 trial 的值 处于所有已抵达该点（否则就被剪枝了）的trial :math:`{1 \\over "
+"\\mathsf{reduction}\\_\\mathsf{factor}}` 的顶部。"
+"如果该 trial 赢得了竞争，他就会一只运行知道下一个完成点到来 "
+"(也就是 :math:`\\mathsf{min}\\_\\mathsf{resource} \\times "
+"\\mathsf{reduction}\\_\\mathsf{factor}^{ "
+"(\\mathsf{min}\\_\\mathsf{early}\\_\\mathsf{stopping}\\_\\mathsf{rate} + "
+"\\mathsf{rung})}` 步) 并且重复上一个过程。"
 
 #: of optuna.pruners.SuccessiveHalvingPruner:75
 msgid ""
 "If the step of the last intermediate value may change with each trial, "
 "please manually specify the minimum possible step to ``min_resource``."
 msgstr ""
+"如果每个 trial 的最后中间值的步骤不同的话，"
+"请手动设定最小的可能步骤 ``min_resource``."
+
 
 #: of optuna.pruners.SuccessiveHalvingPruner:77
 msgid ""
@@ -219,18 +263,22 @@ msgid ""
 "`paper <http://arxiv.org/abs/1810.05934>`_ this parameter is referred to "
 "as :math:`\\eta`).  At the completion point of each rung, about :math:`{1"
 " \\over \\mathsf{reduction}\\_\\mathsf{factor}}` trials will be promoted."
-msgstr ""
+msgstr "用于设置可提升 trial 的缩减因子参数（在 `论文 <http://arxiv.org/abs/1810.05934>`_ 中该参数是 :math:`\\eta` ）。"
+"在每一级的完成点，大约有 :math:`{1"
+" \\over \\mathsf{reduction}\\_\\mathsf{factor}}` 的 trial会被提升。"
 
 #: of optuna.pruners.SuccessiveHalvingPruner:82
 msgid ""
 "A parameter for specifying the minimum early-stopping rate (in the `paper"
 " <http://arxiv.org/abs/1810.05934>`_ this parameter is referred to as "
 ":math:`s`)."
-msgstr ""
+msgstr "用于确定最小提前终止率的参数。 (在`论文"
+" <http://arxiv.org/abs/1810.05934>`_ 中它是 "
+":math:`s`)."
 
 #: of optuna.pruners.HyperbandPruner:1
 msgid "Pruner using Hyperband."
-msgstr ""
+msgstr "使用 hyperband 的 pruner."
 
 #: of optuna.pruners.HyperbandPruner:3
 msgid ""
@@ -241,17 +289,22 @@ msgid ""
 ":math:`B \\over n`. `Hyperband "
 "<http://www.jmlr.org/papers/volume18/16-558/16-558.pdf>`_ attacks this "
 "trade-off by trying different :math:`n` values for a fixed budget."
-msgstr ""
+msgstr "由于 SuccessiveHalving (SHA) 需要配置的总数 :math:`n` 作为它的超参数，"
+"对于一个有限的预算 :math:`B` 来说，平均来讲所有的配置都有 :math:`B \\over n` 的资源。"
+"如你所见，这中间存在一个 :math:`B`  和 :math:`B \\over n` 之间的权衡。"
+"通过对于固定的预算尝试不同的  :math:`n`, <http://www.jmlr.org/papers/volume18/16-558/16-558.pdf>`_ 研究了这种权衡"
+#  TODO: 这里 budget可以翻译成 预算吗
 
 #: of optuna.pruners.HyperbandPruner:11
 msgid ""
 "In the Hyperband paper, the counterpart of "
 ":class:`~optuna.samplers.RandomSampler` is used."
-msgstr ""
+msgstr "Hyperband 论文中用的是 :class:`~optuna.samplers.RandomSampler` 的对应物"
+#  TODO: 这里 counterpart 可以翻译成 对应物 吗
 
 #: of optuna.pruners.HyperbandPruner:13
 msgid "Optuna uses :class:`~optuna.samplers.TPESampler` by default."
-msgstr ""
+msgstr "默认情况下，Optuna 使用 :class:`~optuna.samplers.TPESampler`."
 
 #: of optuna.pruners.HyperbandPruner:14
 msgid ""
@@ -259,7 +312,8 @@ msgid ""
 "<https://github.com/optuna/optuna/pull/828#issuecomment-575457360>`_ "
 "shows that :class:`optuna.pruners.HyperbandPruner` supports both "
 "samplers."
-msgstr ""
+msgstr "`基准测试 <https://github.com/optuna/optuna/pull/828#issuecomment-575457360>`_ 表明，"
+":class:`optuna.pruners.HyperbandPruner` 支持两种 sampler."
 
 #: of optuna.pruners.HyperbandPruner:19
 msgid ""
@@ -269,7 +323,9 @@ msgid ""
 ":class:`~optuna.samplers.TPESampler` because "
 ":class:`~optuna.samplers.TPESampler` uses some (by default, :math:`10`) "
 ":class:`~optuna.trial.Trial`\\ s for its startup."
-msgstr ""
+msgstr "如果你配合 :class:`~optuna.samplers.TPESampler` 使用 ``HyperbandPruner``, "
+"我们推荐你考虑设置更大的 ``n_trials`` 或者 ``timeout`` 来充分利用 :class:`~optuna.samplers.TPESampler` 的特性，"
+"因为，:class:`~optuna.samplers.TPESampler` 在开始时使用了一些  (默认情况下是 :math:`10`) :class:`~optuna.trial.Trial`."
 
 #: of optuna.pruners.HyperbandPruner:25
 msgid ""
@@ -279,13 +335,15 @@ msgid ""
 "bracket needs to observe more than :math:`10` "
 ":class:`~optuna.trial.Trial`\\ s for :class:`~optuna.samplers.TPESampler`"
 " to adapt its search space."
-msgstr ""
+msgstr "由于 Hyperband 运行多个 :class:`~optuna.pruners.SuccessiveHalvingPruner` 并且基于当前"
+" :class:`~optuna.trial.Trial` 的 bracket ID 来收集 trial, 每一个 bracket 需要观察起码 :math:`10` "
+"个 :class:`~optuna.trial.Trial`\\ 好让 :class:`~optuna.samplers.TPESampler` 来调整它的搜索空间。"
 
 #: of optuna.pruners.HyperbandPruner:30
 msgid ""
 "Thus, for example, if ``HyperbandPruner`` has :math:`4` pruners in it, at"
 " least :math:`4 \\times 10` trials are consumed for startup."
-msgstr ""
+msgstr "因此，如果  ``HyperbandPruner``  有  :math:`4` 个 pruner 的话，在一开始时他就会用掉起码 :math:`4 \\times 10` 个 trial. "
 
 #: of optuna.pruners.HyperbandPruner:34
 msgid ""
@@ -300,11 +358,18 @@ msgid ""
 "(about 4 ~ 6 in most use cases).　Please see Section 3.6 of the `original "
 "paper <http://www.jmlr.org/papers/volume18/16-558/16-558.pdf>`_ for the "
 "detail."
-msgstr ""
+msgstr "Hyperband 有好几个 :class:`~optuna.pruners.SuccessiveHalvingPruner`."
+"每一个 :class:`~optuna.pruners.SuccessiveHalvingPruner` 都是原文中的 \"bracket\". "
+"bracket 的数目是控制 Hyperband 提前终止行为的一个重要因子，它是由 ``min_resource``, ``max_resource`` 和 "
+"``reduction_factor`` 共同确定，形式是 `The number of brackets = "
+"floor(log_{reduction_factor}(max_resource / min_resource)) + 1`."
+"请设置 ``reduction_factor`` 以让 bracket 的数目不要太大 (一般情况下是 4 ~ 6 )。"
+"更多细节请参考 `原始论文 "
+" <http://www.jmlr.org/papers/volume18/16-558/16-558.pdf>`_ 中的 Section 3.6."
 
 #: of optuna.pruners.HyperbandPruner:46
 msgid "We minimize an objective function with Hyperband pruning algorithm."
-msgstr ""
+msgstr "我们使用 Hyperband 剪枝算法来最小化目标函数。"
 
 #: of optuna.pruners.HyperbandPruner:87
 msgid ""
@@ -313,7 +378,12 @@ msgid ""
 "faster, but a larger :math:`r` will give a better guarantee of successful"
 " judging between configurations. See the details for "
 ":class:`~optuna.pruners.SuccessiveHalvingPruner`."
-msgstr ""
+msgstr "用于指定分配给单个 trial 的最小资源 (在 "
+"原文中 该参数是 "
+" :math:`r`)."
+"一个更小的 :math:`r` 会更快返回结果，但是 一个更大的 :math:`r` 能保证更佳的不同配置之间的判定。"
+"具体细节见 :class:`~optuna.pruners.SuccessiveHalvingPruner`."
+
 
 #: of optuna.pruners.HyperbandPruner:91
 msgid ""
@@ -329,7 +399,14 @@ msgid ""
 "until the maximum resource is     determined.  .. note::     If the step "
 "of the last intermediate value may change with each trial, please     "
 "manually specify the maximum possible step to ``max_resource``."
-msgstr ""
+msgstr "用于指定分配给一个 trial 的最大资源参数。"
+"原文中的 :math:`R` 对应着 ``max_resource / min_resource``. "
+"该值代表着且应符合最大迭代步数（也就是一个神经网络的 epoch 数）。"
+"当该参数是 \"auto\" 时，最大资源是根据已经完成的 trial 来预估的。  .. note::     ""
+"设置成  \"auto\" 时，最大资源将是头一个（如果在并行优化的情况下，就是头几个中的一个）已完成的 trial 的 :meth:`~optuna.trial.Trial.report` 报告的最大步数。"
+"如果每个 trial 的最后中间值的步骤不同的话，"
+"请     手动设定最大的可能步骤 ``max_resource``."
+
 
 #: of optuna.pruners.HyperbandPruner:91
 msgid ""
@@ -339,7 +416,10 @@ msgid ""
 " the number of epochs for neural networks). When this argument is "
 "\"auto\", the maximum resource is estimated according to the completed "
 "trials. The default value of this argument is \"auto\"."
-msgstr ""
+msgstr "用于指定分配给一个 trial 的最大资源参数。"
+"原文中的 :math:`R` 对应着 ``max_resource / min_resource``. "
+"该值代表着且应符合最大迭代步数（也就是一个神经网络的 epoch 数）。"
+"当该参数是 \"auto\" 时，最大资源是根据已经完成的 trial 来预估的。该参数的默认值是 \"auto\"."
 
 #: of optuna.pruners.HyperbandPruner:98
 msgid ""
@@ -348,12 +428,17 @@ msgid ""
 "trained in parallel, completed trial. No trials will be pruned until the "
 "maximum resource is determined."
 msgstr ""
+"设置成  \"auto\" 时，最大资源将是头一个（如果在并行优化的情况下，就是头几个中的一个）已完成的 trial 的 :meth:`~optuna.trial.Trial.report` 报告的最大步数。"
+"如果每个 trial 的最后中间值的步骤不同的话，"
+"除非设定了最大资源，否则没有 trial 会被剪枝。"
 
 #: of optuna.pruners.HyperbandPruner:104
 msgid ""
 "If the step of the last intermediate value may change with each trial, "
 "please manually specify the maximum possible step to ``max_resource``."
 msgstr ""
+"如果每个 trial 的最后中间值的步骤不同的话，"
+"请手动设定最大的可能步骤 ``max_resource``."
 
 #: of optuna.pruners.HyperbandPruner:106
 msgid ""
@@ -367,17 +452,18 @@ msgid ""
 "Added in v1.1.0 as an experimental feature. The interface may change in "
 "newer versions without prior notice. See "
 "https://github.com/optuna/optuna/releases/tag/v1.1.0."
-msgstr ""
+msgstr "在 v1.1.0 版本中作为一个试验特性被加入的，该接口可能在新版中在没有提前告知的情况下改变。参见 "
+"https://github.com/optuna/optuna/releases/tag/v1.1.0."
 
 #: of optuna.pruners.ThresholdPruner:1
 msgid "Pruner to detect outlying metrics of the trials."
-msgstr ""
+msgstr "用于检测 trial 的无关度量的 pruner."
 
 #: of optuna.pruners.ThresholdPruner:3
 msgid ""
 "Prune if a metric exceeds upper threshold, falls behind lower threshold "
 "or reaches ``nan``."
-msgstr ""
+msgstr "如果一个度量超过了上限，低于下限或者变成了 ``nan``, 就剪枝。"
 
 #: of optuna.pruners.ThresholdPruner:53
 msgid "Args"
@@ -391,7 +477,7 @@ msgstr ""
 msgid ""
 "A minimum value which determines whether pruner prunes or not. If an "
 "intermediate value is smaller than lower, it prunes."
-msgstr ""
+msgstr "一个确定 pruner 是否需要剪枝的最小值。如果某个中间值小于此值，就剪枝。"
 
 #: of optuna.pruners.ThresholdPruner:47
 msgid "upper:"
@@ -401,7 +487,7 @@ msgstr ""
 msgid ""
 "A maximum value which determines whether pruner prunes or not. If an "
 "intermediate value is larger than upper, it prunes."
-msgstr ""
+msgstr "一个确定 pruner 是否需要剪枝的最大值。如果某个中间值大于此值，就剪枝。"
 
 #: of optuna.pruners.ThresholdPruner:49
 msgid "n_warmup_steps:"
