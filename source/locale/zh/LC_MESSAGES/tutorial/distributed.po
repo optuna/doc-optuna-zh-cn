@@ -25,13 +25,13 @@ msgstr "分布式优化"
 msgid ""
 "There is no complicated setup but just sharing the same study name among "
 "nodes/processes."
-msgstr "Optuna的分布式优化中没有复杂的设置，你只需让不同的节点/进程共享一个相同的 study 名。"
+msgstr "Optuna 的分布式优化不需要复杂的设置，你只需让不同的节点/进程共享一个相同的 study 名。"
 
 #: ../../source/tutorial/distributed.rst:8
 msgid ""
 "First, create a shared study using ``optuna create-study`` command (or "
 "using :func:`optuna.create_study` in a Python script)."
-msgstr "首先，使用 ``optuna create-study`` 命令 (如果是在Python脚本中的化，就用 :func:`optuna.create_study`) 创建一个共享的 study."
+msgstr "首先，使用 ``optuna create-study`` 命令 (如果是在Python脚本中的话，就用 :func:`optuna.create_study`) 创建一个共享的 study."
 
 #: ../../source/tutorial/distributed.rst:15
 msgid ""

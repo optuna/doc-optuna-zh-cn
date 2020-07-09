@@ -29,7 +29,7 @@ msgid ""
 ":ref:`distributed`."
 msgstr ""
 "RDB后端可以实现持久化实验（即保存和恢复 study）以及访问 study 的历史记录。"
-"此外，我们还可以利用这个特点来进行多节点优化。具体描述见 :ref:`distributed`.""
+"此外，我们还可以利用这个特点来进行分布式优化。具体描述见 :ref:`distributed`.""
 
 #: ../../source/tutorial/rdb.rst:9
 msgid ""

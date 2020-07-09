@@ -82,7 +82,7 @@ msgstr "最佳参数可以通过如下方式获得："
 msgid ""
 "We can see that Optuna found the best ``x`` value ``2.001707713205946``, "
 "which is close to the optimal value of ``2``."
-msgstr "可以看到，Optuna 找到的最佳 ``x``的值 是 ``2.001707713205946``. 这非常靠近实际的最优值 ``2``."
+msgstr "可以看到，Optuna 找到的最佳 ``x`` 的值是 ``2.001707713205946``. 这非常靠近实际的最优值 ``2``."
 
 #: ../../source/tutorial/first.rst:67
 msgid ""

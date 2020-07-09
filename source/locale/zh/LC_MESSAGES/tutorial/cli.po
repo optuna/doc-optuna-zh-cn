@@ -43,7 +43,7 @@ msgstr ""
 
 #: ../../source/tutorial/cli.rst:1
 msgid "Delete a specified study."
-msgstr "删除特定 study."
+msgstr "删除所给的 study."
 
 #: ../../source/tutorial/cli.rst:1
 msgid "dashboard"
@@ -59,7 +59,7 @@ msgstr ""
 
 #: ../../source/tutorial/cli.rst:1
 msgid "Upgrade the schema of a storage."
-msgstr "升级存储 schema."
+msgstr "升级数据库 schema."
 
 #: ../../source/tutorial/cli.rst:1
 msgid "studies"

@@ -74,6 +74,6 @@ msgid ""
 "Ctrl+C or SIGTERM. This is useful for use cases such as when it is hard "
 "to estimate the computational costs required to optimize your objective "
 "function."
-msgstr "**供參考**: 如果既没有给出 ``n_trials`` 也没有给出 ``timeout`` 参数的话，优化过程将一直持续下去，直到接收到一个诸如 Ctrl+C 或 SIGTERM 的终止信号。
-这在难以估算优化目标函数所需的计算成本的情况时是有用的。"
+msgstr "**供參考**: 如果既没有给出 ``n_trials`` 也没有给出 ``timeout`` 参数的话，优化过程将一直持续下去，直到接收到一个诸如 Ctrl+C 或 SIGTERM 的终止信号。"
+"这在难以估算优化目标函数所需的计算成本的情况时是有用的。"
 

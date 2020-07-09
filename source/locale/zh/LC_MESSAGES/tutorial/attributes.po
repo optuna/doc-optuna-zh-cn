@@ -65,8 +65,8 @@ msgid ""
 "As with :class:`~optuna.study.Study`, a :class:`~optuna.trial.Trial` "
 "object provides :func:`~optuna.trial.Trial.set_user_attr` method. "
 "Attributes are set inside an objective function."
-msgstr "和 :class:`~optuna.study.Study` 类似，:class:`~optuna.trial.Trial` 对象也提供了一个设置属性的方法 :func:`~optuna.trial.Trial.set_user_attr` 方法。
-这些属性是在目标函数内部设置的。"
+msgstr "和 :class:`~optuna.study.Study` 类似，:class:`~optuna.trial.Trial` 对象也提供了一个设置属性的方法 :func:`~optuna.trial.Trial.set_user_attr` 方法。"
+"这些属性是在目标函数内部设置的。"
 
 #: ../../source/tutorial/attributes.rst:64
 msgid "We can access annotated attributes as:"

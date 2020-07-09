@@ -39,7 +39,7 @@ msgstr "实现具体任务对应的算法来改进优化性能，或者"
 msgid ""
 "wrap other optimization libraries to integrate them into Optuna pipelines"
 " (e.g., :class:`~optuna.integration.SkoptSampler`)."
-msgstr "将其他的优化框架包装起来，整合进 Optuna 的管线中 (比如  :class:`~optuna.integration.SkoptSampler` )."
+msgstr "将其他的优化框架包装起来，整合进 Optuna 的流水线中 (比如  :class:`~optuna.integration.SkoptSampler` )."
 
 #: ../../source/tutorial/sampler.rst:12
 msgid ""
@@ -77,7 +77,7 @@ msgid ""
 ":meth:`~optuna.samplers.BaseSampler.sample_relative`, and "
 ":meth:`~optuna.samplers.BaseSampler.sample_independent`."
 msgstr ""
-"为了创建一个新的 sampler, 你需要定一个继承 :class:`~optuna.samplers.BaseSampler` 类的类。"
+"为了创建一个新的 sampler, 你所定义的类需继承 :class:`~optuna.samplers.BaseSampler`."
 "该基类提供三个抽象方法：:meth:`~optuna.samplers.BaseSampler.infer_relative_search_space`, :meth:`~optuna.samplers.BaseSampler.sample_relative` 和 :meth:`~optuna.samplers.BaseSampler.sample_independent`."
 
 #: ../../source/tutorial/sampler.rst:27
@@ -129,9 +129,9 @@ msgid ""
 "`examples/samplers/simulated_annealing.py "
 "<https://github.com/optuna/optuna/blob/master/examples/samplers/simulated_annealing_sampler.py>`_."
 msgstr ""
-"为了代码的简洁性，上面的实现没有支持一些特性 (比如 maximization)."
-"如果你对如何实现这些特性感兴趣，请看"
-"`examples/samplers/simulated_annealing.py"
+"为了代码的简洁性，上面的实现没有支持一些特性 (比如 maximization). "
+"如果你对如何实现这些特性感兴趣，请看 "
+"`examples/samplers/simulated_annealing.py "
 "<https://github.com/optuna/optuna/blob/master/examples/samplers/simulated_annealing_sampler.py>`_."
 
 #: ../../source/tutorial/sampler.rst:108
