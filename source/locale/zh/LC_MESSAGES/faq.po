@@ -23,7 +23,7 @@ msgstr "常见问题"
 
 #: ../../source/faq.rst:8
 msgid "Can I use Optuna with X? (where X is your favorite ML library)"
-msgstr "某某库可以和 Optuna 配合使用吗？（某某是你最爱的机器学习库）"
+msgstr "某某库可以和 Optuna 配合使用吗？（某某是你常用的机器学习库）"
 
 #: ../../source/faq.rst:10
 msgid ""
@@ -31,12 +31,12 @@ msgid ""
 "with those. Please refer to `examples "
 "<https://github.com/optuna/optuna/tree/master/examples>`_."
 msgstr ""
-"Optuna 和绝大多数ML库兼容，并且很容易同他们配合使用。"
+"Optuna 和绝大多数机器学习库兼容，并且很容易同他们配合使用。"
 "参见 `examples <https://github.com/optuna/optuna/tree/master/examples>`_."
 
 #: ../../source/faq.rst:17
 msgid "How to define objective functions that have own arguments?"
-msgstr "如何定义带有独有参数的目标函数？"
+msgstr "如何定义带有额外参数的目标函数？"
 
 #: ../../source/faq.rst:19
 msgid "There are two ways to realize it."
@@ -44,7 +44,7 @@ msgstr "有两种方法可以实现这类函数。"
 
 #: ../../source/faq.rst:21
 msgid "First, callable classes can be used for that purpose as follows:"
-msgstr "首先，如下的可调用的 objective 类具有这个功能："
+msgstr "首先，如下例所示，可调用的 objective 类具有这个功能："
 
 #: ../../source/faq.rst:43
 msgid ""
@@ -78,7 +78,7 @@ msgstr "在最简单的情况下，Optuna 使用内存 (in-memory) 存储："
 msgid ""
 "If you want to save and resume studies,  it's handy to use SQLite as the "
 "local storage:"
-msgstr "如果你想能保存和恢复 study 的化，将 SQLite 作为本地存储也是很方便的："
+msgstr "如果想保存和恢复 study 的话，你可以轻松地将 SQLite 用作本地存储。"
 
 #: ../../source/faq.rst:86
 msgid "Please see :ref:`rdb` for more details."
@@ -139,7 +139,7 @@ msgid ""
 "learning models and neural network weights. To save models or weights, "
 "please use features of the machine learning library you used."
 msgstr ""
-"Optuna 会保存超参数和对应的目标函数值到存储对象中，但是它不会存储诸如机器学习模型或者网络权重这样的中间对象。"
+"Optuna 会保存超参数和对应的目标函数值，但是它不会存储诸如机器学习模型或者网络权重这样的中间数据。"
 "要保存模型或者权重的话，请利用你正在使用的机器学习库提供的对应功能。"
 
 #: ../../source/faq.rst:142
@@ -165,7 +165,7 @@ msgstr "要让 Optuna 生成的参数可复现的话，你可以通过设置 :cl
 
 #: ../../source/faq.rst:178
 msgid "However, there are two caveats."
-msgstr "但是这么做的话有两个风险。"
+msgstr "但是这么做的需要注意以下两点。"
 
 #: ../../source/faq.rst:180
 msgid ""
@@ -228,7 +228,7 @@ msgstr "你可以在日志信息里找到失败的 trial."
 msgid ""
 "You can also find the failed trials by checking the trial states as "
 "follows:"
-msgstr "你也可以在日志信息里找到失败的 trial."
+msgstr "你也可以通过查看 trial 的状态来找到它们："
 
 #: ../../source/faq.rst:1
 msgid "number"
@@ -324,7 +324,7 @@ msgstr "关于 TPE sampler 的 讨论：https://github.com/optuna/optuna/issues/
 
 #: ../../source/faq.rst:251
 msgid "How can I use two GPUs for evaluating two trials simultaneously?"
-msgstr "如何用两块 GPU 同时对两个 trial 进行求值？"
+msgstr "如何在两块 GPU 上同时跑两个 trial?"
 
 #: ../../source/faq.rst:253
 msgid ""
