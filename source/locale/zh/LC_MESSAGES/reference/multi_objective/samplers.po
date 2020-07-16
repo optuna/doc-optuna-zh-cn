@@ -23,14 +23,14 @@ msgstr ""
 
 #: of optuna.multi_objective.samplers.BaseMultiObjectiveSampler:1
 msgid "Base class for multi-objective samplers."
-msgstr ""
+msgstr "multi-objective sampler 基类。"
 
 #: of optuna.multi_objective.samplers.BaseMultiObjectiveSampler:3
 msgid ""
 "The abstract methods of this class are the same as ones defined by "
 ":class:`~optuna.samplers.BaseSampler` except for taking multi-objective "
 "versions of study and trial instances as the arguments."
-msgstr ""
+msgstr "该类的抽象方法和 :class:`~optuna.samplers.BaseSampler` 定义的抽象方法一致，除了接受 multi-objective 版 study 和 trial 实例作为参数之外。"
 
 #: of optuna.multi_objective.samplers.BaseMultiObjectiveSampler:8
 #: optuna.multi_objective.samplers.RandomMultiObjectiveSampler:29
@@ -38,14 +38,15 @@ msgid ""
 "Added in v1.4.0 as an experimental feature. The interface may change in "
 "newer versions without prior notice. See "
 "https://github.com/optuna/optuna/releases/tag/v1.4.0."
-msgstr ""
+msgstr "在 v1.4.0 中作为试验性特性引入，在未来版本中，该接口可能在没有预先告知的情况下被改变。参考 "
+"https://github.com/optuna/optuna/releases/tag/v1.4.0."
 
 #: of
 #: optuna.multi_objective.samplers.BaseMultiObjectiveSampler.infer_relative_search_space:1
 msgid ""
 "Infer the search space that will be used by relative sampling in the "
 "target trial."
-msgstr ""
+msgstr "推断将在 target trial 中使用的搜索空间。"
 
 #: of
 #: optuna.multi_objective.samplers.BaseMultiObjectiveSampler.infer_relative_search_space:3
@@ -57,7 +58,9 @@ msgid ""
 " "
 ":func:`~optuna.multi_objective.samplers.BaseMultiObjectiveSampler.sample_independent`"
 " method."
-msgstr ""
+msgstr "该方法在 :func:`~optuna.multi_objective.samplers.BaseMultiObjectiveSampler.sample_relative` 方法之前被调用。"
+"而该方法返回的搜索空间会被传入它。"
+"那些不包含在该搜索空间中的参数将通过 :func:`~optuna.multi_objective.samplers.BaseMultiObjectiveSampler.sample_independent` 来采样。"
 
 #: of
 #: optuna.multi_objective.samplers.BaseMultiObjectiveSampler.infer_relative_search_space
@@ -91,7 +94,7 @@ msgstr ""
 #: of
 #: optuna.multi_objective.samplers.BaseMultiObjectiveSampler.infer_relative_search_space:13
 msgid "A dictionary containing the parameter names and parameter's distributions."
-msgstr ""
+msgstr "一个包含了参数名和参数分布的字典。"
 
 #: of
 #: optuna.multi_objective.samplers.BaseMultiObjectiveSampler.infer_relative_search_space:16
@@ -99,12 +102,12 @@ msgid ""
 "Please refer to :func:`~optuna.samplers.intersection_search_space` as an "
 "implementation of "
 ":func:`~optuna.multi_objective.samplers.BaseMultiObjectiveSampler.infer_relative_search_space`."
-msgstr ""
-
+msgstr "参见 作为 :func:`~optuna.multi_objective.samplers.BaseMultiObjectiveSampler.infer_relative_search_space` 的实现的 "
+":func:`~optuna.samplers.intersection_search_space`。"
 #: of
 #: optuna.multi_objective.samplers.BaseMultiObjectiveSampler.sample_independent:1
 msgid "Sample a parameter for a given distribution."
-msgstr ""
+msgstr "对给定的分布进行参数采样。"
 
 #: of
 #: optuna.multi_objective.samplers.BaseMultiObjectiveSampler.sample_independent:3
@@ -114,29 +117,29 @@ msgid ""
 ":func:`~optuna.multi_objective.samplers.MultiObjectiveBaseSampler.sample_relative`"
 " method. This method is suitable for sampling algorithms that do not use "
 "the relationship between parameters such as random sampling."
-msgstr ""
-
+msgstr "该方法只在参数不包含在 :func:`~optuna.multi_objective.samplers.MultiObjectiveBaseSampler.sample_relative` 方法返回的结果中的情况下使用。"
+"该方法适用于那些不依赖参数之间关系的采样算法，比如随机采样。"
 #: of
 #: optuna.multi_objective.samplers.BaseMultiObjectiveSampler.sample_independent:10
 msgid "Name of the sampled parameter."
-msgstr ""
+msgstr "采样参数名"
 
 #: of
 #: optuna.multi_objective.samplers.BaseMultiObjectiveSampler.sample_independent:11
 msgid ""
 "Distribution object that specifies a prior and/or scale of the sampling "
 "algorithm."
-msgstr ""
+msgstr "指定了先验或者/和采样算法的分布对象。"
 
 #: of
 #: optuna.multi_objective.samplers.BaseMultiObjectiveSampler.sample_independent:13
 msgid "A parameter value."
-msgstr ""
+msgstr "参数值。"
 
 #: of
 #: optuna.multi_objective.samplers.BaseMultiObjectiveSampler.sample_relative:1
 msgid "Sample parameters in a given search space."
-msgstr ""
+msgstr "在给定的搜索空间中采样。"
 
 #: of
 #: optuna.multi_objective.samplers.BaseMultiObjectiveSampler.sample_relative:3
@@ -144,35 +147,37 @@ msgid ""
 "This method is called once at the beginning of each trial, i.e., right "
 "before the evaluation of the objective function. This method is suitable "
 "for sampling algorithms that use the relationship between parameters."
-msgstr ""
+msgstr "在每个 trial 开始时该方法会被调用一次，也就是在目标函数被求值前被调用。"
+"该方法适用于那些依赖参数间关系的采样算法。"
 
 #: of
 #: optuna.multi_objective.samplers.BaseMultiObjectiveSampler.sample_relative:9
 msgid ""
 "The search space returned by "
 ":func:`~optuna.multi_objective.samplers.BaseMultiObjectiveSampler.infer_relative_search_space`."
-msgstr ""
+msgstr "由 :func:`~optuna.multi_objective.samplers.BaseMultiObjectiveSampler.infer_relative_search_space` 返回的搜索空间。"
 
 #: of
 #: optuna.multi_objective.samplers.BaseMultiObjectiveSampler.sample_relative:12
 msgid "A dictionary containing the parameter names and the values."
-msgstr ""
+msgstr "包含了参数名和参数值的字典。"
 
 #: of optuna.multi_objective.samplers.NSGAIIMultiObjectiveSampler:1
 msgid "Multi-objective sampler using the NSGA-II algorithm."
-msgstr ""
+msgstr "使用 NSGA-II 算法的 Multi-objective sampler。"
 
 #: of optuna.multi_objective.samplers.NSGAIIMultiObjectiveSampler:3
 msgid ""
 "NSGA-II stands for \"Nondominated Sorting Genetic Algorithm II\", which "
 "is a well known, fast and elitist multi-objective genetic algorithm."
-msgstr ""
+msgstr "NSGA-II 指 \"Nondominated Sorting Genetic Algorithm II\"，这是一个著名的快速且优秀 multi-objective 遗传算法。"
+
 
 #: of optuna.multi_objective.samplers.NSGAIIMultiObjectiveSampler:6
 msgid ""
 "For further information about NSGA-II, please refer to the following "
 "paper:"
-msgstr ""
+msgstr "要了解更多关于 NSGA-II 的信息的话，请参考以下论文："
 
 #: of optuna.multi_objective.samplers.NSGAIIMultiObjectiveSampler:8
 msgid ""
@@ -182,7 +187,7 @@ msgstr ""
 
 #: of optuna.multi_objective.samplers.NSGAIIMultiObjectiveSampler:11
 msgid "Number of individuals (trials) in a generation."
-msgstr ""
+msgstr "每一代中的 个体（trial）数。"
 
 #: of optuna.multi_objective.samplers.NSGAIIMultiObjectiveSampler:12
 msgid ""
@@ -190,39 +195,43 @@ msgid ""
 " :obj:`None` is specified, the value ``1.0 / len(parent_trial.params)`` "
 "is used where ``parent_trial`` is the parent trial of the target "
 "individual."
-msgstr ""
+msgstr "在创建新个体时每个参数突变的概率。如果设置成 :obj:`None` 的话，那么该值实际上会是 ``1.0 / len(parent_trial.params)`` 。"
+"其中 ``parent_trial`` 是 target trial 的父代 trial。"
 
 #: of optuna.multi_objective.samplers.NSGAIIMultiObjectiveSampler:15
 msgid ""
 "Probability that a crossover (parameters swapping between parents) will "
 "occur when creating a new individual."
-msgstr ""
+msgstr "产生新的个体时发生交叉互换的概率。"
 
 #: of optuna.multi_objective.samplers.NSGAIIMultiObjectiveSampler:17
 msgid "Probability of swapping each parameter of the parents during crossover."
-msgstr ""
+msgstr "在交叉互换中交换父代参数中每一个参数的概率。"
 
 #: of optuna.multi_objective.samplers.NSGAIIMultiObjectiveSampler:18
 msgid "Seed for random number generator."
-msgstr ""
+msgstr "随机数生成器种子。"
 
 #: of optuna.multi_objective.samplers.NSGAIIMultiObjectiveSampler:21
 msgid ""
 "Added in v1.5.0 as an experimental feature. The interface may change in "
 "newer versions without prior notice. See "
 "https://github.com/optuna/optuna/releases/tag/v1.5.0."
-msgstr ""
+msgstr "在 v1.5.0 中作为试验性特性引入，在未来版本中，该接口可能在没有预先告知的情况下被改变。参考 "
+"https://github.com/optuna/optuna/releases/tag/v1.5.0."
+
 
 #: of optuna.multi_objective.samplers.RandomMultiObjectiveSampler:1
 msgid "Multi-objective sampler using random sampling."
-msgstr ""
+msgstr "使用随机采样的 Multi-objective sampler"
 
 #: of optuna.multi_objective.samplers.RandomMultiObjectiveSampler:3
 msgid ""
 "This sampler is based on *independent sampling*. See also "
 ":class:`~optuna.multi_objective.samplers.BaseMultiObjectiveSampler` for "
 "more details of 'independent sampling'."
-msgstr ""
+msgstr "该 sampler 是基于 *independent sampling* 的。关于 'independent sampling' 的更多细节请参考 "
+":class:`~optuna.multi_objective.samplers.BaseMultiObjectiveSampler` 。"
 
 #: of optuna.multi_objective.samplers.RandomMultiObjectiveSampler:8
 msgid "Example"
@@ -234,5 +243,5 @@ msgstr ""
 
 #: of optuna.multi_objective.samplers.RandomMultiObjectiveSampler:26
 msgid "seed: Seed for random number generator."
-msgstr ""
+msgstr "seed: 随机数生成器种子。"
 
