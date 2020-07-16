@@ -23,7 +23,7 @@ msgstr ""
 
 #: of optuna.integration.ChainerPruningExtension:1
 msgid "Chainer extension to prune unpromising trials."
-msgstr ""
+msgstr "用于对无望 trial 剪枝的 Chainer 扩展。"
 
 #: of optuna.integration.ChainerPruningExtension:3
 msgid ""
@@ -32,7 +32,11 @@ msgid ""
 "extension which observes validation accuracy of a `Chainer Trainer "
 "<https://docs.chainer.org/en/stable/ "
 "reference/generated/chainer.training.Trainer.html>`_."
-msgstr ""
+msgstr "如果你想添加一个 `Chainer Trainer "
+"<https://docs.chainer.org/en/stable/ "
+"reference/generated/chainer.training.Trainer.html>`_ 的监测验证集精确度的扩展的话，"
+"请参考  `the example <https://github.com/optuna/optuna/blob/master/ "
+"examples/pruning/chainer_integration.py>`__ 。"
 
 #: of optuna.integration.AllenNLPExecutor optuna.integration.ChainerMNStudy
 #: optuna.integration.ChainerPruningExtension optuna.integration.CmaEsSampler
@@ -67,7 +71,7 @@ msgstr ""
 msgid ""
 "A :class:`~optuna.trial.Trial` corresponding to the current evaluation of"
 " the objective function."
-msgstr ""
+msgstr "对应于目标函数本次求值的 :class:`~optuna.trial.Trial`。"
 
 #: of optuna.integration.ChainerPruningExtension:11
 msgid ""
@@ -75,7 +79,9 @@ msgid ""
 "``validation/main/accuracy``. Please refer to `chainer.Reporter reference"
 " <https://docs.chainer.org/en/stable/reference/ "
 "util/generated/chainer.Reporter.html>`_ for further details."
-msgstr ""
+msgstr "Pruning 的求值度量，比如 ``main/loss`` 和 "
+"``validation/main/accuracy`` 。具体请参考 `chainer.Reporter reference"
+" <https://docs.chainer.org/en/stable/reference/` "
 
 #: of optuna.integration.ChainerPruningExtension:15
 msgid ""
@@ -89,31 +95,44 @@ msgid ""
 "docs.chainer.org/en/stable/reference/generated/chainer.training.triggers."
 " IntervalTrigger.html>`_ can be specified by a tuple of the interval "
 "length and its unit like ``(1, 'epoch')``."
-msgstr ""
+msgstr "执行剪枝的 trigger。``pruner_trigger``  是一个"
+"`IntervalTrigger <https://docs.chainer.org/en/stable/reference/generated/"
+" chainer.training.triggers.IntervalTrigger.html>`_ 或者 "
+"`ManualScheduleTrigger "
+"<https://docs.chainer.org/en/stable/reference/generated/ "
+"chainer.training.triggers.ManualScheduleTrigger.html>`_ 的实例。 `IntervalTrigger"
+" <https:// "
+"docs.chainer.org/en/stable/reference/generated/chainer.training.triggers."
+" IntervalTrigger.html>`_ 可以通过一个由间隔长度和单位构成的元组来指定，比如 ``(1, 'epoch')``。"
 
 #: of optuna.integration.ChainerMNStudy:1
 msgid ""
 "A wrapper of :class:`~optuna.study.Study` to incorporate Optuna with "
 "ChainerMN."
-msgstr ""
+msgstr "一个将 Optuna 并入 CHainerMN 的 :class:`~optuna.study.Study` wrapper。"
 
 #: of optuna.integration.ChainerMNStudy:4
 msgid ""
 ":class:`~optuna.integration.chainermn.ChainerMNStudy` provides the same "
 "interface as :class:`~optuna.study.Study`. Please refer to "
 ":class:`optuna.study.Study` for further details."
-msgstr ""
+msgstr ":class:`~optuna.integration.chainermn.ChainerMNStudy` 提供了和 "
+" :class:`~optuna.study.Study` 一样的接口。更多细节请参考 "
+":class:`optuna.study.Study`。"
+
 
 #: of optuna.integration.ChainerMNStudy:8
 msgid ""
 "See `the example <https://github.com/optuna/optuna/blob/master/ "
 "examples/pruning/chainermn_integration.py>`__ if you want to optimize an "
 "objective function that trains neural network written with ChainerMN."
-msgstr ""
+msgstr "如果你想优化一个用 ChainerMN 写的神经网络目标函数的话，请参考 `the example <https://github.com/optuna/optuna/blob/master/ "
+"examples/pruning/chainermn_integration.py>`__。"
+
 
 #: of optuna.integration.ChainerMNStudy:13
 msgid "A :class:`~optuna.study.Study` object."
-msgstr ""
+msgstr ":class:`~optuna.study.Study` 对象。"
 
 #: of optuna.integration.ChainerMNStudy:14
 msgid ""
@@ -124,18 +143,18 @@ msgstr ""
 
 #: of optuna.integration.ChainerMNStudy.optimize:1
 msgid "Optimize an objective function."
-msgstr ""
+msgstr "优化目标函数。"
 
 #: of optuna.integration.ChainerMNStudy.optimize:3
 msgid ""
 "This method provides the same interface as "
 ":func:`optuna.study.Study.optimize` except the absence of ``n_jobs`` "
 "argument."
-msgstr ""
+msgstr "除了没有 ``n_jobs``  参数外，该方法提供了和 :func:`optuna.study.Study.optimize` 一样的接口。"
 
 #: of optuna.integration.CmaEsSampler:1
 msgid "A Sampler using cma library as the backend."
-msgstr ""
+msgstr "使用 cma 库作为后端的 sampler。"
 
 #: of optuna.integration.CmaEsSampler:4
 #: optuna.integration.FastAIPruningCallback:11
@@ -147,21 +166,23 @@ msgstr ""
 msgid ""
 "Optimize a simple quadratic function by using "
 ":class:`~optuna.integration.CmaEsSampler`."
-msgstr ""
+msgstr "使用 :class:`~optuna.integration.CmaEsSampler` 来优化一个简单的二次函数。"
 
 #: of optuna.integration.CmaEsSampler:20
 msgid ""
 "Note that parallel execution of trials may affect the optimization "
 "performance of CMA-ES, especially if the number of trials running in "
 "parallel exceeds the population size."
-msgstr ""
+msgstr "注意，trial 的并行执行可能会影响 CMA-ES 的性能，尤其是在并行运行的 trial 数超过了 population size 的情况下。"
 
 #: of optuna.integration.CmaEsSampler:23
 msgid ""
 "A dictionary of an initial parameter values for CMA-ES. By default, the "
 "mean of ``low`` and ``high`` for each distribution is used. Please refer "
 "to cma.CMAEvolutionStrategy_ for further details of ``x0``."
-msgstr ""
+msgstr "一个包含了 CMA-ES 初始参数的字典。默认情况下使用每一个分布中的 ``low`` 和 ``high`` 的平均值。"
+"关于 ``x0`` 的更多细节请参考 cma.CMAEvolutionStrategy_ 。"
+
 
 #: of optuna.integration.CmaEsSampler:26
 msgid ""
@@ -170,18 +191,21 @@ msgid ""
 "distributions in the search space. If distribution is categorical, "
 "``min_range`` is ``len(choices) - 1``. Please refer to "
 "cma.CMAEvolutionStrategy_ for further details of ``sigma0``."
-msgstr ""
+msgstr "CMA-ES 的标准差。默认情况下 ``sigma0`` 是 ``min_range / 6``，其中 ``min_range`` "
+"代表来搜索空间分布的最小范围。如果该分布是类别分布，那么 ``min_range`` 就是 ``len(choices) - 1``。"
+"关于 ``sigma0`` 的更多细节参见 cma.CMAEvolutionStrategy_ 。"
 
 #: of optuna.integration.CmaEsSampler:31
 msgid ""
 "A dictionary of multipliers of sigma0 for each parameters. The default "
 "value is 1.0. Please refer to cma.CMAEvolutionStrategy_ for further "
 "details of ``cma_stds``."
-msgstr ""
+msgstr "一个包含每个参数的 sigma0 的乘数的字典。默认情况下其值是 1.0 。"
+"关于 ``cma_stds`` 的更多细节参见 cma.CMAEvolutionStrategy_ 。"
 
 #: of optuna.integration.CmaEsSampler:33
 msgid "A random seed for CMA-ES."
-msgstr ""
+msgstr "CMA-ES 的随机数种子。"
 
 #: of optuna.integration.CmaEsSampler:34
 msgid ""
@@ -189,11 +213,13 @@ msgid ""
 "Note that ``BoundaryHandler``, ``bounds``, ``CMA_stds`` and ``seed`` "
 "arguments in ``cma_opts`` will be ignored because it is added by "
 ":class:`~optuna.integration.CmaEsSampler` automatically."
-msgstr ""
+msgstr "向 cma.CMAEvolutionStrategy_ 构造函数传递的选项。"
+"注意，``cma_opts`` 中的 ``BoundaryHandler``, ``bounds``, ``CMA_stds`` 和 ``seed`` 都会被忽略，因为它是通过 "
+":class:`~optuna.integration.CmaEsSampler`  自动添加的。"
 
 #: of optuna.integration.CmaEsSampler:34
 msgid "Options passed to the constructor of cma.CMAEvolutionStrategy_ class."
-msgstr ""
+msgstr "向 cma.CMAEvolutionStrategy_ 构造函数传递的选项。"
 
 #: of optuna.integration.CmaEsSampler:36
 msgid ""
@@ -201,12 +227,14 @@ msgid ""
 "arguments in ``cma_opts`` will be ignored because it is added by "
 ":class:`~optuna.integration.CmaEsSampler` automatically."
 msgstr ""
+"注意，``cma_opts`` 中的 ``BoundaryHandler``, ``bounds``, ``CMA_stds`` 和 ``seed`` 都会被忽略，因为它是通过 "
+":class:`~optuna.integration.CmaEsSampler`  自动添加的。"
 
 #: of optuna.integration.CmaEsSampler:39
 msgid ""
 "The independent sampling is used instead of the CMA-ES algorithm until "
 "the given number of trials finish in the same study."
-msgstr ""
+msgstr "在同一个 study 中指定数目的 trial 完成之前，采用的都是独立采样而不是 CMA-ES 算法采样。"
 
 #: of optuna.integration.CmaEsSampler:41
 msgid ""
@@ -220,7 +248,13 @@ msgid ""
 "built-in independent samplers     such as "
 ":class:`~optuna.samplers.RandomSampler` and     "
 ":class:`~optuna.samplers.TPESampler`."
-msgstr ""
+msgstr "一个用于独立采样的 :class:`~optuna.samplers.BaseSampler` 实例。"
+"那些不包含在相对搜索空间内的参数都通过它来采样。 :class:`~optuna.integration.CmaEsSampler` 的搜索空间是通过 "
+":func:`~optuna.samplers.intersection_search_space()` 来确定的。如果设置成 :obj:`None` 的话，"
+"默认会使用 :class:`~optuna.samplers.RandomSampler` 。.. seealso::     :class:`optuna.samplers` 模块提供了 "
+"内置的独立 sampler，比如 "
+":class:`~optuna.samplers.RandomSampler` 和     "
+":class:`~optuna.samplers.TPESampler`."
 
 #: of optuna.integration.CmaEsSampler:41
 msgid ""
@@ -229,20 +263,26 @@ msgid ""
 " space are sampled by this sampler. The search space for "
 ":class:`~optuna.integration.CmaEsSampler` is determined by "
 ":func:`~optuna.samplers.intersection_search_space()`."
-msgstr ""
+msgstr "一个用于独立采样的 :class:`~optuna.samplers.BaseSampler` 实例。"
+"那些不包含在相对搜索空间内的参数都通过它来采样。 :class:`~optuna.integration.CmaEsSampler` 的搜索空间是通过 "
+":func:`~optuna.samplers.intersection_search_space()` 来确定的。"
 
 #: of optuna.integration.CmaEsSampler:47 optuna.integration.SkoptSampler:26
 msgid ""
 "If :obj:`None` is specified, :class:`~optuna.samplers.RandomSampler` is "
 "used as the default."
-msgstr ""
+msgstr "如果设置成 :obj:`None` 的话，"
+"默认会使用 :class:`~optuna.samplers.RandomSampler`"
 
 #: of optuna.integration.CmaEsSampler:51 optuna.integration.SkoptSampler:30
 msgid ""
 ":class:`optuna.samplers` module provides built-in independent samplers "
 "such as :class:`~optuna.samplers.RandomSampler` and "
 ":class:`~optuna.samplers.TPESampler`."
-msgstr ""
+msgstr " :class:`optuna.samplers` 模块提供了 "
+"内置的独立 sampler，比如 "
+":class:`~optuna.samplers.RandomSampler` 和     "
+":class:`~optuna.samplers.TPESampler`."
 
 #: of optuna.integration.CmaEsSampler:54 optuna.integration.SkoptSampler:33
 msgid ""
@@ -250,25 +290,26 @@ msgid ""
 "parameter is sampled by using an independent sampler.  Note that the "
 "parameters of the first trial in a study are always sampled via an "
 "independent sampler, so no warning messages are emitted in this case."
-msgstr ""
+msgstr "如果该选项是 :obj:`True` 的话，当参数值是通过一个独立 sampler 来采样时，它会触发一个警告信息。"
+"注意，在每一个 study 中的第一个 trial总是通过独立 sampler 来采样的，所以此时不会触发警报信息。"
 
 #: of optuna.integration.CmaEsSampler:54 optuna.integration.SkoptSampler:33
 msgid ""
 "If this is :obj:`True`, a warning message is emitted when the value of a "
 "parameter is sampled by using an independent sampler."
-msgstr ""
+msgstr "如果该选项是 :obj:`True` 的话，当参数值是通过一个独立 sampler 来采样时，它会触发一个警告信息。"
 
 #: of optuna.integration.CmaEsSampler:57 optuna.integration.SkoptSampler:36
 msgid ""
 "Note that the parameters of the first trial in a study are always sampled"
 " via an independent sampler, so no warning messages are emitted in this "
 "case."
-msgstr ""
+msgstr "注意，在每一个 study 中的第一个 trial总是通过独立 sampler 来采样的，所以此时不会触发警报信息。"
 
 #: of optuna.integration.CmaEsSampler.reseed_rng:1
 #: optuna.integration.SkoptSampler.reseed_rng:1
 msgid "Reseed sampler's random number generator."
-msgstr ""
+msgstr "重置随机数生成器的种子。"
 
 #: of optuna.integration.CmaEsSampler.reseed_rng:3
 #: optuna.integration.SkoptSampler.reseed_rng:3
@@ -279,28 +320,30 @@ msgid ""
 "random number generator, and they may suggest the same values. To prevent"
 " this issue, this method assigns a different seed to each random number "
 "generator."
-msgstr ""
+msgstr "当 trial 是以 ``n_jobs>1`` 的选项被并行执行时，该方法会被 :class:`~optuna.study.Study` 调用。"
+"在这种情况下，sampler 实例和随机数生成器的状态都会被复制，因此它们会产生同样的值，为了避免这种情况，该方法给每一个随机数生成器分配一个不同的种子。"
 
 #: of optuna.integration.FastAIPruningCallback:1
 msgid "FastAI callback to prune unpromising trials for fastai."
-msgstr ""
+msgstr "用于清除 FastAI 中无望 trial 的回调函数。"
 
 #: of optuna.integration.FastAIPruningCallback:4
 msgid ""
 "This callback is for fastai<2.0, not the coming version developed in "
 "fastai/fastai_dev."
-msgstr ""
+msgstr "该回调函数是为 fastai<2.0，而不是 fastai/fastai_dev 版本设计的。"
 
 #: of optuna.integration.FastAIPruningCallback:6
 msgid ""
 "See `the example <https://github.com/optuna/optuna/blob/master/ "
 "examples/fastai_simple.py>`__ if you want to add a pruning callback which"
 " monitors validation loss of a ``Learner``."
-msgstr ""
+msgstr "如果你想添加一个监测 ``Learner`` 的验证集 loss 的 pruner 的话，请参考 `the example <https://github.com/optuna/optuna/blob/master/ "
+"examples/fastai_simple.py>`__ 。"
 
 #: of optuna.integration.FastAIPruningCallback:12
 msgid "Register a pruning callback to ``learn.fit`` and ``learn.fit_one_cycle``."
-msgstr ""
+msgstr "向 ``learn.fit`` 和 ``learn.fit_one_cycle`` 注入一个 pruning 回调。"
 
 #: of optuna.integration.FastAIPruningCallback:21
 msgid ""
@@ -313,22 +356,26 @@ msgid ""
 "An evaluation metric for pruning, e.g. ``valid_loss`` and ``Accuracy``. "
 "Please refer to `fastai.Callback reference "
 "<https://docs.fast.ai/callback.html#Callback>`_ for further details."
-msgstr ""
+msgstr "Pruning 的求值度量，比如 ``valid_loss`` 和 "
+"``Accuracy`` 。具体请参考 `fastai.Callback reference "
+"<https://docs.fast.ai/callback.html#Callback>`_ 。"
 
 #: of optuna.integration.PyTorchIgnitePruningHandler:1
 msgid "PyTorch Ignite handler to prune unpromising trials."
-msgstr ""
+msgstr "用于清除无望 trial 的 PyTorch Ignite handler。"
 
 #: of optuna.integration.PyTorchIgnitePruningHandler:3
 msgid ""
 "See `the example <https://github.com/optuna/optuna/blob/master/ "
 "examples/pytorch_ignite_simple.py>`__ if you want to add a pruning "
 "handler which observes validation accuracy."
-msgstr ""
+msgstr "如果你想添加一个监测验证集 accuracy 的 pruner 的话，请参考 `the example <https://github.com/optuna/optuna/blob/master/ "
+"examples/pytorch_ignite_simple.py>`__。"
+
 
 #: of optuna.integration.PyTorchIgnitePruningHandler:9
 msgid "A name of metric for pruning, e.g., ``accuracy`` and ``loss``."
-msgstr ""
+msgstr "用于 pruning 的度量名，比如 ``accuracy`` 和 ``loss``."
 
 #: of optuna.integration.PyTorchIgnitePruningHandler:10
 msgid ""
@@ -336,43 +383,51 @@ msgid ""
 " reference "
 "<https://pytorch.org/ignite/engine.html#ignite.engine.Engine>`_ for "
 "further details."
-msgstr ""
+msgstr "PyTorch Ignite 的 trainer engine。更多细节请参考 `ignite.engine.Engine"
+" reference "
+"<https://pytorch.org/ignite/engine.html#ignite.engine.Engine>`_ 。"
 
 #: of optuna.integration.KerasPruningCallback:1
 msgid "Keras callback to prune unpromising trials."
-msgstr ""
+msgstr "用于清除无望 trial 的 Keras 回调函数。"
 
 #: of optuna.integration.KerasPruningCallback:3
 msgid ""
 "See `the example <https://github.com/optuna/optuna/blob/master/ "
 "examples/pruning/keras_integration.py>`__ if you want to add a pruning "
 "callback which observes validation accuracy."
-msgstr ""
+msgstr "如果你想添加一个监测验证集 accuracy 的 pruner 的话，请参考 `the example <https://github.com/optuna/optuna/blob/master/ "
+"examples/pruning/keras_integration.py>`__ 。"
+
 
 #: of optuna.integration.KerasPruningCallback:9
 msgid ""
 "An evaluation metric for pruning, e.g., ``val_loss`` and "
 "``val_accuracy``. Please refer to `keras.Callback reference "
 "<https://keras.io/callbacks/#callback>`_ for further details."
-msgstr ""
+msgstr "Pruning 的求值度量，比如 ``val_loss`` 和 "
+"``val_accuracy`` 。具体请参考 `keras.Callback reference "
+"<https://keras.io/callbacks/#callback>`_ 。"
 
 #: of optuna.integration.KerasPruningCallback:12
 msgid ""
 "Check if trial should be pruned every n-th epoch. By default "
 "``interval=1`` and pruning is performed after every epoch. Increase "
 "``interval`` to run several epochs faster before applying pruning."
-msgstr ""
+msgstr "每到第 n 个 epoch 检查是否要清除该 trial。默认情况下 ``interval=1`` 此时每个 epoch 之后pruning 都会执行一次。"
+"增加 ``interval`` 可以先执行数个 epoch，然后再执行 pruning。"
 
 #: of optuna.integration.LightGBMPruningCallback:1
 msgid "Callback for LightGBM to prune unpromising trials."
-msgstr ""
+msgstr "用于清除无望 trial 的 LightGBM 回调函数。"
 
 #: of optuna.integration.LightGBMPruningCallback:3
 msgid ""
 "See `the example <https://github.com/optuna/optuna/blob/master/ "
 "examples/pruning/lightgbm_integration.py>`__ if you want to add a pruning"
 " callback which observes AUC of a LightGBM model."
-msgstr ""
+msgstr "如果你想添加一个监测 LightGBM 模型的 AUC 的 pruner 的话，请参考 `the example <https://github.com/optuna/optuna/blob/master/ "
+"examples/pruning/lightgbm_integration.py>`__ 。"
 
 #: of optuna.integration.LightGBMPruningCallback:10
 msgid ""
@@ -380,7 +435,9 @@ msgid ""
 "``multi_error``. Please refer to `LightGBM reference "
 "<https://lightgbm.readthedocs.io/en/latest/Parameters.html#metric>`_ for "
 "further details."
-msgstr ""
+msgstr "Pruning 的求值度量，比如 ``binary_error`` 和 "
+"``multi_error`` 。具体请参考 `LightGBM reference "
+"<https://lightgbm.readthedocs.io/en/latest/Parameters.html#metric>`_ 。"
 
 #: of optuna.integration.LightGBMPruningCallback:15
 msgid ""
@@ -392,11 +449,17 @@ msgid ""
 "ignored if you are calling `cv method "
 "<https://lightgbm.readthedocs.io/en/latest/Python-API.html#lightgbm.cv>`_"
 " instead of train method."
-msgstr ""
+msgstr "目标验证名。验证名是通过 `train method "
+"<https://lightgbm.readthedocs.io/en/latest/Python-"
+"API.html#lightgbm.train>`_ 的 ``valid_names`` 选项来设定的。"
+"如果省略的话就采用 `valid_0``，它是第一个验证的默认名。注意，如果你没有调用 train 方法而是调用了 `cv method "
+"<https://lightgbm.readthedocs.io/en/latest/Python-API.html#lightgbm.cv>`_ 的话，该参数会被忽略。"
+
+#  TODO: Is it ok to translate 'The name of the target validation' to '目标验证名'?
 
 #: of optuna.integration.lightgbm.train:1
 msgid "Wrapper of LightGBM Training API to tune hyperparameters."
-msgstr ""
+msgstr "用于调整超参数的 LightGBM Training API 的 wrapper。"
 
 #: of optuna.integration.lightgbm.train:3
 msgid ""
@@ -406,7 +469,11 @@ msgid ""
 "<https://github.com/optuna/optuna/blob/master/examples/lig "
 "htgbm_tuner_simple.py>`_ which optimizes the validation log loss of "
 "cancer detection."
-msgstr ""
+msgstr "它逐步调整重要的超参数（比如 ``min_child_samples`` 和 "
+"``feature_fraction``），是 `lightgbm.train()`_ 的一个非正式替代品。参见 `a simple example of LightGBM Tuner "
+"<https://github.com/optuna/optuna/blob/master/examples/lig "
+"htgbm_tuner_simple.py>`_ which optimizes the validation log loss of "
+"cancer detection."
 
 #: of optuna.integration.lightgbm.train:8
 msgid ""
@@ -415,29 +482,34 @@ msgid ""
 "Optuna such as suspended/resumed optimization and/or parallelization, "
 "refer to :class:`~optuna.integration.lightgbm.LightGBMTuner` instead of "
 "this function."
-msgstr ""
+msgstr ":func:`~optuna.integration.lightgbm.train` 是 :class:`~optuna.integration.lightgbm.LightGBMTuner` 的 wrapper。"
+"如果想使用 suspended/resumed optimization 和/或 parallelization 等 Optuna 特性的话，"
+"请使用 :class:`~optuna.integration.lightgbm.LightGBMTuner` 而不是该函数。"
 
 #: of optuna.integration.lightgbm.train:13
 msgid "Arguments and keyword arguments for `lightgbm.train()`_ can be passed."
-msgstr ""
+msgstr "可以传入给 `lightgbm.train()`_ 的参数。"
 
 #: of optuna.integration.lightgbm.train:18
 msgid ""
 "Added in v0.18.0 as an experimental feature. The interface may change in "
 "newer versions without prior notice. See "
 "https://github.com/optuna/optuna/releases/tag/v0.18.0."
-msgstr ""
+msgstr "在 v0.18.0 中作为试验性特性引入，在未来版本中，该接口可能在没有预先告知的情况下被改变。参考 "
+"https://github.com/optuna/optuna/releases/tag/v0.18.0."
 
 #: of optuna.integration.lightgbm.LightGBMTuner:1
 msgid "Hyperparameter tuner for LightGBM."
-msgstr ""
+msgstr "LightGBM 的超参数调节器。"
 
 #: of optuna.integration.lightgbm.LightGBMTuner:3
 msgid ""
 "It optimizes the following hyperparameters in a stepwise manner: "
 "``lambda_l1``, ``lambda_l2``, ``num_leaves``, ``feature_fraction``, "
 "``bagging_fraction``, ``bagging_freq`` and ``min_child_samples``."
-msgstr ""
+msgstr "它逐步调整下列超参数："
+"``lambda_l1``, ``lambda_l2``, ``num_leaves``, ``feature_fraction``, "
+"``bagging_fraction``, ``bagging_freq`` 和 ``min_child_samples``."
 
 #: of optuna.integration.lightgbm.LightGBMTuner:7
 msgid ""
@@ -445,7 +517,11 @@ msgid ""
 "blog article <https:/ /medium.com/optuna/lightgbm-tuner-new-optuna-"
 "integration-for-hyperparameter-optimization-8b709 5e99258>`_ by `Kohei "
 "Ozaki <https://www.kaggle.com/confirm>`_, a Kaggle Grandmaster."
-msgstr ""
+msgstr "你可以在 `this "
+"blog article <https:/ /medium.com/optuna/lightgbm-tuner-new-optuna-"
+"integration-for-hyperparameter-optimization-8b709 5e99258>`_ 中找到该算法和其基准测试的细节。"
+"它是 `Kohei "
+"Ozaki <https://www.kaggle.com/confirm>`_ 由写的，Kohei Ozaki 是一个 Kaggle Grandmaster。"
 
 #: of optuna.integration.lightgbm.LightGBMTuner:11
 msgid ""
@@ -453,12 +529,14 @@ msgid ""
 "<https://lightgbm.readthedocs.io/en/latest/pythonapi/lightgbm.train.html>`_"
 " can be passed. The arguments that only "
 ":class:`~optuna.integration.lightgbm.LightGBMTuner` has are listed below:"
-msgstr ""
+msgstr "可以传入给 `lightgbm.train() "
+"<https://lightgbm.readthedocs.io/en/latest/pythonapi/lightgbm.train.html>`_ 的参数。"
+"专属 :class:`~optuna.integration.lightgbm.LightGBMTuner`  的参数列在下面了："
 
 #: of optuna.integration.lightgbm.LightGBMTuner:16
 #: optuna.integration.lightgbm.LightGBMTunerCV:16
 msgid "A time budget for parameter tuning in seconds."
-msgstr ""
+msgstr "以秒计算的调参时间预算。"
 
 #: of optuna.integration.lightgbm.LightGBMTuner:17
 #: optuna.integration.lightgbm.LightGBMTunerCV:17
@@ -469,7 +547,10 @@ msgid ""
 "starts. ``average_iteration_time`` is the average time of iteration to "
 "train the booster model in the trial. ``lgbm_params`` is a JSON-"
 "serialized dictionary of LightGBM parameters used in the trial."
-msgstr ""
+msgstr "一个用于存储优化结果的 :class:`~optuna.study.Study` 实例。"
+"其中的 :class:`~optuna.trial.Trial` 由下列用户属性：``elapsed_secs``  是自优化开始以来消耗的时间。"
+"``average_iteration_time`` 是一个 trial 中训练一个 booster 模型所需要的平均迭代时间。"
+"``lgbm_params`` 是一个 JSON 序列化过的，存储 trial 中采用的 LightGBM 的参数的字典。"
 
 #: of optuna.integration.lightgbm.LightGBMTuner:23
 #: optuna.integration.lightgbm.LightGBMTunerCV:23
@@ -479,7 +560,9 @@ msgid ""
 "in this order: :class:`~optuna.study.Study` and "
 ":class:`~optuna.FrozenTrial`. Please note that this is not a "
 "``callbacks`` argument of `lightgbm.train()`_ ."
-msgstr ""
+msgstr "在每个trial 结束后触发的 Optuna 回调函数列表。其中每个函数必须接受两个下面这种顺序和类型的参数： :class:`~optuna.study.Study` and "
+":class:`~optuna.FrozenTrial`。注意，这不是 `lightgbm.train()`_ 的 ``callbacks`` 参数。"
+
 
 #: of optuna.integration.lightgbm.LightGBMTuner:27
 msgid ""
@@ -491,7 +574,10 @@ msgid ""
 "directory does not exist, it will be created. The filenames of the "
 "boosters will be ``{model_dir}/{trial_number}.pkl`` (e.g., "
 "``./boosters/0.pkl``)."
-msgstr ""
+msgstr "用于存储 booster 的目录。默认情况下它是 :obj:`None`，也不会存储 booster。"
+"如果你想在分布式的环境下获取 :meth:`~optuna.integration.LightGBMTuner.get_best_booster` 的话，请设置共享目录（比如 NFS 上的目录）。"
+"否则，它会抛出 :obj:`ValueError` 错误。booster 的文件名是有如下形式：``{model_dir}/{trial_number}.pkl`` (比如 "
+"``./boosters/0.pkl``)。"
 
 #: of optuna.integration.lightgbm.LightGBMTuner:37
 #: optuna.integration.lightgbm.LightGBMTunerCV:32
@@ -499,29 +585,29 @@ msgid ""
 "Added in v1.5.0 as an experimental feature. The interface may change in "
 "newer versions without prior notice. See "
 "https://github.com/optuna/optuna/releases/tag/v1.5.0."
-msgstr ""
-
+msgstr "在 v1.5.0 中作为试验性特性引入，在未来版本中，该接口可能在没有预先告知的情况下被改变。参考 "
+"https://github.com/optuna/optuna/releases/tag/v1.5.0."
 #: of optuna.integration.lightgbm.LightGBMTuner.best_booster:1
 #: optuna.integration.lightgbm.LightGBMTuner.get_best_booster:1
 msgid "Return the best booster."
-msgstr ""
+msgstr "返回最佳 booster。"
 
 #: of optuna.integration.lightgbm.LightGBMTuner.best_booster:3
 msgid ""
 "Please get the best booster via "
 ":class:`~optuna.integration.lightgbm.LightGBMTuner.get_best_booster` "
 "instead."
-msgstr ""
+msgstr "请通过 :class:`~optuna.integration.lightgbm.LightGBMTuner.get_best_booster` 来获取最佳 booster。"
 
 #: of optuna.integration.lightgbm.LightGBMTuner.best_params:1
 #: optuna.integration.lightgbm.LightGBMTunerCV.best_params:1
 msgid "Return parameters of the best booster."
-msgstr ""
+msgstr "返回最佳 booster 的参数。"
 
 #: of optuna.integration.lightgbm.LightGBMTuner.best_score:1
 #: optuna.integration.lightgbm.LightGBMTunerCV.best_score:1
 msgid "Return the score of the best booster."
-msgstr ""
+msgstr "返回最佳 booster 的分数。"
 
 #: of optuna.integration.lightgbm.LightGBMTuner.get_best_booster:3
 msgid ""
@@ -530,16 +616,18 @@ msgid ""
 "``model_dir`` arguments of "
 ":meth:`~optuna.integration.lightgbm.LightGBMTuner.__init__` when you "
 "resume tuning or you run tuning in parallel."
-msgstr ""
+msgstr "如果无法找到最佳 booster 的话，会抛出 :class:`ValueError` 。"
+"为了避免这种情况，如果你要并行运行 trial 或者恢复调参的话，请通过设置 :meth:`~optuna.integration.lightgbm.LightGBMTuner.__init__` "
+"的 ``model_dir`` 参数来存储 booster。"
 
 #: of optuna.integration.lightgbm.LightGBMTuner.run:1
 #: optuna.integration.lightgbm.LightGBMTunerCV.run:1
 msgid "Perform the hyperparameter-tuning with given parameters."
-msgstr ""
+msgstr "用给定的参数来进行超参数调参。"
 
 #: of optuna.integration.lightgbm.LightGBMTunerCV:1
 msgid "Hyperparameter tuner for LightGBM with cross-validation."
-msgstr ""
+msgstr "带有交叉验证的 LightGBM 超参数 tuner。"
 
 #: of optuna.integration.lightgbm.LightGBMTunerCV:3
 msgid ""
@@ -551,7 +639,12 @@ msgid ""
 "`lightgbm.train()`_. See `a simple example "
 "<https://github.com/optuna/optuna/blob/master/examples/lightgbm_tuner_cv."
 " py>`_ which optimizes the validation log loss of cancer detection."
-msgstr ""
+msgstr "它采用了和 :class:`~optuna.integration.lightgbm.LightGBMTuner` 同样的逐步措施。"
+":class:`~optuna.integration.lightgbm.LightGBMTunerCV` 通过触发 `lightgbm.cv()`_  来训练和验证 booster，而 "
+":class:`~optuna.integration.lightgbm.LightGBMTuner` 则采用 `lightgbm.train()`_。"
+"在 `a simple example "
+"<https://github.com/optuna/optuna/blob/master/examples/lightgbm_tuner_cv."
+" py>`_ 这里可以看到一个在癌症检测上优化验证集上 log loss 的例子。"
 
 #: of optuna.integration.lightgbm.LightGBMTunerCV:11
 msgid ""
@@ -559,21 +652,22 @@ msgid ""
 " ``metrics``, ``init_model`` and ``eval_train_metric``. The arguments "
 "that only :class:`~optuna.integration.lightgbm.LightGBMTunerCV` has are "
 "listed below:"
-msgstr ""
+msgstr "除了 ``metrics``, ``init_model`` 和 ``eval_train_metric``，其他参数都可以传递给 `lightgbm.cv()`_ 。"
+":class:`~optuna.integration.lightgbm.LightGBMTunerCV`  独有的参数列在下面了："
 
 #: of optuna.integration.MLflowCallback:1
 msgid "Callback to track Optuna trials with MLflow."
-msgstr ""
+msgstr "用 MLflow 来追踪 Optuna trial 的回调函数。"
 
 #: of optuna.integration.MLflowCallback:3
 msgid ""
 "This callback adds relevant information that is tracked by Optuna to "
 "MLflow. The MLflow experiment will be named after the Optuna study name."
-msgstr ""
+msgstr "该回调函数添加被 Optuna 追踪的相关信息到 MLflow 中。而对应的 MLflow 实验会按照 Optuna study 名来命名。"
 
 #: of optuna.integration.MLflowCallback:9
 msgid "Add MLflow callback to Optuna optimization."
-msgstr ""
+msgstr "给 Optuna 优化添加一个 MLflow 回调函数。"
 
 #: of optuna.integration.MLflowCallback:46
 msgid ""
@@ -581,25 +675,28 @@ msgid ""
 "`mlflow.set_tracking_uri "
 "<https://www.mlflow.org/docs/latest/python_api/mlflow.html#mlflow.set_tracking_uri>`_"
 " for more details."
-msgstr ""
+msgstr "MLflow tracking server 的 URI。更多细节请参考 `mlflow.set_tracking_uri "
+"<https://www.mlflow.org/docs/latest/python_api/mlflow.html#mlflow.set_tracking_uri>`_。"
 
 #: of optuna.integration.MLflowCallback:46
 msgid "The URI of the MLflow tracking server."
-msgstr ""
+msgstr "MLflow tracking server 的 URI。"
 
 #: of optuna.integration.MLflowCallback:48
 msgid ""
 "Please refer to `mlflow.set_tracking_uri "
 "<https://www.mlflow.org/docs/latest/python_api/mlflow.html#mlflow.set_tracking_uri>`_"
 " for more details."
-msgstr ""
+msgstr "更多细节请参考 `mlflow.set_tracking_uri "
+"<https://www.mlflow.org/docs/latest/python_api/mlflow.html#mlflow.set_tracking_uri>`_。"
+
 
 #: of optuna.integration.MLflowCallback:51
 msgid ""
 "Name of the metric. Since the metric itself is just a number, "
 "`metric_name` can be used to give it a name. So you know later if it was "
 "roc-auc or accuracy."
-msgstr ""
+msgstr "度量名。由于度量本身只是一个数字，所以可以用 `metric_name` 为它命名，这样好让你之后知道它是 roc-auc 还是 accuracy。"
 
 #: of optuna.integration.AllenNLPExecutor:24
 #: optuna.integration.MLflowCallback:56
@@ -607,18 +704,20 @@ msgid ""
 "Added in v1.4.0 as an experimental feature. The interface may change in "
 "newer versions without prior notice. See "
 "https://github.com/optuna/optuna/releases/tag/v1.4.0."
-msgstr ""
+msgstr "在 v1.4.0 中作为试验性特性引入，在未来版本中，该接口可能在没有预先告知的情况下被改变。参考 "
+"https://github.com/optuna/optuna/releases/tag/v1.4.0."
 
 #: of optuna.integration.MXNetPruningCallback:1
 msgid "MXNet callback to prune unpromising trials."
-msgstr ""
+msgstr "用于清除无望 trial 的 MXNet 回调函数。"
 
 #: of optuna.integration.MXNetPruningCallback:3
 msgid ""
 "See `the example <https://github.com/optuna/optuna/blob/master/ "
 "examples/pruning/mxnet_integration.py>`__ if you want to add a pruning "
 "callback which observes accuracy."
-msgstr ""
+msgstr "如果你想添加一个监测 accuracy 的 pruner 的话，请参考 `the example <https://github.com/optuna/optuna/blob/master/ "
+"examples/pruning/mxnet_integration.py>`__ 。"
 
 #: of optuna.integration.MXNetPruningCallback:9
 msgid ""
@@ -628,18 +727,23 @@ msgid ""
 "provided to constructor. Please refer to `mxnet.metrics reference "
 "<https://mxnet.apache.org/api/python/metric/metric.html>`_ for further "
 "details."
-msgstr ""
+msgstr "用于 pruning 的求值度量名，比如 ``cross-entropy`` 和 "
+"``accuracy``。如果使用像 mxnet.metrics.Accuracy 这样的默认度量的话，就使用它的默认度量名。"
+"对于定制的度量，就使用传递给构造函数的 metric_name。更多细节请参考 `mxnet.metrics reference "
+"<https://mxnet.apache.org/api/python/metric/metric.html>`_ 。"
 
 #: of optuna.integration.PyTorchLightningPruningCallback:1
 msgid "PyTorch Lightning callback to prune unpromising trials."
-msgstr ""
+msgstr "用于清除无望 trial 的 PyTorch Lighting 回调函数。"
 
 #: of optuna.integration.PyTorchLightningPruningCallback:3
 msgid ""
 "See `the example <https://github.com/optuna/optuna/blob/master/ "
 "examples/pytorch_lightning_simple.py>`__ if you want to add a pruning "
 "callback which observes accuracy."
-msgstr ""
+msgstr "如果你想添加一个监测 accuracy 的 pruner 的话，请参考 `the example <https://github.com/optuna/optuna/blob/master/ "
+"examples/pytorch_lightning_simple.py>`__ 。"
+
 
 #: of optuna.integration.PyTorchLightningPruningCallback:9
 msgid ""
@@ -648,17 +752,19 @@ msgid ""
 "``pytorch_lightning.LightningModule.training_step`` or "
 "``pytorch_lightning.LightningModule.validation_end`` and the names thus "
 "depend on how this dictionary is formatted."
-msgstr ""
+msgstr "Pruning 的求值度量，比如 ``val_loss`` 和 "
+"``val_acc`` 。这戏的度量是通过 ``pytorch_lightning.LightningModule.training_step`` 或者 ``pytorch_lightning.LightningModule.validation_end`` 返回的字典来获得的。"
+"因此，这些度量名取决于字典的格式。"
 
 #: of optuna.integration.SkoptSampler:1
 msgid "Sampler using Scikit-Optimize as the backend."
-msgstr ""
+msgstr "以  Scikit-Optimize 为后端的 sampler。"
 
 #: of optuna.integration.SkoptSampler:5
 msgid ""
 "Optimize a simple quadratic function by using "
 ":class:`~optuna.integration.SkoptSampler`."
-msgstr ""
+msgstr "用 :class:`~optuna.integration.SkoptSampler` 来优化一个简单的二次函数。"
 
 #: of optuna.integration.SkoptSampler:20
 msgid ""
@@ -672,7 +778,15 @@ msgid ""
 "built-in independent samplers     such as "
 ":class:`~optuna.samplers.RandomSampler` and     "
 ":class:`~optuna.samplers.TPESampler`."
-msgstr ""
+msgstr "一个用于独立采样的 :class:`~optuna.samplers.BaseSampler` 实例。"
+"那些不包含在相对搜索空间内的参数都通过它来采样。 :class:`~optuna.integration.SkoptSampler` 的搜索空间是通过 "
+":func:`~optuna.samplers.intersection_search_space()` 来确定的。如果设置成 :obj:`None` 的话，"
+"默认会使用 :class:`~optuna.samplers.RandomSampler` 。.. seealso::     :class:`optuna.samplers` 模块提供了 "
+"内置的独立 sampler，比如 "
+":class:`~optuna.samplers.RandomSampler` 和     "
+":class:`~optuna.samplers.TPESampler`."
+
+
 
 #: of optuna.integration.SkoptSampler:20
 msgid ""
@@ -681,7 +795,9 @@ msgid ""
 " space are sampled by this sampler. The search space for "
 ":class:`~optuna.integration.SkoptSampler` is determined by "
 ":func:`~optuna.samplers.intersection_search_space()`."
-msgstr ""
+msgstr "一个用于独立采样的 :class:`~optuna.samplers.BaseSampler` 实例。"
+"那些不包含在相对搜索空间内的参数都通过它来采样。 :class:`~optuna.integration.SkoptSampler` 的搜索空间是通过 "
+":func:`~optuna.samplers.intersection_search_space()` 来确定的。"
 
 #: of optuna.integration.SkoptSampler:38
 msgid ""
@@ -689,81 +805,88 @@ msgid ""
 "://scikit-optimize.github.io/#skopt.Optimizer>`_ class.  Note that "
 "``dimensions`` argument in ``skopt_kwargs`` will be ignored because it is"
 " added by :class:`~optuna.integration.SkoptSampler` automatically."
-msgstr ""
+msgstr "传递给 `skopt.Optimizer <https"
+"://scikit-optimize.github.io/#skopt.Optimizer>`_ 的构造函数的参数。注意 ``skopt_kwargs`` 中的 ``dimensions`` 参数会被忽略，"
+"因为它是通过 :class:`~optuna.integration.SkoptSampler` 自动添加的。"
 
 #: of optuna.integration.SkoptSampler:38
 msgid ""
 "Keyword arguments passed to the constructor of `skopt.Optimizer <https"
 "://scikit-optimize.github.io/#skopt.Optimizer>`_ class."
-msgstr ""
+msgstr "传递给 `skopt.Optimizer <https"
+"://scikit-optimize.github.io/#skopt.Optimizer>`_ 的构造函数的参数。"
 
 #: of optuna.integration.SkoptSampler:42
 msgid ""
 "Note that ``dimensions`` argument in ``skopt_kwargs`` will be ignored "
 "because it is added by :class:`~optuna.integration.SkoptSampler` "
 "automatically."
-msgstr ""
+msgstr "注意 ``skopt_kwargs`` 中的 ``dimensions`` 参数会被忽略，"
+"因为它是通过 :class:`~optuna.integration.SkoptSampler` 自动添加的。"
 
 #: of optuna.integration.SkoptSampler:44
 msgid ""
 "The independent sampling is used until the given number of trials finish "
 "in the same study."
-msgstr ""
+msgstr "在同一个 study 中指定数目的 trial 完成之前，采用的都是独立采样。"
 
 #: of optuna.integration.TensorFlowPruningHook:1
 msgid "TensorFlow SessionRunHook to prune unpromising trials."
-msgstr ""
+msgstr "用于清除无望 trial 的 TensorFlow SessionRunHook。"
 
 #: of optuna.integration.TensorFlowPruningHook:3
 msgid ""
 "See `the example <https://github.com/optuna/optuna/blob/master/examples/ "
 "pruning/tensorflow_estimator_integration.py>`_ if you want to add a "
 "pruning hook to TensorFlow's estimator."
-msgstr ""
+msgstr "如果你想给 TensorFlow 的 estimator 添加一个 pruning hook 的话，请参考 `the example <https://github.com/optuna/optuna/blob/master/examples/ "
+"pruning/tensorflow_estimator_integration.py>`_。"
 
 #: of optuna.integration.TensorFlowPruningHook:9
 msgid "An estimator which you will use."
-msgstr ""
+msgstr "要使用的 estimator。"
 
 #: of optuna.integration.TensorFlowPruningHook:10
 msgid "An evaluation metric for pruning, e.g., ``accuracy`` and ``loss``."
-msgstr ""
+msgstr "用于 pruning 的度量名，比如 ``accuracy`` 和 ``loss``。"
 
 #: of optuna.integration.TensorFlowPruningHook:11
 msgid "An interval to watch the summary file."
-msgstr ""
+msgstr "监测 summary 文件的步长间隔。"
 
 #: of optuna.integration.TFKerasPruningCallback:1
 msgid "tf.keras callback to prune unpromising trials."
-msgstr ""
+msgstr "用于清除无望 trial 的 tf.keras 回调函数。"
 
 #: of optuna.integration.TFKerasPruningCallback:3
 msgid ""
 "This callback is intend to be compatible for TensorFlow v1 and v2, but "
 "only tested with TensorFlow v1."
-msgstr ""
+msgstr "该回调函数是为 TensorFlow v1 和 v2 兼容设计的，但是只在 TensorFlow v1 上测试过。"
 
 #: of optuna.integration.TFKerasPruningCallback:6
 msgid ""
 "See `the example <https://github.com/optuna/optuna/blob/master/ "
 "examples/pruning/tfkeras_integration.py>`__ if you want to add a pruning "
 "callback which observes the validation accuracy."
-msgstr ""
+msgstr "如果你想添加一个监测 validation accuracy 的  pruning callback 的话，请参考 `the example <https://github.com/optuna/optuna/blob/master/ "
+"examples/pruning/tfkeras_integration.py>`__。"
 
 #: of optuna.integration.TFKerasPruningCallback:12
 msgid "An evaluation metric for pruning, e.g., ``val_loss`` or ``val_acc``."
-msgstr ""
+msgstr "用于 pruning 的度量名，比如 ``val_loss`` 和 ``val_acc``。"
 
 #: of optuna.integration.XGBoostPruningCallback:1
 msgid "Callback for XGBoost to prune unpromising trials."
-msgstr ""
+msgstr "用于清除无望 trial 的 XGBoost 回调函数。"
 
 #: of optuna.integration.XGBoostPruningCallback:3
 msgid ""
 "See `the example <https://github.com/optuna/optuna/blob/master/ "
 "examples/pruning/xgboost_integration.py>`__ if you want to add a pruning "
 "callback which observes validation AUC of a XGBoost model."
-msgstr ""
+msgstr "如果你想添加一个监测 XGBoost  模型的 validation AUC 的  pruning callback 的话，请参考 `the example <https://github.com/optuna/optuna/blob/master/ "
+"examples/pruning/xgboost_integration.py>`__ 。"
 
 #: of optuna.integration.XGBoostPruningCallback:10
 msgid ""
@@ -774,28 +897,32 @@ msgid ""
 "``eval_metric`` in `XGBoost reference "
 "<https://xgboost.readthedocs.io/en/latest/parameter.html>`_ for further "
 "details."
-msgstr ""
+msgstr "Pruning 的求值度量，比如 ``validation-error`` 和 "
+"``validation-merror`` 。在使用 Scikit-Learn API 时，``observation_key`` 中必须包含 ``eval_set`` 的索引数，比如 "
+"``validation_0-error`` and ``validation_0-merror``。更多细节请参考 `XGBoost reference "
+"<https://xgboost.readthedocs.io/en/latest/parameter.html>`_ 中的 ``eval_metric``。"
 
 #: of optuna.integration.OptunaSearchCV:1
 msgid "Hyperparameter search with cross-validation."
-msgstr ""
+msgstr "带有交叉验证的超参数搜索。"
 
 #: of optuna.integration.OptunaSearchCV:5
 msgid "This feature is experimental. The interface may be changed in the future."
-msgstr ""
+msgstr "该特性是试验性的，其接口在未来可能会改变。"
 
 #: of optuna.integration.OptunaSearchCV:7
 msgid ""
 "Object to use to fit the data. This is assumed to implement the scikit-"
 "learn estimator interface. Either this needs to provide ``score``, or "
 "``scoring`` must be passed."
-msgstr ""
+msgstr "用于拟合数据的对象。它应当用于实现  scikit-"
+"learn estimator 接口。它至少要提供 ``score`` 或者 ``scoring``。"
 
 #: of optuna.integration.OptunaSearchCV:10
 msgid ""
 "Dictionary where keys are parameters and values are distributions. "
 "Distributions are assumed to implement the optuna distribution interface."
-msgstr ""
+msgstr "键为参数值为分布的字典。这些字典应当用于实现 Optuna 的分布接口。"
 
 #: of optuna.integration.OptunaSearchCV:13
 msgid ""
@@ -805,36 +932,42 @@ msgid ""
 "integer, if :obj:`estimator` is a classifier and :obj:`y` is either "
 "binary or multiclass, ``sklearn.model_selection.StratifiedKFold`` is "
 "used. otherwise, ``sklearn.model_selection.KFold`` is used."
-msgstr ""
+msgstr "交叉验证策略。cv 的可能输入有：- 一个用于指定 CV splitter 中的 folds 个数的整数，- 一个 CV splitter，它是一个"
+"产生由索引构成的数组的 (train, validation) splits 的 iterable 对象，"
+"对于整数而言，如果 if :obj:`estimator` 是一个 classifier 而 :obj:`y` 是 binary 或 multiclass 的话，"
+"那么 ``sklearn.model_selection.StratifiedKFold`` 会被采用。否则 ``sklearn.model_selection.KFold`` 会被采用。" 
 
 #: of optuna.integration.OptunaSearchCV:13
 msgid "Cross-validation strategy. Possible inputs for cv are:"
-msgstr ""
+msgstr "交叉验证策略。cv 的可能输入有："
 
 #: of optuna.integration.OptunaSearchCV:15
 msgid "integer to specify the number of folds in a CV splitter,"
-msgstr ""
+msgstr "一个用于指定 CV splitter 中的 folds 个数的整数，"
 
 #: of optuna.integration.OptunaSearchCV:16
 msgid "a CV splitter,"
-msgstr ""
+msgstr "一个 CV splitter"
 
 #: of optuna.integration.OptunaSearchCV:17
 msgid "an iterable yielding (train, validation) splits as arrays of indices."
-msgstr ""
+msgstr "它是一个"
+"产生由索引构成的数组的 (train, validation) splits 的 iterable 对象，"
 
 #: of optuna.integration.OptunaSearchCV:19
 msgid ""
 "For integer, if :obj:`estimator` is a classifier and :obj:`y` is either "
 "binary or multiclass, ``sklearn.model_selection.StratifiedKFold`` is "
 "used. otherwise, ``sklearn.model_selection.KFold`` is used."
-msgstr ""
+msgstr "对于整数而言，如果 if :obj:`estimator` 是一个 classifier 而 :obj:`y` 是 binary 或 multiclass 的话，"
+"那么 ``sklearn.model_selection.StratifiedKFold`` 会被采用。否则 ``sklearn.model_selection.KFold`` 会被采用。" 
+
 
 #: of optuna.integration.OptunaSearchCV:23
 msgid ""
 "If :obj:`True`, pruning is performed in the case where the underlying "
 "estimator supports ``partial_fit``."
-msgstr ""
+msgstr "如果是 :obj:`True` 的话，当 estimator 支持 ``partial_fit`` 时，pruning 会被执行。"
 
 #: of optuna.integration.OptunaSearchCV:25
 msgid ""
@@ -842,17 +975,18 @@ msgid ""
 "the error is raised. If numeric, ``sklearn.exceptions.FitFailedWarning`` "
 "is raised. This does not affect the refit step, which will always raise "
 "the error."
-msgstr ""
+msgstr "拟合过程中发生错误时用于指定 score 的值。如果设置成 'raise' 的话，就会抛出错误了。如果设置成数值的话，"
+"则 ``sklearn.exceptions.FitFailedWarning`` 会被抛出。这并不会影响 refit 步骤，因为后者总是抛出错误。"
 
 #: of optuna.integration.OptunaSearchCV:29
 msgid ""
 "Maximum number of epochs. This is only used if the underlying estimator "
 "supports ``partial_fit``."
-msgstr ""
+msgstr "epoch 数目的最大值。它只在 estimator 支持 ``partial_fit`` 时会被使用。"
 
 #: of optuna.integration.OptunaSearchCV:31
 msgid "Number of parallel jobs. :obj:`-1` means using all processors."
-msgstr ""
+msgstr "并行运行 job 的数量。如果设置成 :obj:`-1` 的话，并行 job 的数量将等于处理器核心数。"
 
 #: of optuna.integration.OptunaSearchCV:32
 msgid ""
@@ -860,7 +994,8 @@ msgid ""
 " trials. If :obj:`timeout` is also set to :obj:`None`, the study "
 "continues to create trials until it receives a termination signal such as"
 " Ctrl+C or SIGTERM. This trades off runtime vs quality of the solution."
-msgstr ""
+msgstr "trial 数量。如果设置成 :obj:`None` 的话，trial 数目无上限。此时如果 :obj:`timeout` 也是 :obj:`None` 的话，"
+"study 会一直创建新 trial，直到接收到一个诸如 Ctrl+C 或 SIGTERM 的终止信号。这是运行时和求解质量之间的权衡。"
 
 #: of optuna.integration.OptunaSearchCV:37
 msgid ""
@@ -868,14 +1003,16 @@ msgid ""
 " by the random number generator. If ``numpy.random.RandomState`` object, "
 "this is the random number generator. If :obj:`None`, the global random "
 "state from ``numpy.random`` is used."
-msgstr ""
+msgstr "伪随机数生成器的种子。如果是整数的话，它就是被随机数生成器采用的种子。如果是 ``numpy.random.RandomState`` 对象的话，"
+"它就是随机数生成器本身。如果是 :obj:`None` 的话，则自 ``numpy.random`` 中来的全局随机状态会被采用。"
 
 #: of optuna.integration.OptunaSearchCV:42
 msgid ""
 "If :obj:`True`, refit the estimator with the best found hyperparameters. "
 "The refitted estimator is made available at the ``best_estimator_`` "
 "attribute and permits using ``predict`` directly."
-msgstr ""
+msgstr "如果设置成 :obj:`True` 的话，将用找到的最佳超参数重新拟合一次 estimator。"
+"该 estimator 可以通过 ``best_estimator_`` 属性直接获得，并且可以通过 ``predict`` 直接使用。"
 
 #: of optuna.integration.OptunaSearchCV:46
 msgid ""
@@ -885,38 +1022,39 @@ msgid ""
 " scores can be computationally expensive and is not strictly required to "
 "select the hyperparameters that yield the best generalization "
 "performance."
-msgstr ""
+msgstr "如果设置成 :obj:`True` 的话，训练的 score 会被包含在内。计算训练 score 是用于搞清楚超参数设定如何影响 overfitting/underfitting  之间的平衡。"
+"不过，计算训练 score 可能消耗大量计算资源，而且严格来说，它对找出能产生最佳泛化效果的超参数而言不是必要的。"
 
 #: of optuna.integration.OptunaSearchCV:53
 msgid ""
 "String or callable to evaluate the predictions on the validation data. If"
 " :obj:`None`, ``score`` on the estimator is used."
-msgstr ""
+msgstr "用于评估验证集上预测结果的字符串或者 callable 对象。如果设置成 :obj:`None` 的话，estimator 上的 ``score`` 会被采用。"
 
 #: of optuna.integration.OptunaSearchCV:55
 msgid ""
 "Study corresponds to the optimization task. If :obj:`None`, a new study "
 "is created."
-msgstr ""
+msgstr "优化任务对应的 study，如果设置成 :obj:`None` 的话，就会创建一个新的 study。"
 
 #: of optuna.integration.OptunaSearchCV:57
 msgid ""
 "Proportion of samples that are used during hyperparameter search.  - If "
 "int, then draw ``subsample`` samples. - If float, then draw ``subsample``"
 " * ``X.shape[0]`` samples."
-msgstr ""
+msgstr "在超参数搜索过程中使用的样本比例，- 如果是整数的话，那么使用  ``subsample`` 个样本，- 如果是浮点数的话，就使用 ``subsample`` * ``X.shape[0]`` 个样本。"
 
 #: of optuna.integration.OptunaSearchCV:57
 msgid "Proportion of samples that are used during hyperparameter search."
-msgstr ""
+msgstr "在超参数搜索过程中使用的样本比例"
 
 #: of optuna.integration.OptunaSearchCV:59
 msgid "If int, then draw ``subsample`` samples."
-msgstr ""
+msgstr "如果是整数的话，那么使用  ``subsample`` 个样本。"
 
 #: of optuna.integration.OptunaSearchCV:60
 msgid "If float, then draw ``subsample`` * ``X.shape[0]`` samples."
-msgstr ""
+msgstr "如果是浮点数的话，就使用 ``subsample`` * ``X.shape[0]`` 个样本。"
 
 #: of optuna.integration.OptunaSearchCV:61
 msgid ""
@@ -925,31 +1063,33 @@ msgid ""
 ":obj:`n_trials` is also set to :obj:`None`, the study continues to create"
 " trials until it receives a termination signal such as Ctrl+C or SIGTERM."
 " This trades off runtime vs quality of the solution."
-msgstr ""
+msgstr "按秒计的用于寻找合适模型的时间上限。如果设置成 :obj:`None` 的话，study 将在没有时间限制的情况运行。"
+"如果此时 :obj:`n_trials` 也是 :obj:`None` 的话，该 "
+"study 会一直创建新 trial，直到接收到一个诸如 Ctrl+C 或 SIGTERM 的终止信号。这是运行时和求解质量之间的权衡。"
 
 #: of optuna.integration.OptunaSearchCV:67
 msgid "Verbosity level. The higher, the more messages."
-msgstr ""
+msgstr "冗余级别。设的越高，输出的信息越多。"
 
 #: of optuna.integration.OptunaSearchCV:71
 msgid ""
 "Estimator that was chosen by the search. This is present only if "
 "``refit`` is set to :obj:`True`."
-msgstr ""
+msgstr "通过搜多确定的 estimator。它只有在 ``refit`` 设置成 :obj:`True` 的情况下可用"
 
 #: of optuna.integration.OptunaSearchCV:76
 msgid "Number of cross-validation splits."
-msgstr ""
+msgstr "交叉验证划分数"
 
 #: of optuna.integration.OptunaSearchCV:80
 msgid ""
 "Time for refitting the best estimator. This is present only if ``refit`` "
 "is set to :obj:`True`."
-msgstr ""
+msgstr "用于再拟合最佳 estimator 的时间。它只有在 ``refit`` 设置成 :obj:`True` 的情况下可用"
 
 #: of optuna.integration.OptunaSearchCV:85
 msgid "Indices of samples that are used during hyperparameter search."
-msgstr ""
+msgstr "超参数搜索过程中使用过的样本索引。"
 
 #: of optuna.integration.OptunaSearchCV:89
 msgid "Scorer function."
@@ -965,19 +1105,19 @@ msgstr ""
 
 #: of optuna.integration.OptunaSearchCV.best_index_:1
 msgid "Index which corresponds to the best candidate parameter setting."
-msgstr ""
+msgstr "对应于最佳参数设置的索引"
 
 #: of optuna.integration.OptunaSearchCV.best_params_:1
 msgid "Parameters of the best trial in the :class:`~optuna.study.Study`."
-msgstr ""
+msgstr ":class:`~optuna.study.Study` 中最佳 trial 的参数。"
 
 #: of optuna.integration.OptunaSearchCV.best_score_:1
 msgid "Mean cross-validated score of the best estimator."
-msgstr ""
+msgstr "最佳 estimator 的平均交叉验证 score。"
 
 #: of optuna.integration.OptunaSearchCV.best_trial_:1
 msgid "Best trial in the :class:`~optuna.study.Study`."
-msgstr ""
+msgstr ":class:`~optuna.study.Study` 中的最佳 trial。"
 
 #: of optuna.integration.OptunaSearchCV.classes_:1
 msgid "Class labels."
@@ -985,36 +1125,36 @@ msgstr ""
 
 #: of optuna.integration.OptunaSearchCV.decision_function:1
 msgid "Call ``decision_function`` on the best estimator."
-msgstr ""
+msgstr "在最佳 estimator 上调用 ``decision_function`` 。"
 
 #: of optuna.integration.OptunaSearchCV.decision_function:3
 msgid ""
 "This is available only if the underlying estimator supports "
 "``decision_function`` and ``refit`` is set to :obj:`True`."
-msgstr ""
+msgstr "它只有在对应的 estimator支持  ``decision_function`` 和 ``refit`` 设置成 :obj:`True` 的情况下可用。""
 
 #: of optuna.integration.OptunaSearchCV.fit:1
 msgid "Run fit with all sets of parameters."
-msgstr ""
+msgstr "用所有参数来跑拟合。"
 
 #: of optuna.integration.OptunaSearchCV.fit:3
 msgid "Training data."
-msgstr ""
+msgstr "训练数据"
 
 #: of optuna.integration.OptunaSearchCV.fit:4
 #: optuna.integration.OptunaSearchCV.score:4
 msgid "Target variable."
-msgstr ""
+msgstr "目标变量。"
 
 #: of optuna.integration.OptunaSearchCV.fit:5
 msgid ""
 "Group labels for the samples used while splitting the dataset into "
 "train/validation set."
-msgstr ""
+msgstr "将数据集划分成训练/测试集时给样本打的标签。"
 
 #: of optuna.integration.OptunaSearchCV.fit:7
 msgid "Parameters passed to ``fit`` on the estimator."
-msgstr ""
+msgstr "传递给 estimator 上的 ``fit`` 的参数。"
 
 #: of optuna.integration.OptunaSearchCV.fit
 #: optuna.integration.OptunaSearchCV.score
@@ -1032,51 +1172,51 @@ msgstr ""
 
 #: of optuna.integration.OptunaSearchCV.inverse_transform:1
 msgid "Call ``inverse_transform`` on the best estimator."
-msgstr ""
+msgstr "调用最佳 estimator 的 ``inverse_transform`` 。"
 
 #: of optuna.integration.OptunaSearchCV.inverse_transform:3
 msgid ""
 "This is available only if the underlying estimator supports "
 "``inverse_transform`` and ``refit`` is set to :obj:`True`."
-msgstr ""
+msgstr "它只有在对应的 estimator支持  ``inverse_transform`` 和 ``refit`` 设置成 :obj:`True` 的情况下可用。"
 
 #: of optuna.integration.OptunaSearchCV.n_trials_:1
 msgid "Actual number of trials."
-msgstr ""
+msgstr "trial 实际数量。"
 
 #: of optuna.integration.OptunaSearchCV.predict:1
 msgid "Call ``predict`` on the best estimator."
-msgstr ""
+msgstr "调用最佳 estimator 的 ``predict`` 。"
 
 #: of optuna.integration.OptunaSearchCV.predict:3
 msgid ""
 "This is available only if the underlying estimator supports ``predict`` "
 "and ``refit`` is set to :obj:`True`."
-msgstr ""
+msgstr "它只有在对应的 estimator支持  ``predict`` 和 ``refit`` 设置成 :obj:`True` 的情况下可用。"
 
 #: of optuna.integration.OptunaSearchCV.predict_log_proba:1
 msgid "Call ``predict_log_proba`` on the best estimator."
-msgstr ""
+msgstr "调用最佳 predict_log_proba 的 ``predict`` 。"
 
 #: of optuna.integration.OptunaSearchCV.predict_log_proba:3
 msgid ""
 "This is available only if the underlying estimator supports "
 "``predict_log_proba`` and ``refit`` is set to :obj:`True`."
-msgstr ""
+msgstr "它只有在对应的 estimator支持  ``predict_log_proba`` 和 ``refit`` 设置成 :obj:`True` 的情况下可用。"
 
 #: of optuna.integration.OptunaSearchCV.predict_proba:1
 msgid "Call ``predict_proba`` on the best estimator."
-msgstr ""
+msgstr "调用最佳 estimator 的 ``predict_proba`` 。"
 
 #: of optuna.integration.OptunaSearchCV.predict_proba:3
 msgid ""
 "This is available only if the underlying estimator supports "
 "``predict_proba`` and ``refit`` is set to :obj:`True`."
-msgstr ""
+msgstr "它只有在对应的 estimator支持  ``predict_proba`` 和 ``refit`` 设置成 :obj:`True` 的情况下可用。"
 
 #: of optuna.integration.OptunaSearchCV.score:1
 msgid "Return the score on the given data."
-msgstr ""
+msgstr "返回给定数据的 score。"
 
 #: of optuna.integration.OptunaSearchCV.score:3
 msgid "Data."
@@ -1088,50 +1228,50 @@ msgstr ""
 
 #: of optuna.integration.OptunaSearchCV.score_samples:1
 msgid "Call ``score_samples`` on the best estimator."
-msgstr ""
+msgstr "调用最佳 estimator 的 ``score_samples`` 。"
 
 #: of optuna.integration.OptunaSearchCV.score_samples:3
 msgid ""
 "This is available only if the underlying estimator supports "
 "``score_samples`` and ``refit`` is set to :obj:`True`."
-msgstr ""
+msgstr "它只有在对应的 estimator支持  ``score_samples`` 和 ``refit`` 设置成 :obj:`True` 的情况下可用。"
 
 #: of optuna.integration.OptunaSearchCV.set_user_attr:1
 msgid "Call ``set_user_attr`` on the :class:`~optuna.study.Study`."
-msgstr ""
+msgstr "调用 :class:`~optuna.study.Study` 的 ``set_user_attr`` 。"
 
 #: of optuna.integration.OptunaSearchCV.transform:1
 msgid "Call ``transform`` on the best estimator."
-msgstr ""
+msgstr "调用最佳 estimator 的 ``transform`` 。"
 
 #: of optuna.integration.OptunaSearchCV.transform:3
 msgid ""
 "This is available only if the underlying estimator supports ``transform``"
 " and ``refit`` is set to :obj:`True`."
-msgstr ""
+msgstr "它只有在对应的 estimator支持  ``transform`` 和 ``refit`` 设置成 :obj:`True` 的情况下可用。"
 
 #: of optuna.integration.OptunaSearchCV.trials_:1
 msgid "All trials in the :class:`~optuna.study.Study`."
-msgstr ""
+msgstr ":class:`~optuna.study.Study` 中的所有 trial。"
 
 #: of optuna.integration.OptunaSearchCV.trials_dataframe:1
 msgid "Call ``trials_dataframe`` on the :class:`~optuna.study.Study`."
-msgstr ""
+msgstr "调用 :class:`~optuna.study.Study` 的 ``trials_dataframe`` 。"
 
 #: of optuna.integration.OptunaSearchCV.user_attrs_:1
 msgid "User attributes in the :class:`~optuna.study.Study`."
-msgstr ""
+msgstr ":class:`~optuna.study.Study` 中的用户属性。"
 
 #: of optuna.integration.AllenNLPExecutor:1
 msgid "AllenNLP extension to use optuna with Jsonnet config file."
-msgstr ""
+msgstr "为了让 Jsonnet 配置文件在 Optuna 中可用的 AllenNLP 扩展。"
 
 #: of optuna.integration.AllenNLPExecutor:3
 msgid ""
 "This feature is experimental since AllenNLP major release will come soon."
 " The interface may change without prior notice to correspond to the "
 "update."
-msgstr ""
+msgstr "这是个试验性的特性，因为 AllenNLP 的下一个主要版本将发行。而该接口可能在没有提前告知更新的情况下改变。"
 
 #: of optuna.integration.AllenNLPExecutor:6
 msgid ""
@@ -1140,7 +1280,11 @@ msgid ""
 "master/examples/allennlp/allennlp_jsonnet.py>`_ and `config file "
 "<https://github.com/optuna/optuna/blob/master/ "
 "examples/allennlp/classifier.jsonnet>`_."
-msgstr ""
+msgstr "参见 `objective function "
+"<https://github.com/optuna/optuna/blob/ "
+"master/examples/allennlp/allennlp_jsonnet.py>`_ 和 `config file "
+"<https://github.com/optuna/optuna/blob/master/ "
+"examples/allennlp/classifier.jsonnet>`_ 的例子。"
 
 #: of optuna.integration.AllenNLPExecutor:13
 msgid ""
@@ -1148,46 +1292,50 @@ msgid ""
 "``std.extVar``. Please refer to `the config example "
 "<https://github.com/allenai/allentune/blob/ "
 "master/examples/classifier.jsonnet>`_."
-msgstr ""
+msgstr "AllenNLP 的配置文件。其中超参数应当在外面套一层 ``std.extVar`` 。参见 `the config example "
+"<https://github.com/allenai/allentune/blob/ "
+"master/examples/classifier.jsonnet>`_."
+
 
 #: of optuna.integration.AllenNLPExecutor:17
 msgid "A path which model weights and logs are saved."
-msgstr ""
+msgstr "用于存储模型权重和日志的路径。"
 
 #: of optuna.integration.AllenNLPExecutor:18
 msgid "An evaluation metric for the result of ``objective``."
-msgstr ""
+msgstr "用于评估 ``objective`` 结果的度量。"
 
 #: of optuna.integration.AllenNLPExecutor:19
 msgid ""
 "Additional packages to include. For more information, please see "
 "`AllenNLP documentation "
 "<https://docs.allennlp.org/master/api/commands/train/>`_."
-msgstr ""
+msgstr "要包含的额外包，更多信息参见 `AllenNLP documentation "
+"<https://docs.allennlp.org/master/api/commands/train/>`_."
 
 #: of optuna.integration.AllenNLPExecutor.run:1
 msgid "Train a model using AllenNLP."
-msgstr ""
+msgstr "用 AllenNLP 来训练一个模型。"
 
 #: of optuna.integration.allennlp.dump_best_config:1
 msgid ""
 "Save JSON config file after updating with parameters from the best trial "
 "in the study."
-msgstr ""
+msgstr "在 study 中的最佳参数更新后存储 JSON 配置文件。"
 
 #: of optuna.integration.allennlp.dump_best_config:3
 msgid ""
 "Input Jsonnet config file used with "
 ":class:`~optuna.integration.AllenNLPExecutor`."
-msgstr ""
+msgstr "被 :class:`~optuna.integration.AllenNLPExecutor` 使用的输入 Jsonnet 配置文件。"
 
 #: of optuna.integration.allennlp.dump_best_config:5
 msgid "Output JSON config file."
-msgstr ""
+msgstr "输出 JSON 配置文件。"
 
 #: of optuna.integration.allennlp.dump_best_config:6
 msgid ""
 "Instance of :class:`~optuna.study.Study`. Note that "
 ":func:`~optuna.study.Study.optimize` must have been called."
-msgstr ""
+msgstr ":class:`~optuna.study.Study` 实例。注意它必须在 :func:`~optuna.study.Study.optimize` 已经被调用的情况下使用。"
 
