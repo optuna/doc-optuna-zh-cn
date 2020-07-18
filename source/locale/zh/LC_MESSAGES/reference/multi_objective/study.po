@@ -247,6 +247,8 @@ msgstr "数据库 URL。如果该参数被设置成 None 的话，Optuna 将采�
 "https://docs.sqlalchemy.org/en/latest/core/engines.html#database-urls  .."
 " _SQLAlchemy Engine: "
 "https://docs.sqlalchemy.org/en/latest/core/engines.html"
+# TODO: Warning: here the note is not rendered properly.
+
 
 #: of optuna.multi_objective.study.create_study:7
 msgid ""
