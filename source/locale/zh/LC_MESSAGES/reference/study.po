@@ -390,7 +390,7 @@ msgid ""
 " the study is skipped, and the existing one is returned."
 msgstr "用于处理 study 名冲突情况下行为的选项。当 ``storage`` 中已经存在同名 ``study_name`` 时，"
 "如果此时 ``load_if_exists`` 是设置成 :obj:`False` 的话，:class:`~optuna.exceptions.DuplicatedStudyError` 异常会被抛出。"
-"否则，创建 study 的过程将会被调过，已经存在的那个 study 会被返回。"
+"否则，创建 study 的过程将会被跳过，已经存在的那个 study 会被返回。"
 
 
 #: of optuna.study.create_study:32
