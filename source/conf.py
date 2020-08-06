@@ -92,7 +92,9 @@ if not on_rtd:
 # further.  For a list of options available for each theme, see the
 # documentation.
 #
-# html_theme_options = {}
+html_theme_options = {
+    'analytics_id': os.environ.get('OPTUNADOC_G_TRACK_ID', None)
+}
 
 html_favicon = '../image/favicon.ico'
 

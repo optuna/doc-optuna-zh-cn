@@ -1,0 +1,7 @@
+name: doc-optuna
+channels:
+  - defaults
+dependencies:
+  - python=3.7
+  - sphinx
+prefix: /Users/huzi/miniconda3/envs/doc-optuna
