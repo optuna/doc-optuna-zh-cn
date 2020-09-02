@@ -21,7 +21,7 @@ joblib==0.16.0
 Mako==1.1.3
 MarkupSafe==1.1.1
 numpy==1.19.1
--e git+git@github.com:optuna/optuna.git@6cd5a46603d347299b56f792f88d9f93b4f95361#egg=optuna
+optuna==1.5.0
 packaging==20.4
 pbr==5.4.5
 prettytable==0.7.2
