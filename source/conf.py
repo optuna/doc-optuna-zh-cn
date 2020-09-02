@@ -70,7 +70,7 @@ master_doc = 'index'
 #
 # This is also used if you do content translation via gettext catalogs.
 # Usually you set "language" from the command line for these cases.
-language = None
+language = 'zh_CN'
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
@@ -143,7 +143,8 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'Optuna.tex', 'Optuna Documentation', 'Optuna Contributors.', 'manual'),
+    (master_doc, 'Optuna.tex', 'Optuna Documentation',
+     'Optuna Contributors.', 'manual'),
 ]
 
 # -- Options for manual page output ------------------------------------------
