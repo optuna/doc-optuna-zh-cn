@@ -22,7 +22,7 @@ def objective(trial):
 
         trial.report(y, step=step)
         if trial.should_prune():
-            raise optuna.TrialPruned()
+            raise optuna.exceptions.TrialPruned()
 
         gy = df(x)
         x -= gy * lr

@@ -7,6 +7,3 @@ Hyperparameter Importance
 
 .. autoclass:: FanovaImportanceEvaluator
     :members:
-
-.. autoclass:: MeanDecreaseImpurityImportanceEvaluator
-    :members:

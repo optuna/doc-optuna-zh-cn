@@ -9,4 +9,3 @@ Multi-objective
     samplers
     study
     trial
-    visualization

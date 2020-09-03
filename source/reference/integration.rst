@@ -28,16 +28,6 @@ Integration
 
 .. autofunction:: optuna.integration.lightgbm.train
 
-.. autoclass:: optuna.integration.lightgbm.LightGBMTuner
-    :members:
-    :inherited-members:
-    :exclude-members: sample_train_set
-
-.. autoclass:: optuna.integration.lightgbm.LightGBMTunerCV
-    :members:
-    :inherited-members:
-    :exclude-members: sample_train_set
-
 .. autoclass:: MLflowCallback
     :members:
 

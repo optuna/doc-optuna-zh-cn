@@ -92,9 +92,7 @@ if not on_rtd:
 # further.  For a list of options available for each theme, see the
 # documentation.
 #
-html_theme_options = {
-    'analytics_id': os.environ.get('OPTUNADOC_G_TRACK_ID', None)
-}
+# html_theme_options = {}
 
 html_favicon = '../image/favicon.ico'
 
@@ -143,8 +141,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'Optuna.tex', 'Optuna Documentation',
-     'Optuna Contributors.', 'manual'),
+    (master_doc, 'Optuna.tex', 'Optuna Documentation', 'Optuna Contributors.', 'manual'),
 ]
 
 # -- Options for manual page output ------------------------------------------
@@ -166,8 +163,6 @@ texinfo_documents = [
 intersphinx_mapping = {'python': ('https://docs.python.org/3', None)}
 
 # -- Extension configuration -------------------------------------------------
-
-# -- translation -------------------------------------------------
 
 locale_dirs = ['locale/']   # path is example but recommended.
 gettext_compact = False     # optional.
