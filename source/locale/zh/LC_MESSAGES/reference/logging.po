@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 1.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-06-17 19:47-0400\n"
+"POT-Creation-Date: 2020-09-02 21:12-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -26,7 +26,7 @@ msgid "Return the current level for the Optuna's root logger."
 msgstr "返回目前 Optuna 的 root logger 的 logging 层级。"
 
 #: of optuna.logging.get_verbosity
-msgid "Returns"
+msgid "返回"
 msgstr ""
 
 #: of optuna.logging.get_verbosity:3 optuna.logging.set_verbosity:3
@@ -62,7 +62,7 @@ msgid "Set the level for the Optuna's root logger."
 msgstr "设置 Optuna 的 root logger 的 logging 层级。"
 
 #: of optuna.logging.set_verbosity
-msgid "Parameters"
+msgid "参数"
 msgstr ""
 
 #: of optuna.logging.disable_default_handler:1
@@ -71,7 +71,7 @@ msgstr "禁用 Optuna 的 root logger 的默认句柄。"
 
 #: of optuna.logging.disable_default_handler:4
 #: optuna.logging.enable_propagation:7
-msgid "Example"
+msgid "示例"
 msgstr ""
 
 #: of optuna.logging.disable_default_handler:5
@@ -111,4 +111,13 @@ msgid ""
 "Propagate all log output to the root logger in order to save them to the "
 "file."
 msgstr "将所有的log 输出传递到 root logger 以将它们存储到文件中。"
+
+#~ msgid "Returns"
+#~ msgstr ""
+
+#~ msgid "Parameters"
+#~ msgstr ""
+
+#~ msgid "Example"
+#~ msgstr ""
 

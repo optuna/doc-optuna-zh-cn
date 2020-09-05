@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 1.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-06-17 19:47-0400\n"
+"POT-Creation-Date: 2020-09-02 21:12-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -32,7 +32,9 @@ msgid ""
 "This object provides interfaces to run a new "
 ":class:`~optuna.multi_objective.trial.Trial`, access trials' history, "
 "set/get user-defined attributes of the study itself."
-msgstr "该对象提供了一系列接口，可用于运行新的 :class:`~optuna.multi_objective.trial.Trial` 、获取 trial 历史记录和设置/获取用户定义属性。"
+msgstr ""
+"该对象提供了一系列接口，可用于运行新的 :class:`~optuna.multi_objective.trial.Trial` 、获取 "
+"trial 历史记录和设置/获取用户定义属性。"
 
 #: of optuna.multi_objective.study.MultiObjectiveStudy:7
 msgid ""
@@ -40,18 +42,20 @@ msgid ""
 "create and load a study, please refer to the documentation of "
 ":func:`~optuna.multi_objective.study.create_study` and "
 ":func:`~optuna.multi_objective.study.load_study` respectively."
-msgstr "注意，我们并不推荐直接使用该构造函数。要创建或者加载一个 study 的话，请参考 "
+msgstr ""
+"注意，我们并不推荐直接使用该构造函数。要创建或者加载一个 study 的话，请参考 "
 ":func:`~optuna.multi_objective.study.create_study` 和 "
 ":func:`~optuna.multi_objective.study.load_study` 。"
 
-#: of optuna.multi_objective.study.MultiObjectiveStudy:13
+#: of optuna.multi_objective.study.MultiObjectiveStudy:14
 #: optuna.multi_objective.study.create_study:34
 #: optuna.multi_objective.study.load_study:14
 msgid ""
 "Added in v1.4.0 as an experimental feature. The interface may change in "
 "newer versions without prior notice. See "
 "https://github.com/optuna/optuna/releases/tag/v1.4.0."
-msgstr "在 v1.4.0 中作为试验性特性引入，在未来版本中，该接口可能在没有预先告知的情况下被改变。参考 "
+msgstr ""
+"在 v1.4.0 中作为试验性特性引入，在未来版本中，该接口可能在没有预先告知的情况下被改变。参考 "
 "https://github.com/optuna/optuna/releases/tag/v1.4.0."
 
 #: of optuna.multi_objective.study.MultiObjectiveStudy.directions:1
@@ -67,7 +71,7 @@ msgstr "返回优化方向列表。"
 #: optuna.multi_objective.study.MultiObjectiveStudy.user_attrs
 #: optuna.multi_objective.study.create_study
 #: optuna.multi_objective.study.load_study
-msgid "Returns"
+msgid "返回"
 msgstr ""
 
 #: of optuna.multi_objective.study.MultiObjectiveStudy.directions:3
@@ -95,7 +99,7 @@ msgstr "更多细节请参考 :func:`optuna.study.Study.enqueue_trial` 的文档
 #: optuna.multi_objective.study.MultiObjectiveStudy.set_user_attr
 #: optuna.multi_objective.study.create_study
 #: optuna.multi_objective.study.load_study
-msgid "Parameters"
+msgid "参数"
 msgstr ""
 
 #: of optuna.multi_objective.study.MultiObjectiveStudy.enqueue_trial:9
@@ -114,8 +118,11 @@ msgid ""
 "dominate the trial. It's called that a trial ``t0`` dominates another "
 "trial ``t1`` if ``all(v0 <= v1) for v0, v1 in zip(t0.values, t1.values)``"
 " and ``any(v0 < v1) for v0, v1 in zip(t0.values, t1.values)`` are held."
-msgstr "如果没有其他 trial 能决定整个 trial 的话，该 trial 属于对应的帕累托前沿面。我们称一个 trial ``t0`` 决定了另一个 trial  ``t1`` if `` "
-"如果 ``all(v0 <= v1) for v0, v1 in zip(t0.values, t1.values)`` 而且 ``any(v0 < v1) for v0, v1 in zip(t0.values, t1.values)`` 成立的话。"
+msgstr ""
+"如果没有其他 trial 能决定整个 trial 的话，该 trial 属于对应的帕累托前沿面。我们称一个 trial ``t0`` 决定了另一个"
+" trial  ``t1`` if `` 如果 ``all(v0 <= v1) for v0, v1 in zip(t0.values, "
+"t1.values)`` 而且 ``any(v0 < v1) for v0, v1 in zip(t0.values, t1.values)`` "
+"成立的话。"
 
 #: of
 #: optuna.multi_objective.study.MultiObjectiveStudy.get_pareto_front_trials:8
@@ -124,7 +131,9 @@ msgstr "如果没有其他 trial 能决定整个 trial 的话，该 trial 属于
 msgid ""
 "A list of "
 ":class:`~optuna.multi_objective.trial.FrozenMultiObjectiveTrial` objects."
-msgstr "一个由 :class:`~optuna.multi_objective.trial.FrozenMultiObjectiveTrial` 对象构成的列表。"
+msgstr ""
+"一个由 :class:`~optuna.multi_objective.trial.FrozenMultiObjectiveTrial` "
+"对象构成的列表。"
 
 #: of optuna.multi_objective.study.MultiObjectiveStudy.get_trials:1
 #: optuna.multi_objective.study.MultiObjectiveStudy.trials:1
@@ -141,7 +150,10 @@ msgid ""
 "For library users, it's recommended to use more handy "
 ":attr:`~optuna.multi_objective.study.MultiObjectiveStudy.trials` property"
 " to get the trials instead."
-msgstr "对库用户来说，我们推荐使用更上手的 :attr:`~optuna.multi_objective.study.MultiObjectiveStudy.trials` 属性来获取 trial。"
+msgstr ""
+"对库用户来说，我们推荐使用更上手的 "
+":attr:`~optuna.multi_objective.study.MultiObjectiveStudy.trials` 属性来获取 "
+"trial。"
 
 #: of optuna.multi_objective.study.MultiObjectiveStudy.get_trials:9
 msgid ""
@@ -149,8 +161,9 @@ msgid ""
 "that if you set the flag to :obj:`False`, you shouldn't mutate any fields"
 " of the returned trial. Otherwise the internal state of the study may "
 "corrupt and unexpected behavior may happen."
-msgstr "用于控制是否对 trial 应用 ``copy.deepcopy()`` 的选项。注意，如果你将该选项设置成 :obj:`False` ，  那就不要修改任何返回 trial 中的东西。"
-"否则 study 的内部状态可能会改变并且发生无法预知的行为。"
+msgstr ""
+"用于控制是否对 trial 应用 ``copy.deepcopy()`` 的选项。注意，如果你将该选项设置成 :obj:`False` ，  "
+"那就不要修改任何返回 trial 中的东西。否则 study 的内部状态可能会改变并且发生无法预知的行为。"
 
 #: of optuna.multi_objective.study.MultiObjectiveStudy.n_objectives:1
 msgid "Return the number of objectives."
@@ -239,34 +252,16 @@ msgid ""
 "https://docs.sqlalchemy.org/en/latest/core/engines.html#database-urls  .."
 " _SQLAlchemy Engine: "
 "https://docs.sqlalchemy.org/en/latest/core/engines.html"
-
-msgstr "数据库 URL。如果该参数被设置成 None 的话，Optuna 将采用内存存储，而  :class:`~optuna.study.Study` 也就无法被持久化。  .. note::"
-"     在传入一个数据库 URL 后，Optuna 会在内部使用 `SQLAlchemy`_ 来处理数据库。更多细节请参考  `SQLAlchemy's document`_ 。"
-"如果想指定非默认的 `SQLAlchemy Engine`_ 的话，你可以不用URL，而是用你所需的选项来实例化一个 :class:`~optuna.storages.RDBStorage` 并将其传递给 ``storage`` 参数。  .. _SQLAlchemy: "
-"https://www.sqlalchemy.org/  .. _SQLAlchemy's document:      "
+msgstr ""
+"数据库 URL。如果该参数被设置成 None 的话，Optuna 将采用内存存储，而  :class:`~optuna.study.Study` "
+"也就无法被持久化。  .. note::     在传入一个数据库 URL 后，Optuna 会在内部使用 `SQLAlchemy`_ "
+"来处理数据库。更多细节请参考  `SQLAlchemy's document`_ 。如果想指定非默认的 `SQLAlchemy Engine`_ "
+"的话，你可以不用URL，而是用你所需的选项来实例化一个 :class:`~optuna.storages.RDBStorage` 并将其传递给 "
+"``storage`` 参数。  .. _SQLAlchemy: https://www.sqlalchemy.org/  .. "
+"_SQLAlchemy's document:      "
 "https://docs.sqlalchemy.org/en/latest/core/engines.html#database-urls  .."
 " _SQLAlchemy Engine: "
 "https://docs.sqlalchemy.org/en/latest/core/engines.html"
-# TODO: Warning: here the note is not rendered properly.
-
-
-#: of optuna.multi_objective.study.create_study:7
-msgid ""
-"Database URL. If this argument is set to None, in-memory storage is used,"
-" and the :class:`~optuna.study.Study` will not be persistent."
-msgstr "数据库 URL。如果该参数被设置成 None 的话，Optuna 将采用内存存储，而  :class:`~optuna.study.Study` 也就无法被持久化。"
-
-#: of optuna.multi_objective.study.create_study:11
-msgid ""
-"When a database URL is passed, Optuna internally uses `SQLAlchemy`_ to "
-"handle the database. Please refer to `SQLAlchemy's document`_ for further"
-" details. If you want to specify non-default options to `SQLAlchemy "
-"Engine`_, you can instantiate :class:`~optuna.storages.RDBStorage` with "
-"your desired options and pass it to the ``storage`` argument instead of a"
-" URL."
-msgstr ""
-"     在传入一个数据库 URL 后，Optuna 会在内部使用 `SQLAlchemy`_ 来处理数据库。更多细节请参考  `SQLAlchemy's document`_ 。"
-"如果想指定非默认的 `SQLAlchemy Engine`_ 的话，你可以不用URL，而是用你所需的选项来实例化一个 :class:`~optuna.storages.RDBStorage` 并将其传递给 ``storage`` 参数。"
 
 #: of optuna.multi_objective.study.create_study:21
 msgid ""
@@ -274,9 +269,10 @@ msgid ""
 "suggestion. If :obj:`None` is specified, "
 ":class:`~optuna.multi_objective.samplers.NSGAIIMultiObjectiveSampler` is "
 "used as the default. See also :class:`~optuna.multi_objective.samplers`."
-msgstr "一个实现了幕后 suggestion value 算法的 sampler 对象。如果设置成 :obj:`None` 的话， "
-"Optuna 将使用 :class:`~optuna.multi_objective.samplers.NSGAIIMultiObjectiveSampler` 作为默认值。参见 :class:`~optuna.multi_objective.samplers` 。"
-
+msgstr ""
+"一个实现了幕后 suggestion value 算法的 sampler 对象。如果设置成 :obj:`None` 的话， Optuna 将使用 "
+":class:`~optuna.multi_objective.samplers.NSGAIIMultiObjectiveSampler` "
+"作为默认值。参见 :class:`~optuna.multi_objective.samplers` 。"
 
 #: of optuna.multi_objective.study.create_study:25
 msgid ""
@@ -285,9 +281,11 @@ msgid ""
 "``storage``, a :class:`~optuna.exceptions.DuplicatedStudyError` is raised"
 " if ``load_if_exists`` is set to :obj:`False`. Otherwise, the creation of"
 " the study is skipped, and the existing one is returned."
-msgstr "用于控制处理 study 名冲突情况下 Optuna 行为的选项。如果 ``load_if_exists`` 是 :obj:`False` 且一个名为  ``study_name``  的 study 已经在 ``storage`` 中，Optuna 将抛出一个 "
-":class:`~optuna.exceptions.DuplicatedStudyError` 错误。"
-"否则，Optuna 将跳过创建 study 的过程，直接返回现存的那个 study。"
+msgstr ""
+"用于控制处理 study 名冲突情况下 Optuna 行为的选项。如果 ``load_if_exists`` 是 :obj:`False` "
+"且一个名为  ``study_name``  的 study 已经在 ``storage`` 中，Optuna 将抛出一个 "
+":class:`~optuna.exceptions.DuplicatedStudyError` 错误。否则，Optuna 将跳过创建 study"
+" 的过程，直接返回现存的那个 study。"
 
 #: of optuna.multi_objective.study.create_study:31
 #: optuna.multi_objective.study.load_study:11
@@ -309,13 +307,66 @@ msgid ""
 "Database URL such as ``sqlite:///example.db``. Please see also the "
 "documentation of :func:`~optuna.multi_objective.study.create_study` for "
 "further details."
-msgstr "像 ``sqlite:///example.db`` 这样的数据库 URL 。 更多细节请参考 :func:`~optuna.multi_objective.study.create_study` 。"
+msgstr ""
+"像 ``sqlite:///example.db`` 这样的数据库 URL 。 更多细节请参考 "
+":func:`~optuna.multi_objective.study.create_study` 。"
 
 #: of optuna.multi_objective.study.load_study:6
 msgid ""
 "A sampler object that implements background algorithm for value "
 "suggestion. If :obj:`None` is specified, "
 ":class:`~optuna.multi_objective.samplers.RandomMultiObjectiveSampler` is "
-"used as the default. See also :class:`~optuna.multi_objective.samplers`."=
-msgstr "一个实现了幕后 suggestion value 算法的 sampler 对象。如果设置成 :obj:`None` 的话， "
-"Optuna 将使用 :class:`~optuna.multi_objective.samplers.RandomMultiObjectiveSampler` 作为默认值。参见 :class:`~optuna.multi_objective.samplers` 。"
+"used as the default. See also :class:`~optuna.multi_objective.samplers`."
+msgstr ""
+"一个实现了幕后 suggestion value 算法的 sampler 对象。如果设置成 :obj:`None` 的话， Optuna 将使用 "
+":class:`~optuna.multi_objective.samplers.NSGAIIMultiObjectiveSampler` "
+"作为默认值。参见 :class:`~optuna.multi_objective.samplers` 。"
+
+#~ msgid "Returns"
+#~ msgstr ""
+
+#~ msgid "Parameters"
+#~ msgstr ""
+
+# TODO: Warning: here the note is not rendered properly.
+#~ msgid ""
+#~ "Database URL. If this argument is "
+#~ "set to None, in-memory storage is"
+#~ " used, and the :class:`~optuna.study.Study` "
+#~ "will not be persistent."
+#~ msgstr ""
+#~ "数据库 URL。如果该参数被设置成 None 的话，Optuna 将采用内存存储，而"
+#~ "  :class:`~optuna.study.Study` 也就无法被持久化。"
+
+#~ msgid ""
+#~ "When a database URL is passed, "
+#~ "Optuna internally uses `SQLAlchemy`_ to "
+#~ "handle the database. Please refer to "
+#~ "`SQLAlchemy's document`_ for further details."
+#~ " If you want to specify non-"
+#~ "default options to `SQLAlchemy Engine`_, "
+#~ "you can instantiate "
+#~ ":class:`~optuna.storages.RDBStorage` with your "
+#~ "desired options and pass it to the"
+#~ " ``storage`` argument instead of a "
+#~ "URL."
+#~ msgstr ""
+#~ "     在传入一个数据库 URL 后，Optuna 会在内部使用 "
+#~ "`SQLAlchemy`_ 来处理数据库。更多细节请参考  `SQLAlchemy's "
+#~ "document`_ 。如果想指定非默认的 `SQLAlchemy Engine`_ "
+#~ "的话，你可以不用URL，而是用你所需的选项来实例化一个 :class:`~optuna.storages.RDBStorage`"
+#~ " 并将其传递给 ``storage`` 参数。"
+
+#~ msgid ""
+#~ "A sampler object that implements "
+#~ "background algorithm for value suggestion. "
+#~ "If :obj:`None` is specified, "
+#~ ":class:`~optuna.multi_objective.samplers.RandomMultiObjectiveSampler`"
+#~ " is used as the default. See "
+#~ "also :class:`~optuna.multi_objective.samplers`.\""
+#~ msgstr ""
+#~ "一个实现了幕后 suggestion value 算法的 sampler "
+#~ "对象。如果设置成 :obj:`None` 的话， Optuna 将使用 "
+#~ ":class:`~optuna.multi_objective.samplers.RandomMultiObjectiveSampler`"
+#~ " 作为默认值。参见 :class:`~optuna.multi_objective.samplers` 。"
+

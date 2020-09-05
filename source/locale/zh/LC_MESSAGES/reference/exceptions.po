@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 1.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-06-17 19:47-0400\n"
+"POT-Creation-Date: 2020-09-02 21:12-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -35,15 +35,13 @@ msgid ""
 "was pruned. It is supposed to be raised after "
 ":func:`optuna.trial.Trial.should_prune` as shown in the following "
 "example."
-msgstr "该 error 表明：当前 :class:`~optuna.trial.Trial` 已被剪枝。这种 error 一般会在 :func:`optuna.trial.Trial.should_prune` 之后被抛出。具体见下面的例子。"
+msgstr ""
+"该 error 表明：当前 :class:`~optuna.trial.Trial` 已被剪枝。这种 error 一般会在 "
+":func:`optuna.trial.Trial.should_prune` 之后被抛出。具体见下面的例子。"
 
 #: of optuna.exceptions.TrialPruned:8
-msgid "Example"
+msgid "示例"
 msgstr ""
-
-#: ../../source/reference/exceptions.rst:13
-msgid "The alias also exists as :class:`optuna.TrialPruned`."
-msgstr ":class:`optuna.TrialPruned` 是该异常的一个别名。"
 
 #: of optuna.exceptions.CLIUsageError:1
 msgid "Exception for CLI."
@@ -70,4 +68,10 @@ msgid ""
 "This error is raised when a specified study name already exists in the "
 "storage."
 msgstr "当存储空间中已经存在一个同名 study 时，该异常会被抛出。"
+
+#~ msgid "Example"
+#~ msgstr ""
+
+#~ msgid "The alias also exists as :class:`optuna.TrialPruned`."
+#~ msgstr ":class:`optuna.TrialPruned` 是该异常的一个别名。"
 

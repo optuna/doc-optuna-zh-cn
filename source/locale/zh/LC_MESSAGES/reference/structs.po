@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 1.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-06-17 19:47-0400\n"
+"POT-Creation-Date: 2020-09-02 21:12-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -37,7 +37,9 @@ msgstr "已完成且未触发错误的 :class:`~optuna.trial.Trial`."
 msgid ""
 "The :class:`~optuna.trial.Trial` has been pruned with "
 ":class:`~optuna.exceptions.TrialPruned`."
-msgstr "已经被 :class:`~optuna.exceptions.TrialPruned` 剪枝的 :class:`~optuna.trial.Trial`."
+msgstr ""
+"已经被 :class:`~optuna.exceptions.TrialPruned` 剪枝的 "
+":class:`~optuna.trial.Trial`."
 
 #: of optuna.structs.TrialState:18
 msgid "The :class:`~optuna.trial.Trial` has failed due to an uncaught error."
@@ -86,7 +88,9 @@ msgid ""
 "Unique and consecutive number of :class:`~optuna.trial.Trial` for each "
 ":class:`~optuna.study.Study`. Note that this field uses zero-based "
 "numbering."
-msgstr "对于每一个 :class:`~optuna.study.Study` 设立的从 0 开始计数的 :class:`~optuna.trial.Trial` 编号。"
+msgstr ""
+"对于每一个 :class:`~optuna.study.Study` 设立的从 0 开始计数的 "
+":class:`~optuna.trial.Trial` 编号。"
 
 #: of optuna.structs.FrozenTrial:15
 msgid ":class:`TrialState` of the :class:`~optuna.trial.Trial`."
@@ -113,7 +117,9 @@ msgid ""
 "Dictionary that contains the attributes of the "
 ":class:`~optuna.trial.Trial` set with "
 ":func:`optuna.trial.Trial.set_user_attr`."
-msgstr "该字典包含了一个 :class:`~optuna.trial.Trial` 中所有用 :func:`optuna.trial.Trial.set_user_attr` 来设置的属性。"
+msgstr ""
+"该字典包含了一个 :class:`~optuna.trial.Trial` 中所有用 "
+":func:`optuna.trial.Trial.set_user_attr` 来设置的属性。"
 
 #: of optuna.structs.FrozenTrial:40
 msgid "Intermediate objective values set with :func:`optuna.trial.Trial.report`."
@@ -127,8 +133,8 @@ msgstr "包含了 :attr:`params` 分布的字典。"
 msgid "Return the elapsed time taken to complete the trial."
 msgstr "返回完成一个 trial 所消耗的时间。"
 
-#: of optuna.structs.FrozenTrial.duration
-msgid "Returns"
+#: of optuna.structs.FrozenTrial.duration optuna.structs.StudySummary.study_id
+msgid "返回"
 msgstr ""
 
 #: of optuna.structs.FrozenTrial.duration:3
@@ -183,4 +189,21 @@ msgstr "一个 :class:`~optuna.study.Study` trials 的数量。"
 #: of optuna.structs.StudySummary:38
 msgid "Datetime where the :class:`~optuna.study.Study` started."
 msgstr ":class:`~optuna.study.Study` 的开始时间。"
+
+#: of optuna.structs.StudySummary.study_id:1
+msgid "Return the study ID."
+msgstr ""
+
+#: of optuna.structs.StudySummary.study_id:3
+msgid ""
+"The direct use of this attribute is deprecated and it is recommended that"
+" you use :attr:`~optuna.study.StudySummary.study_name` instead."
+msgstr ""
+
+#: of optuna.structs.StudySummary.study_id:7
+msgid "The study ID."
+msgstr ""
+
+#~ msgid "Returns"
+#~ msgstr ""
 

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 1.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-06-17 19:47-0400\n"
+"POT-Creation-Date: 2020-09-02 21:12-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -26,8 +26,9 @@ msgid ""
 ":mod:`~optuna.visualization` module uses plotly to create figures, but "
 "`JupyterLab`_ cannot render them by default. Please follow this "
 "`installation guide`_ to show figures in `JupyterLab`_."
-msgstr ":mod:`~optuna.visualization` 采用 plotly 来创建图表，但是 `JupyterLab`_ 无法在默认情况下渲染这些图表。"
-"请按照这个 `installation guide`_ 来配置 `JupyterLab`_ 中的图表显示。"
+msgstr ""
+":mod:`~optuna.visualization` 采用 plotly 来创建图表，但是 `JupyterLab`_ "
+"无法在默认情况下渲染这些图表。请按照这个 `installation guide`_ 来配置 `JupyterLab`_ 中的图表显示。"
 
 #: of optuna.visualization.plot_contour:1
 msgid "Plot the parameter relationship as contour plot in a study."
@@ -45,9 +46,8 @@ msgstr "注意，如果某个参数包含了缺失值，那么包含该参数的
 #: optuna.visualization.plot_intermediate_values:4
 #: optuna.visualization.plot_optimization_history:4
 #: optuna.visualization.plot_parallel_coordinate:6
-#: optuna.visualization.plot_param_importances:4
 #: optuna.visualization.plot_slice:6
-msgid "Example"
+msgid "示例"
 msgstr ""
 
 #: of optuna.visualization.plot_contour:7
@@ -60,8 +60,8 @@ msgstr "下面的代码展示了如何将参数关系画成一个等高线图。
 #: optuna.visualization.plot_intermediate_values
 #: optuna.visualization.plot_optimization_history
 #: optuna.visualization.plot_parallel_coordinate
-#: optuna.visualization.plot_param_importances optuna.visualization.plot_slice
-msgid "Parameters"
+#: optuna.visualization.plot_slice
+msgid "参数"
 msgstr ""
 
 #: of optuna.visualization.plot_contour:28
@@ -83,15 +83,14 @@ msgstr "需要可视化的参数列表，默认情况下将是全部参数。"
 #: optuna.visualization.plot_intermediate_values
 #: optuna.visualization.plot_optimization_history
 #: optuna.visualization.plot_parallel_coordinate
-#: optuna.visualization.plot_param_importances optuna.visualization.plot_slice
-msgid "Returns"
+#: optuna.visualization.plot_slice
+msgid "返回"
 msgstr ""
 
 #: of optuna.visualization.plot_contour:32
 #: optuna.visualization.plot_intermediate_values:47
 #: optuna.visualization.plot_optimization_history:30
 #: optuna.visualization.plot_parallel_coordinate:33
-#: optuna.visualization.plot_param_importances:41
 #: optuna.visualization.plot_slice:32
 msgid "A :class:`plotly.graph_objs.Figure` object."
 msgstr ""
@@ -128,44 +127,6 @@ msgid ""
 "parameter relationships."
 msgstr "下面的代码展示了如何绘制高维度参数的关系图。"
 
-#: of optuna.visualization.plot_param_importances:1
-msgid "Plot hyperparameter importances."
-msgstr "画出超参数的重要性"
-
-#: of optuna.visualization.plot_param_importances:5
-msgid "The following code snippet shows how to plot hyperparameter importances."
-msgstr "下面的代码展示了如何绘制超参数的重要性图"
-
-#: of optuna.visualization.plot_param_importances:30
-msgid ""
-"This function visualizes the results of "
-":func:`optuna.importance.get_param_importances`."
-msgstr "该函数对 :func:`optuna.importance.get_param_importances` 的结果进行可视化。"
-
-#: of optuna.visualization.plot_param_importances:32
-msgid "An optimized study."
-msgstr "优化结束的 study."
-
-#: of optuna.visualization.plot_param_importances:33
-msgid ""
-"An importance evaluator object that specifies which algorithm to base the"
-" importance assessment on. Defaults to "
-":class:`~optuna.importance._mean_decrease_impurity.MeanDecreaseImpurityImportanceEvaluator`."
-msgstr "参数重要性求解器。它指定评估重要性的算法。默认情况下它会被设定成 :class:`~optuna.importance._mean_decrease_impurity.MeanDecreaseImpurityImportanceEvaluator`."
-
-#: of optuna.visualization.plot_param_importances:37
-msgid ""
-"A list of names of parameters to assess. If :obj:`None`, all parameters "
-"that are present in all of the completed trials are assessed."
-msgstr "参与评估的参数名列表。如果设置成 :obj:`None` 的话，全部的、属于所有已完成 trial 的参数都将参与评估。"
-
-#: of optuna.visualization.plot_param_importances:44
-msgid ""
-"Added in v1.5.0 as an experimental feature. The interface may change in "
-"newer versions without prior notice. See "
-"https://github.com/optuna/optuna/releases/tag/v1.5.0."
-msgstr "v1.5.0 版本中新加入的试验性特性。在未来的版本中，该接口可能在没有预先告知的情况下改变。 具体参见 https://github.com/optuna/optuna/releases/tag/v1.5.0."
-
 #: of optuna.visualization.plot_slice:1
 msgid "Plot the parameter relationship as slice plot in a study."
 msgstr "绘制一个 study 中的参数关系切片图。"
@@ -186,10 +147,62 @@ msgid ""
 "higher. If a supported version of plotly isn't installed in your "
 "environment, this function will return :obj:`False`. In such case, please"
 " execute ``$ pip install -U plotly>=4.0.0`` to install plotly."
-msgstr ":mod:`~optuna.visualization` 模块依赖 4.0.0 或者更高版本的 plotly. 如果在你的环境中对应版本的 ploty"
-"没有安装的话，该函数将返回 :obj:`False`. 此时，请执行 ``$ pip install -U plotly>=4.0.0`` 来安装 plotly."
+msgstr ""
+":mod:`~optuna.visualization` 模块依赖 4.0.0 或者更高版本的 plotly. 如果在你的环境中对应版本的 "
+"ploty没有安装的话，该函数将返回 :obj:`False`. 此时，请执行 ``$ pip install -U "
+"plotly>=4.0.0`` 来安装 plotly."
 
 #: of optuna.visualization.is_available:10
 msgid ":obj:`True` if visualization is available, :obj:`False` otherwise."
 msgstr "如果可视化可用的话，返回 :obj:`True`, 否则返回 :obj:`False`. "
+
+#~ msgid "Example"
+#~ msgstr ""
+
+#~ msgid "Parameters"
+#~ msgstr ""
+
+#~ msgid "Returns"
+#~ msgstr ""
+
+#~ msgid "Plot hyperparameter importances."
+#~ msgstr "画出超参数的重要性"
+
+#~ msgid ""
+#~ "The following code snippet shows how "
+#~ "to plot hyperparameter importances."
+#~ msgstr "下面的代码展示了如何绘制超参数的重要性图"
+
+#~ msgid ""
+#~ "This function visualizes the results of"
+#~ " :func:`optuna.importance.get_param_importances`."
+#~ msgstr "该函数对 :func:`optuna.importance.get_param_importances` 的结果进行可视化。"
+
+#~ msgid "An optimized study."
+#~ msgstr "优化结束的 study."
+
+#~ msgid ""
+#~ "An importance evaluator object that "
+#~ "specifies which algorithm to base the"
+#~ " importance assessment on. Defaults to "
+#~ ":class:`~optuna.importance._mean_decrease_impurity.MeanDecreaseImpurityImportanceEvaluator`."
+#~ msgstr ""
+#~ "参数重要性求解器。它指定评估重要性的算法。默认情况下它会被设定成 "
+#~ ":class:`~optuna.importance._mean_decrease_impurity.MeanDecreaseImpurityImportanceEvaluator`."
+
+#~ msgid ""
+#~ "A list of names of parameters to"
+#~ " assess. If :obj:`None`, all parameters "
+#~ "that are present in all of the "
+#~ "completed trials are assessed."
+#~ msgstr "参与评估的参数名列表。如果设置成 :obj:`None` 的话，全部的、属于所有已完成 trial 的参数都将参与评估。"
+
+#~ msgid ""
+#~ "Added in v1.5.0 as an experimental "
+#~ "feature. The interface may change in "
+#~ "newer versions without prior notice. See"
+#~ " https://github.com/optuna/optuna/releases/tag/v1.5.0."
+#~ msgstr ""
+#~ "v1.5.0 版本中新加入的试验性特性。在未来的版本中，该接口可能在没有预先告知的情况下改变。 具体参见 "
+#~ "https://github.com/optuna/optuna/releases/tag/v1.5.0."
 
