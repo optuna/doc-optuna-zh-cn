@@ -28,7 +28,7 @@
 将 Optuna 的主仓库reset 到你准备更新的版本发布的commit。
 
 
-将Optuna 主仓库内的 `doc/source` 目录下的除 `config.py` 之外的所有文件拷贝到此仓库中，覆盖当前文件。
+将Optuna 主仓库内的 `doc/source` 目录下的除 `config.py` 之外的所有文件拷贝到此仓库的 `source` 目录下，覆盖当前文件。
 
 运行 `sphinx-intl update -p build/gettext -l zh` 以更新翻译文件。
 
