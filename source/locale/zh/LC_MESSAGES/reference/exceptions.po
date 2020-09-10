@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 1.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-02 21:12-0400\n"
+"POT-Creation-Date: 2020-09-10 16:27-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,61 +17,57 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.8.0\n"
 
-#: ../../source/reference/exceptions.rst:4
-msgid "Exceptions"
+#: ../../source/reference/exceptions.rst:2
+msgid "optuna.exceptions"
 msgstr ""
-
-#: of optuna.exceptions.OptunaError:1
-msgid "Base class for Optuna specific errors."
-msgstr "Optuna 异常基类。"
-
-#: of optuna.exceptions.TrialPruned:1
-msgid "Exception for pruned trials."
-msgstr "被剪枝 trial 异常。"
-
-#: of optuna.exceptions.TrialPruned:3
-msgid ""
-"This error tells a trainer that the current :class:`~optuna.trial.Trial` "
-"was pruned. It is supposed to be raised after "
-":func:`optuna.trial.Trial.should_prune` as shown in the following "
-"example."
-msgstr ""
-"该 error 表明：当前 :class:`~optuna.trial.Trial` 已被剪枝。这种 error 一般会在 "
-":func:`optuna.trial.Trial.should_prune` 之后被抛出。具体见下面的例子。"
-
-#: of optuna.exceptions.TrialPruned:8
-msgid "示例"
-msgstr ""
-
-#: of optuna.exceptions.CLIUsageError:1
-msgid "Exception for CLI."
-msgstr "命令行界面异常。"
-
-#: of optuna.exceptions.CLIUsageError:3
-msgid "CLI raises this exception when it receives invalid configuration."
-msgstr "当接收到无效参数时，该异常会被抛出。"
-
-#: of optuna.exceptions.StorageInternalError:1
-msgid "Exception for storage operation."
-msgstr "存储异常。"
-
-#: of optuna.exceptions.StorageInternalError:3
-msgid "This error is raised when an operation failed in backend DB of storage."
-msgstr "当存储后端发生错误时，该异常会被抛出。"
-
-#: of optuna.exceptions.DuplicatedStudyError:1
-msgid "Exception for a duplicated study name."
-msgstr "重复 study 名导致的异常。"
-
-#: of optuna.exceptions.DuplicatedStudyError:3
-msgid ""
-"This error is raised when a specified study name already exists in the "
-"storage."
-msgstr "当存储空间中已经存在一个同名 study 时，该异常会被抛出。"
 
 #~ msgid "Example"
 #~ msgstr ""
 
 #~ msgid "The alias also exists as :class:`optuna.TrialPruned`."
 #~ msgstr ":class:`optuna.TrialPruned` 是该异常的一个别名。"
+
+#~ msgid "Exceptions"
+#~ msgstr ""
+
+#~ msgid "Base class for Optuna specific errors."
+#~ msgstr "Optuna 异常基类。"
+
+#~ msgid "Exception for pruned trials."
+#~ msgstr "被剪枝 trial 异常。"
+
+#~ msgid ""
+#~ "This error tells a trainer that "
+#~ "the current :class:`~optuna.trial.Trial` was "
+#~ "pruned. It is supposed to be "
+#~ "raised after :func:`optuna.trial.Trial.should_prune` "
+#~ "as shown in the following example."
+#~ msgstr ""
+#~ "该 error 表明：当前 :class:`~optuna.trial.Trial` "
+#~ "已被剪枝。这种 error 一般会在 "
+#~ ":func:`optuna.trial.Trial.should_prune` 之后被抛出。具体见下面的例子。"
+
+#~ msgid "示例"
+#~ msgstr ""
+
+#~ msgid "Exception for CLI."
+#~ msgstr "命令行界面异常。"
+
+#~ msgid "CLI raises this exception when it receives invalid configuration."
+#~ msgstr "当接收到无效参数时，该异常会被抛出。"
+
+#~ msgid "Exception for storage operation."
+#~ msgstr "存储异常。"
+
+#~ msgid "This error is raised when an operation failed in backend DB of storage."
+#~ msgstr "当存储后端发生错误时，该异常会被抛出。"
+
+#~ msgid "Exception for a duplicated study name."
+#~ msgstr "重复 study 名导致的异常。"
+
+#~ msgid ""
+#~ "This error is raised when a "
+#~ "specified study name already exists in"
+#~ " the storage."
+#~ msgstr "当存储空间中已经存在一个同名 study 时，该异常会被抛出。"
 

@@ -14,7 +14,7 @@
 
 生成当前版本的翻译文件：
 
-`sphinx-intl update -p build/locale zh`
+`sphinx-intl update -p build/locale -l zh`
 
 在 `requirements.txt` 中修改Optuna到想要的版本号。
 
@@ -30,7 +30,11 @@
 
 将Optuna 主仓库内的 `doc/source` 目录下的除 `config.py` 之外的所有文件拷贝到此仓库的 `source` 目录下，覆盖当前文件。
 
-运行 `sphinx-intl update -p build/gettext -l zh` 以更新翻译文件。
+更新翻译文件:
+
+`make gettext`
+
+`sphinx-intl update -p build/gettext -l zh`
 
 更新翻译
 

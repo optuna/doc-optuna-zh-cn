@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 1.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-02 21:12-0400\n"
+"POT-Creation-Date: 2020-09-10 16:27-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,11 +17,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.8.0\n"
 
-#: ../../source/reference/visualization.rst:5
-msgid "Visualization"
+#: ../../source/reference/visualization.rst:2
+msgid "optuna.visualization"
 msgstr ""
 
-#: ../../source/reference/visualization.rst:8
+#: ../../source/reference/visualization.rst:5
 msgid ""
 ":mod:`~optuna.visualization` module uses plotly to create figures, but "
 "`JupyterLab`_ cannot render them by default. Please follow this "
@@ -29,132 +29,6 @@ msgid ""
 msgstr ""
 ":mod:`~optuna.visualization` 采用 plotly 来创建图表，但是 `JupyterLab`_ "
 "无法在默认情况下渲染这些图表。请按照这个 `installation guide`_ 来配置 `JupyterLab`_ 中的图表显示。"
-
-#: of optuna.visualization.plot_contour:1
-msgid "Plot the parameter relationship as contour plot in a study."
-msgstr "将参数关系画成等高线图。"
-
-#: of optuna.visualization.plot_contour:3
-#: optuna.visualization.plot_parallel_coordinate:3
-#: optuna.visualization.plot_slice:3
-msgid ""
-"Note that, If a parameter contains missing values, a trial with missing "
-"values is not plotted."
-msgstr "注意，如果某个参数包含了缺失值，那么包含该参数的 trial 将不会被绘制。"
-
-#: of optuna.visualization.plot_contour:6
-#: optuna.visualization.plot_intermediate_values:4
-#: optuna.visualization.plot_optimization_history:4
-#: optuna.visualization.plot_parallel_coordinate:6
-#: optuna.visualization.plot_slice:6
-msgid "示例"
-msgstr ""
-
-#: of optuna.visualization.plot_contour:7
-msgid ""
-"The following code snippet shows how to plot the parameter relationship "
-"as contour plot."
-msgstr "下面的代码展示了如何将参数关系画成一个等高线图。"
-
-#: of optuna.visualization.plot_contour
-#: optuna.visualization.plot_intermediate_values
-#: optuna.visualization.plot_optimization_history
-#: optuna.visualization.plot_parallel_coordinate
-#: optuna.visualization.plot_slice
-msgid "参数"
-msgstr ""
-
-#: of optuna.visualization.plot_contour:28
-#: optuna.visualization.plot_optimization_history:27
-#: optuna.visualization.plot_parallel_coordinate:29
-#: optuna.visualization.plot_slice:28
-msgid ""
-"A :class:`~optuna.study.Study` object whose trials are plotted for their "
-"objective values."
-msgstr ":class:`~optuna.study.Study` 类，其包含的 trials 的目标函数值将参与绘图。"
-
-#: of optuna.visualization.plot_contour:30
-#: optuna.visualization.plot_parallel_coordinate:31
-#: optuna.visualization.plot_slice:30
-msgid "Parameter list to visualize. The default is all parameters."
-msgstr "需要可视化的参数列表，默认情况下将是全部参数。"
-
-#: of optuna.visualization.is_available optuna.visualization.plot_contour
-#: optuna.visualization.plot_intermediate_values
-#: optuna.visualization.plot_optimization_history
-#: optuna.visualization.plot_parallel_coordinate
-#: optuna.visualization.plot_slice
-msgid "返回"
-msgstr ""
-
-#: of optuna.visualization.plot_contour:32
-#: optuna.visualization.plot_intermediate_values:47
-#: optuna.visualization.plot_optimization_history:30
-#: optuna.visualization.plot_parallel_coordinate:33
-#: optuna.visualization.plot_slice:32
-msgid "A :class:`plotly.graph_objs.Figure` object."
-msgstr ""
-
-#: of optuna.visualization.plot_intermediate_values:1
-msgid "Plot intermediate values of all trials in a study."
-msgstr "画出一个 study 中的全部 trial 的中间值。"
-
-#: of optuna.visualization.plot_intermediate_values:5
-msgid "The following code snippet shows how to plot intermediate values."
-msgstr "下面的代码展示了如何绘制中间值。"
-
-#: of optuna.visualization.plot_intermediate_values:44
-msgid ""
-"A :class:`~optuna.study.Study` object whose trials are plotted for their "
-"intermediate values."
-msgstr ":class:`~optuna.study.Study` 类，其包含的 trials 的目标函数中间值将参与绘图。"
-
-#: of optuna.visualization.plot_optimization_history:1
-msgid "Plot optimization history of all trials in a study."
-msgstr "画出一个 study 中所有 trial 的优化历史记录。"
-
-#: of optuna.visualization.plot_optimization_history:5
-msgid "The following code snippet shows how to plot optimization history."
-msgstr "下面的代码展示了如何绘制优化历史记录。"
-
-#: of optuna.visualization.plot_parallel_coordinate:1
-msgid "Plot the high-dimentional parameter relationships in a study."
-msgstr "绘制一个 study 中高维度参数的关系图。"
-
-#: of optuna.visualization.plot_parallel_coordinate:7
-msgid ""
-"The following code snippet shows how to plot the high-dimentional "
-"parameter relationships."
-msgstr "下面的代码展示了如何绘制高维度参数的关系图。"
-
-#: of optuna.visualization.plot_slice:1
-msgid "Plot the parameter relationship as slice plot in a study."
-msgstr "绘制一个 study 中的参数关系切片图。"
-
-#: of optuna.visualization.plot_slice:7
-msgid ""
-"The following code snippet shows how to plot the parameter relationship "
-"as slice plot."
-msgstr "下面的代码展示了如何绘制参数关系切片图。"
-
-#: of optuna.visualization.is_available:1
-msgid "Returns whether visualization is available or not."
-msgstr "返回可视化是否可用。"
-
-#: of optuna.visualization.is_available:5
-msgid ""
-":mod:`~optuna.visualization` module depends on plotly version 4.0.0 or "
-"higher. If a supported version of plotly isn't installed in your "
-"environment, this function will return :obj:`False`. In such case, please"
-" execute ``$ pip install -U plotly>=4.0.0`` to install plotly."
-msgstr ""
-":mod:`~optuna.visualization` 模块依赖 4.0.0 或者更高版本的 plotly. 如果在你的环境中对应版本的 "
-"ploty没有安装的话，该函数将返回 :obj:`False`. 此时，请执行 ``$ pip install -U "
-"plotly>=4.0.0`` 来安装 plotly."
-
-#: of optuna.visualization.is_available:10
-msgid ":obj:`True` if visualization is available, :obj:`False` otherwise."
-msgstr "如果可视化可用的话，返回 :obj:`True`, 否则返回 :obj:`False`. "
 
 #~ msgid "Example"
 #~ msgstr ""
@@ -205,4 +79,100 @@ msgstr "如果可视化可用的话，返回 :obj:`True`, 否则返回 :obj:`Fal
 #~ msgstr ""
 #~ "v1.5.0 版本中新加入的试验性特性。在未来的版本中，该接口可能在没有预先告知的情况下改变。 具体参见 "
 #~ "https://github.com/optuna/optuna/releases/tag/v1.5.0."
+
+#~ msgid "Visualization"
+#~ msgstr ""
+
+#~ msgid "Plot the parameter relationship as contour plot in a study."
+#~ msgstr "将参数关系画成等高线图。"
+
+#~ msgid ""
+#~ "Note that, If a parameter contains "
+#~ "missing values, a trial with missing "
+#~ "values is not plotted."
+#~ msgstr "注意，如果某个参数包含了缺失值，那么包含该参数的 trial 将不会被绘制。"
+
+#~ msgid "示例"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The following code snippet shows how "
+#~ "to plot the parameter relationship as"
+#~ " contour plot."
+#~ msgstr "下面的代码展示了如何将参数关系画成一个等高线图。"
+
+#~ msgid "参数"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "A :class:`~optuna.study.Study` object whose "
+#~ "trials are plotted for their objective"
+#~ " values."
+#~ msgstr ":class:`~optuna.study.Study` 类，其包含的 trials 的目标函数值将参与绘图。"
+
+#~ msgid "Parameter list to visualize. The default is all parameters."
+#~ msgstr "需要可视化的参数列表，默认情况下将是全部参数。"
+
+#~ msgid "返回"
+#~ msgstr ""
+
+#~ msgid "A :class:`plotly.graph_objs.Figure` object."
+#~ msgstr ""
+
+#~ msgid "Plot intermediate values of all trials in a study."
+#~ msgstr "画出一个 study 中的全部 trial 的中间值。"
+
+#~ msgid "The following code snippet shows how to plot intermediate values."
+#~ msgstr "下面的代码展示了如何绘制中间值。"
+
+#~ msgid ""
+#~ "A :class:`~optuna.study.Study` object whose "
+#~ "trials are plotted for their "
+#~ "intermediate values."
+#~ msgstr ":class:`~optuna.study.Study` 类，其包含的 trials 的目标函数中间值将参与绘图。"
+
+#~ msgid "Plot optimization history of all trials in a study."
+#~ msgstr "画出一个 study 中所有 trial 的优化历史记录。"
+
+#~ msgid "The following code snippet shows how to plot optimization history."
+#~ msgstr "下面的代码展示了如何绘制优化历史记录。"
+
+#~ msgid "Plot the high-dimentional parameter relationships in a study."
+#~ msgstr "绘制一个 study 中高维度参数的关系图。"
+
+#~ msgid ""
+#~ "The following code snippet shows how "
+#~ "to plot the high-dimentional parameter"
+#~ " relationships."
+#~ msgstr "下面的代码展示了如何绘制高维度参数的关系图。"
+
+#~ msgid "Plot the parameter relationship as slice plot in a study."
+#~ msgstr "绘制一个 study 中的参数关系切片图。"
+
+#~ msgid ""
+#~ "The following code snippet shows how "
+#~ "to plot the parameter relationship as"
+#~ " slice plot."
+#~ msgstr "下面的代码展示了如何绘制参数关系切片图。"
+
+#~ msgid "Returns whether visualization is available or not."
+#~ msgstr "返回可视化是否可用。"
+
+#~ msgid ""
+#~ ":mod:`~optuna.visualization` module depends on "
+#~ "plotly version 4.0.0 or higher. If "
+#~ "a supported version of plotly isn't "
+#~ "installed in your environment, this "
+#~ "function will return :obj:`False`. In "
+#~ "such case, please execute ``$ pip "
+#~ "install -U plotly>=4.0.0`` to install "
+#~ "plotly."
+#~ msgstr ""
+#~ ":mod:`~optuna.visualization` 模块依赖 4.0.0 或者更高版本的 "
+#~ "plotly. 如果在你的环境中对应版本的 ploty没有安装的话，该函数将返回 "
+#~ ":obj:`False`. 此时，请执行 ``$ pip install -U"
+#~ " plotly>=4.0.0`` 来安装 plotly."
+
+#~ msgid ":obj:`True` if visualization is available, :obj:`False` otherwise."
+#~ msgstr "如果可视化可用的话，返回 :obj:`True`, 否则返回 :obj:`False`. "
 

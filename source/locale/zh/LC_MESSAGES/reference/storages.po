@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 1.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-02 21:12-0400\n"
+"POT-Creation-Date: 2020-09-10 16:27-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,99 +17,106 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.8.0\n"
 
-#: ../../source/reference/storages.rst:4
-msgid "Storages"
+#: ../../source/reference/storages.rst:2
+msgid "optuna.storages"
 msgstr ""
-
-#: of optuna.storages.RDBStorage:1
-msgid "Storage class for RDB backend."
-msgstr ""
-
-#: of optuna.storages.RDBStorage:3 optuna.storages.RedisStorage:3
-msgid ""
-"Note that library users can instantiate this class, but the attributes "
-"provided by this class are not supposed to be directly accessed by them."
-msgstr "请注意，用户可以实例化该对象，但是该对象的属性不应被用户直接获取。"
-
-#: of optuna.storages.RDBStorage:7 optuna.storages.RedisStorage:7
-msgid "示例"
-msgstr ""
-
-#: of optuna.storages.RDBStorage:8
-msgid ""
-"Create an :class:`~optuna.storages.RDBStorage` instance with customized "
-"``pool_size`` and ``timeout`` settings."
-msgstr ""
-"用定制的 ``pool_size`` 和 ``timeout`` 创建一个 "
-":class:`~optuna.storages.RDBStorage` 实例"
-
-#: of optuna.storages.RDBStorage optuna.storages.RedisStorage
-msgid "参数"
-msgstr ""
-
-#: of optuna.storages.RDBStorage:32
-msgid "URL of the storage."
-msgstr "存储位置URL"
-
-#: of optuna.storages.RDBStorage:33
-msgid ""
-"A dictionary of keyword arguments that is passed to "
-"`sqlalchemy.engine.create_engine`_ function."
-msgstr "一个包含了 keyword 参数的字典，它会被传入 `sqlalchemy.engine.create_engine`_ ."
-
-#: of optuna.storages.RDBStorage:35
-msgid "Flag to skip schema compatibility check if set to True."
-msgstr "如果该选项为真，那么 schema 兼容性检测将被跳过。"
-
-#: of optuna.storages.RDBStorage:41
-msgid ""
-"If you use MySQL, `pool_pre_ping`_ will be set to :obj:`True` by default "
-"to prevent connection timeout. You can turn it off with "
-"``engine_kwargs['pool_pre_ping']=False``, but it is recommended to keep "
-"the setting if execution time of your objective function is longer than "
-"the `wait_timeout` of your MySQL configuration."
-msgstr ""
-"如果你用 MySQL 的话，在默认情况下，`pool_pre_ping`_ 将为 :obj:`True`. 这样可以防止连接超时。 你可以通过 "
-"``engine_kwargs['pool_pre_ping']=False`` "
-"来关掉这个设置。但我们推荐打开它，因为有时候目标函数执行时间会超过 MYSQL 的 `wait_timeout`."
-
-#: of optuna.storages.RedisStorage:1
-msgid "Storage class for Redis backend."
-msgstr ""
-
-#: of optuna.storages.RedisStorage:8
-msgid ""
-"We create an :class:`~optuna.storages.redis.RedisStorage` instance using "
-"the given redis database URL."
-msgstr "利用 redis 的 URL 这里创建了一个 :class:`~optuna.storages.RedisStorage` 的实例。"
-
-#: of optuna.storages.RedisStorage:25
-msgid ""
-"URL of the redis storage, password and db are optional. (ie: "
-"redis://localhost:6379)"
-msgstr " Redis 存储的 URL。 其中 password 和 db 是可选的。"
-
-#: of optuna.storages.RedisStorage:28
-msgid ""
-"If you use plan to use Redis as a storage mechanism for optuna, make sure"
-" Redis in installed and running. Please execute ``$ pip install -U "
-"redis`` to install redis python library."
-msgstr ""
-"如果你准备用 redis 来做 optuna 的存储后端的话，请确认 redis 已经安装好并且正在运行中。请用 ``$ pip install "
-"-U redis`` 来安装 redis 的 Python 库。"
-
-#: of optuna.storages.RedisStorage:34
-msgid ""
-"Added in v1.4.0 as an experimental feature. The interface may change in "
-"newer versions without prior notice. See "
-"https://github.com/optuna/optuna/releases/tag/v1.4.0."
-msgstr ""
-"v1.4.0 版本中新加入的试验性特性。在未来的版本中，该接口可能在没有预先告知的情况下改变。 具体参见 "
-"https://github.com/optuna/optuna/releases/tag/v1.4.0."
 
 #~ msgid "Example"
 #~ msgstr ""
 
 #~ msgid "Parameters"
 #~ msgstr ""
+
+#~ msgid "Storages"
+#~ msgstr ""
+
+#~ msgid "Storage class for RDB backend."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Note that library users can instantiate"
+#~ " this class, but the attributes "
+#~ "provided by this class are not "
+#~ "supposed to be directly accessed by "
+#~ "them."
+#~ msgstr "请注意，用户可以实例化该对象，但是该对象的属性不应被用户直接获取。"
+
+#~ msgid "示例"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Create an :class:`~optuna.storages.RDBStorage` "
+#~ "instance with customized ``pool_size`` and "
+#~ "``timeout`` settings."
+#~ msgstr ""
+#~ "用定制的 ``pool_size`` 和 ``timeout`` 创建一个 "
+#~ ":class:`~optuna.storages.RDBStorage` 实例"
+
+#~ msgid "参数"
+#~ msgstr ""
+
+#~ msgid "URL of the storage."
+#~ msgstr "存储位置URL"
+
+#~ msgid ""
+#~ "A dictionary of keyword arguments that"
+#~ " is passed to `sqlalchemy.engine.create_engine`_"
+#~ " function."
+#~ msgstr "一个包含了 keyword 参数的字典，它会被传入 `sqlalchemy.engine.create_engine`_ ."
+
+#~ msgid "Flag to skip schema compatibility check if set to True."
+#~ msgstr "如果该选项为真，那么 schema 兼容性检测将被跳过。"
+
+#~ msgid ""
+#~ "If you use MySQL, `pool_pre_ping`_ will"
+#~ " be set to :obj:`True` by default "
+#~ "to prevent connection timeout. You can"
+#~ " turn it off with "
+#~ "``engine_kwargs['pool_pre_ping']=False``, but it is"
+#~ " recommended to keep the setting if"
+#~ " execution time of your objective "
+#~ "function is longer than the "
+#~ "`wait_timeout` of your MySQL configuration."
+#~ msgstr ""
+#~ "如果你用 MySQL 的话，在默认情况下，`pool_pre_ping`_ 将为 "
+#~ ":obj:`True`. 这样可以防止连接超时。 你可以通过 "
+#~ "``engine_kwargs['pool_pre_ping']=False`` "
+#~ "来关掉这个设置。但我们推荐打开它，因为有时候目标函数执行时间会超过 MYSQL 的 "
+#~ "`wait_timeout`."
+
+#~ msgid "Storage class for Redis backend."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "We create an "
+#~ ":class:`~optuna.storages.redis.RedisStorage` instance "
+#~ "using the given redis database URL."
+#~ msgstr "利用 redis 的 URL 这里创建了一个 :class:`~optuna.storages.RedisStorage` 的实例。"
+
+#~ msgid ""
+#~ "URL of the redis storage, password "
+#~ "and db are optional. (ie: "
+#~ "redis://localhost:6379)"
+#~ msgstr " Redis 存储的 URL。 其中 password 和 db 是可选的。"
+
+#~ msgid ""
+#~ "If you use plan to use Redis "
+#~ "as a storage mechanism for optuna, "
+#~ "make sure Redis in installed and "
+#~ "running. Please execute ``$ pip install"
+#~ " -U redis`` to install redis python"
+#~ " library."
+#~ msgstr ""
+#~ "如果你准备用 redis 来做 optuna 的存储后端的话，请确认 redis"
+#~ " 已经安装好并且正在运行中。请用 ``$ pip install -U "
+#~ "redis`` 来安装 redis 的 Python 库。"
+
+#~ msgid ""
+#~ "Added in v1.4.0 as an experimental "
+#~ "feature. The interface may change in "
+#~ "newer versions without prior notice. See"
+#~ " https://github.com/optuna/optuna/releases/tag/v1.4.0."
+#~ msgstr ""
+#~ "v1.4.0 版本中新加入的试验性特性。在未来的版本中，该接口可能在没有预先告知的情况下改变。 具体参见 "
+#~ "https://github.com/optuna/optuna/releases/tag/v1.4.0."
 

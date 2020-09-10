@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 1.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-02 21:12-0400\n"
+"POT-Creation-Date: 2020-09-10 16:27-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,100 +17,9 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.8.0\n"
 
-#: ../../source/reference/logging.rst:4
-msgid "Logging"
+#: ../../source/reference/logging.rst:2
+msgid "optuna.logging"
 msgstr ""
-
-#: of optuna.logging.get_verbosity:1
-msgid "Return the current level for the Optuna's root logger."
-msgstr "返回目前 Optuna 的 root logger 的 logging 层级。"
-
-#: of optuna.logging.get_verbosity
-msgid "返回"
-msgstr ""
-
-#: of optuna.logging.get_verbosity:3 optuna.logging.set_verbosity:3
-msgid "Logging level, e.g., ``optuna.logging.DEBUG`` and ``optuna.logging.INFO``."
-msgstr "Logging 层级，比如  ``optuna.logging.DEBUG`` 或者 ``optuna.logging.INFO``."
-
-#: of optuna.logging.get_verbosity:6
-msgid "Optuna has following logging levels:"
-msgstr "Optuna 包含以下 loggin 层级。"
-
-#: of optuna.logging.get_verbosity:8
-msgid "``optuna.logging.CRITICAL``, ``optuna.logging.FATAL``"
-msgstr ""
-
-#: of optuna.logging.get_verbosity:9
-msgid "``optuna.logging.ERROR``"
-msgstr ""
-
-#: of optuna.logging.get_verbosity:10
-msgid "``optuna.logging.WARNING``, ``optuna.logging.WARN``"
-msgstr ""
-
-#: of optuna.logging.get_verbosity:11
-msgid "``optuna.logging.INFO``"
-msgstr ""
-
-#: of optuna.logging.get_verbosity:12
-msgid "``optuna.logging.DEBUG``"
-msgstr ""
-
-#: of optuna.logging.set_verbosity:1
-msgid "Set the level for the Optuna's root logger."
-msgstr "设置 Optuna 的 root logger 的 logging 层级。"
-
-#: of optuna.logging.set_verbosity
-msgid "参数"
-msgstr ""
-
-#: of optuna.logging.disable_default_handler:1
-msgid "Disable the default handler of the Optuna's root logger."
-msgstr "禁用 Optuna 的 root logger 的默认句柄。"
-
-#: of optuna.logging.disable_default_handler:4
-#: optuna.logging.enable_propagation:7
-msgid "示例"
-msgstr ""
-
-#: of optuna.logging.disable_default_handler:5
-msgid "Stop and then resume logging to :obj:`sys.stderr`."
-msgstr "停止并恢复 logging 层级到 :obj:`sys.stderr`."
-
-#: of optuna.logging.enable_default_handler:1
-msgid "Enable the default handler of the Optuna's root logger."
-msgstr "启用 Optuna 的 root logger 的默认句柄。"
-
-#: of optuna.logging.enable_default_handler:3
-msgid ""
-"Please refer to the example shown in "
-":func:`~optuna.logging.disable_default_handler()`."
-msgstr "请参考 :func:`~optuna.logging.disable_default_handler()` 中的例子。"
-
-#: of optuna.logging.disable_propagation:1
-msgid "Disable propagation of the library log outputs."
-msgstr "禁用库 log 输出的传递。"
-
-#: of optuna.logging.disable_propagation:3
-msgid "Note that log propagation is disabled by default."
-msgstr "注意：log 传递默认情况下是被禁用的。"
-
-#: of optuna.logging.enable_propagation:1
-msgid "Enable propagation of the library log outputs."
-msgstr "启用库 log 输出的传递。"
-
-#: of optuna.logging.enable_propagation:3
-msgid ""
-"Please disable the Optuna's default handler to prevent double logging if "
-"the root logger has been configured."
-msgstr "如果已经配置了 root logger 的话，请禁用 Optuna 的默认句柄，以防止重复 logging。"
-
-#: of optuna.logging.enable_propagation:8
-msgid ""
-"Propagate all log output to the root logger in order to save them to the "
-"file."
-msgstr "将所有的log 输出传递到 root logger 以将它们存储到文件中。"
 
 #~ msgid "Returns"
 #~ msgstr ""
@@ -120,4 +29,80 @@ msgstr "将所有的log 输出传递到 root logger 以将它们存储到文件�
 
 #~ msgid "Example"
 #~ msgstr ""
+
+#~ msgid "Logging"
+#~ msgstr ""
+
+#~ msgid "Return the current level for the Optuna's root logger."
+#~ msgstr "返回目前 Optuna 的 root logger 的 logging 层级。"
+
+#~ msgid "返回"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Logging level, e.g., ``optuna.logging.DEBUG`` "
+#~ "and ``optuna.logging.INFO``."
+#~ msgstr "Logging 层级，比如  ``optuna.logging.DEBUG`` 或者 ``optuna.logging.INFO``."
+
+#~ msgid "Optuna has following logging levels:"
+#~ msgstr "Optuna 包含以下 loggin 层级。"
+
+#~ msgid "``optuna.logging.CRITICAL``, ``optuna.logging.FATAL``"
+#~ msgstr ""
+
+#~ msgid "``optuna.logging.ERROR``"
+#~ msgstr ""
+
+#~ msgid "``optuna.logging.WARNING``, ``optuna.logging.WARN``"
+#~ msgstr ""
+
+#~ msgid "``optuna.logging.INFO``"
+#~ msgstr ""
+
+#~ msgid "``optuna.logging.DEBUG``"
+#~ msgstr ""
+
+#~ msgid "Set the level for the Optuna's root logger."
+#~ msgstr "设置 Optuna 的 root logger 的 logging 层级。"
+
+#~ msgid "参数"
+#~ msgstr ""
+
+#~ msgid "Disable the default handler of the Optuna's root logger."
+#~ msgstr "禁用 Optuna 的 root logger 的默认句柄。"
+
+#~ msgid "示例"
+#~ msgstr ""
+
+#~ msgid "Stop and then resume logging to :obj:`sys.stderr`."
+#~ msgstr "停止并恢复 logging 层级到 :obj:`sys.stderr`."
+
+#~ msgid "Enable the default handler of the Optuna's root logger."
+#~ msgstr "启用 Optuna 的 root logger 的默认句柄。"
+
+#~ msgid ""
+#~ "Please refer to the example shown "
+#~ "in :func:`~optuna.logging.disable_default_handler()`."
+#~ msgstr "请参考 :func:`~optuna.logging.disable_default_handler()` 中的例子。"
+
+#~ msgid "Disable propagation of the library log outputs."
+#~ msgstr "禁用库 log 输出的传递。"
+
+#~ msgid "Note that log propagation is disabled by default."
+#~ msgstr "注意：log 传递默认情况下是被禁用的。"
+
+#~ msgid "Enable propagation of the library log outputs."
+#~ msgstr "启用库 log 输出的传递。"
+
+#~ msgid ""
+#~ "Please disable the Optuna's default "
+#~ "handler to prevent double logging if "
+#~ "the root logger has been configured."
+#~ msgstr "如果已经配置了 root logger 的话，请禁用 Optuna 的默认句柄，以防止重复 logging。"
+
+#~ msgid ""
+#~ "Propagate all log output to the "
+#~ "root logger in order to save them"
+#~ " to the file."
+#~ msgstr "将所有的log 输出传递到 root logger 以将它们存储到文件中。"
 

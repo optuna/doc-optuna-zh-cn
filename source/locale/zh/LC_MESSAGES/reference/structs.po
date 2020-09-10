@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 1.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-02 21:12-0400\n"
+"POT-Creation-Date: 2020-09-10 16:27-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Generated-By: Babel 2.8.0\n"
 
 #: ../../source/reference/structs.rst:4
-msgid "Structs"
+msgid "optuna.structs"
 msgstr ""
 
 #: of optuna.structs.TrialState:1
@@ -79,12 +79,6 @@ msgstr ":class:`~optuna.trial.Trial` 的状态和返回结果。"
 
 #: of optuna.structs.FrozenTrial:5
 msgid ""
-"This class was moved to :mod:`~optuna.trial`. Please use "
-":class:`~optuna.trial.FrozenTrial` instead."
-msgstr "该类已经迁移至 :mod:`~optuna.trial`, 请改用 :class:`~optuna.trial.FrozenTrial`."
-
-#: of optuna.structs.FrozenTrial:10
-msgid ""
 "Unique and consecutive number of :class:`~optuna.trial.Trial` for each "
 ":class:`~optuna.study.Study`. Note that this field uses zero-based "
 "numbering."
@@ -92,27 +86,27 @@ msgstr ""
 "对于每一个 :class:`~optuna.study.Study` 设立的从 0 开始计数的 "
 ":class:`~optuna.trial.Trial` 编号。"
 
-#: of optuna.structs.FrozenTrial:15
+#: of optuna.structs.FrozenTrial:10
 msgid ":class:`TrialState` of the :class:`~optuna.trial.Trial`."
 msgstr ""
 
-#: of optuna.structs.FrozenTrial:19
+#: of optuna.structs.FrozenTrial:14
 msgid "Objective value of the :class:`~optuna.trial.Trial`."
 msgstr ""
 
-#: of optuna.structs.FrozenTrial:23
+#: of optuna.structs.FrozenTrial:18
 msgid "Datetime where the :class:`~optuna.trial.Trial` started."
 msgstr ":class:`~optuna.trial.Trial` 的开始时间。"
 
-#: of optuna.structs.FrozenTrial:27
+#: of optuna.structs.FrozenTrial:22
 msgid "Datetime where the :class:`~optuna.trial.Trial` finished."
 msgstr ":class:`~optuna.trial.Trial` 的结束时间。"
 
-#: of optuna.structs.FrozenTrial:31
+#: of optuna.structs.FrozenTrial:26
 msgid "Dictionary that contains suggested parameters."
 msgstr "包含了 suggested 参数集的字典。"
 
-#: of optuna.structs.FrozenTrial:35
+#: of optuna.structs.FrozenTrial:30
 msgid ""
 "Dictionary that contains the attributes of the "
 ":class:`~optuna.trial.Trial` set with "
@@ -121,9 +115,23 @@ msgstr ""
 "该字典包含了一个 :class:`~optuna.trial.Trial` 中所有用 "
 ":func:`optuna.trial.Trial.set_user_attr` 来设置的属性。"
 
-#: of optuna.structs.FrozenTrial:40
+#: of optuna.structs.FrozenTrial:35
 msgid "Intermediate objective values set with :func:`optuna.trial.Trial.report`."
 msgstr "用 :func:`optuna.trial.Trial.report` 设置的中间目标函数值。"
+
+#: of optuna.structs.FrozenTrial:38 optuna.structs.StudySummary:36
+msgid ""
+"Deprecated in v1.4.0. This feature will be removed in the future. The "
+"removal of this feature is currently scheduled for v3.0.0, but this "
+"schedule is subject to change. See "
+"https://github.com/optuna/optuna/releases/tag/v1.4.0."
+msgstr ""
+
+#: of optuna.structs.FrozenTrial:43
+msgid ""
+"This class was moved to :mod:`~optuna.trial`. Please use "
+":class:`~optuna.trial.FrozenTrial` instead."
+msgstr "该类已经迁移至 :mod:`~optuna.trial`, 请改用 :class:`~optuna.trial.FrozenTrial`."
 
 #: of optuna.structs.FrozenTrial.distributions:1
 msgid "Dictionary that contains the distributions of :attr:`params`."
@@ -133,8 +141,8 @@ msgstr "包含了 :attr:`params` 分布的字典。"
 msgid "Return the elapsed time taken to complete the trial."
 msgstr "返回完成一个 trial 所消耗的时间。"
 
-#: of optuna.structs.FrozenTrial.duration optuna.structs.StudySummary.study_id
-msgid "返回"
+#: of optuna.structs.FrozenTrial.duration
+msgid "Returns"
 msgstr ""
 
 #: of optuna.structs.FrozenTrial.duration:3
@@ -145,65 +153,70 @@ msgstr ""
 msgid "Basic attributes and aggregated results of a :class:`~optuna.study.Study`."
 msgstr ":class:`~optuna.study.Study` 的基础属性和整合结果。"
 
-#: of optuna.structs.StudySummary:5
-msgid ""
-"This class was moved to :mod:`~optuna.study`. Please use "
-":class:`~optuna.study.StudySummary` instead."
-msgstr "该类已经迁移到 :mod:`~optuna.study`, 请改用 :class:`~optuna.study.StudySummary`."
-
-#: of optuna.structs.StudySummary:8
+#: of optuna.structs.StudySummary:3
 msgid "See also :func:`optuna.study.get_all_study_summaries`."
 msgstr "见 :func:`optuna.study.get_all_study_summaries`."
 
-#: of optuna.structs.StudySummary:12
+#: of optuna.structs.StudySummary:7
 msgid "Name of the :class:`~optuna.study.Study`."
 msgstr ""
 
-#: of optuna.structs.StudySummary:16
+#: of optuna.structs.StudySummary:11
 msgid ":class:`~optuna.study.StudyDirection` of the :class:`~optuna.study.Study`."
 msgstr ""
 
-#: of optuna.structs.StudySummary:20
+#: of optuna.structs.StudySummary:15
 msgid ""
 ":class:`FrozenTrial` with best objective value in the "
 ":class:`~optuna.study.Study`."
 msgstr "一个 :class:`~optuna.study.Study` 中有着最佳目标函数值的 :class:`FrozenTrial` ."
 
-#: of optuna.structs.StudySummary:24
+#: of optuna.structs.StudySummary:19
 msgid ""
 "Dictionary that contains the attributes of the "
 ":class:`~optuna.study.Study` set with "
 ":func:`optuna.study.Study.set_user_attr`."
 msgstr ""
 
-#: of optuna.structs.StudySummary:29
+#: of optuna.structs.StudySummary:24
 msgid ""
 "Dictionary that contains the attributes of the "
 ":class:`~optuna.study.Study` internally set by Optuna."
 msgstr "该字典包含了一个 :class:`~optuna.study.Study` 中所有由 optuna 内部设置的属性。"
 
-#: of optuna.structs.StudySummary:34
+#: of optuna.structs.StudySummary:29
 msgid "The number of trials ran in the :class:`~optuna.study.Study`."
 msgstr "一个 :class:`~optuna.study.Study` trials 的数量。"
 
-#: of optuna.structs.StudySummary:38
+#: of optuna.structs.StudySummary:33
 msgid "Datetime where the :class:`~optuna.study.Study` started."
 msgstr ":class:`~optuna.study.Study` 的开始时间。"
 
-#: of optuna.structs.StudySummary.study_id:1
-msgid "Return the study ID."
-msgstr ""
-
-#: of optuna.structs.StudySummary.study_id:3
+#: of optuna.structs.StudySummary:41
 msgid ""
-"The direct use of this attribute is deprecated and it is recommended that"
-" you use :attr:`~optuna.study.StudySummary.study_name` instead."
-msgstr ""
-
-#: of optuna.structs.StudySummary.study_id:7
-msgid "The study ID."
-msgstr ""
+"This class was moved to :mod:`~optuna.study`. Please use "
+":class:`~optuna.study.StudySummary` instead."
+msgstr "该类已经迁移到 :mod:`~optuna.study`, 请改用 :class:`~optuna.study.StudySummary`."
 
 #~ msgid "Returns"
+#~ msgstr ""
+
+#~ msgid "Structs"
+#~ msgstr ""
+
+#~ msgid "返回"
+#~ msgstr ""
+
+#~ msgid "Return the study ID."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The direct use of this attribute "
+#~ "is deprecated and it is recommended "
+#~ "that you use "
+#~ ":attr:`~optuna.study.StudySummary.study_name` instead."
+#~ msgstr ""
+
+#~ msgid "The study ID."
 #~ msgstr ""
 
