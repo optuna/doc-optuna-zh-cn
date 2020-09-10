@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 1.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-02 21:12-0400\n"
+"POT-Creation-Date: 2020-09-10 16:27-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Generated-By: Babel 2.8.0\n"
 
 #: ../../source/reference/cli.rst:2
-msgid "Command Line Interface"
+msgid "optuna.cli"
 msgstr ""
 
 #: ../../<_OptunaApp>:1
@@ -174,8 +174,8 @@ msgid "study optimize"
 msgstr ""
 
 #: ../../<_StudyOptimize>:1
-msgid "Start optimization of a study."
-msgstr "针对特定 study 开始优化过程。"
+msgid "Start optimization of a study. Deprecated since version 2.0.0."
+msgstr "针对特定 study 开始优化过程。自 2.0.0 版本后弃用。"
 
 #: ../../<_StudyOptimize>:1
 msgid ""
@@ -217,4 +217,7 @@ msgstr "设定用户属性中的键 (key)."
 #: ../../<_StudySetUserAttribute>:1
 msgid "Value to be set."
 msgstr "设定用户属性中的值 (value)."
+
+#~ msgid "Command Line Interface"
+#~ msgstr ""
 

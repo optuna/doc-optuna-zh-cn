@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 1.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-02 21:12-0400\n"
+"POT-Creation-Date: 2020-09-10 16:27-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -57,66 +57,64 @@ msgstr "运行上述脚本:"
 
 #: ../../source/tutorial/pruning.rst:70
 msgid ""
-"We can see ``Setting status of trial#{} as TrialState.PRUNED`` in the log"
-" messages. This means several trials are stopped before they finish all "
-"iterations."
+"``Trial 5 pruned.``, etc. in the log messages means several trials were "
+"stopped before they finished all of the iterations."
 msgstr ""
-"我们可以在日志消息中看到 ``Setting status of trial#{} as TrialState.PRUNED``.这意味着这些 "
-"trial 在他们完成迭代之前就被终止了。"
+"日志中诸如 ``Trial 5 pruned.`` 等消息表明这些 trial 在它们完成其所有的迭代之前就被终止了。"
 
-#: ../../source/tutorial/pruning.rst:75
+#: ../../source/tutorial/pruning.rst:74
 msgid "Integration Modules for Pruning"
 msgstr "用于 Pruning 的集成模块"
 
-#: ../../source/tutorial/pruning.rst:76
+#: ../../source/tutorial/pruning.rst:75
 msgid ""
 "To implement pruning mechanism in much simpler forms, Optuna provides "
 "integration modules for the following libraries."
 msgstr "为了能更加方便地实现 pruning, Optuna 为以下框架提供了集成模块。"
 
-#: ../../source/tutorial/pruning.rst:78
+#: ../../source/tutorial/pruning.rst:77
 msgid "XGBoost: :class:`optuna.integration.XGBoostPruningCallback`"
 msgstr ""
 
-#: ../../source/tutorial/pruning.rst:79
+#: ../../source/tutorial/pruning.rst:78
 msgid "LightGBM: :class:`optuna.integration.LightGBMPruningCallback`"
 msgstr ""
 
-#: ../../source/tutorial/pruning.rst:80
+#: ../../source/tutorial/pruning.rst:79
 msgid "Chainer: :class:`optuna.integration.ChainerPruningExtension`"
 msgstr ""
 
-#: ../../source/tutorial/pruning.rst:81
+#: ../../source/tutorial/pruning.rst:80
 msgid "Keras: :class:`optuna.integration.KerasPruningCallback`"
 msgstr ""
 
-#: ../../source/tutorial/pruning.rst:82
+#: ../../source/tutorial/pruning.rst:81
 msgid "TensorFlow :class:`optuna.integration.TensorFlowPruningHook`"
 msgstr ""
 
-#: ../../source/tutorial/pruning.rst:83
+#: ../../source/tutorial/pruning.rst:82
 msgid "tf.keras :class:`optuna.integration.TFKerasPruningCallback`"
 msgstr ""
 
-#: ../../source/tutorial/pruning.rst:84
+#: ../../source/tutorial/pruning.rst:83
 msgid "MXNet :class:`optuna.integration.MXNetPruningCallback`"
 msgstr ""
 
-#: ../../source/tutorial/pruning.rst:85
+#: ../../source/tutorial/pruning.rst:84
 msgid "PyTorch Ignite :class:`optuna.integration.PyTorchIgnitePruningHandler`"
 msgstr ""
 
-#: ../../source/tutorial/pruning.rst:86
+#: ../../source/tutorial/pruning.rst:85
 msgid ""
 "PyTorch Lightning "
 ":class:`optuna.integration.PyTorchLightningPruningCallback`"
 msgstr ""
 
-#: ../../source/tutorial/pruning.rst:87
+#: ../../source/tutorial/pruning.rst:86
 msgid "FastAI :class:`optuna.integration.FastAIPruningCallback`"
 msgstr ""
 
-#: ../../source/tutorial/pruning.rst:89
+#: ../../source/tutorial/pruning.rst:88
 msgid ""
 "For example, :class:`~optuna.integration.XGBoostPruningCallback` "
 "introduces pruning without directly changing the logic of training "

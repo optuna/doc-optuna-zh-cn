@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 1.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-02 21:12-0400\n"
+"POT-Creation-Date: 2020-09-10 16:27-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,126 +17,9 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.8.0\n"
 
-#: ../../source/reference/importance.rst:4
-msgid "Hyperparameter Importance"
+#: ../../source/reference/importance.rst:2
+msgid "optuna.importance"
 msgstr ""
-
-#: of optuna.importance.FanovaImportanceEvaluator.evaluate:1
-#: optuna.importance.get_param_importances:1
-msgid ""
-"Evaluate parameter importances based on completed trials in the given "
-"study."
-msgstr "根据给定 study 中完成的trial 来判断特定参数的重要性。"
-
-#: of optuna.importance.get_param_importances:3
-msgid ""
-"The parameter importances are returned as a dictionary where the keys "
-"consist of parameter names and their values importances. The importances "
-"are represented by floating point numbers that sum to 1.0 over the entire"
-" dictionary. The higher the value, the more important. The returned "
-"dictionary is of type :class:`collections.OrderedDict` and is ordered by "
-"its values in a descending order."
-msgstr ""
-"参数重要性以字典形式返回，其中键由参数名称及其重要性组成。重要性由浮点数表示，一个字典中所有的重要性之和为1.0该浮点数的值越高，其对应的参数也就越重要这个返回的字典属于"
-" :class:`collections.OrderedDict` 类，其中的元素会按照其中值的大小降序排序。"
-
-#: of optuna.importance.get_param_importances:11
-msgid ""
-"If ``params`` is :obj:`None`, all parameter that are present in all of "
-"the completed trials are assessed. This implies that conditional "
-"parameters will be excluded from the evaluation. To assess the "
-"importances of conditional parameters, a :obj:`list` of parameter names "
-"can be specified via ``params``. If specified, only completed trials that"
-" contain all of the parameters will be considered. If no such trials are "
-"found, an error will be raised."
-msgstr ""
-"如果 ``params`` 被设置成 :obj:`None`, 那么所有属于已完成 trial "
-"的参数都会被评估。这意味着，条件参数不会参与评估。要获得条件参数的重要性的话，你可以向 ``params`` 传入一个带有参数名的 "
-":obj:`list`.此时，只有包含了这些参数的trial才会被评估。如果没有发现满足这种条件的trial的话，Optuna将会抛出一个错误。"
-
-#: of optuna.importance.get_param_importances:19
-msgid ""
-"If the given study does not contain completed trials, an error will be "
-"raised."
-msgstr "如果给定的 study 不包含已完成的 trial 的话，Optuna将会抛出一个错误。"
-
-#: of optuna.importance.get_param_importances:23
-msgid ""
-"If ``params`` is specified as an empty list, an empty dictionary is "
-"returned."
-msgstr "如果 ``params`` 是一个空列表，那么将会返回一个空字典"
-
-#: of optuna.importance.FanovaImportanceEvaluator.evaluate
-#: optuna.importance.get_param_importances
-msgid "参数"
-msgstr ""
-
-#: of optuna.importance.FanovaImportanceEvaluator.evaluate:12
-#: optuna.importance.get_param_importances:25
-msgid "An optimized study."
-msgstr "一个已优化完的 study."
-
-#: of optuna.importance.get_param_importances:26
-msgid ""
-"An importance evaluator object that specifies which algorithm to base the"
-" importance assessment on. Defaults to "
-":class:`~optuna.importance._mean_decrease_impurity.MeanDecreaseImpurityImportanceEvaluator`."
-msgstr ""
-"重要性求解器。该求解器指定用于评估重要性的算法。默认情况下我们会使用 "
-":class:`~optuna.importance._mean_decrease_impurity.MeanDecreaseImpurityImportanceEvaluator`."
-
-#: of optuna.importance.FanovaImportanceEvaluator.evaluate:13
-#: optuna.importance.get_param_importances:30
-msgid ""
-"A list of names of parameters to assess. If :obj:`None`, all parameters "
-"that are present in all of the completed trials are assessed."
-msgstr "参与评估的参数名列表。如果设置成  :obj:`None` 的话，所有的属于已完成 trial 的参数都会被评估。"
-
-#: of optuna.importance.FanovaImportanceEvaluator.evaluate
-#: optuna.importance.get_param_importances
-msgid "返回"
-msgstr ""
-
-#: of optuna.importance.FanovaImportanceEvaluator.evaluate:17
-#: optuna.importance.get_param_importances:34
-msgid ""
-"An :class:`collections.OrderedDict` where the keys are parameter names "
-"and the values are assessed importances."
-msgstr "一个  :class:`collections.OrderedDict`  类。它的键都是被评估过重要性的参数名。"
-
-#: of optuna.importance.FanovaImportanceEvaluator:14
-#: optuna.importance.get_param_importances:38
-msgid ""
-"Added in v1.3.0 as an experimental feature. The interface may change in "
-"newer versions without prior notice. See "
-"https://github.com/optuna/optuna/releases/tag/v1.3.0."
-msgstr ""
-"v1.3.0 版本中新加入的试验性特性。在未来的版本中，该接口可能在没有预先告知的情况下改变。 具体参见 "
-"https://github.com/optuna/optuna/releases/tag/v1.3.0."
-
-#: of optuna.importance.FanovaImportanceEvaluator:1
-msgid "fANOVA parameter importance evaluator."
-msgstr "fANOVA 参数重要性求解器"
-
-#: of optuna.importance.FanovaImportanceEvaluator:5
-msgid "Requires the `fanova <https://github.com/automl/fanova>`_ Python package."
-msgstr "依赖 `fanova <https://github.com/automl/fanova>` 包。"
-
-#: of optuna.importance.FanovaImportanceEvaluator:9
-msgid ""
-"`An Efficient Approach for Assessing Hyperparameter Importance "
-"<http://proceedings.mlr.press/v32/hutter14.html>`_."
-msgstr "一种便捷的评估超参数重要性的途径 <http://proceedings.mlr.press/v32/hutter14.html>`_."
-
-#: of optuna.importance.FanovaImportanceEvaluator.evaluate:5
-msgid "This method is not meant to be called by library users."
-msgstr ""
-
-#: of optuna.importance.FanovaImportanceEvaluator.evaluate:9
-msgid ""
-"Please refer to :func:`~optuna.importance.get_param_importances` for how "
-"a concrete evaluator should implement this method."
-msgstr "参考 :func:`~optuna.importance.get_param_importances` 来看如何实现一个具体的求解器。"
 
 #~ msgid ""
 #~ "See :func:`~optuna.visualization.plot_param_importances` "
@@ -191,4 +74,125 @@ msgstr "参考 :func:`~optuna.importance.get_param_importances` 来看如何实�
 #~ msgstr ""
 #~ "该特性在 v1.5.0 中被作为实验特性加入。在未来的版本中，该接口可能在没有预先告知的情况下改变。具体参见 "
 #~ "https://github.com/optuna/optuna/releases/tag/v1.5.0."
+
+#~ msgid "Hyperparameter Importance"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Evaluate parameter importances based on "
+#~ "completed trials in the given study."
+#~ msgstr "根据给定 study 中完成的trial 来判断特定参数的重要性。"
+
+#~ msgid ""
+#~ "The parameter importances are returned "
+#~ "as a dictionary where the keys "
+#~ "consist of parameter names and their "
+#~ "values importances. The importances are "
+#~ "represented by floating point numbers "
+#~ "that sum to 1.0 over the entire"
+#~ " dictionary. The higher the value, "
+#~ "the more important. The returned "
+#~ "dictionary is of type "
+#~ ":class:`collections.OrderedDict` and is ordered "
+#~ "by its values in a descending "
+#~ "order."
+#~ msgstr ""
+#~ "参数重要性以字典形式返回，其中键由参数名称及其重要性组成。重要性由浮点数表示，一个字典中所有的重要性之和为1.0该浮点数的值越高，其对应的参数也就越重要这个返回的字典属于"
+#~ " :class:`collections.OrderedDict` 类，其中的元素会按照其中值的大小降序排序。"
+
+#~ msgid ""
+#~ "If ``params`` is :obj:`None`, all "
+#~ "parameter that are present in all "
+#~ "of the completed trials are assessed."
+#~ " This implies that conditional parameters"
+#~ " will be excluded from the "
+#~ "evaluation. To assess the importances of"
+#~ " conditional parameters, a :obj:`list` of"
+#~ " parameter names can be specified via"
+#~ " ``params``. If specified, only completed"
+#~ " trials that contain all of the "
+#~ "parameters will be considered. If no "
+#~ "such trials are found, an error "
+#~ "will be raised."
+#~ msgstr ""
+#~ "如果 ``params`` 被设置成 :obj:`None`, 那么所有属于已完成 "
+#~ "trial 的参数都会被评估。这意味着，条件参数不会参与评估。要获得条件参数的重要性的话，你可以向 "
+#~ "``params`` 传入一个带有参数名的 "
+#~ ":obj:`list`.此时，只有包含了这些参数的trial才会被评估。如果没有发现满足这种条件的trial的话，Optuna将会抛出一个错误。"
+
+#~ msgid ""
+#~ "If the given study does not "
+#~ "contain completed trials, an error will"
+#~ " be raised."
+#~ msgstr "如果给定的 study 不包含已完成的 trial 的话，Optuna将会抛出一个错误。"
+
+#~ msgid ""
+#~ "If ``params`` is specified as an "
+#~ "empty list, an empty dictionary is "
+#~ "returned."
+#~ msgstr "如果 ``params`` 是一个空列表，那么将会返回一个空字典"
+
+#~ msgid "参数"
+#~ msgstr ""
+
+#~ msgid "An optimized study."
+#~ msgstr "一个已优化完的 study."
+
+#~ msgid ""
+#~ "An importance evaluator object that "
+#~ "specifies which algorithm to base the"
+#~ " importance assessment on. Defaults to "
+#~ ":class:`~optuna.importance._mean_decrease_impurity.MeanDecreaseImpurityImportanceEvaluator`."
+#~ msgstr ""
+#~ "重要性求解器。该求解器指定用于评估重要性的算法。默认情况下我们会使用 "
+#~ ":class:`~optuna.importance._mean_decrease_impurity.MeanDecreaseImpurityImportanceEvaluator`."
+
+#~ msgid ""
+#~ "A list of names of parameters to"
+#~ " assess. If :obj:`None`, all parameters "
+#~ "that are present in all of the "
+#~ "completed trials are assessed."
+#~ msgstr "参与评估的参数名列表。如果设置成  :obj:`None` 的话，所有的属于已完成 trial 的参数都会被评估。"
+
+#~ msgid "返回"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "An :class:`collections.OrderedDict` where the "
+#~ "keys are parameter names and the "
+#~ "values are assessed importances."
+#~ msgstr "一个  :class:`collections.OrderedDict`  类。它的键都是被评估过重要性的参数名。"
+
+#~ msgid ""
+#~ "Added in v1.3.0 as an experimental "
+#~ "feature. The interface may change in "
+#~ "newer versions without prior notice. See"
+#~ " https://github.com/optuna/optuna/releases/tag/v1.3.0."
+#~ msgstr ""
+#~ "v1.3.0 版本中新加入的试验性特性。在未来的版本中，该接口可能在没有预先告知的情况下改变。 具体参见 "
+#~ "https://github.com/optuna/optuna/releases/tag/v1.3.0."
+
+#~ msgid "fANOVA parameter importance evaluator."
+#~ msgstr "fANOVA 参数重要性求解器"
+
+#~ msgid ""
+#~ "Requires the `fanova "
+#~ "<https://github.com/automl/fanova>`_ Python package."
+#~ msgstr "依赖 `fanova <https://github.com/automl/fanova>` 包。"
+
+#~ msgid ""
+#~ "`An Efficient Approach for Assessing "
+#~ "Hyperparameter Importance "
+#~ "<http://proceedings.mlr.press/v32/hutter14.html>`_."
+#~ msgstr "一种便捷的评估超参数重要性的途径 <http://proceedings.mlr.press/v32/hutter14.html>`_."
+
+#~ msgid "This method is not meant to be called by library users."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Please refer to "
+#~ ":func:`~optuna.importance.get_param_importances` for how"
+#~ " a concrete evaluator should implement "
+#~ "this method."
+#~ msgstr "参考 :func:`~optuna.importance.get_param_importances` 来看如何实现一个具体的求解器。"
 

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 1.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-02 21:12-0400\n"
+"POT-Creation-Date: 2020-09-10 16:27-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -49,16 +49,19 @@ msgid "Optuna has modern functionalities as follows:"
 msgstr "Optuna 有如下现代化的功能："
 
 #: ../../source/index.rst:17
-msgid "Parallel distributed optimization"
-msgstr "并行的分布式优化"
+msgid ""
+":doc:`Lightweight, versatile, and platform agnostic architecture "
+"<tutorial/first>`"
+msgstr ":doc:`轻量级、多功能和跨平台架构 "
+"<tutorial/first>`"
 
 #: ../../source/index.rst:18
-msgid "Pruning of unpromising trials"
-msgstr "对不理想实验 (trial) 的剪枝 (pruning)"
+msgid ":doc:`Parallel distributed optimization <tutorial/distributed>`"
+msgstr ":doc:`并行的分布式优化 <tutorial/distributed>`"
 
 #: ../../source/index.rst:19
-msgid "Lightweight, versatile, and platform agnostic architecture"
-msgstr "轻量级、多功能和跨平台架构"
+msgid ":doc:`Pruning of unpromising trials <tutorial/pruning>`"
+msgstr ":doc:`对不理想实验 (trial) 的剪枝 (pruning) <tutorial/pruning>`"
 
 #: ../../source/index.rst:22
 msgid "Basic Concepts"
