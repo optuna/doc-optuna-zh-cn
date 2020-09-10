@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 1.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-06-17 19:47-0400\n"
+"POT-Creation-Date: 2020-09-02 21:12-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -40,12 +40,14 @@ msgid ""
 ":func:`optuna.multi_objective.study.MultiObjectiveStudy.optimize()` "
 "method; hence library users do not care about instantiation of this "
 "object."
-msgstr "注意，我们并不推荐直接使用该构造函数。该对象是在 :func:`optuna.multi_objective.study.MultiObjectiveStudy.optimize()` 方法中被实例化然后被传递给目标函数的。"
-"因此，库用户无需关心该对象的实例化过程。"
+msgstr ""
+"注意，我们并不推荐直接使用该构造函数。该对象是在 "
+":func:`optuna.multi_objective.study.MultiObjectiveStudy.optimize()` "
+"方法中被实例化然后被传递给目标函数的。因此，库用户无需关心该对象的实例化过程。"
 
 #: of optuna.multi_objective.trial.MultiObjectiveTrial
 #: optuna.multi_objective.trial.MultiObjectiveTrial.report
-msgid "Parameters"
+msgid "参数"
 msgstr ""
 
 #: of optuna.multi_objective.trial.MultiObjectiveTrial:11
@@ -58,9 +60,9 @@ msgid ""
 "Added in v1.4.0 as an experimental feature. The interface may change in "
 "newer versions without prior notice. See "
 "https://github.com/optuna/optuna/releases/tag/v1.4.0."
-msgstr "在 v1.4.0 中作为试验性特性引入，在未来版本中，该接口可能在没有预先告知的情况下被改变。参考 "
+msgstr ""
+"在 v1.4.0 中作为试验性特性引入，在未来版本中，该接口可能在没有预先告知的情况下被改变。参考 "
 "https://github.com/optuna/optuna/releases/tag/v1.4.0."
-
 
 #: of optuna.multi_objective.trial.MultiObjectiveTrial.datetime_start:1
 msgid "Return start datetime."
@@ -71,7 +73,7 @@ msgstr "返回开始时间。"
 #: optuna.multi_objective.trial.MultiObjectiveTrial.number
 #: optuna.multi_objective.trial.MultiObjectiveTrial.params
 #: optuna.multi_objective.trial.MultiObjectiveTrial.user_attrs
-msgid "Returns"
+msgid "返回"
 msgstr ""
 
 #: of optuna.multi_objective.trial.MultiObjectiveTrial.datetime_start:3
@@ -122,8 +124,9 @@ msgid ""
 "``float()`` function internally. Thus, it accepts all float-like types "
 "(e.g., ``numpy.float32``). If the conversion fails, a ``TypeError`` is "
 "raised."
-msgstr "该返回值会被 ``float()`` 转化成 ``float`` 类型。因此，它接受所有 类 float 数据类型。如果转换失败，Optuna 将抛出一个"
-" ``TypeError`` 。"
+msgstr ""
+"该返回值会被 ``float()`` 转化成 ``float`` 类型。因此，它接受所有 类 float 数据类型。如果转换失败，Optuna "
+"将抛出一个 ``TypeError`` 。"
 
 #: of optuna.multi_objective.trial.MultiObjectiveTrial.report:14
 msgid "Intermediate objective function values for a given step."
@@ -222,14 +225,18 @@ msgid ""
 ":class:`~optuna.multi_objective.trial.MultiObjectiveTrial` for each "
 ":class:`~optuna.multi_objective.study.MultiObjectiveStudy`. Note that "
 "this field uses zero-based numbering."
-msgstr "每个 :class:`~optuna.multi_objective.study.MultiObjectiveStudy` 中的每个 :class:`~optuna.multi_objective.trial.MultiObjectiveTrial` 所拥有的"
-"唯一且连续的编号。注意，该编号从零开始计数。"
+msgstr ""
+"每个 :class:`~optuna.multi_objective.study.MultiObjectiveStudy` 中的每个 "
+":class:`~optuna.multi_objective.trial.MultiObjectiveTrial` "
+"所拥有的唯一且连续的编号。注意，该编号从零开始计数。"
 
 #: of optuna.multi_objective.trial.FrozenMultiObjectiveTrial:12
 msgid ""
 ":class:`~optuna.trial.TrialState` of the "
 ":class:`~optuna.multi_objective.trial.MultiObjectiveTrial`."
-msgstr ":class:`~optuna.multi_objective.trial.MultiObjectiveTrial` 的 :class:`~optuna.trial.TrialState` 。"
+msgstr ""
+":class:`~optuna.multi_objective.trial.MultiObjectiveTrial` 的 "
+":class:`~optuna.trial.TrialState` 。"
 
 #: of optuna.multi_objective.trial.FrozenMultiObjectiveTrial:17
 msgid ""
@@ -262,11 +269,22 @@ msgid ""
 "Dictionary that contains the attributes of the "
 ":class:`~optuna.multi_objective.trial.MultiObjectiveTrial` set with "
 ":func:`optuna.multi_objective.trial.MultiObjectiveTrial.set_user_attr`."
-msgstr "包含通过 :func:`optuna.multi_objective.trial.MultiObjectiveTrial.set_user_attr` 来设置的 :class:`~optuna.multi_objective.trial.MultiObjectiveTrial` 的属性字典。"
+msgstr ""
+"包含通过 "
+":func:`optuna.multi_objective.trial.MultiObjectiveTrial.set_user_attr` "
+"来设置的 :class:`~optuna.multi_objective.trial.MultiObjectiveTrial` 的属性字典。"
 
 #: of optuna.multi_objective.trial.FrozenMultiObjectiveTrial:43
 msgid ""
 "Intermediate objective values set with "
 ":func:`optuna.multi_objective.trial.MultiObjectiveTrial.report`."
-msgstr "通过 :func:`optuna.multi_objective.trial.MultiObjectiveTrial.report` 设置的中间目标函数值。"
+msgstr ""
+"通过 :func:`optuna.multi_objective.trial.MultiObjectiveTrial.report` "
+"设置的中间目标函数值。"
+
+#~ msgid "Parameters"
+#~ msgstr ""
+
+#~ msgid "Returns"
+#~ msgstr ""
 

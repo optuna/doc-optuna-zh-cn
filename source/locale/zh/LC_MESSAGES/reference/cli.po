@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 1.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-06-17 19:47-0400\n"
+"POT-Creation-Date: 2020-09-02 21:12-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -100,10 +100,10 @@ msgid ""
 "https://bokeh.pydata.org/en/latest/docs/reference/command/subcommands/serve.html"
 " for more details."
 msgstr ""
-"允许从制定的 host 发起的的 websocket 请求。"
-"该选项用法和 bokeh 的 ``–allow-websocket-origin`` 一样。"
-"更多细节见 https://docs.bokeh.org/en/latest/docs/reference/command/subcommands/serve.html."
-"设定具有可读性的 study 名，以方便和其他的 study 区分。"
+"允许从制定的 host 发起的的 websocket 请求。该选项用法和 bokeh 的 ``–allow-websocket-origin`` "
+"一样。更多细节见 "
+"https://docs.bokeh.org/en/latest/docs/reference/command/subcommands/serve.html.设定具有可读性的"
+" study 名，以方便和其他的 study 区分。"
 
 msgid "delete-study"
 msgstr ""
@@ -132,14 +132,13 @@ msgstr "输出格式，默认情况下是表格。"
 
 #: ../../<_Studies>:1
 msgid "specify the column(s) to include, can be repeated to show multiple columns"
-msgstr ""
-"用于设定要展示的（表格）列。"
-"可设置多个 column 参数以同时显示多个column."
+msgstr "用于设定要展示的（表格）列。可设置多个 column 参数以同时显示多个column."
 
 #: ../../<_Studies>:1
 msgid "when to include quotes, defaults to nonnumeric"
 msgstr ""
-#  TODO
+
+# TODO
 #: ../../<_Studies>:1
 msgid "whether to disable indenting the JSON"
 msgstr "设定是否在 json输出格式中禁用缩进。"
@@ -150,19 +149,16 @@ msgid ""
 "CLIFF_MAX_TERM_WIDTH environment variable, but the parameter takes "
 "precedence."
 msgstr ""
-"最大展示宽度。如果设置成小于 1 的数值，就代表禁用最大宽度限制。"
-"你也可以通过设置 ``CLIFF_MAX_TERM_WIDTH `` 环境变量来限制最大宽度，"
-"但是 ``--max-width`` 参数的优先级比环境变量高。"
+"最大展示宽度。如果设置成小于 1 的数值，就代表禁用最大宽度限制。你也可以通过设置 ``CLIFF_MAX_TERM_WIDTH `` "
+"环境变量来限制最大宽度，但是 ``--max-width`` 参数的优先级比环境变量高。"
 
 #: ../../<_Studies>:1
 msgid ""
 "Fit the table to the display width. Implied if --max-width greater than "
 "0. Set the environment variable CLIFF_FIT_WIDTH=1 to always enable"
 msgstr ""
-"将输出表格设置成与显示屏同宽。"
-"如果 ``-max-width`` > 1 的话，该选项会自动启用。"
-"设定是否在 json 中禁用缩进。"
-"也可以通过设置 ``CLIFF_FIT_WIDTH`` 环境变量的值为 1 来启用该选项。"
+"将输出表格设置成与显示屏同宽。如果 ``-max-width`` > 1 的话，该选项会自动启用。设定是否在 json 中禁用缩进。也可以通过设置"
+" ``CLIFF_FIT_WIDTH`` 环境变量的值为 1 来启用该选项。"
 
 #: ../../<_Studies>:1
 msgid "Print empty table if there is no data to show."
@@ -172,15 +168,13 @@ msgstr "在无数据的情况下也输出空表格"
 msgid ""
 "specify the column(s) to sort the data (columns specified first have a "
 "priority, non-existing columns are ignored), can be repeated"
-msgstr ""
-"按照指定列来对表格的行进行排序。"
-"越靠前指定的列在排序中的优先级越高。没有被指定的列不参与排序。"
+msgstr "按照指定列来对表格的行进行排序。越靠前指定的列在排序中的优先级越高。没有被指定的列不参与排序。"
 
 msgid "study optimize"
 msgstr ""
 
 #: ../../<_StudyOptimize>:1
-msgid "Start optimization of a study. Deprecated since version 2.0.0."
+msgid "Start optimization of a study."
 msgstr "针对特定 study 开始优化过程。"
 
 #: ../../<_StudyOptimize>:1

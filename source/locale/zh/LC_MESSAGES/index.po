@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 1.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-06-17 19:47-0400\n"
+"POT-Creation-Date: 2020-09-02 21:12-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -36,7 +36,9 @@ msgid ""
 "*define-by-run* style user API. Thanks to our *define-by-run* API, the "
 "code written with Optuna enjoys high modularity, and the user of Optuna "
 "can dynamically construct the search spaces for the hyperparameters."
-msgstr "*Optuna* 是一个特别为机器学习设计的自动超参数优化软件框架。它具有命令式的，*define-by-run* 风格的 API。由于这种 API 的存在，用 Optuna 编写的代码模块化程度很高，Optuna 的用户因此也可以动态地构造超参数的搜索空间。"
+msgstr ""
+"*Optuna* 是一个特别为机器学习设计的自动超参数优化软件框架。它具有命令式的，*define-by-run* 风格的 API。由于这种 "
+"API 的存在，用 Optuna 编写的代码模块化程度很高，Optuna 的用户因此也可以动态地构造超参数的搜索空间。"
 
 #: ../../source/index.rst:13
 msgid "Key Features"
@@ -47,21 +49,16 @@ msgid "Optuna has modern functionalities as follows:"
 msgstr "Optuna 有如下现代化的功能："
 
 #: ../../source/index.rst:17
-msgid ""
-":doc:`Lightweight, versatile, and platform agnostic architecture "
-"<tutorial/first>`"
-msgstr ""
-":doc:`轻量级、多功能和跨平台架构 "
-"<tutorial/first>`"
+msgid "Parallel distributed optimization"
+msgstr "并行的分布式优化"
 
 #: ../../source/index.rst:18
-msgid ":doc:`Parallel distributed optimization <tutorial/distributed>`"
-msgstr ":doc:`并行的分布式优化<tutorial/distributed>`"
-
+msgid "Pruning of unpromising trials"
+msgstr "对不理想实验 (trial) 的剪枝 (pruning)"
 
 #: ../../source/index.rst:19
-msgid ":doc:`Pruning of unpromising trials <tutorial/pruning>`"
-msgstr ":doc:`对不理想实验 (trial) 的剪枝 (pruning) <tutorial/pruning>`"
+msgid "Lightweight, versatile, and platform agnostic architecture"
+msgstr "轻量级、多功能和跨平台架构"
 
 #: ../../source/index.rst:22
 msgid "Basic Concepts"
@@ -86,7 +83,10 @@ msgid ""
 "``svm_c``) through multiple *trials* (e.g., ``n_trials=100``). Optuna is "
 "a framework designed for the automation and the acceleration of the "
 "optimization *studies*."
-msgstr "请参考下面的示例代码。一个 *study* 的目的是通过多次 *trial* (例如 ``n_trials=100`` ) 来找出最佳的超参数值集（比如选择 ``classifier`` 还是 ``svm_c``）。而 Optuna 旨在加速和自动化此类 *study* 优化过程。"
+msgstr ""
+"请参考下面的示例代码。一个 *study* 的目的是通过多次 *trial* (例如 ``n_trials=100`` ) "
+"来找出最佳的超参数值集（比如选择 ``classifier`` 还是 ``svm_c``）。而 Optuna 旨在加速和自动化此类 *study*"
+" 优化过程。"
 
 #: ../../source/index.rst:35
 msgid "|Open in Colab|"
@@ -100,7 +100,9 @@ msgstr ""
 msgid ""
 "`GitHub Issues <https://github.com/optuna/optuna/issues>`__ for bug "
 "reports, feature requests and questions."
-msgstr "可在 `GitHub Issues <https://github.com/optuna/optuna/issues>`__ 报告bug、提feature request 和问问题。"
+msgstr ""
+"可在 `GitHub Issues <https://github.com/optuna/optuna/issues>`__ "
+"报告bug、提feature request 和问问题。"
 
 #: ../../source/index.rst:71
 msgid ""
@@ -112,7 +114,9 @@ msgstr "可在 `Gitter <https://gitter.im/optuna/optuna>`__ 与开发者互动."
 msgid ""
 "`Stack Overflow <https://stackoverflow.com/questions/tagged/optuna>`__ "
 "for questions."
-msgstr "可在 `StackOverflow <https://stackoverflow.com/questions/tagged/optuna>`__ 提问。"
+msgstr ""
+"可在 `StackOverflow <https://stackoverflow.com/questions/tagged/optuna>`__ "
+"提问。"
 
 #: ../../source/index.rst:78
 msgid "Contribution"
@@ -123,7 +127,9 @@ msgid ""
 "Any contributions to Optuna are welcome! When you send a pull request, "
 "please follow the `contribution guide "
 "<https://github.com/optuna/optuna/blob/master/CONTRIBUTING.md>`__."
-msgstr "欢迎大家对Optuna的一切贡献！但是在发送pull request时请遵从 `contribution guide <https://github.com/optuna/optuna/blob/master/CONTRIBUTING.md>`__ 的规范."
+msgstr ""
+"欢迎大家对Optuna的一切贡献！但是在发送pull request时请遵从 `contribution guide "
+"<https://github.com/optuna/optuna/blob/master/CONTRIBUTING.md>`__ 的规范."
 
 #: ../../source/index.rst:84
 msgid "License"
