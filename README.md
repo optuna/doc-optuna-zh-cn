@@ -43,7 +43,7 @@
 
 生成更新后的文档的静态网页，检查是否有错：
 
-`make -e SPHINXOPTS="-Dlanguage='zh'" html` 
+`make html` 
 
 确认无误后，在当前分支提交修改并创建PR，等待更新被merge到主分支中。
 

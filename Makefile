@@ -2,7 +2,7 @@
 #
 
 # You can set these variables from the command line.
-SPHINXOPTS    = -W --keep-going
+SPHINXOPTS    = -W --keep-going -Dlanguage='zh'
 SPHINXBUILD   = sphinx-build
 SPHINXPROJ    = Optuna
 SOURCEDIR     = source
