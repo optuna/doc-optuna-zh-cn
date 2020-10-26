@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 1.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-26 12:27-0400\n"
+"POT-Creation-Date: 2020-10-26 14:44-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -29,6 +29,50 @@ msgid ""
 ":class:`~optuna.exceptions.TrialPruned` exception to be raised if "
 ":func:`optuna.trial.Trial.should_prune` returns ``True`` for a trial that"
 " should be pruned."
+msgstr ""
+
+#: ../../source/reference/exceptions.rst:16:<autosummary>:1
+msgid ":obj:`optuna.exceptions.OptunaError <optuna.exceptions.OptunaError>`"
+msgstr ""
+
+#: ../../source/reference/exceptions.rst:16:<autosummary>:1
+msgid "Base class for Optuna specific errors."
+msgstr ""
+
+#: ../../source/reference/exceptions.rst:16:<autosummary>:1
+msgid ":obj:`optuna.exceptions.TrialPruned <optuna.exceptions.TrialPruned>`"
+msgstr ""
+
+#: ../../source/reference/exceptions.rst:16:<autosummary>:1
+msgid "Exception for pruned trials."
+msgstr ""
+
+#: ../../source/reference/exceptions.rst:16:<autosummary>:1
+msgid ":obj:`optuna.exceptions.CLIUsageError <optuna.exceptions.CLIUsageError>`"
+msgstr ""
+
+#: ../../source/reference/exceptions.rst:16:<autosummary>:1
+msgid "Exception for CLI."
+msgstr ""
+
+#: ../../source/reference/exceptions.rst:16:<autosummary>:1
+msgid ""
+":obj:`optuna.exceptions.StorageInternalError "
+"<optuna.exceptions.StorageInternalError>`"
+msgstr ""
+
+#: ../../source/reference/exceptions.rst:16:<autosummary>:1
+msgid "Exception for storage operation."
+msgstr ""
+
+#: ../../source/reference/exceptions.rst:16:<autosummary>:1
+msgid ""
+":obj:`optuna.exceptions.DuplicatedStudyError "
+"<optuna.exceptions.DuplicatedStudyError>`"
+msgstr ""
+
+#: ../../source/reference/exceptions.rst:16:<autosummary>:1
+msgid "Exception for a duplicated study name."
 msgstr ""
 
 #~ msgid "Example"

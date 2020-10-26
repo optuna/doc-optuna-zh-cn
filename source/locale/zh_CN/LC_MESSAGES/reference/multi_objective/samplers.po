@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 1.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-10 16:27-0400\n"
+"POT-Creation-Date: 2020-10-26 14:44-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,9 +17,40 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.8.0\n"
 
-#: ../../source/reference/multi_objective/samplers.rst:2
+#: ../../source/reference/multi_objective/samplers.rst:4
 msgid "optuna.multi_objective.samplers"
 msgstr "multi-objective sampler 类"
+
+#: ../../source/reference/multi_objective/samplers.rst:13:<autosummary>:1
+msgid ""
+":obj:`optuna.multi_objective.samplers.BaseMultiObjectiveSampler "
+"<optuna.multi_objective.samplers.BaseMultiObjectiveSampler>`"
+msgstr ""
+
+#: ../../source/reference/multi_objective/samplers.rst:13:<autosummary>:1
+#, fuzzy
+msgid "Base class for multi-objective samplers."
+msgstr "multi-objective sampler 类"
+
+#: ../../source/reference/multi_objective/samplers.rst:13:<autosummary>:1
+msgid ""
+":obj:`optuna.multi_objective.samplers.NSGAIIMultiObjectiveSampler "
+"<optuna.multi_objective.samplers.NSGAIIMultiObjectiveSampler>`"
+msgstr ""
+
+#: ../../source/reference/multi_objective/samplers.rst:13:<autosummary>:1
+msgid "Multi-objective sampler using the NSGA-II algorithm."
+msgstr ""
+
+#: ../../source/reference/multi_objective/samplers.rst:13:<autosummary>:1
+msgid ""
+":obj:`optuna.multi_objective.samplers.RandomMultiObjectiveSampler "
+"<optuna.multi_objective.samplers.RandomMultiObjectiveSampler>`"
+msgstr ""
+
+#: ../../source/reference/multi_objective/samplers.rst:13:<autosummary>:1
+msgid "Multi-objective sampler using random sampling."
+msgstr ""
 
 #~ msgid "Parameters"
 #~ msgstr ""

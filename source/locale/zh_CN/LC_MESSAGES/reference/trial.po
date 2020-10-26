@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 1.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-26 12:27-0400\n"
+"POT-Creation-Date: 2020-10-26 14:44-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -36,6 +36,46 @@ msgid ""
 " Optuna users can define a custom objective function through the "
 "interfaces. Basically, Optuna users only use it in their custom objective"
 " functions."
+msgstr ""
+
+#: ../../source/reference/trial.rst:18:<autosummary>:1
+msgid ":obj:`optuna.trial.Trial <optuna.trial.Trial>`"
+msgstr ""
+
+#: ../../source/reference/trial.rst:18:<autosummary>:1
+msgid "A trial is a process of evaluating an objective function."
+msgstr ""
+
+#: ../../source/reference/trial.rst:18:<autosummary>:1
+msgid ":obj:`optuna.trial.FixedTrial <optuna.trial.FixedTrial>`"
+msgstr ""
+
+#: ../../source/reference/trial.rst:18:<autosummary>:1
+msgid "A trial class which suggests a fixed value for each parameter."
+msgstr ""
+
+#: ../../source/reference/trial.rst:18:<autosummary>:1
+msgid ":obj:`optuna.trial.FrozenTrial <optuna.trial.FrozenTrial>`"
+msgstr ""
+
+#: ../../source/reference/trial.rst:18:<autosummary>:1
+msgid "Status and results of a :class:`~optuna.trial.Trial`."
+msgstr ""
+
+#: ../../source/reference/trial.rst:18:<autosummary>:1
+msgid ":obj:`optuna.trial.TrialState <optuna.trial.TrialState>`"
+msgstr ""
+
+#: ../../source/reference/trial.rst:18:<autosummary>:1
+msgid "State of a :class:`~optuna.trial.Trial`."
+msgstr ""
+
+#: ../../source/reference/trial.rst:18:<autosummary>:1
+msgid ":obj:`optuna.trial.create_trial <optuna.trial.create_trial>`"
+msgstr ""
+
+#: ../../source/reference/trial.rst:18:<autosummary>:1
+msgid "Create a new :class:`~optuna.trial.FrozenTrial`."
 msgstr ""
 
 #~ msgid "Parameters"

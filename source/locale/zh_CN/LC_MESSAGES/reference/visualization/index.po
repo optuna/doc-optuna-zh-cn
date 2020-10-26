@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 2.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-26 12:27-0400\n"
+"POT-Creation-Date: 2020-10-26 14:44-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -35,6 +35,82 @@ msgid ""
 "plotly to create figures, but `JupyterLab`_ cannot render them by "
 "default. Please follow this `installation guide`_ to show figures in "
 "`JupyterLab`_."
+msgstr ""
+
+#: ../../source/reference/visualization/index.rst:28:<autosummary>:1
+msgid ""
+":obj:`optuna.visualization.plot_contour "
+"<optuna.visualization.plot_contour>`"
+msgstr ""
+
+#: ../../source/reference/visualization/index.rst:28:<autosummary>:1
+msgid "Plot the parameter relationship as contour plot in a study."
+msgstr ""
+
+#: ../../source/reference/visualization/index.rst:28:<autosummary>:1
+msgid ":obj:`optuna.visualization.plot_edf <optuna.visualization.plot_edf>`"
+msgstr ""
+
+#: ../../source/reference/visualization/index.rst:28:<autosummary>:1
+msgid "Plot the objective value EDF (empirical distribution function) of a study."
+msgstr ""
+
+#: ../../source/reference/visualization/index.rst:28:<autosummary>:1
+msgid ""
+":obj:`optuna.visualization.plot_intermediate_values "
+"<optuna.visualization.plot_intermediate_values>`"
+msgstr ""
+
+#: ../../source/reference/visualization/index.rst:28:<autosummary>:1
+msgid "Plot intermediate values of all trials in a study."
+msgstr ""
+
+#: ../../source/reference/visualization/index.rst:28:<autosummary>:1
+msgid ""
+":obj:`optuna.visualization.plot_optimization_history "
+"<optuna.visualization.plot_optimization_history>`"
+msgstr ""
+
+#: ../../source/reference/visualization/index.rst:28:<autosummary>:1
+msgid "Plot optimization history of all trials in a study."
+msgstr ""
+
+#: ../../source/reference/visualization/index.rst:28:<autosummary>:1
+msgid ""
+":obj:`optuna.visualization.plot_parallel_coordinate "
+"<optuna.visualization.plot_parallel_coordinate>`"
+msgstr ""
+
+#: ../../source/reference/visualization/index.rst:28:<autosummary>:1
+msgid "Plot the high-dimentional parameter relationships in a study."
+msgstr ""
+
+#: ../../source/reference/visualization/index.rst:28:<autosummary>:1
+msgid ""
+":obj:`optuna.visualization.plot_param_importances "
+"<optuna.visualization.plot_param_importances>`"
+msgstr ""
+
+#: ../../source/reference/visualization/index.rst:28:<autosummary>:1
+msgid "Plot hyperparameter importances."
+msgstr ""
+
+#: ../../source/reference/visualization/index.rst:28:<autosummary>:1
+msgid ":obj:`optuna.visualization.plot_slice <optuna.visualization.plot_slice>`"
+msgstr ""
+
+#: ../../source/reference/visualization/index.rst:28:<autosummary>:1
+msgid "Plot the parameter relationship as slice plot in a study."
+msgstr ""
+
+#: ../../source/reference/visualization/index.rst:28:<autosummary>:1
+msgid ""
+":obj:`optuna.visualization.is_available "
+"<optuna.visualization.is_available>`"
+msgstr ""
+
+#: ../../source/reference/visualization/index.rst:28:<autosummary>:1
+msgid "Returns whether visualization with plotly is available or not."
 msgstr ""
 
 #: ../../source/reference/visualization/index.rst:30

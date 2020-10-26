@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 2.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-26 12:27-0400\n"
+"POT-Creation-Date: 2020-10-26 14:44-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -26,6 +26,16 @@ msgid ""
 ":mod:`optuna.multi_objective.visualization` module uses plotly to create "
 "figures, but `JupyterLab`_ cannot render them by default. Please follow "
 "this `installation guide`_ to show figures in `JupyterLab`_."
+msgstr ""
+
+#: ../../source/reference/multi_objective/visualization.rst:18:<autosummary>:1
+msgid ""
+":obj:`optuna.multi_objective.visualization.plot_pareto_front "
+"<optuna.multi_objective.visualization.plot_pareto_front>`"
+msgstr ""
+
+#: ../../source/reference/multi_objective/visualization.rst:18:<autosummary>:1
+msgid "Plot the pareto front of a study."
 msgstr ""
 
 #~ msgid ""

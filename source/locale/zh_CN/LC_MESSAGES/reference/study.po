@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 1.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-26 12:27-0400\n"
+"POT-Creation-Date: 2020-10-26 14:44-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -30,6 +30,66 @@ msgid ""
 " should create and load a :class:`~optuna.study.Study` using "
 ":func:`~optuna.study.create_study` and :func:`~optuna.study.load_study` "
 "respectively."
+msgstr ""
+
+#: ../../source/reference/study.rst:18:<autosummary>:1
+msgid ":obj:`optuna.study.Study <optuna.study.Study>`"
+msgstr ""
+
+#: ../../source/reference/study.rst:18:<autosummary>:1
+msgid "A study corresponds to an optimization task, i.e., a set of trials."
+msgstr ""
+
+#: ../../source/reference/study.rst:18:<autosummary>:1
+msgid ":obj:`optuna.study.create_study <optuna.study.create_study>`"
+msgstr ""
+
+#: ../../source/reference/study.rst:18:<autosummary>:1
+msgid "Create a new :class:`~optuna.study.Study`."
+msgstr ""
+
+#: ../../source/reference/study.rst:18:<autosummary>:1
+msgid ":obj:`optuna.study.load_study <optuna.study.load_study>`"
+msgstr ""
+
+#: ../../source/reference/study.rst:18:<autosummary>:1
+msgid ""
+"Load the existing :class:`~optuna.study.Study` that has the specified "
+"name."
+msgstr ""
+
+#: ../../source/reference/study.rst:18:<autosummary>:1
+msgid ":obj:`optuna.study.delete_study <optuna.study.delete_study>`"
+msgstr ""
+
+#: ../../source/reference/study.rst:18:<autosummary>:1
+msgid "Delete a :class:`~optuna.study.Study` object."
+msgstr ""
+
+#: ../../source/reference/study.rst:18:<autosummary>:1
+msgid ""
+":obj:`optuna.study.get_all_study_summaries "
+"<optuna.study.get_all_study_summaries>`"
+msgstr ""
+
+#: ../../source/reference/study.rst:18:<autosummary>:1
+msgid "Get all history of studies stored in a specified storage."
+msgstr ""
+
+#: ../../source/reference/study.rst:18:<autosummary>:1
+msgid ":obj:`optuna.study.StudyDirection <optuna.study.StudyDirection>`"
+msgstr ""
+
+#: ../../source/reference/study.rst:18:<autosummary>:1
+msgid "Direction of a :class:`~optuna.study.Study`."
+msgstr ""
+
+#: ../../source/reference/study.rst:18:<autosummary>:1
+msgid ":obj:`optuna.study.StudySummary <optuna.study.StudySummary>`"
+msgstr ""
+
+#: ../../source/reference/study.rst:18:<autosummary>:1
+msgid "Basic attributes and aggregated results of a :class:`~optuna.study.Study`."
 msgstr ""
 
 #~ msgid "Returns"

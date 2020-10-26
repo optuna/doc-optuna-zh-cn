@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 1.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-26 12:27-0400\n"
+"POT-Creation-Date: 2020-10-26 14:44-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -29,6 +29,70 @@ msgid ""
 "module represent child classes, deriving from "
 ":class:`~optuna.samplers.BaseSampler`, which implement different sampling"
 " strategies."
+msgstr ""
+
+#: ../../source/reference/samplers.rst:18:<autosummary>:1
+msgid ":obj:`optuna.samplers.BaseSampler <optuna.samplers.BaseSampler>`"
+msgstr ""
+
+#: ../../source/reference/samplers.rst:18:<autosummary>:1
+msgid "Base class for samplers."
+msgstr ""
+
+#: ../../source/reference/samplers.rst:18:<autosummary>:1
+msgid ":obj:`optuna.samplers.GridSampler <optuna.samplers.GridSampler>`"
+msgstr ""
+
+#: ../../source/reference/samplers.rst:18:<autosummary>:1
+msgid "Sampler using grid search."
+msgstr ""
+
+#: ../../source/reference/samplers.rst:18:<autosummary>:1
+msgid ":obj:`optuna.samplers.RandomSampler <optuna.samplers.RandomSampler>`"
+msgstr ""
+
+#: ../../source/reference/samplers.rst:18:<autosummary>:1
+msgid "Sampler using random sampling."
+msgstr ""
+
+#: ../../source/reference/samplers.rst:18:<autosummary>:1
+msgid ":obj:`optuna.samplers.TPESampler <optuna.samplers.TPESampler>`"
+msgstr ""
+
+#: ../../source/reference/samplers.rst:18:<autosummary>:1
+msgid "Sampler using TPE (Tree-structured Parzen Estimator) algorithm."
+msgstr ""
+
+#: ../../source/reference/samplers.rst:18:<autosummary>:1
+msgid ":obj:`optuna.samplers.CmaEsSampler <optuna.samplers.CmaEsSampler>`"
+msgstr ""
+
+#: ../../source/reference/samplers.rst:18:<autosummary>:1
+msgid "A Sampler using CMA-ES algorithm."
+msgstr ""
+
+#: ../../source/reference/samplers.rst:18:<autosummary>:1
+msgid ""
+":obj:`optuna.samplers.IntersectionSearchSpace "
+"<optuna.samplers.IntersectionSearchSpace>`"
+msgstr ""
+
+#: ../../source/reference/samplers.rst:18:<autosummary>:1
+msgid ""
+"A class to calculate the intersection search space of a "
+":class:`~optuna.study.BaseStudy`."
+msgstr ""
+
+#: ../../source/reference/samplers.rst:18:<autosummary>:1
+msgid ""
+":obj:`optuna.samplers.intersection_search_space "
+"<optuna.samplers.intersection_search_space>`"
+msgstr ""
+
+#: ../../source/reference/samplers.rst:18:<autosummary>:1
+msgid ""
+"Return the intersection search space of the "
+":class:`~optuna.study.BaseStudy`."
 msgstr ""
 
 #~ msgid "Parameters"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 2.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-26 12:27-0400\n"
+"POT-Creation-Date: 2020-10-26 14:44-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -28,5 +28,47 @@ msgid ""
 " (1) from :mod:`optuna.study`, functions regarding the Study lifecycle, "
 "and (2) from :mod:`optuna.exceptions`, the TrialPruned Exception raised "
 "when a trial is pruned."
+msgstr ""
+
+#: ../../source/reference/optuna.rst:16:<autosummary>:1
+msgid ":obj:`optuna.create_study <optuna.create_study>`"
+msgstr ""
+
+#: ../../source/reference/optuna.rst:16:<autosummary>:1
+msgid "Create a new :class:`~optuna.study.Study`."
+msgstr ""
+
+#: ../../source/reference/optuna.rst:16:<autosummary>:1
+msgid ":obj:`optuna.load_study <optuna.load_study>`"
+msgstr ""
+
+#: ../../source/reference/optuna.rst:16:<autosummary>:1
+msgid ""
+"Load the existing :class:`~optuna.study.Study` that has the specified "
+"name."
+msgstr ""
+
+#: ../../source/reference/optuna.rst:16:<autosummary>:1
+msgid ":obj:`optuna.delete_study <optuna.delete_study>`"
+msgstr ""
+
+#: ../../source/reference/optuna.rst:16:<autosummary>:1
+msgid "Delete a :class:`~optuna.study.Study` object."
+msgstr ""
+
+#: ../../source/reference/optuna.rst:16:<autosummary>:1
+msgid ":obj:`optuna.get_all_study_summaries <optuna.get_all_study_summaries>`"
+msgstr ""
+
+#: ../../source/reference/optuna.rst:16:<autosummary>:1
+msgid "Get all history of studies stored in a specified storage."
+msgstr ""
+
+#: ../../source/reference/optuna.rst:16:<autosummary>:1
+msgid ":obj:`optuna.TrialPruned <optuna.TrialPruned>`"
+msgstr ""
+
+#: ../../source/reference/optuna.rst:16:<autosummary>:1
+msgid "Exception for pruned trials."
 msgstr ""
 

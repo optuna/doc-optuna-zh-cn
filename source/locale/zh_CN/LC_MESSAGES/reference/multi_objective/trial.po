@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 1.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-10 16:27-0400\n"
+"POT-Creation-Date: 2020-10-26 14:44-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,8 +17,30 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.8.0\n"
 
-#: ../../source/reference/multi_objective/trial.rst:2
+#: ../../source/reference/multi_objective/trial.rst:4
 msgid "optuna.multi_objective.trial"
+msgstr ""
+
+#: ../../source/reference/multi_objective/trial.rst:11:<autosummary>:1
+msgid ""
+":obj:`optuna.multi_objective.trial.MultiObjectiveTrial "
+"<optuna.multi_objective.trial.MultiObjectiveTrial>`"
+msgstr ""
+
+#: ../../source/reference/multi_objective/trial.rst:11:<autosummary>:1
+msgid "A trial is a process of evaluating an objective function."
+msgstr ""
+
+#: ../../source/reference/multi_objective/trial.rst:11:<autosummary>:1
+msgid ""
+":obj:`optuna.multi_objective.trial.FrozenMultiObjectiveTrial "
+"<optuna.multi_objective.trial.FrozenMultiObjectiveTrial>`"
+msgstr ""
+
+#: ../../source/reference/multi_objective/trial.rst:11:<autosummary>:1
+msgid ""
+"Status and results of a "
+":class:`~optuna.multi_objective.trial.MultiObjectiveTrial`."
 msgstr ""
 
 #~ msgid "Parameters"

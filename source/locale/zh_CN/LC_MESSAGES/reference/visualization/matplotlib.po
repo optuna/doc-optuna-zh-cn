@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 2.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-26 12:27-0400\n"
+"POT-Creation-Date: 2020-10-26 14:44-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -23,5 +23,27 @@ msgstr ""
 
 #: ../../source/reference/visualization/matplotlib.rst:7
 msgid "The following functions use Matplotlib as a backend."
+msgstr ""
+
+#: ../../source/reference/visualization/matplotlib.rst:16:<autosummary>:1
+msgid ""
+":obj:`optuna.visualization.matplotlib.plot_edf "
+"<optuna.visualization.matplotlib.plot_edf>`"
+msgstr ""
+
+#: ../../source/reference/visualization/matplotlib.rst:16:<autosummary>:1
+msgid ""
+"Plot the objective value EDF (empirical distribution function) of a study"
+" with Matplotlib."
+msgstr ""
+
+#: ../../source/reference/visualization/matplotlib.rst:16:<autosummary>:1
+msgid ""
+":obj:`optuna.visualization.matplotlib.is_available "
+"<optuna.visualization.matplotlib.is_available>`"
+msgstr ""
+
+#: ../../source/reference/visualization/matplotlib.rst:16:<autosummary>:1
+msgid "Returns whether visualization with Matplotlib is available or not."
 msgstr ""
 

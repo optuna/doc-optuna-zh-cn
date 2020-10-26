@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 1.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-26 12:27-0400\n"
+"POT-Creation-Date: 2020-10-26 14:44-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -35,6 +35,38 @@ msgid ""
 ":class:`~optuna.importance.MeanDecreaseImpurityImportanceEvaluator` as a "
 "guide, paying close attention to the format of the return value from the "
 "Evaluator's :meth:`evaluate` function."
+msgstr ""
+
+#: ../../source/reference/importance.rst:15:<autosummary>:1
+msgid ""
+":obj:`optuna.importance.get_param_importances "
+"<optuna.importance.get_param_importances>`"
+msgstr ""
+
+#: ../../source/reference/importance.rst:15:<autosummary>:1
+msgid ""
+"Evaluate parameter importances based on completed trials in the given "
+"study."
+msgstr ""
+
+#: ../../source/reference/importance.rst:15:<autosummary>:1
+msgid ""
+":obj:`optuna.importance.FanovaImportanceEvaluator "
+"<optuna.importance.FanovaImportanceEvaluator>`"
+msgstr ""
+
+#: ../../source/reference/importance.rst:15:<autosummary>:1
+msgid "fANOVA importance evaluator."
+msgstr ""
+
+#: ../../source/reference/importance.rst:15:<autosummary>:1
+msgid ""
+":obj:`optuna.importance.MeanDecreaseImpurityImportanceEvaluator "
+"<optuna.importance.MeanDecreaseImpurityImportanceEvaluator>`"
+msgstr ""
+
+#: ../../source/reference/importance.rst:15:<autosummary>:1
+msgid "Mean Decrease Impurity (MDI) parameter importance evaluator."
 msgstr ""
 
 #~ msgid ""

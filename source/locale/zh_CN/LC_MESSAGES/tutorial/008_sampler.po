@@ -1,0 +1,166 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018, Optuna Contributors.
+# This file is distributed under the same license as the Optuna package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Optuna 2.2.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-26 14:44-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../source/tutorial/008_sampler.rst:6
+msgid ""
+"Click :ref:`here <sphx_glr_download_tutorial_008_sampler.py>`     to "
+"download the full example code"
+msgstr ""
+
+#: ../../source/tutorial/008_sampler.rst:15
+msgid "User-Defined Sampler"
+msgstr ""
+
+#: ../../source/tutorial/008_sampler.rst:17
+msgid "Thanks to user-defined samplers, you can:"
+msgstr ""
+
+#: ../../source/tutorial/008_sampler.rst:19
+msgid "experiment your own sampling algorithms,"
+msgstr ""
+
+#: ../../source/tutorial/008_sampler.rst:20
+msgid ""
+"implement task-specific algorithms to refine the optimization "
+"performance, or"
+msgstr ""
+
+#: ../../source/tutorial/008_sampler.rst:21
+msgid ""
+"wrap other optimization libraries to integrate them into Optuna pipelines"
+" (e.g., :class:`~optuna.integration.SkoptSampler`)."
+msgstr ""
+
+#: ../../source/tutorial/008_sampler.rst:23
+msgid ""
+"This section describes the internal behavior of sampler classes and shows"
+" an example of implementing a user-defined sampler."
+msgstr ""
+
+#: ../../source/tutorial/008_sampler.rst:27
+msgid "Overview of Sampler"
+msgstr ""
+
+#: ../../source/tutorial/008_sampler.rst:29
+msgid ""
+"A sampler has the responsibility to determine the parameter values to be "
+"evaluated in a trial. When a `suggest` API (e.g., "
+":func:`~optuna.trial.Trial.suggest_uniform`) is called inside an "
+"objective function, the corresponding distribution object (e.g., "
+":class:`~optuna.distributions.UniformDistribution`) is created "
+"internally. A sampler samples a parameter value from the distribution. "
+"The sampled value is returned to the caller of the `suggest` API and "
+"evaluated in the objective function."
+msgstr ""
+
+#: ../../source/tutorial/008_sampler.rst:32
+msgid ""
+"To create a new sampler, you need to define a class that inherits "
+":class:`~optuna.samplers.BaseSampler`. The base class has three abstract "
+"methods; "
+":meth:`~optuna.samplers.BaseSampler.infer_relative_search_space`, "
+":meth:`~optuna.samplers.BaseSampler.sample_relative`, and "
+":meth:`~optuna.samplers.BaseSampler.sample_independent`."
+msgstr ""
+
+#: ../../source/tutorial/008_sampler.rst:38
+msgid ""
+"As the method names imply, Optuna supports two types of sampling: one is "
+"**relative sampling** that can consider the correlation of the parameters"
+" in a trial, and the other is **independent sampling** that samples each "
+"parameter independently."
+msgstr ""
+
+#: ../../source/tutorial/008_sampler.rst:40
+msgid ""
+"At the beginning of a trial, "
+":meth:`~optuna.samplers.BaseSampler.infer_relative_search_space` is "
+"called to provide the relative search space for the trial. Then, "
+":meth:`~optuna.samplers.BaseSampler.sample_relative` is invoked to sample"
+" relative parameters from the search space. During the execution of the "
+"objective function, "
+":meth:`~optuna.samplers.BaseSampler.sample_independent` is used to sample"
+" parameters that don't belong to the relative search space."
+msgstr ""
+
+#: ../../source/tutorial/008_sampler.rst:43
+msgid ""
+"Please refer to the document of :class:`~optuna.samplers.BaseSampler` for"
+" further details."
+msgstr ""
+
+#: ../../source/tutorial/008_sampler.rst:47
+msgid "An Example: Implementing SimulatedAnnealingSampler"
+msgstr ""
+
+#: ../../source/tutorial/008_sampler.rst:49
+msgid ""
+"For example, the following code defines a sampler based on `Simulated "
+"Annealing (SA) <https://en.wikipedia.org/wiki/Simulated_annealing>`_:"
+msgstr ""
+
+#: ../../source/tutorial/008_sampler.rst:113
+msgid ""
+"In favor of code simplicity, the above implementation doesn't support "
+"some features (e.g., maximization). If you're interested in how to "
+"support those features, please see "
+"`examples/samplers/simulated_annealing.py "
+"<https://github.com/optuna/optuna/blob/master/examples/samplers/simulated_annealing_sampler.py>`_."
+msgstr ""
+
+#: ../../source/tutorial/008_sampler.rst:119
+msgid ""
+"You can use ``SimulatedAnnealingSampler`` in the same way as built-in "
+"samplers as follows:"
+msgstr ""
+
+#: ../../source/tutorial/008_sampler.rst:133
+msgid ""
+"In this optimization, the values of ``x`` and ``y`` parameters are "
+"sampled by using ``SimulatedAnnealingSampler.sample_relative`` method."
+msgstr ""
+
+#: ../../source/tutorial/008_sampler.rst:137
+msgid ""
+"Strictly speaking, in the first trial, "
+"``SimulatedAnnealingSampler.sample_independent`` method is used to sample"
+" parameter values. Because "
+":func:`~optuna.samplers.intersection_search_space` used in "
+"``SimulatedAnnealingSampler.infer_relative_search_space`` cannot infer "
+"the search space if there are no complete trials."
+msgstr ""
+
+#: ../../source/tutorial/008_sampler.rst:146
+msgid "**Total running time of the script:** ( 0 minutes  0.000 seconds)"
+msgstr ""
+
+#: ../../source/tutorial/008_sampler.rst:161
+msgid ":download:`Download Python source code: 008_sampler.py <008_sampler.py>`"
+msgstr ""
+
+#: ../../source/tutorial/008_sampler.rst:167
+msgid ""
+":download:`Download Jupyter notebook: 008_sampler.ipynb "
+"<008_sampler.ipynb>`"
+msgstr ""
+
+#: ../../source/tutorial/008_sampler.rst:174
+msgid "`Gallery generated by Sphinx-Gallery <https://sphinx-gallery.github.io>`_"
+msgstr ""
+

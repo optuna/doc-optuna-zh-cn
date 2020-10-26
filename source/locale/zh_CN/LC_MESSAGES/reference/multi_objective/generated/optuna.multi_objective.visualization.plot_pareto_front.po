@@ -1,0 +1,78 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018, Optuna Contributors.
+# This file is distributed under the same license as the Optuna package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Optuna 2.2.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-26 14:44-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../source/reference/multi_objective/generated/optuna.multi_objective.visualization.plot_pareto_front.rst:2
+msgid "optuna.multi\\_objective.visualization.plot\\_pareto\\_front"
+msgstr ""
+
+#: of optuna.multi_objective.visualization.plot_pareto_front:1
+msgid "Plot the pareto front of a study."
+msgstr ""
+
+#: of optuna.multi_objective.visualization.plot_pareto_front:4
+msgid "Example"
+msgstr ""
+
+#: of optuna.multi_objective.visualization.plot_pareto_front:5
+msgid "The following code snippet shows how to plot the pareto front of a study."
+msgstr ""
+
+#: of optuna.multi_objective.visualization.plot_pareto_front
+msgid "Parameters"
+msgstr ""
+
+#: of optuna.multi_objective.visualization.plot_pareto_front:31
+msgid ""
+"A :class:`~optuna.multi_objective.study.MultiObjectiveStudy` object whose"
+" trials are plotted for their objective values."
+msgstr ""
+
+#: of optuna.multi_objective.visualization.plot_pareto_front:33
+msgid ""
+"Objective name list used as the axis titles. If :obj:`None` is specified,"
+" \"Objective {objective_index}\" is used instead."
+msgstr ""
+
+#: of optuna.multi_objective.visualization.plot_pareto_front:35
+msgid "A flag to include all dominated trial's objective values."
+msgstr ""
+
+#: of optuna.multi_objective.visualization.plot_pareto_front
+msgid "Returns"
+msgstr ""
+
+#: of optuna.multi_objective.visualization.plot_pareto_front:37
+msgid "A :class:`plotly.graph_objs.Figure` object."
+msgstr ""
+
+#: of optuna.multi_objective.visualization.plot_pareto_front
+msgid "Raises"
+msgstr ""
+
+#: of optuna.multi_objective.visualization.plot_pareto_front:39
+msgid "If the number of objectives of ``study`` isn't 2 or 3."
+msgstr ""
+
+#: of optuna.multi_objective.visualization.plot_pareto_front:42
+msgid ""
+"Added in v2.0.0 as an experimental feature. The interface may change in "
+"newer versions without prior notice. See "
+"https://github.com/optuna/optuna/releases/tag/v2.0.0."
+msgstr ""
+

@@ -1,0 +1,78 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018, Optuna Contributors.
+# This file is distributed under the same license as the Optuna package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Optuna 2.2.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-26 14:44-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../source/reference/generated/optuna.integration.MLflowCallback.rst:2
+msgid "optuna.integration.MLflowCallback"
+msgstr ""
+
+#: of optuna.integration.MLflowCallback:1
+msgid "Callback to track Optuna trials with MLflow."
+msgstr ""
+
+#: of optuna.integration.MLflowCallback:3
+msgid ""
+"This callback adds relevant information that is tracked by Optuna to "
+"MLflow. The MLflow experiment will be named after the Optuna study name."
+msgstr ""
+
+#: of optuna.integration.MLflowCallback:8
+msgid "Example"
+msgstr ""
+
+#: of optuna.integration.MLflowCallback:9
+msgid "Add MLflow callback to Optuna optimization."
+msgstr ""
+
+#: of optuna.integration.MLflowCallback
+msgid "Parameters"
+msgstr ""
+
+#: of optuna.integration.MLflowCallback:50
+msgid ""
+"The URI of the MLflow tracking server.  Please refer to "
+"`mlflow.set_tracking_uri "
+"<https://www.mlflow.org/docs/latest/python_api/mlflow.html#mlflow.set_tracking_uri>`_"
+" for more details."
+msgstr ""
+
+#: of optuna.integration.MLflowCallback:50
+msgid "The URI of the MLflow tracking server."
+msgstr ""
+
+#: of optuna.integration.MLflowCallback:52
+msgid ""
+"Please refer to `mlflow.set_tracking_uri "
+"<https://www.mlflow.org/docs/latest/python_api/mlflow.html#mlflow.set_tracking_uri>`_"
+" for more details."
+msgstr ""
+
+#: of optuna.integration.MLflowCallback:55
+msgid ""
+"Name of the metric. Since the metric itself is just a number, "
+"`metric_name` can be used to give it a name. So you know later if it was "
+"roc-auc or accuracy."
+msgstr ""
+
+#: of optuna.integration.MLflowCallback:60
+msgid ""
+"Added in v1.4.0 as an experimental feature. The interface may change in "
+"newer versions without prior notice. See "
+"https://github.com/optuna/optuna/releases/tag/v1.4.0."
+msgstr ""
+

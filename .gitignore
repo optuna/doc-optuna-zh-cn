@@ -132,6 +132,10 @@ dmypy.json
 .vscode/
 
 build*
+source/reference/generated/
+source/reference/multi_objective/generated/
+source/reference/visualization/generated/
+source/tutorial/
 
 .DS_Store
 

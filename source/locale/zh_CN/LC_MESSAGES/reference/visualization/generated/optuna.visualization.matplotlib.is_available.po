@@ -1,0 +1,53 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018, Optuna Contributors.
+# This file is distributed under the same license as the Optuna package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Optuna 2.2.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-26 14:44-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../source/reference/visualization/generated/optuna.visualization.matplotlib.is_available.rst:2
+msgid "optuna.visualization.matplotlib.is\\_available"
+msgstr ""
+
+#: of optuna.visualization.matplotlib.is_available:1
+msgid "Returns whether visualization with Matplotlib is available or not."
+msgstr ""
+
+#: of optuna.visualization.matplotlib.is_available:5
+msgid ""
+":mod:`~optuna.visualization.matplotlib` module depends on Matplotlib "
+"version 3.0.0 or higher. If a supported version of Matplotlib isn't "
+"installed in your environment, this function will return :obj:`False`. In"
+" such a case, please execute ``$ pip install -U matplotlib>=3.0.0`` to "
+"install Matplotlib."
+msgstr ""
+
+#: of optuna.visualization.matplotlib.is_available
+msgid "Returns"
+msgstr ""
+
+#: of optuna.visualization.matplotlib.is_available:10
+msgid ""
+":obj:`True` if visualization with Matplotlib is available, :obj:`False` "
+"otherwise."
+msgstr ""
+
+#: of optuna.visualization.matplotlib.is_available:13
+msgid ""
+"Added in v2.2.0 as an experimental feature. The interface may change in "
+"newer versions without prior notice. See "
+"https://github.com/optuna/optuna/releases/tag/v2.2.0."
+msgstr ""
+

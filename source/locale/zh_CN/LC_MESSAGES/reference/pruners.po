@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 1.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-26 12:27-0400\n"
+"POT-Creation-Date: 2020-10-26 14:44-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -33,6 +33,74 @@ msgid ""
 " in this module represent child classes, inheriting from "
 ":class:`~optuna.pruners.BasePruner`, which implement different pruning "
 "strategies."
+msgstr ""
+
+#: ../../source/reference/pruners.rst:18:<autosummary>:1
+msgid ""
+":obj:`optuna.pruners.BasePruner "
+"<optuna.pruners.optuna.pruners.BasePruner>`"
+msgstr ""
+
+#: ../../source/reference/pruners.rst:18:<autosummary>:1
+msgid "Base class for pruners."
+msgstr ""
+
+#: ../../source/reference/pruners.rst:18:<autosummary>:1
+msgid ""
+":obj:`optuna.pruners.MedianPruner "
+"<optuna.pruners.optuna.pruners.MedianPruner>`"
+msgstr ""
+
+#: ../../source/reference/pruners.rst:18:<autosummary>:1
+msgid "Pruner using the median stopping rule."
+msgstr ""
+
+#: ../../source/reference/pruners.rst:18:<autosummary>:1
+msgid ":obj:`optuna.pruners.NopPruner <optuna.pruners.optuna.pruners.NopPruner>`"
+msgstr ""
+
+#: ../../source/reference/pruners.rst:18:<autosummary>:1
+msgid "Pruner which never prunes trials."
+msgstr ""
+
+#: ../../source/reference/pruners.rst:18:<autosummary>:1
+msgid ""
+":obj:`optuna.pruners.PercentilePruner "
+"<optuna.pruners.optuna.pruners.PercentilePruner>`"
+msgstr ""
+
+#: ../../source/reference/pruners.rst:18:<autosummary>:1
+msgid "Pruner to keep the specified percentile of the trials."
+msgstr ""
+
+#: ../../source/reference/pruners.rst:18:<autosummary>:1
+msgid ""
+":obj:`optuna.pruners.SuccessiveHalvingPruner "
+"<optuna.pruners.optuna.pruners.SuccessiveHalvingPruner>`"
+msgstr ""
+
+#: ../../source/reference/pruners.rst:18:<autosummary>:1
+msgid "Pruner using Asynchronous Successive Halving Algorithm."
+msgstr ""
+
+#: ../../source/reference/pruners.rst:18:<autosummary>:1
+msgid ""
+":obj:`optuna.pruners.HyperbandPruner "
+"<optuna.pruners.optuna.pruners.HyperbandPruner>`"
+msgstr ""
+
+#: ../../source/reference/pruners.rst:18:<autosummary>:1
+msgid "Pruner using Hyperband."
+msgstr ""
+
+#: ../../source/reference/pruners.rst:18:<autosummary>:1
+msgid ""
+":obj:`optuna.pruners.ThresholdPruner "
+"<optuna.pruners.optuna.pruners.ThresholdPruner>`"
+msgstr ""
+
+#: ../../source/reference/pruners.rst:18:<autosummary>:1
+msgid "Pruner to detect outlying metrics of the trials."
 msgstr ""
 
 #~ msgid "Parameters"

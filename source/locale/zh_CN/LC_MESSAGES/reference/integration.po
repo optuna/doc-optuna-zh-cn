@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 1.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-26 12:27-0400\n"
+"POT-Creation-Date: 2020-10-26 14:44-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -67,60 +67,308 @@ msgstr ""
 msgid "AllenNLP"
 msgstr ""
 
+#: ../../source/reference/integration.rst:26:<autosummary>:1
+msgid ""
+":obj:`optuna.integration.AllenNLPExecutor "
+"<optuna.integration.AllenNLPExecutor>`"
+msgstr ""
+
+#: ../../source/reference/integration.rst:26:<autosummary>:1
+msgid "AllenNLP extension to use optuna with Jsonnet config file."
+msgstr ""
+
+#: ../../source/reference/integration.rst:26:<autosummary>:1
+msgid ""
+":obj:`optuna.integration.allennlp.dump_best_config "
+"<optuna.integration.allennlp.dump_best_config>`"
+msgstr ""
+
+#: ../../source/reference/integration.rst:26:<autosummary>:1
+msgid ""
+"Save JSON config file after updating with parameters from the best trial "
+"in the study."
+msgstr ""
+
+#: ../../source/reference/integration.rst:26:<autosummary>:1
+msgid ""
+":obj:`optuna.integration.AllenNLPPruningCallback "
+"<optuna.integration.AllenNLPPruningCallback>`"
+msgstr ""
+
+#: ../../source/reference/integration.rst:26:<autosummary>:1
+msgid "AllenNLP callback to prune unpromising trials."
+msgstr ""
+
 #: ../../source/reference/integration.rst:28
 msgid "Catalyst"
+msgstr ""
+
+#: ../../source/reference/integration.rst:35:<autosummary>:1
+msgid ""
+":obj:`optuna.integration.CatalystPruningCallback "
+"<optuna.integration.CatalystPruningCallback>`"
+msgstr ""
+
+#: ../../source/reference/integration.rst:35:<autosummary>:1
+msgid "Catalyst callback to prune unpromising trials."
 msgstr ""
 
 #: ../../source/reference/integration.rst:37
 msgid "Chainer"
 msgstr ""
 
+#: ../../source/reference/integration.rst:45:<autosummary>:1
+msgid ""
+":obj:`optuna.integration.ChainerPruningExtension "
+"<optuna.integration.ChainerPruningExtension>`"
+msgstr ""
+
+#: ../../source/reference/integration.rst:45:<autosummary>:1
+msgid "Chainer extension to prune unpromising trials."
+msgstr ""
+
+#: ../../source/reference/integration.rst:45:<autosummary>:1
+msgid ""
+":obj:`optuna.integration.ChainerMNStudy "
+"<optuna.integration.ChainerMNStudy>`"
+msgstr ""
+
+#: ../../source/reference/integration.rst:45:<autosummary>:1
+msgid ""
+"A wrapper of :class:`~optuna.study.Study` to incorporate Optuna with "
+"ChainerMN."
+msgstr ""
+
 #: ../../source/reference/integration.rst:47
 msgid "fast.ai"
+msgstr ""
+
+#: ../../source/reference/integration.rst:54:<autosummary>:1
+msgid ""
+":obj:`optuna.integration.FastAIPruningCallback "
+"<optuna.integration.FastAIPruningCallback>`"
+msgstr ""
+
+#: ../../source/reference/integration.rst:54:<autosummary>:1
+msgid "FastAI callback to prune unpromising trials for fastai."
 msgstr ""
 
 #: ../../source/reference/integration.rst:56
 msgid "Keras"
 msgstr ""
 
+#: ../../source/reference/integration.rst:63:<autosummary>:1
+msgid ""
+":obj:`optuna.integration.KerasPruningCallback "
+"<optuna.integration.KerasPruningCallback>`"
+msgstr ""
+
+#: ../../source/reference/integration.rst:63:<autosummary>:1
+msgid "Keras callback to prune unpromising trials."
+msgstr ""
+
 #: ../../source/reference/integration.rst:65
 msgid "LightGBM"
+msgstr ""
+
+#: ../../source/reference/integration.rst:75:<autosummary>:1
+msgid ""
+":obj:`optuna.integration.LightGBMPruningCallback "
+"<optuna.integration.LightGBMPruningCallback>`"
+msgstr ""
+
+#: ../../source/reference/integration.rst:75:<autosummary>:1
+msgid "Callback for LightGBM to prune unpromising trials."
+msgstr ""
+
+#: ../../source/reference/integration.rst:75:<autosummary>:1
+msgid ""
+":obj:`optuna.integration.lightgbm.train "
+"<optuna.integration.lightgbm.train>`"
+msgstr ""
+
+#: ../../source/reference/integration.rst:75:<autosummary>:1
+msgid "Wrapper of LightGBM Training API to tune hyperparameters."
+msgstr ""
+
+#: ../../source/reference/integration.rst:75:<autosummary>:1
+msgid ""
+":obj:`optuna.integration.lightgbm.LightGBMTuner "
+"<optuna.integration.lightgbm.LightGBMTuner>`"
+msgstr ""
+
+#: ../../source/reference/integration.rst:75:<autosummary>:1
+msgid "Hyperparameter tuner for LightGBM."
+msgstr ""
+
+#: ../../source/reference/integration.rst:75:<autosummary>:1
+msgid ""
+":obj:`optuna.integration.lightgbm.LightGBMTunerCV "
+"<optuna.integration.lightgbm.LightGBMTunerCV>`"
+msgstr ""
+
+#: ../../source/reference/integration.rst:75:<autosummary>:1
+msgid "Hyperparameter tuner for LightGBM with cross-validation."
 msgstr ""
 
 #: ../../source/reference/integration.rst:77
 msgid "MLflow"
 msgstr ""
 
+#: ../../source/reference/integration.rst:84:<autosummary>:1
+msgid ""
+":obj:`optuna.integration.MLflowCallback "
+"<optuna.integration.MLflowCallback>`"
+msgstr ""
+
+#: ../../source/reference/integration.rst:84:<autosummary>:1
+msgid "Callback to track Optuna trials with MLflow."
+msgstr ""
+
 #: ../../source/reference/integration.rst:86
 msgid "MXNet"
+msgstr ""
+
+#: ../../source/reference/integration.rst:93:<autosummary>:1
+msgid ""
+":obj:`optuna.integration.MXNetPruningCallback "
+"<optuna.integration.MXNetPruningCallback>`"
+msgstr ""
+
+#: ../../source/reference/integration.rst:93:<autosummary>:1
+msgid "MXNet callback to prune unpromising trials."
 msgstr ""
 
 #: ../../source/reference/integration.rst:95
 msgid "pycma"
 msgstr ""
 
+#: ../../source/reference/integration.rst:103:<autosummary>:1
+msgid ":obj:`optuna.integration.PyCmaSampler <optuna.integration.PyCmaSampler>`"
+msgstr ""
+
+#: ../../source/reference/integration.rst:103:<autosummary>:1
+msgid "A Sampler using cma library as the backend."
+msgstr ""
+
+#: ../../source/reference/integration.rst:103:<autosummary>:1
+msgid ":obj:`optuna.integration.CmaEsSampler <optuna.integration.CmaEsSampler>`"
+msgstr ""
+
+#: ../../source/reference/integration.rst:103:<autosummary>:1
+msgid "Wrapper class of PyCmaSampler for backward compatibility."
+msgstr ""
+
 #: ../../source/reference/integration.rst:105
 msgid "PyTorch"
+msgstr ""
+
+#: ../../source/reference/integration.rst:113:<autosummary>:1
+msgid ""
+":obj:`optuna.integration.PyTorchIgnitePruningHandler "
+"<optuna.integration.PyTorchIgnitePruningHandler>`"
+msgstr ""
+
+#: ../../source/reference/integration.rst:113:<autosummary>:1
+msgid "PyTorch Ignite handler to prune unpromising trials."
+msgstr ""
+
+#: ../../source/reference/integration.rst:113:<autosummary>:1
+msgid ""
+":obj:`optuna.integration.PyTorchLightningPruningCallback "
+"<optuna.integration.PyTorchLightningPruningCallback>`"
+msgstr ""
+
+#: ../../source/reference/integration.rst:113:<autosummary>:1
+msgid "PyTorch Lightning callback to prune unpromising trials."
 msgstr ""
 
 #: ../../source/reference/integration.rst:115
 msgid "scikit-learn"
 msgstr ""
 
+#: ../../source/reference/integration.rst:122:<autosummary>:1
+msgid ""
+":obj:`optuna.integration.OptunaSearchCV "
+"<optuna.integration.OptunaSearchCV>`"
+msgstr ""
+
+#: ../../source/reference/integration.rst:122:<autosummary>:1
+msgid "Hyperparameter search with cross-validation."
+msgstr ""
+
 #: ../../source/reference/integration.rst:124
 msgid "scikit-optimize"
+msgstr ""
+
+#: ../../source/reference/integration.rst:131:<autosummary>:1
+msgid ":obj:`optuna.integration.SkoptSampler <optuna.integration.SkoptSampler>`"
+msgstr ""
+
+#: ../../source/reference/integration.rst:131:<autosummary>:1
+msgid "Sampler using Scikit-Optimize as the backend."
 msgstr ""
 
 #: ../../source/reference/integration.rst:133
 msgid "skorch"
 msgstr ""
 
+#: ../../source/reference/integration.rst:140:<autosummary>:1
+msgid ""
+":obj:`optuna.integration.SkorchPruningCallback "
+"<optuna.integration.SkorchPruningCallback>`"
+msgstr ""
+
+#: ../../source/reference/integration.rst:140:<autosummary>:1
+msgid "Skorch callback to prune unpromising trials."
+msgstr ""
+
 #: ../../source/reference/integration.rst:142
 msgid "TensorFlow"
 msgstr ""
 
+#: ../../source/reference/integration.rst:151:<autosummary>:1
+msgid ""
+":obj:`optuna.integration.TensorBoardCallback "
+"<optuna.integration.TensorBoardCallback>`"
+msgstr ""
+
+#: ../../source/reference/integration.rst:151:<autosummary>:1
+msgid "Callback to track Optuna trials with TensorBoard."
+msgstr ""
+
+#: ../../source/reference/integration.rst:151:<autosummary>:1
+msgid ""
+":obj:`optuna.integration.TensorFlowPruningHook "
+"<optuna.integration.TensorFlowPruningHook>`"
+msgstr ""
+
+#: ../../source/reference/integration.rst:151:<autosummary>:1
+msgid "TensorFlow SessionRunHook to prune unpromising trials."
+msgstr ""
+
+#: ../../source/reference/integration.rst:151:<autosummary>:1
+msgid ""
+":obj:`optuna.integration.TFKerasPruningCallback "
+"<optuna.integration.TFKerasPruningCallback>`"
+msgstr ""
+
+#: ../../source/reference/integration.rst:151:<autosummary>:1
+msgid "tf.keras callback to prune unpromising trials."
+msgstr ""
+
 #: ../../source/reference/integration.rst:153
 msgid "XGBoost"
+msgstr ""
+
+#: ../../source/reference/integration.rst:159:<autosummary>:1
+msgid ""
+":obj:`optuna.integration.XGBoostPruningCallback "
+"<optuna.integration.XGBoostPruningCallback>`"
+msgstr ""
+
+#: ../../source/reference/integration.rst:159:<autosummary>:1
+msgid "Callback for XGBoost to prune unpromising trials."
 msgstr ""
 
 #~ msgid "Parameters"

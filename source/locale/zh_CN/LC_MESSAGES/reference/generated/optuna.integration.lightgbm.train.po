@@ -1,0 +1,50 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018, Optuna Contributors.
+# This file is distributed under the same license as the Optuna package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Optuna 2.2.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-26 14:44-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../source/reference/generated/optuna.integration.lightgbm.train.rst:2
+msgid "optuna.integration.lightgbm.train"
+msgstr ""
+
+#: of optuna.integration.lightgbm.train:1
+msgid "Wrapper of LightGBM Training API to tune hyperparameters."
+msgstr ""
+
+#: of optuna.integration.lightgbm.train:3
+msgid ""
+"It tunes important hyperparameters (e.g., ``min_child_samples`` and "
+"``feature_fraction``) in a stepwise manner. It is a drop-in replacement "
+"for `lightgbm.train()`_. See `a simple example of LightGBM Tuner "
+"<https://github.com/optuna/optuna/blob/master/examples/lig "
+"htgbm_tuner_simple.py>`_ which optimizes the validation log loss of "
+"cancer detection."
+msgstr ""
+
+#: of optuna.integration.lightgbm.train:8
+msgid ""
+":func:`~optuna.integration.lightgbm.train` is a wrapper function of "
+":class:`~optuna.integration.lightgbm.LightGBMTuner`. To use feature in "
+"Optuna such as suspended/resumed optimization and/or parallelization, "
+"refer to :class:`~optuna.integration.lightgbm.LightGBMTuner` instead of "
+"this function."
+msgstr ""
+
+#: of optuna.integration.lightgbm.train:13
+msgid "Arguments and keyword arguments for `lightgbm.train()`_ can be passed."
+msgstr ""
+

@@ -1,4 +1,4 @@
-optuna==2.0.0
+optuna==2.2.0
 Sphinx
 sphinx-rtd-theme==0.5.0
 sphinxcontrib-applehelp==1.0.2
@@ -7,4 +7,7 @@ sphinxcontrib-htmlhelp==1.0.3
 sphinxcontrib-jsmath==1.0.1
 sphinxcontrib-qthelp==1.0.3
 sphinxcontrib-serializinghtml==1.1.4
-
+sphinx-gallery
+matplotlib
+pillow
+scikit-learn

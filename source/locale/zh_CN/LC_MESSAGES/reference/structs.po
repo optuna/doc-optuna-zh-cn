@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 1.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-26 12:27-0400\n"
+"POT-Creation-Date: 2020-10-26 14:44-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -92,6 +92,80 @@ msgid ""
 "This class was moved to :mod:`~optuna.trial`. Please use "
 ":class:`~optuna.trial.FrozenTrial` instead."
 msgstr "该类已经迁移至 :mod:`~optuna.trial`, 请改用 :class:`~optuna.trial.FrozenTrial`."
+
+#: of optuna.structs.FrozenTrial.distributions:1
+msgid "Dictionary that contains the distributions of :attr:`params`."
+msgstr ""
+
+#: of optuna.structs.FrozenTrial.duration:1
+msgid "Return the elapsed time taken to complete the trial."
+msgstr ""
+
+#: of optuna.structs.FrozenTrial.duration optuna.structs.FrozenTrial.last_step
+#: optuna.structs.FrozenTrial.should_prune
+msgid "Returns"
+msgstr ""
+
+#: of optuna.structs.FrozenTrial.duration:3
+msgid "The duration."
+msgstr ""
+
+#: of optuna.structs.FrozenTrial.last_step:1
+msgid "Return the maximum step of `intermediate_values` in the trial."
+msgstr ""
+
+#: of optuna.structs.FrozenTrial.last_step:3
+msgid "The maximum step of intermediates."
+msgstr ""
+
+#: of optuna.structs.FrozenTrial.report:1
+msgid "Interface of report function."
+msgstr ""
+
+#: of optuna.structs.FrozenTrial.report:3
+#, fuzzy
+msgid ""
+"Since :class:`~optuna.trial.FrozenTrial` is not pruned, this report "
+"function does nothing."
+msgstr "运行中的 :class:`~optuna.trial.Trial`."
+
+#: of optuna.structs.FrozenTrial.report:7
+msgid "Please refer to :func:`~optuna.trial.FrozenTrial.should_prune`."
+msgstr ""
+
+#: of optuna.structs.FrozenTrial.report
+msgid "Parameters"
+msgstr ""
+
+#: of optuna.structs.FrozenTrial.report:9
+msgid "A value returned from the objective function."
+msgstr ""
+
+#: of optuna.structs.FrozenTrial.report:10
+msgid ""
+"Step of the trial (e.g., Epoch of neural network training). Note that "
+"pruners assume that ``step`` starts at zero. For example, "
+":class:`~optuna.pruners.MedianPruner` simply checks if ``step`` is less "
+"than ``n_warmup_steps`` as the warmup mechanism."
+msgstr ""
+
+#: of optuna.structs.FrozenTrial.should_prune:1
+msgid "Suggest whether the trial should be pruned or not."
+msgstr ""
+
+#: of optuna.structs.FrozenTrial.should_prune:3
+msgid "The suggestion is always :obj:`False` regardless of a pruning algorithm."
+msgstr ""
+
+#: of optuna.structs.FrozenTrial.should_prune:6
+msgid ""
+":class:`~optuna.trial.FrozenTrial` only samples one combination of "
+"parameters."
+msgstr ""
+
+#: of optuna.structs.FrozenTrial.should_prune:8
+msgid ":obj:`False`."
+msgstr ""
 
 #: of optuna.structs.StudySummary:1
 msgid "Basic attributes and aggregated results of a :class:`~optuna.study.Study`."

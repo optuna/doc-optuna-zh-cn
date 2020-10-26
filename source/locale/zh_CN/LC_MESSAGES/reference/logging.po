@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 1.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-26 12:27-0400\n"
+"POT-Creation-Date: 2020-10-26 14:44-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -30,6 +30,62 @@ msgid ""
 "``optuna.logging.ERROR``, ``optuna.logging.WARNING`` (aka "
 "``optuna.logging.WARN``), ``optuna.logging.INFO``, or "
 "``optuna.logging.DEBUG``."
+msgstr ""
+
+#: ../../source/reference/logging.rst:18:<autosummary>:1
+msgid ":obj:`optuna.logging.get_verbosity <optuna.logging.get_verbosity>`"
+msgstr ""
+
+#: ../../source/reference/logging.rst:18:<autosummary>:1
+msgid "Return the current level for the Optuna's root logger."
+msgstr ""
+
+#: ../../source/reference/logging.rst:18:<autosummary>:1
+msgid ":obj:`optuna.logging.set_verbosity <optuna.logging.set_verbosity>`"
+msgstr ""
+
+#: ../../source/reference/logging.rst:18:<autosummary>:1
+msgid "Set the level for the Optuna's root logger."
+msgstr ""
+
+#: ../../source/reference/logging.rst:18:<autosummary>:1
+msgid ""
+":obj:`optuna.logging.disable_default_handler "
+"<optuna.logging.disable_default_handler>`"
+msgstr ""
+
+#: ../../source/reference/logging.rst:18:<autosummary>:1
+msgid "Disable the default handler of the Optuna's root logger."
+msgstr ""
+
+#: ../../source/reference/logging.rst:18:<autosummary>:1
+msgid ""
+":obj:`optuna.logging.enable_default_handler "
+"<optuna.logging.enable_default_handler>`"
+msgstr ""
+
+#: ../../source/reference/logging.rst:18:<autosummary>:1
+msgid "Enable the default handler of the Optuna's root logger."
+msgstr ""
+
+#: ../../source/reference/logging.rst:18:<autosummary>:1
+msgid ""
+":obj:`optuna.logging.disable_propagation "
+"<optuna.logging.disable_propagation>`"
+msgstr ""
+
+#: ../../source/reference/logging.rst:18:<autosummary>:1
+msgid "Disable propagation of the library log outputs."
+msgstr ""
+
+#: ../../source/reference/logging.rst:18:<autosummary>:1
+msgid ""
+":obj:`optuna.logging.enable_propagation "
+"<optuna.logging.enable_propagation>`"
+msgstr ""
+
+#: ../../source/reference/logging.rst:18:<autosummary>:1
+msgid "Enable propagation of the library log outputs."
 msgstr ""
 
 #~ msgid "Returns"
