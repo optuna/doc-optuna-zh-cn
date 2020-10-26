@@ -1,0 +1,335 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018, Optuna Contributors.
+# This file is distributed under the same license as the Optuna package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Optuna 2.2.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-26 14:44-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../source/reference/multi_objective/generated/optuna.multi_objective.study.MultiObjectiveStudy.rst:2
+msgid "optuna.multi\\_objective.study.MultiObjectiveStudy"
+msgstr ""
+
+#: of optuna.multi_objective.study.MultiObjectiveStudy:1
+msgid ""
+"A study corresponds to a multi-objective optimization task, i.e., a set "
+"of trials."
+msgstr ""
+
+#: of optuna.multi_objective.study.MultiObjectiveStudy:3
+msgid ""
+"This object provides interfaces to run a new "
+":class:`~optuna.multi_objective.trial.Trial`, access trials' history, "
+"set/get user-defined attributes of the study itself."
+msgstr ""
+
+#: of optuna.multi_objective.study.MultiObjectiveStudy:7
+msgid ""
+"Note that the direct use of this constructor is not recommended. To "
+"create and load a study, please refer to the documentation of "
+":func:`~optuna.multi_objective.study.create_study` and "
+":func:`~optuna.multi_objective.study.load_study` respectively."
+msgstr ""
+
+#: of optuna.multi_objective.study.MultiObjectiveStudy:13
+msgid ""
+"Added in v1.4.0 as an experimental feature. The interface may change in "
+"newer versions without prior notice. See "
+"https://github.com/optuna/optuna/releases/tag/v1.4.0."
+msgstr ""
+
+#: ../../source/reference/multi_objective/generated/optuna.multi_objective.study.MultiObjectiveStudy.rst:12
+msgid "Methods"
+msgstr ""
+
+#: ../../source/reference/multi_objective/generated/optuna.multi_objective.study.MultiObjectiveStudy.rst:26:<autosummary>:1
+msgid ""
+":obj:`enqueue_trial "
+"<optuna.multi_objective.study.MultiObjectiveStudy.enqueue_trial>`\\ "
+"\\(params\\)"
+msgstr ""
+
+#: ../../source/reference/multi_objective/generated/optuna.multi_objective.study.MultiObjectiveStudy.rst:26:<autosummary>:1
+#: of optuna.multi_objective.study.MultiObjectiveStudy.enqueue_trial:1
+msgid "Enqueue a trial with given parameter values."
+msgstr ""
+
+#: ../../source/reference/multi_objective/generated/optuna.multi_objective.study.MultiObjectiveStudy.rst:26:<autosummary>:1
+msgid ""
+":obj:`get_pareto_front_trials "
+"<optuna.multi_objective.study.MultiObjectiveStudy.get_pareto_front_trials>`\\"
+" \\(\\)"
+msgstr ""
+
+#: ../../source/reference/multi_objective/generated/optuna.multi_objective.study.MultiObjectiveStudy.rst:26:<autosummary>:1
+#: of
+#: optuna.multi_objective.study.MultiObjectiveStudy.get_pareto_front_trials:1
+msgid "Return trials located at the pareto front in the study."
+msgstr ""
+
+#: ../../source/reference/multi_objective/generated/optuna.multi_objective.study.MultiObjectiveStudy.rst:26:<autosummary>:1
+msgid ""
+":obj:`get_trials "
+"<optuna.multi_objective.study.MultiObjectiveStudy.get_trials>`\\ "
+"\\(\\[deepcopy\\]\\)"
+msgstr ""
+
+#: ../../source/reference/multi_objective/generated/optuna.multi_objective.study.MultiObjectiveStudy.rst:26:<autosummary>:1
+#: of
+#: optuna.multi_objective.study.MultiObjectiveStudy.directions:1:<autosummary>:1
+#: optuna.multi_objective.study.MultiObjectiveStudy.get_trials:1
+#: optuna.multi_objective.study.MultiObjectiveStudy.trials:1
+msgid "Return all trials in the study."
+msgstr ""
+
+#: ../../source/reference/multi_objective/generated/optuna.multi_objective.study.MultiObjectiveStudy.rst:26:<autosummary>:1
+msgid ""
+":obj:`optimize "
+"<optuna.multi_objective.study.MultiObjectiveStudy.optimize>`\\ "
+"\\(objective\\[\\, timeout\\, n\\_trials\\, ...\\]\\)"
+msgstr ""
+
+#: ../../source/reference/multi_objective/generated/optuna.multi_objective.study.MultiObjectiveStudy.rst:26:<autosummary>:1
+#: of optuna.multi_objective.study.MultiObjectiveStudy.optimize:1
+msgid "Optimize an objective function."
+msgstr ""
+
+#: ../../source/reference/multi_objective/generated/optuna.multi_objective.study.MultiObjectiveStudy.rst:26:<autosummary>:1
+msgid ""
+":obj:`set_system_attr "
+"<optuna.multi_objective.study.MultiObjectiveStudy.set_system_attr>`\\ "
+"\\(key\\, value\\)"
+msgstr ""
+
+#: ../../source/reference/multi_objective/generated/optuna.multi_objective.study.MultiObjectiveStudy.rst:26:<autosummary>:1
+#: of optuna.multi_objective.study.MultiObjectiveStudy.set_system_attr:1
+msgid "Set a system attribute to the study."
+msgstr ""
+
+#: ../../source/reference/multi_objective/generated/optuna.multi_objective.study.MultiObjectiveStudy.rst:26:<autosummary>:1
+msgid ""
+":obj:`set_user_attr "
+"<optuna.multi_objective.study.MultiObjectiveStudy.set_user_attr>`\\ "
+"\\(key\\, value\\)"
+msgstr ""
+
+#: ../../source/reference/multi_objective/generated/optuna.multi_objective.study.MultiObjectiveStudy.rst:26:<autosummary>:1
+#: of optuna.multi_objective.study.MultiObjectiveStudy.set_user_attr:1
+msgid "Set a user attribute to the study."
+msgstr ""
+
+#: ../../source/reference/multi_objective/generated/optuna.multi_objective.study.MultiObjectiveStudy.rst:28
+msgid "Attributes"
+msgstr ""
+
+#: of
+#: optuna.multi_objective.study.MultiObjectiveStudy.directions:1:<autosummary>:1
+msgid ""
+":obj:`directions "
+"<optuna.multi_objective.study.MultiObjectiveStudy.directions>`\\"
+msgstr ""
+
+#: of optuna.multi_objective.study.MultiObjectiveStudy.directions:1
+#: optuna.multi_objective.study.MultiObjectiveStudy.directions:1:<autosummary>:1
+msgid "Return the optimization direction list."
+msgstr ""
+
+#: of
+#: optuna.multi_objective.study.MultiObjectiveStudy.directions:1:<autosummary>:1
+msgid ""
+":obj:`n_objectives "
+"<optuna.multi_objective.study.MultiObjectiveStudy.n_objectives>`\\"
+msgstr ""
+
+#: of
+#: optuna.multi_objective.study.MultiObjectiveStudy.directions:1:<autosummary>:1
+#: optuna.multi_objective.study.MultiObjectiveStudy.n_objectives:1
+msgid "Return the number of objectives."
+msgstr ""
+
+#: of
+#: optuna.multi_objective.study.MultiObjectiveStudy.directions:1:<autosummary>:1
+msgid ""
+":obj:`sampler "
+"<optuna.multi_objective.study.MultiObjectiveStudy.sampler>`\\"
+msgstr ""
+
+#: of
+#: optuna.multi_objective.study.MultiObjectiveStudy.directions:1:<autosummary>:1
+#: optuna.multi_objective.study.MultiObjectiveStudy.sampler:1
+msgid "Return the sampler."
+msgstr ""
+
+#: of
+#: optuna.multi_objective.study.MultiObjectiveStudy.directions:1:<autosummary>:1
+msgid ""
+":obj:`system_attrs "
+"<optuna.multi_objective.study.MultiObjectiveStudy.system_attrs>`\\"
+msgstr ""
+
+#: of
+#: optuna.multi_objective.study.MultiObjectiveStudy.directions:1:<autosummary>:1
+#: optuna.multi_objective.study.MultiObjectiveStudy.system_attrs:1
+msgid "Return system attributes."
+msgstr ""
+
+#: of
+#: optuna.multi_objective.study.MultiObjectiveStudy.directions:1:<autosummary>:1
+msgid ":obj:`trials <optuna.multi_objective.study.MultiObjectiveStudy.trials>`\\"
+msgstr ""
+
+#: of
+#: optuna.multi_objective.study.MultiObjectiveStudy.directions:1:<autosummary>:1
+msgid ""
+":obj:`user_attrs "
+"<optuna.multi_objective.study.MultiObjectiveStudy.user_attrs>`\\"
+msgstr ""
+
+#: of
+#: optuna.multi_objective.study.MultiObjectiveStudy.directions:1:<autosummary>:1
+#: optuna.multi_objective.study.MultiObjectiveStudy.user_attrs:1
+msgid "Return user attributes."
+msgstr ""
+
+#: of optuna.multi_objective.study.MultiObjectiveStudy.directions
+#: optuna.multi_objective.study.MultiObjectiveStudy.get_pareto_front_trials
+#: optuna.multi_objective.study.MultiObjectiveStudy.get_trials
+#: optuna.multi_objective.study.MultiObjectiveStudy.n_objectives
+#: optuna.multi_objective.study.MultiObjectiveStudy.sampler
+#: optuna.multi_objective.study.MultiObjectiveStudy.system_attrs
+#: optuna.multi_objective.study.MultiObjectiveStudy.trials
+#: optuna.multi_objective.study.MultiObjectiveStudy.user_attrs
+msgid "Returns"
+msgstr ""
+
+#: of optuna.multi_objective.study.MultiObjectiveStudy.directions:3
+msgid "A list that contains the optimization direction for each objective value."
+msgstr ""
+
+#: of optuna.multi_objective.study.MultiObjectiveStudy.enqueue_trial:3
+msgid ""
+"You can fix the next sampling parameters which will be evaluated in your "
+"objective function."
+msgstr ""
+
+#: of optuna.multi_objective.study.MultiObjectiveStudy.enqueue_trial:6
+msgid ""
+"Please refer to the documentation of "
+":func:`optuna.study.Study.enqueue_trial` for further details."
+msgstr ""
+
+#: of optuna.multi_objective.study.MultiObjectiveStudy.enqueue_trial
+#: optuna.multi_objective.study.MultiObjectiveStudy.get_trials
+#: optuna.multi_objective.study.MultiObjectiveStudy.set_system_attr
+#: optuna.multi_objective.study.MultiObjectiveStudy.set_user_attr
+msgid "Parameters"
+msgstr ""
+
+#: of optuna.multi_objective.study.MultiObjectiveStudy.enqueue_trial:9
+msgid "Parameter values to pass your objective function."
+msgstr ""
+
+#: of
+#: optuna.multi_objective.study.MultiObjectiveStudy.get_pareto_front_trials:3
+msgid ""
+"A trial is located at the pareto front if there are no trials that "
+"dominate the trial. It's called that a trial ``t0`` dominates another "
+"trial ``t1`` if ``all(v0 <= v1) for v0, v1 in zip(t0.values, t1.values)``"
+" and ``any(v0 < v1) for v0, v1 in zip(t0.values, t1.values)`` are held."
+msgstr ""
+
+#: of
+#: optuna.multi_objective.study.MultiObjectiveStudy.get_pareto_front_trials:8
+#: optuna.multi_objective.study.MultiObjectiveStudy.get_trials:14
+#: optuna.multi_objective.study.MultiObjectiveStudy.trials:7
+msgid ""
+"A list of "
+":class:`~optuna.multi_objective.trial.FrozenMultiObjectiveTrial` objects."
+msgstr ""
+
+#: of optuna.multi_objective.study.MultiObjectiveStudy.get_trials:3
+#: optuna.multi_objective.study.MultiObjectiveStudy.trials:3
+msgid "The returned trials are ordered by trial number."
+msgstr ""
+
+#: of optuna.multi_objective.study.MultiObjectiveStudy.get_trials:5
+msgid ""
+"For library users, it's recommended to use more handy "
+":attr:`~optuna.multi_objective.study.MultiObjectiveStudy.trials` property"
+" to get the trials instead."
+msgstr ""
+
+#: of optuna.multi_objective.study.MultiObjectiveStudy.get_trials:9
+msgid ""
+"Flag to control whether to apply ``copy.deepcopy()`` to the trials. Note "
+"that if you set the flag to :obj:`False`, you shouldn't mutate any fields"
+" of the returned trial. Otherwise the internal state of the study may "
+"corrupt and unexpected behavior may happen."
+msgstr ""
+
+#: of optuna.multi_objective.study.MultiObjectiveStudy.n_objectives:3
+msgid "Number of objectives."
+msgstr ""
+
+#: of optuna.multi_objective.study.MultiObjectiveStudy.optimize:3
+msgid ""
+"This method is the same as :func:`optuna.study.Study.optimize` except for"
+" taking an objective function that returns multi-objective values as the "
+"argument."
+msgstr ""
+
+#: of optuna.multi_objective.study.MultiObjectiveStudy.optimize:6
+msgid ""
+"Please refer to the documentation of :func:`optuna.study.Study.optimize` "
+"for further details."
+msgstr ""
+
+#: of optuna.multi_objective.study.MultiObjectiveStudy.optimize:10
+msgid "Example"
+msgstr ""
+
+#: of optuna.multi_objective.study.MultiObjectiveStudy.sampler:3
+msgid "A :class:`~multi_objective.samplers.BaseMultiObjectiveSampler` object."
+msgstr ""
+
+#: of optuna.multi_objective.study.MultiObjectiveStudy.set_system_attr:3
+msgid ""
+"Note that Optuna internally uses this method to save system messages. "
+"Please use "
+":func:`~optuna.multi_objective.study.MultiObjectiveStudy.set_user_attr` "
+"to set users' attributes."
+msgstr ""
+
+#: of optuna.multi_objective.study.MultiObjectiveStudy.set_system_attr:7
+#: optuna.multi_objective.study.MultiObjectiveStudy.set_user_attr:3
+msgid "A key string of the attribute."
+msgstr ""
+
+#: of optuna.multi_objective.study.MultiObjectiveStudy.set_system_attr:8
+#: optuna.multi_objective.study.MultiObjectiveStudy.set_user_attr:4
+msgid "A value of the attribute. The value should be JSON serializable."
+msgstr ""
+
+#: of optuna.multi_objective.study.MultiObjectiveStudy.system_attrs:3
+msgid "A dictionary containing all system attributes."
+msgstr ""
+
+#: of optuna.multi_objective.study.MultiObjectiveStudy.trials:5
+msgid "This is a short form of ``self.get_trials(deepcopy=True)``."
+msgstr ""
+
+#: of optuna.multi_objective.study.MultiObjectiveStudy.user_attrs:3
+msgid "A dictionary containing all user attributes."
+msgstr ""
+

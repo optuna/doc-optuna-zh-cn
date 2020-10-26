@@ -1,0 +1,245 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018, Optuna Contributors.
+# This file is distributed under the same license as the Optuna package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Optuna 1.4.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-26 12:27-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../source/reference/cli.rst:4
+msgid "optuna.cli"
+msgstr ""
+
+#: ../../source/reference/cli.rst:6
+msgid ""
+"The :mod:`~optuna.cli` module implements Optuna's command-line "
+"functionality using the `cliff framework "
+"<https://docs.openstack.org/cliff/latest/index.html>`_."
+msgstr ""
+
+#: ../../<_OptunaApp>:1
+msgid "show program's version number and exit"
+msgstr "显示应用的版本号并退出"
+
+#: ../../<_OptunaApp>:1
+msgid "Increase verbosity of output. Can be repeated."
+msgstr "打印冗余内容。可重复。"
+
+#: ../../<_OptunaApp>:1
+msgid "Suppress output except warnings and errors."
+msgstr "禁止打印除了警告和错误之外的输出。"
+
+#: ../../<_OptunaApp>:1
+msgid "Specify a file to log output. Disabled by default."
+msgstr "确定用于记录日志的文件名。该选项默认情况下是禁用的。"
+
+#: ../../<_OptunaApp>:1
+msgid "Show tracebacks on errors."
+msgstr "显示异常处理和堆栈跟踪信息。"
+
+#: ../../<_OptunaApp>:1
+msgid "DB URL. (e.g. sqlite:///example.db)"
+msgstr "数据库 URL. (比如 ``sqlite:///example.db`` )"
+
+msgid "create-study"
+msgstr ""
+
+#: ../../<_CreateStudy>:1
+msgid "Create a new study."
+msgstr "创建新的 study"
+
+#: ../../<_CreateStudy>:1
+msgid "A human-readable name of a study to distinguish it from others."
+msgstr "设定具有可读性的 study 名，以方便和其他的 study 区分。"
+
+#: ../../<_CreateStudy>:1
+msgid ""
+"Set direction of optimization to a new study. Set 'minimize' for "
+"minimization and 'maximize' for maximization."
+msgstr "设定新 study 的优化方向。如果方向是最小化的话就设成 'minimize', 如果是最大化就设置成 'maximize'."
+
+#: ../../<_CreateStudy>:1
+msgid ""
+"If specified, the creation of the study is skipped without any error when"
+" the study name is duplicated."
+msgstr "如果开启该选项， 当存在一个同名的 study 时，optuna 在优化开始时将跳过创建 study 的过程，并且不报错。"
+
+#: ../../<_CreateStudy>:1 ../../<_Dashboard>:1 ../../<_DeleteStudy>:1
+#: ../../<_StorageUpgrade>:1 ../../<_Studies>:1 ../../<_StudyOptimize>:1
+#: ../../<_StudySetUserAttribute>:1
+msgid "This command is provided by the optuna plugin."
+msgstr "该命令由 optuna 插件提供。"
+
+msgid "dashboard"
+msgstr ""
+
+#: ../../<_Dashboard>:1
+msgid "Launch web dashboard (beta)."
+msgstr "启动 web dashboard (beta)."
+
+#: ../../<_Dashboard>:1 ../../<_StudyOptimize>:1
+#: ../../<_StudySetUserAttribute>:1
+msgid "This argument is deprecated. Use --study-name instead."
+msgstr "该参数已弃用。作为替代，请使用  –study-name."
+
+#: ../../<_Dashboard>:1
+msgid "The name of the study to show on the dashboard."
+msgstr ""
+
+#: ../../<_Dashboard>:1
+msgid ""
+"Output HTML file path. If it is not given, a HTTP server starts and the "
+"dashboard is served."
+msgstr "HTML 文件的输出路径。如果该参数没有设定的话，Optuna 将会启动一个 HTTP server 并host 一个dashboard"
+
+#: ../../<_Dashboard>:1
+msgid ""
+"Allow websocket access from the specified host(s).Internally, it is used "
+"as the value of bokeh's --allow-websocket-origin option. Please refer to "
+"https://bokeh.pydata.org/en/latest/docs/reference/command/subcommands/serve.html"
+" for more details."
+msgstr ""
+"允许从制定的 host 发起的的 websocket 请求。该选项用法和 bokeh 的 ``–allow-websocket-origin`` "
+"一样。更多细节见 "
+"https://docs.bokeh.org/en/latest/docs/reference/command/subcommands/serve.html.设定具有可读性的"
+" study 名，以方便和其他的 study 区分。"
+
+msgid "delete-study"
+msgstr ""
+
+#: ../../<_DeleteStudy>:1
+msgid "Delete a specified study."
+msgstr "删除特定的 study."
+
+#: ../../<_DeleteStudy>:1
+msgid "The name of the study to delete."
+msgstr ""
+
+msgid "storage upgrade"
+msgstr ""
+
+#: ../../<_StorageUpgrade>:1
+msgid "Upgrade the schema of a storage."
+msgstr "升级数据库架构。"
+
+msgid "studies"
+msgstr ""
+
+#: ../../<_Studies>:1
+msgid "Show a list of studies."
+msgstr "显示 study 列表。"
+
+#: ../../<_Studies>:1
+msgid "the output format, defaults to table"
+msgstr "输出格式，默认情况下是表格。"
+
+#: ../../<_Studies>:1
+msgid "specify the column(s) to include, can be repeated to show multiple columns"
+msgstr "用于设定要展示的（表格）列。可设置多个 column 参数以同时显示多个column."
+
+#: ../../<_Studies>:1
+msgid "when to include quotes, defaults to nonnumeric"
+msgstr ""
+
+# TODO
+#: ../../<_Studies>:1
+msgid "whether to disable indenting the JSON"
+msgstr "设定是否在 json输出格式中禁用缩进。"
+
+#: ../../<_Studies>:1
+msgid ""
+"Maximum display width, <1 to disable. You can also use the "
+"CLIFF_MAX_TERM_WIDTH environment variable, but the parameter takes "
+"precedence."
+msgstr ""
+"最大展示宽度。如果设置成小于 1 的数值，就代表禁用最大宽度限制。你也可以通过设置 ``CLIFF_MAX_TERM_WIDTH `` "
+"环境变量来限制最大宽度，但是 ``--max-width`` 参数的优先级比环境变量高。"
+
+#: ../../<_Studies>:1
+msgid ""
+"Fit the table to the display width. Implied if --max-width greater than "
+"0. Set the environment variable CLIFF_FIT_WIDTH=1 to always enable"
+msgstr ""
+"将输出表格设置成与显示屏同宽。如果 ``-max-width`` > 1 的话，该选项会自动启用。设定是否在 json 中禁用缩进。也可以通过设置"
+" ``CLIFF_FIT_WIDTH`` 环境变量的值为 1 来启用该选项。"
+
+#: ../../<_Studies>:1
+msgid "Print empty table if there is no data to show."
+msgstr "在无数据的情况下也输出空表格"
+
+#: ../../<_Studies>:1
+msgid ""
+"specify the column(s) to sort the data (columns specified first have a "
+"priority, non-existing columns are ignored), can be repeated"
+msgstr "按照指定列来对表格的行进行排序。越靠前指定的列在排序中的优先级越高。没有被指定的列不参与排序。"
+
+msgid "study optimize"
+msgstr ""
+
+#: ../../<_StudyOptimize>:1
+msgid "Start optimization of a study. Deprecated since version 2.0.0."
+msgstr "针对特定 study 开始优化过程。自 2.0.0 版本后弃用。"
+
+#: ../../<_StudyOptimize>:1
+msgid ""
+"The number of trials. If this argument is not given, as many trials run "
+"as possible."
+msgstr "优化过程将运行的总 trial 数目。如果不设定该数目的话，优化过程会一直持续下去。"
+
+#: ../../<_StudyOptimize>:1
+msgid ""
+"Stop study after the given number of second(s). If this argument is not "
+"given, as many trials run as possible."
+msgstr "到达指定时间（按秒计）以后终止 study. 如果不设定该数目的话，优化过程也会一直持续下去。"
+
+#: ../../<_StudyOptimize>:1
+msgid ""
+"The number of parallel jobs. If this argument is set to -1, the number is"
+" set to CPU counts."
+msgstr "并行运行的任务个数。如果该参数设置为 -1, 则任务的实际数目将等于 CPU 的核心数。"
+
+#: ../../<_StudyOptimize>:1
+msgid "The name of the study to start optimization on."
+msgstr ""
+
+#: ../../<_StudyOptimize>:1
+msgid "Python script file where the objective function resides."
+msgstr "用于指定定义了目标函数的 Python 脚本文件名。"
+
+#: ../../<_StudyOptimize>:1
+msgid "The method name of the objective function."
+msgstr "目标函数的方法名。"
+
+msgid "study set-user-attr"
+msgstr ""
+
+#: ../../<_StudySetUserAttribute>:1
+msgid "Set a user attribute to a study."
+msgstr "针对特定 study 设定用户属性 (user attribute)."
+
+#: ../../<_StudySetUserAttribute>:1
+msgid "The name of the study to set the user attribute to."
+msgstr "用于设置用户属性的 study 名。"
+
+#: ../../<_StudySetUserAttribute>:1
+msgid "Key of the user attribute."
+msgstr "设定用户属性中的键 (key)."
+
+#: ../../<_StudySetUserAttribute>:1
+msgid "Value to be set."
+msgstr "设定用户属性中的值 (value)."
+
+#~ msgid "Command Line Interface"
+#~ msgstr ""
+

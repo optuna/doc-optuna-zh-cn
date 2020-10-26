@@ -1,0 +1,95 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018, Optuna Contributors.
+# This file is distributed under the same license as the Optuna package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Optuna 2.2.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-26 14:44-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../source/reference/generated/optuna.trial.create_trial.rst:2
+msgid "optuna.trial.create\\_trial"
+msgstr ""
+
+#: of optuna.trial.create_trial:1
+msgid "Create a new :class:`~optuna.trial.FrozenTrial`."
+msgstr ""
+
+#: of optuna.trial.create_trial:4
+msgid "Example"
+msgstr ""
+
+#: of optuna.trial.create_trial:26
+msgid ""
+"See :func:`~optuna.study.Study.add_trial` for how this function can be "
+"used to create a study from existing trials."
+msgstr ""
+
+#: of optuna.trial.create_trial:31
+msgid ""
+"Please note that this is a low-level API. In general, trials that are "
+"passed to objective functions are created inside "
+":func:`~optuna.study.Study.optimize`."
+msgstr ""
+
+#: of optuna.trial.create_trial
+msgid "Parameters"
+msgstr ""
+
+#: of optuna.trial.create_trial:34
+msgid "Trial state."
+msgstr ""
+
+#: of optuna.trial.create_trial:35
+msgid ""
+"Trial objective value. Must be specified if ``state`` is "
+":class:`TrialState.COMPLETE`."
+msgstr ""
+
+#: of optuna.trial.create_trial:36
+msgid "Dictionary with suggested parameters of the trial."
+msgstr ""
+
+#: of optuna.trial.create_trial:37
+msgid "Dictionary with parameter distributions of the trial."
+msgstr ""
+
+#: of optuna.trial.create_trial:38
+msgid "Dictionary with user attributes."
+msgstr ""
+
+#: of optuna.trial.create_trial:39
+msgid ""
+"Dictionary with system attributes. Should not have to be used for most "
+"users."
+msgstr ""
+
+#: of optuna.trial.create_trial:40
+msgid "Dictionary with intermediate objective values of the trial."
+msgstr ""
+
+#: of optuna.trial.create_trial
+msgid "Returns"
+msgstr ""
+
+#: of optuna.trial.create_trial:42
+msgid "Created trial."
+msgstr ""
+
+#: of optuna.trial.create_trial:45
+msgid ""
+"Added in v2.0.0 as an experimental feature. The interface may change in "
+"newer versions without prior notice. See "
+"https://github.com/optuna/optuna/releases/tag/v2.0.0."
+msgstr ""
+

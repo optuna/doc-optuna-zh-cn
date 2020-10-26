@@ -1,0 +1,127 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018, Optuna Contributors.
+# This file is distributed under the same license as the Optuna package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Optuna 1.4.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-26 14:44-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../source/reference/exceptions.rst:4
+msgid "optuna.exceptions"
+msgstr ""
+
+#: ../../source/reference/exceptions.rst:6
+msgid ""
+"The :mod:`~optuna.exceptions` module defines Optuna-specific exceptions "
+"deriving from a base :class:`~optuna.exceptions.OptunaError` class. Of "
+"special importance for library users is the "
+":class:`~optuna.exceptions.TrialPruned` exception to be raised if "
+":func:`optuna.trial.Trial.should_prune` returns ``True`` for a trial that"
+" should be pruned."
+msgstr ""
+
+#: ../../source/reference/exceptions.rst:16:<autosummary>:1
+msgid ":obj:`optuna.exceptions.OptunaError <optuna.exceptions.OptunaError>`"
+msgstr ""
+
+#: ../../source/reference/exceptions.rst:16:<autosummary>:1
+msgid "Base class for Optuna specific errors."
+msgstr ""
+
+#: ../../source/reference/exceptions.rst:16:<autosummary>:1
+msgid ":obj:`optuna.exceptions.TrialPruned <optuna.exceptions.TrialPruned>`"
+msgstr ""
+
+#: ../../source/reference/exceptions.rst:16:<autosummary>:1
+msgid "Exception for pruned trials."
+msgstr ""
+
+#: ../../source/reference/exceptions.rst:16:<autosummary>:1
+msgid ":obj:`optuna.exceptions.CLIUsageError <optuna.exceptions.CLIUsageError>`"
+msgstr ""
+
+#: ../../source/reference/exceptions.rst:16:<autosummary>:1
+msgid "Exception for CLI."
+msgstr ""
+
+#: ../../source/reference/exceptions.rst:16:<autosummary>:1
+msgid ""
+":obj:`optuna.exceptions.StorageInternalError "
+"<optuna.exceptions.StorageInternalError>`"
+msgstr ""
+
+#: ../../source/reference/exceptions.rst:16:<autosummary>:1
+msgid "Exception for storage operation."
+msgstr ""
+
+#: ../../source/reference/exceptions.rst:16:<autosummary>:1
+msgid ""
+":obj:`optuna.exceptions.DuplicatedStudyError "
+"<optuna.exceptions.DuplicatedStudyError>`"
+msgstr ""
+
+#: ../../source/reference/exceptions.rst:16:<autosummary>:1
+msgid "Exception for a duplicated study name."
+msgstr ""
+
+#~ msgid "Example"
+#~ msgstr ""
+
+#~ msgid "The alias also exists as :class:`optuna.TrialPruned`."
+#~ msgstr ":class:`optuna.TrialPruned` 是该异常的一个别名。"
+
+#~ msgid "Exceptions"
+#~ msgstr ""
+
+#~ msgid "Base class for Optuna specific errors."
+#~ msgstr "Optuna 异常基类。"
+
+#~ msgid "Exception for pruned trials."
+#~ msgstr "被剪枝 trial 异常。"
+
+#~ msgid ""
+#~ "This error tells a trainer that "
+#~ "the current :class:`~optuna.trial.Trial` was "
+#~ "pruned. It is supposed to be "
+#~ "raised after :func:`optuna.trial.Trial.should_prune` "
+#~ "as shown in the following example."
+#~ msgstr ""
+#~ "该 error 表明：当前 :class:`~optuna.trial.Trial` "
+#~ "已被剪枝。这种 error 一般会在 "
+#~ ":func:`optuna.trial.Trial.should_prune` 之后被抛出。具体见下面的例子。"
+
+#~ msgid "示例"
+#~ msgstr ""
+
+#~ msgid "Exception for CLI."
+#~ msgstr "命令行界面异常。"
+
+#~ msgid "CLI raises this exception when it receives invalid configuration."
+#~ msgstr "当接收到无效参数时，该异常会被抛出。"
+
+#~ msgid "Exception for storage operation."
+#~ msgstr "存储异常。"
+
+#~ msgid "This error is raised when an operation failed in backend DB of storage."
+#~ msgstr "当存储后端发生错误时，该异常会被抛出。"
+
+#~ msgid "Exception for a duplicated study name."
+#~ msgstr "重复 study 名导致的异常。"
+
+#~ msgid ""
+#~ "This error is raised when a "
+#~ "specified study name already exists in"
+#~ " the storage."
+#~ msgstr "当存储空间中已经存在一个同名 study 时，该异常会被抛出。"
+

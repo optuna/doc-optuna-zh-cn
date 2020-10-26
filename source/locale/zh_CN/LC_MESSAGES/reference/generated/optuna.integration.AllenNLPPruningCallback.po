@@ -1,0 +1,102 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018, Optuna Contributors.
+# This file is distributed under the same license as the Optuna package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Optuna 2.2.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-26 14:44-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../source/reference/generated/optuna.integration.AllenNLPPruningCallback.rst:2
+msgid "optuna.integration.AllenNLPPruningCallback"
+msgstr ""
+
+#: of optuna.integration.AllenNLPPruningCallback:1
+msgid "AllenNLP callback to prune unpromising trials."
+msgstr ""
+
+#: of optuna.integration.AllenNLPPruningCallback:3
+msgid ""
+"See `the example <https://github.com/optuna/optuna/blob/master/ "
+"examples/allennlp/allennlp_simple.py>`__ if you want to add a proning "
+"callback which observes a metric."
+msgstr ""
+
+#: of optuna.integration.AllenNLPPruningCallback:7
+msgid ""
+"You can also see the tutorial of our AllenNLP integration on `AllenNLP "
+"Guide <https://guide.allennlp.org/hyperparameter-optimization>`_."
+msgstr ""
+
+#: of optuna.integration.AllenNLPPruningCallback:11
+msgid ""
+"When :class:`~optuna.integration.AllenNLPPruningCallback` is instantiated"
+" in Python script, trial and monitor are mandatory."
+msgstr ""
+
+#: of optuna.integration.AllenNLPPruningCallback:14
+msgid ""
+"On the other hand, when "
+":class:`~optuna.integration.AllenNLPPruningCallback` is used with "
+":class:`~optuna.integration.AllenNLPExecutor`, ``trial`` and ``monitor`` "
+"would be ``None``. :class:`~optuna.integration.AllenNLPExecutor` sets "
+"environment variables for a study name, trial id, monitor, and storage. "
+"Then :class:`~optuna.integration.AllenNLPPruningCallback` loads them to "
+"restore ``trial`` and ``monitor``."
+msgstr ""
+
+#: of optuna.integration.AllenNLPPruningCallback
+msgid "Parameters"
+msgstr ""
+
+#: of optuna.integration.AllenNLPPruningCallback:21
+msgid ""
+"A :class:`~optuna.trial.Trial` corresponding to the current evaluation of"
+" the objective function."
+msgstr ""
+
+#: of optuna.integration.AllenNLPPruningCallback:23
+msgid ""
+"An evaluation metric for pruning, e.g. ``validation_loss`` or "
+"``validation_accuracy``."
+msgstr ""
+
+#: of optuna.integration.AllenNLPPruningCallback:27
+msgid ""
+"Added in v2.0.0 as an experimental feature. The interface may change in "
+"newer versions without prior notice. See "
+"https://github.com/optuna/optuna/releases/tag/v2.0.0."
+msgstr ""
+
+#: ../../source/reference/generated/optuna.integration.AllenNLPPruningCallback.rst:12
+msgid "Methods"
+msgstr ""
+
+#: of optuna.integration.AllenNLPPruningCallback.register:1:<autosummary>:1
+msgid ""
+":obj:`register <optuna.integration.AllenNLPPruningCallback.register>`\\ "
+"\\(\\*args\\, \\*\\*kwargs\\)"
+msgstr ""
+
+#: of optuna.integration.AllenNLPPruningCallback.register:1
+#: optuna.integration.AllenNLPPruningCallback.register:1:<autosummary>:1
+msgid "Stub method for `EpochCallback.register`."
+msgstr ""
+
+#: of optuna.integration.AllenNLPPruningCallback.register:3
+msgid ""
+"This method has the same signature as `Registrable.register "
+"<https://docs.allennlp.org/master/ api/common/registrable/#registrable>`_"
+" in AllenNLP."
+msgstr ""
+
