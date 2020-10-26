@@ -62,7 +62,7 @@ msgstr "只需少量依赖，简单安装完成后便可处理各种任务。"
 
 #: ../../source/index.rst:21
 msgid ":doc:`Pythonic search spaces <tutorial/002_configurations>`"
-msgstr "Python 式的搜索空间"
+msgstr ":doc:`Python 式的搜索空间 <tutorial/002_configurations>`"
 
 #: ../../source/index.rst:23
 msgid ""
