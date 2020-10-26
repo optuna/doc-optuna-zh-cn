@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 1.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-10 16:27-0400\n"
+"POT-Creation-Date: 2020-10-26 12:27-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,8 +17,110 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.8.0\n"
 
-#: ../../source/reference/integration.rst:2
+#: ../../source/reference/integration.rst:4
 msgid "optuna.integration"
+msgstr ""
+
+#: ../../source/reference/integration.rst:6
+msgid ""
+"The :mod:`~optuna.integration` module contains classes used to integrate "
+"Optuna with external machine learning frameworks."
+msgstr ""
+
+#: ../../source/reference/integration.rst:8
+msgid ""
+"For most of the ML frameworks supported by Optuna, the corresponding "
+"Optuna integration class serves only to implement a callback object and "
+"functions, compliant with the framework's specific callback API, to be "
+"called with each intermediate step in the model training. The "
+"functionality implemented in these callbacks across the different ML "
+"frameworks includes:"
+msgstr ""
+
+#: ../../source/reference/integration.rst:10
+msgid ""
+"Reporting intermediate model scores back to the Optuna trial using "
+":func:`optuna.trial.report`,"
+msgstr ""
+
+#: ../../source/reference/integration.rst:11
+msgid ""
+"According to the results of :func:`optuna.trial.Trial.should_prune`, "
+"pruning the current model by raising :func:`optuna.TrialPruned`, and"
+msgstr ""
+
+#: ../../source/reference/integration.rst:12
+msgid ""
+"Reporting intermediate Optuna data such as the current trial number back "
+"to the framework, as done in :class:`~optuna.integration.MLflowCallback`."
+msgstr ""
+
+#: ../../source/reference/integration.rst:14
+msgid ""
+"For scikit-learn, an integrated "
+":class:`~optuna.integration.OptunaSearchCV` estimator is available that "
+"combines scikit-learn BaseEstimator functionality with access to a class-"
+"level ``Study`` object."
+msgstr ""
+
+#: ../../source/reference/integration.rst:17
+msgid "AllenNLP"
+msgstr ""
+
+#: ../../source/reference/integration.rst:28
+msgid "Catalyst"
+msgstr ""
+
+#: ../../source/reference/integration.rst:37
+msgid "Chainer"
+msgstr ""
+
+#: ../../source/reference/integration.rst:47
+msgid "fast.ai"
+msgstr ""
+
+#: ../../source/reference/integration.rst:56
+msgid "Keras"
+msgstr ""
+
+#: ../../source/reference/integration.rst:65
+msgid "LightGBM"
+msgstr ""
+
+#: ../../source/reference/integration.rst:77
+msgid "MLflow"
+msgstr ""
+
+#: ../../source/reference/integration.rst:86
+msgid "MXNet"
+msgstr ""
+
+#: ../../source/reference/integration.rst:95
+msgid "pycma"
+msgstr ""
+
+#: ../../source/reference/integration.rst:105
+msgid "PyTorch"
+msgstr ""
+
+#: ../../source/reference/integration.rst:115
+msgid "scikit-learn"
+msgstr ""
+
+#: ../../source/reference/integration.rst:124
+msgid "scikit-optimize"
+msgstr ""
+
+#: ../../source/reference/integration.rst:133
+msgid "skorch"
+msgstr ""
+
+#: ../../source/reference/integration.rst:142
+msgid "TensorFlow"
+msgstr ""
+
+#: ../../source/reference/integration.rst:153
+msgid "XGBoost"
 msgstr ""
 
 #~ msgid "Parameters"

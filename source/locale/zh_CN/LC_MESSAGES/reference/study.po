@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 1.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-10 16:27-0400\n"
+"POT-Creation-Date: 2020-10-26 12:27-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,8 +17,19 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.8.0\n"
 
-#: ../../source/reference/study.rst:2
+#: ../../source/reference/study.rst:4
 msgid "optuna.study"
+msgstr ""
+
+#: ../../source/reference/study.rst:6
+msgid ""
+"The :mod:`~optuna.study` module implements the "
+":class:`~optuna.study.Study` object and related functions. A public "
+"constructor is available for the :class:`~optuna.study.Study` class, but "
+"direct use of this constructor is not recommended. Instead, library users"
+" should create and load a :class:`~optuna.study.Study` using "
+":func:`~optuna.study.create_study` and :func:`~optuna.study.load_study` "
+"respectively."
 msgstr ""
 
 #~ msgid "Returns"

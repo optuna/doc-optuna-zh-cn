@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 2.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-10 16:27-0400\n"
+"POT-Creation-Date: 2020-10-26 12:27-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,14 +17,23 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.8.0\n"
 
-#: ../../source/reference/multi_objective/visualization.rst:2
+#: ../../source/reference/multi_objective/visualization.rst:4
 msgid "optuna.multi_objective.visualization"
 msgstr ""
 
-#: ../../source/reference/multi_objective/visualization.rst:5
+#: ../../source/reference/multi_objective/visualization.rst:7
 msgid ""
-":mod:`~optuna.multi_objective.visualization` module uses plotly to create"
-" figures, but `JupyterLab`_ cannot render them by default. Please follow "
+":mod:`optuna.multi_objective.visualization` module uses plotly to create "
+"figures, but `JupyterLab`_ cannot render them by default. Please follow "
 "this `installation guide`_ to show figures in `JupyterLab`_."
 msgstr ""
+
+#~ msgid ""
+#~ ":mod:`~optuna.multi_objective.visualization` module uses"
+#~ " plotly to create figures, but "
+#~ "`JupyterLab`_ cannot render them by "
+#~ "default. Please follow this `installation "
+#~ "guide`_ to show figures in "
+#~ "`JupyterLab`_."
+#~ msgstr ""
 

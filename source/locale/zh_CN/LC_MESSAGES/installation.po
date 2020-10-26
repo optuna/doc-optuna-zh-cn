@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 1.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-06-17 19:47-0400\n"
+"POT-Creation-Date: 2020-10-26 12:27-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,8 +22,8 @@ msgid "Installation"
 msgstr "安装"
 
 #: ../../source/installation.rst:4
-msgid "Optuna supports Python 3.5 or newer."
-msgstr "Optuna 支持 3.5 或者更新版本的 Python."
+msgid "Optuna supports Python 3.6 or newer."
+msgstr "Optuna 支持 3.6 或者更新版本的 Python."
 
 #: ../../source/installation.rst:6
 msgid "We recommend to install Optuna via pip:"
@@ -33,8 +33,7 @@ msgstr "我们推荐使用 pip 来安装 Optuna："
 msgid ""
 "You can also install the development version of Optuna from master branch"
 " of Git repository:"
-msgstr ""
-"你也可以在 Git 仓库的 master 分支下用开发模式安装Optuna："
+msgstr "你也可以在 Git 仓库的 master 分支下用开发模式安装Optuna："
 
 #: ../../source/installation.rst:18
 msgid "You can also install Optuna via conda:"

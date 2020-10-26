@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 1.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-10 16:27-0400\n"
+"POT-Creation-Date: 2020-10-26 12:27-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,8 +17,19 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.8.0\n"
 
-#: ../../source/reference/logging.rst:2
+#: ../../source/reference/logging.rst:4
 msgid "optuna.logging"
+msgstr ""
+
+#: ../../source/reference/logging.rst:6
+msgid ""
+"The :mod:`~optuna.logging` module implements logging using the Python "
+"``logging`` package. Library users may be especially interested in "
+"setting verbosity levels using :func:`~optuna.logging.set_verbosity` to "
+"one of ``optuna.logging.CRITICAL`` (aka ``optuna.logging.FATAL``), "
+"``optuna.logging.ERROR``, ``optuna.logging.WARNING`` (aka "
+"``optuna.logging.WARN``), ``optuna.logging.INFO``, or "
+"``optuna.logging.DEBUG``."
 msgstr ""
 
 #~ msgid "Returns"

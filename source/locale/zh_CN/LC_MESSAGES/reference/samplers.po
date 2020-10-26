@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 1.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-10 16:27-0400\n"
+"POT-Creation-Date: 2020-10-26 12:27-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,8 +17,18 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.8.0\n"
 
-#: ../../source/reference/samplers.rst:2
+#: ../../source/reference/samplers.rst:4
 msgid "optuna.samplers"
+msgstr ""
+
+#: ../../source/reference/samplers.rst:6
+msgid ""
+"The :mod:`~optuna.samplers` module defines a base class for parameter "
+"sampling as described extensively in "
+":class:`~optuna.samplers.BaseSampler`. The remaining classes in this "
+"module represent child classes, deriving from "
+":class:`~optuna.samplers.BaseSampler`, which implement different sampling"
+" strategies."
 msgstr ""
 
 #~ msgid "Parameters"

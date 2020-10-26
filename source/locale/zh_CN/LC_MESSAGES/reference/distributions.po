@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 1.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-10 16:27-0400\n"
+"POT-Creation-Date: 2020-10-26 12:27-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,8 +17,26 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.8.0\n"
 
-#: ../../source/reference/distributions.rst:2
+#: ../../source/reference/distributions.rst:4
 msgid "optuna.distributions"
+msgstr ""
+
+#: ../../source/reference/distributions.rst:6
+msgid ""
+"The :mod:`~optuna.distributions` module defines various classes "
+"representing probability distributions, mainly used to suggest initial "
+"hyperparameter values for an optimization trial. Distribution classes "
+"inherit from a library-internal "
+":class:`~optuna.distributions.BaseDistribution`, and is initialized with "
+"specific parameters, such as the ``low`` and ``high`` endpoints for a "
+":class:`~optuna.distributions.UniformDistribution`."
+msgstr ""
+
+#: ../../source/reference/distributions.rst:8
+msgid ""
+"Optuna users should not use distribution classes directly, but instead "
+"use utility functions provided by :class:`~optuna.trial.Trial` such as "
+":meth:`~optuna.trial.Trial.suggest_int`."
 msgstr ""
 
 #~ msgid "Returns"

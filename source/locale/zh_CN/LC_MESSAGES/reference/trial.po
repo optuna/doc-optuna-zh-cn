@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 1.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-10 16:27-0400\n"
+"POT-Creation-Date: 2020-10-26 12:27-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,8 +17,25 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.8.0\n"
 
-#: ../../source/reference/trial.rst:2
+#: ../../source/reference/trial.rst:4
 msgid "optuna.trial"
+msgstr ""
+
+#: ../../source/reference/trial.rst:6
+msgid ""
+"The :mod:`~optuna.trial` module contains :class:`~optuna.trial.Trial` "
+"related classes and functions."
+msgstr ""
+
+#: ../../source/reference/trial.rst:8
+msgid ""
+"A :class:`~optuna.trial.Trial` instance represents a process of "
+"evaluating an objective function. This instance is passed to an objective"
+" function and provides interfaces to get parameter suggestion, manage the"
+" trial's state, and set/get user-defined attributes of the trial, so that"
+" Optuna users can define a custom objective function through the "
+"interfaces. Basically, Optuna users only use it in their custom objective"
+" functions."
 msgstr ""
 
 #~ msgid "Parameters"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 1.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-10 16:27-0400\n"
+"POT-Creation-Date: 2020-10-26 12:27-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,8 +17,18 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.8.0\n"
 
-#: ../../source/reference/exceptions.rst:2
+#: ../../source/reference/exceptions.rst:4
 msgid "optuna.exceptions"
+msgstr ""
+
+#: ../../source/reference/exceptions.rst:6
+msgid ""
+"The :mod:`~optuna.exceptions` module defines Optuna-specific exceptions "
+"deriving from a base :class:`~optuna.exceptions.OptunaError` class. Of "
+"special importance for library users is the "
+":class:`~optuna.exceptions.TrialPruned` exception to be raised if "
+":func:`optuna.trial.Trial.should_prune` returns ``True`` for a trial that"
+" should be pruned."
 msgstr ""
 
 #~ msgid "Example"

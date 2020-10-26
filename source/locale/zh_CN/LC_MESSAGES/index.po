@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 1.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-10 16:27-0400\n"
+"POT-Creation-Date: 2020-10-26 12:27-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.8.0\n"
 
-#: ../../source/index.rst:95
+#: ../../source/index.rst:111
 msgid "Contents:"
 msgstr "目录"
 
@@ -51,35 +51,70 @@ msgstr "Optuna 有如下现代化的功能："
 #: ../../source/index.rst:17
 msgid ""
 ":doc:`Lightweight, versatile, and platform agnostic architecture "
-"<tutorial/first>`"
-msgstr ":doc:`轻量级、多功能和跨平台架构 "
-"<tutorial/first>`"
-
-#: ../../source/index.rst:18
-msgid ":doc:`Parallel distributed optimization <tutorial/distributed>`"
-msgstr ":doc:`并行的分布式优化 <tutorial/distributed>`"
+"<tutorial/001_first>`"
+msgstr ":doc:`轻量级、多功能和跨平台架构 <tutorial/001_first>`"
 
 #: ../../source/index.rst:19
-msgid ":doc:`Pruning of unpromising trials <tutorial/pruning>`"
-msgstr ":doc:`对不理想实验 (trial) 的剪枝 (pruning) <tutorial/pruning>`"
+msgid ""
+"Handle a wide variety of tasks with a simple installation that has few "
+"requirements."
+msgstr "只需少量依赖，简单安装完成后便可处理各种任务。"
 
-#: ../../source/index.rst:22
+#: ../../source/index.rst:21
+msgid ":doc:`Pythonic search spaces <tutorial/002_configurations>`"
+msgstr "Python 式的搜索空间"
+
+#: ../../source/index.rst:23
+msgid ""
+"Define search spaces using familiar Python syntax including conditionals "
+"and loops."
+msgstr "利用熟悉的python 语法，如 条件语句和循环来定义搜索空间"
+
+#: ../../source/index.rst:25
+msgid ":doc:`Efficient optimization algorithms <tutorial/007_pruning>`"
+msgstr ":doc:`高效的优化算法 <tutorial/007_pruning>`"
+
+#: ../../source/index.rst:27
+msgid ""
+"Adopt state-of-the-art algorithms for sampling hyper parameters and "
+"efficiently pruning unpromising trials."
+msgstr "采用了最先进的超参数采样和最有效的对无望 trial 进行剪枝的算法"
+
+#: ../../source/index.rst:29
+msgid ":doc:`Easy parallelization <tutorial/004_distributed>`"
+msgstr ":doc:`并行的分布式优化 <tutorial/004_distributed>`"
+
+#: ../../source/index.rst:31
+msgid ""
+"Scale studies to tens or hundreds or workers with little or no changes to"
+" the code."
+msgstr "仅需少量甚至无需代码修改便可将 study 扩展到数十甚至数百个 worker 的情况。"
+
+#: ../../source/index.rst:33
+msgid ":doc:`Quick visualization <reference/visualization/index>`"
+msgstr ":doc:`便捷的可视化 <reference/visualization/index>`"
+
+#: ../../source/index.rst:35
+msgid "Inspect optimization histories from a variety of plotting functions."
+msgstr "从各种绘图函数中检查优化历史记录"
+
+#: ../../source/index.rst:38
 msgid "Basic Concepts"
 msgstr "基本概念"
 
-#: ../../source/index.rst:24
+#: ../../source/index.rst:40
 msgid "We use the terms *study* and *trial* as follows:"
 msgstr "我们以如下方式使用 *study* 和 *trial* 这两个术语："
 
-#: ../../source/index.rst:26
+#: ../../source/index.rst:42
 msgid "Study: optimization based on an objective function"
 msgstr "Study: 基于目标函数的优化过程"
 
-#: ../../source/index.rst:27
+#: ../../source/index.rst:43
 msgid "Trial: a single execution of the objective function"
 msgstr "Trial: 目标函数的单次执行过程"
 
-#: ../../source/index.rst:29
+#: ../../source/index.rst:45
 msgid ""
 "Please refer to sample code below. The goal of a *study* is to find out "
 "the optimal set of hyperparameter values (e.g., ``classifier`` and "
@@ -91,15 +126,15 @@ msgstr ""
 "来找出最佳的超参数值集（比如选择 ``classifier`` 还是 ``svm_c``）。而 Optuna 旨在加速和自动化此类 *study*"
 " 优化过程。"
 
-#: ../../source/index.rst:35
+#: ../../source/index.rst:51
 msgid "|Open in Colab|"
 msgstr ""
 
-#: ../../source/index.rst:67
+#: ../../source/index.rst:83
 msgid "Communication"
 msgstr ""
 
-#: ../../source/index.rst:69
+#: ../../source/index.rst:85
 msgid ""
 "`GitHub Issues <https://github.com/optuna/optuna/issues>`__ for bug "
 "reports, feature requests and questions."
@@ -107,13 +142,13 @@ msgstr ""
 "可在 `GitHub Issues <https://github.com/optuna/optuna/issues>`__ "
 "报告bug、提feature request 和问问题。"
 
-#: ../../source/index.rst:71
+#: ../../source/index.rst:87
 msgid ""
 "`Gitter <https://gitter.im/optuna/optuna>`__ for interactive chat with "
 "developers."
 msgstr "可在 `Gitter <https://gitter.im/optuna/optuna>`__ 与开发者互动."
 
-#: ../../source/index.rst:73
+#: ../../source/index.rst:89
 msgid ""
 "`Stack Overflow <https://stackoverflow.com/questions/tagged/optuna>`__ "
 "for questions."
@@ -121,11 +156,11 @@ msgstr ""
 "可在 `StackOverflow <https://stackoverflow.com/questions/tagged/optuna>`__ "
 "提问。"
 
-#: ../../source/index.rst:78
+#: ../../source/index.rst:94
 msgid "Contribution"
 msgstr "贡献"
 
-#: ../../source/index.rst:80
+#: ../../source/index.rst:96
 msgid ""
 "Any contributions to Optuna are welcome! When you send a pull request, "
 "please follow the `contribution guide "
@@ -134,40 +169,40 @@ msgstr ""
 "欢迎大家对Optuna的一切贡献！但是在发送pull request时请遵从 `contribution guide "
 "<https://github.com/optuna/optuna/blob/master/CONTRIBUTING.md>`__ 的规范."
 
-#: ../../source/index.rst:84
+#: ../../source/index.rst:100
 msgid "License"
 msgstr ""
 
-#: ../../source/index.rst:86
+#: ../../source/index.rst:102
 msgid ""
 "MIT License (see `LICENSE "
 "<https://github.com/optuna/optuna/blob/master/LICENSE>`__)."
 msgstr ""
 
-#: ../../source/index.rst:89
+#: ../../source/index.rst:105
 msgid "Reference"
 msgstr ""
 
-#: ../../source/index.rst:91
+#: ../../source/index.rst:107
 msgid ""
 "Takuya Akiba, Shotaro Sano, Toshihiko Yanase, Takeru Ohta, and Masanori "
 "Koyama. 2019. Optuna: A Next-generation Hyperparameter Optimization "
 "Framework. In KDD (`arXiv <https://arxiv.org/abs/1907.10902>`__)."
 msgstr ""
 
-#: ../../source/index.rst:105
+#: ../../source/index.rst:121
 msgid "Indices and tables"
 msgstr ""
 
-#: ../../source/index.rst:107
+#: ../../source/index.rst:123
 msgid ":ref:`genindex`"
 msgstr ""
 
-#: ../../source/index.rst:108
+#: ../../source/index.rst:124
 msgid ":ref:`modindex`"
 msgstr ""
 
-#: ../../source/index.rst:109
+#: ../../source/index.rst:125
 msgid ":ref:`search`"
 msgstr ""
 

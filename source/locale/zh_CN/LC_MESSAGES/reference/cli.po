@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 1.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-10 16:27-0400\n"
+"POT-Creation-Date: 2020-10-26 12:27-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,8 +17,15 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.8.0\n"
 
-#: ../../source/reference/cli.rst:2
+#: ../../source/reference/cli.rst:4
 msgid "optuna.cli"
+msgstr ""
+
+#: ../../source/reference/cli.rst:6
+msgid ""
+"The :mod:`~optuna.cli` module implements Optuna's command-line "
+"functionality using the `cliff framework "
+"<https://docs.openstack.org/cliff/latest/index.html>`_."
 msgstr ""
 
 #: ../../<_OptunaApp>:1
@@ -52,8 +59,7 @@ msgstr ""
 msgid "Create a new study."
 msgstr "创建新的 study"
 
-#: ../../<_CreateStudy>:1 ../../<_Dashboard>:1 ../../<_DeleteStudy>:1
-#: ../../<_StudyOptimize>:1 ../../<_StudySetUserAttribute>:1
+#: ../../<_CreateStudy>:1
 msgid "A human-readable name of a study to distinguish it from others."
 msgstr "设定具有可读性的 study 名，以方便和其他的 study 区分。"
 
@@ -88,6 +94,10 @@ msgid "This argument is deprecated. Use --study-name instead."
 msgstr "该参数已弃用。作为替代，请使用  –study-name."
 
 #: ../../<_Dashboard>:1
+msgid "The name of the study to show on the dashboard."
+msgstr ""
+
+#: ../../<_Dashboard>:1
 msgid ""
 "Output HTML file path. If it is not given, a HTTP server starts and the "
 "dashboard is served."
@@ -111,6 +121,10 @@ msgstr ""
 #: ../../<_DeleteStudy>:1
 msgid "Delete a specified study."
 msgstr "删除特定的 study."
+
+#: ../../<_DeleteStudy>:1
+msgid "The name of the study to delete."
+msgstr ""
 
 msgid "storage upgrade"
 msgstr ""
@@ -196,6 +210,10 @@ msgid ""
 msgstr "并行运行的任务个数。如果该参数设置为 -1, 则任务的实际数目将等于 CPU 的核心数。"
 
 #: ../../<_StudyOptimize>:1
+msgid "The name of the study to start optimization on."
+msgstr ""
+
+#: ../../<_StudyOptimize>:1
 msgid "Python script file where the objective function resides."
 msgstr "用于指定定义了目标函数的 Python 脚本文件名。"
 
@@ -209,6 +227,10 @@ msgstr ""
 #: ../../<_StudySetUserAttribute>:1
 msgid "Set a user attribute to a study."
 msgstr "针对特定 study 设定用户属性 (user attribute)."
+
+#: ../../<_StudySetUserAttribute>:1
+msgid "The name of the study to set the user attribute to."
+msgstr "用于设置用户属性的 study 名。"
 
 #: ../../<_StudySetUserAttribute>:1
 msgid "Key of the user attribute."
