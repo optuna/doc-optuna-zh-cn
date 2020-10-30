@@ -25,15 +25,15 @@ msgstr ""
 
 #: ../../source/tutorial/005_cli.rst:15
 msgid "Command-Line Interface"
-msgstr ""
+msgstr "命令行界面"
 
 #: ../../source/tutorial/005_cli.rst:1
 msgid "Command"
-msgstr ""
+msgstr "命令"
 
 #: ../../source/tutorial/005_cli.rst:1
 msgid "Description"
-msgstr ""
+msgstr "描述"
 
 #: ../../source/tutorial/005_cli.rst:1
 msgid "create-study"
@@ -41,7 +41,7 @@ msgstr ""
 
 #: ../../source/tutorial/005_cli.rst:1
 msgid "Create a new study."
-msgstr ""
+msgstr "创建一个新的 study."
 
 #: ../../source/tutorial/005_cli.rst:1
 msgid "delete-study"
@@ -49,7 +49,7 @@ msgstr ""
 
 #: ../../source/tutorial/005_cli.rst:1
 msgid "Delete a specified study."
-msgstr ""
+msgstr "删除指定的 study."
 
 #: ../../source/tutorial/005_cli.rst:1
 msgid "dashboard"
@@ -57,7 +57,7 @@ msgstr ""
 
 #: ../../source/tutorial/005_cli.rst:1
 msgid "Launch web dashboard (beta)."
-msgstr ""
+msgstr "启动 web 面板 (beta)."
 
 #: ../../source/tutorial/005_cli.rst:1
 msgid "storage upgrade"
@@ -65,7 +65,7 @@ msgstr ""
 
 #: ../../source/tutorial/005_cli.rst:1
 msgid "Upgrade the schema of a storage."
-msgstr ""
+msgstr "升级数据库 schema."
 
 #: ../../source/tutorial/005_cli.rst:1
 msgid "studies"
@@ -73,7 +73,7 @@ msgstr ""
 
 #: ../../source/tutorial/005_cli.rst:1
 msgid "Show a list of studies."
-msgstr ""
+msgstr "输出 study 列表"
 
 #: ../../source/tutorial/005_cli.rst:1
 msgid "study optimize"
@@ -81,7 +81,7 @@ msgstr ""
 
 #: ../../source/tutorial/005_cli.rst:1
 msgid "Start optimization of a study."
-msgstr ""
+msgstr "针对一个 study 开始优化过程。"
 
 #: ../../source/tutorial/005_cli.rst:1
 msgid "study set-user-attr"
@@ -89,17 +89,17 @@ msgstr ""
 
 #: ../../source/tutorial/005_cli.rst:1
 msgid "Set a user attribute to a study."
-msgstr ""
+msgstr "设置 study 的用户属性。"
 
 #: ../../source/tutorial/005_cli.rst:29
 msgid "Optuna provides command-line interface as shown in the above table."
-msgstr ""
+msgstr "Optuna 提供的命令行界面包括上表中的所有命令。"
 
 #: ../../source/tutorial/005_cli.rst:31
 msgid ""
 "Let us assume you are not in IPython shell and writing Python script "
 "files instead. It is totally fine to write scripts like the following:"
-msgstr ""
+msgstr "如果你不使用 Ipython shell, 而是写 Python 脚本文件的话，编写像下面这样的脚本是完全可以的："
 
 #: ../../source/tutorial/005_cli.rst:58
 msgid "Out:"
@@ -109,14 +109,15 @@ msgstr ""
 msgid ""
 "However, we can reduce boilerplate codes by using our ``optuna`` command."
 " Let us assume that ``foo.py`` contains only the following code."
-msgstr ""
+msgstr "然而，通过 ``optuna`` 命令，我们可以少写一些上面这样的模版代码。"
+"假设有一个 ``foo.py`` 文件，它只包含如下代码："
 
 #: ../../source/tutorial/005_cli.rst:87
 msgid ""
 "Even so, we can invoke the optimization as follows. (Don't care about "
 "``--storage sqlite:///example.db`` for now, which is described in "
 ":ref:`sphx_glr_tutorial_003_rdb.py`.)"
-msgstr ""
+msgstr "即使在这种情况下，我们也可以利用如下命令启动优化过程（请暂时忽略 ``--storage sqlite:///example.db`` 的作用, 关于它的具体描述见 :ref:`rdb`）。"
 
 #: ../../source/tutorial/005_cli.rst:104
 msgid ""
@@ -124,7 +125,8 @@ msgid ""
 " function. By giving the script file name and the method name of "
 "objective function to ``optuna study optimize`` command, we can invoke "
 "the optimization."
-msgstr ""
+msgstr "请注意，``foo.py`` 中只包含目标函数的定义。"
+"通过向 ``optuna study optimize`` 命令传递该文件名和对应目标函数的方法名，我们就可以启动优化过程。"
 
 #: ../../source/tutorial/005_cli.rst:111
 msgid "**Total running time of the script:** ( 0 minutes  0.272 seconds)"

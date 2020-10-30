@@ -25,7 +25,7 @@ msgstr ""
 
 #: ../../source/tutorial/003_rdb.rst:15
 msgid "Saving/Resuming Study with RDB Backend"
-msgstr ""
+msgstr "用 RDB 后端保存/恢复 Study"
 
 #: ../../source/tutorial/003_rdb.rst:17
 msgid ""
@@ -34,12 +34,14 @@ msgid ""
 "multi-node optimization tasks with this feature, which is described in "
 ":ref:`sphx_glr_tutorial_004_distributed.py`."
 msgstr ""
+"RDB后端可以实现持久化实验（即保存和恢复 study）以及访问 study 的历史记录。"
+"此外，我们还可以利用这个特点来进行分布式优化。具体描述见 :ref:`distributed`.""
 
 #: ../../source/tutorial/003_rdb.rst:20
 msgid ""
 "In this section, let's try simple examples running on a local environment"
 " with SQLite DB."
-msgstr ""
+msgstr "在本部分中，我们将尝试一个在本地环境下运行SQLite DB的简单例子。"
 
 #: ../../source/tutorial/003_rdb.rst:23
 msgid ""
@@ -48,11 +50,12 @@ msgid ""
 "`SQLAlchemy's document "
 "<https://docs.sqlalchemy.org/en/latest/core/engines.html#database-urls>`_"
 " for how to set up the URL."
-msgstr ""
+msgstr "通过设置 DB 的 storage URL 参数，你也可以使用其他的 RDB 后端，比如 PostgreSQL 或者 MySQL."
+"设置URL的方式参见 `SQLAlchemy 的文档 <https://docs.sqlalchemy.org/en/latest/core/engines.html#database-urls>`_."
 
 #: ../../source/tutorial/003_rdb.rst:28
 msgid "New Study"
-msgstr ""
+msgstr "新建 Study"
 
 #: ../../source/tutorial/003_rdb.rst:30
 msgid ""
@@ -60,27 +63,29 @@ msgid ""
 ":func:`~optuna.study.create_study` function as follows. An SQLite file "
 "``example.db`` is automatically initialized with a new study record."
 msgstr ""
+"通过调用函数 :func:`~optuna.study.create_study`，我们可以创建一个持久化的 study."
+"创建新 study 会自动初始化一个 SQLite 文件 ``example.db``."
 
 #: ../../source/tutorial/003_rdb.rst:39
 msgid ""
 "To run a study, call :func:`~optuna.study.Study.optimize` method passing "
 "an objective function."
-msgstr ""
+msgstr "为了运行一个 study, 我们需要将目标函数传入 :func:`~optuna.study.Study.optimize` 方法并调用它。"
 
 #: ../../source/tutorial/003_rdb.rst:50
 msgid "Resume Study"
-msgstr ""
+msgstr "恢复 Study"
 
 #: ../../source/tutorial/003_rdb.rst:52
 msgid ""
 "To resume a study, instantiate a :class:`~optuna.study.Study` object "
 "passing the study name ``example-study`` and the DB URL "
 "``sqlite:///example.db``."
-msgstr ""
+msgstr "为了恢复 study, 首先需要初始化一个 :class:`~optuna.study.Study` 对象， 并将该study 的名字 ``example-study`` 和 DB URL参数 ``sqlite:///example.db`` 传入其中。"
 
 #: ../../source/tutorial/003_rdb.rst:60
 msgid "Experimental History"
-msgstr ""
+msgstr "实验历史记录"
 
 #: ../../source/tutorial/003_rdb.rst:62
 msgid ""
@@ -88,12 +93,14 @@ msgid ""
 ":class:`~optuna.study.Study` class. For example, we can get all trials of"
 " ``example-study`` as:"
 msgstr ""
+"我们可以通过 :class:`~optuna.study.Study` 类来获得 study 和对应 trials的历史记录。"
+"比如，下面的语句可以获取 ``example-study`` 的所有 trials."
 
 #: ../../source/tutorial/003_rdb.rst:71
 msgid ""
 "The method :func:`~optuna.study.Study.trials_dataframe` returns a pandas "
 "dataframe like:"
-msgstr ""
+msgstr ":func:`~optuna.study.Study.trials_dataframe` 方法会返回一个如下的 pandas dataframe："
 
 #: ../../source/tutorial/003_rdb.rst:77
 msgid "Out:"
@@ -106,7 +113,7 @@ msgid ""
 ":attr:`~optuna.study.Study.best_value`, "
 ":attr:`~optuna.study.Study.best_params` (see also "
 ":ref:`sphx_glr_tutorial_001_first.py`)."
-msgstr ""
+msgstr ":class:`~optuna.study.Study` 对象也有一些其他属性，比如 :attr:`~optuna.study.Study.trials`, :attr:`~optuna.study.Study.best_value` 和 :attr:`~optuna.study.Study.best_params` (见 :ref:`sphx_glr_tutorial_001_first.py`)."
 
 #: ../../source/tutorial/003_rdb.rst:101
 msgid "**Total running time of the script:** ( 0 minutes  0.000 seconds)"

@@ -25,53 +25,54 @@ msgstr ""
 
 #: ../../source/tutorial/004_distributed.rst:15
 msgid "Distributed Optimization"
-msgstr ""
+msgstr "分布式优化"
 
 #: ../../source/tutorial/004_distributed.rst:17
 msgid ""
 "There is no complicated setup but just sharing the same study name among "
 "nodes/processes."
-msgstr ""
+msgstr "Optuna 的分布式优化不需要复杂的设置，你只需让不同的节点/进程共享一个相同的 study 名。"
 
 #: ../../source/tutorial/004_distributed.rst:19
 msgid ""
 "First, create a shared study using ``optuna create-study`` command (or "
 "using :func:`optuna.create_study` in a Python script)."
-msgstr ""
+msgstr "首先，使用 ``optuna create-study`` 命令 (如果是在Python脚本中的话，就用 :func:`optuna.create_study`) 创建一个共享的 study."
 
 #: ../../source/tutorial/004_distributed.rst:27
 msgid ""
 "Then, write an optimization script. Let's assume that ``foo.py`` contains"
 " the following code."
-msgstr ""
+msgstr "然后写一个包含如下代码的脚本，``foo.py``, 来进行优化。"
 
 #: ../../source/tutorial/004_distributed.rst:41
 msgid ""
 "Finally, run the shared study from multiple processes. For example, run "
 "``Process 1`` in a terminal, and do ``Process 2`` in another one. They "
 "get parameter suggestions based on shared trials' history."
-msgstr ""
+msgstr "最后，从不同的进程中分别运行这个 share study。比如说，在一个终端中运行 ``Process 1``，在另一个终端中运行 ``Process 2``. 这些进程基于这个共享 study 的 trial 历史记录来获取参数建议 (parameter suggestion).
+"
 
 #: ../../source/tutorial/004_distributed.rst:45
 msgid "Process 1:"
-msgstr ""
+msgstr "进程 1:"
 
 #: ../../source/tutorial/004_distributed.rst:54
 msgid "Process 2 (the same command as process 1):"
-msgstr ""
+msgstr "进程 2 （使用和进程 1 相同的命令）:"
 
 #: ../../source/tutorial/004_distributed.rst:64
 msgid ""
 "We do not recommend SQLite for large scale distributed optimizations "
 "because it may cause serious performance issues. Please consider to use "
 "another database engine like PostgreSQL or MySQL."
-msgstr ""
+msgstr "我们不推荐在大型的分布式优化中使用 SQLite，因为这可能导致性能问题。在这种情况下，请考虑使用其他数据库，比如 PostgreSQL 或 MySQL."
 
 #: ../../source/tutorial/004_distributed.rst:67
 msgid ""
 "Please avoid putting the SQLite database on NFS when running distributed "
 "optimizations. See also: https://www.sqlite.org/faq.html#q5"
-msgstr ""
+msgstr "在运行分布式优化时，请不要将 SQLite 数据库文件放在 NFS (Network File System) 文件系统中。具体原因见 : https://www.sqlite.org/faq.html#q5"
 
 #: ../../source/tutorial/004_distributed.rst:72
 msgid "**Total running time of the script:** ( 0 minutes  0.000 seconds)"
