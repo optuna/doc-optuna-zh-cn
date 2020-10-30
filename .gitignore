@@ -137,6 +137,11 @@ source/reference/multi_objective/generated/
 source/reference/visualization/generated/
 source/tutorial/
 
+
+source/locale/zh_CN/LC_MESSAGES/reference/generated/
+source/locale/zh_CN/LC_MESSAGES/reference/multi_objective/generated/
+source/locale/zh_CN/LC_MESSAGES/reference/visualization/generated/
+
 .DS_Store
 
 example*

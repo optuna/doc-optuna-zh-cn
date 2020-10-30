@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 2.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-26 14:44-0400\n"
+"POT-Creation-Date: 2020-10-29 20:38-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,7 +22,7 @@ msgid "Computation times"
 msgstr ""
 
 #: ../../source/tutorial/sg_execution_times.rst:8
-msgid "**00:03.095** total execution time for **tutorial** files:"
+msgid "**00:02.251** total execution time for **tutorial** files:"
 msgstr ""
 
 #: ../../source/tutorial/sg_execution_times.rst:11
@@ -30,7 +30,7 @@ msgid ":ref:`sphx_glr_tutorial_007_pruning.py` (``007_pruning.py``)"
 msgstr ""
 
 #: ../../source/tutorial/sg_execution_times.rst:11
-msgid "00:01.186"
+msgid "00:00.982"
 msgstr ""
 
 #: ../../source/tutorial/sg_execution_times.rst:11
@@ -45,27 +45,27 @@ msgid "0.0 MB"
 msgstr ""
 
 #: ../../source/tutorial/sg_execution_times.rst:13
-msgid ":ref:`sphx_glr_tutorial_006_attributes.py` (``006_attributes.py``)"
-msgstr ""
-
-#: ../../source/tutorial/sg_execution_times.rst:13
-msgid "00:01.008"
-msgstr ""
-
-#: ../../source/tutorial/sg_execution_times.rst:15
 msgid ":ref:`sphx_glr_tutorial_001_first.py` (``001_first.py``)"
 msgstr ""
 
-#: ../../source/tutorial/sg_execution_times.rst:15
-msgid "00:00.629"
+#: ../../source/tutorial/sg_execution_times.rst:13
+msgid "00:00.668"
 msgstr ""
 
-#: ../../source/tutorial/sg_execution_times.rst:17
+#: ../../source/tutorial/sg_execution_times.rst:15
 msgid ":ref:`sphx_glr_tutorial_005_cli.py` (``005_cli.py``)"
 msgstr ""
 
+#: ../../source/tutorial/sg_execution_times.rst:15
+msgid "00:00.342"
+msgstr ""
+
 #: ../../source/tutorial/sg_execution_times.rst:17
-msgid "00:00.272"
+msgid ":ref:`sphx_glr_tutorial_006_attributes.py` (``006_attributes.py``)"
+msgstr ""
+
+#: ../../source/tutorial/sg_execution_times.rst:17
+msgid "00:00.258"
 msgstr ""
 
 #: ../../source/tutorial/sg_execution_times.rst:19
@@ -80,14 +80,29 @@ msgid "00:00.000"
 msgstr ""
 
 #: ../../source/tutorial/sg_execution_times.rst:21
-msgid ":ref:`sphx_glr_tutorial_008_sampler.py` (``008_sampler.py``)"
+msgid ":ref:`sphx_glr_tutorial_004_distributed.py` (``004_distributed.py``)"
 msgstr ""
 
 #: ../../source/tutorial/sg_execution_times.rst:23
-msgid ":ref:`sphx_glr_tutorial_003_rdb.py` (``003_rdb.py``)"
+msgid ":ref:`sphx_glr_tutorial_008_sampler.py` (``008_sampler.py``)"
 msgstr ""
 
 #: ../../source/tutorial/sg_execution_times.rst:25
-msgid ":ref:`sphx_glr_tutorial_004_distributed.py` (``004_distributed.py``)"
+msgid ":ref:`sphx_glr_tutorial_003_rdb.py` (``003_rdb.py``)"
 msgstr ""
+
+#~ msgid "**00:03.095** total execution time for **tutorial** files:"
+#~ msgstr ""
+
+#~ msgid "00:01.186"
+#~ msgstr ""
+
+#~ msgid "00:01.008"
+#~ msgstr ""
+
+#~ msgid "00:00.629"
+#~ msgstr ""
+
+#~ msgid "00:00.272"
+#~ msgstr ""
 

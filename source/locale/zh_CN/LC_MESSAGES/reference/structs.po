@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 1.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-26 14:44-0400\n"
+"POT-Creation-Date: 2020-10-29 20:38-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -103,7 +103,7 @@ msgstr ""
 
 #: of optuna.structs.FrozenTrial.duration optuna.structs.FrozenTrial.last_step
 #: optuna.structs.FrozenTrial.should_prune
-msgid "Returns"
+msgid "返回"
 msgstr ""
 
 #: of optuna.structs.FrozenTrial.duration:3
@@ -134,7 +134,7 @@ msgid "Please refer to :func:`~optuna.trial.FrozenTrial.should_prune`."
 msgstr ""
 
 #: of optuna.structs.FrozenTrial.report
-msgid "Parameters"
+msgid "参数"
 msgstr ""
 
 #: of optuna.structs.FrozenTrial.report:9
@@ -285,5 +285,8 @@ msgstr "该类已经迁移到 :mod:`~optuna.study`, 请改用 :class:`~optuna.st
 #~ msgstr "返回完成一个 trial 所消耗的时间。"
 
 #~ msgid "The duration."
+#~ msgstr ""
+
+#~ msgid "Parameters"
 #~ msgstr ""
 
