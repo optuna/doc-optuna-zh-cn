@@ -34,7 +34,7 @@ msgid ""
 "interfaces to concisely implement the pruning mechanism in iterative "
 "training algorithms."
 msgstr ""
-"该功能可以在训练的早期阶段自动终止无望的 Trial (a.k.a., 自动化 early-stopping). Optuna "
+"该功能可以在训练的早期阶段自动终止无望的 Trial (即自动化 early-stopping). Optuna "
 "提供了一些接口，可以用于在迭代训练算法中简洁地实现剪枝 (Pruning)。"
 
 #: ../../source/tutorial/007_pruning.rst:22
@@ -95,6 +95,11 @@ msgid ""
 "<https://github.com/optuna/optuna/blob/master/examples/pruning/xgboost_integration.py>`_"
 " for the entire script.)"
 msgstr ""
+"比如, :class:`~optuna.integration.XGBoostPruningCallback` "
+"在无需修改训练迭代逻辑的情况下引入了 pruning.(完整脚本见 `example "
+"<https://github.com/optuna/optuna/blob/master/examples/pruning/xgboost_integration.py>`_"
+" .)"
+
 
 #: ../../source/tutorial/007_pruning.rst:120
 msgid "**Total running time of the script:** ( 0 minutes  0.982 seconds)"

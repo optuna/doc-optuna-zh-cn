@@ -28,7 +28,7 @@ msgid ""
 "interfaces to concisely implement the pruning mechanism in iterative "
 "training algorithms."
 msgstr ""
-"该功能可以在训练的早期阶段自动终止无望的 Trial (a.k.a., 自动化 early-stopping). Optuna "
+"该功能可以在训练的早期阶段自动终止无望的 Trial (即自动化 early-stopping). Optuna "
 "提供了一些接口，可以用于在迭代训练算法中简洁地实现剪枝 (Pruning)。"
 
 #: ../../source/tutorial/pruning.rst:11

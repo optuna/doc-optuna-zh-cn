@@ -120,11 +120,11 @@ msgstr ""
 
 #: ../../<_DeleteStudy>:1
 msgid "Delete a specified study."
-msgstr "删除特定的 study."
+msgstr "删除特定的 study。"
 
 #: ../../<_DeleteStudy>:1
 msgid "The name of the study to delete."
-msgstr ""
+msgstr "待删除的 study 名。"
 
 msgid "storage upgrade"
 msgstr ""
@@ -211,7 +211,7 @@ msgstr "并行运行的任务个数。如果该参数设置为 -1, 则任务的�
 
 #: ../../<_StudyOptimize>:1
 msgid "The name of the study to start optimization on."
-msgstr ""
+msgstr "被优化的 study 名。"
 
 #: ../../<_StudyOptimize>:1
 msgid "Python script file where the objective function resides."

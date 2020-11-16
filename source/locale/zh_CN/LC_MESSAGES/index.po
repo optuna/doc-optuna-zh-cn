@@ -68,7 +68,7 @@ msgstr ":doc:`Python 式的搜索空间 <tutorial/002_configurations>`"
 msgid ""
 "Define search spaces using familiar Python syntax including conditionals "
 "and loops."
-msgstr "利用熟悉的python 语法，如 条件语句和循环来定义搜索空间"
+msgstr "利用熟悉的python 语法，如 条件语句和循环来定义搜索空间。"
 
 #: ../../source/index.rst:25
 msgid ":doc:`Efficient optimization algorithms <tutorial/007_pruning>`"
@@ -78,7 +78,7 @@ msgstr ":doc:`高效的优化算法 <tutorial/007_pruning>`"
 msgid ""
 "Adopt state-of-the-art algorithms for sampling hyper parameters and "
 "efficiently pruning unpromising trials."
-msgstr "采用了最先进的超参数采样和最有效的对无望 trial 进行剪枝的算法"
+msgstr "采用了最先进的超参数采样和最有效的对无望 trial 进行剪枝的算法。"
 
 #: ../../source/index.rst:29
 msgid ":doc:`Easy parallelization <tutorial/004_distributed>`"
@@ -88,7 +88,7 @@ msgstr ":doc:`并行的分布式优化 <tutorial/004_distributed>`"
 msgid ""
 "Scale studies to tens or hundreds or workers with little or no changes to"
 " the code."
-msgstr "仅需少量甚至无需代码修改便可将 study 扩展到数十甚至数百个 worker 的情况。"
+msgstr "仅需少量甚至无需代码修改便可将 study 分布到数十甚至数百个 worker。"
 
 #: ../../source/index.rst:33
 msgid ":doc:`Quick visualization <reference/visualization/index>`"
@@ -96,7 +96,7 @@ msgstr ":doc:`便捷的可视化 <reference/visualization/index>`"
 
 #: ../../source/index.rst:35
 msgid "Inspect optimization histories from a variety of plotting functions."
-msgstr "从各种绘图函数中检查优化历史记录"
+msgstr "查询优化记录。"
 
 #: ../../source/index.rst:38
 msgid "Basic Concepts"
