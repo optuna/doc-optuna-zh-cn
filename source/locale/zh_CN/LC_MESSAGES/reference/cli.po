@@ -26,7 +26,8 @@ msgid ""
 "The :mod:`~optuna.cli` module implements Optuna's command-line "
 "functionality using the `cliff framework "
 "<https://docs.openstack.org/cliff/latest/index.html>`_."
-msgstr ""
+msgstr ":mod:`~optuna.cli` 模块使用 `cliff framework "
+"<https://docs.openstack.org/cliff/latest/index.html>`_ 框架实现了Optuna的命令行功能。"
 
 #: ../../<_OptunaApp>:1
 msgid "show program's version number and exit"

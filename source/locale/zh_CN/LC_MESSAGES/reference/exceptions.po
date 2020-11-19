@@ -29,7 +29,10 @@ msgid ""
 ":class:`~optuna.exceptions.TrialPruned` exception to be raised if "
 ":func:`optuna.trial.Trial.should_prune` returns ``True`` for a trial that"
 " should be pruned."
-msgstr ""
+msgstr ":mod:`~optuna.exceptions` 模块定义了Optuna特有的异常，"
+"它派生自一个基本的 :class:`~optuna.exceptions.OptunaError` 类。"
+"对于库用户来说，特别重要的是 :class:`~optuna.exceptions.TrialPruned` 异常将被引发，"
+"如果 :func:`optuna.trial.Trial.should_prune` 对一个应该被修剪的审判返回 ``True`` 。"
 
 #: ../../source/reference/exceptions.rst:16:<autosummary>:1
 msgid ":obj:`optuna.exceptions.OptunaError <optuna.exceptions.OptunaError>`"
@@ -37,7 +40,7 @@ msgstr ""
 
 #: ../../source/reference/exceptions.rst:16:<autosummary>:1
 msgid "Base class for Optuna specific errors."
-msgstr ""
+msgstr "Optuna 异常基类。"
 
 #: ../../source/reference/exceptions.rst:16:<autosummary>:1
 msgid ":obj:`optuna.exceptions.TrialPruned <optuna.exceptions.TrialPruned>`"
@@ -45,7 +48,7 @@ msgstr ""
 
 #: ../../source/reference/exceptions.rst:16:<autosummary>:1
 msgid "Exception for pruned trials."
-msgstr ""
+msgstr "被剪枝 trial 异常。"
 
 #: ../../source/reference/exceptions.rst:16:<autosummary>:1
 msgid ":obj:`optuna.exceptions.CLIUsageError <optuna.exceptions.CLIUsageError>`"
@@ -53,7 +56,7 @@ msgstr ""
 
 #: ../../source/reference/exceptions.rst:16:<autosummary>:1
 msgid "Exception for CLI."
-msgstr ""
+msgstr "命令行界面异常。"
 
 #: ../../source/reference/exceptions.rst:16:<autosummary>:1
 msgid ""
@@ -63,7 +66,7 @@ msgstr ""
 
 #: ../../source/reference/exceptions.rst:16:<autosummary>:1
 msgid "Exception for storage operation."
-msgstr ""
+msgstr "存储异常。"
 
 #: ../../source/reference/exceptions.rst:16:<autosummary>:1
 msgid ""
@@ -73,7 +76,7 @@ msgstr ""
 
 #: ../../source/reference/exceptions.rst:16:<autosummary>:1
 msgid "Exception for a duplicated study name."
-msgstr ""
+msgstr "重复 study 名导致的异常。"
 
 #~ msgid "Example"
 #~ msgstr ""
