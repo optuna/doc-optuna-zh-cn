@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 1.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-26 14:44-0400\n"
+"POT-Creation-Date: 2020-11-19 16:46-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -34,74 +34,69 @@ msgid ""
 ":class:`~optuna.pruners.BasePruner`, which implement different pruning "
 "strategies."
 msgstr ""
+":mod:`~optuna.pruners` 者模块定义了一个 :class:`~optuna.pruners.BasePruner` "
+"类，其特点是有一个抽象的 :meth:`~optuna.pruners.BasePruner.prune` "
+"方法，对于一个给定的试验及其相关的研究，返回一个代表该试验是否应该被剪枝的布尔值。这个决定是基于存储的目标函数的中间值做出的，正如之前使用 "
+":meth:`optuna.trial.Trial.report` 为试验报告的那样。本模块中其余的类代表子类，继承自 "
+":class:`~optuna.pruners.BasePruner`，它们实现了不同的剪枝策略。"
 
 #: ../../source/reference/pruners.rst:18:<autosummary>:1
-msgid ""
-":obj:`optuna.pruners.BasePruner "
-"<optuna.pruners.optuna.pruners.BasePruner>`"
+msgid ":obj:`optuna.pruners.BasePruner <optuna.pruners.BasePruner>`"
 msgstr ""
 
 #: ../../source/reference/pruners.rst:18:<autosummary>:1
 msgid "Base class for pruners."
-msgstr ""
+msgstr "Pruner 基类"
 
 #: ../../source/reference/pruners.rst:18:<autosummary>:1
-msgid ""
-":obj:`optuna.pruners.MedianPruner "
-"<optuna.pruners.optuna.pruners.MedianPruner>`"
+msgid ":obj:`optuna.pruners.MedianPruner <optuna.pruners.MedianPruner>`"
 msgstr ""
 
 #: ../../source/reference/pruners.rst:18:<autosummary>:1
 msgid "Pruner using the median stopping rule."
-msgstr ""
+msgstr "使用中值停止规则 的 pruner."
 
 #: ../../source/reference/pruners.rst:18:<autosummary>:1
-msgid ":obj:`optuna.pruners.NopPruner <optuna.pruners.optuna.pruners.NopPruner>`"
+msgid ":obj:`optuna.pruners.NopPruner <optuna.pruners.NopPruner>`"
 msgstr ""
 
 #: ../../source/reference/pruners.rst:18:<autosummary>:1
 msgid "Pruner which never prunes trials."
-msgstr ""
+msgstr "不剪枝 trial 的 pruner."
 
 #: ../../source/reference/pruners.rst:18:<autosummary>:1
-msgid ""
-":obj:`optuna.pruners.PercentilePruner "
-"<optuna.pruners.optuna.pruners.PercentilePruner>`"
+msgid ":obj:`optuna.pruners.PercentilePruner <optuna.pruners.PercentilePruner>`"
 msgstr ""
 
 #: ../../source/reference/pruners.rst:18:<autosummary>:1
 msgid "Pruner to keep the specified percentile of the trials."
-msgstr ""
+msgstr "保留到指定百分位 trial 的 pruner."
 
 #: ../../source/reference/pruners.rst:18:<autosummary>:1
 msgid ""
 ":obj:`optuna.pruners.SuccessiveHalvingPruner "
-"<optuna.pruners.optuna.pruners.SuccessiveHalvingPruner>`"
+"<optuna.pruners.SuccessiveHalvingPruner>`"
 msgstr ""
 
 #: ../../source/reference/pruners.rst:18:<autosummary>:1
 msgid "Pruner using Asynchronous Successive Halving Algorithm."
-msgstr ""
+msgstr "使用异步连续减半算法的 pruner."
 
 #: ../../source/reference/pruners.rst:18:<autosummary>:1
-msgid ""
-":obj:`optuna.pruners.HyperbandPruner "
-"<optuna.pruners.optuna.pruners.HyperbandPruner>`"
+msgid ":obj:`optuna.pruners.HyperbandPruner <optuna.pruners.HyperbandPruner>`"
 msgstr ""
 
 #: ../../source/reference/pruners.rst:18:<autosummary>:1
 msgid "Pruner using Hyperband."
-msgstr ""
+msgstr "使用 hyperband 的 pruner."
 
 #: ../../source/reference/pruners.rst:18:<autosummary>:1
-msgid ""
-":obj:`optuna.pruners.ThresholdPruner "
-"<optuna.pruners.optuna.pruners.ThresholdPruner>`"
+msgid ":obj:`optuna.pruners.ThresholdPruner <optuna.pruners.ThresholdPruner>`"
 msgstr ""
 
 #: ../../source/reference/pruners.rst:18:<autosummary>:1
 msgid "Pruner to detect outlying metrics of the trials."
-msgstr ""
+msgstr "用于检测 trial 的无关度量的 pruner."
 
 #~ msgid "Parameters"
 #~ msgstr ""
@@ -284,7 +279,7 @@ msgstr ""
 #~ msgstr "不同剪枝检查之间的间隔步骤，预热步骤不算在其中。 如果在剪枝检查时未报告任何值，则该特定检查将被推迟，直到报告了一个值"
 
 #~ msgid "Pruner which never prunes trials."
-#~ msgstr "不修剪 trial 的 pruner."
+#~ msgstr "不剪枝 trial 的 pruner."
 
 #~ msgid "Pruner to keep the specified percentile of the trials."
 #~ msgstr "保留指定百分位 trial 的 pruner."
@@ -722,5 +717,40 @@ msgstr ""
 #~ msgstr ""
 
 #~ msgid "interval_steps:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ ":obj:`optuna.pruners.BasePruner "
+#~ "<optuna.pruners.optuna.pruners.BasePruner>`"
+#~ msgstr ""
+
+#~ msgid ""
+#~ ":obj:`optuna.pruners.MedianPruner "
+#~ "<optuna.pruners.optuna.pruners.MedianPruner>`"
+#~ msgstr ""
+
+#~ msgid ""
+#~ ":obj:`optuna.pruners.NopPruner "
+#~ "<optuna.pruners.optuna.pruners.NopPruner>`"
+#~ msgstr ""
+
+#~ msgid ""
+#~ ":obj:`optuna.pruners.PercentilePruner "
+#~ "<optuna.pruners.optuna.pruners.PercentilePruner>`"
+#~ msgstr ""
+
+#~ msgid ""
+#~ ":obj:`optuna.pruners.SuccessiveHalvingPruner "
+#~ "<optuna.pruners.optuna.pruners.SuccessiveHalvingPruner>`"
+#~ msgstr ""
+
+#~ msgid ""
+#~ ":obj:`optuna.pruners.HyperbandPruner "
+#~ "<optuna.pruners.optuna.pruners.HyperbandPruner>`"
+#~ msgstr ""
+
+#~ msgid ""
+#~ ":obj:`optuna.pruners.ThresholdPruner "
+#~ "<optuna.pruners.optuna.pruners.ThresholdPruner>`"
 #~ msgstr ""
 

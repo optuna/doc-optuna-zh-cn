@@ -25,7 +25,7 @@ msgstr ""
 msgid ""
 "This module is deprecated, with former functionality moved to "
 ":class:`optuna.trial` and :class:`optuna.study`."
-msgstr ""
+msgstr "该模块已被弃用，其以前的功能移至 :class:`optuna.trial` 和 :class:`optuna.study` 。"
 
 #: of optuna.structs.TrialState:1
 msgid "State of a :class:`~optuna.trial.Trial`."

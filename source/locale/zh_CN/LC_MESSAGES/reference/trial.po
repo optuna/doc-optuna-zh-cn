@@ -25,7 +25,7 @@ msgstr ""
 msgid ""
 "The :mod:`~optuna.trial` module contains :class:`~optuna.trial.Trial` "
 "related classes and functions."
-msgstr ""
+msgstr ":mod:`~optuna.trial`  模块包含与 :class:`~optuna.trial.Trial` 相关的类和功能。"
 
 #: ../../source/reference/trial.rst:8
 msgid ""
@@ -36,7 +36,8 @@ msgid ""
 " Optuna users can define a custom objective function through the "
 "interfaces. Basically, Optuna users only use it in their custom objective"
 " functions."
-msgstr ""
+msgstr "一个 :class:`~optuna.trial.Trial` 实例代表了一个评估目标函数的过程。"
+"该实例传递给目标函数，并提供了获取参数建议、管理试验的状态、设置/获取用户定义的试验属性等接口，Optuna用户可以通过接口定义自定义目标函数。基本上，Optuna用户只在自己的自定义目标函数中使用它。"
 
 #: ../../source/reference/trial.rst:18:<autosummary>:1
 msgid ":obj:`optuna.trial.Trial <optuna.trial.Trial>`"
@@ -44,7 +45,7 @@ msgstr ""
 
 #: ../../source/reference/trial.rst:18:<autosummary>:1
 msgid "A trial is a process of evaluating an objective function."
-msgstr ""
+msgstr "一个 Trial 是一个评估目标函数的过程。"
 
 #: ../../source/reference/trial.rst:18:<autosummary>:1
 msgid ":obj:`optuna.trial.FixedTrial <optuna.trial.FixedTrial>`"
@@ -52,7 +53,7 @@ msgstr ""
 
 #: ../../source/reference/trial.rst:18:<autosummary>:1
 msgid "A trial class which suggests a fixed value for each parameter."
-msgstr ""
+msgstr "一个始终为每个参数提供固定 suggestion 值的 trial 类。"
 
 #: ../../source/reference/trial.rst:18:<autosummary>:1
 msgid ":obj:`optuna.trial.FrozenTrial <optuna.trial.FrozenTrial>`"
@@ -60,7 +61,7 @@ msgstr ""
 
 #: ../../source/reference/trial.rst:18:<autosummary>:1
 msgid "Status and results of a :class:`~optuna.trial.Trial`."
-msgstr ""
+msgstr "一个 :class:`~optuna.trial.Trial` 的状态和结果。"
 
 #: ../../source/reference/trial.rst:18:<autosummary>:1
 msgid ":obj:`optuna.trial.TrialState <optuna.trial.TrialState>`"
@@ -68,7 +69,7 @@ msgstr ""
 
 #: ../../source/reference/trial.rst:18:<autosummary>:1
 msgid "State of a :class:`~optuna.trial.Trial`."
-msgstr ""
+msgstr ":class:`~optuna.trial.Trial` 的状态。"
 
 #: ../../source/reference/trial.rst:18:<autosummary>:1
 msgid ":obj:`optuna.trial.create_trial <optuna.trial.create_trial>`"
@@ -76,7 +77,7 @@ msgstr ""
 
 #: ../../source/reference/trial.rst:18:<autosummary>:1
 msgid "Create a new :class:`~optuna.trial.FrozenTrial`."
-msgstr ""
+msgstr "创建一个新的 :class:`~optuna.trial.Trial` 。"
 
 #~ msgid "Parameters"
 #~ msgstr ""

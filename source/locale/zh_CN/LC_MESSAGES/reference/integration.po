@@ -25,7 +25,7 @@ msgstr ""
 msgid ""
 "The :mod:`~optuna.integration` module contains classes used to integrate "
 "Optuna with external machine learning frameworks."
-msgstr ""
+msgstr ":mod:`~optuna.integration` 模块包含用于将Optuna与外部机器学习框架集成的类。"
 
 #: ../../source/reference/integration.rst:8
 msgid ""
@@ -35,25 +35,25 @@ msgid ""
 "called with each intermediate step in the model training. The "
 "functionality implemented in these callbacks across the different ML "
 "frameworks includes:"
-msgstr ""
+msgstr "对于Optuna支持的大多数ML框架来说，相应的Optuna集成类的作用只是实现一个回调对象和函数，符合框架特定的回调API，在模型训练的每一个中间步骤中都会被调用。这些回调在不同ML框架中实现的功能包括："
 
 #: ../../source/reference/integration.rst:10
 msgid ""
 "Reporting intermediate model scores back to the Optuna trial using "
 ":func:`optuna.trial.report`,"
-msgstr ""
+msgstr "使用 :func:`optuna.trial.Trial.should_prune` 向Optuna试验报告中间模型分数，"
 
 #: ../../source/reference/integration.rst:11
 msgid ""
 "According to the results of :func:`optuna.trial.Trial.should_prune`, "
 "pruning the current model by raising :func:`optuna.TrialPruned`, and"
-msgstr ""
+msgstr "根据 :func:`optuna.trial.Trial.should_prune` 的结果，通过提高 :func:`optuna.TrialPruned`，对当前模型进行修剪，并且"
 
 #: ../../source/reference/integration.rst:12
 msgid ""
 "Reporting intermediate Optuna data such as the current trial number back "
 "to the framework, as done in :class:`~optuna.integration.MLflowCallback`."
-msgstr ""
+msgstr "将当前的试用号等中间Optuna数据汇报给框架，就像在 :class:`~optuna.integration.MLflowCallback` 中做的那样。"
 
 #: ../../source/reference/integration.rst:14
 msgid ""
@@ -61,7 +61,8 @@ msgid ""
 ":class:`~optuna.integration.OptunaSearchCV` estimator is available that "
 "combines scikit-learn BaseEstimator functionality with access to a class-"
 "level ``Study`` object."
-msgstr ""
+msgstr "对于scikit-learn来说，一个集成的 :class:`~optuna.integration.OptunaSearchCV` 估计器是可用的，"
+"它结合了scikit-learn BaseEstimator功能和对类级 ``Study`` 对象的访问。"
 
 #: ../../source/reference/integration.rst:17
 msgid "AllenNLP"

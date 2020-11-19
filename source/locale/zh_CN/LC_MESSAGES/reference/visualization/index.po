@@ -27,7 +27,8 @@ msgid ""
 "plotting the optimization process using plotly and matplotlib. Plotting "
 "functions take generally take a :class:`~optuna.study.Study` object and "
 "optional parameters passed as a list to a ``params`` argument."
-msgstr ""
+msgstr ":mod:`~optuna.visualization` 模块提供了使用plotly和matplotlib绘制优化过程的实用函数。"
+"绘图函数一般取一个 :class:`~optuna.study.Study` 对象和可选的参数作为一个列表传递给 ``params`` 参数。"
 
 #: ../../source/reference/visualization/index.rst:9
 msgid ""
@@ -35,7 +36,8 @@ msgid ""
 "plotly to create figures, but `JupyterLab`_ cannot render them by "
 "default. Please follow this `installation guide`_ to show figures in "
 "`JupyterLab`_."
-msgstr ""
+msgstr "在 :mod:`optuna.visualization` 模块中，"
+"以下函数使用 plotly 来创建数字，但 `JupyterLab`_ 默认情况下不能渲染它们。请按照这个 `installation guide`_ 在 `JupyterLab`_ 中显示数字。"
 
 #: ../../source/reference/visualization/index.rst:28:<autosummary>:1
 msgid ""
@@ -45,7 +47,7 @@ msgstr ""
 
 #: ../../source/reference/visualization/index.rst:28:<autosummary>:1
 msgid "Plot the parameter relationship as contour plot in a study."
-msgstr ""
+msgstr "将 study 中的参数关系绘制成等高线图。"
 
 #: ../../source/reference/visualization/index.rst:28:<autosummary>:1
 msgid ":obj:`optuna.visualization.plot_edf <optuna.visualization.plot_edf>`"
@@ -53,7 +55,7 @@ msgstr ""
 
 #: ../../source/reference/visualization/index.rst:28:<autosummary>:1
 msgid "Plot the objective value EDF (empirical distribution function) of a study."
-msgstr ""
+msgstr "绘制研究的目标值EDF（经验分布函数）。"
 
 #: ../../source/reference/visualization/index.rst:28:<autosummary>:1
 msgid ""
@@ -63,7 +65,7 @@ msgstr ""
 
 #: ../../source/reference/visualization/index.rst:28:<autosummary>:1
 msgid "Plot intermediate values of all trials in a study."
-msgstr ""
+msgstr "绘制一个 study 中所有 trial 的中间值。"
 
 #: ../../source/reference/visualization/index.rst:28:<autosummary>:1
 msgid ""
@@ -73,7 +75,7 @@ msgstr ""
 
 #: ../../source/reference/visualization/index.rst:28:<autosummary>:1
 msgid "Plot optimization history of all trials in a study."
-msgstr ""
+msgstr "绘制一个 study 中所有 trial 的优化历史记录。"
 
 #: ../../source/reference/visualization/index.rst:28:<autosummary>:1
 msgid ""
@@ -83,7 +85,7 @@ msgstr ""
 
 #: ../../source/reference/visualization/index.rst:28:<autosummary>:1
 msgid "Plot the high-dimentional parameter relationships in a study."
-msgstr ""
+msgstr "绘制一个 study 中的高维度参数关系。"
 
 #: ../../source/reference/visualization/index.rst:28:<autosummary>:1
 msgid ""
@@ -93,7 +95,7 @@ msgstr ""
 
 #: ../../source/reference/visualization/index.rst:28:<autosummary>:1
 msgid "Plot hyperparameter importances."
-msgstr ""
+msgstr "绘制超参数重要性。"
 
 #: ../../source/reference/visualization/index.rst:28:<autosummary>:1
 msgid ":obj:`optuna.visualization.plot_slice <optuna.visualization.plot_slice>`"
@@ -101,7 +103,7 @@ msgstr ""
 
 #: ../../source/reference/visualization/index.rst:28:<autosummary>:1
 msgid "Plot the parameter relationship as slice plot in a study."
-msgstr ""
+msgstr "将study中的参数关系绘制成切片图。"
 
 #: ../../source/reference/visualization/index.rst:28:<autosummary>:1
 msgid ""
@@ -111,11 +113,11 @@ msgstr ""
 
 #: ../../source/reference/visualization/index.rst:28:<autosummary>:1
 msgid "Returns whether visualization with plotly is available or not."
-msgstr ""
+msgstr "返回是否可以使用 plotly 进行可视化。"
 
 #: ../../source/reference/visualization/index.rst:30
 msgid ""
 "The following :mod:`optuna.visualization.matplotlib` module uses "
 "Matplotlib as a backend."
-msgstr ""
+msgstr ":mod:`optuna.visualization.matplotlib` 模块的后端是 Matplotlib。"
 

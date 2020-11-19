@@ -30,7 +30,9 @@ msgid ""
 " should create and load a :class:`~optuna.study.Study` using "
 ":func:`~optuna.study.create_study` and :func:`~optuna.study.load_study` "
 "respectively."
-msgstr ""
+msgstr ":mod:`~optuna.study` 模块实现了Study对象和相关函数。"
+":class:`~optuna.study.Study` 类有一个公共构造函数，但不建议直接使用这个构造函数。"
+"相反，库用户应该分别使用 :class:`~optuna.study.Study` 和 :func:`~optuna.study.load_study` 来创建和加载一个 :class:`~optuna.study.Study` 。"
 
 #: ../../source/reference/study.rst:18:<autosummary>:1
 msgid ":obj:`optuna.study.Study <optuna.study.Study>`"
@@ -38,7 +40,7 @@ msgstr ""
 
 #: ../../source/reference/study.rst:18:<autosummary>:1
 msgid "A study corresponds to an optimization task, i.e., a set of trials."
-msgstr ""
+msgstr "一个 study 对应于一个优化任务，即一组 trials."
 
 #: ../../source/reference/study.rst:18:<autosummary>:1
 msgid ":obj:`optuna.study.create_study <optuna.study.create_study>`"
@@ -46,7 +48,7 @@ msgstr ""
 
 #: ../../source/reference/study.rst:18:<autosummary>:1
 msgid "Create a new :class:`~optuna.study.Study`."
-msgstr ""
+msgstr "创建新的 :class:`~optuna.study.Study`."
 
 #: ../../source/reference/study.rst:18:<autosummary>:1
 msgid ":obj:`optuna.study.load_study <optuna.study.load_study>`"
@@ -56,7 +58,7 @@ msgstr ""
 msgid ""
 "Load the existing :class:`~optuna.study.Study` that has the specified "
 "name."
-msgstr ""
+msgstr "加载一个指定名字的已经存在的 :class:`~optuna.study.Study`."
 
 #: ../../source/reference/study.rst:18:<autosummary>:1
 msgid ":obj:`optuna.study.delete_study <optuna.study.delete_study>`"
@@ -64,7 +66,7 @@ msgstr ""
 
 #: ../../source/reference/study.rst:18:<autosummary>:1
 msgid "Delete a :class:`~optuna.study.Study` object."
-msgstr ""
+msgstr "删除一个 :class:`~optuna.study.Study` 对象。"
 
 #: ../../source/reference/study.rst:18:<autosummary>:1
 msgid ""
@@ -74,7 +76,7 @@ msgstr ""
 
 #: ../../source/reference/study.rst:18:<autosummary>:1
 msgid "Get all history of studies stored in a specified storage."
-msgstr ""
+msgstr "返回指定存储中 所有 study 的历史记录。"
 
 #: ../../source/reference/study.rst:18:<autosummary>:1
 msgid ":obj:`optuna.study.StudyDirection <optuna.study.StudyDirection>`"
@@ -82,7 +84,7 @@ msgstr ""
 
 #: ../../source/reference/study.rst:18:<autosummary>:1
 msgid "Direction of a :class:`~optuna.study.Study`."
-msgstr ""
+msgstr ":class:`~optuna.study.Study` 的方向。"
 
 #: ../../source/reference/study.rst:18:<autosummary>:1
 msgid ":obj:`optuna.study.StudySummary <optuna.study.StudySummary>`"
@@ -90,7 +92,7 @@ msgstr ""
 
 #: ../../source/reference/study.rst:18:<autosummary>:1
 msgid "Basic attributes and aggregated results of a :class:`~optuna.study.Study`."
-msgstr ""
+msgstr "一个 :class:`~optuna.study.Study` 的基本属性和简要结果。"
 
 #~ msgid "Returns"
 #~ msgstr ""

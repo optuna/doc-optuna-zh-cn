@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 1.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-26 14:44-0400\n"
+"POT-Creation-Date: 2020-11-19 16:46-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -50,6 +50,16 @@ msgstr ""
 
 #: ../../source/reference/multi_objective/samplers.rst:13:<autosummary>:1
 msgid "Multi-objective sampler using random sampling."
+msgstr ""
+
+#: ../../source/reference/multi_objective/samplers.rst:13:<autosummary>:1
+msgid ""
+":obj:`optuna.multi_objective.samplers.MOTPEMultiObjectiveSampler "
+"<optuna.multi_objective.samplers.MOTPEMultiObjectiveSampler>`"
+msgstr ""
+
+#: ../../source/reference/multi_objective/samplers.rst:13:<autosummary>:1
+msgid "Multi-objective sampler using the MOTPE algorithm."
 msgstr ""
 
 #~ msgid "Parameters"

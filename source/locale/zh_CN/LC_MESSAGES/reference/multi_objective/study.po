@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 1.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-26 14:44-0400\n"
+"POT-Creation-Date: 2020-11-19 16:46-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -24,7 +24,7 @@ msgstr ""
 #: ../../source/reference/multi_objective/study.rst:12:<autosummary>:1
 msgid ""
 ":obj:`optuna.multi_objective.study.MultiObjectiveStudy "
-"<optuna.multi_objective.study.optuna.multi_objective.study.MultiObjectiveStudy>`"
+"<optuna.multi_objective.study.MultiObjectiveStudy>`"
 msgstr ""
 
 #: ../../source/reference/multi_objective/study.rst:12:<autosummary>:1
@@ -36,7 +36,7 @@ msgstr ""
 #: ../../source/reference/multi_objective/study.rst:12:<autosummary>:1
 msgid ""
 ":obj:`optuna.multi_objective.study.create_study "
-"<optuna.multi_objective.study.optuna.multi_objective.study.create_study>`"
+"<optuna.multi_objective.study.create_study>`"
 msgstr ""
 
 #: ../../source/reference/multi_objective/study.rst:12:<autosummary>:1
@@ -46,7 +46,7 @@ msgstr ""
 #: ../../source/reference/multi_objective/study.rst:12:<autosummary>:1
 msgid ""
 ":obj:`optuna.multi_objective.study.load_study "
-"<optuna.multi_objective.study.optuna.multi_objective.study.load_study>`"
+"<optuna.multi_objective.study.load_study>`"
 msgstr ""
 
 #: ../../source/reference/multi_objective/study.rst:12:<autosummary>:1
@@ -399,4 +399,19 @@ msgstr ""
 #~ "对象。如果设置成 :obj:`None` 的话， Optuna 将使用 "
 #~ ":class:`~optuna.multi_objective.samplers.NSGAIIMultiObjectiveSampler`"
 #~ " 作为默认值。参见 :class:`~optuna.multi_objective.samplers` 。"
+
+#~ msgid ""
+#~ ":obj:`optuna.multi_objective.study.MultiObjectiveStudy "
+#~ "<optuna.multi_objective.study.optuna.multi_objective.study.MultiObjectiveStudy>`"
+#~ msgstr ""
+
+#~ msgid ""
+#~ ":obj:`optuna.multi_objective.study.create_study "
+#~ "<optuna.multi_objective.study.optuna.multi_objective.study.create_study>`"
+#~ msgstr ""
+
+#~ msgid ""
+#~ ":obj:`optuna.multi_objective.study.load_study "
+#~ "<optuna.multi_objective.study.optuna.multi_objective.study.load_study>`"
+#~ msgstr ""
 
