@@ -30,9 +30,9 @@ msgid ""
 " should create and load a :class:`~optuna.study.Study` using "
 ":func:`~optuna.study.create_study` and :func:`~optuna.study.load_study` "
 "respectively."
-msgstr ":mod:`~optuna.study` 模块实现了Study对象和相关函数。"
+msgstr ":mod:`~optuna.study` 模块实现了 :class:`~optuna.study.Study` 对象和相关函数。"
 ":class:`~optuna.study.Study` 类有一个公共构造函数，但不建议直接使用这个构造函数。"
-"相反，库用户应该分别使用 :class:`~optuna.study.Study` 和 :func:`~optuna.study.load_study` 来创建和加载一个 :class:`~optuna.study.Study` 。"
+"相反，要创建或加载一个 :class:`~optuna.study.Study` 时, 库用户应该分别使用 :class:`~optuna.study.create_study` 或 :func:`~optuna.study.load_study` 。"
 
 #: ../../source/reference/study.rst:18:<autosummary>:1
 msgid ":obj:`optuna.study.Study <optuna.study.Study>`"
@@ -58,7 +58,7 @@ msgstr ""
 msgid ""
 "Load the existing :class:`~optuna.study.Study` that has the specified "
 "name."
-msgstr "加载一个指定名字的已经存在的 :class:`~optuna.study.Study`."
+msgstr "加载一个指定了名字的、已存在的 :class:`~optuna.study.Study`."
 
 #: ../../source/reference/study.rst:18:<autosummary>:1
 msgid ":obj:`optuna.study.delete_study <optuna.study.delete_study>`"
@@ -92,7 +92,7 @@ msgstr ""
 
 #: ../../source/reference/study.rst:18:<autosummary>:1
 msgid "Basic attributes and aggregated results of a :class:`~optuna.study.Study`."
-msgstr "一个 :class:`~optuna.study.Study` 的基本属性和简要结果。"
+msgstr "一个 :class:`~optuna.study.Study` 的基本属性和总汇结果。"
 
 #~ msgid "Returns"
 #~ msgstr ""
@@ -641,7 +641,7 @@ msgstr "一个 :class:`~optuna.study.Study` 的基本属性和简要结果。"
 #~ msgid ""
 #~ "Basic attributes and aggregated results "
 #~ "of a :class:`~optuna.study.Study`."
-#~ msgstr "一个 :class:`~optuna.study.Study` 的基本属性和简要结果。"
+#~ msgstr "一个 :class:`~optuna.study.Study` 的基本属性和总汇结果。"
 
 #~ msgid "See also :func:`optuna.study.get_all_study_summaries`."
 #~ msgstr "参见 :func:`optuna.study.get_all_study_summaries`."

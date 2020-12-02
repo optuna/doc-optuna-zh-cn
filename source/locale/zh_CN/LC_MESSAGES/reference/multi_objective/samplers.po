@@ -60,7 +60,7 @@ msgstr ""
 
 #: ../../source/reference/multi_objective/samplers.rst:13:<autosummary>:1
 msgid "Multi-objective sampler using the MOTPE algorithm."
-msgstr ""
+msgstr "采用 MOTPE 算法的多目标sampler。"
 
 #~ msgid "Parameters"
 #~ msgstr ""

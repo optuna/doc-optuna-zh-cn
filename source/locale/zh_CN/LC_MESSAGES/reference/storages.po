@@ -30,7 +30,7 @@ msgid ""
 "other than the default in-memory storage should use one of the child "
 "classes of :class:`~optuna.storages.BaseStorage` documented below."
 msgstr ":mod:`~optuna.storages` 模块定义了一个 :class:`~optuna.storages.BaseStorage` 类，"
-"它抽象了一个后端数据库，并提供了库内部的接口来读/写研究和试验的历史。"
+"它抽象了一个后端数据库，并提供了库内部的接口来读/写study和trial的历史。"
 "库用户如果希望使用除默认内存存储以外的存储方案，应该使用下面文档中的 :class:`~optuna.storages.BaseStorage` 子类之一。"
 
 #: ../../source/reference/storages.rst:13:<autosummary>:1

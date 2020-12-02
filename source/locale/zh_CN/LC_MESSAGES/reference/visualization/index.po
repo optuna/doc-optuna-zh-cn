@@ -37,7 +37,7 @@ msgid ""
 "default. Please follow this `installation guide`_ to show figures in "
 "`JupyterLab`_."
 msgstr "在 :mod:`optuna.visualization` 模块中，"
-"以下函数使用 plotly 来创建数字，但 `JupyterLab`_ 默认情况下不能渲染它们。请按照这个 `installation guide`_ 在 `JupyterLab`_ 中显示数字。"
+"以下函数使用 plotly 来绘制图像，但 `JupyterLab`_ 默认情况下不能渲染它们。请按照这个 `installation guide`_ 在 `JupyterLab`_ 中显示图像。"
 
 #: ../../source/reference/visualization/index.rst:28:<autosummary>:1
 msgid ""
@@ -55,7 +55,7 @@ msgstr ""
 
 #: ../../source/reference/visualization/index.rst:28:<autosummary>:1
 msgid "Plot the objective value EDF (empirical distribution function) of a study."
-msgstr "绘制研究的目标值EDF（经验分布函数）。"
+msgstr "绘制study的目标值EDF（经验分布函数）。"
 
 #: ../../source/reference/visualization/index.rst:28:<autosummary>:1
 msgid ""

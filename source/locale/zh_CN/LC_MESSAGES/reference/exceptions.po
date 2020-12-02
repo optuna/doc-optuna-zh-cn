@@ -31,8 +31,7 @@ msgid ""
 " should be pruned."
 msgstr ":mod:`~optuna.exceptions` 模块定义了Optuna特有的异常，"
 "它派生自一个基本的 :class:`~optuna.exceptions.OptunaError` 类。"
-"对于库用户来说，特别重要的是 :class:`~optuna.exceptions.TrialPruned` 异常将被引发，"
-"如果 :func:`optuna.trial.Trial.should_prune` 对一个应该被修剪的审判返回 ``True`` 。"
+"对于库用户来说，特别重要的是 :class:`~optuna.exceptions.TrialPruned` 异常。此异常在 :func:`optuna.trial.Trial.should_prune` 对一个应被剪枝的trial返回 ``True`` 时被抛出。"
 
 #: ../../source/reference/exceptions.rst:16:<autosummary>:1
 msgid ":obj:`optuna.exceptions.OptunaError <optuna.exceptions.OptunaError>`"
