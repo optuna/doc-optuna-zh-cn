@@ -58,7 +58,7 @@ msgstr ""
 msgid ""
 "Load the existing :class:`~optuna.study.Study` that has the specified "
 "name."
-msgstr "加载一个指定了名字的、已存在的 :class:`~optuna.study.Study`."
+msgstr "加载一个所给名字的已经存在的 :class:`~optuna.study.Study`."
 
 #: ../../source/reference/study.rst:18:<autosummary>:1
 msgid ":obj:`optuna.study.delete_study <optuna.study.delete_study>`"
