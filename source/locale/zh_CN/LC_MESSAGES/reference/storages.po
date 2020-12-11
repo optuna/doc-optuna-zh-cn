@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 1.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-10 16:27-0400\n"
+"POT-Creation-Date: 2020-10-26 14:44-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,9 +17,37 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.8.0\n"
 
-#: ../../source/reference/storages.rst:2
+#: ../../source/reference/storages.rst:4
 msgid "optuna.storages"
 msgstr ""
+
+#: ../../source/reference/storages.rst:6
+msgid ""
+"The :mod:`~optuna.storages` module defines a "
+":class:`~optuna.storages.BaseStorage` class which abstracts a backend "
+"database and provides library-internal interfaces to read/write histories"
+" of studies and trials. Library users who wish to use storage solutions "
+"other than the default in-memory storage should use one of the child "
+"classes of :class:`~optuna.storages.BaseStorage` documented below."
+msgstr ":mod:`~optuna.storages` 模块定义了一个 :class:`~optuna.storages.BaseStorage` 类，"
+"它抽象了一个后端数据库，并提供了库内部的接口来读/写study和trial的历史。"
+"库用户如果希望使用除默认内存存储以外的存储方案，应该使用下面文档中的 :class:`~optuna.storages.BaseStorage` 子类之一。"
+
+#: ../../source/reference/storages.rst:13:<autosummary>:1
+msgid ":obj:`optuna.storages.RDBStorage <optuna.storages.RDBStorage>`"
+msgstr ""
+
+#: ../../source/reference/storages.rst:13:<autosummary>:1
+msgid "Storage class for RDB backend."
+msgstr "RDB 后端的存储类。"
+
+#: ../../source/reference/storages.rst:13:<autosummary>:1
+msgid ":obj:`optuna.storages.RedisStorage <optuna.storages.RedisStorage>`"
+msgstr ""
+
+#: ../../source/reference/storages.rst:13:<autosummary>:1
+msgid "Storage class for Redis backend."
+msgstr "Redis 后端的存储类。"
 
 #~ msgid "Example"
 #~ msgstr ""

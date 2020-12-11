@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 1.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-10 16:27-0400\n"
+"POT-Creation-Date: 2020-10-26 14:44-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,9 +17,79 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.8.0\n"
 
-#: ../../source/reference/logging.rst:2
+#: ../../source/reference/logging.rst:4
 msgid "optuna.logging"
 msgstr ""
+
+#: ../../source/reference/logging.rst:6
+msgid ""
+"The :mod:`~optuna.logging` module implements logging using the Python "
+"``logging`` package. Library users may be especially interested in "
+"setting verbosity levels using :func:`~optuna.logging.set_verbosity` to "
+"one of ``optuna.logging.CRITICAL`` (aka ``optuna.logging.FATAL``), "
+"``optuna.logging.ERROR``, ``optuna.logging.WARNING`` (aka "
+"``optuna.logging.WARN``), ``optuna.logging.INFO``, or "
+"``optuna.logging.DEBUG``."
+msgstr ":mod:`~optuna.logging` 模块使用Python ``logging`` 包来实现日志记录。"
+"库用户可使用 :func:`~optuna.logging.set_verbosity` 设置verbosity级别为"
+" ``optuna.logging.CRITICAL`` (又名 ``optuna.logging.FATAL``)、 "
+"``optuna.logging.ERROR``、 ``optuna.logging.WARNING`` (又名 ``optuna.logging.WARN``)、 ``optuna.logging.INFO`` 或 ``optuna.logging.DEBUG`` 。"
+
+#: ../../source/reference/logging.rst:18:<autosummary>:1
+msgid ":obj:`optuna.logging.get_verbosity <optuna.logging.get_verbosity>`"
+msgstr ""
+
+#: ../../source/reference/logging.rst:18:<autosummary>:1
+msgid "Return the current level for the Optuna's root logger."
+msgstr "返回目前 Optuna 的 root logger 的 logging 层级。"
+
+#: ../../source/reference/logging.rst:18:<autosummary>:1
+msgid ":obj:`optuna.logging.set_verbosity <optuna.logging.set_verbosity>`"
+msgstr ""
+
+#: ../../source/reference/logging.rst:18:<autosummary>:1
+msgid "Set the level for the Optuna's root logger."
+msgstr "设置 Optuna 的 root logger 的 logging 层级。"
+
+#: ../../source/reference/logging.rst:18:<autosummary>:1
+msgid ""
+":obj:`optuna.logging.disable_default_handler "
+"<optuna.logging.disable_default_handler>`"
+msgstr ""
+
+#: ../../source/reference/logging.rst:18:<autosummary>:1
+msgid "Disable the default handler of the Optuna's root logger."
+msgstr "禁用 Optuna 的 root logger 的默认句柄。"
+
+#: ../../source/reference/logging.rst:18:<autosummary>:1
+msgid ""
+":obj:`optuna.logging.enable_default_handler "
+"<optuna.logging.enable_default_handler>`"
+msgstr ""
+
+#: ../../source/reference/logging.rst:18:<autosummary>:1
+msgid "Enable the default handler of the Optuna's root logger."
+msgstr "启用 Optuna 的 root logger 的默认句柄。"
+
+#: ../../source/reference/logging.rst:18:<autosummary>:1
+msgid ""
+":obj:`optuna.logging.disable_propagation "
+"<optuna.logging.disable_propagation>`"
+msgstr ""
+
+#: ../../source/reference/logging.rst:18:<autosummary>:1
+msgid "Disable propagation of the library log outputs."
+msgstr "禁用库 log 输出的传递。"
+
+#: ../../source/reference/logging.rst:18:<autosummary>:1
+msgid ""
+":obj:`optuna.logging.enable_propagation "
+"<optuna.logging.enable_propagation>`"
+msgstr ""
+
+#: ../../source/reference/logging.rst:18:<autosummary>:1
+msgid "Enable propagation of the library log outputs."
+msgstr "启用库 log 输出的传递。"
 
 #~ msgid "Returns"
 #~ msgstr ""

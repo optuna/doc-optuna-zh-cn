@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 1.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-10 16:27-0400\n"
+"POT-Creation-Date: 2020-10-26 14:44-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,9 +17,85 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.8.0\n"
 
-#: ../../source/reference/samplers.rst:2
+#: ../../source/reference/samplers.rst:4
 msgid "optuna.samplers"
 msgstr ""
+
+#: ../../source/reference/samplers.rst:6
+msgid ""
+"The :mod:`~optuna.samplers` module defines a base class for parameter "
+"sampling as described extensively in "
+":class:`~optuna.samplers.BaseSampler`. The remaining classes in this "
+"module represent child classes, deriving from "
+":class:`~optuna.samplers.BaseSampler`, which implement different sampling"
+" strategies."
+msgstr ":mod:`~optuna.samplers` 模块定义了一个参数采样的基类，"
+"如 :class:`~optuna.samplers.BaseSampler` 中广泛描述的那样。"
+"本模块中其余的类代表从 :class:`~optuna.samplers.BaseSampler` 派生出来的子类，它们实现了不同的采样策略。"
+
+#: ../../source/reference/samplers.rst:18:<autosummary>:1
+msgid ":obj:`optuna.samplers.BaseSampler <optuna.samplers.BaseSampler>`"
+msgstr ""
+
+#: ../../source/reference/samplers.rst:18:<autosummary>:1
+msgid "Base class for samplers."
+msgstr "Samplers 基类"
+
+#: ../../source/reference/samplers.rst:18:<autosummary>:1
+msgid ":obj:`optuna.samplers.GridSampler <optuna.samplers.GridSampler>`"
+msgstr ""
+
+#: ../../source/reference/samplers.rst:18:<autosummary>:1
+msgid "Sampler using grid search."
+msgstr "使用网格搜索的 sampler."
+
+#: ../../source/reference/samplers.rst:18:<autosummary>:1
+msgid ":obj:`optuna.samplers.RandomSampler <optuna.samplers.RandomSampler>`"
+msgstr ""
+
+#: ../../source/reference/samplers.rst:18:<autosummary>:1
+msgid "Sampler using random sampling."
+msgstr "使用随机 sampling 的sampler."
+
+#: ../../source/reference/samplers.rst:18:<autosummary>:1
+msgid ":obj:`optuna.samplers.TPESampler <optuna.samplers.TPESampler>`"
+msgstr ""
+
+#: ../../source/reference/samplers.rst:18:<autosummary>:1
+msgid "Sampler using TPE (Tree-structured Parzen Estimator) algorithm."
+msgstr "使用 TPE (Tree-structured Parzen Estimator) 算法的 sampler."
+
+#: ../../source/reference/samplers.rst:18:<autosummary>:1
+msgid ":obj:`optuna.samplers.CmaEsSampler <optuna.samplers.CmaEsSampler>`"
+msgstr ""
+
+#: ../../source/reference/samplers.rst:18:<autosummary>:1
+msgid "A Sampler using CMA-ES algorithm."
+msgstr "使用 CMA-ES 算法的 sampler."
+
+#: ../../source/reference/samplers.rst:18:<autosummary>:1
+msgid ""
+":obj:`optuna.samplers.IntersectionSearchSpace "
+"<optuna.samplers.IntersectionSearchSpace>`"
+msgstr ""
+
+#: ../../source/reference/samplers.rst:18:<autosummary>:1
+msgid ""
+"A class to calculate the intersection search space of a "
+":class:`~optuna.study.BaseStudy`."
+msgstr "用于计算 :class:`~optuna.study.BaseStudy` 的搜索空间的交集的类。"
+
+#: ../../source/reference/samplers.rst:18:<autosummary>:1
+msgid ""
+":obj:`optuna.samplers.intersection_search_space "
+"<optuna.samplers.intersection_search_space>`"
+msgstr ""
+
+#: ../../source/reference/samplers.rst:18:<autosummary>:1
+msgid ""
+"Return the intersection search space of the "
+":class:`~optuna.study.BaseStudy`."
+msgstr "返回 :class:`~optuna.study.BaseStudy` 的搜索空间交集。"
 
 #~ msgid "Parameters"
 #~ msgstr ""

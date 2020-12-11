@@ -479,7 +479,7 @@ msgstr ""
 
 #: of optuna.TrialPruned:1 optuna.exceptions.TrialPruned:1
 msgid "Exception for pruned trials."
-msgstr ""
+msgstr "被剪枝的 trial 异常。"
 
 #: of optuna.TrialPruned:3 optuna.exceptions.TrialPruned:3
 msgid ""
@@ -730,7 +730,7 @@ msgstr ""
 
 #: of optuna.exceptions.OptunaError:1
 msgid "Base class for Optuna specific errors."
-msgstr ""
+msgstr "Optuna 异常基类。"
 
 #: ../../source/reference/exceptions.rst:13
 msgid "The alias also exists as :class:`optuna.TrialPruned`."

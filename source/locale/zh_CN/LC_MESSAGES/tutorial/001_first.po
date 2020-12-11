@@ -1,0 +1,190 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018, Optuna Contributors.
+# This file is distributed under the same license as the Optuna package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Optuna 2.2.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-29 20:38-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../source/tutorial/001_first.rst:6
+msgid ""
+"Click :ref:`here <sphx_glr_download_tutorial_001_first.py>`     to "
+"download the full example code"
+msgstr ""
+
+#: ../../source/tutorial/001_first.rst:15
+msgid "First Optimization"
+msgstr "第一个优化例子"
+
+#: ../../source/tutorial/001_first.rst:18
+msgid "Quadratic Function Example"
+msgstr "二次函数的例子"
+
+#: ../../source/tutorial/001_first.rst:20
+msgid ""
+"Usually, Optuna is used to optimize hyper-parameters, but as an example, "
+"let us directly optimize a quadratic function in an IPython shell."
+msgstr "Optuna 通常用于优化超参数，但是为了举例说明，我们将直接在 IPython shell 中优化一个二次函数。"
+
+#: ../../source/tutorial/001_first.rst:38
+msgid "The objective function is what will be optimized."
+msgstr "目标 (objective) 函数便是待优化的函数。"
+
+#: ../../source/tutorial/001_first.rst:57
+msgid ""
+"This function returns the value of :math:`(x - 2)^2`. Our goal is to find"
+" the value of ``x`` that minimizes the output of the ``objective`` "
+"function. This is the \"optimization.\" During the optimization, Optuna "
+"repeatedly calls and evaluates the objective function with different "
+"values of ``x``."
+msgstr ""
+"该函数的返回值是 :math:`(x - 2)^2`. 我们的目标是找到一个 ``x``，使 ``objective`` 函数的输出最小。这被称为"
+" \"optimization\" (优化)。 在优化过程中，Optuna 反复调用目标函数，在不同的 ``x`` 下对其进行求值。"
+
+#: ../../source/tutorial/001_first.rst:62
+msgid ""
+"A :class:`~optuna.trial.Trial` object corresponds to a single execution "
+"of the objective function and is internally instantiated upon each "
+"invocation of the function."
+msgstr "一个 :class:`~optuna.trial.Trial` 对应着目标函数的单次执行。在每次调用该函数的时候，它都被内部实例化一次。"
+
+#: ../../source/tutorial/001_first.rst:65
+msgid ""
+"The `suggest` APIs (for example, "
+":func:`~optuna.trial.Trial.suggest_float`) are called inside the "
+"objective function to obtain parameters for a trial. "
+":func:`~optuna.trial.Trial.suggest_float` selects parameters uniformly "
+"within the range provided. In our example, from :math:`-10` to "
+":math:`10`."
+msgstr ""
+"而 `suggest` API (例如 :func:`~optuna.trial.Trial.suggest_uniform`) "
+"在目标函数内部被调用。它被用于获取单个 trial "
+"的参数。在上面的例子中，:func:`~optuna.trial.Trial.suggest_uniform` 在给定的范围（``-10`` 到 "
+"``10``）内均匀地选择参数。"
+
+#: ../../source/tutorial/001_first.rst:70
+msgid ""
+"To start the optimization, we create a study object and pass the "
+"objective function to method :func:`~optuna.study.Study.optimize` as "
+"follows."
+msgstr ""
+"为了开始优化过程，我们将创建一个 study 对象，并将目标函数传递给它的一个方法 "
+":func:`~optuna.study.Study.optimize`："
+
+#: ../../source/tutorial/001_first.rst:88
+msgid "You can get the best parameter as follows."
+msgstr ""
+
+#: ../../source/tutorial/001_first.rst:102
+#: ../../source/tutorial/001_first.rst:146
+#: ../../source/tutorial/001_first.rst:170
+#: ../../source/tutorial/001_first.rst:194
+#: ../../source/tutorial/001_first.rst:218
+#: ../../source/tutorial/001_first.rst:242
+#: ../../source/tutorial/001_first.rst:280
+msgid "Out:"
+msgstr ""
+
+#: ../../source/tutorial/001_first.rst:111
+msgid ""
+"We can see that the ``x`` value found by Optuna is close to the optimal "
+"value of ``2``."
+msgstr "最佳参数可以通过如下方式获得："
+
+#: ../../source/tutorial/001_first.rst:114
+msgid ""
+"When used to search for hyper-parameters in machine learning, usually the"
+" objective function would return the loss or accuracy of the model."
+msgstr "当 Optuna 被用于机器学习时，目标函数通常返回模型的损失或者准确度。"
+
+#: ../../source/tutorial/001_first.rst:119
+msgid "Study Object"
+msgstr "Study 对象"
+
+#: ../../source/tutorial/001_first.rst:121
+msgid "Let us clarify the terminology in Optuna as follows:"
+msgstr "下面是几个常用术语："
+
+#: ../../source/tutorial/001_first.rst:123
+msgid "**Trial**: A single call of the objective function"
+msgstr "**Trial**: 目标函数的单次调用"
+
+#: ../../source/tutorial/001_first.rst:124
+msgid "**Study**: An optimization session, which is a set of trials"
+msgstr "**Study**: 一次优化过程，包含一系列的 trials."
+
+#: ../../source/tutorial/001_first.rst:125
+msgid ""
+"**Parameter**: A variable whose value is to be optimized, such as ``x`` "
+"in the above example"
+msgstr "**Parameter**: 待优化的参数，比如上面例子中的 ``x``."
+
+#: ../../source/tutorial/001_first.rst:127
+msgid ""
+"In Optuna, we use the study object to manage optimization. Method "
+":func:`~optuna.study.create_study` returns a study object. A study object"
+" has useful properties for analyzing the optimization outcome."
+msgstr ""
+"在 Optuna 中，我们用 study 对象来管理优化过程。 :func:`~optuna.study.create_study` "
+"方法会返回一个 study 对象。该对象包含若干有用的属性，可以用于分析优化结果。"
+
+#: ../../source/tutorial/001_first.rst:131
+msgid "To get the best parameter:"
+msgstr "获得最佳参数:"
+
+#: ../../source/tutorial/001_first.rst:155
+msgid "To get the best value:"
+msgstr "获得最佳目标函数值:"
+
+#: ../../source/tutorial/001_first.rst:179
+msgid "To get the best trial:"
+msgstr "获得最佳 trial:"
+
+#: ../../source/tutorial/001_first.rst:203
+msgid "To get all trials:"
+msgstr "获得所有 trials:"
+
+#: ../../source/tutorial/001_first.rst:227
+msgid "To get the number of trials:"
+msgstr "获得 trial 的数目："
+
+#: ../../source/tutorial/001_first.rst:251
+msgid ""
+"By executing :func:`~optuna.study.Study.optimize` again, we can continue "
+"the optimization."
+msgstr "（在优化结束后）通过再次执行 :func:`~optuna.study.Study.optimize`，我们可以继续优化过程。"
+
+#: ../../source/tutorial/001_first.rst:267
+msgid "To get the updated number of trials:"
+msgstr "获得更新（再次优化后）的 trial 数量："
+
+#: ../../source/tutorial/001_first.rst:292
+msgid "**Total running time of the script:** ( 0 minutes  0.668 seconds)"
+msgstr ""
+
+#: ../../source/tutorial/001_first.rst:307
+msgid ":download:`Download Python source code: 001_first.py <001_first.py>`"
+msgstr ""
+
+#: ../../source/tutorial/001_first.rst:313
+msgid ":download:`Download Jupyter notebook: 001_first.ipynb <001_first.ipynb>`"
+msgstr ""
+
+#: ../../source/tutorial/001_first.rst:320
+msgid "`Gallery generated by Sphinx-Gallery <https://sphinx-gallery.github.io>`_"
+msgstr ""
+
+#~ msgid "**Total running time of the script:** ( 0 minutes  0.629 seconds)"
+#~ msgstr ""
+

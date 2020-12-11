@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 1.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-10 16:27-0400\n"
+"POT-Creation-Date: 2020-10-26 14:44-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,9 +17,65 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.8.0\n"
 
-#: ../../source/reference/exceptions.rst:2
+#: ../../source/reference/exceptions.rst:4
 msgid "optuna.exceptions"
 msgstr ""
+
+#: ../../source/reference/exceptions.rst:6
+msgid ""
+"The :mod:`~optuna.exceptions` module defines Optuna-specific exceptions "
+"deriving from a base :class:`~optuna.exceptions.OptunaError` class. Of "
+"special importance for library users is the "
+":class:`~optuna.exceptions.TrialPruned` exception to be raised if "
+":func:`optuna.trial.Trial.should_prune` returns ``True`` for a trial that"
+" should be pruned."
+msgstr ":mod:`~optuna.exceptions` 模块定义了Optuna特有的异常，"
+"它派生自一个基本的 :class:`~optuna.exceptions.OptunaError` 类。"
+"对于库用户来说，特别重要的是 :class:`~optuna.exceptions.TrialPruned` 异常。此异常在 :func:`optuna.trial.Trial.should_prune` 对一个应被剪枝的trial返回 ``True`` 时被抛出。"
+
+#: ../../source/reference/exceptions.rst:16:<autosummary>:1
+msgid ":obj:`optuna.exceptions.OptunaError <optuna.exceptions.OptunaError>`"
+msgstr ""
+
+#: ../../source/reference/exceptions.rst:16:<autosummary>:1
+msgid "Base class for Optuna specific errors."
+msgstr "Optuna 异常基类。"
+
+#: ../../source/reference/exceptions.rst:16:<autosummary>:1
+msgid ":obj:`optuna.exceptions.TrialPruned <optuna.exceptions.TrialPruned>`"
+msgstr ""
+
+#: ../../source/reference/exceptions.rst:16:<autosummary>:1
+msgid "Exception for pruned trials."
+msgstr "被剪枝 trial 异常。"
+
+#: ../../source/reference/exceptions.rst:16:<autosummary>:1
+msgid ":obj:`optuna.exceptions.CLIUsageError <optuna.exceptions.CLIUsageError>`"
+msgstr ""
+
+#: ../../source/reference/exceptions.rst:16:<autosummary>:1
+msgid "Exception for CLI."
+msgstr "命令行界面异常。"
+
+#: ../../source/reference/exceptions.rst:16:<autosummary>:1
+msgid ""
+":obj:`optuna.exceptions.StorageInternalError "
+"<optuna.exceptions.StorageInternalError>`"
+msgstr ""
+
+#: ../../source/reference/exceptions.rst:16:<autosummary>:1
+msgid "Exception for storage operation."
+msgstr "存储异常。"
+
+#: ../../source/reference/exceptions.rst:16:<autosummary>:1
+msgid ""
+":obj:`optuna.exceptions.DuplicatedStudyError "
+"<optuna.exceptions.DuplicatedStudyError>`"
+msgstr ""
+
+#: ../../source/reference/exceptions.rst:16:<autosummary>:1
+msgid "Exception for a duplicated study name."
+msgstr "重复 study 名导致的异常。"
 
 #~ msgid "Example"
 #~ msgstr ""

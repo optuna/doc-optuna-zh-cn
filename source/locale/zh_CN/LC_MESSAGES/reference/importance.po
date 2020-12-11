@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 1.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-10 16:27-0400\n"
+"POT-Creation-Date: 2020-10-26 14:44-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,9 +17,63 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.8.0\n"
 
-#: ../../source/reference/importance.rst:2
+#: ../../source/reference/importance.rst:4
 msgid "optuna.importance"
 msgstr ""
+
+#: ../../source/reference/importance.rst:6
+msgid ""
+"The :mod:`~optuna.importance` module provides functionality for "
+"evaluating hyperparameter importances based on completed trials in a "
+"given study. The utility function "
+":func:`~optuna.importance.get_param_importances` takes a ``Study`` and "
+"optional evaluator as two of its inputs. The evaluator must derive from "
+":class:`~optuna.importance.BaseImportanceEvaluator`, and is initialized "
+"as a :class:`~optuna.importance.FanovaImportanceEvaluator` by default "
+"when not passed in. Users implementing custom evaluators should refer to "
+"either :class:`~optuna.importance.FanovaImportanceEvaluator` or "
+":class:`~optuna.importance.MeanDecreaseImpurityImportanceEvaluator` as a "
+"guide, paying close attention to the format of the return value from the "
+"Evaluator's :meth:`evaluate` function."
+msgstr ""
+":mod:`~optuna.importance` 模块提供了根据给定 study 中已完成的trials评估超参数重要性的功能。"
+"实用函数 :func:`~optuna.importance.get_param_importances` 将一个 ``Study`` 和可选的评价器作为它的两个输入。"
+" 评价器必须从 :class:`~optuna.importance.BaseImportanceEvaluator` 派生，"
+"当没有传入时，默认初始化为 :class:`~optuna.importance.FanovaImportanceEvaluator`。"
+"实现自定义评估器的用户应该参考 :class:`~optuna.importance.FanovaImportanceEvaluator` "
+"或 :class:`~optuna.importance.MeanDecreaseImpurityImportanceEvaluator` 作为指导，请格外注意 Evaluator的 :meth:`evaluate` 函数的返回值的格式。"
+
+#: ../../source/reference/importance.rst:15:<autosummary>:1
+msgid ""
+":obj:`optuna.importance.get_param_importances "
+"<optuna.importance.get_param_importances>`"
+msgstr ""
+
+#: ../../source/reference/importance.rst:15:<autosummary>:1
+msgid ""
+"Evaluate parameter importances based on completed trials in the given "
+"study."
+msgstr "在给定的 study 中根据已完成的 trial 来评估参数重要性。"
+
+#: ../../source/reference/importance.rst:15:<autosummary>:1
+msgid ""
+":obj:`optuna.importance.FanovaImportanceEvaluator "
+"<optuna.importance.FanovaImportanceEvaluator>`"
+msgstr ""
+
+#: ../../source/reference/importance.rst:15:<autosummary>:1
+msgid "fANOVA importance evaluator."
+msgstr "fANOVA 重要性求解器。"
+
+#: ../../source/reference/importance.rst:15:<autosummary>:1
+msgid ""
+":obj:`optuna.importance.MeanDecreaseImpurityImportanceEvaluator "
+"<optuna.importance.MeanDecreaseImpurityImportanceEvaluator>`"
+msgstr ""
+
+#: ../../source/reference/importance.rst:15:<autosummary>:1
+msgid "Mean Decrease Impurity (MDI) parameter importance evaluator."
+msgstr "Mean Decrease Impurity (MDI) 参数重要性求解器。"
 
 #~ msgid ""
 #~ "See :func:`~optuna.visualization.plot_param_importances` "
