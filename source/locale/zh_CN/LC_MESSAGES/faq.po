@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 1.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-26 12:27-0400\n"
+"POT-Creation-Date: 2021-01-14 18:04-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -46,7 +46,7 @@ msgstr "有两种方法可以实现这类函数。"
 msgid "First, callable classes can be used for that purpose as follows:"
 msgstr "首先，如下例所示，可调用的 objective 类具有这个功能："
 
-#: ../../source/faq.rst:43
+#: ../../source/faq.rst:45
 msgid ""
 "Second, you can use ``lambda`` or ``functools.partial`` for creating "
 "functions (closures) that hold extra arguments. Below is an example that "
@@ -55,7 +55,7 @@ msgstr ""
 "其次，你可以用 ``lambda`` 或者 ``functools.partial`` 来创建带有额外参数的函数（闭包）。 下面是一个使用了 "
 "``lambda`` 的例子："
 
-#: ../../source/faq.rst:63
+#: ../../source/faq.rst:66
 msgid ""
 "Please also refer to `sklearn_addtitional_args.py "
 "<https://github.com/optuna/optuna/blob/master/examples/sklearn_additional_args.py>`_"
@@ -66,33 +66,33 @@ msgstr ""
 "<https://github.com/optuna/optuna/blob/master/examples/sklearn_additional_args.py>`_"
 " ，在该例中，数据集被重复使用而无需在每次trial执行时重新加载。"
 
-#: ../../source/faq.rst:68
+#: ../../source/faq.rst:71
 msgid "Can I use Optuna without remote RDB servers?"
 msgstr "没有远程 RDB 的情况下可以使用 Optuna 吗？"
 
-#: ../../source/faq.rst:70
+#: ../../source/faq.rst:73
 msgid "Yes, it's possible."
 msgstr "可以。"
 
-#: ../../source/faq.rst:72
+#: ../../source/faq.rst:75
 msgid "In the simplest form, Optuna works with in-memory storage:"
 msgstr "在最简单的情况下，Optuna 使用内存 (in-memory) 存储："
 
-#: ../../source/faq.rst:80
+#: ../../source/faq.rst:83
 msgid ""
 "If you want to save and resume studies,  it's handy to use SQLite as the "
 "local storage:"
 msgstr "如果想保存和恢复 study 的话，你可以轻松地将 SQLite 用作本地存储。"
 
-#: ../../source/faq.rst:87
-msgid "Please see :ref:`sphx_glr_tutorial_003_rdb.py` for more details."
-msgstr "更多细节请参考 :ref:`sphx_glr_tutorial_003_rdb.py` ."
+#: ../../source/faq.rst:90
+msgid "Please see :ref:`rdb` for more details."
+msgstr "更多细节请参考 :ref:`rdb` ."
 
-#: ../../source/faq.rst:91
+#: ../../source/faq.rst:94
 msgid "How can I save and resume studies?"
 msgstr "如何保存和恢复 study？"
 
-#: ../../source/faq.rst:93
+#: ../../source/faq.rst:96
 msgid ""
 "There are two ways of persisting studies, which depends if you are using "
 "in-memory storage (default) or remote databases (RDB). In-memory studies "
@@ -100,24 +100,22 @@ msgid ""
 "``joblib``. For example, using ``joblib``:"
 msgstr ""
 "有两种方法可以将 study 持久化。具体采用哪种取决于你是使用内存存储 (in-memory) 还是远程数据库存储 (RDB).通过 "
-"``pickle`` 或者 ``joblib``, 采用了内存存储的 study 可以和普通的 Python 对象一样，用 ``pickle`` 或者 ``joblib`` 来存储和加载。比如用 "
-"``joblib`` 的话："
+"``pickle`` 或者 ``joblib``, 采用了内存存储的 study 可以和普通的 Python 对象一样，用 ``pickle`` "
+"或者 ``joblib`` 来存储和加载。比如用 ``joblib`` 的话："
 
-#: ../../source/faq.rst:103
+#: ../../source/faq.rst:106
 msgid "And to resume the study:"
 msgstr "恢复 study:"
 
-#: ../../source/faq.rst:114
-msgid ""
-"If you are using RDBs, see :ref:`sphx_glr_tutorial_003_rdb.py` for more "
-"details."
-msgstr "如果你用的是 RDB, 具体细节请参考 :ref:`sphx_glr_tutorial_003_rdb.py`."
-
 #: ../../source/faq.rst:117
+msgid "If you are using RDBs, see :ref:`rdb` for more details."
+msgstr "如果你用的是 RDB, 具体细节请参考 :ref:`rdb`."
+
+#: ../../source/faq.rst:120
 msgid "How to suppress log messages of Optuna?"
 msgstr "如何禁用 Optuna 的日志信息？"
 
-#: ../../source/faq.rst:119
+#: ../../source/faq.rst:122
 msgid ""
 "By default, Optuna shows log messages at the ``optuna.logging.INFO`` "
 "level. You can change logging levels by using  "
@@ -126,19 +124,19 @@ msgstr ""
 "默认情况下，Optuna 打印处于 ``optuna.logging.INFO`` 层级的日志信息。通过设置  "
 ":func:`optuna.logging.set_verbosity`, 你可以改变这个层级。"
 
-#: ../../source/faq.rst:122
+#: ../../source/faq.rst:125
 msgid "For instance, you can stop showing each trial result as follows:"
 msgstr "比如，下面的代码可以终止打印每一个trial的结果："
 
-#: ../../source/faq.rst:133
+#: ../../source/faq.rst:136
 msgid "Please refer to :class:`optuna.logging` for further details."
 msgstr "更多的细节请参考  :class:`optuna.logging`."
 
-#: ../../source/faq.rst:137
+#: ../../source/faq.rst:140
 msgid "How to save machine learning models trained in objective functions?"
 msgstr "如何在目标函数中保存训练好的机器学习模型？"
 
-#: ../../source/faq.rst:139
+#: ../../source/faq.rst:142
 msgid ""
 "Optuna saves hyperparameter values with its corresponding objective value"
 " to storage, but it discards intermediate objects such as machine "
@@ -148,7 +146,7 @@ msgstr ""
 "Optuna "
 "会保存超参数和对应的目标函数值，但是它不会存储诸如机器学习模型或者网络权重这样的中间数据。要保存模型或者权重的话，请利用你正在使用的机器学习库提供的对应功能。"
 
-#: ../../source/faq.rst:143
+#: ../../source/faq.rst:146
 msgid ""
 "We recommend saving :obj:`optuna.trial.Trial.number` with a model in "
 "order to identify its corresponding trial. For example, you can save SVM "
@@ -157,11 +155,11 @@ msgstr ""
 "在保存模型的时候，我们推荐将 :obj:`optuna.trial.Trial.number` 一同存储。这样易于之后确认对应的 "
 "trial.比如，你可以用以下方式在目标函数中保存训练好的 SVM 模型："
 
-#: ../../source/faq.rst:169
+#: ../../source/faq.rst:172
 msgid "How can I obtain reproducible optimization results?"
 msgstr "如何获得可复现的优化结果？"
 
-#: ../../source/faq.rst:171
+#: ../../source/faq.rst:174
 msgid ""
 "To make the parameters suggested by Optuna reproducible, you can specify "
 "a fixed random seed via ``seed`` argument of "
@@ -171,11 +169,11 @@ msgstr ""
 "要让 Optuna 生成的参数可复现的话，你可以通过设置 :class:`~optuna.samplers.RandomSampler` 或者 "
 ":class:`~optuna.samplers.TPESampler` 中的参数 ``seed`` 来指定一个固定的随机数种子："
 
-#: ../../source/faq.rst:179
+#: ../../source/faq.rst:182
 msgid "However, there are two caveats."
 msgstr "但是这么做的需要注意以下两点。"
 
-#: ../../source/faq.rst:181
+#: ../../source/faq.rst:184
 msgid ""
 "First, when optimizing a study in distributed or parallel mode, there is "
 "inherent non-determinism. Thus it is very difficult to reproduce the same"
@@ -186,7 +184,7 @@ msgstr ""
 "的优化过程本身是分布式的或者并行的，那么这个过程中存在着固有的不确定性。因此，在这种情况下我们很难复现出同样的结果。如果你想复现结果的话，我们建议用顺序执行的方式来优化你的"
 " study."
 
-#: ../../source/faq.rst:185
+#: ../../source/faq.rst:188
 msgid ""
 "Second, if your objective function behaves in a non-deterministic way "
 "(i.e., it does not return the same value even if the same parameters were"
@@ -196,11 +194,11 @@ msgid ""
 "it."
 msgstr "其次，如果你的目标函数的行为本身就是不确定的（也就是说，即使送入同样的参数，其返回值也不是唯一的），那么你就无法复现这个优化过程。要解决这个问题的话，请设置一个选项（比如随机数种子）来让你的优化目标的行为变成确定性的，前提是你用的机器学习库支持这一功能。"
 
-#: ../../source/faq.rst:190
+#: ../../source/faq.rst:193
 msgid "How are exceptions from trials handled?"
 msgstr "Trial 是如何处理抛出异常的？"
 
-#: ../../source/faq.rst:192
+#: ../../source/faq.rst:195
 msgid ""
 "Trials that raise exceptions without catching them will be treated as "
 "failures, i.e. with the :obj:`~optuna.trial.TrialState.FAIL` status."
@@ -208,7 +206,7 @@ msgstr ""
 "那些抛出异常却没有对应的捕获机制的 trial 会被视作失败的 trial, 也就是处于 "
 ":obj:`~optuna.trial.TrialState.FAIL` 状态的 trial."
 
-#: ../../source/faq.rst:194
+#: ../../source/faq.rst:197
 msgid ""
 "By default, all exceptions except :class:`~optuna.exceptions.TrialPruned`"
 " raised in objective functions are propagated to the caller of "
@@ -225,11 +223,11 @@ msgstr ""
 ":func:`~optuna.study.Study.optimize` 函数中的 ``catch`` "
 "参数来指定要捕获的异常类型。这样，此类异常就会在 study 内部被捕获，而不会继续向外层传递。"
 
-#: ../../source/faq.rst:200
+#: ../../source/faq.rst:203
 msgid "You can find the failed trials in log messages."
 msgstr "你可以在日志信息里找到失败的 trial."
 
-#: ../../source/faq.rst:207
+#: ../../source/faq.rst:210
 msgid ""
 "You can also find the failed trials by checking the trial states as "
 "follows:"
@@ -285,29 +283,29 @@ msgstr ""
 msgid "1269"
 msgstr ""
 
-#: ../../source/faq.rst:221
+#: ../../source/faq.rst:224
 msgid "The ``catch`` argument in :func:`~optuna.study.Study.optimize`."
 msgstr ""
 
-#: ../../source/faq.rst:225
+#: ../../source/faq.rst:228
 msgid "How are NaNs returned by trials handled?"
 msgstr "Trial 返回的 NaN 是如何处理的？"
 
-#: ../../source/faq.rst:227
+#: ../../source/faq.rst:230
 msgid ""
 "Trials that return :obj:`NaN` (``float('nan')``) are treated as failures,"
 " but they will not abort studies."
 msgstr "返回 :obj:`NaN` 的 trial 被视为失败的 trial, 但是它们并不会导致 study 被终止。"
 
-#: ../../source/faq.rst:229
+#: ../../source/faq.rst:232
 msgid "Trials which return :obj:`NaN` are shown as follows:"
 msgstr "这些返回  :obj:`NaN` 的 trial 在日志里长这样："
 
-#: ../../source/faq.rst:238
+#: ../../source/faq.rst:241
 msgid "What happens when I dynamically alter a search space?"
 msgstr "动态地改变搜索空间会导致怎样的结果？"
 
-#: ../../source/faq.rst:240
+#: ../../source/faq.rst:243
 msgid ""
 "Since parameters search spaces are specified in each call to the "
 "suggestion API, e.g. :func:`~optuna.trial.Trial.suggest_uniform` and "
@@ -321,17 +319,17 @@ msgstr ""
 ":func:`~optuna.trial.Trial.suggest_int`) 的时候才会被确定，因此，即使在同一个 study "
 "中，我们也可以通过在不同 trial 里对不同的参数空间进行采样来实现对搜索范围的改变。参数空间改变之后的行为是由 sampler 来决定的。"
 
-#: ../../source/faq.rst:248
+#: ../../source/faq.rst:251
 msgid ""
 "Discussion about the TPE sampler. "
 "https://github.com/optuna/optuna/issues/822"
 msgstr "关于 TPE sampler 的 讨论：https://github.com/optuna/optuna/issues/822"
 
-#: ../../source/faq.rst:252
+#: ../../source/faq.rst:255
 msgid "How can I use two GPUs for evaluating two trials simultaneously?"
 msgstr "如何在两块 GPU 上同时跑两个 trial?"
 
-#: ../../source/faq.rst:254
+#: ../../source/faq.rst:257
 msgid ""
 "If your optimization target supports GPU (CUDA) acceleration and you want"
 " to specify which GPU is used, the easiest way is to set "
@@ -340,7 +338,7 @@ msgstr ""
 "如果你的优化目标支持 GPU (CUDA) 加速，你又想指定优化所用的 GPU 的话，设置 ``CUDA_VISIBLE_DEVICES`` "
 "环境变量可能是实现这一目标最轻松的方式了："
 
-#: ../../source/faq.rst:270
+#: ../../source/faq.rst:273
 msgid ""
 "Please refer to `CUDA C Programming Guide "
 "<https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#env-"
@@ -349,11 +347,11 @@ msgstr ""
 "更多细节见 `CUDA C Programming Guide <https://docs.nvidia.com/cuda/cuda-c"
 "-programming-guide/index.html#env-vars>`_."
 
-#: ../../source/faq.rst:274
+#: ../../source/faq.rst:277
 msgid "How can I test my objective functions?"
 msgstr "如何对目标函数进行测试？"
 
-#: ../../source/faq.rst:276
+#: ../../source/faq.rst:279
 msgid ""
 "When you test objective functions, you may prefer fixed parameter values "
 "to sampled ones. In that case, you can use "
@@ -367,25 +365,27 @@ msgstr ""
 "作为目标函数的输入参数。它会从一个给定的参数字典中送入固定的参数值。比如，针对函数 :math:`x + y`, 你可以用如下方式送入两个任意的 "
 ":math:`x` 和 :math:`y`:"
 
-#: ../../source/faq.rst:291
+#: ../../source/faq.rst:295
 msgid ""
 "Using :class:`~optuna.trial.FixedTrial`, you can write unit tests as "
 "follows:"
 msgstr "如果使用 :class:`~optuna.trial.FixedTrial` 的话，你也可以用如下方式写单元测试："
 
-#: ../../source/faq.rst:305
+#: ../../source/faq.rst:309
 msgid "How do I avoid running out of memory (OOM) when optimizing studies?"
 msgstr ""
 
-#: ../../source/faq.rst:307
+#: ../../source/faq.rst:311
 msgid ""
 "If the memory footprint increases as you run more trials, try to "
 "periodically run the garbage collector. Specify ``gc_after_trial`` to "
 ":obj:`True` when calling :func:`~optuna.study.Study.optimize` or call "
 ":func:`gc.collect` inside a callback."
-msgstr ""
+msgstr "如果内存使用量随着你运行更多的 trial 而增长，请尝试定期运行垃圾回收器。"
+"可在调用 :func:`~optuna.study.Study.optimize` 时指定 ``gc_after_trial`` 为 :obj:`True` 或"
+"在回调函数中调用 :func:`gc.collect`."
 
-#: ../../source/faq.rst:323
+#: ../../source/faq.rst:328
 msgid ""
 "There is a performance trade-off for running the garbage collector, which"
 " could be non-negligible depending on how fast your objective function "
@@ -394,9 +394,12 @@ msgid ""
 " inside the objective function, except for the fact that "
 ":func:`gc.collect` is called even when errors, including "
 ":class:`~optuna.exceptions.TrialPruned` are raised."
-msgstr ""
+msgstr "运行垃圾回收器是有性能损失的，取决于你的目标函数运行的速度，这种损失可能是不能忽略的。"
+"因此，``gc_after_trial`` 在默认情况下是 :obj:`False`. 注意，上面这个例子类似于在目标函数内运行"
+"垃圾回收器，除了 :func:`gc.collect` 在出现包括 :class:`~optuna.exceptions.TrialPruned` "
+"这样的错误时也会被调用以外。"
 
-#: ../../source/faq.rst:328
+#: ../../source/faq.rst:333
 msgid ""
 ":class:`~optuna.integration.ChainerMNStudy` does currently not provide "
 "``gc_after_trial`` nor callbacks for "
@@ -404,4 +407,7 @@ msgid ""
 "class, you will have to call the garbage collector inside the objective "
 "function."
 msgstr ""
+":class:`~optuna.integration.ChainerMNStudy` 目前并不提供 "
+"``gc_after_trial`` 和用于 :func:`~optuna.integration.ChainerMNStudy.optimize` 的回调接口。"
+"在使用该类时，你只能在目标函数内部调用垃圾回收器。"
 

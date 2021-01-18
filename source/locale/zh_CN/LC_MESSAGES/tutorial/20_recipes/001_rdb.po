@@ -1,0 +1,143 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018, Optuna Contributors.
+# This file is distributed under the same license as the Optuna package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Optuna 2.4.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-01-14 18:08-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../source/tutorial/20_recipes/001_rdb.rst:6
+msgid ""
+"Click :ref:`here <sphx_glr_download_tutorial_20_recipes_001_rdb.py>`     "
+"to download the full example code"
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/001_rdb.rst:15
+msgid "Saving/Resuming Study with RDB Backend"
+msgstr "用 RDB 后端保存/恢复 Study"
+
+#: ../../source/tutorial/20_recipes/001_rdb.rst:17
+msgid ""
+"An RDB backend enables persistent experiments (i.e., to save and resume a"
+" study) as well as access to history of studies. In addition, we can run "
+"multi-node optimization tasks with this feature, which is described in "
+":ref:`distributed`."
+msgstr ""
+"RDB后端可以实现持久化实验（即保存和恢复 study）以及访问 study 的历史记录。"
+"此外，我们还可以利用这个特点来进行分布式优化。具体描述见 :ref:`distributed`.""
+
+
+#: ../../source/tutorial/20_recipes/001_rdb.rst:20
+msgid ""
+"In this section, let's try simple examples running on a local environment"
+" with SQLite DB."
+msgstr "在本部分中，我们将尝试一个在本地环境下运行SQLite DB的简单例子。"
+
+
+#: ../../source/tutorial/20_recipes/001_rdb.rst:23
+msgid ""
+"You can also utilize other RDB backends, e.g., PostgreSQL or MySQL, by "
+"setting the storage argument to the DB's URL. Please refer to "
+"`SQLAlchemy's document "
+"<https://docs.sqlalchemy.org/en/latest/core/engines.html#database-urls>`_"
+" for how to set up the URL."
+msgstr "通过设置 DB 的 storage URL 参数，你也可以使用其他的 RDB 后端，比如 PostgreSQL 或者 MySQL."
+"设置URL的方式参见 `SQLAlchemy 的文档 <https://docs.sqlalchemy.org/en/latest/core/engines.html#database-urls>`_."
+
+#: ../../source/tutorial/20_recipes/001_rdb.rst:28
+msgid "New Study"
+msgstr "新建 Study"
+
+#: ../../source/tutorial/20_recipes/001_rdb.rst:30
+msgid ""
+"We can create a persistent study by calling "
+":func:`~optuna.study.create_study` function as follows. An SQLite file "
+"``example.db`` is automatically initialized with a new study record."
+msgstr ""
+"通过调用函数 :func:`~optuna.study.create_study`，我们可以创建一个持久化的 study."
+"创建新 study 会自动初始化一个 SQLite 文件 ``example.db``."
+
+
+#: ../../source/tutorial/20_recipes/001_rdb.rst:54
+#: ../../source/tutorial/20_recipes/001_rdb.rst:83
+#: ../../source/tutorial/20_recipes/001_rdb.rst:114
+#: ../../source/tutorial/20_recipes/001_rdb.rst:145
+#: ../../source/tutorial/20_recipes/001_rdb.rst:168
+#: ../../source/tutorial/20_recipes/001_rdb.rst:202
+msgid "Out:"
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/001_rdb.rst:63
+msgid ""
+"To run a study, call :func:`~optuna.study.Study.optimize` method passing "
+"an objective function."
+msgstr "为了运行一个 study, 我们需要将目标函数传入 :func:`~optuna.study.Study.optimize` 方法并调用它。"
+
+#: ../../source/tutorial/20_recipes/001_rdb.rst:95
+msgid "Resume Study"
+msgstr "恢复 Study"
+
+#: ../../source/tutorial/20_recipes/001_rdb.rst:97
+msgid ""
+"To resume a study, instantiate a :class:`~optuna.study.Study` object "
+"passing the study name ``example-study`` and the DB URL ``sqlite"
+":///example-study.db``."
+msgstr "为了恢复 study, 首先需要初始化一个 :class:`~optuna.study.Study` 对象， 并将该study 的名字 ``example-study`` 和 DB URL参数 ``sqlite:///example.db`` 传入其中。"
+
+#: ../../source/tutorial/20_recipes/001_rdb.rst:127
+msgid "Experimental History"
+msgstr "实验历史记录"
+
+
+#: ../../source/tutorial/20_recipes/001_rdb.rst:129
+msgid ""
+"We can access histories of studies and trials via the "
+":class:`~optuna.study.Study` class. For example, we can get all trials of"
+" ``example-study`` as:"
+msgstr ""
+"我们可以通过 :class:`~optuna.study.Study` 类来获得 study 和对应 trials的历史记录。"
+"比如，下面的语句可以获取 ``example-study`` 的所有 trials."
+
+
+#: ../../source/tutorial/20_recipes/001_rdb.rst:154
+msgid ""
+"The method :func:`~optuna.study.Study.trials_dataframe` returns a pandas "
+"dataframe like:"
+msgstr ":func:`~optuna.study.Study.trials_dataframe` 方法会返回一个如下的 pandas dataframe："
+
+
+#: ../../source/tutorial/20_recipes/001_rdb.rst:183
+msgid ""
+"A :class:`~optuna.study.Study` object also provides properties such as "
+":attr:`~optuna.study.Study.trials`, "
+":attr:`~optuna.study.Study.best_value`, "
+":attr:`~optuna.study.Study.best_params` (see also :ref:`first`)."
+msgstr ":class:`~optuna.study.Study` 对象也有一些其他属性，比如 :attr:`~optuna.study.Study.trials`, :attr:`~optuna.study.Study.best_value` 和 :attr:`~optuna.study.Study.best_params` (见 :ref:`first`)."
+
+#: ../../source/tutorial/20_recipes/001_rdb.rst:217
+msgid "**Total running time of the script:** ( 0 minutes  0.460 seconds)"
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/001_rdb.rst:232
+msgid ":download:`Download Python source code: 001_rdb.py <001_rdb.py>`"
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/001_rdb.rst:238
+msgid ":download:`Download Jupyter notebook: 001_rdb.ipynb <001_rdb.ipynb>`"
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/001_rdb.rst:245
+msgid "`Gallery generated by Sphinx-Gallery <https://sphinx-gallery.github.io>`_"
+msgstr ""
+

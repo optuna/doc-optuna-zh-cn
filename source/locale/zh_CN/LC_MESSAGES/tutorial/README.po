@@ -1,12 +1,12 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2018, Optuna Contributors.
 # This file is distributed under the same license as the Optuna package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Optuna 1.4.0\n"
+"Project-Id-Version: Optuna 2.4.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-01-14 18:04-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
@@ -17,17 +17,13 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.8.0\n"
 
-#: ../../source/reference/multi_objective/index.rst:4
-msgid "optuna.multi_objective"
+#: ../../source/tutorial/README.rst:2
+msgid "Tutorial"
 msgstr ""
 
-#: ../../source/reference/multi_objective/index.rst:6
+#: ../../source/tutorial/README.rst:4
 msgid ""
-"This module is deprecated, with former functionality moved to "
-":mod:`optuna.samplers`, :mod:`optuna.study`, :mod:`optuna.trial` and "
-":mod:`optuna.visualization`."
+"If you are new to Optuna or want a general introduction, we highly "
+"recommend the below video."
 msgstr ""
-
-#~ msgid "Multi-objective"
-#~ msgstr ""
 
