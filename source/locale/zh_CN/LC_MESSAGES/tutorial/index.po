@@ -29,13 +29,13 @@ msgstr "如果你不熟悉Optuna或者需要一个一般的介绍，我们强烈
 
 #: ../../source/tutorial/index.rst:31
 msgid "Key Features"
-msgstr ""
+msgstr "关键特性"
 
 #: ../../source/tutorial/index.rst:33
 msgid ""
 "Showcases Optuna's `Key Features "
 "<https://github.com/optuna/optuna/blob/master/README.md#key-features>`_."
-msgstr ""
+msgstr "展现 Optuna 的关键特性"
 
 #: ../../source/tutorial/index.rst:46
 msgid ":ref:`sphx_glr_tutorial_10_key_features_001_first.py`"
@@ -59,11 +59,11 @@ msgstr ""
 
 #: ../../source/tutorial/index.rst:152
 msgid "Recipes"
-msgstr ""
+msgstr "用法"
 
 #: ../../source/tutorial/index.rst:154
 msgid "Showcases the recipes that might help you using Optuna with comfort."
-msgstr ""
+msgstr "展现可能对你轻松使用 Optuna 更有帮助的一些用法"
 
 #: ../../source/tutorial/index.rst:167
 msgid ":ref:`sphx_glr_tutorial_20_recipes_001_rdb.py`"

@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../source/tutorial/20_recipes/sg_execution_times.rst:7
 msgid "Computation times"
-msgstr ""
+msgstr "计算耗时"
 
 #: ../../source/tutorial/20_recipes/sg_execution_times.rst:8
 msgid "**00:00.460** total execution time for **tutorial_20_recipes** files:"

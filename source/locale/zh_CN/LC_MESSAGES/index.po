@@ -88,7 +88,7 @@ msgstr "采用了最先进的超参数采样和最有效的对无望 trial 进�
 #: ../../source/index.rst:29
 
 msgid ":doc:`Easy parallelization <tutorial/10_key_features/004_distributed>`"
-msgstr ":doc:`并行的分布式优化 <tutorial/10_key_features/004_distributed>`"
+msgstr ":doc:`易用的并行优化 <tutorial/10_key_features/004_distributed>`"
 
 #: ../../source/index.rst:31
 msgid ""

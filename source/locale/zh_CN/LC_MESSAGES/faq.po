@@ -99,9 +99,9 @@ msgid ""
 "can be saved and loaded like usual Python objects using ``pickle`` or "
 "``joblib``. For example, using ``joblib``:"
 msgstr ""
-"有两种方法可以将 study 持久化。具体采用哪种取决于你是使用内存存储 (in-memory) 还是远程数据库存储 (RDB).通过 "
-"``pickle`` 或者 ``joblib``, 采用了内存存储的 study 可以和普通的 Python 对象一样，用 ``pickle`` "
-"或者 ``joblib`` 来存储和加载。比如用 ``joblib`` 的话："
+"有两种方法可以将 study 持久化。具体采用哪种取决于你是使用内存存储 (in-memory) 还是远程数据库存储 (RDB). 通过 "
+"``pickle`` 或者 ``joblib``, 采用了内存存储的 study 可以和普通的 Python 对象一样被"
+"存储和加载。比如用 ``joblib`` 的话："
 
 #: ../../source/faq.rst:106
 msgid "And to resume the study:"
@@ -396,8 +396,8 @@ msgid ""
 ":class:`~optuna.exceptions.TrialPruned` are raised."
 msgstr "运行垃圾回收器是有性能损失的，取决于你的目标函数运行的速度，这种损失可能是不能忽略的。"
 "因此，``gc_after_trial`` 在默认情况下是 :obj:`False`. 注意，上面这个例子类似于在目标函数内运行"
-"垃圾回收器，除了 :func:`gc.collect` 在出现包括 :class:`~optuna.exceptions.TrialPruned` "
-"这样的错误时也会被调用以外。"
+"垃圾回收器，不同之处在于 :func:`gc.collect` 哪怕在出现包括 :class:`~optuna.exceptions.TrialPruned` "
+"这样的错误时也会被调用。"
 
 #: ../../source/faq.rst:333
 msgid ""

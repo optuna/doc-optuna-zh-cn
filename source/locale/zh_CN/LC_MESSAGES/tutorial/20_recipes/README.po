@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../source/tutorial/20_recipes/README.rst:4
 msgid "Recipes"
-msgstr ""
+msgstr "用法"
 
 #: ../../source/tutorial/20_recipes/README.rst:6
 msgid "Showcases the recipes that might help you using Optuna with comfort."
