@@ -85,7 +85,8 @@ msgid ""
 "removal of this feature is currently scheduled for v3.0.0, but this "
 "schedule is subject to change. See "
 "https://github.com/optuna/optuna/releases/tag/v1.4.0."
-msgstr ""
+msgstr "在 v1.4.0 中被弃用。该特性将在未来被移除。目前我们计划在 v3.0.0 中移除它，但也可能会改变。参见 "
+"https://github.com/optuna/optuna/releases/tag/v1.4.0."
 
 #: of optuna.structs.FrozenTrial:7
 msgid ""
@@ -95,11 +96,11 @@ msgstr "该类已经迁移至 :mod:`~optuna.trial`, 请改用 :class:`~optuna.tr
 
 #: of optuna.structs.FrozenTrial.distributions:1
 msgid "Dictionary that contains the distributions of :attr:`params`."
-msgstr ""
+msgstr "包含了 :attr:`params` 分布的字典。"
 
 #: of optuna.structs.FrozenTrial.duration:1
 msgid "Return the elapsed time taken to complete the trial."
-msgstr ""
+msgstr "返回完成一个 trial 所消耗的时间。"
 
 #: of optuna.structs.FrozenTrial.duration optuna.structs.FrozenTrial.last_step
 #: optuna.structs.FrozenTrial.should_prune
@@ -108,19 +109,19 @@ msgstr ""
 
 #: of optuna.structs.FrozenTrial.duration:3
 msgid "The duration."
-msgstr ""
+msgstr "消耗的时间。"
 
 #: of optuna.structs.FrozenTrial.last_step:1
 msgid "Return the maximum step of `intermediate_values` in the trial."
-msgstr ""
+msgstr "返回 trial 中 `intermediate_values` 的最大步数。"
 
 #: of optuna.structs.FrozenTrial.last_step:3
 msgid "The maximum step of intermediates."
-msgstr ""
+msgstr "`intermediate_values` 的最大步数。"
 
 #: of optuna.structs.FrozenTrial.report:1
 msgid "Interface of report function."
-msgstr ""
+msgstr "report 函数接口。"
 
 #: of optuna.structs.FrozenTrial.report:3
 msgid ""
@@ -138,7 +139,7 @@ msgstr ""
 
 #: of optuna.structs.FrozenTrial.report:9
 msgid "A value returned from the objective function."
-msgstr ""
+msgstr "目标函数返回的值。"
 
 #: of optuna.structs.FrozenTrial.report:10
 msgid ""
@@ -146,21 +147,22 @@ msgid ""
 "pruners assume that ``step`` starts at zero. For example, "
 ":class:`~optuna.pruners.MedianPruner` simply checks if ``step`` is less "
 "than ``n_warmup_steps`` as the warmup mechanism."
-msgstr ""
+msgstr "Trial 的步骤（比如，神经网络训练中的 epoch 数）。注意，pruners 假定 ``step`` "
+"从零开始计算。比如 :class:`~optuna.pruners.MedianPruner` 将仅检查 ``step`` 是否小于 ``n_warmup_steps`` 作为热身机制。"
 
 #: of optuna.structs.FrozenTrial.should_prune:1
 msgid "Suggest whether the trial should be pruned or not."
-msgstr ""
+msgstr "建议该 trial 是否应该被剪枝。"
 
 #: of optuna.structs.FrozenTrial.should_prune:3
 msgid "The suggestion is always :obj:`False` regardless of a pruning algorithm."
-msgstr ""
+msgstr "无论剪枝算法是什么，建议值永远是 :obj:`False`."
 
 #: of optuna.structs.FrozenTrial.should_prune:6
 msgid ""
 ":class:`~optuna.trial.FrozenTrial` only samples one combination of "
 "parameters."
-msgstr ""
+msgstr ":class:`~optuna.trial.FrozenTrial` 只对参数组合进行一次采样。"
 
 #: of optuna.structs.FrozenTrial.should_prune:8
 msgid ":obj:`False`."

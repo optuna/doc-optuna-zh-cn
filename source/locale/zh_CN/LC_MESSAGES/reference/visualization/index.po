@@ -107,9 +107,8 @@ msgid ""
 msgstr ""
 
 #: ../../source/reference/visualization/index.rst:29:<autosummary>:1
-#, fuzzy
 msgid "Plot the Pareto front of a study."
-msgstr "将study中的参数关系绘制成切片图。"
+msgstr "绘制 study 的帕累托前沿面。"
 
 #: ../../source/reference/visualization/index.rst:29:<autosummary>:1
 msgid ":obj:`optuna.visualization.plot_slice <optuna.visualization.plot_slice>`"

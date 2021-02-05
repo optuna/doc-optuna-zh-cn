@@ -35,7 +35,7 @@ msgstr ""
 msgid ""
 "Plot the parameter relationship as contour plot in a study with "
 "Matplotlib."
-msgstr ""
+msgstr "使用 Matplotlib 将 study 中参数关系画成等高线图。"
 
 #: ../../source/reference/visualization/matplotlib.rst:20:<autosummary>:1
 msgid ""
@@ -47,7 +47,7 @@ msgstr ""
 msgid ""
 "Plot the objective value EDF (empirical distribution function) of a study"
 " with Matplotlib."
-msgstr ""
+msgstr "使用 Matplotlib 绘制 study 中目标函数值的 EDF (经验分布函数)。"
 
 #: ../../source/reference/visualization/matplotlib.rst:20:<autosummary>:1
 msgid ""
@@ -57,7 +57,7 @@ msgstr ""
 
 #: ../../source/reference/visualization/matplotlib.rst:20:<autosummary>:1
 msgid "Plot intermediate values of all trials in a study with Matplotlib."
-msgstr ""
+msgstr "使用 Matplotlib 绘制 study 中所有 trial 的中间值。"
 
 #: ../../source/reference/visualization/matplotlib.rst:20:<autosummary>:1
 msgid ""
@@ -67,7 +67,7 @@ msgstr ""
 
 #: ../../source/reference/visualization/matplotlib.rst:20:<autosummary>:1
 msgid "Plot optimization history of all trials in a study with Matplotlib."
-msgstr ""
+msgstr "使用 Matplotlib 绘制 study 中所有 trial 的优化历史。"
 
 #: ../../source/reference/visualization/matplotlib.rst:20:<autosummary>:1
 msgid ""
@@ -79,7 +79,7 @@ msgstr ""
 msgid ""
 "Plot the high-dimentional parameter relationships in a study with "
 "Matplotlib."
-msgstr ""
+msgstr "使用 Matplotlib 绘制 study 中的高维参数关系。"
 
 #: ../../source/reference/visualization/matplotlib.rst:20:<autosummary>:1
 msgid ""
@@ -89,7 +89,7 @@ msgstr ""
 
 #: ../../source/reference/visualization/matplotlib.rst:20:<autosummary>:1
 msgid "Plot hyperparameter importances with Matplotlib."
-msgstr ""
+msgstr "使用 Matplotlib 绘制超参数重要性。"
 
 #: ../../source/reference/visualization/matplotlib.rst:20:<autosummary>:1
 msgid ""
@@ -99,7 +99,7 @@ msgstr ""
 
 #: ../../source/reference/visualization/matplotlib.rst:20:<autosummary>:1
 msgid "Plot the parameter relationship as slice plot in a study with Matplotlib."
-msgstr ""
+msgstr "使用 Matplotlib 将 study 中的参数关系绘制成切片图。"
 
 #: ../../source/reference/visualization/matplotlib.rst:20:<autosummary>:1
 msgid ""
@@ -109,5 +109,5 @@ msgstr ""
 
 #: ../../source/reference/visualization/matplotlib.rst:20:<autosummary>:1
 msgid "Returns whether visualization with Matplotlib is available or not."
-msgstr ""
+msgstr "返回 Matplotlib 可视化是否可用。"
 
