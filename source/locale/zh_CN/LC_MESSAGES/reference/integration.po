@@ -192,7 +192,7 @@ msgstr ""
 msgid ""
 "A wrapper of :class:`~optuna.study.Study` to incorporate Optuna with "
 "ChainerMN."
-msgstr "一个将 Optuna 并入 CHainerMN 的 :class:`~optuna.study.Study` wrapper."
+msgstr "一个将 Optuna 并入 ChainerMN 的 :class:`~optuna.study.Study` wrapper."
 
 #: ../../source/reference/integration.rst:59
 msgid "fast.ai"
