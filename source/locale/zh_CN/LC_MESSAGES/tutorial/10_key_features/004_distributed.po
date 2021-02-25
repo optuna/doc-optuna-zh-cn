@@ -70,7 +70,7 @@ msgid ""
 "You can create a study using ``optuna create-study`` command. "
 "Alternatively, in Python script you can use :func:`optuna.create_study`."
 msgstr "你可以通过 ``optuna create-study`` 来创建 study."
-"或者在 Python 脚本hzong通过 :func:`optuna.create_study` 也行。"
+"或者在 Python 脚本中通过 :func:`optuna.create_study` 也行。"
 
 #: ../../source/tutorial/10_key_features/004_distributed.rst:48
 msgid ""

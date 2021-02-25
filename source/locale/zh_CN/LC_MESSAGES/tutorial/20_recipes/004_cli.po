@@ -99,7 +99,7 @@ msgstr "Optuna 提供的命令行界面包括上表中的所有命令。"
 msgid ""
 "Let us assume you are not in IPython shell and writing Python script "
 "files instead. It is totally fine to write scripts like the following:"
-msgstr "如果你不使用 Ipython shell, 而是写 Python 脚本文件的话，编写像下面这样的脚本是完全可以的："
+msgstr "如果你不使用 IPython shell, 而是写 Python 脚本文件的话，编写像下面这样的脚本是完全可以的："
 
 #: ../../source/tutorial/20_recipes/004_cli.rst:58
 msgid "Out:"

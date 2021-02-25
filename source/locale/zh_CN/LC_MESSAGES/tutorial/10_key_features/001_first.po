@@ -61,11 +61,10 @@ msgid ""
 "function. This is the \"optimization.\" During the optimization, Optuna "
 "repeatedly calls and evaluates the objective function with different "
 "values of ``x``."
-msgstr "这个函数返回 :math:`(x - 2)^2` 的值。我们的目标是找到"
-"``x``的值，使``目标``的输出最小化"
-"功能。这就是 "优化" 在优化过程中，Optuna"
-"反复调用并评估目标函数，用不同的"
-"``x```的数值。"
+msgstr ""
+"该函数的返回值是 :math:`(x - 2)^2`. 我们的目标是找到一个 ``x``，使 ``objective`` 函数的输出最小。这被称为"
+" \"optimization\" (优化)。 在优化过程中，Optuna 反复调用目标函数，在不同的 ``x`` 下对其进行求值。"
+
 
 #: ../../source/tutorial/10_key_features/001_first.rst:67
 msgid ""

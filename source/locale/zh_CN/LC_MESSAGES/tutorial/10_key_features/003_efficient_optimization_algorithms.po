@@ -62,7 +62,7 @@ msgstr "Optuna 提供了下列采样算法："
 msgid ""
 "Tree-structured Parzen Estimator algorithm implemented in "
 ":class:`optuna.samplers.TPESampler`"
-msgstr ":class:`optuna.samplers.TPESampler` 实现的树形的 Parzen Estimator 算法"
+msgstr ":class:`optuna.samplers.TPESampler` 实现的 Tree-structured Parzen Estimator 算法"
 
 #: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:32
 msgid ""
@@ -152,7 +152,7 @@ msgid ""
 msgstr "在大多数例子中我们采用的 :class:`optuna.pruners.MedianPruner`, 尽管其性能基本上会被 "
 ":class:`optuna.pruners.SuccessiveHalvingPruner` 和 "
 ":class:`optuna.pruners.HyperbandPruner` 超过，就像在 `这个基准测试结果 "
-"<https://github.com/optuna/optuna/wiki/%5BUnder-Construction%5D-"
+"<https://github.com/optuna/optuna/wiki/"
 "Benchmarks-with-Kurobako>`_ 中那样."
 
 #: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:132
@@ -206,9 +206,7 @@ msgid ""
 "\"Benchmarks with Kurobako\" <https://github.com/optuna/optuna/wiki"
 "/%5BUnder-Construction%5D-Benchmarks>`_, at least for not deep learning "
 "tasks, we would say that"
-msgstr "对于非深度学习来说，根据 `optuna/optuna - wiki "
-"\"Benchmarks with Kurobako\" <https://github.com/optuna/optuna/wiki"
-"/%5BUnder-Construction%5D-Benchmarks>` 里的基准测试结果，我们推荐"
+msgstr "对于非深度学习来说，根据 `optuna/optuna - wiki \"Benchmarks with Kurobako\" <https://github.com/optuna/optuna/wiki/Benchmarks-with-Kurobako>`_ 里的基准测试结果，我们推荐"
 
 #: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:238
 msgid ""
