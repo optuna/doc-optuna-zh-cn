@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 1.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-26 14:44-0400\n"
+"POT-Creation-Date: 2021-01-14 18:04-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -47,13 +47,17 @@ msgstr "使用 :func:`optuna.trial.Trial.should_prune` 向Optuna trial报告模�
 msgid ""
 "According to the results of :func:`optuna.trial.Trial.should_prune`, "
 "pruning the current model by raising :func:`optuna.TrialPruned`, and"
-msgstr "根据 :func:`optuna.trial.Trial.should_prune` 的结果，通过抛出 :func:`optuna.TrialPruned`，对当前模型进行剪枝，并且"
+msgstr ""
+"根据 :func:`optuna.trial.Trial.should_prune` 的结果，通过抛出 "
+":func:`optuna.TrialPruned`，对当前模型进行剪枝，并且"
 
 #: ../../source/reference/integration.rst:12
 msgid ""
 "Reporting intermediate Optuna data such as the current trial number back "
 "to the framework, as done in :class:`~optuna.integration.MLflowCallback`."
-msgstr "将当前的 trial number 等中间Optuna数据汇报给框架，功能类似 :class:`~optuna.integration.MLflowCallback` 。"
+msgstr ""
+"将当前的 trial number 等中间Optuna数据汇报给框架，功能类似 "
+":class:`~optuna.integration.MLflowCallback` 。"
 
 #: ../../source/reference/integration.rst:14
 msgid ""
@@ -61,8 +65,9 @@ msgid ""
 ":class:`~optuna.integration.OptunaSearchCV` estimator is available that "
 "combines scikit-learn BaseEstimator functionality with access to a class-"
 "level ``Study`` object."
-msgstr "针对scikit-learn，我们提供了一个集成的 :class:`~optuna.integration.OptunaSearchCV` 估计器，"
-"它结合了scikit-learn BaseEstimator功能和对类级 ``Study`` 对象的访问。"
+msgstr ""
+"针对scikit-learn，我们提供了一个集成的 :class:`~optuna.integration.OptunaSearchCV` 估计器"
+"，它结合了scikit-learn BaseEstimator功能和对类级 ``Study`` 对象的访问。"
 
 #: ../../source/reference/integration.rst:17
 msgid "AllenNLP"
@@ -76,7 +81,7 @@ msgstr ""
 
 #: ../../source/reference/integration.rst:26:<autosummary>:1
 msgid "AllenNLP extension to use optuna with Jsonnet config file."
-msgstr ""
+msgstr "为了让 Jsonnet 配置文件在 Optuna 中可用的 AllenNLP 扩展。"
 
 #: ../../source/reference/integration.rst:26:<autosummary>:1
 msgid ""
@@ -88,7 +93,7 @@ msgstr ""
 msgid ""
 "Save JSON config file after updating with parameters from the best trial "
 "in the study."
-msgstr ""
+msgstr "保存 study 中最佳 trial 的参数更新到 JSON 配置文件。"
 
 #: ../../source/reference/integration.rst:26:<autosummary>:1
 msgid ""
@@ -98,279 +103,344 @@ msgstr ""
 
 #: ../../source/reference/integration.rst:26:<autosummary>:1
 msgid "AllenNLP callback to prune unpromising trials."
-msgstr ""
+msgstr "用于清除无望 trial 的 AllenNLP 回调函数。"
 
 #: ../../source/reference/integration.rst:28
+msgid "BoTorch"
+msgstr ""
+
+#: ../../source/reference/integration.rst:38:<autosummary>:1
+msgid ""
+":obj:`optuna.integration.BoTorchSampler "
+"<optuna.integration.BoTorchSampler>`"
+msgstr ""
+
+#: ../../source/reference/integration.rst:38:<autosummary>:1
+msgid ""
+"A sampler that uses BoTorch, a Bayesian optimization library built on top"
+" of PyTorch."
+msgstr "采用 BoTorch 的采样器。BoTorch 是一个建立在 PyTorch 上的贝叶斯优化库。"
+
+#: ../../source/reference/integration.rst:38:<autosummary>:1
+msgid ""
+":obj:`optuna.integration.botorch.qei_candidates_func "
+"<optuna.integration.botorch.qei_candidates_func>`"
+msgstr ""
+
+# TODO: maybe we should not translate these terminology parts
+#: ../../source/reference/integration.rst:38:<autosummary>:1
+msgid "Quasi MC-based batch Expected Improvement (qEI)."
+msgstr ""
+
+#: ../../source/reference/integration.rst:38:<autosummary>:1
+msgid ""
+":obj:`optuna.integration.botorch.qehvi_candidates_func "
+"<optuna.integration.botorch.qehvi_candidates_func>`"
+msgstr ""
+
+#: ../../source/reference/integration.rst:38:<autosummary>:1
+msgid "Quasi MC-based batch Expected Hypervolume Improvement (qEHVI)."
+msgstr ""
+
+#: ../../source/reference/integration.rst:38:<autosummary>:1
+msgid ""
+":obj:`optuna.integration.botorch.qparego_candidates_func "
+"<optuna.integration.botorch.qparego_candidates_func>`"
+msgstr ""
+
+#: ../../source/reference/integration.rst:38:<autosummary>:1
+msgid ""
+"Quasi MC-based extended ParEGO (qParEGO) for constrained multi-objective "
+"optimization."
+msgstr ""
+
+#: ../../source/reference/integration.rst:40
 msgid "Catalyst"
 msgstr ""
 
-#: ../../source/reference/integration.rst:35:<autosummary>:1
+#: ../../source/reference/integration.rst:47:<autosummary>:1
 msgid ""
 ":obj:`optuna.integration.CatalystPruningCallback "
 "<optuna.integration.CatalystPruningCallback>`"
 msgstr ""
 
-#: ../../source/reference/integration.rst:35:<autosummary>:1
+#: ../../source/reference/integration.rst:47:<autosummary>:1
 msgid "Catalyst callback to prune unpromising trials."
-msgstr ""
+msgstr "用于清除无望 trial 的 Catalyst 回调。"
 
-#: ../../source/reference/integration.rst:37
+#: ../../source/reference/integration.rst:49
 msgid "Chainer"
 msgstr ""
 
-#: ../../source/reference/integration.rst:45:<autosummary>:1
+#: ../../source/reference/integration.rst:57:<autosummary>:1
 msgid ""
 ":obj:`optuna.integration.ChainerPruningExtension "
 "<optuna.integration.ChainerPruningExtension>`"
 msgstr ""
 
-#: ../../source/reference/integration.rst:45:<autosummary>:1
+#: ../../source/reference/integration.rst:57:<autosummary>:1
 msgid "Chainer extension to prune unpromising trials."
-msgstr ""
+msgstr "用于清除无望 trial 的 Chainer 扩展。"
 
-#: ../../source/reference/integration.rst:45:<autosummary>:1
+#: ../../source/reference/integration.rst:57:<autosummary>:1
 msgid ""
 ":obj:`optuna.integration.ChainerMNStudy "
 "<optuna.integration.ChainerMNStudy>`"
 msgstr ""
 
-#: ../../source/reference/integration.rst:45:<autosummary>:1
+#: ../../source/reference/integration.rst:57:<autosummary>:1
 msgid ""
 "A wrapper of :class:`~optuna.study.Study` to incorporate Optuna with "
 "ChainerMN."
-msgstr ""
+msgstr "一个将 Optuna 并入 ChainerMN 的 :class:`~optuna.study.Study` wrapper."
 
-#: ../../source/reference/integration.rst:47
+#: ../../source/reference/integration.rst:59
 msgid "fast.ai"
 msgstr ""
 
-#: ../../source/reference/integration.rst:54:<autosummary>:1
+#: ../../source/reference/integration.rst:68:<autosummary>:1
+msgid ""
+":obj:`optuna.integration.FastAIV1PruningCallback "
+"<optuna.integration.FastAIV1PruningCallback>`"
+msgstr ""
+
+#: ../../source/reference/integration.rst:68:<autosummary>:1
+msgid "FastAI callback to prune unpromising trials for fastai."
+msgstr "用于清除 FastAI 中无望 trial 的回调函数。"
+
+#: ../../source/reference/integration.rst:68:<autosummary>:1
+msgid ""
+":obj:`optuna.integration.FastAIV2PruningCallback "
+"<optuna.integration.FastAIV2PruningCallback>`"
+msgstr ""
+
+#: ../../source/reference/integration.rst:68:<autosummary>:1
 msgid ""
 ":obj:`optuna.integration.FastAIPruningCallback "
 "<optuna.integration.FastAIPruningCallback>`"
 msgstr ""
 
-#: ../../source/reference/integration.rst:54:<autosummary>:1
-msgid "FastAI callback to prune unpromising trials for fastai."
+#: ../../source/reference/integration.rst:68:<autosummary>:1
+msgid ":class:`optuna.integration.fastaiv2.FastAIV2PruningCallback` 的别名"
 msgstr ""
 
-#: ../../source/reference/integration.rst:56
+#: ../../source/reference/integration.rst:70
 msgid "Keras"
 msgstr ""
 
-#: ../../source/reference/integration.rst:63:<autosummary>:1
+#: ../../source/reference/integration.rst:77:<autosummary>:1
 msgid ""
 ":obj:`optuna.integration.KerasPruningCallback "
 "<optuna.integration.KerasPruningCallback>`"
 msgstr ""
 
-#: ../../source/reference/integration.rst:63:<autosummary>:1
+#: ../../source/reference/integration.rst:77:<autosummary>:1
 msgid "Keras callback to prune unpromising trials."
-msgstr ""
+msgstr "用于清除无望 trial 的 Keras 回调函数。"
 
-#: ../../source/reference/integration.rst:65
+#: ../../source/reference/integration.rst:79
 msgid "LightGBM"
 msgstr ""
 
-#: ../../source/reference/integration.rst:75:<autosummary>:1
+#: ../../source/reference/integration.rst:89:<autosummary>:1
 msgid ""
 ":obj:`optuna.integration.LightGBMPruningCallback "
 "<optuna.integration.LightGBMPruningCallback>`"
 msgstr ""
 
-#: ../../source/reference/integration.rst:75:<autosummary>:1
+#: ../../source/reference/integration.rst:89:<autosummary>:1
 msgid "Callback for LightGBM to prune unpromising trials."
-msgstr ""
+msgstr "用于清除无望 trial 的 LightGBM 回调函数。"
 
-#: ../../source/reference/integration.rst:75:<autosummary>:1
+#: ../../source/reference/integration.rst:89:<autosummary>:1
 msgid ""
 ":obj:`optuna.integration.lightgbm.train "
 "<optuna.integration.lightgbm.train>`"
 msgstr ""
 
-#: ../../source/reference/integration.rst:75:<autosummary>:1
+#: ../../source/reference/integration.rst:89:<autosummary>:1
 msgid "Wrapper of LightGBM Training API to tune hyperparameters."
-msgstr ""
+msgstr "用于超参数调参的 LightGBM training API 的 wrapper."
 
-#: ../../source/reference/integration.rst:75:<autosummary>:1
+#: ../../source/reference/integration.rst:89:<autosummary>:1
 msgid ""
 ":obj:`optuna.integration.lightgbm.LightGBMTuner "
 "<optuna.integration.lightgbm.LightGBMTuner>`"
 msgstr ""
 
-#: ../../source/reference/integration.rst:75:<autosummary>:1
+#: ../../source/reference/integration.rst:89:<autosummary>:1
 msgid "Hyperparameter tuner for LightGBM."
-msgstr ""
+msgstr "用于 LightGBM 的超参数调参器。"
 
-#: ../../source/reference/integration.rst:75:<autosummary>:1
+#: ../../source/reference/integration.rst:89:<autosummary>:1
 msgid ""
 ":obj:`optuna.integration.lightgbm.LightGBMTunerCV "
 "<optuna.integration.lightgbm.LightGBMTunerCV>`"
 msgstr ""
 
-#: ../../source/reference/integration.rst:75:<autosummary>:1
+#: ../../source/reference/integration.rst:89:<autosummary>:1
 msgid "Hyperparameter tuner for LightGBM with cross-validation."
-msgstr ""
+msgstr "带有交叉验证的、用于 LightGBM 的超参数调参器。"
 
-#: ../../source/reference/integration.rst:77
+#: ../../source/reference/integration.rst:91
 msgid "MLflow"
 msgstr ""
 
-#: ../../source/reference/integration.rst:84:<autosummary>:1
+#: ../../source/reference/integration.rst:98:<autosummary>:1
 msgid ""
 ":obj:`optuna.integration.MLflowCallback "
 "<optuna.integration.MLflowCallback>`"
 msgstr ""
 
-#: ../../source/reference/integration.rst:84:<autosummary>:1
+#: ../../source/reference/integration.rst:98:<autosummary>:1
 msgid "Callback to track Optuna trials with MLflow."
-msgstr ""
+msgstr "用 MLflow 来追踪 Optuna trial 的回调函数。"
 
-#: ../../source/reference/integration.rst:86
+#: ../../source/reference/integration.rst:100
 msgid "MXNet"
 msgstr ""
 
-#: ../../source/reference/integration.rst:93:<autosummary>:1
+#: ../../source/reference/integration.rst:107:<autosummary>:1
 msgid ""
 ":obj:`optuna.integration.MXNetPruningCallback "
 "<optuna.integration.MXNetPruningCallback>`"
 msgstr ""
 
-#: ../../source/reference/integration.rst:93:<autosummary>:1
+#: ../../source/reference/integration.rst:107:<autosummary>:1
 msgid "MXNet callback to prune unpromising trials."
-msgstr ""
+msgstr "用于清除无望 trial 的 MXNet 回调函数。"
 
-#: ../../source/reference/integration.rst:95
+#: ../../source/reference/integration.rst:109
 msgid "pycma"
 msgstr ""
 
-#: ../../source/reference/integration.rst:103:<autosummary>:1
+#: ../../source/reference/integration.rst:117:<autosummary>:1
 msgid ":obj:`optuna.integration.PyCmaSampler <optuna.integration.PyCmaSampler>`"
 msgstr ""
 
-#: ../../source/reference/integration.rst:103:<autosummary>:1
+#: ../../source/reference/integration.rst:117:<autosummary>:1
 msgid "A Sampler using cma library as the backend."
-msgstr ""
+msgstr "使用 cma 库作为后端的采样器。"
 
-#: ../../source/reference/integration.rst:103:<autosummary>:1
+#: ../../source/reference/integration.rst:117:<autosummary>:1
 msgid ":obj:`optuna.integration.CmaEsSampler <optuna.integration.CmaEsSampler>`"
 msgstr ""
 
-#: ../../source/reference/integration.rst:103:<autosummary>:1
+#: ../../source/reference/integration.rst:117:<autosummary>:1
 msgid "Wrapper class of PyCmaSampler for backward compatibility."
-msgstr ""
+msgstr "用于向后兼容的 PyCmaSampler wrapper 类。"
 
-#: ../../source/reference/integration.rst:105
+#: ../../source/reference/integration.rst:119
 msgid "PyTorch"
 msgstr ""
 
-#: ../../source/reference/integration.rst:113:<autosummary>:1
+#: ../../source/reference/integration.rst:127:<autosummary>:1
 msgid ""
 ":obj:`optuna.integration.PyTorchIgnitePruningHandler "
 "<optuna.integration.PyTorchIgnitePruningHandler>`"
 msgstr ""
 
-#: ../../source/reference/integration.rst:113:<autosummary>:1
+#: ../../source/reference/integration.rst:127:<autosummary>:1
 msgid "PyTorch Ignite handler to prune unpromising trials."
-msgstr ""
+msgstr "用于清除无望 trial 的 PyTorch Ignite handler。"
 
-#: ../../source/reference/integration.rst:113:<autosummary>:1
+#: ../../source/reference/integration.rst:127:<autosummary>:1
 msgid ""
 ":obj:`optuna.integration.PyTorchLightningPruningCallback "
 "<optuna.integration.PyTorchLightningPruningCallback>`"
 msgstr ""
 
-#: ../../source/reference/integration.rst:113:<autosummary>:1
+#: ../../source/reference/integration.rst:127:<autosummary>:1
 msgid "PyTorch Lightning callback to prune unpromising trials."
-msgstr ""
+msgstr "用于清除无望 trial 的 PyTorch Lighting 回调函数。"
 
-#: ../../source/reference/integration.rst:115
+#: ../../source/reference/integration.rst:129
 msgid "scikit-learn"
 msgstr ""
 
-#: ../../source/reference/integration.rst:122:<autosummary>:1
+#: ../../source/reference/integration.rst:136:<autosummary>:1
 msgid ""
 ":obj:`optuna.integration.OptunaSearchCV "
 "<optuna.integration.OptunaSearchCV>`"
 msgstr ""
 
-#: ../../source/reference/integration.rst:122:<autosummary>:1
+#: ../../source/reference/integration.rst:136:<autosummary>:1
 msgid "Hyperparameter search with cross-validation."
-msgstr ""
+msgstr "带有交叉验证的超参数搜索。"
 
-#: ../../source/reference/integration.rst:124
+#: ../../source/reference/integration.rst:138
 msgid "scikit-optimize"
 msgstr ""
 
-#: ../../source/reference/integration.rst:131:<autosummary>:1
+#: ../../source/reference/integration.rst:145:<autosummary>:1
 msgid ":obj:`optuna.integration.SkoptSampler <optuna.integration.SkoptSampler>`"
 msgstr ""
 
-#: ../../source/reference/integration.rst:131:<autosummary>:1
+#: ../../source/reference/integration.rst:145:<autosummary>:1
 msgid "Sampler using Scikit-Optimize as the backend."
-msgstr ""
+msgstr "以  Scikit-Optimize 为后端的 sampler。"
 
-#: ../../source/reference/integration.rst:133
+#: ../../source/reference/integration.rst:147
 msgid "skorch"
 msgstr ""
 
-#: ../../source/reference/integration.rst:140:<autosummary>:1
+#: ../../source/reference/integration.rst:154:<autosummary>:1
 msgid ""
 ":obj:`optuna.integration.SkorchPruningCallback "
 "<optuna.integration.SkorchPruningCallback>`"
 msgstr ""
 
-#: ../../source/reference/integration.rst:140:<autosummary>:1
+#: ../../source/reference/integration.rst:154:<autosummary>:1
 msgid "Skorch callback to prune unpromising trials."
-msgstr ""
+msgstr "用于清除无望 trial 的 Skorch 回调函数。"
 
-#: ../../source/reference/integration.rst:142
+#: ../../source/reference/integration.rst:156
 msgid "TensorFlow"
 msgstr ""
 
-#: ../../source/reference/integration.rst:151:<autosummary>:1
+#: ../../source/reference/integration.rst:165:<autosummary>:1
 msgid ""
 ":obj:`optuna.integration.TensorBoardCallback "
 "<optuna.integration.TensorBoardCallback>`"
 msgstr ""
 
-#: ../../source/reference/integration.rst:151:<autosummary>:1
+#: ../../source/reference/integration.rst:165:<autosummary>:1
 msgid "Callback to track Optuna trials with TensorBoard."
-msgstr ""
+msgstr "使用 TensorBoard 追踪 Optuna trial 的回调函数。"
 
-#: ../../source/reference/integration.rst:151:<autosummary>:1
+#: ../../source/reference/integration.rst:165:<autosummary>:1
 msgid ""
 ":obj:`optuna.integration.TensorFlowPruningHook "
 "<optuna.integration.TensorFlowPruningHook>`"
 msgstr ""
 
-#: ../../source/reference/integration.rst:151:<autosummary>:1
+#: ../../source/reference/integration.rst:165:<autosummary>:1
 msgid "TensorFlow SessionRunHook to prune unpromising trials."
-msgstr ""
+msgstr "用于清除无望 trial 的 TensorFlow SessionRunHook 钩子函数。"
 
-#: ../../source/reference/integration.rst:151:<autosummary>:1
+#: ../../source/reference/integration.rst:165:<autosummary>:1
 msgid ""
 ":obj:`optuna.integration.TFKerasPruningCallback "
 "<optuna.integration.TFKerasPruningCallback>`"
 msgstr ""
 
-#: ../../source/reference/integration.rst:151:<autosummary>:1
+#: ../../source/reference/integration.rst:165:<autosummary>:1
 msgid "tf.keras callback to prune unpromising trials."
-msgstr ""
+msgstr "用于清除无望 trial 的 tf.keras 回调函数。"
 
-#: ../../source/reference/integration.rst:153
+#: ../../source/reference/integration.rst:167
 msgid "XGBoost"
 msgstr ""
 
-#: ../../source/reference/integration.rst:159:<autosummary>:1
+#: ../../source/reference/integration.rst:173:<autosummary>:1
 msgid ""
 ":obj:`optuna.integration.XGBoostPruningCallback "
 "<optuna.integration.XGBoostPruningCallback>`"
 msgstr ""
 
-#: ../../source/reference/integration.rst:159:<autosummary>:1
+#: ../../source/reference/integration.rst:173:<autosummary>:1
 msgid "Callback for XGBoost to prune unpromising trials."
-msgstr ""
+msgstr "用于清除无望 trial 的 XGBoost 回调函数。"
 
 #~ msgid "Parameters"
 #~ msgstr ""

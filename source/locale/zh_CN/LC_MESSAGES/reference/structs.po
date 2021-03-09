@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 1.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-29 20:38-0400\n"
+"POT-Creation-Date: 2021-01-14 18:04-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -79,13 +79,14 @@ msgid ""
 ":class:`~optuna.study.StudyDirection` instead."
 msgstr "该类已废弃，请改用 :class:`~optuna.study.StudyDirection`."
 
-#: of optuna.structs.FrozenTrial:2 optuna.structs.StudySummary:36
+#: of optuna.structs.FrozenTrial:2 optuna.structs.StudySummary:2
 msgid ""
 "Deprecated in v1.4.0. This feature will be removed in the future. The "
 "removal of this feature is currently scheduled for v3.0.0, but this "
 "schedule is subject to change. See "
 "https://github.com/optuna/optuna/releases/tag/v1.4.0."
-msgstr ""
+msgstr "在 v1.4.0 中被弃用。该特性将在未来被移除。目前我们计划在 v3.0.0 中移除它，但也可能会改变。参见 "
+"https://github.com/optuna/optuna/releases/tag/v1.4.0."
 
 #: of optuna.structs.FrozenTrial:7
 msgid ""
@@ -95,11 +96,11 @@ msgstr "该类已经迁移至 :mod:`~optuna.trial`, 请改用 :class:`~optuna.tr
 
 #: of optuna.structs.FrozenTrial.distributions:1
 msgid "Dictionary that contains the distributions of :attr:`params`."
-msgstr ""
+msgstr "包含了 :attr:`params` 分布的字典。"
 
 #: of optuna.structs.FrozenTrial.duration:1
 msgid "Return the elapsed time taken to complete the trial."
-msgstr ""
+msgstr "返回完成一个 trial 所消耗的时间。"
 
 #: of optuna.structs.FrozenTrial.duration optuna.structs.FrozenTrial.last_step
 #: optuna.structs.FrozenTrial.should_prune
@@ -108,26 +109,25 @@ msgstr ""
 
 #: of optuna.structs.FrozenTrial.duration:3
 msgid "The duration."
-msgstr ""
+msgstr "消耗的时间。"
 
 #: of optuna.structs.FrozenTrial.last_step:1
 msgid "Return the maximum step of `intermediate_values` in the trial."
-msgstr ""
+msgstr "返回 trial 中 `intermediate_values` 的最大步数。"
 
 #: of optuna.structs.FrozenTrial.last_step:3
 msgid "The maximum step of intermediates."
-msgstr ""
+msgstr "`intermediate_values` 的最大步数。"
 
 #: of optuna.structs.FrozenTrial.report:1
 msgid "Interface of report function."
-msgstr ""
+msgstr "report 函数接口。"
 
 #: of optuna.structs.FrozenTrial.report:3
-#, fuzzy
 msgid ""
 "Since :class:`~optuna.trial.FrozenTrial` is not pruned, this report "
 "function does nothing."
-msgstr "运行中的 :class:`~optuna.trial.Trial`."
+msgstr "由于 :class:`~optuna.trial.FrozenTrial` 未被剪枝，该函数将不做任何处理。"
 
 #: of optuna.structs.FrozenTrial.report:7
 msgid "Please refer to :func:`~optuna.trial.FrozenTrial.should_prune`."
@@ -139,7 +139,7 @@ msgstr ""
 
 #: of optuna.structs.FrozenTrial.report:9
 msgid "A value returned from the objective function."
-msgstr ""
+msgstr "目标函数返回的值。"
 
 #: of optuna.structs.FrozenTrial.report:10
 msgid ""
@@ -147,70 +147,28 @@ msgid ""
 "pruners assume that ``step`` starts at zero. For example, "
 ":class:`~optuna.pruners.MedianPruner` simply checks if ``step`` is less "
 "than ``n_warmup_steps`` as the warmup mechanism."
-msgstr ""
+msgstr "Trial 的步骤（比如，神经网络训练中的 epoch 数）。注意，pruners 假定 ``step`` "
+"从零开始计算。比如 :class:`~optuna.pruners.MedianPruner` 将仅检查 ``step`` 是否小于 ``n_warmup_steps`` 作为热身机制。"
 
 #: of optuna.structs.FrozenTrial.should_prune:1
 msgid "Suggest whether the trial should be pruned or not."
-msgstr ""
+msgstr "建议该 trial 是否应该被剪枝。"
 
 #: of optuna.structs.FrozenTrial.should_prune:3
 msgid "The suggestion is always :obj:`False` regardless of a pruning algorithm."
-msgstr ""
+msgstr "无论剪枝算法是什么，建议值永远是 :obj:`False`."
 
 #: of optuna.structs.FrozenTrial.should_prune:6
 msgid ""
 ":class:`~optuna.trial.FrozenTrial` only samples one combination of "
 "parameters."
-msgstr ""
+msgstr ":class:`~optuna.trial.FrozenTrial` 只对参数组合进行一次采样。"
 
 #: of optuna.structs.FrozenTrial.should_prune:8
 msgid ":obj:`False`."
 msgstr ""
 
-#: of optuna.structs.StudySummary:1
-msgid "Basic attributes and aggregated results of a :class:`~optuna.study.Study`."
-msgstr ":class:`~optuna.study.Study` 的基础属性和整合结果。"
-
-#: of optuna.structs.StudySummary:3
-msgid "See also :func:`optuna.study.get_all_study_summaries`."
-msgstr "见 :func:`optuna.study.get_all_study_summaries`."
-
 #: of optuna.structs.StudySummary:7
-msgid "Name of the :class:`~optuna.study.Study`."
-msgstr ""
-
-#: of optuna.structs.StudySummary:11
-msgid ":class:`~optuna.study.StudyDirection` of the :class:`~optuna.study.Study`."
-msgstr ""
-
-#: of optuna.structs.StudySummary:15
-msgid ""
-":class:`FrozenTrial` with best objective value in the "
-":class:`~optuna.study.Study`."
-msgstr "一个 :class:`~optuna.study.Study` 中有着最佳目标函数值的 :class:`FrozenTrial` ."
-
-#: of optuna.structs.StudySummary:19
-msgid ""
-"Dictionary that contains the attributes of the "
-":class:`~optuna.study.Study` set with "
-":func:`optuna.study.Study.set_user_attr`."
-msgstr ""
-
-#: of optuna.structs.StudySummary:24
-msgid ""
-"Dictionary that contains the attributes of the "
-":class:`~optuna.study.Study` internally set by Optuna."
-msgstr "该字典包含了一个 :class:`~optuna.study.Study` 中所有由 optuna 内部设置的属性。"
-
-#: of optuna.structs.StudySummary:29
-msgid "The number of trials ran in the :class:`~optuna.study.Study`."
-msgstr "一个 :class:`~optuna.study.Study` trials 的数量。"
-
-#: of optuna.structs.StudySummary:33
-msgid "Datetime where the :class:`~optuna.study.Study` started."
-msgstr ":class:`~optuna.study.Study` 的开始时间。"
-
-#: of optuna.structs.StudySummary:41
 msgid ""
 "This class was moved to :mod:`~optuna.study`. Please use "
 ":class:`~optuna.study.StudySummary` instead."
@@ -289,4 +247,43 @@ msgstr "该类已经迁移到 :mod:`~optuna.study`, 请改用 :class:`~optuna.st
 
 #~ msgid "Parameters"
 #~ msgstr ""
+
+#~ msgid ""
+#~ "Basic attributes and aggregated results "
+#~ "of a :class:`~optuna.study.Study`."
+#~ msgstr ":class:`~optuna.study.Study` 的基础属性和整合结果。"
+
+#~ msgid "See also :func:`optuna.study.get_all_study_summaries`."
+#~ msgstr "见 :func:`optuna.study.get_all_study_summaries`."
+
+#~ msgid "Name of the :class:`~optuna.study.Study`."
+#~ msgstr ""
+
+#~ msgid ""
+#~ ":class:`~optuna.study.StudyDirection` of the "
+#~ ":class:`~optuna.study.Study`."
+#~ msgstr ""
+
+#~ msgid ""
+#~ ":class:`FrozenTrial` with best objective value"
+#~ " in the :class:`~optuna.study.Study`."
+#~ msgstr "一个 :class:`~optuna.study.Study` 中有着最佳目标函数值的 :class:`FrozenTrial` ."
+
+#~ msgid ""
+#~ "Dictionary that contains the attributes "
+#~ "of the :class:`~optuna.study.Study` set with"
+#~ " :func:`optuna.study.Study.set_user_attr`."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Dictionary that contains the attributes "
+#~ "of the :class:`~optuna.study.Study` internally "
+#~ "set by Optuna."
+#~ msgstr "该字典包含了一个 :class:`~optuna.study.Study` 中所有由 optuna 内部设置的属性。"
+
+#~ msgid "The number of trials ran in the :class:`~optuna.study.Study`."
+#~ msgstr "一个 :class:`~optuna.study.Study` trials 的数量。"
+
+#~ msgid "Datetime where the :class:`~optuna.study.Study` started."
+#~ msgstr ":class:`~optuna.study.Study` 的开始时间。"
 

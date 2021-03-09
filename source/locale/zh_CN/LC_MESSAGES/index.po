@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 1.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-26 12:27-0400\n"
+"POT-Creation-Date: 2021-01-14 18:04-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -51,8 +51,8 @@ msgstr "Optuna 有如下现代化的功能："
 #: ../../source/index.rst:17
 msgid ""
 ":doc:`Lightweight, versatile, and platform agnostic architecture "
-"<tutorial/001_first>`"
-msgstr ":doc:`轻量级、多功能和跨平台架构 <tutorial/001_first>`"
+"<tutorial/10_key_features/001_first>`"
+msgstr ":doc:`轻量级、多功能和跨平台架构 <tutorial/10_key_features/001_first>`"
 
 #: ../../source/index.rst:19
 msgid ""
@@ -61,8 +61,11 @@ msgid ""
 msgstr "只需少量依赖，简单安装完成后便可处理各种任务。"
 
 #: ../../source/index.rst:21
-msgid ":doc:`Pythonic search spaces <tutorial/002_configurations>`"
-msgstr ":doc:`Python 式的搜索空间 <tutorial/002_configurations>`"
+
+msgid ""
+":doc:`Pythonic search spaces "
+"<tutorial/10_key_features/002_configurations>`"
+msgstr ":doc:`Python 式的搜索空间 <tutorial/10_key_features/002_configurations>`"
 
 #: ../../source/index.rst:23
 msgid ""
@@ -71,8 +74,10 @@ msgid ""
 msgstr "利用熟悉的python 语法，如 条件语句和循环来定义搜索空间。"
 
 #: ../../source/index.rst:25
-msgid ":doc:`Efficient optimization algorithms <tutorial/007_pruning>`"
-msgstr ":doc:`高效的优化算法 <tutorial/007_pruning>`"
+msgid ""
+":doc:`Efficient optimization algorithms "
+"<tutorial/10_key_features/003_efficient_optimization_algorithms>`"
+msgstr ":doc:`高效的优化算法 <tutorial/10_key_features/003_efficient_optimization_algorithms>`"
 
 #: ../../source/index.rst:27
 msgid ""
@@ -81,8 +86,9 @@ msgid ""
 msgstr "采用了最先进的超参数采样和最有效的对无望 trial 进行剪枝的算法。"
 
 #: ../../source/index.rst:29
-msgid ":doc:`Easy parallelization <tutorial/004_distributed>`"
-msgstr ":doc:`并行的分布式优化 <tutorial/004_distributed>`"
+
+msgid ":doc:`Easy parallelization <tutorial/10_key_features/004_distributed>`"
+msgstr ":doc:`易用的并行优化 <tutorial/10_key_features/004_distributed>`"
 
 #: ../../source/index.rst:31
 msgid ""
@@ -91,8 +97,8 @@ msgid ""
 msgstr "仅需少量甚至无需代码修改便可将 study 分布到数十甚至数百个 worker。"
 
 #: ../../source/index.rst:33
-msgid ":doc:`Quick visualization <reference/visualization/index>`"
-msgstr ":doc:`便捷的可视化 <reference/visualization/index>`"
+msgid ":doc:`Quick visualization <tutorial/10_key_features/005_visualization>`"
+msgstr ":doc:`便捷的可视化 <tutorial/10_key_features/005_visualization>`"
 
 #: ../../source/index.rst:35
 msgid "Inspect optimization histories from a variety of plotting functions."

@@ -28,9 +28,9 @@ msgid ""
 msgstr ""
 
 #: ../../source/reference/multi_objective/samplers.rst:13:<autosummary>:1
-#, fuzzy
+
 msgid "Base class for multi-objective samplers."
-msgstr "multi-objective sampler 类"
+msgstr "multi-objective sampler 基类。"
 
 #: ../../source/reference/multi_objective/samplers.rst:13:<autosummary>:1
 msgid ""
@@ -40,7 +40,7 @@ msgstr ""
 
 #: ../../source/reference/multi_objective/samplers.rst:13:<autosummary>:1
 msgid "Multi-objective sampler using the NSGA-II algorithm."
-msgstr ""
+msgstr "使用 NSGA-II 算法的 Multi-objective sampler。"
 
 #: ../../source/reference/multi_objective/samplers.rst:13:<autosummary>:1
 msgid ""
