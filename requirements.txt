@@ -1,5 +1,6 @@
 optuna==2.4.0
 sphinx==3.0.4
+sphinx-plotly-directive
 sphinx-rtd-theme==0.5.0
 sphinxcontrib-applehelp==1.0.2
 sphinxcontrib-devhelp==1.0.2
