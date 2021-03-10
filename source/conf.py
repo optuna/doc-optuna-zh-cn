@@ -54,6 +54,7 @@ extensions = [
     'cliff.sphinxext',
     'sphinx_gallery.gen_gallery',
     'matplotlib.sphinxext.plot_directive',
+    "sphinx_plotly_directive",
 ]
 
 # Add any paths that contain templates here, relative to this directory.
