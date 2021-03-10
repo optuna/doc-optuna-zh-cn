@@ -1,0 +1,90 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018, Optuna Contributors.
+# This file is distributed under the same license as the Optuna package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Optuna 2.4.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-01-14 18:04-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../source/reference/generated/optuna.integration.botorch.qei_candidates_func.rst:2
+msgid "optuna.integration.botorch.qei\\_candidates\\_func"
+msgstr ""
+
+#: of optuna.integration.botorch.qei_candidates_func:1
+msgid "Quasi MC-based batch Expected Improvement (qEI)."
+msgstr ""
+
+#: of optuna.integration.botorch.qei_candidates_func:3
+msgid ""
+"The default value of ``candidates_func`` in "
+":class:`~optuna.integration.BoTorchSampler` with single-objective "
+"optimization."
+msgstr ""
+
+#: of optuna.integration.botorch.qei_candidates_func
+msgid "参数"
+msgstr ""
+
+#: of optuna.integration.botorch.qei_candidates_func:6
+msgid ""
+"Previous parameter configurations. A ``torch.Tensor`` of shape "
+"``(n_trials, n_params)``. ``n_trials`` is the number of already observed "
+"trials and ``n_params`` is the number of parameters. ``n_params`` may be "
+"larger than the actual number of parameters if categorical parameters are"
+" included in the search space, since these parameters are one-hot "
+"encoded. Values are not normalized."
+msgstr ""
+
+#: of optuna.integration.botorch.qei_candidates_func:12
+msgid ""
+"Previously observed objectives. A ``torch.Tensor`` of shape ``(n_trials, "
+"n_objectives)``. ``n_trials`` is identical to that of ``train_x``. "
+"``n_objectives`` is the number of objectives. Observations are not "
+"normalized."
+msgstr ""
+
+#: of optuna.integration.botorch.qei_candidates_func:15
+msgid ""
+"Objective constraints. A ``torch.Tensor`` of shape ``(n_trials, "
+"n_constraints)``. ``n_trials`` is identical to that of ``train_x``. "
+"``n_constraints`` is the number of constraints. A constraint is violated "
+"if strictly larger than 0. If no constraints are involved in the "
+"optimization, this argument will be :obj:`None`."
+msgstr ""
+
+#: of optuna.integration.botorch.qei_candidates_func:19
+msgid ""
+"Search space bounds. A ``torch.Tensor`` of shape ``(n_params, 2)``. "
+"``n_params`` is identical to that of ``train_x``. The first and the "
+"second column correspond to the lower and upper bounds for each parameter"
+" respectively."
+msgstr ""
+
+#: of optuna.integration.botorch.qei_candidates_func
+msgid "返回"
+msgstr ""
+
+#: of optuna.integration.botorch.qei_candidates_func:23
+msgid ""
+"Next set of candidates. Usually the return value of BoTorch's "
+"``optimize_acqf``."
+msgstr ""
+
+#: of optuna.integration.botorch.qei_candidates_func:26
+msgid ""
+"Added in v2.4.0 as an experimental feature. The interface may change in "
+"newer versions without prior notice. See "
+"https://github.com/optuna/optuna/releases/tag/v2.4.0."
+msgstr ""
+

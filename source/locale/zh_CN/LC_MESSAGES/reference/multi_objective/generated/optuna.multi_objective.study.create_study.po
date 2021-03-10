@@ -1,0 +1,112 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018, Optuna Contributors.
+# This file is distributed under the same license as the Optuna package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Optuna 2.4.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-01-14 18:04-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../source/reference/multi_objective/generated/optuna.multi_objective.study.create_study.rst:2
+msgid "optuna.multi\\_objective.study.create\\_study"
+msgstr ""
+
+#: of optuna.multi_objective.study.create_study:1
+msgid "Create a new :class:`~optuna.multi_objective.study.MultiObjectiveStudy`."
+msgstr ""
+
+#: of optuna.multi_objective.study.create_study:4
+msgid "示例"
+msgstr ""
+
+#: of optuna.multi_objective.study.create_study
+msgid "参数"
+msgstr ""
+
+#: of optuna.multi_objective.study.create_study:23
+msgid ""
+"Optimization direction for each objective value. Set ``minimize`` for "
+"minimization and ``maximize`` for maximization."
+msgstr ""
+
+#: of optuna.multi_objective.study.create_study:25
+msgid ""
+"Study's name. If this argument is set to None, a unique name is generated"
+" automatically."
+msgstr ""
+
+#: of optuna.multi_objective.study.create_study:27
+msgid ""
+"Database URL. If this argument is set to None, in-memory storage is used,"
+" and the :class:`~optuna.study.Study` will not be persistent.  .. note::"
+"     When a database URL is passed, Optuna internally uses `SQLAlchemy`_ "
+"to handle     the database. Please refer to `SQLAlchemy's document`_ for "
+"further details.     If you want to specify non-default options to "
+"`SQLAlchemy Engine`_, you can     instantiate "
+":class:`~optuna.storages.RDBStorage` with your desired options and     "
+"pass it to the ``storage`` argument instead of a URL.   .. _SQLAlchemy: "
+"https://www.sqlalchemy.org/  .. _SQLAlchemy's document:      "
+"https://docs.sqlalchemy.org/en/latest/core/engines.html#database-urls  .."
+" _SQLAlchemy Engine: "
+"https://docs.sqlalchemy.org/en/latest/core/engines.html"
+msgstr ""
+
+#: of optuna.multi_objective.study.create_study:27
+msgid ""
+"Database URL. If this argument is set to None, in-memory storage is used,"
+" and the :class:`~optuna.study.Study` will not be persistent."
+msgstr ""
+
+#: of optuna.multi_objective.study.create_study:31
+msgid ""
+"When a database URL is passed, Optuna internally uses `SQLAlchemy`_ to "
+"handle the database. Please refer to `SQLAlchemy's document`_ for further"
+" details. If you want to specify non-default options to `SQLAlchemy "
+"Engine`_, you can instantiate :class:`~optuna.storages.RDBStorage` with "
+"your desired options and pass it to the ``storage`` argument instead of a"
+" URL."
+msgstr ""
+
+#: of optuna.multi_objective.study.create_study:41
+msgid ""
+"A sampler object that implements background algorithm for value "
+"suggestion. If :obj:`None` is specified, "
+":class:`~optuna.multi_objective.samplers.NSGAIIMultiObjectiveSampler` is "
+"used as the default. See also :class:`~optuna.multi_objective.samplers`."
+msgstr ""
+
+#: of optuna.multi_objective.study.create_study:45
+msgid ""
+"Flag to control the behavior to handle a conflict of study names. In the "
+"case where a study named ``study_name`` already exists in the "
+"``storage``, a :class:`~optuna.exceptions.DuplicatedStudyError` is raised"
+" if ``load_if_exists`` is set to :obj:`False`. Otherwise, the creation of"
+" the study is skipped, and the existing one is returned."
+msgstr ""
+
+#: of optuna.multi_objective.study.create_study
+msgid "返回"
+msgstr ""
+
+#: of optuna.multi_objective.study.create_study:51
+msgid "A :class:`~optuna.multi_objective.study.MultiObjectiveStudy` object."
+msgstr ""
+
+#: of optuna.multi_objective.study.create_study:54
+msgid ""
+"Deprecated in v2.4.0. This feature will be removed in the future. The "
+"removal of this feature is currently scheduled for v4.0.0, but this "
+"schedule is subject to change. See "
+"https://github.com/optuna/optuna/releases/tag/v2.4.0."
+msgstr ""
+

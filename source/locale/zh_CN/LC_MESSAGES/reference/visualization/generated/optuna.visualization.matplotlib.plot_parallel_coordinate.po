@@ -1,0 +1,109 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018, Optuna Contributors.
+# This file is distributed under the same license as the Optuna package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Optuna 2.4.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-01-14 18:04-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../source/reference/visualization/generated/optuna.visualization.matplotlib.plot_parallel_coordinate.rst:2
+msgid "optuna.visualization.matplotlib.plot\\_parallel\\_coordinate"
+msgstr ""
+
+#: of optuna.visualization.matplotlib.plot_parallel_coordinate:1
+msgid ""
+"Plot the high-dimentional parameter relationships in a study with "
+"Matplotlib."
+msgstr ""
+
+#: of optuna.visualization.matplotlib.plot_parallel_coordinate:4
+msgid ""
+"Please refer to :func:`optuna.visualization.plot_parallel_coordinate` for"
+" an example."
+msgstr ""
+
+#: of optuna.visualization.matplotlib.plot_parallel_coordinate:7
+msgid "示例"
+msgstr ""
+
+#: of optuna.visualization.matplotlib.plot_parallel_coordinate:8
+msgid ""
+"The following code snippet shows how to plot the high-dimentional "
+"parameter relationships."
+msgstr ""
+
+#: of optuna.visualization.matplotlib.plot_parallel_coordinate
+msgid "参数"
+msgstr ""
+
+#: of optuna.visualization.matplotlib.plot_parallel_coordinate:26
+msgid ""
+"A :class:`~optuna.study.Study` object whose trials are plotted for their "
+"target values."
+msgstr ""
+
+#: of optuna.visualization.matplotlib.plot_parallel_coordinate:27
+msgid "Parameter list to visualize. The default is all parameters."
+msgstr ""
+
+#: of optuna.visualization.matplotlib.plot_parallel_coordinate:28
+msgid ""
+"A function to specify the value to display. If it is :obj:`None` and "
+"``study`` is being used for single-objective optimization, the objective "
+"values are plotted.  .. note::     Specify this argument if ``study`` is "
+"being used for multi-objective optimization."
+msgstr ""
+
+#: of optuna.visualization.matplotlib.plot_parallel_coordinate:28
+msgid ""
+"A function to specify the value to display. If it is :obj:`None` and "
+"``study`` is being used for single-objective optimization, the objective "
+"values are plotted."
+msgstr ""
+
+#: of optuna.visualization.matplotlib.plot_parallel_coordinate:32
+msgid ""
+"Specify this argument if ``study`` is being used for multi-objective "
+"optimization."
+msgstr ""
+
+#: of optuna.visualization.matplotlib.plot_parallel_coordinate:33
+msgid "Target's name to display on the axis label and the legend."
+msgstr ""
+
+#: of optuna.visualization.matplotlib.plot_parallel_coordinate
+msgid "返回"
+msgstr ""
+
+#: of optuna.visualization.matplotlib.plot_parallel_coordinate:35
+msgid "A :class:`matplotlib.axes.Axes` object."
+msgstr ""
+
+#: of optuna.visualization.matplotlib.plot_parallel_coordinate
+msgid "引发"
+msgstr ""
+
+#: of optuna.visualization.matplotlib.plot_parallel_coordinate:37
+msgid ""
+"If ``target`` is :obj:`None` and ``study`` is being used for multi-"
+"objective     optimization."
+msgstr ""
+
+#: of optuna.visualization.matplotlib.plot_parallel_coordinate:40
+msgid ""
+"Added in v2.2.0 as an experimental feature. The interface may change in "
+"newer versions without prior notice. See "
+"https://github.com/optuna/optuna/releases/tag/v2.2.0."
+msgstr ""
+
