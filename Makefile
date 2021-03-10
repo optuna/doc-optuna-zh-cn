@@ -26,3 +26,4 @@ clean:
 	rm -rf source/reference/multi_objective/generated/
 	rm -rf source/reference/visualization/generated/
 	rm -rf source/tutorial/
+	rm -f tutorial/**/*.db
