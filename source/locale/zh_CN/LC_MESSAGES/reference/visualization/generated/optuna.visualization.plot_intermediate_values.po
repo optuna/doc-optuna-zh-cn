@@ -1,0 +1,61 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018, Optuna Contributors.
+# This file is distributed under the same license as the Optuna package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Optuna 2.4.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-03-10 02:25-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../source/reference/visualization/generated/optuna.visualization.plot_intermediate_values.rst:2
+msgid "optuna.visualization.plot\\_intermediate\\_values"
+msgstr ""
+
+#: of optuna.visualization.plot_intermediate_values:1
+msgid "Plot intermediate values of all trials in a study."
+msgstr ""
+
+#: of optuna.visualization.plot_intermediate_values:4
+msgid "示例"
+msgstr ""
+
+#: of optuna.visualization.plot_intermediate_values:5
+msgid "The following code snippet shows how to plot intermediate values."
+msgstr ""
+
+#: ../../source/reference/visualization/generated/optuna.visualization.plot_intermediate_values.rst:8
+msgid ""
+"(`Source code <../../../reference/visualization/generated/optuna-"
+"visualization-plot_intermediate_values-1.py>`__, `html "
+"<../../../reference/visualization/generated/optuna-visualization-"
+"plot_intermediate_values-1.html>`__)"
+msgstr ""
+
+#: of optuna.visualization.plot_intermediate_values
+msgid "参数"
+msgstr ""
+
+#: of optuna.visualization.plot_intermediate_values:43
+msgid ""
+"A :class:`~optuna.study.Study` object whose trials are plotted for their "
+"intermediate values."
+msgstr ""
+
+#: of optuna.visualization.plot_intermediate_values
+msgid "返回"
+msgstr ""
+
+#: of optuna.visualization.plot_intermediate_values:46
+msgid "A :class:`plotly.graph_objs.Figure` object."
+msgstr ""
+

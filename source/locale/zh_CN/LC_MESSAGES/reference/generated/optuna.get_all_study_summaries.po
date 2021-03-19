@@ -1,0 +1,57 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018, Optuna Contributors.
+# This file is distributed under the same license as the Optuna package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Optuna 2.4.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-01-14 18:04-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../source/reference/generated/optuna.get_all_study_summaries.rst:2
+msgid "optuna.get\\_all\\_study\\_summaries"
+msgstr ""
+
+#: of optuna.get_all_study_summaries:1
+msgid "Get all history of studies stored in a specified storage."
+msgstr ""
+
+#: of optuna.get_all_study_summaries:4
+msgid "示例"
+msgstr ""
+
+#: of optuna.get_all_study_summaries
+msgid "参数"
+msgstr ""
+
+#: of optuna.get_all_study_summaries:35
+msgid ""
+"Database URL such as ``sqlite:///example.db``. Please see also the "
+"documentation of :func:`~optuna.study.create_study` for further details."
+msgstr ""
+
+#: of optuna.get_all_study_summaries
+msgid "返回"
+msgstr ""
+
+#: of optuna.get_all_study_summaries:38
+msgid ""
+"List of study history summarized as :class:`~optuna.study.StudySummary` "
+"objects."
+msgstr ""
+
+#: of optuna.get_all_study_summaries:42
+msgid ""
+":func:`optuna.get_all_study_summaries` is an alias of "
+":func:`optuna.study.get_all_study_summaries`."
+msgstr ""
+

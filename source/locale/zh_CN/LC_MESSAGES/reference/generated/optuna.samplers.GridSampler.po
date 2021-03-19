@@ -1,0 +1,265 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018, Optuna Contributors.
+# This file is distributed under the same license as the Optuna package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Optuna 2.4.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-01-14 18:04-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../source/reference/generated/optuna.samplers.GridSampler.rst:2
+msgid "optuna.samplers.GridSampler"
+msgstr ""
+
+#: of optuna.samplers.GridSampler:1
+msgid "Sampler using grid search."
+msgstr ""
+
+#: of optuna.samplers.GridSampler:3
+msgid ""
+"With :class:`~optuna.samplers.GridSampler`, the trials suggest all "
+"combinations of parameters in the given search space during the study."
+msgstr ""
+
+#: of optuna.samplers.GridSampler:7
+msgid "示例"
+msgstr ""
+
+#: of optuna.samplers.GridSampler:25
+msgid ""
+":class:`~optuna.samplers.GridSampler` automatically stops the "
+"optimization if all combinations in the passed ``search_space`` have "
+"already been evaluated, internally invoking the "
+":func:`~optuna.study.Study.stop` method."
+msgstr ""
+
+#: of optuna.samplers.GridSampler:31
+msgid ""
+":class:`~optuna.samplers.GridSampler` does not take care of a parameter's"
+" quantization specified by discrete suggest methods but just samples one "
+"of values specified in the search space. E.g., in the following code "
+"snippet, either of ``-0.5`` or ``0.5`` is sampled as ``x`` instead of an "
+"integer point."
+msgstr ""
+
+#: of optuna.samplers.GridSampler:54
+msgid ""
+"A parameter configuration in the grid is not considered finished until "
+"its trial is finished. Therefore, during distributed optimization where "
+"trials run concurrently, different workers will occasionally suggest the "
+"same parameter configuration. The total number of actual trials may "
+"therefore exceed the size of the grid."
+msgstr ""
+
+#: of optuna.samplers.GridSampler:61
+msgid ""
+"The grid is randomly shuffled and the order in which parameter "
+"configurations are suggested may vary. This is to reduce duplicate "
+"suggestions during distributed optimization."
+msgstr ""
+
+#: of optuna.samplers.GridSampler optuna.samplers.GridSampler.after_trial
+#: optuna.samplers.GridSampler.infer_relative_search_space
+#: optuna.samplers.GridSampler.sample_independent
+#: optuna.samplers.GridSampler.sample_relative
+msgid "参数"
+msgstr ""
+
+#: of optuna.samplers.GridSampler:65
+msgid ""
+"A dictionary whose key and value are a parameter name and the "
+"corresponding candidates of values, respectively."
+msgstr ""
+
+#: ../../source/reference/generated/optuna.samplers.GridSampler.rst:12
+msgid "Methods"
+msgstr ""
+
+#: of optuna.samplers.GridSampler.after_trial:1:<autosummary>:1
+msgid ""
+":obj:`after_trial <optuna.samplers.GridSampler.after_trial>`\\ "
+"\\(study\\, trial\\, state\\, values\\)"
+msgstr ""
+
+#: of optuna.samplers.GridSampler.after_trial:1
+#: optuna.samplers.GridSampler.after_trial:1:<autosummary>:1
+msgid "Trial post-processing."
+msgstr ""
+
+#: of optuna.samplers.GridSampler.after_trial:1:<autosummary>:1
+msgid ""
+":obj:`infer_relative_search_space "
+"<optuna.samplers.GridSampler.infer_relative_search_space>`\\ \\(study\\, "
+"trial\\)"
+msgstr ""
+
+#: of optuna.samplers.GridSampler.after_trial:1:<autosummary>:1
+#: optuna.samplers.GridSampler.infer_relative_search_space:1
+msgid ""
+"Infer the search space that will be used by relative sampling in the "
+"target trial."
+msgstr ""
+
+#: of optuna.samplers.GridSampler.after_trial:1:<autosummary>:1
+msgid ":obj:`reseed_rng <optuna.samplers.GridSampler.reseed_rng>`\\ \\(\\)"
+msgstr ""
+
+#: of optuna.samplers.GridSampler.after_trial:1:<autosummary>:1
+#: optuna.samplers.GridSampler.reseed_rng:1
+msgid "Reseed sampler's random number generator."
+msgstr ""
+
+#: of optuna.samplers.GridSampler.after_trial:1:<autosummary>:1
+msgid ""
+":obj:`sample_independent "
+"<optuna.samplers.GridSampler.sample_independent>`\\ \\(study\\, trial\\, "
+"param\\_name\\, ...\\)"
+msgstr ""
+
+#: of optuna.samplers.GridSampler.after_trial:1:<autosummary>:1
+#: optuna.samplers.GridSampler.sample_independent:1
+msgid "Sample a parameter for a given distribution."
+msgstr ""
+
+#: of optuna.samplers.GridSampler.after_trial:1:<autosummary>:1
+msgid ""
+":obj:`sample_relative <optuna.samplers.GridSampler.sample_relative>`\\ "
+"\\(study\\, trial\\, search\\_space\\)"
+msgstr ""
+
+#: of optuna.samplers.GridSampler.after_trial:1:<autosummary>:1
+#: optuna.samplers.GridSampler.sample_relative:1
+msgid "Sample parameters in a given search space."
+msgstr ""
+
+#: of optuna.samplers.GridSampler.after_trial:3
+msgid ""
+"This method is called after the objective function returns and right "
+"before the trials is finished and its state is stored."
+msgstr ""
+
+#: of optuna.samplers.GridSampler.after_trial:7
+msgid ""
+"Added in v2.4.0 as an experimental feature. The interface may change in "
+"newer versions without prior notice. See "
+"https://github.com/optuna/optuna/releases/tag/v2.4.0."
+msgstr ""
+
+#: of optuna.samplers.GridSampler.after_trial:10
+#: optuna.samplers.GridSampler.infer_relative_search_space:8
+#: optuna.samplers.GridSampler.sample_independent:13
+#: optuna.samplers.GridSampler.sample_relative:12
+msgid "Target study object."
+msgstr ""
+
+#: of optuna.samplers.GridSampler.after_trial:11
+#: optuna.samplers.GridSampler.infer_relative_search_space:9
+#: optuna.samplers.GridSampler.sample_independent:14
+#: optuna.samplers.GridSampler.sample_relative:13
+msgid "Target trial object. Take a copy before modifying this object."
+msgstr ""
+
+#: of optuna.samplers.GridSampler.after_trial:13
+msgid "Resulting trial state."
+msgstr ""
+
+#: of optuna.samplers.GridSampler.after_trial:14
+msgid ""
+"Resulting trial values. Guaranteed to not be :obj:`None` if trial "
+"succeeded."
+msgstr ""
+
+#: of optuna.samplers.GridSampler.infer_relative_search_space:3
+msgid ""
+"This method is called right before "
+":func:`~optuna.samplers.BaseSampler.sample_relative` method, and the "
+"search space returned by this method is pass to it. The parameters not "
+"contained in the search space will be sampled by using "
+":func:`~optuna.samplers.BaseSampler.sample_independent` method."
+msgstr ""
+
+#: of optuna.samplers.GridSampler.infer_relative_search_space
+#: optuna.samplers.GridSampler.sample_independent
+#: optuna.samplers.GridSampler.sample_relative
+msgid "返回"
+msgstr ""
+
+#: of optuna.samplers.GridSampler.infer_relative_search_space:12
+msgid "A dictionary containing the parameter names and parameter's distributions."
+msgstr ""
+
+#: of optuna.samplers.GridSampler.infer_relative_search_space:15
+msgid ""
+"Please refer to :func:`~optuna.samplers.intersection_search_space` as an "
+"implementation of "
+":func:`~optuna.samplers.BaseSampler.infer_relative_search_space`."
+msgstr ""
+
+#: of optuna.samplers.GridSampler.reseed_rng:3
+msgid ""
+"This method is called by the :class:`~optuna.study.Study` instance if "
+"trials are executed in parallel with the option ``n_jobs>1``. In that "
+"case, the sampler instance will be replicated including the state of the "
+"random number generator, and they may suggest the same values. To prevent"
+" this issue, this method assigns a different seed to each random number "
+"generator."
+msgstr ""
+
+#: of optuna.samplers.GridSampler.sample_independent:3
+msgid ""
+"This method is called only for the parameters not contained in the search"
+" space returned by :func:`~optuna.samplers.BaseSampler.sample_relative` "
+"method. This method is suitable for sampling algorithms that do not use "
+"relationship between parameters such as random sampling and TPE."
+msgstr ""
+
+#: of optuna.samplers.GridSampler.sample_independent:9
+#: optuna.samplers.GridSampler.sample_relative:8
+msgid ""
+"The failed trials are ignored by any build-in samplers when they sample "
+"new parameters. Thus, failed trials are regarded as deleted in the "
+"samplers' perspective."
+msgstr ""
+
+#: of optuna.samplers.GridSampler.sample_independent:16
+msgid "Name of the sampled parameter."
+msgstr ""
+
+#: of optuna.samplers.GridSampler.sample_independent:17
+msgid ""
+"Distribution object that specifies a prior and/or scale of the sampling "
+"algorithm."
+msgstr ""
+
+#: of optuna.samplers.GridSampler.sample_independent:19
+msgid "A parameter value."
+msgstr ""
+
+#: of optuna.samplers.GridSampler.sample_relative:3
+msgid ""
+"This method is called once at the beginning of each trial, i.e., right "
+"before the evaluation of the objective function. This method is suitable "
+"for sampling algorithms that use relationship between parameters such as "
+"Gaussian Process and CMA-ES."
+msgstr ""
+
+#: of optuna.samplers.GridSampler.sample_relative:15
+msgid ""
+"The search space returned by "
+":func:`~optuna.samplers.BaseSampler.infer_relative_search_space`."
+msgstr ""
+
+#: of optuna.samplers.GridSampler.sample_relative:18
+msgid "A dictionary containing the parameter names and the values."
+msgstr ""
+

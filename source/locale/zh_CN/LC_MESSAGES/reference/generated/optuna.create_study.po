@@ -1,0 +1,148 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018, Optuna Contributors.
+# This file is distributed under the same license as the Optuna package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Optuna 2.4.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-01-14 18:04-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../source/reference/generated/optuna.create_study.rst:2
+msgid "optuna.create\\_study"
+msgstr ""
+
+#: of optuna.create_study:1
+msgid "Create a new :class:`~optuna.study.Study`."
+msgstr ""
+
+#: of optuna.create_study:4
+msgid "示例"
+msgstr ""
+
+#: of optuna.create_study
+msgid "参数"
+msgstr ""
+
+#: of optuna.create_study:18
+msgid ""
+"Database URL. If this argument is set to None, in-memory storage is used,"
+" and the :class:`~optuna.study.Study` will not be persistent.  .. note::"
+"     When a database URL is passed, Optuna internally uses `SQLAlchemy`_ "
+"to handle     the database. Please refer to `SQLAlchemy's document`_ for "
+"further details.     If you want to specify non-default options to "
+"`SQLAlchemy Engine`_, you can     instantiate "
+":class:`~optuna.storages.RDBStorage` with your desired options and     "
+"pass it to the ``storage`` argument instead of a URL.   .. _SQLAlchemy: "
+"https://www.sqlalchemy.org/  .. _SQLAlchemy's document:      "
+"https://docs.sqlalchemy.org/en/latest/core/engines.html#database-urls  .."
+" _SQLAlchemy Engine: "
+"https://docs.sqlalchemy.org/en/latest/core/engines.html"
+msgstr ""
+
+#: of optuna.create_study:18
+msgid ""
+"Database URL. If this argument is set to None, in-memory storage is used,"
+" and the :class:`~optuna.study.Study` will not be persistent."
+msgstr ""
+
+#: of optuna.create_study:22
+msgid ""
+"When a database URL is passed, Optuna internally uses `SQLAlchemy`_ to "
+"handle the database. Please refer to `SQLAlchemy's document`_ for further"
+" details. If you want to specify non-default options to `SQLAlchemy "
+"Engine`_, you can instantiate :class:`~optuna.storages.RDBStorage` with "
+"your desired options and pass it to the ``storage`` argument instead of a"
+" URL."
+msgstr ""
+
+#: of optuna.create_study:32
+msgid ""
+"A sampler object that implements background algorithm for value "
+"suggestion. If :obj:`None` is specified, "
+":class:`~optuna.samplers.TPESampler` is used during single-objective "
+"optimization and :class:`~optuna.samplers.NSGAIISampler` during multi-"
+"objective optimization. See also :class:`~optuna.samplers`."
+msgstr ""
+
+#: of optuna.create_study:36
+msgid ""
+"A pruner object that decides early stopping of unpromising trials. If "
+":obj:`None` is specified, :class:`~optuna.pruners.MedianPruner` is used "
+"as the default. See also :class:`~optuna.pruners`."
+msgstr ""
+
+#: of optuna.create_study:39
+msgid ""
+"Study's name. If this argument is set to None, a unique name is generated"
+" automatically."
+msgstr ""
+
+#: of optuna.create_study:41
+msgid ""
+"Direction of optimization. Set ``minimize`` for minimization and "
+"``maximize`` for maximization.  .. note::     If none of `direction` and "
+"`directions` are specified, the direction of the study     is set to "
+"\"minimize\"."
+msgstr ""
+
+#: of optuna.create_study:41
+msgid ""
+"Direction of optimization. Set ``minimize`` for minimization and "
+"``maximize`` for maximization."
+msgstr ""
+
+#: of optuna.create_study:45
+msgid ""
+"If none of `direction` and `directions` are specified, the direction of "
+"the study is set to \"minimize\"."
+msgstr ""
+
+#: of optuna.create_study:47
+msgid "A sequence of directions during multi-objective optimization."
+msgstr ""
+
+#: of optuna.create_study:48
+msgid ""
+"Flag to control the behavior to handle a conflict of study names. In the "
+"case where a study named ``study_name`` already exists in the "
+"``storage``, a :class:`~optuna.exceptions.DuplicatedStudyError` is raised"
+" if ``load_if_exists`` is set to :obj:`False`. Otherwise, the creation of"
+" the study is skipped, and the existing one is returned."
+msgstr ""
+
+#: of optuna.create_study
+msgid "返回"
+msgstr ""
+
+#: of optuna.create_study:54
+msgid "A :class:`~optuna.study.Study` object."
+msgstr ""
+
+#: of optuna.create_study
+msgid "引发"
+msgstr ""
+
+#: of optuna.create_study:56
+msgid ""
+"If the length of ``directions`` is zero.     Or, if ``direction`` is "
+"neither 'minimize' nor 'maximize' when it is a string.     Or, if the "
+"element of ``directions`` is neither `minimize` nor `maximize`.     Or, "
+"if both ``direction`` and ``directions`` are specified."
+msgstr ""
+
+#: of optuna.create_study:58
+msgid ""
+":func:`optuna.create_study` is an alias of "
+":func:`optuna.study.create_study`."
+msgstr ""
+

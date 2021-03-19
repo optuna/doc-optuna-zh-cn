@@ -1,0 +1,152 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018, Optuna Contributors.
+# This file is distributed under the same license as the Optuna package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Optuna 2.4.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-01-14 18:04-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../source/reference/generated/optuna.distributions.IntLogUniformDistribution.rst:2
+msgid "optuna.distributions.IntLogUniformDistribution"
+msgstr ""
+
+#: of optuna.distributions.IntLogUniformDistribution:1
+msgid "A uniform distribution on integers in the log domain."
+msgstr ""
+
+#: of optuna.distributions.IntLogUniformDistribution:3
+msgid ""
+"This object is instantiated by :func:`~optuna.trial.Trial.suggest_int`, "
+"and passed to :mod:`~optuna.samplers` in general."
+msgstr ""
+
+#: of optuna.distributions.IntLogUniformDistribution:8
+msgid ""
+"Lower endpoint of the range of the distribution. ``low`` is included in "
+"the range."
+msgstr ""
+
+#: of optuna.distributions.IntLogUniformDistribution:12
+msgid ""
+"Upper endpoint of the range of the distribution. ``high`` is included in "
+"the range."
+msgstr ""
+
+#: of optuna.distributions.IntLogUniformDistribution:16
+msgid "A step for spacing between values."
+msgstr ""
+
+#: of optuna.distributions.IntLogUniformDistribution:19
+msgid ""
+"Deprecated in v2.0.0. ``step`` argument will be removed in the future. "
+"The removal of this feature is currently scheduled for v4.0.0, but this "
+"schedule is subject to change."
+msgstr ""
+
+#: of optuna.distributions.IntLogUniformDistribution:23
+msgid ""
+"Samplers and other components in Optuna relying on this distribution will"
+" ignore this value and assume that ``step`` is always 1. User-defined "
+"samplers may continue to use other values besides 1 during the "
+"deprecation."
+msgstr ""
+
+#: of optuna.distributions.IntLogUniformDistribution
+msgid "引发"
+msgstr ""
+
+#: of optuna.distributions.IntLogUniformDistribution:28
+msgid ""
+"If ``low`` value is larger than ``high`` value, or ``low`` value is "
+"smaller than 1."
+msgstr ""
+
+#: ../../source/reference/generated/optuna.distributions.IntLogUniformDistribution.rst:12
+msgid "Methods"
+msgstr ""
+
+#: ../../source/reference/generated/optuna.distributions.IntLogUniformDistribution.rst:23:<autosummary>:1
+msgid ""
+":obj:`single <optuna.distributions.IntLogUniformDistribution.single>`\\ "
+"\\(\\)"
+msgstr ""
+
+#: ../../source/reference/generated/optuna.distributions.IntLogUniformDistribution.rst:23:<autosummary>:1
+#: of optuna.distributions.IntLogUniformDistribution.single:1
+msgid "Test whether the range of this distribution contains just a single value."
+msgstr ""
+
+#: ../../source/reference/generated/optuna.distributions.IntLogUniformDistribution.rst:23:<autosummary>:1
+msgid ""
+":obj:`to_external_repr "
+"<optuna.distributions.IntLogUniformDistribution.to_external_repr>`\\ "
+"\\(param\\_value\\_in\\_internal\\_repr\\)"
+msgstr ""
+
+#: ../../source/reference/generated/optuna.distributions.IntLogUniformDistribution.rst:23:<autosummary>:1
+#: of optuna.distributions.IntLogUniformDistribution.to_external_repr:1
+msgid ""
+"Convert internal representation of a parameter value into external "
+"representation."
+msgstr ""
+
+#: ../../source/reference/generated/optuna.distributions.IntLogUniformDistribution.rst:23:<autosummary>:1
+msgid ""
+":obj:`to_internal_repr "
+"<optuna.distributions.IntLogUniformDistribution.to_internal_repr>`\\ "
+"\\(param\\_value\\_in\\_external\\_repr\\)"
+msgstr ""
+
+#: ../../source/reference/generated/optuna.distributions.IntLogUniformDistribution.rst:23:<autosummary>:1
+#: of optuna.distributions.IntLogUniformDistribution.to_internal_repr:1
+msgid ""
+"Convert external representation of a parameter value into internal "
+"representation."
+msgstr ""
+
+#: ../../source/reference/generated/optuna.distributions.IntLogUniformDistribution.rst:25
+msgid "Attributes"
+msgstr ""
+
+#: of optuna.distributions.IntLogUniformDistribution.single:1:<autosummary>:1
+msgid ":obj:`step <optuna.distributions.IntLogUniformDistribution.step>`\\"
+msgstr ""
+
+#: of optuna.distributions.IntLogUniformDistribution.single
+#: optuna.distributions.IntLogUniformDistribution.to_external_repr
+#: optuna.distributions.IntLogUniformDistribution.to_internal_repr
+msgid "返回"
+msgstr ""
+
+#: of optuna.distributions.IntLogUniformDistribution.single:3
+msgid ""
+":obj:`True` if the range of this distribution contains just a single "
+"value, otherwise :obj:`False`."
+msgstr ""
+
+#: of optuna.distributions.IntLogUniformDistribution.to_external_repr
+#: optuna.distributions.IntLogUniformDistribution.to_internal_repr
+msgid "参数"
+msgstr ""
+
+#: of optuna.distributions.IntLogUniformDistribution.to_external_repr:3
+#: optuna.distributions.IntLogUniformDistribution.to_internal_repr:5
+msgid "Optuna's internal representation of a parameter value."
+msgstr ""
+
+#: of optuna.distributions.IntLogUniformDistribution.to_external_repr:5
+#: optuna.distributions.IntLogUniformDistribution.to_internal_repr:3
+msgid "Optuna's external representation of a parameter value."
+msgstr ""
+

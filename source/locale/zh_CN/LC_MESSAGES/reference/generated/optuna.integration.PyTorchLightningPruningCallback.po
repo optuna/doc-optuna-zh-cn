@@ -1,0 +1,64 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018, Optuna Contributors.
+# This file is distributed under the same license as the Optuna package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Optuna 2.4.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-01-14 18:04-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../source/reference/generated/optuna.integration.PyTorchLightningPruningCallback.rst:2
+msgid "optuna.integration.PyTorchLightningPruningCallback"
+msgstr ""
+
+#: of optuna.integration.PyTorchLightningPruningCallback:1
+msgid "PyTorch Lightning callback to prune unpromising trials."
+msgstr ""
+
+#: of optuna.integration.PyTorchLightningPruningCallback:3
+msgid ""
+"See `the example <https://github.com/optuna/optuna/blob/master/ "
+"examples/pytorch_lightning_simple.py>`__ if you want to add a pruning "
+"callback which observes accuracy."
+msgstr ""
+
+#: of optuna.integration.PyTorchLightningPruningCallback
+msgid "参数"
+msgstr ""
+
+#: of optuna.integration.PyTorchLightningPruningCallback:7
+msgid ""
+"A :class:`~optuna.trial.Trial` corresponding to the current evaluation of"
+" the objective function."
+msgstr ""
+
+#: of optuna.integration.PyTorchLightningPruningCallback:9
+msgid ""
+"An evaluation metric for pruning, e.g., ``val_loss`` or ``val_acc``. The "
+"metrics are obtained from the returned dictionaries from e.g. "
+"``pytorch_lightning.LightningModule.training_step`` or "
+"``pytorch_lightning.LightningModule.validation_epoch_end`` and the names "
+"thus depend on how this dictionary is formatted."
+msgstr ""
+
+#: ../../source/reference/generated/optuna.integration.PyTorchLightningPruningCallback.rst:12
+msgid "Methods"
+msgstr ""
+
+#: ../../source/reference/generated/optuna.integration.PyTorchLightningPruningCallback.rst:15:<autosummary>:1
+msgid ""
+":obj:`on_validation_end "
+"<optuna.integration.PyTorchLightningPruningCallback.on_validation_end>`\\"
+" \\(trainer\\, pl\\_module\\)"
+msgstr ""
+
