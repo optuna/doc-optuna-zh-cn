@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 2.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-14 18:04-0500\n"
+"POT-Creation-Date: 2021-03-20 13:35-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,36 +21,44 @@ msgstr ""
 msgid "optuna.integration.PyTorchIgnitePruningHandler"
 msgstr ""
 
-#: of optuna.integration.PyTorchIgnitePruningHandler:1
+#: of optuna.integration.pytorch_ignite.PyTorchIgnitePruningHandler:1
 msgid "PyTorch Ignite handler to prune unpromising trials."
 msgstr ""
 
-#: of optuna.integration.PyTorchIgnitePruningHandler:3
+#: of optuna.integration.pytorch_ignite.PyTorchIgnitePruningHandler:3
 msgid ""
 "See `the example <https://github.com/optuna/optuna/blob/master/ "
-"examples/pytorch_ignite_simple.py>`__ if you want to add a pruning "
-"handler which observes validation accuracy."
+"examples/pytorch/pytorch_ignite_simple.py>`__ if you want to add a "
+"pruning handler which observes validation accuracy."
 msgstr ""
 
-#: of optuna.integration.PyTorchIgnitePruningHandler
+#: of optuna.integration.pytorch_ignite.PyTorchIgnitePruningHandler
 msgid "参数"
 msgstr ""
 
-#: of optuna.integration.PyTorchIgnitePruningHandler:7
+#: of optuna.integration.pytorch_ignite.PyTorchIgnitePruningHandler:7
 msgid ""
 "A :class:`~optuna.trial.Trial` corresponding to the current evaluation of"
 " the objective function."
 msgstr ""
 
-#: of optuna.integration.PyTorchIgnitePruningHandler:9
+#: of optuna.integration.pytorch_ignite.PyTorchIgnitePruningHandler:9
 msgid "A name of metric for pruning, e.g., ``accuracy`` and ``loss``."
 msgstr ""
 
-#: of optuna.integration.PyTorchIgnitePruningHandler:10
+#: of optuna.integration.pytorch_ignite.PyTorchIgnitePruningHandler:10
 msgid ""
 "A trainer engine of PyTorch Ignite. Please refer to `ignite.engine.Engine"
 " reference "
 "<https://pytorch.org/ignite/engine.html#ignite.engine.Engine>`_ for "
 "further details."
 msgstr ""
+
+#~ msgid ""
+#~ "See `the example "
+#~ "<https://github.com/optuna/optuna/blob/master/ "
+#~ "examples/pytorch_ignite_simple.py>`__ if you want"
+#~ " to add a pruning handler which "
+#~ "observes validation accuracy."
+#~ msgstr ""
 

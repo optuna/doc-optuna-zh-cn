@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 2.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-14 18:04-0500\n"
+"POT-Creation-Date: 2021-03-20 13:35-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,40 +21,40 @@ msgstr ""
 msgid "optuna.integration.FastAIV2PruningCallback"
 msgstr ""
 
-#: of optuna.integration.FastAIV2PruningCallback:1
+#: of optuna.integration.fastaiv2.FastAIV2PruningCallback:1
 msgid "FastAI callback to prune unpromising trials for fastai."
 msgstr ""
 
-#: of optuna.integration.FastAIV2PruningCallback:4
+#: of optuna.integration.fastaiv2.FastAIV2PruningCallback:4
 msgid "This callback is for fastai>=2.0."
 msgstr ""
 
-#: of optuna.integration.FastAIV2PruningCallback:6
+#: of optuna.integration.fastaiv2.FastAIV2PruningCallback:6
 msgid ""
 "See `the example <https://github.com/optuna/optuna/blob/master/ "
-"examples/fastaiv2_simple.py>`__ if you want to add a pruning callback "
-"which monitors validation loss of a ``Learner``."
+"examples/fastai/fastaiv2_simple.py>`__ if you want to add a pruning "
+"callback which monitors validation loss of a ``Learner``."
 msgstr ""
 
-#: of optuna.integration.FastAIV2PruningCallback:11
+#: of optuna.integration.fastaiv2.FastAIV2PruningCallback:11
 msgid "示例"
 msgstr ""
 
-#: of optuna.integration.FastAIV2PruningCallback:12
+#: of optuna.integration.fastaiv2.FastAIV2PruningCallback:12
 msgid "Register a pruning callback to ``learn.fit`` and ``learn.fit_one_cycle``."
 msgstr ""
 
-#: of optuna.integration.FastAIV2PruningCallback
+#: of optuna.integration.fastaiv2.FastAIV2PruningCallback
 msgid "参数"
 msgstr ""
 
-#: of optuna.integration.FastAIV2PruningCallback:24
+#: of optuna.integration.fastaiv2.FastAIV2PruningCallback:24
 msgid ""
 "A :class:`~optuna.trial.Trial` corresponding to the current evaluation of"
 " the objective function."
 msgstr ""
 
-#: of optuna.integration.FastAIV2PruningCallback:26
+#: of optuna.integration.fastaiv2.FastAIV2PruningCallback:26
 msgid ""
 "An evaluation metric for pruning, e.g. ``valid_loss`` or ``accuracy``. "
 "Please refer to `fastai.callback.TrackerCallback reference "
@@ -77,4 +77,13 @@ msgid ""
 ":obj:`after_fit <optuna.integration.FastAIV2PruningCallback.after_fit>`\\"
 " \\(\\)"
 msgstr ""
+
+#~ msgid ""
+#~ "See `the example "
+#~ "<https://github.com/optuna/optuna/blob/master/ "
+#~ "examples/fastaiv2_simple.py>`__ if you want to"
+#~ " add a pruning callback which "
+#~ "monitors validation loss of a "
+#~ "``Learner``."
+#~ msgstr ""
 

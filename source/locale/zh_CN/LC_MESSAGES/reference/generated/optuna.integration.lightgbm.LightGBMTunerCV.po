@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 2.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-14 18:04-0500\n"
+"POT-Creation-Date: 2021-03-20 13:35-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,11 +21,11 @@ msgstr ""
 msgid "optuna.integration.lightgbm.LightGBMTunerCV"
 msgstr ""
 
-#: of optuna.integration.lightgbm.LightGBMTunerCV:1
+#: of optuna.integration._lightgbm_tuner.optimize.LightGBMTunerCV:1
 msgid "Hyperparameter tuner for LightGBM with cross-validation."
 msgstr ""
 
-#: of optuna.integration.lightgbm.LightGBMTunerCV:3
+#: of optuna.integration._lightgbm_tuner.optimize.LightGBMTunerCV:3
 msgid ""
 "It employs the same stepwise approach as "
 ":class:`~optuna.integration.lightgbm.LightGBMTuner`. "
@@ -33,11 +33,12 @@ msgid ""
 "`lightgbm.cv()`_ to train and validate boosters while "
 ":class:`~optuna.integration.lightgbm.LightGBMTuner` invokes "
 "`lightgbm.train()`_. See `a simple example "
-"<https://github.com/optuna/optuna/blob/master/examples/lightgbm_tuner_cv."
-" py>`_ which optimizes the validation log loss of cancer detection."
+"<https://github.com/optuna/optuna/blob/master/examples/lightgbm/ "
+"lightgbm_tuner_cv.py>`_ which optimizes the validation log loss of cancer"
+" detection."
 msgstr ""
 
-#: of optuna.integration.lightgbm.LightGBMTunerCV:11
+#: of optuna.integration._lightgbm_tuner.optimize.LightGBMTunerCV:11
 msgid ""
 "Arguments and keyword arguments for `lightgbm.cv()`_ can be passed except"
 " ``metrics``, ``init_model`` and ``eval_train_metric``. The arguments "
@@ -45,15 +46,15 @@ msgid ""
 "listed below:"
 msgstr ""
 
-#: of optuna.integration.lightgbm.LightGBMTunerCV
+#: of optuna.integration._lightgbm_tuner.optimize.LightGBMTunerCV
 msgid "参数"
 msgstr ""
 
-#: of optuna.integration.lightgbm.LightGBMTunerCV:16
+#: of optuna.integration._lightgbm_tuner.optimize.LightGBMTunerCV:16
 msgid "A time budget for parameter tuning in seconds."
 msgstr ""
 
-#: of optuna.integration.lightgbm.LightGBMTunerCV:17
+#: of optuna.integration._lightgbm_tuner.optimize.LightGBMTunerCV:17
 msgid ""
 "A :class:`~optuna.study.Study` instance to store optimization results. "
 "The :class:`~optuna.trial.Trial` instances in it has the following user "
@@ -63,7 +64,7 @@ msgid ""
 "serialized dictionary of LightGBM parameters used in the trial."
 msgstr ""
 
-#: of optuna.integration.lightgbm.LightGBMTunerCV:23
+#: of optuna.integration._lightgbm_tuner.optimize.LightGBMTunerCV:23
 msgid ""
 "List of Optuna callback functions that are invoked at the end of each "
 "trial. Each function must accept two parameters with the following types "
@@ -72,7 +73,19 @@ msgid ""
 "``callbacks`` argument of `lightgbm.train()`_ ."
 msgstr ""
 
-#: of optuna.integration.lightgbm.LightGBMTunerCV:27
+#: of optuna.integration._lightgbm_tuner.optimize.LightGBMTunerCV:27
+msgid ""
+"A directory to save boosters. By default, it is set to :obj:`None` and no"
+" boosters are saved. Please set shared directory (e.g., directories on "
+"NFS) if you want to access "
+":meth:`~optuna.integration.LightGBMTunerCV.get_best_booster` in "
+"distributed environments. Otherwise, it may raise :obj:`ValueError`. If "
+"the directory does not exist, it will be created. The filenames of the "
+"boosters will be ``{model_dir}/{trial_number}.pkl`` (e.g., "
+"``./boosters/0.pkl``)."
+msgstr ""
+
+#: of optuna.integration._lightgbm_tuner.optimize.LightGBMTunerCV:34
 msgid ""
 "A verbosity level to change Optuna's logging level. The level is aligned "
 "to `LightGBM's verbosity`_ .  .. warning::     Deprecated in v2.0.0. "
@@ -82,24 +95,24 @@ msgid ""
 "instead."
 msgstr ""
 
-#: of optuna.integration.lightgbm.LightGBMTunerCV:27
+#: of optuna.integration._lightgbm_tuner.optimize.LightGBMTunerCV:34
 msgid ""
 "A verbosity level to change Optuna's logging level. The level is aligned "
 "to `LightGBM's verbosity`_ ."
 msgstr ""
 
-#: of optuna.integration.lightgbm.LightGBMTunerCV:31
+#: of optuna.integration._lightgbm_tuner.optimize.LightGBMTunerCV:38
 msgid ""
 "Deprecated in v2.0.0. ``verbosity`` argument will be removed in the "
 "future. The removal of this feature is currently scheduled for v4.0.0, "
 "but this schedule is subject to change."
 msgstr ""
 
-#: of optuna.integration.lightgbm.LightGBMTunerCV:35
+#: of optuna.integration._lightgbm_tuner.optimize.LightGBMTunerCV:42
 msgid "Please use :func:`~optuna.logging.set_verbosity` instead."
 msgstr ""
 
-#: of optuna.integration.lightgbm.LightGBMTunerCV:36
+#: of optuna.integration._lightgbm_tuner.optimize.LightGBMTunerCV:43
 msgid ""
 "Flag to show progress bars or not. To disable progress bar, set this "
 ":obj:`False`.  .. note::     Progress bars will be fragmented by logging "
@@ -107,16 +120,22 @@ msgid ""
 "show the progress bars properly."
 msgstr ""
 
-#: of optuna.integration.lightgbm.LightGBMTunerCV:36
+#: of optuna.integration._lightgbm_tuner.optimize.LightGBMTunerCV:43
 msgid ""
 "Flag to show progress bars or not. To disable progress bar, set this "
 ":obj:`False`."
 msgstr ""
 
-#: of optuna.integration.lightgbm.LightGBMTunerCV:39
+#: of optuna.integration._lightgbm_tuner.optimize.LightGBMTunerCV:46
 msgid ""
 "Progress bars will be fragmented by logging messages of LightGBM and "
 "Optuna. Please suppress such messages to show the progress bars properly."
+msgstr ""
+
+#: of optuna.integration._lightgbm_tuner.optimize.LightGBMTunerCV:48
+msgid ""
+"Flag to enable "
+":meth:`~optuna.integration.LightGBMTunerCV.get_best_booster`."
 msgstr ""
 
 #: ../../source/reference/generated/optuna.integration.lightgbm.LightGBMTunerCV.rst:12
@@ -137,7 +156,8 @@ msgid ""
 msgstr ""
 
 #: ../../source/reference/generated/optuna.integration.lightgbm.LightGBMTunerCV.rst:31:<autosummary>:1
-#: of optuna.integration.lightgbm.LightGBMTunerCV.get_best_booster:1
+#: of
+#: optuna.integration._lightgbm_tuner.optimize.LightGBMTunerCV.get_best_booster:1
 msgid "Return the best cvbooster."
 msgstr ""
 
@@ -152,7 +172,7 @@ msgid ":obj:`run <optuna.integration.lightgbm.LightGBMTunerCV.run>`\\ \\(\\)"
 msgstr ""
 
 #: ../../source/reference/generated/optuna.integration.lightgbm.LightGBMTunerCV.rst:31:<autosummary>:1
-#: of optuna.integration.lightgbm.LightGBMTunerCV.run:1
+#: of optuna.integration._lightgbm_tuner.optimize._LightGBMBaseTuner.run:1
 msgid "Perform the hyperparameter-tuning with given parameters."
 msgstr ""
 
@@ -163,7 +183,8 @@ msgid ""
 msgstr ""
 
 #: ../../source/reference/generated/optuna.integration.lightgbm.LightGBMTunerCV.rst:31:<autosummary>:1
-#: of optuna.integration.lightgbm.LightGBMTunerCV.sample_train_set:1
+#: of
+#: optuna.integration._lightgbm_tuner.optimize._LightGBMBaseTuner.sample_train_set:1
 msgid "Make subset of `self.train_set` Dataset object."
 msgstr ""
 
@@ -235,7 +256,8 @@ msgstr ""
 msgid "Return the score of the best booster."
 msgstr ""
 
-#: of optuna.integration.lightgbm.LightGBMTunerCV.get_best_booster:3
+#: of
+#: optuna.integration._lightgbm_tuner.optimize.LightGBMTunerCV.get_best_booster:3
 msgid ""
 "If the best booster cannot be found, :class:`ValueError` will be raised. "
 "To prevent the errors, please save boosters by specifying both of the "
@@ -243,4 +265,24 @@ msgid ""
 ":meth:`~optuna.integration.lightgbm.LightGBMTunerCV.__init__`, when you "
 "resume tuning or you run tuning in parallel."
 msgstr ""
+
+#: of
+#: optuna.integration._lightgbm_tuner.optimize.LightGBMTunerCV.get_best_booster
+#: optuna.integration._lightgbm_tuner.optimize._LightGBMBaseTuner.run
+#: optuna.integration._lightgbm_tuner.optimize._LightGBMBaseTuner.sample_train_set
+msgid "返回类型"
+msgstr ""
+
+#~ msgid ""
+#~ "It employs the same stepwise approach"
+#~ " as :class:`~optuna.integration.lightgbm.LightGBMTuner`. "
+#~ ":class:`~optuna.integration.lightgbm.LightGBMTunerCV` invokes"
+#~ " `lightgbm.cv()`_ to train and validate "
+#~ "boosters while "
+#~ ":class:`~optuna.integration.lightgbm.LightGBMTuner` invokes "
+#~ "`lightgbm.train()`_. See `a simple example "
+#~ "<https://github.com/optuna/optuna/blob/master/examples/lightgbm_tuner_cv."
+#~ " py>`_ which optimizes the validation "
+#~ "log loss of cancer detection."
+#~ msgstr ""
 

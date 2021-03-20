@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 2.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-14 18:04-0500\n"
+"POT-Creation-Date: 2021-03-20 13:35-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,28 +21,28 @@ msgstr ""
 msgid "optuna.integration.PyCmaSampler"
 msgstr ""
 
-#: of optuna.integration.PyCmaSampler:1
+#: of optuna.integration.cma.PyCmaSampler:1
 msgid "A Sampler using cma library as the backend."
 msgstr ""
 
-#: of optuna.integration.PyCmaSampler:4
+#: of optuna.integration.cma.PyCmaSampler:4
 msgid "示例"
 msgstr ""
 
-#: of optuna.integration.PyCmaSampler:5
+#: of optuna.integration.cma.PyCmaSampler:5
 msgid ""
 "Optimize a simple quadratic function by using "
 ":class:`~optuna.integration.PyCmaSampler`."
 msgstr ""
 
-#: of optuna.integration.PyCmaSampler:22
+#: of optuna.integration.cma.PyCmaSampler:22
 msgid ""
 "Note that parallel execution of trials may affect the optimization "
 "performance of CMA-ES, especially if the number of trials running in "
 "parallel exceeds the population size."
 msgstr ""
 
-#: of optuna.integration.PyCmaSampler:26
+#: of optuna.integration.cma.PyCmaSampler:26
 msgid ""
 ":class:`~optuna.integration.CmaEsSampler` is deprecated and renamed to "
 ":class:`~optuna.integration.PyCmaSampler` in v2.0.0. Please use "
@@ -50,22 +50,22 @@ msgid ""
 ":class:`~optuna.integration.CmaEsSampler`."
 msgstr ""
 
-#: of optuna.integration.PyCmaSampler
-#: optuna.integration.PyCmaSampler.after_trial
-#: optuna.integration.PyCmaSampler.infer_relative_search_space
-#: optuna.integration.PyCmaSampler.sample_independent
-#: optuna.integration.PyCmaSampler.sample_relative
+#: of optuna.integration.cma.PyCmaSampler
+#: optuna.integration.cma.PyCmaSampler.after_trial
+#: optuna.integration.cma.PyCmaSampler.infer_relative_search_space
+#: optuna.integration.cma.PyCmaSampler.sample_independent
+#: optuna.integration.cma.PyCmaSampler.sample_relative
 msgid "参数"
 msgstr ""
 
-#: of optuna.integration.PyCmaSampler:31
+#: of optuna.integration.cma.PyCmaSampler:31
 msgid ""
 "A dictionary of an initial parameter values for CMA-ES. By default, the "
 "mean of ``low`` and ``high`` for each distribution is used. Please refer "
 "to cma.CMAEvolutionStrategy_ for further details of ``x0``."
 msgstr ""
 
-#: of optuna.integration.PyCmaSampler:34
+#: of optuna.integration.cma.PyCmaSampler:34
 msgid ""
 "Initial standard deviation of CMA-ES. By default, ``sigma0`` is set to "
 "``min_range / 6``, where ``min_range`` denotes the minimum range of the "
@@ -74,18 +74,18 @@ msgid ""
 "cma.CMAEvolutionStrategy_ for further details of ``sigma0``."
 msgstr ""
 
-#: of optuna.integration.PyCmaSampler:39
+#: of optuna.integration.cma.PyCmaSampler:39
 msgid ""
 "A dictionary of multipliers of sigma0 for each parameters. The default "
 "value is 1.0. Please refer to cma.CMAEvolutionStrategy_ for further "
 "details of ``cma_stds``."
 msgstr ""
 
-#: of optuna.integration.PyCmaSampler:41
+#: of optuna.integration.cma.PyCmaSampler:41
 msgid "A random seed for CMA-ES."
 msgstr ""
 
-#: of optuna.integration.PyCmaSampler:42
+#: of optuna.integration.cma.PyCmaSampler:42
 msgid ""
 "Options passed to the constructor of cma.CMAEvolutionStrategy_ class.  "
 "Note that ``BoundaryHandler``, ``bounds``, ``CMA_stds`` and ``seed`` "
@@ -93,24 +93,24 @@ msgid ""
 ":class:`~optuna.integration.PyCmaSampler` automatically."
 msgstr ""
 
-#: of optuna.integration.PyCmaSampler:42
+#: of optuna.integration.cma.PyCmaSampler:42
 msgid "Options passed to the constructor of cma.CMAEvolutionStrategy_ class."
 msgstr ""
 
-#: of optuna.integration.PyCmaSampler:44
+#: of optuna.integration.cma.PyCmaSampler:44
 msgid ""
 "Note that ``BoundaryHandler``, ``bounds``, ``CMA_stds`` and ``seed`` "
 "arguments in ``cma_opts`` will be ignored because it is added by "
 ":class:`~optuna.integration.PyCmaSampler` automatically."
 msgstr ""
 
-#: of optuna.integration.PyCmaSampler:47
+#: of optuna.integration.cma.PyCmaSampler:47
 msgid ""
 "The independent sampling is used instead of the CMA-ES algorithm until "
 "the given number of trials finish in the same study."
 msgstr ""
 
-#: of optuna.integration.PyCmaSampler:49
+#: of optuna.integration.cma.PyCmaSampler:49
 msgid ""
 "A :class:`~optuna.samplers.BaseSampler` instance that is used for "
 "independent sampling. The parameters not contained in the relative search"
@@ -124,7 +124,7 @@ msgid ""
 ":class:`~optuna.samplers.TPESampler`."
 msgstr ""
 
-#: of optuna.integration.PyCmaSampler:49
+#: of optuna.integration.cma.PyCmaSampler:49
 msgid ""
 "A :class:`~optuna.samplers.BaseSampler` instance that is used for "
 "independent sampling. The parameters not contained in the relative search"
@@ -133,20 +133,20 @@ msgid ""
 ":func:`~optuna.samplers.intersection_search_space()`."
 msgstr ""
 
-#: of optuna.integration.PyCmaSampler:55
+#: of optuna.integration.cma.PyCmaSampler:55
 msgid ""
 "If :obj:`None` is specified, :class:`~optuna.samplers.RandomSampler` is "
 "used as the default."
 msgstr ""
 
-#: of optuna.integration.PyCmaSampler:59
+#: of optuna.integration.cma.PyCmaSampler:59
 msgid ""
 ":class:`optuna.samplers` module provides built-in independent samplers "
 "such as :class:`~optuna.samplers.RandomSampler` and "
 ":class:`~optuna.samplers.TPESampler`."
 msgstr ""
 
-#: of optuna.integration.PyCmaSampler:62
+#: of optuna.integration.cma.PyCmaSampler:62
 msgid ""
 "If this is :obj:`True`, a warning message is emitted when the value of a "
 "parameter is sampled by using an independent sampler.  Note that the "
@@ -154,13 +154,13 @@ msgid ""
 "independent sampler, so no warning messages are emitted in this case."
 msgstr ""
 
-#: of optuna.integration.PyCmaSampler:62
+#: of optuna.integration.cma.PyCmaSampler:62
 msgid ""
 "If this is :obj:`True`, a warning message is emitted when the value of a "
 "parameter is sampled by using an independent sampler."
 msgstr ""
 
-#: of optuna.integration.PyCmaSampler:65
+#: of optuna.integration.cma.PyCmaSampler:65
 msgid ""
 "Note that the parameters of the first trial in a study are always sampled"
 " via an independent sampler, so no warning messages are emitted in this "
@@ -171,128 +171,136 @@ msgstr ""
 msgid "Methods"
 msgstr ""
 
-#: of optuna.integration.PyCmaSampler.after_trial:1:<autosummary>:1
+#: of optuna.integration.cma.PyCmaSampler.after_trial:1:<autosummary>:1
 msgid ""
 ":obj:`after_trial <optuna.integration.PyCmaSampler.after_trial>`\\ "
 "\\(study\\, trial\\, state\\, values\\)"
 msgstr ""
 
-#: of optuna.integration.PyCmaSampler.after_trial:1
-#: optuna.integration.PyCmaSampler.after_trial:1:<autosummary>:1
+#: of optuna.integration.cma.PyCmaSampler.after_trial:1
+#: optuna.integration.cma.PyCmaSampler.after_trial:1:<autosummary>:1
 msgid "Trial post-processing."
 msgstr ""
 
-#: of optuna.integration.PyCmaSampler.after_trial:1:<autosummary>:1
+#: of optuna.integration.cma.PyCmaSampler.after_trial:1:<autosummary>:1
 msgid ""
 ":obj:`infer_relative_search_space "
 "<optuna.integration.PyCmaSampler.infer_relative_search_space>`\\ "
 "\\(study\\, trial\\)"
 msgstr ""
 
-#: of optuna.integration.PyCmaSampler.after_trial:1:<autosummary>:1
-#: optuna.integration.PyCmaSampler.infer_relative_search_space:1
+#: of optuna.integration.cma.PyCmaSampler.after_trial:1:<autosummary>:1
+#: optuna.integration.cma.PyCmaSampler.infer_relative_search_space:1
 msgid ""
 "Infer the search space that will be used by relative sampling in the "
 "target trial."
 msgstr ""
 
-#: of optuna.integration.PyCmaSampler.after_trial:1:<autosummary>:1
+#: of optuna.integration.cma.PyCmaSampler.after_trial:1:<autosummary>:1
 msgid ":obj:`reseed_rng <optuna.integration.PyCmaSampler.reseed_rng>`\\ \\(\\)"
 msgstr ""
 
-#: of optuna.integration.PyCmaSampler.after_trial:1:<autosummary>:1
-#: optuna.integration.PyCmaSampler.reseed_rng:1
+#: of optuna.integration.cma.PyCmaSampler.after_trial:1:<autosummary>:1
+#: optuna.integration.cma.PyCmaSampler.reseed_rng:1
 msgid "Reseed sampler's random number generator."
 msgstr ""
 
-#: of optuna.integration.PyCmaSampler.after_trial:1:<autosummary>:1
+#: of optuna.integration.cma.PyCmaSampler.after_trial:1:<autosummary>:1
 msgid ""
 ":obj:`sample_independent "
 "<optuna.integration.PyCmaSampler.sample_independent>`\\ \\(study\\, "
 "trial\\, param\\_name\\, ...\\)"
 msgstr ""
 
-#: of optuna.integration.PyCmaSampler.after_trial:1:<autosummary>:1
-#: optuna.integration.PyCmaSampler.sample_independent:1
+#: of optuna.integration.cma.PyCmaSampler.after_trial:1:<autosummary>:1
+#: optuna.integration.cma.PyCmaSampler.sample_independent:1
 msgid "Sample a parameter for a given distribution."
 msgstr ""
 
-#: of optuna.integration.PyCmaSampler.after_trial:1:<autosummary>:1
+#: of optuna.integration.cma.PyCmaSampler.after_trial:1:<autosummary>:1
 msgid ""
 ":obj:`sample_relative "
 "<optuna.integration.PyCmaSampler.sample_relative>`\\ \\(study\\, trial\\,"
 " search\\_space\\)"
 msgstr ""
 
-#: of optuna.integration.PyCmaSampler.after_trial:1:<autosummary>:1
-#: optuna.integration.PyCmaSampler.sample_relative:1
+#: of optuna.integration.cma.PyCmaSampler.after_trial:1:<autosummary>:1
+#: optuna.integration.cma.PyCmaSampler.sample_relative:1
 msgid "Sample parameters in a given search space."
 msgstr ""
 
-#: of optuna.integration.PyCmaSampler.after_trial:3
+#: of optuna.integration.cma.PyCmaSampler.after_trial:3
 msgid ""
 "This method is called after the objective function returns and right "
 "before the trials is finished and its state is stored."
 msgstr ""
 
-#: of optuna.integration.PyCmaSampler.after_trial:7
+#: of optuna.integration.cma.PyCmaSampler.after_trial:7
 msgid ""
 "Added in v2.4.0 as an experimental feature. The interface may change in "
 "newer versions without prior notice. See "
 "https://github.com/optuna/optuna/releases/tag/v2.4.0."
 msgstr ""
 
-#: of optuna.integration.PyCmaSampler.after_trial:10
-#: optuna.integration.PyCmaSampler.infer_relative_search_space:8
-#: optuna.integration.PyCmaSampler.sample_independent:13
-#: optuna.integration.PyCmaSampler.sample_relative:12
+#: of optuna.integration.cma.PyCmaSampler.after_trial:10
+#: optuna.integration.cma.PyCmaSampler.infer_relative_search_space:8
+#: optuna.integration.cma.PyCmaSampler.sample_independent:13
+#: optuna.integration.cma.PyCmaSampler.sample_relative:12
 msgid "Target study object."
 msgstr ""
 
-#: of optuna.integration.PyCmaSampler.after_trial:11
-#: optuna.integration.PyCmaSampler.infer_relative_search_space:9
-#: optuna.integration.PyCmaSampler.sample_independent:14
-#: optuna.integration.PyCmaSampler.sample_relative:13
+#: of optuna.integration.cma.PyCmaSampler.after_trial:11
+#: optuna.integration.cma.PyCmaSampler.infer_relative_search_space:9
+#: optuna.integration.cma.PyCmaSampler.sample_independent:14
+#: optuna.integration.cma.PyCmaSampler.sample_relative:13
 msgid "Target trial object. Take a copy before modifying this object."
 msgstr ""
 
-#: of optuna.integration.PyCmaSampler.after_trial:13
+#: of optuna.integration.cma.PyCmaSampler.after_trial:13
 msgid "Resulting trial state."
 msgstr ""
 
-#: of optuna.integration.PyCmaSampler.after_trial:14
+#: of optuna.integration.cma.PyCmaSampler.after_trial:14
 msgid ""
 "Resulting trial values. Guaranteed to not be :obj:`None` if trial "
 "succeeded."
 msgstr ""
 
-#: of optuna.integration.PyCmaSampler.infer_relative_search_space:3
+#: of optuna.integration.cma.PyCmaSampler.after_trial
+#: optuna.integration.cma.PyCmaSampler.infer_relative_search_space
+#: optuna.integration.cma.PyCmaSampler.reseed_rng
+#: optuna.integration.cma.PyCmaSampler.sample_independent
+#: optuna.integration.cma.PyCmaSampler.sample_relative
+msgid "返回类型"
+msgstr ""
+
+#: of optuna.integration.cma.PyCmaSampler.infer_relative_search_space:3
 msgid ""
 "This method is called right before "
 ":func:`~optuna.samplers.BaseSampler.sample_relative` method, and the "
-"search space returned by this method is pass to it. The parameters not "
+"search space returned by this method is passed to it. The parameters not "
 "contained in the search space will be sampled by using "
 ":func:`~optuna.samplers.BaseSampler.sample_independent` method."
 msgstr ""
 
-#: of optuna.integration.PyCmaSampler.infer_relative_search_space
-#: optuna.integration.PyCmaSampler.sample_independent
-#: optuna.integration.PyCmaSampler.sample_relative
+#: of optuna.integration.cma.PyCmaSampler.infer_relative_search_space
+#: optuna.integration.cma.PyCmaSampler.sample_independent
+#: optuna.integration.cma.PyCmaSampler.sample_relative
 msgid "返回"
 msgstr ""
 
-#: of optuna.integration.PyCmaSampler.infer_relative_search_space:12
+#: of optuna.integration.cma.PyCmaSampler.infer_relative_search_space:12
 msgid "A dictionary containing the parameter names and parameter's distributions."
 msgstr ""
 
-#: of optuna.integration.PyCmaSampler.infer_relative_search_space:15
+#: of optuna.integration.cma.PyCmaSampler.infer_relative_search_space:15
 msgid ""
 "Please refer to :func:`~optuna.samplers.intersection_search_space` as an "
 "implementation of "
 ":func:`~optuna.samplers.BaseSampler.infer_relative_search_space`."
 msgstr ""
 
-#: of optuna.integration.PyCmaSampler.reseed_rng:3
+#: of optuna.integration.cma.PyCmaSampler.reseed_rng:3
 msgid ""
 "This method is called by the :class:`~optuna.study.Study` instance if "
 "trials are executed in parallel with the option ``n_jobs>1``. In that "
@@ -302,7 +310,7 @@ msgid ""
 "generator."
 msgstr ""
 
-#: of optuna.integration.PyCmaSampler.sample_independent:3
+#: of optuna.integration.cma.PyCmaSampler.sample_independent:3
 msgid ""
 "This method is called only for the parameters not contained in the search"
 " space returned by :func:`~optuna.samplers.BaseSampler.sample_relative` "
@@ -310,29 +318,29 @@ msgid ""
 "relationship between parameters such as random sampling and TPE."
 msgstr ""
 
-#: of optuna.integration.PyCmaSampler.sample_independent:9
-#: optuna.integration.PyCmaSampler.sample_relative:8
+#: of optuna.integration.cma.PyCmaSampler.sample_independent:9
+#: optuna.integration.cma.PyCmaSampler.sample_relative:8
 msgid ""
 "The failed trials are ignored by any build-in samplers when they sample "
 "new parameters. Thus, failed trials are regarded as deleted in the "
 "samplers' perspective."
 msgstr ""
 
-#: of optuna.integration.PyCmaSampler.sample_independent:16
+#: of optuna.integration.cma.PyCmaSampler.sample_independent:16
 msgid "Name of the sampled parameter."
 msgstr ""
 
-#: of optuna.integration.PyCmaSampler.sample_independent:17
+#: of optuna.integration.cma.PyCmaSampler.sample_independent:17
 msgid ""
 "Distribution object that specifies a prior and/or scale of the sampling "
 "algorithm."
 msgstr ""
 
-#: of optuna.integration.PyCmaSampler.sample_independent:19
+#: of optuna.integration.cma.PyCmaSampler.sample_independent:19
 msgid "A parameter value."
 msgstr ""
 
-#: of optuna.integration.PyCmaSampler.sample_relative:3
+#: of optuna.integration.cma.PyCmaSampler.sample_relative:3
 msgid ""
 "This method is called once at the beginning of each trial, i.e., right "
 "before the evaluation of the objective function. This method is suitable "
@@ -340,13 +348,23 @@ msgid ""
 "Gaussian Process and CMA-ES."
 msgstr ""
 
-#: of optuna.integration.PyCmaSampler.sample_relative:15
+#: of optuna.integration.cma.PyCmaSampler.sample_relative:15
 msgid ""
 "The search space returned by "
 ":func:`~optuna.samplers.BaseSampler.infer_relative_search_space`."
 msgstr ""
 
-#: of optuna.integration.PyCmaSampler.sample_relative:18
+#: of optuna.integration.cma.PyCmaSampler.sample_relative:18
 msgid "A dictionary containing the parameter names and the values."
 msgstr ""
+
+#~ msgid ""
+#~ "This method is called right before "
+#~ ":func:`~optuna.samplers.BaseSampler.sample_relative` method, "
+#~ "and the search space returned by "
+#~ "this method is pass to it. The "
+#~ "parameters not contained in the search"
+#~ " space will be sampled by using "
+#~ ":func:`~optuna.samplers.BaseSampler.sample_independent` method."
+#~ msgstr ""
 

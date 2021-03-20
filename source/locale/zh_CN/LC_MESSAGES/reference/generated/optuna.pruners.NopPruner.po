@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 2.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-14 18:04-0500\n"
+"POT-Creation-Date: 2021-03-20 13:35-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,11 +21,11 @@ msgstr ""
 msgid "optuna.pruners.NopPruner"
 msgstr ""
 
-#: of optuna.pruners.NopPruner:1
+#: of optuna.pruners._nop.NopPruner:1
 msgid "Pruner which never prunes trials."
 msgstr ""
 
-#: of optuna.pruners.NopPruner:4
+#: of optuna.pruners._nop.NopPruner:4
 msgid "示例"
 msgstr ""
 
@@ -33,16 +33,16 @@ msgstr ""
 msgid "Methods"
 msgstr ""
 
-#: of optuna.pruners.NopPruner.prune:1:<autosummary>:1
+#: of optuna.pruners._nop.NopPruner.prune:1:<autosummary>:1
 msgid ":obj:`prune <optuna.pruners.NopPruner.prune>`\\ \\(study\\, trial\\)"
 msgstr ""
 
-#: of optuna.pruners.NopPruner.prune:1
-#: optuna.pruners.NopPruner.prune:1:<autosummary>:1
+#: of optuna.pruners._nop.NopPruner.prune:1
+#: optuna.pruners._nop.NopPruner.prune:1:<autosummary>:1
 msgid "Judge whether the trial should be pruned based on the reported values."
 msgstr ""
 
-#: of optuna.pruners.NopPruner.prune:3
+#: of optuna.pruners._nop.NopPruner.prune:3
 msgid ""
 "Note that this method is not supposed to be called by library users. "
 "Instead, :func:`optuna.trial.Trial.report` and "
@@ -50,25 +50,29 @@ msgid ""
 "implement pruning mechanism in an objective function."
 msgstr ""
 
-#: of optuna.pruners.NopPruner.prune
+#: of optuna.pruners._nop.NopPruner.prune
 msgid "参数"
 msgstr ""
 
-#: of optuna.pruners.NopPruner.prune:7
+#: of optuna.pruners._nop.NopPruner.prune:7
 msgid "Study object of the target study."
 msgstr ""
 
-#: of optuna.pruners.NopPruner.prune:8
+#: of optuna.pruners._nop.NopPruner.prune:8
 msgid ""
 "FrozenTrial object of the target trial. Take a copy before modifying this"
 " object."
 msgstr ""
 
-#: of optuna.pruners.NopPruner.prune
+#: of optuna.pruners._nop.NopPruner.prune
 msgid "返回"
 msgstr ""
 
-#: of optuna.pruners.NopPruner.prune:11
+#: of optuna.pruners._nop.NopPruner.prune:11
 msgid "A boolean value representing whether the trial should be pruned."
+msgstr ""
+
+#: of optuna.pruners._nop.NopPruner.prune
+msgid "返回类型"
 msgstr ""
 

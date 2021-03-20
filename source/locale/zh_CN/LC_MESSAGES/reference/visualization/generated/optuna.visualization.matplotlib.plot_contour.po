@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 2.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-14 18:04-0500\n"
+"POT-Creation-Date: 2021-03-20 13:35-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,23 +21,23 @@ msgstr ""
 msgid "optuna.visualization.matplotlib.plot\\_contour"
 msgstr ""
 
-#: of optuna.visualization.matplotlib.plot_contour:1
+#: of optuna.visualization.matplotlib._contour.plot_contour:1
 msgid ""
 "Plot the parameter relationship as contour plot in a study with "
 "Matplotlib."
 msgstr ""
 
-#: of optuna.visualization.matplotlib.plot_contour:3
+#: of optuna.visualization.matplotlib._contour.plot_contour:3
 msgid ""
 "Note that, if a parameter contains missing values, a trial with missing "
 "values is not plotted."
 msgstr ""
 
-#: of optuna.visualization.matplotlib.plot_contour:6
+#: of optuna.visualization.matplotlib._contour.plot_contour:6
 msgid "Please refer to :func:`optuna.visualization.plot_contour` for an example."
 msgstr ""
 
-#: of optuna.visualization.matplotlib.plot_contour:10
+#: of optuna.visualization.matplotlib._contour.plot_contour:10
 msgid ""
 "Output figures of this Matplotlib-based "
 ":func:`~optuna.visualization.matplotlib.plot_contour` function would be "
@@ -45,31 +45,31 @@ msgid ""
 ":func:`~optuna.visualization.plot_contour`."
 msgstr ""
 
-#: of optuna.visualization.matplotlib.plot_contour:15
+#: of optuna.visualization.matplotlib._contour.plot_contour:15
 msgid "示例"
 msgstr ""
 
-#: of optuna.visualization.matplotlib.plot_contour:16
+#: of optuna.visualization.matplotlib._contour.plot_contour:16
 msgid ""
 "The following code snippet shows how to plot the parameter relationship "
 "as contour plot."
 msgstr ""
 
-#: of optuna.visualization.matplotlib.plot_contour
+#: of optuna.visualization.matplotlib._contour.plot_contour
 msgid "参数"
 msgstr ""
 
-#: of optuna.visualization.matplotlib.plot_contour:35
+#: of optuna.visualization.matplotlib._contour.plot_contour:35
 msgid ""
 "A :class:`~optuna.study.Study` object whose trials are plotted for their "
 "target values."
 msgstr ""
 
-#: of optuna.visualization.matplotlib.plot_contour:36
+#: of optuna.visualization.matplotlib._contour.plot_contour:36
 msgid "Parameter list to visualize. The default is all parameters."
 msgstr ""
 
-#: of optuna.visualization.matplotlib.plot_contour:37
+#: of optuna.visualization.matplotlib._contour.plot_contour:37
 msgid ""
 "A function to specify the value to display. If it is :obj:`None` and "
 "``study`` is being used for single-objective optimization, the objective "
@@ -77,42 +77,46 @@ msgid ""
 "being used for multi-objective optimization."
 msgstr ""
 
-#: of optuna.visualization.matplotlib.plot_contour:37
+#: of optuna.visualization.matplotlib._contour.plot_contour:37
 msgid ""
 "A function to specify the value to display. If it is :obj:`None` and "
 "``study`` is being used for single-objective optimization, the objective "
 "values are plotted."
 msgstr ""
 
-#: of optuna.visualization.matplotlib.plot_contour:41
+#: of optuna.visualization.matplotlib._contour.plot_contour:41
 msgid ""
 "Specify this argument if ``study`` is being used for multi-objective "
 "optimization."
 msgstr ""
 
-#: of optuna.visualization.matplotlib.plot_contour:42
+#: of optuna.visualization.matplotlib._contour.plot_contour:42
 msgid "Target's name to display on the color bar."
 msgstr ""
 
-#: of optuna.visualization.matplotlib.plot_contour
+#: of optuna.visualization.matplotlib._contour.plot_contour
 msgid "返回"
 msgstr ""
 
-#: of optuna.visualization.matplotlib.plot_contour:44
+#: of optuna.visualization.matplotlib._contour.plot_contour:44
 msgid "A :class:`matplotlib.axes.Axes` object."
 msgstr ""
 
-#: of optuna.visualization.matplotlib.plot_contour
+#: of optuna.visualization.matplotlib._contour.plot_contour
 msgid "引发"
 msgstr ""
 
-#: of optuna.visualization.matplotlib.plot_contour:46
+#: of optuna.visualization.matplotlib._contour.plot_contour:46
 msgid ""
 "If ``target`` is :obj:`None` and ``study`` is being used for multi-"
 "objective     optimization."
 msgstr ""
 
-#: of optuna.visualization.matplotlib.plot_contour:49
+#: of optuna.visualization.matplotlib._contour.plot_contour
+msgid "返回类型"
+msgstr ""
+
+#: of optuna.visualization.matplotlib._contour.plot_contour:49
 msgid ""
 "Added in v2.2.0 as an experimental feature. The interface may change in "
 "newer versions without prior notice. See "

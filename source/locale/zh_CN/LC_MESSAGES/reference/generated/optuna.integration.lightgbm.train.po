@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 2.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-14 18:04-0500\n"
+"POT-Creation-Date: 2021-03-20 13:35-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,21 +21,21 @@ msgstr ""
 msgid "optuna.integration.lightgbm.train"
 msgstr ""
 
-#: of optuna.integration.lightgbm.train:1
+#: of optuna.integration._lightgbm_tuner.train:1
 msgid "Wrapper of LightGBM Training API to tune hyperparameters."
 msgstr ""
 
-#: of optuna.integration.lightgbm.train:3
+#: of optuna.integration._lightgbm_tuner.train:3
 msgid ""
 "It tunes important hyperparameters (e.g., ``min_child_samples`` and "
 "``feature_fraction``) in a stepwise manner. It is a drop-in replacement "
 "for `lightgbm.train()`_. See `a simple example of LightGBM Tuner "
-"<https://github.com/optuna/optuna/blob/master/examples/lig "
-"htgbm_tuner_simple.py>`_ which optimizes the validation log loss of "
-"cancer detection."
+"<https://github.com/optuna/optuna/blob/master/examples/ "
+"lightgbm/lightgbm_tuner_simple.py>`_ which optimizes the validation log "
+"loss of cancer detection."
 msgstr ""
 
-#: of optuna.integration.lightgbm.train:8
+#: of optuna.integration._lightgbm_tuner.train:9
 msgid ""
 ":func:`~optuna.integration.lightgbm.train` is a wrapper function of "
 ":class:`~optuna.integration.lightgbm.LightGBMTuner`. To use feature in "
@@ -44,7 +44,26 @@ msgid ""
 "this function."
 msgstr ""
 
-#: of optuna.integration.lightgbm.train:13
+#: of optuna.integration._lightgbm_tuner.train:14
 msgid "Arguments and keyword arguments for `lightgbm.train()`_ can be passed."
 msgstr ""
+
+#: of optuna.integration._lightgbm_tuner.train
+msgid "参数"
+msgstr ""
+
+#: of optuna.integration._lightgbm_tuner.train
+msgid "返回类型"
+msgstr ""
+
+#~ msgid ""
+#~ "It tunes important hyperparameters (e.g., "
+#~ "``min_child_samples`` and ``feature_fraction``) in"
+#~ " a stepwise manner. It is a "
+#~ "drop-in replacement for `lightgbm.train()`_. "
+#~ "See `a simple example of LightGBM "
+#~ "Tuner <https://github.com/optuna/optuna/blob/master/examples/lig"
+#~ " htgbm_tuner_simple.py>`_ which optimizes the "
+#~ "validation log loss of cancer detection."
+#~ msgstr ""
 

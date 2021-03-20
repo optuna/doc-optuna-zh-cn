@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 2.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-14 18:04-0500\n"
+"POT-Creation-Date: 2021-03-20 13:35-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,40 +21,41 @@ msgstr ""
 msgid "optuna.samplers.NSGAIISampler"
 msgstr ""
 
-#: of optuna.samplers.NSGAIISampler:1
+#: of optuna.samplers._nsga2.NSGAIISampler:1
 msgid "Multi-objective sampler using the NSGA-II algorithm."
 msgstr ""
 
-#: of optuna.samplers.NSGAIISampler:3
+#: of optuna.samplers._nsga2.NSGAIISampler:3
 msgid ""
 "NSGA-II stands for \"Nondominated Sorting Genetic Algorithm II\", which "
 "is a well known, fast and elitist multi-objective genetic algorithm."
 msgstr ""
 
-#: of optuna.samplers.NSGAIISampler:6
+#: of optuna.samplers._nsga2.NSGAIISampler:6
 msgid ""
 "For further information about NSGA-II, please refer to the following "
 "paper:"
 msgstr ""
 
-#: of optuna.samplers.NSGAIISampler:8
+#: of optuna.samplers._nsga2.NSGAIISampler:8
 msgid ""
 "`A fast and elitist multiobjective genetic algorithm: NSGA-II "
 "<https://ieeexplore.ieee.org/document/996017>`_"
 msgstr ""
 
-#: of optuna.samplers.NSGAIISampler optuna.samplers.NSGAIISampler.after_trial
-#: optuna.samplers.NSGAIISampler.infer_relative_search_space
-#: optuna.samplers.NSGAIISampler.sample_independent
-#: optuna.samplers.NSGAIISampler.sample_relative
+#: of optuna.samplers._nsga2.NSGAIISampler
+#: optuna.samplers._nsga2.NSGAIISampler.after_trial
+#: optuna.samplers._nsga2.NSGAIISampler.infer_relative_search_space
+#: optuna.samplers._nsga2.NSGAIISampler.sample_independent
+#: optuna.samplers._nsga2.NSGAIISampler.sample_relative
 msgid "参数"
 msgstr ""
 
-#: of optuna.samplers.NSGAIISampler:11
+#: of optuna.samplers._nsga2.NSGAIISampler:11
 msgid "Number of individuals (trials) in a generation."
 msgstr ""
 
-#: of optuna.samplers.NSGAIISampler:12
+#: of optuna.samplers._nsga2.NSGAIISampler:12
 msgid ""
 "Probability of mutating each parameter when creating a new individual. If"
 " :obj:`None` is specified, the value ``1.0 / len(parent_trial.params)`` "
@@ -62,145 +63,211 @@ msgid ""
 "individual."
 msgstr ""
 
-#: of optuna.samplers.NSGAIISampler:15
+#: of optuna.samplers._nsga2.NSGAIISampler:15
 msgid ""
 "Probability that a crossover (parameters swapping between parents) will "
 "occur when creating a new individual."
 msgstr ""
 
-#: of optuna.samplers.NSGAIISampler:17
+#: of optuna.samplers._nsga2.NSGAIISampler:17
 msgid "Probability of swapping each parameter of the parents during crossover."
 msgstr ""
 
-#: of optuna.samplers.NSGAIISampler:18
+#: of optuna.samplers._nsga2.NSGAIISampler:18
 msgid "Seed for random number generator."
+msgstr ""
+
+#: of optuna.samplers._nsga2.NSGAIISampler:19
+msgid ""
+"An optional function that computes the objective constraints. It must "
+"take a :class:`~optuna.trial.FrozenTrial` and return the constraints. The"
+" return value must be a sequence of :obj:`float` s. A value strictly "
+"larger than 0 means that a constraints is violated. A value equal to or "
+"smaller than 0 is considered feasible. If constraints_func returns more "
+"than one value for a trial, that trial is considered feasible if and only"
+" if all values are equal to 0 or smaller.  The constraints are handled by"
+" the constrained domination. A trial x is said to constrained-dominate a "
+"trial y, if any of the following conditions is true:  1. Trial x is "
+"feasible and trial y is not. 2. Trial x and y are both infeasible, but "
+"trial x has a smaller overall violation. 3. Trial x and y are feasible "
+"and trial x dominates trial y.  .. note::     Added in v2.5.0 as an "
+"experimental feature. The interface may change in newer     versions "
+"without prior notice. See     "
+"https://github.com/optuna/optuna/releases/tag/v2.5.0."
+msgstr ""
+
+#: of optuna.samplers._nsga2.NSGAIISampler:19
+msgid ""
+"An optional function that computes the objective constraints. It must "
+"take a :class:`~optuna.trial.FrozenTrial` and return the constraints. The"
+" return value must be a sequence of :obj:`float` s. A value strictly "
+"larger than 0 means that a constraints is violated. A value equal to or "
+"smaller than 0 is considered feasible. If constraints_func returns more "
+"than one value for a trial, that trial is considered feasible if and only"
+" if all values are equal to 0 or smaller."
+msgstr ""
+
+#: of optuna.samplers._nsga2.NSGAIISampler:26
+msgid ""
+"The constraints are handled by the constrained domination. A trial x is "
+"said to constrained-dominate a trial y, if any of the following "
+"conditions is true:"
+msgstr ""
+
+#: of optuna.samplers._nsga2.NSGAIISampler:29
+msgid "Trial x is feasible and trial y is not."
+msgstr ""
+
+#: of optuna.samplers._nsga2.NSGAIISampler:30
+msgid ""
+"Trial x and y are both infeasible, but trial x has a smaller overall "
+"violation."
+msgstr ""
+
+#: of optuna.samplers._nsga2.NSGAIISampler:31
+msgid "Trial x and y are feasible and trial x dominates trial y."
+msgstr ""
+
+#: of optuna.samplers._nsga2.NSGAIISampler:34
+msgid ""
+"Added in v2.5.0 as an experimental feature. The interface may change in "
+"newer versions without prior notice. See "
+"https://github.com/optuna/optuna/releases/tag/v2.5.0."
 msgstr ""
 
 #: ../../source/reference/generated/optuna.samplers.NSGAIISampler.rst:12
 msgid "Methods"
 msgstr ""
 
-#: of optuna.samplers.NSGAIISampler.after_trial:1:<autosummary>:1
+#: of optuna.samplers._nsga2.NSGAIISampler.after_trial:1:<autosummary>:1
 msgid ""
 ":obj:`after_trial <optuna.samplers.NSGAIISampler.after_trial>`\\ "
 "\\(study\\, trial\\, state\\, values\\)"
 msgstr ""
 
-#: of optuna.samplers.NSGAIISampler.after_trial:1
-#: optuna.samplers.NSGAIISampler.after_trial:1:<autosummary>:1
+#: of optuna.samplers._nsga2.NSGAIISampler.after_trial:1
+#: optuna.samplers._nsga2.NSGAIISampler.after_trial:1:<autosummary>:1
 msgid "Trial post-processing."
 msgstr ""
 
-#: of optuna.samplers.NSGAIISampler.after_trial:1:<autosummary>:1
+#: of optuna.samplers._nsga2.NSGAIISampler.after_trial:1:<autosummary>:1
 msgid ""
 ":obj:`infer_relative_search_space "
 "<optuna.samplers.NSGAIISampler.infer_relative_search_space>`\\ "
 "\\(study\\, trial\\)"
 msgstr ""
 
-#: of optuna.samplers.NSGAIISampler.after_trial:1:<autosummary>:1
-#: optuna.samplers.NSGAIISampler.infer_relative_search_space:1
+#: of optuna.samplers._nsga2.NSGAIISampler.after_trial:1:<autosummary>:1
+#: optuna.samplers._nsga2.NSGAIISampler.infer_relative_search_space:1
 msgid ""
 "Infer the search space that will be used by relative sampling in the "
 "target trial."
 msgstr ""
 
-#: of optuna.samplers.NSGAIISampler.after_trial:1:<autosummary>:1
+#: of optuna.samplers._nsga2.NSGAIISampler.after_trial:1:<autosummary>:1
 msgid ":obj:`reseed_rng <optuna.samplers.NSGAIISampler.reseed_rng>`\\ \\(\\)"
 msgstr ""
 
-#: of optuna.samplers.NSGAIISampler.after_trial:1:<autosummary>:1
-#: optuna.samplers.NSGAIISampler.reseed_rng:1
+#: of optuna.samplers._nsga2.NSGAIISampler.after_trial:1:<autosummary>:1
+#: optuna.samplers._nsga2.NSGAIISampler.reseed_rng:1
 msgid "Reseed sampler's random number generator."
 msgstr ""
 
-#: of optuna.samplers.NSGAIISampler.after_trial:1:<autosummary>:1
+#: of optuna.samplers._nsga2.NSGAIISampler.after_trial:1:<autosummary>:1
 msgid ""
 ":obj:`sample_independent "
 "<optuna.samplers.NSGAIISampler.sample_independent>`\\ \\(study\\, "
 "trial\\, param\\_name\\, ...\\)"
 msgstr ""
 
-#: of optuna.samplers.NSGAIISampler.after_trial:1:<autosummary>:1
-#: optuna.samplers.NSGAIISampler.sample_independent:1
+#: of optuna.samplers._nsga2.NSGAIISampler.after_trial:1:<autosummary>:1
+#: optuna.samplers._nsga2.NSGAIISampler.sample_independent:1
 msgid "Sample a parameter for a given distribution."
 msgstr ""
 
-#: of optuna.samplers.NSGAIISampler.after_trial:1:<autosummary>:1
+#: of optuna.samplers._nsga2.NSGAIISampler.after_trial:1:<autosummary>:1
 msgid ""
 ":obj:`sample_relative <optuna.samplers.NSGAIISampler.sample_relative>`\\ "
 "\\(study\\, trial\\, search\\_space\\)"
 msgstr ""
 
-#: of optuna.samplers.NSGAIISampler.after_trial:1:<autosummary>:1
-#: optuna.samplers.NSGAIISampler.sample_relative:1
+#: of optuna.samplers._nsga2.NSGAIISampler.after_trial:1:<autosummary>:1
+#: optuna.samplers._nsga2.NSGAIISampler.sample_relative:1
 msgid "Sample parameters in a given search space."
 msgstr ""
 
-#: of optuna.samplers.NSGAIISampler.after_trial:3
+#: of optuna.samplers._nsga2.NSGAIISampler.after_trial:3
 msgid ""
 "This method is called after the objective function returns and right "
 "before the trials is finished and its state is stored."
 msgstr ""
 
-#: of optuna.samplers.NSGAIISampler.after_trial:7
+#: of optuna.samplers._nsga2.NSGAIISampler.after_trial:7
 msgid ""
 "Added in v2.4.0 as an experimental feature. The interface may change in "
 "newer versions without prior notice. See "
 "https://github.com/optuna/optuna/releases/tag/v2.4.0."
 msgstr ""
 
-#: of optuna.samplers.NSGAIISampler.after_trial:10
-#: optuna.samplers.NSGAIISampler.infer_relative_search_space:8
-#: optuna.samplers.NSGAIISampler.sample_independent:13
-#: optuna.samplers.NSGAIISampler.sample_relative:12
+#: of optuna.samplers._nsga2.NSGAIISampler.after_trial:10
+#: optuna.samplers._nsga2.NSGAIISampler.infer_relative_search_space:8
+#: optuna.samplers._nsga2.NSGAIISampler.sample_independent:13
+#: optuna.samplers._nsga2.NSGAIISampler.sample_relative:12
 msgid "Target study object."
 msgstr ""
 
-#: of optuna.samplers.NSGAIISampler.after_trial:11
-#: optuna.samplers.NSGAIISampler.infer_relative_search_space:9
-#: optuna.samplers.NSGAIISampler.sample_independent:14
-#: optuna.samplers.NSGAIISampler.sample_relative:13
+#: of optuna.samplers._nsga2.NSGAIISampler.after_trial:11
+#: optuna.samplers._nsga2.NSGAIISampler.infer_relative_search_space:9
+#: optuna.samplers._nsga2.NSGAIISampler.sample_independent:14
+#: optuna.samplers._nsga2.NSGAIISampler.sample_relative:13
 msgid "Target trial object. Take a copy before modifying this object."
 msgstr ""
 
-#: of optuna.samplers.NSGAIISampler.after_trial:13
+#: of optuna.samplers._nsga2.NSGAIISampler.after_trial:13
 msgid "Resulting trial state."
 msgstr ""
 
-#: of optuna.samplers.NSGAIISampler.after_trial:14
+#: of optuna.samplers._nsga2.NSGAIISampler.after_trial:14
 msgid ""
 "Resulting trial values. Guaranteed to not be :obj:`None` if trial "
 "succeeded."
 msgstr ""
 
-#: of optuna.samplers.NSGAIISampler.infer_relative_search_space:3
+#: of optuna.samplers._nsga2.NSGAIISampler.after_trial
+#: optuna.samplers._nsga2.NSGAIISampler.infer_relative_search_space
+#: optuna.samplers._nsga2.NSGAIISampler.reseed_rng
+#: optuna.samplers._nsga2.NSGAIISampler.sample_independent
+#: optuna.samplers._nsga2.NSGAIISampler.sample_relative
+msgid "返回类型"
+msgstr ""
+
+#: of optuna.samplers._nsga2.NSGAIISampler.infer_relative_search_space:3
 msgid ""
 "This method is called right before "
 ":func:`~optuna.samplers.BaseSampler.sample_relative` method, and the "
-"search space returned by this method is pass to it. The parameters not "
+"search space returned by this method is passed to it. The parameters not "
 "contained in the search space will be sampled by using "
 ":func:`~optuna.samplers.BaseSampler.sample_independent` method."
 msgstr ""
 
-#: of optuna.samplers.NSGAIISampler.infer_relative_search_space
-#: optuna.samplers.NSGAIISampler.sample_independent
-#: optuna.samplers.NSGAIISampler.sample_relative
+#: of optuna.samplers._nsga2.NSGAIISampler.infer_relative_search_space
+#: optuna.samplers._nsga2.NSGAIISampler.sample_independent
+#: optuna.samplers._nsga2.NSGAIISampler.sample_relative
 msgid "返回"
 msgstr ""
 
-#: of optuna.samplers.NSGAIISampler.infer_relative_search_space:12
+#: of optuna.samplers._nsga2.NSGAIISampler.infer_relative_search_space:12
 msgid "A dictionary containing the parameter names and parameter's distributions."
 msgstr ""
 
-#: of optuna.samplers.NSGAIISampler.infer_relative_search_space:15
+#: of optuna.samplers._nsga2.NSGAIISampler.infer_relative_search_space:15
 msgid ""
 "Please refer to :func:`~optuna.samplers.intersection_search_space` as an "
 "implementation of "
 ":func:`~optuna.samplers.BaseSampler.infer_relative_search_space`."
 msgstr ""
 
-#: of optuna.samplers.NSGAIISampler.reseed_rng:3
+#: of optuna.samplers._nsga2.NSGAIISampler.reseed_rng:3
 msgid ""
 "This method is called by the :class:`~optuna.study.Study` instance if "
 "trials are executed in parallel with the option ``n_jobs>1``. In that "
@@ -210,7 +277,7 @@ msgid ""
 "generator."
 msgstr ""
 
-#: of optuna.samplers.NSGAIISampler.sample_independent:3
+#: of optuna.samplers._nsga2.NSGAIISampler.sample_independent:3
 msgid ""
 "This method is called only for the parameters not contained in the search"
 " space returned by :func:`~optuna.samplers.BaseSampler.sample_relative` "
@@ -218,29 +285,29 @@ msgid ""
 "relationship between parameters such as random sampling and TPE."
 msgstr ""
 
-#: of optuna.samplers.NSGAIISampler.sample_independent:9
-#: optuna.samplers.NSGAIISampler.sample_relative:8
+#: of optuna.samplers._nsga2.NSGAIISampler.sample_independent:9
+#: optuna.samplers._nsga2.NSGAIISampler.sample_relative:8
 msgid ""
 "The failed trials are ignored by any build-in samplers when they sample "
 "new parameters. Thus, failed trials are regarded as deleted in the "
 "samplers' perspective."
 msgstr ""
 
-#: of optuna.samplers.NSGAIISampler.sample_independent:16
+#: of optuna.samplers._nsga2.NSGAIISampler.sample_independent:16
 msgid "Name of the sampled parameter."
 msgstr ""
 
-#: of optuna.samplers.NSGAIISampler.sample_independent:17
+#: of optuna.samplers._nsga2.NSGAIISampler.sample_independent:17
 msgid ""
 "Distribution object that specifies a prior and/or scale of the sampling "
 "algorithm."
 msgstr ""
 
-#: of optuna.samplers.NSGAIISampler.sample_independent:19
+#: of optuna.samplers._nsga2.NSGAIISampler.sample_independent:19
 msgid "A parameter value."
 msgstr ""
 
-#: of optuna.samplers.NSGAIISampler.sample_relative:3
+#: of optuna.samplers._nsga2.NSGAIISampler.sample_relative:3
 msgid ""
 "This method is called once at the beginning of each trial, i.e., right "
 "before the evaluation of the objective function. This method is suitable "
@@ -248,13 +315,23 @@ msgid ""
 "Gaussian Process and CMA-ES."
 msgstr ""
 
-#: of optuna.samplers.NSGAIISampler.sample_relative:15
+#: of optuna.samplers._nsga2.NSGAIISampler.sample_relative:15
 msgid ""
 "The search space returned by "
 ":func:`~optuna.samplers.BaseSampler.infer_relative_search_space`."
 msgstr ""
 
-#: of optuna.samplers.NSGAIISampler.sample_relative:18
+#: of optuna.samplers._nsga2.NSGAIISampler.sample_relative:18
 msgid "A dictionary containing the parameter names and the values."
 msgstr ""
+
+#~ msgid ""
+#~ "This method is called right before "
+#~ ":func:`~optuna.samplers.BaseSampler.sample_relative` method, "
+#~ "and the search space returned by "
+#~ "this method is pass to it. The "
+#~ "parameters not contained in the search"
+#~ " space will be sampled by using "
+#~ ":func:`~optuna.samplers.BaseSampler.sample_independent` method."
+#~ msgstr ""
 

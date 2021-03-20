@@ -1,0 +1,147 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018, Optuna Contributors.
+# This file is distributed under the same license as the Optuna package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Optuna 2.6.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-03-20 13:35-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../source/tutorial/20_recipes/008_specify_params.rst:6
+msgid ""
+"Click :ref:`here "
+"<sphx_glr_download_tutorial_20_recipes_008_specify_params.py>`     to "
+"download the full example code"
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/008_specify_params.rst:15
+msgid "Specify Hyperparameters Manually"
+msgstr "手动指定超参数"
+
+#: ../../source/tutorial/20_recipes/008_specify_params.rst:17
+msgid ""
+"It's natural that you have some specific sets of hyperparameters to try "
+"first such as initial learning rate values and the number of leaves. "
+"Also, it's also possible that you've already tried those sets before "
+"having Optuna find better sets of hyperparameters."
+msgstr ""
+"你自然有一些特定的超参数集要先尝试, 比如初始学习率和叶子数量. "
+"另外, 也有可能在让 Optuna 找到更好的超参数集之前，你已经尝试过一些集合."
+
+#: ../../source/tutorial/20_recipes/008_specify_params.rst:22
+msgid "Optuna provides two APIs to support such cases:"
+msgstr "Optuna 提供 两个API 以应对这种场景:"
+
+#: ../../source/tutorial/20_recipes/008_specify_params.rst:24
+msgid ""
+"Passing those sets of hyperparameters and let Optuna evaluate them - "
+":func:`~optuna.study.Study.enqueue_trial`"
+msgstr "将这些超参数集合传递过去并让 Optuna 对其求值 - "
+":func:`~optuna.study.Study.enqueue_trial`"
+
+#: ../../source/tutorial/20_recipes/008_specify_params.rst:25
+msgid ""
+"Adding the results of those sets as completed ``Trial``\\s - "
+":func:`~optuna.study.Study.add_trial`"
+msgstr "将这些集合的结果标记为已完成的 ``Trial``\\s - "
+":func:`~optuna.study.Study.add_trial`"
+
+#: ../../source/tutorial/20_recipes/008_specify_params.rst:28
+msgid "First Scenario: Have Optuna evaluate your hyperparameters"
+msgstr "第一个场景: 让 Optuna 对你的超参数求值"
+
+#: ../../source/tutorial/20_recipes/008_specify_params.rst:30
+msgid ""
+"In this scenario, let's assume you have some out-of-box sets of "
+"hyperparameters but have not evaluated them yet and decided to use Optuna"
+" to find better sets of hyperparameters."
+msgstr "在这个场景中, 我们假设你已经有了一些开箱即用的超参数但是还没有对他们"
+"进行求值过, 你决定用 Optuna 来找到更好的超参数."
+
+#: ../../source/tutorial/20_recipes/008_specify_params.rst:33
+msgid ""
+"Optuna has :func:`optuna.study.Study.enqueue_trial` which lets you pass "
+"those sets of hyperparameters to Optuna and Optuna will evaluate them."
+msgstr "Optuna 有一个 API :func:`optuna.study.Study.enqueue_trial` , 它允许你将这些"
+"超参数传入 Optuna, Optuna 会对他们求值."
+
+#: ../../source/tutorial/20_recipes/008_specify_params.rst:36
+msgid ""
+"This section walks you through how to use this lit API with `LightGBM "
+"<https://lightgbm.readthedocs.io/en/latest/>`_."
+msgstr "这部分将向你介绍如何使用 `LightGBM "
+"<https://lightgbm.readthedocs.io/en/latest/>`_ 的 lit API."
+
+#: ../../source/tutorial/20_recipes/008_specify_params.rst:58
+msgid "Define the objective function."
+msgstr "定义目标函数."
+
+#: ../../source/tutorial/20_recipes/008_specify_params.rst:98
+msgid "Then, construct ``Study`` for hyperparameter optimization."
+msgstr "然后构建 ``Study`` 用于超参数优化."
+
+#: ../../source/tutorial/20_recipes/008_specify_params.rst:113
+msgid ""
+"Here, we get Optuna evaluate some sets with larger ``\"bagging_fraq\"`` "
+"value and the default values."
+msgstr "在这里, 我们让 Optuna 对一些带有更大的  ``\"bagging_fraq\"`` 和默认值的集合求值."
+
+#: ../../source/tutorial/20_recipes/008_specify_params.rst:149
+#: ../../source/tutorial/20_recipes/008_specify_params.rst:327
+msgid "Out:"
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/008_specify_params.rst:274
+msgid "Second scenario: Have Optuna utilize already evaluated hyperparameters"
+msgstr "第二个场景: 让 Optuna 利用已经求值过的超参数."
+
+#: ../../source/tutorial/20_recipes/008_specify_params.rst:276
+msgid ""
+"In this scenario, let's assume you have some out-of-box sets of "
+"hyperparameters and you have already evaluated them but the results are "
+"not desirable so that you are thinking of using Optuna."
+msgstr "在这个场景中, 我们假设你已经有了一些开箱即用的超参数, 而且你已经对他们"
+"进行求值过, 但是其结果并不让人满意. 因此你考虑使用 Optuna."
+
+#: ../../source/tutorial/20_recipes/008_specify_params.rst:280
+msgid ""
+"Optuna has :func:`optuna.study.Study.add_trial` which lets you register "
+"those results to Optuna and then Optuna will sample hyperparameters "
+"taking them into account."
+msgstr "Optuna 有一个 API :func:`optuna.study.Study.add_trial` , 它让你向Optuna 注册这些结果, "
+"之后 Optuna 会在进行超参数采样的时候将它们考虑进去."
+
+#: ../../source/tutorial/20_recipes/008_specify_params.rst:283
+msgid "In this section,  the ``objective`` is the same as the first scenario."
+msgstr "在本部分中, ``objective`` 和第一个场景中一样."
+
+#: ../../source/tutorial/20_recipes/008_specify_params.rst:455
+msgid "**Total running time of the script:** ( 0 minutes  6.699 seconds)"
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/008_specify_params.rst:470
+msgid ""
+":download:`Download Python source code: 008_specify_params.py "
+"<008_specify_params.py>`"
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/008_specify_params.rst:476
+msgid ""
+":download:`Download Jupyter notebook: 008_specify_params.ipynb "
+"<008_specify_params.ipynb>`"
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/008_specify_params.rst:483
+msgid "`Gallery generated by Sphinx-Gallery <https://sphinx-gallery.github.io>`_"
+msgstr ""
+

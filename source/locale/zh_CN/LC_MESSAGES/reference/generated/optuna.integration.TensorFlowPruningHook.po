@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 2.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-14 18:04-0500\n"
+"POT-Creation-Date: 2021-03-20 13:35-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,36 +21,36 @@ msgstr ""
 msgid "optuna.integration.TensorFlowPruningHook"
 msgstr ""
 
-#: of optuna.integration.TensorFlowPruningHook:1
+#: of optuna.integration.tensorflow.TensorFlowPruningHook:1
 msgid "TensorFlow SessionRunHook to prune unpromising trials."
 msgstr ""
 
-#: of optuna.integration.TensorFlowPruningHook:3
+#: of optuna.integration.tensorflow.TensorFlowPruningHook:3
 msgid ""
 "See `the example <https://github.com/optuna/optuna/blob/master/examples/ "
-"pruning/tensorflow_estimator_integration.py>`_ if you want to add a "
+"tensorflow/tensorflow_estimator_integration.py>`_ if you want to add a "
 "pruning hook to TensorFlow's estimator."
 msgstr ""
 
-#: of optuna.integration.TensorFlowPruningHook
+#: of optuna.integration.tensorflow.TensorFlowPruningHook
 msgid "参数"
 msgstr ""
 
-#: of optuna.integration.TensorFlowPruningHook:7
+#: of optuna.integration.tensorflow.TensorFlowPruningHook:7
 msgid ""
 "A :class:`~optuna.trial.Trial` corresponding to the current evaluation of"
 " the objective function."
 msgstr ""
 
-#: of optuna.integration.TensorFlowPruningHook:9
+#: of optuna.integration.tensorflow.TensorFlowPruningHook:9
 msgid "An estimator which you will use."
 msgstr ""
 
-#: of optuna.integration.TensorFlowPruningHook:10
+#: of optuna.integration.tensorflow.TensorFlowPruningHook:10
 msgid "An evaluation metric for pruning, e.g., ``accuracy`` and ``loss``."
 msgstr ""
 
-#: of optuna.integration.TensorFlowPruningHook:11
+#: of optuna.integration.tensorflow.TensorFlowPruningHook:11
 msgid "An interval to watch the summary file."
 msgstr ""
 
@@ -73,4 +73,12 @@ msgstr ""
 #: ../../source/reference/generated/optuna.integration.TensorFlowPruningHook.rst:17:<autosummary>:1
 msgid ":obj:`begin <optuna.integration.TensorFlowPruningHook.begin>`\\ \\(\\)"
 msgstr ""
+
+#~ msgid ""
+#~ "See `the example "
+#~ "<https://github.com/optuna/optuna/blob/master/examples/ "
+#~ "pruning/tensorflow_estimator_integration.py>`_ if you "
+#~ "want to add a pruning hook to "
+#~ "TensorFlow's estimator."
+#~ msgstr ""
 

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 2.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-14 18:04-0500\n"
+"POT-Creation-Date: 2021-03-20 13:35-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,38 +21,38 @@ msgstr ""
 msgid "optuna.multi\\_objective.samplers.MOTPEMultiObjectiveSampler"
 msgstr ""
 
-#: of optuna.multi_objective.samplers.MOTPEMultiObjectiveSampler:1
+#: of optuna.multi_objective.samplers._motpe.MOTPEMultiObjectiveSampler:1
 msgid "Multi-objective sampler using the MOTPE algorithm."
 msgstr ""
 
-#: of optuna.multi_objective.samplers.MOTPEMultiObjectiveSampler:3
+#: of optuna.multi_objective.samplers._motpe.MOTPEMultiObjectiveSampler:3
 msgid ""
 "This sampler is a multiobjective version of "
 ":class:`~optuna.samplers.TPESampler`."
 msgstr ""
 
-#: of optuna.multi_objective.samplers.MOTPEMultiObjectiveSampler:5
+#: of optuna.multi_objective.samplers._motpe.MOTPEMultiObjectiveSampler:5
 msgid ""
 "For further information about MOTPE algorithm, please refer to the "
 "following paper:"
 msgstr ""
 
-#: of optuna.multi_objective.samplers.MOTPEMultiObjectiveSampler:7
+#: of optuna.multi_objective.samplers._motpe.MOTPEMultiObjectiveSampler:7
 msgid ""
 "`Multiobjective tree-structured parzen estimator for computationally "
 "expensive optimization problems "
 "<https://dl.acm.org/doi/abs/10.1145/3377930.3389817>`_"
 msgstr ""
 
-#: of optuna.multi_objective.samplers.MOTPEMultiObjectiveSampler
-#: optuna.multi_objective.samplers.MOTPEMultiObjectiveSampler.after_trial
-#: optuna.multi_objective.samplers.MOTPEMultiObjectiveSampler.infer_relative_search_space
-#: optuna.multi_objective.samplers.MOTPEMultiObjectiveSampler.sample_independent
-#: optuna.multi_objective.samplers.MOTPEMultiObjectiveSampler.sample_relative
+#: of optuna.multi_objective.samplers._motpe.MOTPEMultiObjectiveSampler
+#: optuna.multi_objective.samplers._motpe.MOTPEMultiObjectiveSampler.infer_relative_search_space
+#: optuna.multi_objective.samplers._motpe.MOTPEMultiObjectiveSampler.sample_independent
+#: optuna.multi_objective.samplers._motpe.MOTPEMultiObjectiveSampler.sample_relative
+#: optuna.samplers._tpe.sampler.TPESampler.after_trial
 msgid "参数"
 msgstr ""
 
-#: of optuna.multi_objective.samplers.MOTPEMultiObjectiveSampler:10
+#: of optuna.multi_objective.samplers._motpe.MOTPEMultiObjectiveSampler:10
 msgid ""
 "Enhance the stability of Parzen estimator by imposing a Gaussian prior "
 "when :obj:`True`. The prior is only effective if the sampling "
@@ -64,7 +64,7 @@ msgid ""
 ":class:`~optuna.distributions.IntLogUniformDistribution`."
 msgstr ""
 
-#: of optuna.multi_objective.samplers.MOTPEMultiObjectiveSampler:17
+#: of optuna.multi_objective.samplers._motpe.MOTPEMultiObjectiveSampler:17
 msgid ""
 "The weight of the prior. This argument is used in "
 ":class:`~optuna.distributions.UniformDistribution`, "
@@ -75,63 +75,63 @@ msgid ""
 ":class:`~optuna.distributions.CategoricalDistribution`."
 msgstr ""
 
-#: of optuna.multi_objective.samplers.MOTPEMultiObjectiveSampler:24
+#: of optuna.multi_objective.samplers._motpe.MOTPEMultiObjectiveSampler:24
 msgid ""
 "Enable a heuristic to limit the smallest variances of Gaussians used in "
 "the Parzen estimator."
 msgstr ""
 
-#: of optuna.multi_objective.samplers.MOTPEMultiObjectiveSampler:26
+#: of optuna.multi_objective.samplers._motpe.MOTPEMultiObjectiveSampler:26
 msgid ""
 "Take endpoints of domains into account when calculating variances of "
 "Gaussians in Parzen estimator. See the original paper for details on the "
 "heuristics to calculate the variances."
 msgstr ""
 
-#: of optuna.multi_objective.samplers.MOTPEMultiObjectiveSampler:29
+#: of optuna.multi_objective.samplers._motpe.MOTPEMultiObjectiveSampler:29
 msgid ""
 "The random sampling is used instead of the MOTPE algorithm until the "
 "given number of trials finish in the same study. 11 * number of variables"
 " - 1 is recommended in the original paper."
 msgstr ""
 
-#: of optuna.multi_objective.samplers.MOTPEMultiObjectiveSampler:32
+#: of optuna.multi_objective.samplers._motpe.MOTPEMultiObjectiveSampler:32
 msgid ""
 "Number of candidate samples used to calculate the expected hypervolume "
 "improvement."
 msgstr ""
 
-#: of optuna.multi_objective.samplers.MOTPEMultiObjectiveSampler:33
+#: of optuna.multi_objective.samplers._motpe.MOTPEMultiObjectiveSampler:33
 msgid ""
 "A function that takes the number of finished trials and returns the "
 "number of trials to form a density function for samples with low grains. "
 "See the original paper for more details."
 msgstr ""
 
-#: of optuna.multi_objective.samplers.MOTPEMultiObjectiveSampler:36
+#: of optuna.multi_objective.samplers._motpe.MOTPEMultiObjectiveSampler:36
 msgid ""
 "A function that takes the number of finished trials and returns a weight "
 "for them. As default, weights are automatically calculated by the MOTPE's"
 " default strategy."
 msgstr ""
 
-#: of optuna.multi_objective.samplers.MOTPEMultiObjectiveSampler:38
+#: of optuna.multi_objective.samplers._motpe.MOTPEMultiObjectiveSampler:38
 msgid "Seed for random number generator."
 msgstr ""
 
-#: of optuna.multi_objective.samplers.MOTPEMultiObjectiveSampler:41
+#: of optuna.multi_objective.samplers._motpe.MOTPEMultiObjectiveSampler:41
 msgid ""
 "Initialization with Latin hypercube sampling may improve optimization "
 "performance. However, the current implementation only supports "
 "initialization with random sampling."
 msgstr ""
 
-#: of optuna.multi_objective.samplers.MOTPEMultiObjectiveSampler:45
-#: optuna.multi_objective.samplers.MOTPEMultiObjectiveSampler.hyperopt_parameters:7
+#: of optuna.multi_objective.samplers._motpe.MOTPEMultiObjectiveSampler:45
+#: optuna.samplers._tpe.sampler.TPESampler.hyperopt_parameters:7
 msgid "示例"
 msgstr ""
 
-#: of optuna.multi_objective.samplers.MOTPEMultiObjectiveSampler:71
+#: of optuna.multi_objective.samplers._motpe.MOTPEMultiObjectiveSampler:71
 msgid ""
 "Deprecated in v2.4.0. This feature will be removed in the future. The "
 "removal of this feature is currently scheduled for v4.0.0, but this "
@@ -143,35 +143,31 @@ msgstr ""
 msgid "Methods"
 msgstr ""
 
-#: of
-#: optuna.multi_objective.samplers.MOTPEMultiObjectiveSampler.after_trial:1:<autosummary>:1
+#: of optuna.samplers._tpe.sampler.TPESampler.after_trial:1:<autosummary>:1
 msgid ""
 ":obj:`after_trial "
 "<optuna.multi_objective.samplers.MOTPEMultiObjectiveSampler.after_trial>`\\"
 " \\(study\\, trial\\, state\\, values\\)"
 msgstr ""
 
-#: of optuna.multi_objective.samplers.MOTPEMultiObjectiveSampler.after_trial:1
-#: optuna.multi_objective.samplers.MOTPEMultiObjectiveSampler.after_trial:1:<autosummary>:1
+#: of optuna.samplers._tpe.sampler.TPESampler.after_trial:1
+#: optuna.samplers._tpe.sampler.TPESampler.after_trial:1:<autosummary>:1
 msgid "Trial post-processing."
 msgstr ""
 
-#: of
-#: optuna.multi_objective.samplers.MOTPEMultiObjectiveSampler.after_trial:1:<autosummary>:1
+#: of optuna.samplers._tpe.sampler.TPESampler.after_trial:1:<autosummary>:1
 msgid ""
 ":obj:`hyperopt_parameters "
 "<optuna.multi_objective.samplers.MOTPEMultiObjectiveSampler.hyperopt_parameters>`\\"
 " \\(\\)"
 msgstr ""
 
-#: of
-#: optuna.multi_objective.samplers.MOTPEMultiObjectiveSampler.after_trial:1:<autosummary>:1
-#: optuna.multi_objective.samplers.MOTPEMultiObjectiveSampler.hyperopt_parameters:1
+#: of optuna.samplers._tpe.sampler.TPESampler.after_trial:1:<autosummary>:1
+#: optuna.samplers._tpe.sampler.TPESampler.hyperopt_parameters:1
 msgid "Return the the default parameters of hyperopt (v0.1.2)."
 msgstr ""
 
-#: of
-#: optuna.multi_objective.samplers.MOTPEMultiObjectiveSampler.after_trial:1:<autosummary>:1
+#: of optuna.samplers._tpe.sampler.TPESampler.after_trial:1:<autosummary>:1
 msgid ""
 ":obj:`infer_relative_search_space "
 "<optuna.multi_objective.samplers.MOTPEMultiObjectiveSampler.infer_relative_search_space>`\\"
@@ -179,15 +175,14 @@ msgid ""
 msgstr ""
 
 #: of
-#: optuna.multi_objective.samplers.MOTPEMultiObjectiveSampler.after_trial:1:<autosummary>:1
-#: optuna.multi_objective.samplers.MOTPEMultiObjectiveSampler.infer_relative_search_space:1
+#: optuna.multi_objective.samplers._motpe.MOTPEMultiObjectiveSampler.infer_relative_search_space:1
+#: optuna.samplers._tpe.sampler.TPESampler.after_trial:1:<autosummary>:1
 msgid ""
 "Infer the search space that will be used by relative sampling in the "
 "target trial."
 msgstr ""
 
-#: of
-#: optuna.multi_objective.samplers.MOTPEMultiObjectiveSampler.after_trial:1:<autosummary>:1
+#: of optuna.samplers._tpe.sampler.TPESampler.after_trial:1:<autosummary>:1
 msgid ""
 ":obj:`reseed_rng "
 "<optuna.multi_objective.samplers.MOTPEMultiObjectiveSampler.reseed_rng>`\\"
@@ -195,13 +190,12 @@ msgid ""
 msgstr ""
 
 #: of
-#: optuna.multi_objective.samplers.MOTPEMultiObjectiveSampler.after_trial:1:<autosummary>:1
-#: optuna.multi_objective.samplers.MOTPEMultiObjectiveSampler.reseed_rng:1
+#: optuna.multi_objective.samplers._motpe.MOTPEMultiObjectiveSampler.reseed_rng:1
+#: optuna.samplers._tpe.sampler.TPESampler.after_trial:1:<autosummary>:1
 msgid "Reseed sampler's random number generator."
 msgstr ""
 
-#: of
-#: optuna.multi_objective.samplers.MOTPEMultiObjectiveSampler.after_trial:1:<autosummary>:1
+#: of optuna.samplers._tpe.sampler.TPESampler.after_trial:1:<autosummary>:1
 msgid ""
 ":obj:`sample_independent "
 "<optuna.multi_objective.samplers.MOTPEMultiObjectiveSampler.sample_independent>`\\"
@@ -209,13 +203,12 @@ msgid ""
 msgstr ""
 
 #: of
-#: optuna.multi_objective.samplers.MOTPEMultiObjectiveSampler.after_trial:1:<autosummary>:1
-#: optuna.multi_objective.samplers.MOTPEMultiObjectiveSampler.sample_independent:1
+#: optuna.multi_objective.samplers._motpe.MOTPEMultiObjectiveSampler.sample_independent:1
+#: optuna.samplers._tpe.sampler.TPESampler.after_trial:1:<autosummary>:1
 msgid "Sample a parameter for a given distribution."
 msgstr ""
 
-#: of
-#: optuna.multi_objective.samplers.MOTPEMultiObjectiveSampler.after_trial:1:<autosummary>:1
+#: of optuna.samplers._tpe.sampler.TPESampler.after_trial:1:<autosummary>:1
 msgid ""
 ":obj:`sample_relative "
 "<optuna.multi_objective.samplers.MOTPEMultiObjectiveSampler.sample_relative>`\\"
@@ -223,57 +216,67 @@ msgid ""
 msgstr ""
 
 #: of
-#: optuna.multi_objective.samplers.MOTPEMultiObjectiveSampler.after_trial:1:<autosummary>:1
-#: optuna.multi_objective.samplers.MOTPEMultiObjectiveSampler.sample_relative:1
+#: optuna.multi_objective.samplers._motpe.MOTPEMultiObjectiveSampler.sample_relative:1
+#: optuna.samplers._tpe.sampler.TPESampler.after_trial:1:<autosummary>:1
 msgid "Sample parameters in a given search space."
 msgstr ""
 
-#: of optuna.multi_objective.samplers.MOTPEMultiObjectiveSampler.after_trial:3
+#: of optuna.samplers._tpe.sampler.TPESampler.after_trial:3
 msgid ""
 "This method is called after the objective function returns and right "
 "before the trials is finished and its state is stored."
 msgstr ""
 
-#: of optuna.multi_objective.samplers.MOTPEMultiObjectiveSampler.after_trial:7
+#: of optuna.samplers._tpe.sampler.TPESampler.after_trial:7
 msgid ""
 "Added in v2.4.0 as an experimental feature. The interface may change in "
 "newer versions without prior notice. See "
 "https://github.com/optuna/optuna/releases/tag/v2.4.0."
 msgstr ""
 
-#: of optuna.multi_objective.samplers.MOTPEMultiObjectiveSampler.after_trial:10
-#: optuna.multi_objective.samplers.MOTPEMultiObjectiveSampler.infer_relative_search_space:8
-#: optuna.multi_objective.samplers.MOTPEMultiObjectiveSampler.sample_independent:13
-#: optuna.multi_objective.samplers.MOTPEMultiObjectiveSampler.sample_relative:12
+#: of
+#: optuna.multi_objective.samplers._motpe.MOTPEMultiObjectiveSampler.infer_relative_search_space:8
+#: optuna.multi_objective.samplers._motpe.MOTPEMultiObjectiveSampler.sample_independent:13
+#: optuna.multi_objective.samplers._motpe.MOTPEMultiObjectiveSampler.sample_relative:12
+#: optuna.samplers._tpe.sampler.TPESampler.after_trial:10
 msgid "Target study object."
 msgstr ""
 
-#: of optuna.multi_objective.samplers.MOTPEMultiObjectiveSampler.after_trial:11
-#: optuna.multi_objective.samplers.MOTPEMultiObjectiveSampler.infer_relative_search_space:9
-#: optuna.multi_objective.samplers.MOTPEMultiObjectiveSampler.sample_independent:14
-#: optuna.multi_objective.samplers.MOTPEMultiObjectiveSampler.sample_relative:13
+#: of
+#: optuna.multi_objective.samplers._motpe.MOTPEMultiObjectiveSampler.infer_relative_search_space:9
+#: optuna.multi_objective.samplers._motpe.MOTPEMultiObjectiveSampler.sample_independent:14
+#: optuna.multi_objective.samplers._motpe.MOTPEMultiObjectiveSampler.sample_relative:13
+#: optuna.samplers._tpe.sampler.TPESampler.after_trial:11
 msgid "Target trial object. Take a copy before modifying this object."
 msgstr ""
 
-#: of optuna.multi_objective.samplers.MOTPEMultiObjectiveSampler.after_trial:13
+#: of optuna.samplers._tpe.sampler.TPESampler.after_trial:13
 msgid "Resulting trial state."
 msgstr ""
 
-#: of optuna.multi_objective.samplers.MOTPEMultiObjectiveSampler.after_trial:14
+#: of optuna.samplers._tpe.sampler.TPESampler.after_trial:14
 msgid ""
 "Resulting trial values. Guaranteed to not be :obj:`None` if trial "
 "succeeded."
 msgstr ""
 
 #: of
-#: optuna.multi_objective.samplers.MOTPEMultiObjectiveSampler.hyperopt_parameters:3
+#: optuna.multi_objective.samplers._motpe.MOTPEMultiObjectiveSampler.infer_relative_search_space
+#: optuna.multi_objective.samplers._motpe.MOTPEMultiObjectiveSampler.reseed_rng
+#: optuna.multi_objective.samplers._motpe.MOTPEMultiObjectiveSampler.sample_independent
+#: optuna.multi_objective.samplers._motpe.MOTPEMultiObjectiveSampler.sample_relative
+#: optuna.samplers._tpe.sampler.TPESampler.after_trial
+#: optuna.samplers._tpe.sampler.TPESampler.hyperopt_parameters
+msgid "返回类型"
+msgstr ""
+
+#: of optuna.samplers._tpe.sampler.TPESampler.hyperopt_parameters:3
 msgid ""
 ":class:`~optuna.samplers.TPESampler` can be instantiated with the "
 "parameters returned by this method."
 msgstr ""
 
-#: of
-#: optuna.multi_objective.samplers.MOTPEMultiObjectiveSampler.hyperopt_parameters:8
+#: of optuna.samplers._tpe.sampler.TPESampler.hyperopt_parameters:8
 msgid ""
 "Create a :class:`~optuna.samplers.TPESampler` instance with the default "
 "parameters of `hyperopt "
@@ -281,42 +284,42 @@ msgid ""
 msgstr ""
 
 #: of
-#: optuna.multi_objective.samplers.MOTPEMultiObjectiveSampler.hyperopt_parameters
-#: optuna.multi_objective.samplers.MOTPEMultiObjectiveSampler.infer_relative_search_space
-#: optuna.multi_objective.samplers.MOTPEMultiObjectiveSampler.sample_independent
-#: optuna.multi_objective.samplers.MOTPEMultiObjectiveSampler.sample_relative
+#: optuna.multi_objective.samplers._motpe.MOTPEMultiObjectiveSampler.infer_relative_search_space
+#: optuna.multi_objective.samplers._motpe.MOTPEMultiObjectiveSampler.sample_independent
+#: optuna.multi_objective.samplers._motpe.MOTPEMultiObjectiveSampler.sample_relative
+#: optuna.samplers._tpe.sampler.TPESampler.hyperopt_parameters
 msgid "返回"
 msgstr ""
 
-#: of
-#: optuna.multi_objective.samplers.MOTPEMultiObjectiveSampler.hyperopt_parameters:26
+#: of optuna.samplers._tpe.sampler.TPESampler.hyperopt_parameters:26
 msgid "A dictionary containing the default parameters of hyperopt."
 msgstr ""
 
 #: of
-#: optuna.multi_objective.samplers.MOTPEMultiObjectiveSampler.infer_relative_search_space:3
+#: optuna.multi_objective.samplers._motpe.MOTPEMultiObjectiveSampler.infer_relative_search_space:3
 msgid ""
 "This method is called right before "
 ":func:`~optuna.samplers.BaseSampler.sample_relative` method, and the "
-"search space returned by this method is pass to it. The parameters not "
+"search space returned by this method is passed to it. The parameters not "
 "contained in the search space will be sampled by using "
 ":func:`~optuna.samplers.BaseSampler.sample_independent` method."
 msgstr ""
 
 #: of
-#: optuna.multi_objective.samplers.MOTPEMultiObjectiveSampler.infer_relative_search_space:12
+#: optuna.multi_objective.samplers._motpe.MOTPEMultiObjectiveSampler.infer_relative_search_space:12
 msgid "A dictionary containing the parameter names and parameter's distributions."
 msgstr ""
 
 #: of
-#: optuna.multi_objective.samplers.MOTPEMultiObjectiveSampler.infer_relative_search_space:15
+#: optuna.multi_objective.samplers._motpe.MOTPEMultiObjectiveSampler.infer_relative_search_space:15
 msgid ""
 "Please refer to :func:`~optuna.samplers.intersection_search_space` as an "
 "implementation of "
 ":func:`~optuna.samplers.BaseSampler.infer_relative_search_space`."
 msgstr ""
 
-#: of optuna.multi_objective.samplers.MOTPEMultiObjectiveSampler.reseed_rng:3
+#: of
+#: optuna.multi_objective.samplers._motpe.MOTPEMultiObjectiveSampler.reseed_rng:3
 msgid ""
 "This method is called by the :class:`~optuna.study.Study` instance if "
 "trials are executed in parallel with the option ``n_jobs>1``. In that "
@@ -327,7 +330,7 @@ msgid ""
 msgstr ""
 
 #: of
-#: optuna.multi_objective.samplers.MOTPEMultiObjectiveSampler.sample_independent:3
+#: optuna.multi_objective.samplers._motpe.MOTPEMultiObjectiveSampler.sample_independent:3
 msgid ""
 "This method is called only for the parameters not contained in the search"
 " space returned by :func:`~optuna.samplers.BaseSampler.sample_relative` "
@@ -336,8 +339,8 @@ msgid ""
 msgstr ""
 
 #: of
-#: optuna.multi_objective.samplers.MOTPEMultiObjectiveSampler.sample_independent:9
-#: optuna.multi_objective.samplers.MOTPEMultiObjectiveSampler.sample_relative:8
+#: optuna.multi_objective.samplers._motpe.MOTPEMultiObjectiveSampler.sample_independent:9
+#: optuna.multi_objective.samplers._motpe.MOTPEMultiObjectiveSampler.sample_relative:8
 msgid ""
 "The failed trials are ignored by any build-in samplers when they sample "
 "new parameters. Thus, failed trials are regarded as deleted in the "
@@ -345,24 +348,24 @@ msgid ""
 msgstr ""
 
 #: of
-#: optuna.multi_objective.samplers.MOTPEMultiObjectiveSampler.sample_independent:16
+#: optuna.multi_objective.samplers._motpe.MOTPEMultiObjectiveSampler.sample_independent:16
 msgid "Name of the sampled parameter."
 msgstr ""
 
 #: of
-#: optuna.multi_objective.samplers.MOTPEMultiObjectiveSampler.sample_independent:17
+#: optuna.multi_objective.samplers._motpe.MOTPEMultiObjectiveSampler.sample_independent:17
 msgid ""
 "Distribution object that specifies a prior and/or scale of the sampling "
 "algorithm."
 msgstr ""
 
 #: of
-#: optuna.multi_objective.samplers.MOTPEMultiObjectiveSampler.sample_independent:19
+#: optuna.multi_objective.samplers._motpe.MOTPEMultiObjectiveSampler.sample_independent:19
 msgid "A parameter value."
 msgstr ""
 
 #: of
-#: optuna.multi_objective.samplers.MOTPEMultiObjectiveSampler.sample_relative:3
+#: optuna.multi_objective.samplers._motpe.MOTPEMultiObjectiveSampler.sample_relative:3
 msgid ""
 "This method is called once at the beginning of each trial, i.e., right "
 "before the evaluation of the objective function. This method is suitable "
@@ -371,14 +374,24 @@ msgid ""
 msgstr ""
 
 #: of
-#: optuna.multi_objective.samplers.MOTPEMultiObjectiveSampler.sample_relative:15
+#: optuna.multi_objective.samplers._motpe.MOTPEMultiObjectiveSampler.sample_relative:15
 msgid ""
 "The search space returned by "
 ":func:`~optuna.samplers.BaseSampler.infer_relative_search_space`."
 msgstr ""
 
 #: of
-#: optuna.multi_objective.samplers.MOTPEMultiObjectiveSampler.sample_relative:18
+#: optuna.multi_objective.samplers._motpe.MOTPEMultiObjectiveSampler.sample_relative:18
 msgid "A dictionary containing the parameter names and the values."
 msgstr ""
+
+#~ msgid ""
+#~ "This method is called right before "
+#~ ":func:`~optuna.samplers.BaseSampler.sample_relative` method, "
+#~ "and the search space returned by "
+#~ "this method is pass to it. The "
+#~ "parameters not contained in the search"
+#~ " space will be sampled by using "
+#~ ":func:`~optuna.samplers.BaseSampler.sample_independent` method."
+#~ msgstr ""
 

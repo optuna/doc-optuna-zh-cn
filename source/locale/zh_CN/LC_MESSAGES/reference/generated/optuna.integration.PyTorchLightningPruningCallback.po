@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 2.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-14 18:04-0500\n"
+"POT-Creation-Date: 2021-03-20 13:35-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,28 +21,28 @@ msgstr ""
 msgid "optuna.integration.PyTorchLightningPruningCallback"
 msgstr ""
 
-#: of optuna.integration.PyTorchLightningPruningCallback:1
+#: of optuna.integration.pytorch_lightning.PyTorchLightningPruningCallback:1
 msgid "PyTorch Lightning callback to prune unpromising trials."
 msgstr ""
 
-#: of optuna.integration.PyTorchLightningPruningCallback:3
+#: of optuna.integration.pytorch_lightning.PyTorchLightningPruningCallback:3
 msgid ""
 "See `the example <https://github.com/optuna/optuna/blob/master/ "
-"examples/pytorch_lightning_simple.py>`__ if you want to add a pruning "
-"callback which observes accuracy."
+"examples/pytorch/pytorch_lightning_simple.py>`__ if you want to add a "
+"pruning callback which observes accuracy."
 msgstr ""
 
-#: of optuna.integration.PyTorchLightningPruningCallback
+#: of optuna.integration.pytorch_lightning.PyTorchLightningPruningCallback
 msgid "参数"
 msgstr ""
 
-#: of optuna.integration.PyTorchLightningPruningCallback:7
+#: of optuna.integration.pytorch_lightning.PyTorchLightningPruningCallback:7
 msgid ""
 "A :class:`~optuna.trial.Trial` corresponding to the current evaluation of"
 " the objective function."
 msgstr ""
 
-#: of optuna.integration.PyTorchLightningPruningCallback:9
+#: of optuna.integration.pytorch_lightning.PyTorchLightningPruningCallback:9
 msgid ""
 "An evaluation metric for pruning, e.g., ``val_loss`` or ``val_acc``. The "
 "metrics are obtained from the returned dictionaries from e.g. "
@@ -61,4 +61,12 @@ msgid ""
 "<optuna.integration.PyTorchLightningPruningCallback.on_validation_end>`\\"
 " \\(trainer\\, pl\\_module\\)"
 msgstr ""
+
+#~ msgid ""
+#~ "See `the example "
+#~ "<https://github.com/optuna/optuna/blob/master/ "
+#~ "examples/pytorch_lightning_simple.py>`__ if you want"
+#~ " to add a pruning callback which "
+#~ "observes accuracy."
+#~ msgstr ""
 

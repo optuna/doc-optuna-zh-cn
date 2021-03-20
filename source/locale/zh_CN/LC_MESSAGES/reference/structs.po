@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 1.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-14 18:04-0500\n"
+"POT-Creation-Date: 2021-03-20 13:35-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -27,19 +27,19 @@ msgid ""
 ":class:`optuna.trial` and :class:`optuna.study`."
 msgstr "该模块已被弃用，其以前的功能移至 :class:`optuna.trial` 和 :class:`optuna.study` 。"
 
-#: of optuna.structs.TrialState:1
+#: of optuna.trial._state.TrialState:1
 msgid "State of a :class:`~optuna.trial.Trial`."
 msgstr ":class:`~optuna.trial.Trial` 的状态"
 
-#: of optuna.structs.TrialState:5
+#: of optuna.trial._state.TrialState:5
 msgid "The :class:`~optuna.trial.Trial` is running."
 msgstr "运行中的 :class:`~optuna.trial.Trial`."
 
-#: of optuna.structs.TrialState:9
+#: of optuna.trial._state.TrialState:9
 msgid "The :class:`~optuna.trial.Trial` has been finished without any error."
 msgstr "已完成且未触发错误的 :class:`~optuna.trial.Trial`."
 
-#: of optuna.structs.TrialState:13
+#: of optuna.trial._state.TrialState:13
 msgid ""
 "The :class:`~optuna.trial.Trial` has been pruned with "
 ":class:`~optuna.exceptions.TrialPruned`."
@@ -47,7 +47,7 @@ msgstr ""
 "已经被 :class:`~optuna.exceptions.TrialPruned` 剪枝的 "
 ":class:`~optuna.trial.Trial`."
 
-#: of optuna.structs.TrialState:18
+#: of optuna.trial._state.TrialState:18
 msgid "The :class:`~optuna.trial.Trial` has failed due to an uncaught error."
 msgstr "由于未捕获的错误，该 :class:`~optuna.trial.Trial` 已经失败。"
 
@@ -57,19 +57,19 @@ msgid ""
 "instead."
 msgstr "该类已废弃。请改用 :class:`~optuna.trial.TrialState`."
 
-#: of optuna.structs.StudyDirection:1
+#: of optuna._study_direction.StudyDirection:1
 msgid "Direction of a :class:`~optuna.study.Study`."
 msgstr ":class:`~optuna.study.Study` 的方向。 "
 
-#: of optuna.structs.StudyDirection:5
+#: of optuna._study_direction.StudyDirection:5
 msgid "Direction has not been set."
 msgstr "方向未设置。"
 
-#: of optuna.structs.StudyDirection:9
+#: of optuna._study_direction.StudyDirection:9
 msgid ":class:`~optuna.study.Study` minimizes the objective function."
 msgstr ":class:`~optuna.study.Study` 将最小化目标函数"
 
-#: of optuna.structs.StudyDirection:13
+#: of optuna._study_direction.StudyDirection:13
 msgid ":class:`~optuna.study.Study` maximizes the objective function."
 msgstr ":class:`~optuna.study.Study` 将最大化目标函数。"
 
@@ -85,7 +85,8 @@ msgid ""
 "removal of this feature is currently scheduled for v3.0.0, but this "
 "schedule is subject to change. See "
 "https://github.com/optuna/optuna/releases/tag/v1.4.0."
-msgstr "在 v1.4.0 中被弃用。该特性将在未来被移除。目前我们计划在 v3.0.0 中移除它，但也可能会改变。参见 "
+msgstr ""
+"在 v1.4.0 中被弃用。该特性将在未来被移除。目前我们计划在 v3.0.0 中移除它，但也可能会改变。参见 "
 "https://github.com/optuna/optuna/releases/tag/v1.4.0."
 
 #: of optuna.structs.FrozenTrial:7
@@ -103,7 +104,7 @@ msgid "Return the elapsed time taken to complete the trial."
 msgstr "返回完成一个 trial 所消耗的时间。"
 
 #: of optuna.structs.FrozenTrial.duration optuna.structs.FrozenTrial.last_step
-#: optuna.structs.FrozenTrial.should_prune
+#: optuna.trial._frozen.FrozenTrial.should_prune
 msgid "返回"
 msgstr ""
 
@@ -119,52 +120,59 @@ msgstr "返回 trial 中 `intermediate_values` 的最大步数。"
 msgid "The maximum step of intermediates."
 msgstr "`intermediate_values` 的最大步数。"
 
-#: of optuna.structs.FrozenTrial.report:1
+#: of optuna.trial._frozen.FrozenTrial.report:1
 msgid "Interface of report function."
 msgstr "report 函数接口。"
 
-#: of optuna.structs.FrozenTrial.report:3
+#: of optuna.trial._frozen.FrozenTrial.report:3
 msgid ""
 "Since :class:`~optuna.trial.FrozenTrial` is not pruned, this report "
 "function does nothing."
 msgstr "由于 :class:`~optuna.trial.FrozenTrial` 未被剪枝，该函数将不做任何处理。"
 
-#: of optuna.structs.FrozenTrial.report:7
+#: of optuna.trial._frozen.FrozenTrial.report:7
 msgid "Please refer to :func:`~optuna.trial.FrozenTrial.should_prune`."
 msgstr ""
 
-#: of optuna.structs.FrozenTrial.report
+#: of optuna.trial._frozen.FrozenTrial.report
 msgid "参数"
 msgstr ""
 
-#: of optuna.structs.FrozenTrial.report:9
+#: of optuna.trial._frozen.FrozenTrial.report:9
 msgid "A value returned from the objective function."
 msgstr "目标函数返回的值。"
 
-#: of optuna.structs.FrozenTrial.report:10
+#: of optuna.trial._frozen.FrozenTrial.report:10
 msgid ""
 "Step of the trial (e.g., Epoch of neural network training). Note that "
 "pruners assume that ``step`` starts at zero. For example, "
 ":class:`~optuna.pruners.MedianPruner` simply checks if ``step`` is less "
 "than ``n_warmup_steps`` as the warmup mechanism."
-msgstr "Trial 的步骤（比如，神经网络训练中的 epoch 数）。注意，pruners 假定 ``step`` "
-"从零开始计算。比如 :class:`~optuna.pruners.MedianPruner` 将仅检查 ``step`` 是否小于 ``n_warmup_steps`` 作为热身机制。"
+msgstr ""
+"Trial 的步骤（比如，神经网络训练中的 epoch 数）。注意，pruners 假定 ``step`` 从零开始计算。比如 "
+":class:`~optuna.pruners.MedianPruner` 将仅检查 ``step`` 是否小于 "
+"``n_warmup_steps`` 作为热身机制。"
 
-#: of optuna.structs.FrozenTrial.should_prune:1
+#: of optuna.trial._frozen.FrozenTrial.report
+#: optuna.trial._frozen.FrozenTrial.should_prune
+msgid "返回类型"
+msgstr ""
+
+#: of optuna.trial._frozen.FrozenTrial.should_prune:1
 msgid "Suggest whether the trial should be pruned or not."
 msgstr "建议该 trial 是否应该被剪枝。"
 
-#: of optuna.structs.FrozenTrial.should_prune:3
+#: of optuna.trial._frozen.FrozenTrial.should_prune:3
 msgid "The suggestion is always :obj:`False` regardless of a pruning algorithm."
 msgstr "无论剪枝算法是什么，建议值永远是 :obj:`False`."
 
-#: of optuna.structs.FrozenTrial.should_prune:6
+#: of optuna.trial._frozen.FrozenTrial.should_prune:6
 msgid ""
 ":class:`~optuna.trial.FrozenTrial` only samples one combination of "
 "parameters."
 msgstr ":class:`~optuna.trial.FrozenTrial` 只对参数组合进行一次采样。"
 
-#: of optuna.structs.FrozenTrial.should_prune:8
+#: of optuna.trial._frozen.FrozenTrial.should_prune:8
 msgid ":obj:`False`."
 msgstr ""
 

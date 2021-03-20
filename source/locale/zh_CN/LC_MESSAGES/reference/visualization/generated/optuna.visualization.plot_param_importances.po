@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 2.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-10 02:25-0500\n"
+"POT-Creation-Date: 2021-03-20 13:35-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,54 +21,46 @@ msgstr ""
 msgid "optuna.visualization.plot\\_param\\_importances"
 msgstr ""
 
-#: of optuna.visualization.plot_param_importances:1
+#: of optuna.visualization._param_importances.plot_param_importances:1
 msgid "Plot hyperparameter importances."
 msgstr ""
 
-#: of optuna.visualization.plot_param_importances:4
+#: of optuna.visualization._param_importances.plot_param_importances:4
 msgid "示例"
 msgstr ""
 
-#: of optuna.visualization.plot_param_importances:5
+#: of optuna.visualization._param_importances.plot_param_importances:5
 msgid "The following code snippet shows how to plot hyperparameter importances."
 msgstr ""
 
-#: ../../source/reference/visualization/generated/optuna.visualization.plot_param_importances.rst:8
-msgid ""
-"(`Source code <../../../reference/visualization/generated/optuna-"
-"visualization-plot_param_importances-1.py>`__, `html "
-"<../../../reference/visualization/generated/optuna-visualization-"
-"plot_param_importances-1.html>`__)"
-msgstr ""
-
-#: of optuna.visualization.plot_param_importances:27
+#: of optuna.visualization._param_importances.plot_param_importances:28
 msgid ""
 "This function visualizes the results of "
 ":func:`optuna.importance.get_param_importances`."
 msgstr ""
 
-#: of optuna.visualization.plot_param_importances
+#: of optuna.visualization._param_importances.plot_param_importances
 msgid "参数"
 msgstr ""
 
-#: of optuna.visualization.plot_param_importances:29
+#: of optuna.visualization._param_importances.plot_param_importances:30
 msgid "An optimized study."
 msgstr ""
 
-#: of optuna.visualization.plot_param_importances:30
+#: of optuna.visualization._param_importances.plot_param_importances:31
 msgid ""
 "An importance evaluator object that specifies which algorithm to base the"
 " importance assessment on. Defaults to "
 ":class:`~optuna.importance.FanovaImportanceEvaluator`."
 msgstr ""
 
-#: of optuna.visualization.plot_param_importances:34
+#: of optuna.visualization._param_importances.plot_param_importances:35
 msgid ""
 "A list of names of parameters to assess. If :obj:`None`, all parameters "
 "that are present in all of the completed trials are assessed."
 msgstr ""
 
-#: of optuna.visualization.plot_param_importances:37
+#: of optuna.visualization._param_importances.plot_param_importances:38
 msgid ""
 "A function to specify the value to display. If it is :obj:`None` and "
 "``study`` is being used for single-objective optimization, the objective "
@@ -76,38 +68,49 @@ msgid ""
 "being used for multi-objective optimization."
 msgstr ""
 
-#: of optuna.visualization.plot_param_importances:37
+#: of optuna.visualization._param_importances.plot_param_importances:38
 msgid ""
 "A function to specify the value to display. If it is :obj:`None` and "
 "``study`` is being used for single-objective optimization, the objective "
 "values are plotted."
 msgstr ""
 
-#: of optuna.visualization.plot_param_importances:41
+#: of optuna.visualization._param_importances.plot_param_importances:42
 msgid ""
 "Specify this argument if ``study`` is being used for multi-objective "
 "optimization."
 msgstr ""
 
-#: of optuna.visualization.plot_param_importances:42
+#: of optuna.visualization._param_importances.plot_param_importances:43
 msgid "Target's name to display on the axis label."
 msgstr ""
 
-#: of optuna.visualization.plot_param_importances
+#: of optuna.visualization._param_importances.plot_param_importances
 msgid "返回"
 msgstr ""
 
-#: of optuna.visualization.plot_param_importances:44
+#: of optuna.visualization._param_importances.plot_param_importances:45
 msgid "A :class:`plotly.graph_objs.Figure` object."
 msgstr ""
 
-#: of optuna.visualization.plot_param_importances
+#: of optuna.visualization._param_importances.plot_param_importances
 msgid "引发"
 msgstr ""
 
-#: of optuna.visualization.plot_param_importances:46
+#: of optuna.visualization._param_importances.plot_param_importances:47
 msgid ""
 "If ``target`` is :obj:`None` and ``study`` is being used for multi-"
 "objective     optimization."
 msgstr ""
+
+#: of optuna.visualization._param_importances.plot_param_importances
+msgid "返回类型"
+msgstr ""
+
+#~ msgid ""
+#~ "(`Source code <../../../reference/visualization/generated"
+#~ "/optuna-visualization-plot_param_importances-1.py>`__, "
+#~ "`html <../../../reference/visualization/generated/optuna-"
+#~ "visualization-plot_param_importances-1.html>`__)"
+#~ msgstr ""
 

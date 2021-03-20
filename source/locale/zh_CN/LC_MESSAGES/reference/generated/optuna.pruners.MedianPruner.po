@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 2.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-14 18:04-0500\n"
+"POT-Creation-Date: 2021-03-20 13:35-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,41 +21,42 @@ msgstr ""
 msgid "optuna.pruners.MedianPruner"
 msgstr ""
 
-#: of optuna.pruners.MedianPruner:1
+#: of optuna.pruners._median.MedianPruner:1
 msgid "Pruner using the median stopping rule."
 msgstr ""
 
-#: of optuna.pruners.MedianPruner:3
+#: of optuna.pruners._median.MedianPruner:3
 msgid ""
 "Prune if the trial's best intermediate result is worse than median of "
 "intermediate results of previous trials at the same step."
 msgstr ""
 
-#: of optuna.pruners.MedianPruner:7
+#: of optuna.pruners._median.MedianPruner:7
 msgid "示例"
 msgstr ""
 
-#: of optuna.pruners.MedianPruner:8
+#: of optuna.pruners._median.MedianPruner:8
 msgid "We minimize an objective function with the median stopping rule."
 msgstr ""
 
-#: of optuna.pruners.MedianPruner optuna.pruners.MedianPruner.prune
+#: of optuna.pruners._median.MedianPruner
+#: optuna.pruners._percentile.PercentilePruner.prune
 msgid "参数"
 msgstr ""
 
-#: of optuna.pruners.MedianPruner:49
+#: of optuna.pruners._median.MedianPruner:49
 msgid ""
 "Pruning is disabled until the given number of trials finish in the same "
 "study."
 msgstr ""
 
-#: of optuna.pruners.MedianPruner:50
+#: of optuna.pruners._median.MedianPruner:50
 msgid ""
 "Pruning is disabled until the trial exceeds the given number of step. "
 "Note that this feature assumes that ``step`` starts at zero."
 msgstr ""
 
-#: of optuna.pruners.MedianPruner:52
+#: of optuna.pruners._median.MedianPruner:52
 msgid ""
 "Interval in number of steps between the pruning checks, offset by the "
 "warmup steps. If no value has been reported at the time of a pruning "
@@ -66,16 +67,16 @@ msgstr ""
 msgid "Methods"
 msgstr ""
 
-#: of optuna.pruners.MedianPruner.prune:1:<autosummary>:1
+#: of optuna.pruners._percentile.PercentilePruner.prune:1:<autosummary>:1
 msgid ":obj:`prune <optuna.pruners.MedianPruner.prune>`\\ \\(study\\, trial\\)"
 msgstr ""
 
-#: of optuna.pruners.MedianPruner.prune:1
-#: optuna.pruners.MedianPruner.prune:1:<autosummary>:1
+#: of optuna.pruners._percentile.PercentilePruner.prune:1
+#: optuna.pruners._percentile.PercentilePruner.prune:1:<autosummary>:1
 msgid "Judge whether the trial should be pruned based on the reported values."
 msgstr ""
 
-#: of optuna.pruners.MedianPruner.prune:3
+#: of optuna.pruners._percentile.PercentilePruner.prune:3
 msgid ""
 "Note that this method is not supposed to be called by library users. "
 "Instead, :func:`optuna.trial.Trial.report` and "
@@ -83,21 +84,25 @@ msgid ""
 "implement pruning mechanism in an objective function."
 msgstr ""
 
-#: of optuna.pruners.MedianPruner.prune:7
+#: of optuna.pruners._percentile.PercentilePruner.prune:7
 msgid "Study object of the target study."
 msgstr ""
 
-#: of optuna.pruners.MedianPruner.prune:8
+#: of optuna.pruners._percentile.PercentilePruner.prune:8
 msgid ""
 "FrozenTrial object of the target trial. Take a copy before modifying this"
 " object."
 msgstr ""
 
-#: of optuna.pruners.MedianPruner.prune
+#: of optuna.pruners._percentile.PercentilePruner.prune
 msgid "返回"
 msgstr ""
 
-#: of optuna.pruners.MedianPruner.prune:11
+#: of optuna.pruners._percentile.PercentilePruner.prune:11
 msgid "A boolean value representing whether the trial should be pruned."
+msgstr ""
+
+#: of optuna.pruners._percentile.PercentilePruner.prune
+msgid "返回类型"
 msgstr ""
 

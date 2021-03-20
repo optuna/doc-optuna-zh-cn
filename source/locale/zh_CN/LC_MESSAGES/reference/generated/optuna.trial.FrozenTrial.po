@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 2.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-14 18:04-0500\n"
+"POT-Creation-Date: 2021-03-20 13:35-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,11 +21,11 @@ msgstr ""
 msgid "optuna.trial.FrozenTrial"
 msgstr ""
 
-#: of optuna.trial.FrozenTrial:1
+#: of optuna.trial._frozen.FrozenTrial:1
 msgid "Status and results of a :class:`~optuna.trial.Trial`."
 msgstr ""
 
-#: of optuna.trial.FrozenTrial:3
+#: of optuna.trial._frozen.FrozenTrial:3
 msgid ""
 "This object has the same methods as :class:`~optuna.trial.Trial`, and it "
 "suggests best parameter values among performed trials. In contrast to "
@@ -34,15 +34,15 @@ msgid ""
 "optimization results."
 msgstr ""
 
-#: of optuna.trial.FrozenTrial:9
+#: of optuna.trial._frozen.FrozenTrial:9
 msgid "示例"
 msgstr ""
 
-#: of optuna.trial.FrozenTrial:10
+#: of optuna.trial._frozen.FrozenTrial:10
 msgid "Re-evaluate an objective function with parameter values optimized study."
 msgstr ""
 
-#: of optuna.trial.FrozenTrial:28
+#: of optuna.trial._frozen.FrozenTrial:28
 msgid ""
 "Attributes are set in :func:`optuna.Study.optimize`, but several "
 "attributes can be updated after the optimization. That means such "
@@ -50,69 +50,69 @@ msgid ""
 " attributes of :class:`~optuna.trial.Trial`."
 msgstr ""
 
-#: of optuna.trial.FrozenTrial:34
+#: of optuna.trial._frozen.FrozenTrial:34
 msgid "Example:"
 msgstr ""
 
-#: of optuna.trial.FrozenTrial:36
+#: of optuna.trial._frozen.FrozenTrial:36
 msgid "Overwritten attributes."
 msgstr ""
 
-#: of optuna.trial.FrozenTrial:68
+#: of optuna.trial._frozen.FrozenTrial:68
 msgid ""
 "Please refer to :class:`~optuna.trial.Trial` for details of methods and "
 "properties."
 msgstr ""
 
-#: of optuna.trial.FrozenTrial:73
+#: of optuna.trial._frozen.FrozenTrial:73
 msgid ""
 "Unique and consecutive number of :class:`~optuna.trial.Trial` for each "
 ":class:`~optuna.study.Study`. Note that this field uses zero-based "
 "numbering."
 msgstr ""
 
-#: of optuna.trial.FrozenTrial:78
+#: of optuna.trial._frozen.FrozenTrial:78
 msgid ":class:`TrialState` of the :class:`~optuna.trial.Trial`."
 msgstr ""
 
-#: of optuna.trial.FrozenTrial:82
+#: of optuna.trial._frozen.FrozenTrial:82
 msgid "Objective value of the :class:`~optuna.trial.Trial`."
 msgstr ""
 
-#: of optuna.trial.FrozenTrial:86
+#: of optuna.trial._frozen.FrozenTrial:86
 msgid ""
 "Sequence of objective values of the :class:`~optuna.trial.Trial`. The "
 "length is greater than 1 if the problem is multi-objective optimization."
 msgstr ""
 
-#: of optuna.trial.FrozenTrial:91
+#: of optuna.trial._frozen.FrozenTrial:91
 msgid "Datetime where the :class:`~optuna.trial.Trial` started."
 msgstr ""
 
-#: of optuna.trial.FrozenTrial:95
+#: of optuna.trial._frozen.FrozenTrial:95
 msgid "Datetime where the :class:`~optuna.trial.Trial` finished."
 msgstr ""
 
-#: of optuna.trial.FrozenTrial:99
+#: of optuna.trial._frozen.FrozenTrial:99
 msgid "Dictionary that contains suggested parameters."
 msgstr ""
 
-#: of optuna.trial.FrozenTrial:103
+#: of optuna.trial._frozen.FrozenTrial:103
 msgid ""
 "Dictionary that contains the attributes of the "
 ":class:`~optuna.trial.Trial` set with "
 ":func:`optuna.trial.Trial.set_user_attr`."
 msgstr ""
 
-#: of optuna.trial.FrozenTrial:108
+#: of optuna.trial._frozen.FrozenTrial:108
 msgid "Intermediate objective values set with :func:`optuna.trial.Trial.report`."
 msgstr ""
 
-#: of optuna.trial.FrozenTrial
+#: of optuna.trial._frozen.FrozenTrial
 msgid "引发"
 msgstr ""
 
-#: of optuna.trial.FrozenTrial:110
+#: of optuna.trial._frozen.FrozenTrial:110
 msgid "If both ``value`` and ``values`` are specified."
 msgstr ""
 
@@ -125,7 +125,7 @@ msgid ":obj:`report <optuna.trial.FrozenTrial.report>`\\ \\(value\\, step\\)"
 msgstr ""
 
 #: ../../source/reference/generated/optuna.trial.FrozenTrial.rst:30:<autosummary>:1
-#: of optuna.trial.FrozenTrial.report:1
+#: of optuna.trial._frozen.FrozenTrial.report:1
 msgid "Interface of report function."
 msgstr ""
 
@@ -146,7 +146,7 @@ msgid ":obj:`should_prune <optuna.trial.FrozenTrial.should_prune>`\\ \\(\\)"
 msgstr ""
 
 #: ../../source/reference/generated/optuna.trial.FrozenTrial.rst:30:<autosummary>:1
-#: of optuna.trial.FrozenTrial.should_prune:1
+#: of optuna.trial._frozen.FrozenTrial.should_prune:1
 msgid "Suggest whether the trial should be pruned or not."
 msgstr ""
 
@@ -247,7 +247,7 @@ msgid ":obj:`values <optuna.trial.FrozenTrial.values>`\\"
 msgstr ""
 
 #: of optuna.trial.FrozenTrial.duration optuna.trial.FrozenTrial.last_step
-#: optuna.trial.FrozenTrial.should_prune
+#: optuna.trial._frozen.FrozenTrial.should_prune
 msgid "返回"
 msgstr ""
 
@@ -259,25 +259,25 @@ msgstr ""
 msgid "The maximum step of intermediates."
 msgstr ""
 
-#: of optuna.trial.FrozenTrial.report:3
+#: of optuna.trial._frozen.FrozenTrial.report:3
 msgid ""
 "Since :class:`~optuna.trial.FrozenTrial` is not pruned, this report "
 "function does nothing."
 msgstr ""
 
-#: of optuna.trial.FrozenTrial.report:7
+#: of optuna.trial._frozen.FrozenTrial.report:7
 msgid "Please refer to :func:`~optuna.trial.FrozenTrial.should_prune`."
 msgstr ""
 
-#: of optuna.trial.FrozenTrial.report
+#: of optuna.trial._frozen.FrozenTrial.report
 msgid "参数"
 msgstr ""
 
-#: of optuna.trial.FrozenTrial.report:9
+#: of optuna.trial._frozen.FrozenTrial.report:9
 msgid "A value returned from the objective function."
 msgstr ""
 
-#: of optuna.trial.FrozenTrial.report:10
+#: of optuna.trial._frozen.FrozenTrial.report:10
 msgid ""
 "Step of the trial (e.g., Epoch of neural network training). Note that "
 "pruners assume that ``step`` starts at zero. For example, "
@@ -285,17 +285,22 @@ msgid ""
 "than ``n_warmup_steps`` as the warmup mechanism."
 msgstr ""
 
-#: of optuna.trial.FrozenTrial.should_prune:3
+#: of optuna.trial._frozen.FrozenTrial.report
+#: optuna.trial._frozen.FrozenTrial.should_prune
+msgid "返回类型"
+msgstr ""
+
+#: of optuna.trial._frozen.FrozenTrial.should_prune:3
 msgid "The suggestion is always :obj:`False` regardless of a pruning algorithm."
 msgstr ""
 
-#: of optuna.trial.FrozenTrial.should_prune:6
+#: of optuna.trial._frozen.FrozenTrial.should_prune:6
 msgid ""
 ":class:`~optuna.trial.FrozenTrial` only samples one combination of "
 "parameters."
 msgstr ""
 
-#: of optuna.trial.FrozenTrial.should_prune:8
+#: of optuna.trial._frozen.FrozenTrial.should_prune:8
 msgid ":obj:`False`."
 msgstr ""
 

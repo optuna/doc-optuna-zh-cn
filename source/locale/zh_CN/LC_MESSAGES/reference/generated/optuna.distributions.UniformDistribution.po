@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 2.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-14 18:04-0500\n"
+"POT-Creation-Date: 2021-03-20 13:35-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -40,7 +40,7 @@ msgstr ""
 
 #: of optuna.distributions.UniformDistribution:12
 msgid ""
-"Upper endpoint of the range of the distribution. ``high`` is excluded "
+"Upper endpoint of the range of the distribution. ``high`` is included "
 "from the range."
 msgstr ""
 
@@ -72,8 +72,8 @@ msgid ""
 "\\(param\\_value\\_in\\_internal\\_repr\\)"
 msgstr ""
 
-#: of optuna.distributions.UniformDistribution.single:1:<autosummary>:1
-#: optuna.distributions.UniformDistribution.to_external_repr:1
+#: of optuna.distributions.BaseDistribution.to_external_repr:1
+#: optuna.distributions.UniformDistribution.single:1:<autosummary>:1
 msgid ""
 "Convert internal representation of a parameter value into external "
 "representation."
@@ -86,16 +86,16 @@ msgid ""
 "\\(param\\_value\\_in\\_external\\_repr\\)"
 msgstr ""
 
-#: of optuna.distributions.UniformDistribution.single:1:<autosummary>:1
-#: optuna.distributions.UniformDistribution.to_internal_repr:1
+#: of optuna.distributions.BaseDistribution.to_internal_repr:1
+#: optuna.distributions.UniformDistribution.single:1:<autosummary>:1
 msgid ""
 "Convert external representation of a parameter value into internal "
 "representation."
 msgstr ""
 
-#: of optuna.distributions.UniformDistribution.single
-#: optuna.distributions.UniformDistribution.to_external_repr
-#: optuna.distributions.UniformDistribution.to_internal_repr
+#: of optuna.distributions.BaseDistribution.to_external_repr
+#: optuna.distributions.BaseDistribution.to_internal_repr
+#: optuna.distributions.UniformDistribution.single
 msgid "返回"
 msgstr ""
 
@@ -105,18 +105,30 @@ msgid ""
 "value, otherwise :obj:`False`."
 msgstr ""
 
-#: of optuna.distributions.UniformDistribution.to_external_repr
-#: optuna.distributions.UniformDistribution.to_internal_repr
+#: of optuna.distributions.BaseDistribution.to_external_repr
+#: optuna.distributions.BaseDistribution.to_internal_repr
+#: optuna.distributions.UniformDistribution.single
+msgid "返回类型"
+msgstr ""
+
+#: of optuna.distributions.BaseDistribution.to_external_repr
+#: optuna.distributions.BaseDistribution.to_internal_repr
 msgid "参数"
 msgstr ""
 
-#: of optuna.distributions.UniformDistribution.to_external_repr:3
-#: optuna.distributions.UniformDistribution.to_internal_repr:5
+#: of optuna.distributions.BaseDistribution.to_external_repr:3
+#: optuna.distributions.BaseDistribution.to_internal_repr:5
 msgid "Optuna's internal representation of a parameter value."
 msgstr ""
 
-#: of optuna.distributions.UniformDistribution.to_external_repr:5
-#: optuna.distributions.UniformDistribution.to_internal_repr:3
+#: of optuna.distributions.BaseDistribution.to_external_repr:5
+#: optuna.distributions.BaseDistribution.to_internal_repr:3
 msgid "Optuna's external representation of a parameter value."
 msgstr ""
+
+#~ msgid ""
+#~ "Upper endpoint of the range of the"
+#~ " distribution. ``high`` is excluded from"
+#~ " the range."
+#~ msgstr ""
 

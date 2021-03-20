@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 2.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-14 18:04-0500\n"
+"POT-Creation-Date: 2021-03-20 13:35-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,18 +21,21 @@ msgstr ""
 msgid "optuna.importance.MeanDecreaseImpurityImportanceEvaluator"
 msgstr ""
 
-#: of optuna.importance.MeanDecreaseImpurityImportanceEvaluator:1
+#: of
+#: optuna.importance._mean_decrease_impurity.MeanDecreaseImpurityImportanceEvaluator:1
 msgid "Mean Decrease Impurity (MDI) parameter importance evaluator."
 msgstr ""
 
-#: of optuna.importance.MeanDecreaseImpurityImportanceEvaluator:3
+#: of
+#: optuna.importance._mean_decrease_impurity.MeanDecreaseImpurityImportanceEvaluator:3
 msgid ""
 "This evaluator fits a random forest that predicts objective values given "
 "hyperparameter configurations. Feature importances are then computed "
 "using MDI."
 msgstr ""
 
-#: of optuna.importance.MeanDecreaseImpurityImportanceEvaluator:8
+#: of
+#: optuna.importance._mean_decrease_impurity.MeanDecreaseImpurityImportanceEvaluator:8
 msgid ""
 "This evaluator requires the `sklean <https://scikit-learn.org/stable/>`_ "
 "Python package and is based on "
@@ -41,20 +44,24 @@ msgid ""
 "learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html#sklearn.ensemble.RandomForestClassifier.feature_importances_>`_."
 msgstr ""
 
-#: of optuna.importance.MeanDecreaseImpurityImportanceEvaluator
-#: optuna.importance.MeanDecreaseImpurityImportanceEvaluator.evaluate
+#: of
+#: optuna.importance._mean_decrease_impurity.MeanDecreaseImpurityImportanceEvaluator
+#: optuna.importance._mean_decrease_impurity.MeanDecreaseImpurityImportanceEvaluator.evaluate
 msgid "参数"
 msgstr ""
 
-#: of optuna.importance.MeanDecreaseImpurityImportanceEvaluator:12
+#: of
+#: optuna.importance._mean_decrease_impurity.MeanDecreaseImpurityImportanceEvaluator:12
 msgid "Number of trees in the random forest."
 msgstr ""
 
-#: of optuna.importance.MeanDecreaseImpurityImportanceEvaluator:13
+#: of
+#: optuna.importance._mean_decrease_impurity.MeanDecreaseImpurityImportanceEvaluator:13
 msgid "The maximum depth of each tree in the random forest."
 msgstr ""
 
-#: of optuna.importance.MeanDecreaseImpurityImportanceEvaluator:14
+#: of
+#: optuna.importance._mean_decrease_impurity.MeanDecreaseImpurityImportanceEvaluator:14
 msgid "Seed for the random forest."
 msgstr ""
 
@@ -63,41 +70,47 @@ msgid "Methods"
 msgstr ""
 
 #: of
-#: optuna.importance.MeanDecreaseImpurityImportanceEvaluator.evaluate:1:<autosummary>:1
+#: optuna.importance._mean_decrease_impurity.MeanDecreaseImpurityImportanceEvaluator.evaluate:1:<autosummary>:1
 msgid ""
 ":obj:`evaluate "
 "<optuna.importance.MeanDecreaseImpurityImportanceEvaluator.evaluate>`\\ "
 "\\(study\\[\\, params\\, target\\]\\)"
 msgstr ""
 
-#: of optuna.importance.MeanDecreaseImpurityImportanceEvaluator.evaluate:1
-#: optuna.importance.MeanDecreaseImpurityImportanceEvaluator.evaluate:1:<autosummary>:1
+#: of
+#: optuna.importance._mean_decrease_impurity.MeanDecreaseImpurityImportanceEvaluator.evaluate:1
+#: optuna.importance._mean_decrease_impurity.MeanDecreaseImpurityImportanceEvaluator.evaluate:1:<autosummary>:1
 msgid ""
 "Evaluate parameter importances based on completed trials in the given "
 "study."
 msgstr ""
 
-#: of optuna.importance.MeanDecreaseImpurityImportanceEvaluator.evaluate:5
+#: of
+#: optuna.importance._mean_decrease_impurity.MeanDecreaseImpurityImportanceEvaluator.evaluate:5
 msgid "This method is not meant to be called by library users."
 msgstr ""
 
-#: of optuna.importance.MeanDecreaseImpurityImportanceEvaluator.evaluate:9
+#: of
+#: optuna.importance._mean_decrease_impurity.MeanDecreaseImpurityImportanceEvaluator.evaluate:9
 msgid ""
 "Please refer to :func:`~optuna.importance.get_param_importances` for how "
 "a concrete evaluator should implement this method."
 msgstr ""
 
-#: of optuna.importance.MeanDecreaseImpurityImportanceEvaluator.evaluate:12
+#: of
+#: optuna.importance._mean_decrease_impurity.MeanDecreaseImpurityImportanceEvaluator.evaluate:12
 msgid "An optimized study."
 msgstr ""
 
-#: of optuna.importance.MeanDecreaseImpurityImportanceEvaluator.evaluate:13
+#: of
+#: optuna.importance._mean_decrease_impurity.MeanDecreaseImpurityImportanceEvaluator.evaluate:13
 msgid ""
 "A list of names of parameters to assess. If :obj:`None`, all parameters "
 "that are present in all of the completed trials are assessed."
 msgstr ""
 
-#: of optuna.importance.MeanDecreaseImpurityImportanceEvaluator.evaluate:16
+#: of
+#: optuna.importance._mean_decrease_impurity.MeanDecreaseImpurityImportanceEvaluator.evaluate:16
 msgid ""
 "A function to specify the value to evaluate importances. If it is "
 ":obj:`None` and ``study`` is being used for single-objective "
@@ -105,36 +118,47 @@ msgid ""
 "argument if ``study`` is being used for multi-objective     optimization."
 msgstr ""
 
-#: of optuna.importance.MeanDecreaseImpurityImportanceEvaluator.evaluate:16
+#: of
+#: optuna.importance._mean_decrease_impurity.MeanDecreaseImpurityImportanceEvaluator.evaluate:16
 msgid ""
 "A function to specify the value to evaluate importances. If it is "
 ":obj:`None` and ``study`` is being used for single-objective "
 "optimization, the objective values are used."
 msgstr ""
 
-#: of optuna.importance.MeanDecreaseImpurityImportanceEvaluator.evaluate:21
+#: of
+#: optuna.importance._mean_decrease_impurity.MeanDecreaseImpurityImportanceEvaluator.evaluate:21
 msgid ""
 "Specify this argument if ``study`` is being used for multi-objective "
 "optimization."
 msgstr ""
 
-#: of optuna.importance.MeanDecreaseImpurityImportanceEvaluator.evaluate
+#: of
+#: optuna.importance._mean_decrease_impurity.MeanDecreaseImpurityImportanceEvaluator.evaluate
 msgid "返回"
 msgstr ""
 
-#: of optuna.importance.MeanDecreaseImpurityImportanceEvaluator.evaluate:24
+#: of
+#: optuna.importance._mean_decrease_impurity.MeanDecreaseImpurityImportanceEvaluator.evaluate:24
 msgid ""
 "An :class:`collections.OrderedDict` where the keys are parameter names "
 "and the values are assessed importances."
 msgstr ""
 
-#: of optuna.importance.MeanDecreaseImpurityImportanceEvaluator.evaluate
+#: of
+#: optuna.importance._mean_decrease_impurity.MeanDecreaseImpurityImportanceEvaluator.evaluate
 msgid "引发"
 msgstr ""
 
-#: of optuna.importance.MeanDecreaseImpurityImportanceEvaluator.evaluate:27
+#: of
+#: optuna.importance._mean_decrease_impurity.MeanDecreaseImpurityImportanceEvaluator.evaluate:27
 msgid ""
 "If ``target`` is :obj:`None` and ``study`` is being used for multi-"
 "objective     optimization."
+msgstr ""
+
+#: of
+#: optuna.importance._mean_decrease_impurity.MeanDecreaseImpurityImportanceEvaluator.evaluate
+msgid "返回类型"
 msgstr ""
 

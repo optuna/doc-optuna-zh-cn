@@ -16,9 +16,12 @@ optuna.storages.RedisStorage
       ~RedisStorage.create_new_study
       ~RedisStorage.create_new_trial
       ~RedisStorage.delete_study
+      ~RedisStorage.fail_stale_trials
       ~RedisStorage.get_all_study_summaries
       ~RedisStorage.get_all_trials
       ~RedisStorage.get_best_trial
+      ~RedisStorage.get_failed_trial_callback
+      ~RedisStorage.get_heartbeat_interval
       ~RedisStorage.get_n_trials
       ~RedisStorage.get_study_directions
       ~RedisStorage.get_study_id_from_name
@@ -33,7 +36,9 @@ optuna.storages.RedisStorage
       ~RedisStorage.get_trial_params
       ~RedisStorage.get_trial_system_attrs
       ~RedisStorage.get_trial_user_attrs
+      ~RedisStorage.is_heartbeat_enabled
       ~RedisStorage.read_trials_from_remote_storage
+      ~RedisStorage.record_heartbeat
       ~RedisStorage.remove_session
       ~RedisStorage.set_study_directions
       ~RedisStorage.set_study_system_attr

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 2.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-14 18:04-0500\n"
+"POT-Creation-Date: 2021-03-20 13:35-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -41,6 +41,10 @@ msgstr ""
 msgid ""
 "Database URL such as ``sqlite:///example.db``. Please see also the "
 "documentation of :func:`~optuna.study.create_study` for further details."
+msgstr ""
+
+#: of optuna.study.delete_study
+msgid "返回类型"
 msgstr ""
 
 #: of optuna.study.delete_study:35

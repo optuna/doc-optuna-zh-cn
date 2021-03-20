@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 2.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-14 18:04-0500\n"
+"POT-Creation-Date: 2021-03-20 13:35-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,35 +21,42 @@ msgstr ""
 msgid "optuna.visualization.matplotlib.plot\\_optimization\\_history"
 msgstr ""
 
-#: of optuna.visualization.matplotlib.plot_optimization_history:1
+#: of
+#: optuna.visualization.matplotlib._optimization_history.plot_optimization_history:1
 msgid "Plot optimization history of all trials in a study with Matplotlib."
 msgstr ""
 
-#: of optuna.visualization.matplotlib.plot_optimization_history:4
+#: of
+#: optuna.visualization.matplotlib._optimization_history.plot_optimization_history:4
 msgid ""
 "Please refer to :func:`optuna.visualization.plot_optimization_history` "
 "for an example."
 msgstr ""
 
-#: of optuna.visualization.matplotlib.plot_optimization_history:7
+#: of
+#: optuna.visualization.matplotlib._optimization_history.plot_optimization_history:7
 msgid "示例"
 msgstr ""
 
-#: of optuna.visualization.matplotlib.plot_optimization_history:8
+#: of
+#: optuna.visualization.matplotlib._optimization_history.plot_optimization_history:8
 msgid "The following code snippet shows how to plot optimization history."
 msgstr ""
 
-#: of optuna.visualization.matplotlib.plot_optimization_history
+#: of
+#: optuna.visualization.matplotlib._optimization_history.plot_optimization_history
 msgid "参数"
 msgstr ""
 
-#: of optuna.visualization.matplotlib.plot_optimization_history:26
+#: of
+#: optuna.visualization.matplotlib._optimization_history.plot_optimization_history:26
 msgid ""
 "A :class:`~optuna.study.Study` object whose trials are plotted for their "
 "target values."
 msgstr ""
 
-#: of optuna.visualization.matplotlib.plot_optimization_history:27
+#: of
+#: optuna.visualization.matplotlib._optimization_history.plot_optimization_history:27
 msgid ""
 "A function to specify the value to display. If it is :obj:`None` and "
 "``study`` is being used for single-objective optimization, the objective "
@@ -57,42 +64,55 @@ msgid ""
 "being used for multi-objective optimization."
 msgstr ""
 
-#: of optuna.visualization.matplotlib.plot_optimization_history:27
+#: of
+#: optuna.visualization.matplotlib._optimization_history.plot_optimization_history:27
 msgid ""
 "A function to specify the value to display. If it is :obj:`None` and "
 "``study`` is being used for single-objective optimization, the objective "
 "values are plotted."
 msgstr ""
 
-#: of optuna.visualization.matplotlib.plot_optimization_history:31
+#: of
+#: optuna.visualization.matplotlib._optimization_history.plot_optimization_history:31
 msgid ""
 "Specify this argument if ``study`` is being used for multi-objective "
 "optimization."
 msgstr ""
 
-#: of optuna.visualization.matplotlib.plot_optimization_history:32
+#: of
+#: optuna.visualization.matplotlib._optimization_history.plot_optimization_history:32
 msgid "Target's name to display on the axis label and the legend."
 msgstr ""
 
-#: of optuna.visualization.matplotlib.plot_optimization_history
+#: of
+#: optuna.visualization.matplotlib._optimization_history.plot_optimization_history
 msgid "返回"
 msgstr ""
 
-#: of optuna.visualization.matplotlib.plot_optimization_history:34
+#: of
+#: optuna.visualization.matplotlib._optimization_history.plot_optimization_history:34
 msgid "A :class:`matplotlib.axes.Axes` object."
 msgstr ""
 
-#: of optuna.visualization.matplotlib.plot_optimization_history
+#: of
+#: optuna.visualization.matplotlib._optimization_history.plot_optimization_history
 msgid "引发"
 msgstr ""
 
-#: of optuna.visualization.matplotlib.plot_optimization_history:36
+#: of
+#: optuna.visualization.matplotlib._optimization_history.plot_optimization_history:36
 msgid ""
 "If ``target`` is :obj:`None` and ``study`` is being used for multi-"
 "objective     optimization."
 msgstr ""
 
-#: of optuna.visualization.matplotlib.plot_optimization_history:39
+#: of
+#: optuna.visualization.matplotlib._optimization_history.plot_optimization_history
+msgid "返回类型"
+msgstr ""
+
+#: of
+#: optuna.visualization.matplotlib._optimization_history.plot_optimization_history:39
 msgid ""
 "Added in v2.2.0 as an experimental feature. The interface may change in "
 "newer versions without prior notice. See "

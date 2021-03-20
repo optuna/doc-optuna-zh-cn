@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 2.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-14 18:04-0500\n"
+"POT-Creation-Date: 2021-03-20 13:35-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,21 +21,23 @@ msgstr ""
 msgid "optuna.samplers.CmaEsSampler"
 msgstr ""
 
-#: of optuna.samplers.CmaEsSampler:1
-msgid "A Sampler using CMA-ES algorithm."
+#: of optuna.samplers._cmaes.CmaEsSampler:1
+msgid ""
+"A Sampler using `cmaes <https://github.com/CyberAgent/cmaes>`_ as the "
+"backend."
 msgstr ""
 
-#: of optuna.samplers.CmaEsSampler:4
+#: of optuna.samplers._cmaes.CmaEsSampler:4
 msgid "示例"
 msgstr ""
 
-#: of optuna.samplers.CmaEsSampler:5
+#: of optuna.samplers._cmaes.CmaEsSampler:5
 msgid ""
 "Optimize a simple quadratic function by using "
 ":class:`~optuna.samplers.CmaEsSampler`."
 msgstr ""
 
-#: of optuna.samplers.CmaEsSampler:22
+#: of optuna.samplers._cmaes.CmaEsSampler:22
 msgid ""
 "Please note that this sampler does not support CategoricalDistribution. "
 "If your search space contains categorical parameters, I recommend you to "
@@ -45,19 +47,19 @@ msgid ""
 "multivariate normal distribution."
 msgstr ""
 
-#: of optuna.samplers.CmaEsSampler:29
+#: of optuna.samplers._cmaes.CmaEsSampler:29
 msgid ""
-"For further information about CMA-ES algorithm and its restarting "
-"strategy algorithm, please refer to the following papers:"
+"For further information about CMA-ES algorithm, please refer to the "
+"following papers:"
 msgstr ""
 
-#: of optuna.samplers.CmaEsSampler:32
+#: of optuna.samplers._cmaes.CmaEsSampler:31
 msgid ""
 "`N. Hansen, The CMA Evolution Strategy: A Tutorial. arXiv:1604.00772, "
 "2016. <https://arxiv.org/abs/1604.00772>`_"
 msgstr ""
 
-#: of optuna.samplers.CmaEsSampler:34
+#: of optuna.samplers._cmaes.CmaEsSampler:33
 msgid ""
 "`A. Auger and N. Hansen. A restart CMA evolution strategy with increasing"
 " population size. In Proceedings of the IEEE Congress on Evolutionary "
@@ -65,20 +67,36 @@ msgid ""
 "<http://www.cmap.polytechnique.fr/~nikolaus.hansen/cec2005ipopcmaes.pdf>`_"
 msgstr ""
 
-#: of optuna.samplers.CmaEsSampler:40
+#: of optuna.samplers._cmaes.CmaEsSampler:37
+msgid ""
+"`Raymond Ros, Nikolaus Hansen. A Simple Modification in CMA-ES Achieving "
+"Linear Time and Space Complexity. 10th International Conference on "
+"Parallel Problem Solving From Nature, Sep 2008, Dortmund, Germany. "
+"inria-00287367. <https://hal.inria.fr/inria-00287367/document>`_"
+msgstr ""
+
+#: of optuna.samplers._cmaes.CmaEsSampler:41
+msgid ""
+"`Masahiro Nomura, Shuhei Watanabe, Youhei Akimoto, Yoshihiko Ozaki, "
+"Masaki Onishi. Warm Starting CMA-ES for Hyperparameter Optimization, "
+"AAAI. 2021. <https://arxiv.org/abs/2012.06932>`_"
+msgstr ""
+
+#: of optuna.samplers._cmaes.CmaEsSampler:46
 msgid ""
 "You can also use :class:`optuna.integration.PyCmaSampler` which is a "
 "sampler using cma library as the backend."
 msgstr ""
 
-#: of optuna.samplers.CmaEsSampler optuna.samplers.CmaEsSampler.after_trial
-#: optuna.samplers.CmaEsSampler.infer_relative_search_space
-#: optuna.samplers.CmaEsSampler.sample_independent
-#: optuna.samplers.CmaEsSampler.sample_relative
+#: of optuna.samplers._cmaes.CmaEsSampler
+#: optuna.samplers._cmaes.CmaEsSampler.after_trial
+#: optuna.samplers._cmaes.CmaEsSampler.infer_relative_search_space
+#: optuna.samplers._cmaes.CmaEsSampler.sample_independent
+#: optuna.samplers._cmaes.CmaEsSampler.sample_relative
 msgid "参数"
 msgstr ""
 
-#: of optuna.samplers.CmaEsSampler:43
+#: of optuna.samplers._cmaes.CmaEsSampler:49
 msgid ""
 "A dictionary of an initial parameter values for CMA-ES. By default, the "
 "mean of ``low`` and ``high`` for each distribution is used. Note that "
@@ -86,24 +104,24 @@ msgid ""
 "restart if you specify ``restart_strategy`` argument."
 msgstr ""
 
-#: of optuna.samplers.CmaEsSampler:47
+#: of optuna.samplers._cmaes.CmaEsSampler:53
 msgid ""
 "Initial standard deviation of CMA-ES. By default, ``sigma0`` is set to "
 "``min_range / 6``, where ``min_range`` denotes the minimum range of the "
 "distributions in the search space."
 msgstr ""
 
-#: of optuna.samplers.CmaEsSampler:50
+#: of optuna.samplers._cmaes.CmaEsSampler:56
 msgid "A random seed for CMA-ES."
 msgstr ""
 
-#: of optuna.samplers.CmaEsSampler:51
+#: of optuna.samplers._cmaes.CmaEsSampler:57
 msgid ""
 "The independent sampling is used instead of the CMA-ES algorithm until "
 "the given number of trials finish in the same study."
 msgstr ""
 
-#: of optuna.samplers.CmaEsSampler:53
+#: of optuna.samplers._cmaes.CmaEsSampler:59
 msgid ""
 "A :class:`~optuna.samplers.BaseSampler` instance that is used for "
 "independent sampling. The parameters not contained in the relative search"
@@ -117,7 +135,7 @@ msgid ""
 ":class:`~optuna.samplers.TPESampler`."
 msgstr ""
 
-#: of optuna.samplers.CmaEsSampler:53
+#: of optuna.samplers._cmaes.CmaEsSampler:59
 msgid ""
 "A :class:`~optuna.samplers.BaseSampler` instance that is used for "
 "independent sampling. The parameters not contained in the relative search"
@@ -126,20 +144,20 @@ msgid ""
 ":func:`~optuna.samplers.intersection_search_space()`."
 msgstr ""
 
-#: of optuna.samplers.CmaEsSampler:59
+#: of optuna.samplers._cmaes.CmaEsSampler:65
 msgid ""
 "If :obj:`None` is specified, :class:`~optuna.samplers.RandomSampler` is "
 "used as the default."
 msgstr ""
 
-#: of optuna.samplers.CmaEsSampler:63
+#: of optuna.samplers._cmaes.CmaEsSampler:69
 msgid ""
 ":class:`optuna.samplers` module provides built-in independent samplers "
 "such as :class:`~optuna.samplers.RandomSampler` and "
 ":class:`~optuna.samplers.TPESampler`."
 msgstr ""
 
-#: of optuna.samplers.CmaEsSampler:66
+#: of optuna.samplers._cmaes.CmaEsSampler:72
 msgid ""
 "If this is :obj:`True`, a warning message is emitted when the value of a "
 "parameter is sampled by using an independent sampler.  Note that the "
@@ -147,20 +165,20 @@ msgid ""
 "independent sampler, so no warning messages are emitted in this case."
 msgstr ""
 
-#: of optuna.samplers.CmaEsSampler:66
+#: of optuna.samplers._cmaes.CmaEsSampler:72
 msgid ""
 "If this is :obj:`True`, a warning message is emitted when the value of a "
 "parameter is sampled by using an independent sampler."
 msgstr ""
 
-#: of optuna.samplers.CmaEsSampler:69
+#: of optuna.samplers._cmaes.CmaEsSampler:75
 msgid ""
 "Note that the parameters of the first trial in a study are always sampled"
 " via an independent sampler, so no warning messages are emitted in this "
 "case."
 msgstr ""
 
-#: of optuna.samplers.CmaEsSampler:71
+#: of optuna.samplers._cmaes.CmaEsSampler:77
 msgid ""
 "Strategy for restarting CMA-ES optimization when converges to a local "
 "minimum. If given :obj:`None`, CMA-ES will not restart (default). If "
@@ -171,7 +189,7 @@ msgid ""
 "https://github.com/optuna/optuna/releases/tag/v2.1.0."
 msgstr ""
 
-#: of optuna.samplers.CmaEsSampler:71
+#: of optuna.samplers._cmaes.CmaEsSampler:77
 msgid ""
 "Strategy for restarting CMA-ES optimization when converges to a local "
 "minimum. If given :obj:`None`, CMA-ES will not restart (default). If "
@@ -179,20 +197,20 @@ msgid ""
 " see also ``inc_popsize`` parameter."
 msgstr ""
 
-#: of optuna.samplers.CmaEsSampler:77
+#: of optuna.samplers._cmaes.CmaEsSampler:83
 msgid ""
 "Added in v2.1.0 as an experimental feature. The interface may change in "
 "newer versions without prior notice. See "
 "https://github.com/optuna/optuna/releases/tag/v2.1.0."
 msgstr ""
 
-#: of optuna.samplers.CmaEsSampler:80
+#: of optuna.samplers._cmaes.CmaEsSampler:86
 msgid ""
 "Multiplier for increasing population size before each restart. This "
 "argument will be used when setting ``restart_strategy = 'ipop'``."
 msgstr ""
 
-#: of optuna.samplers.CmaEsSampler:82
+#: of optuna.samplers._cmaes.CmaEsSampler:88
 msgid ""
 "If this is :obj:`True`, the PRUNED trials are considered for sampling.  "
 ".. note::     Added in v2.0.0 as an experimental feature. The interface "
@@ -206,18 +224,18 @@ msgid ""
 "the details."
 msgstr ""
 
-#: of optuna.samplers.CmaEsSampler:82
+#: of optuna.samplers._cmaes.CmaEsSampler:88
 msgid "If this is :obj:`True`, the PRUNED trials are considered for sampling."
 msgstr ""
 
-#: of optuna.samplers.CmaEsSampler:85
+#: of optuna.samplers._cmaes.CmaEsSampler:91
 msgid ""
 "Added in v2.0.0 as an experimental feature. The interface may change in "
 "newer versions without prior notice. See "
 "https://github.com/optuna/optuna/releases/tag/v2.0.0."
 msgstr ""
 
-#: of optuna.samplers.CmaEsSampler:90
+#: of optuna.samplers._cmaes.CmaEsSampler:96
 msgid ""
 "It is suggested to set this flag :obj:`False` when the "
 ":class:`~optuna.pruners.MedianPruner` is used. On the other hand, it is "
@@ -227,11 +245,61 @@ msgid ""
 "details."
 msgstr ""
 
-#: of optuna.samplers.CmaEsSampler
+#: of optuna.samplers._cmaes.CmaEsSampler:101
+msgid ""
+"If this is :obj:`True`, the covariance matrix is constrained to be "
+"diagonal. Due to reduce the model complexity, the learning rate for the "
+"covariance matrix is increased. Consequently, this algorithm outperforms "
+"CMA-ES on separable functions.  .. note::     Added in v2.6.0 as an "
+"experimental feature. The interface may change in newer     versions "
+"without prior notice. See     "
+"https://github.com/optuna/optuna/releases/tag/v2.6.0."
+msgstr ""
+
+#: of optuna.samplers._cmaes.CmaEsSampler:101
+msgid ""
+"If this is :obj:`True`, the covariance matrix is constrained to be "
+"diagonal. Due to reduce the model complexity, the learning rate for the "
+"covariance matrix is increased. Consequently, this algorithm outperforms "
+"CMA-ES on separable functions."
+msgstr ""
+
+#: of optuna.samplers._cmaes.CmaEsSampler:106
+#: optuna.samplers._cmaes.CmaEsSampler:116
+msgid ""
+"Added in v2.6.0 as an experimental feature. The interface may change in "
+"newer versions without prior notice. See "
+"https://github.com/optuna/optuna/releases/tag/v2.6.0."
+msgstr ""
+
+#: of optuna.samplers._cmaes.CmaEsSampler:109
+msgid ""
+"This option is for Warm Starting CMA-ES, a method to transfer prior "
+"knowledge on similar HPO tasks through the initialization of CMA-ES. This"
+" method estimates a promising distribution from ``source_trials`` and "
+"generates the parameter of multivariate gaussian distribution. Please "
+"note that it is prohibited to use ``x0``, ``sigma0``, or "
+"``use_separable_cma`` argument together.  .. note::     Added in v2.6.0 "
+"as an experimental feature. The interface may change in newer     "
+"versions without prior notice. See     "
+"https://github.com/optuna/optuna/releases/tag/v2.6.0."
+msgstr ""
+
+#: of optuna.samplers._cmaes.CmaEsSampler:109
+msgid ""
+"This option is for Warm Starting CMA-ES, a method to transfer prior "
+"knowledge on similar HPO tasks through the initialization of CMA-ES. This"
+" method estimates a promising distribution from ``source_trials`` and "
+"generates the parameter of multivariate gaussian distribution. Please "
+"note that it is prohibited to use ``x0``, ``sigma0``, or "
+"``use_separable_cma`` argument together."
+msgstr ""
+
+#: of optuna.samplers._cmaes.CmaEsSampler
 msgid "引发"
 msgstr ""
 
-#: of optuna.samplers.CmaEsSampler:96
+#: of optuna.samplers._cmaes.CmaEsSampler:120
 msgid "If ``restart_strategy`` is not 'ipop' or :obj:`None`."
 msgstr ""
 
@@ -239,127 +307,135 @@ msgstr ""
 msgid "Methods"
 msgstr ""
 
-#: of optuna.samplers.CmaEsSampler.after_trial:1:<autosummary>:1
+#: of optuna.samplers._cmaes.CmaEsSampler.after_trial:1:<autosummary>:1
 msgid ""
 ":obj:`after_trial <optuna.samplers.CmaEsSampler.after_trial>`\\ "
 "\\(study\\, trial\\, state\\, values\\)"
 msgstr ""
 
-#: of optuna.samplers.CmaEsSampler.after_trial:1
-#: optuna.samplers.CmaEsSampler.after_trial:1:<autosummary>:1
+#: of optuna.samplers._cmaes.CmaEsSampler.after_trial:1
+#: optuna.samplers._cmaes.CmaEsSampler.after_trial:1:<autosummary>:1
 msgid "Trial post-processing."
 msgstr ""
 
-#: of optuna.samplers.CmaEsSampler.after_trial:1:<autosummary>:1
+#: of optuna.samplers._cmaes.CmaEsSampler.after_trial:1:<autosummary>:1
 msgid ""
 ":obj:`infer_relative_search_space "
 "<optuna.samplers.CmaEsSampler.infer_relative_search_space>`\\ \\(study\\,"
 " trial\\)"
 msgstr ""
 
-#: of optuna.samplers.CmaEsSampler.after_trial:1:<autosummary>:1
-#: optuna.samplers.CmaEsSampler.infer_relative_search_space:1
+#: of optuna.samplers._cmaes.CmaEsSampler.after_trial:1:<autosummary>:1
+#: optuna.samplers._cmaes.CmaEsSampler.infer_relative_search_space:1
 msgid ""
 "Infer the search space that will be used by relative sampling in the "
 "target trial."
 msgstr ""
 
-#: of optuna.samplers.CmaEsSampler.after_trial:1:<autosummary>:1
+#: of optuna.samplers._cmaes.CmaEsSampler.after_trial:1:<autosummary>:1
 msgid ":obj:`reseed_rng <optuna.samplers.CmaEsSampler.reseed_rng>`\\ \\(\\)"
 msgstr ""
 
-#: of optuna.samplers.CmaEsSampler.after_trial:1:<autosummary>:1
-#: optuna.samplers.CmaEsSampler.reseed_rng:1
+#: of optuna.samplers._cmaes.CmaEsSampler.after_trial:1:<autosummary>:1
+#: optuna.samplers._cmaes.CmaEsSampler.reseed_rng:1
 msgid "Reseed sampler's random number generator."
 msgstr ""
 
-#: of optuna.samplers.CmaEsSampler.after_trial:1:<autosummary>:1
+#: of optuna.samplers._cmaes.CmaEsSampler.after_trial:1:<autosummary>:1
 msgid ""
 ":obj:`sample_independent "
 "<optuna.samplers.CmaEsSampler.sample_independent>`\\ \\(study\\, trial\\,"
 " param\\_name\\, ...\\)"
 msgstr ""
 
-#: of optuna.samplers.CmaEsSampler.after_trial:1:<autosummary>:1
-#: optuna.samplers.CmaEsSampler.sample_independent:1
+#: of optuna.samplers._cmaes.CmaEsSampler.after_trial:1:<autosummary>:1
+#: optuna.samplers._cmaes.CmaEsSampler.sample_independent:1
 msgid "Sample a parameter for a given distribution."
 msgstr ""
 
-#: of optuna.samplers.CmaEsSampler.after_trial:1:<autosummary>:1
+#: of optuna.samplers._cmaes.CmaEsSampler.after_trial:1:<autosummary>:1
 msgid ""
 ":obj:`sample_relative <optuna.samplers.CmaEsSampler.sample_relative>`\\ "
 "\\(study\\, trial\\, search\\_space\\)"
 msgstr ""
 
-#: of optuna.samplers.CmaEsSampler.after_trial:1:<autosummary>:1
-#: optuna.samplers.CmaEsSampler.sample_relative:1
+#: of optuna.samplers._cmaes.CmaEsSampler.after_trial:1:<autosummary>:1
+#: optuna.samplers._cmaes.CmaEsSampler.sample_relative:1
 msgid "Sample parameters in a given search space."
 msgstr ""
 
-#: of optuna.samplers.CmaEsSampler.after_trial:3
+#: of optuna.samplers._cmaes.CmaEsSampler.after_trial:3
 msgid ""
 "This method is called after the objective function returns and right "
 "before the trials is finished and its state is stored."
 msgstr ""
 
-#: of optuna.samplers.CmaEsSampler.after_trial:7
+#: of optuna.samplers._cmaes.CmaEsSampler.after_trial:7
 msgid ""
 "Added in v2.4.0 as an experimental feature. The interface may change in "
 "newer versions without prior notice. See "
 "https://github.com/optuna/optuna/releases/tag/v2.4.0."
 msgstr ""
 
-#: of optuna.samplers.CmaEsSampler.after_trial:10
-#: optuna.samplers.CmaEsSampler.infer_relative_search_space:8
-#: optuna.samplers.CmaEsSampler.sample_independent:13
-#: optuna.samplers.CmaEsSampler.sample_relative:12
+#: of optuna.samplers._cmaes.CmaEsSampler.after_trial:10
+#: optuna.samplers._cmaes.CmaEsSampler.infer_relative_search_space:8
+#: optuna.samplers._cmaes.CmaEsSampler.sample_independent:13
+#: optuna.samplers._cmaes.CmaEsSampler.sample_relative:12
 msgid "Target study object."
 msgstr ""
 
-#: of optuna.samplers.CmaEsSampler.after_trial:11
-#: optuna.samplers.CmaEsSampler.infer_relative_search_space:9
-#: optuna.samplers.CmaEsSampler.sample_independent:14
-#: optuna.samplers.CmaEsSampler.sample_relative:13
+#: of optuna.samplers._cmaes.CmaEsSampler.after_trial:11
+#: optuna.samplers._cmaes.CmaEsSampler.infer_relative_search_space:9
+#: optuna.samplers._cmaes.CmaEsSampler.sample_independent:14
+#: optuna.samplers._cmaes.CmaEsSampler.sample_relative:13
 msgid "Target trial object. Take a copy before modifying this object."
 msgstr ""
 
-#: of optuna.samplers.CmaEsSampler.after_trial:13
+#: of optuna.samplers._cmaes.CmaEsSampler.after_trial:13
 msgid "Resulting trial state."
 msgstr ""
 
-#: of optuna.samplers.CmaEsSampler.after_trial:14
+#: of optuna.samplers._cmaes.CmaEsSampler.after_trial:14
 msgid ""
 "Resulting trial values. Guaranteed to not be :obj:`None` if trial "
 "succeeded."
 msgstr ""
 
-#: of optuna.samplers.CmaEsSampler.infer_relative_search_space:3
+#: of optuna.samplers._cmaes.CmaEsSampler.after_trial
+#: optuna.samplers._cmaes.CmaEsSampler.infer_relative_search_space
+#: optuna.samplers._cmaes.CmaEsSampler.reseed_rng
+#: optuna.samplers._cmaes.CmaEsSampler.sample_independent
+#: optuna.samplers._cmaes.CmaEsSampler.sample_relative
+msgid "返回类型"
+msgstr ""
+
+#: of optuna.samplers._cmaes.CmaEsSampler.infer_relative_search_space:3
 msgid ""
 "This method is called right before "
 ":func:`~optuna.samplers.BaseSampler.sample_relative` method, and the "
-"search space returned by this method is pass to it. The parameters not "
+"search space returned by this method is passed to it. The parameters not "
 "contained in the search space will be sampled by using "
 ":func:`~optuna.samplers.BaseSampler.sample_independent` method."
 msgstr ""
 
-#: of optuna.samplers.CmaEsSampler.infer_relative_search_space
-#: optuna.samplers.CmaEsSampler.sample_independent
-#: optuna.samplers.CmaEsSampler.sample_relative
+#: of optuna.samplers._cmaes.CmaEsSampler.infer_relative_search_space
+#: optuna.samplers._cmaes.CmaEsSampler.sample_independent
+#: optuna.samplers._cmaes.CmaEsSampler.sample_relative
 msgid "返回"
 msgstr ""
 
-#: of optuna.samplers.CmaEsSampler.infer_relative_search_space:12
+#: of optuna.samplers._cmaes.CmaEsSampler.infer_relative_search_space:12
 msgid "A dictionary containing the parameter names and parameter's distributions."
 msgstr ""
 
-#: of optuna.samplers.CmaEsSampler.infer_relative_search_space:15
+#: of optuna.samplers._cmaes.CmaEsSampler.infer_relative_search_space:15
 msgid ""
 "Please refer to :func:`~optuna.samplers.intersection_search_space` as an "
 "implementation of "
 ":func:`~optuna.samplers.BaseSampler.infer_relative_search_space`."
 msgstr ""
 
-#: of optuna.samplers.CmaEsSampler.reseed_rng:3
+#: of optuna.samplers._cmaes.CmaEsSampler.reseed_rng:3
 msgid ""
 "This method is called by the :class:`~optuna.study.Study` instance if "
 "trials are executed in parallel with the option ``n_jobs>1``. In that "
@@ -369,7 +445,7 @@ msgid ""
 "generator."
 msgstr ""
 
-#: of optuna.samplers.CmaEsSampler.sample_independent:3
+#: of optuna.samplers._cmaes.CmaEsSampler.sample_independent:3
 msgid ""
 "This method is called only for the parameters not contained in the search"
 " space returned by :func:`~optuna.samplers.BaseSampler.sample_relative` "
@@ -377,29 +453,29 @@ msgid ""
 "relationship between parameters such as random sampling and TPE."
 msgstr ""
 
-#: of optuna.samplers.CmaEsSampler.sample_independent:9
-#: optuna.samplers.CmaEsSampler.sample_relative:8
+#: of optuna.samplers._cmaes.CmaEsSampler.sample_independent:9
+#: optuna.samplers._cmaes.CmaEsSampler.sample_relative:8
 msgid ""
 "The failed trials are ignored by any build-in samplers when they sample "
 "new parameters. Thus, failed trials are regarded as deleted in the "
 "samplers' perspective."
 msgstr ""
 
-#: of optuna.samplers.CmaEsSampler.sample_independent:16
+#: of optuna.samplers._cmaes.CmaEsSampler.sample_independent:16
 msgid "Name of the sampled parameter."
 msgstr ""
 
-#: of optuna.samplers.CmaEsSampler.sample_independent:17
+#: of optuna.samplers._cmaes.CmaEsSampler.sample_independent:17
 msgid ""
 "Distribution object that specifies a prior and/or scale of the sampling "
 "algorithm."
 msgstr ""
 
-#: of optuna.samplers.CmaEsSampler.sample_independent:19
+#: of optuna.samplers._cmaes.CmaEsSampler.sample_independent:19
 msgid "A parameter value."
 msgstr ""
 
-#: of optuna.samplers.CmaEsSampler.sample_relative:3
+#: of optuna.samplers._cmaes.CmaEsSampler.sample_relative:3
 msgid ""
 "This method is called once at the beginning of each trial, i.e., right "
 "before the evaluation of the objective function. This method is suitable "
@@ -407,13 +483,33 @@ msgid ""
 "Gaussian Process and CMA-ES."
 msgstr ""
 
-#: of optuna.samplers.CmaEsSampler.sample_relative:15
+#: of optuna.samplers._cmaes.CmaEsSampler.sample_relative:15
 msgid ""
 "The search space returned by "
 ":func:`~optuna.samplers.BaseSampler.infer_relative_search_space`."
 msgstr ""
 
-#: of optuna.samplers.CmaEsSampler.sample_relative:18
+#: of optuna.samplers._cmaes.CmaEsSampler.sample_relative:18
 msgid "A dictionary containing the parameter names and the values."
 msgstr ""
+
+#~ msgid "A Sampler using CMA-ES algorithm."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "For further information about CMA-ES "
+#~ "algorithm and its restarting strategy "
+#~ "algorithm, please refer to the following"
+#~ " papers:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "This method is called right before "
+#~ ":func:`~optuna.samplers.BaseSampler.sample_relative` method, "
+#~ "and the search space returned by "
+#~ "this method is pass to it. The "
+#~ "parameters not contained in the search"
+#~ " space will be sampled by using "
+#~ ":func:`~optuna.samplers.BaseSampler.sample_independent` method."
+#~ msgstr ""
 

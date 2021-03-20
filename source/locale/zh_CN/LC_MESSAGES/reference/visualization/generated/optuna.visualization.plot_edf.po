@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 2.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-10 02:25-0500\n"
+"POT-Creation-Date: 2021-03-20 13:35-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,54 +21,46 @@ msgstr ""
 msgid "optuna.visualization.plot\\_edf"
 msgstr ""
 
-#: of optuna.visualization.plot_edf:1
+#: of optuna.visualization._edf.plot_edf:1
 msgid "Plot the objective value EDF (empirical distribution function) of a study."
 msgstr ""
 
-#: of optuna.visualization.plot_edf:3
+#: of optuna.visualization._edf.plot_edf:3
 msgid "Note that only the complete trials are considered when plotting the EDF."
 msgstr ""
 
-#: of optuna.visualization.plot_edf:7
+#: of optuna.visualization._edf.plot_edf:7
 msgid ""
 "EDF is useful to analyze and improve search spaces. For instance, you can"
 " see a practical use case of EDF in the paper `Designing Network Design "
 "Spaces <https://arxiv.org/abs/2003.13678>`_."
 msgstr ""
 
-#: of optuna.visualization.plot_edf:13
+#: of optuna.visualization._edf.plot_edf:13
 msgid ""
 "The plotted EDF assumes that the value of the objective function is in "
 "accordance with the uniform distribution over the objective space."
 msgstr ""
 
-#: of optuna.visualization.plot_edf:17
+#: of optuna.visualization._edf.plot_edf:17
 msgid "示例"
 msgstr ""
 
-#: of optuna.visualization.plot_edf:18
+#: of optuna.visualization._edf.plot_edf:18
 msgid "The following code snippet shows how to plot EDF."
 msgstr ""
 
-#: ../../source/reference/visualization/generated/optuna.visualization.plot_edf.rst:8
-msgid ""
-"(`Source code <../../../reference/visualization/generated/optuna-"
-"visualization-plot_edf-1.py>`__, `html "
-"<../../../reference/visualization/generated/optuna-visualization-"
-"plot_edf-1.html>`__)"
-msgstr ""
-
-#: of optuna.visualization.plot_edf
+#: of optuna.visualization._edf.plot_edf
 msgid "参数"
 msgstr ""
 
-#: of optuna.visualization.plot_edf:55
+#: of optuna.visualization._edf.plot_edf:56
 msgid ""
 "A target :class:`~optuna.study.Study` object. You can pass multiple "
 "studies if you want to compare those EDFs."
 msgstr ""
 
-#: of optuna.visualization.plot_edf:57
+#: of optuna.visualization._edf.plot_edf:58
 msgid ""
 "A function to specify the value to display. If it is :obj:`None` and "
 "``study`` is being used for single-objective optimization, the objective "
@@ -76,38 +68,49 @@ msgid ""
 "being used for multi-objective optimization."
 msgstr ""
 
-#: of optuna.visualization.plot_edf:57
+#: of optuna.visualization._edf.plot_edf:58
 msgid ""
 "A function to specify the value to display. If it is :obj:`None` and "
 "``study`` is being used for single-objective optimization, the objective "
 "values are plotted."
 msgstr ""
 
-#: of optuna.visualization.plot_edf:61
+#: of optuna.visualization._edf.plot_edf:62
 msgid ""
 "Specify this argument if ``study`` is being used for multi-objective "
 "optimization."
 msgstr ""
 
-#: of optuna.visualization.plot_edf:62
+#: of optuna.visualization._edf.plot_edf:63
 msgid "Target's name to display on the axis label."
 msgstr ""
 
-#: of optuna.visualization.plot_edf
+#: of optuna.visualization._edf.plot_edf
 msgid "返回"
 msgstr ""
 
-#: of optuna.visualization.plot_edf:64
+#: of optuna.visualization._edf.plot_edf:65
 msgid "A :class:`plotly.graph_objs.Figure` object."
 msgstr ""
 
-#: of optuna.visualization.plot_edf
+#: of optuna.visualization._edf.plot_edf
 msgid "引发"
 msgstr ""
 
-#: of optuna.visualization.plot_edf:66
+#: of optuna.visualization._edf.plot_edf:67
 msgid ""
 "If ``target`` is :obj:`None` and ``study`` is being used for multi-"
 "objective     optimization."
 msgstr ""
+
+#: of optuna.visualization._edf.plot_edf
+msgid "返回类型"
+msgstr ""
+
+#~ msgid ""
+#~ "(`Source code <../../../reference/visualization/generated"
+#~ "/optuna-visualization-plot_edf-1.py>`__, `html "
+#~ "<../../../reference/visualization/generated/optuna-"
+#~ "visualization-plot_edf-1.html>`__)"
+#~ msgstr ""
 

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 2.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-14 18:04-0500\n"
+"POT-Creation-Date: 2021-03-20 13:35-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,11 +21,11 @@ msgstr ""
 msgid "optuna.pruners.SuccessiveHalvingPruner"
 msgstr ""
 
-#: of optuna.pruners.SuccessiveHalvingPruner:1
+#: of optuna.pruners._successive_halving.SuccessiveHalvingPruner:1
 msgid "Pruner using Asynchronous Successive Halving Algorithm."
 msgstr ""
 
-#: of optuna.pruners.SuccessiveHalvingPruner:3
+#: of optuna.pruners._successive_halving.SuccessiveHalvingPruner:3
 msgid ""
 "`Successive Halving <https://arxiv.org/abs/1502.07943>`_ is a bandit-"
 "based algorithm to identify the best one among multiple configurations. "
@@ -34,35 +34,35 @@ msgid ""
 "<http://arxiv.org/abs/1810.05934>`_ for detailed descriptions."
 msgstr ""
 
-#: of optuna.pruners.SuccessiveHalvingPruner:8
+#: of optuna.pruners._successive_halving.SuccessiveHalvingPruner:8
 msgid ""
 "Note that, this class does not take care of the parameter for the maximum"
 " resource, referred to as :math:`R` in the paper. The maximum resource "
 "allocated to a trial is typically limited inside the objective function "
-"(e.g., ``step`` number in `simple.py "
-"<https://github.com/optuna/optuna/tree/c5777b3e/examples/pruning/simple.py#L31>`_,"
+"(e.g., ``step`` number in `simple_pruning.py "
+"<https://github.com/optuna/optuna/blob/master/examples/simple_pruning.py#L31>`_,"
 " ``EPOCH`` number in `chainer_integration.py "
-"<https://github.com/optuna/optuna/tree/c5777b3e/examples/pruning/chainer_integration.py#L65>`_)."
+"<https://github.com/optuna/optuna/blob/master/examples/chainer/chainer_integration.py#L65>`_)."
 msgstr ""
 
-#: of optuna.pruners.SuccessiveHalvingPruner:16
+#: of optuna.pruners._successive_halving.SuccessiveHalvingPruner:16
 msgid "Please refer to :meth:`~optuna.trial.Trial.report`."
 msgstr ""
 
-#: of optuna.pruners.SuccessiveHalvingPruner:19
+#: of optuna.pruners._successive_halving.SuccessiveHalvingPruner:19
 msgid "示例"
 msgstr ""
 
-#: of optuna.pruners.SuccessiveHalvingPruner:20
+#: of optuna.pruners._successive_halving.SuccessiveHalvingPruner:20
 msgid "We minimize an objective function with ``SuccessiveHalvingPruner``."
 msgstr ""
 
-#: of optuna.pruners.SuccessiveHalvingPruner
-#: optuna.pruners.SuccessiveHalvingPruner.prune
+#: of optuna.pruners._successive_halving.SuccessiveHalvingPruner
+#: optuna.pruners._successive_halving.SuccessiveHalvingPruner.prune
 msgid "参数"
 msgstr ""
 
-#: of optuna.pruners.SuccessiveHalvingPruner:58
+#: of optuna.pruners._successive_halving.SuccessiveHalvingPruner:58
 msgid ""
 "A parameter for specifying the minimum resource allocated to a trial (in "
 "the `paper <http://arxiv.org/abs/1810.05934>`_ this parameter is referred"
@@ -87,7 +87,7 @@ msgid ""
 "``min_resource``."
 msgstr ""
 
-#: of optuna.pruners.SuccessiveHalvingPruner:58
+#: of optuna.pruners._successive_halving.SuccessiveHalvingPruner:58
 msgid ""
 "A parameter for specifying the minimum resource allocated to a trial (in "
 "the `paper <http://arxiv.org/abs/1810.05934>`_ this parameter is referred"
@@ -96,7 +96,7 @@ msgid ""
 "steps for the first trial to complete."
 msgstr ""
 
-#: of optuna.pruners.SuccessiveHalvingPruner:64
+#: of optuna.pruners._successive_halving.SuccessiveHalvingPruner:64
 msgid ""
 "A trial is never pruned until it executes "
 ":math:`\\mathsf{min}\\_\\mathsf{resource} \\times "
@@ -114,13 +114,13 @@ msgid ""
 "\\mathsf{rung})}` steps) and repeats the same procedure."
 msgstr ""
 
-#: of optuna.pruners.SuccessiveHalvingPruner:81
+#: of optuna.pruners._successive_halving.SuccessiveHalvingPruner:81
 msgid ""
 "If the step of the last intermediate value may change with each trial, "
 "please manually specify the minimum possible step to ``min_resource``."
 msgstr ""
 
-#: of optuna.pruners.SuccessiveHalvingPruner:83
+#: of optuna.pruners._successive_halving.SuccessiveHalvingPruner:83
 msgid ""
 "A parameter for specifying reduction factor of promotable trials (in the "
 "`paper <http://arxiv.org/abs/1810.05934>`_ this parameter is referred to "
@@ -128,14 +128,14 @@ msgid ""
 " \\over \\mathsf{reduction}\\_\\mathsf{factor}}` trials will be promoted."
 msgstr ""
 
-#: of optuna.pruners.SuccessiveHalvingPruner:88
+#: of optuna.pruners._successive_halving.SuccessiveHalvingPruner:88
 msgid ""
 "A parameter for specifying the minimum early-stopping rate (in the `paper"
 " <http://arxiv.org/abs/1810.05934>`_ this parameter is referred to as "
 ":math:`s`)."
 msgstr ""
 
-#: of optuna.pruners.SuccessiveHalvingPruner:91
+#: of optuna.pruners._successive_halving.SuccessiveHalvingPruner:91
 msgid ""
 "Minimum number of trials that need to complete a rung before any trial is"
 " considered for promotion into the next rung."
@@ -145,18 +145,19 @@ msgstr ""
 msgid "Methods"
 msgstr ""
 
-#: of optuna.pruners.SuccessiveHalvingPruner.prune:1:<autosummary>:1
+#: of
+#: optuna.pruners._successive_halving.SuccessiveHalvingPruner.prune:1:<autosummary>:1
 msgid ""
 ":obj:`prune <optuna.pruners.SuccessiveHalvingPruner.prune>`\\ \\(study\\,"
 " trial\\)"
 msgstr ""
 
-#: of optuna.pruners.SuccessiveHalvingPruner.prune:1
-#: optuna.pruners.SuccessiveHalvingPruner.prune:1:<autosummary>:1
+#: of optuna.pruners._successive_halving.SuccessiveHalvingPruner.prune:1
+#: optuna.pruners._successive_halving.SuccessiveHalvingPruner.prune:1:<autosummary>:1
 msgid "Judge whether the trial should be pruned based on the reported values."
 msgstr ""
 
-#: of optuna.pruners.SuccessiveHalvingPruner.prune:3
+#: of optuna.pruners._successive_halving.SuccessiveHalvingPruner.prune:3
 msgid ""
 "Note that this method is not supposed to be called by library users. "
 "Instead, :func:`optuna.trial.Trial.report` and "
@@ -164,21 +165,39 @@ msgid ""
 "implement pruning mechanism in an objective function."
 msgstr ""
 
-#: of optuna.pruners.SuccessiveHalvingPruner.prune:7
+#: of optuna.pruners._successive_halving.SuccessiveHalvingPruner.prune:7
 msgid "Study object of the target study."
 msgstr ""
 
-#: of optuna.pruners.SuccessiveHalvingPruner.prune:8
+#: of optuna.pruners._successive_halving.SuccessiveHalvingPruner.prune:8
 msgid ""
 "FrozenTrial object of the target trial. Take a copy before modifying this"
 " object."
 msgstr ""
 
-#: of optuna.pruners.SuccessiveHalvingPruner.prune
+#: of optuna.pruners._successive_halving.SuccessiveHalvingPruner.prune
 msgid "返回"
 msgstr ""
 
-#: of optuna.pruners.SuccessiveHalvingPruner.prune:11
+#: of optuna.pruners._successive_halving.SuccessiveHalvingPruner.prune:11
 msgid "A boolean value representing whether the trial should be pruned."
 msgstr ""
+
+#: of optuna.pruners._successive_halving.SuccessiveHalvingPruner.prune
+msgid "返回类型"
+msgstr ""
+
+#~ msgid ""
+#~ "Note that, this class does not "
+#~ "take care of the parameter for the"
+#~ " maximum resource, referred to as "
+#~ ":math:`R` in the paper. The maximum "
+#~ "resource allocated to a trial is "
+#~ "typically limited inside the objective "
+#~ "function (e.g., ``step`` number in "
+#~ "`simple.py "
+#~ "<https://github.com/optuna/optuna/tree/c5777b3e/examples/pruning/simple.py#L31>`_,"
+#~ " ``EPOCH`` number in `chainer_integration.py "
+#~ "<https://github.com/optuna/optuna/tree/c5777b3e/examples/pruning/chainer_integration.py#L65>`_)."
+#~ msgstr ""
 

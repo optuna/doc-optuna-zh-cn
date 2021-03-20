@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 2.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-14 18:04-0500\n"
+"POT-Creation-Date: 2021-03-20 13:35-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,35 +21,36 @@ msgstr ""
 msgid "optuna.integration.ChainerMNStudy"
 msgstr ""
 
-#: of optuna.integration.ChainerMNStudy:1
+#: of optuna.integration.chainermn.ChainerMNStudy:1
 msgid ""
 "A wrapper of :class:`~optuna.study.Study` to incorporate Optuna with "
 "ChainerMN."
 msgstr ""
 
-#: of optuna.integration.ChainerMNStudy:4
+#: of optuna.integration.chainermn.ChainerMNStudy:4
 msgid ""
 ":class:`~optuna.integration.chainermn.ChainerMNStudy` provides the same "
 "interface as :class:`~optuna.study.Study`. Please refer to "
 ":class:`optuna.study.Study` for further details."
 msgstr ""
 
-#: of optuna.integration.ChainerMNStudy:8
+#: of optuna.integration.chainermn.ChainerMNStudy:8
 msgid ""
 "See `the example <https://github.com/optuna/optuna/blob/master/ "
-"examples/pruning/chainermn_integration.py>`__ if you want to optimize an "
+"examples/chainer/chainermn_integration.py>`__ if you want to optimize an "
 "objective function that trains neural network written with ChainerMN."
 msgstr ""
 
-#: of optuna.integration.ChainerMNStudy
+#: of optuna.integration.chainermn.ChainerMNStudy
+#: optuna.integration.chainermn.ChainerMNStudy.optimize
 msgid "参数"
 msgstr ""
 
-#: of optuna.integration.ChainerMNStudy:13
+#: of optuna.integration.chainermn.ChainerMNStudy:13
 msgid "A :class:`~optuna.study.Study` object."
 msgstr ""
 
-#: of optuna.integration.ChainerMNStudy:14
+#: of optuna.integration.chainermn.ChainerMNStudy:14
 msgid ""
 "A `ChainerMN communicator "
 "<https://docs.chainer.org/en/stable/chainermn/reference/ "
@@ -60,21 +61,34 @@ msgstr ""
 msgid "Methods"
 msgstr ""
 
-#: of optuna.integration.ChainerMNStudy.optimize:1:<autosummary>:1
+#: of optuna.integration.chainermn.ChainerMNStudy.optimize:1:<autosummary>:1
 msgid ""
 ":obj:`optimize <optuna.integration.ChainerMNStudy.optimize>`\\ "
 "\\(func\\[\\, n\\_trials\\, timeout\\, catch\\]\\)"
 msgstr ""
 
-#: of optuna.integration.ChainerMNStudy.optimize:1
-#: optuna.integration.ChainerMNStudy.optimize:1:<autosummary>:1
+#: of optuna.integration.chainermn.ChainerMNStudy.optimize:1
+#: optuna.integration.chainermn.ChainerMNStudy.optimize:1:<autosummary>:1
 msgid "Optimize an objective function."
 msgstr ""
 
-#: of optuna.integration.ChainerMNStudy.optimize:3
+#: of optuna.integration.chainermn.ChainerMNStudy.optimize:3
 msgid ""
 "This method provides the same interface as "
 ":func:`optuna.study.Study.optimize` except the absence of ``n_jobs`` "
 "argument."
 msgstr ""
+
+#: of optuna.integration.chainermn.ChainerMNStudy.optimize
+msgid "返回类型"
+msgstr ""
+
+#~ msgid ""
+#~ "See `the example "
+#~ "<https://github.com/optuna/optuna/blob/master/ "
+#~ "examples/pruning/chainermn_integration.py>`__ if you "
+#~ "want to optimize an objective function"
+#~ " that trains neural network written "
+#~ "with ChainerMN."
+#~ msgstr ""
 

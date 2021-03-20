@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 2.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-14 18:04-0500\n"
+"POT-Creation-Date: 2021-03-20 13:35-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -44,90 +44,119 @@ msgstr ""
 msgid "Methods"
 msgstr ""
 
-#: ../../source/reference/generated/optuna.study.Study.rst:28:<autosummary>:1
+#: ../../source/reference/generated/optuna.study.Study.rst:31:<autosummary>:1
 msgid ":obj:`add_trial <optuna.study.Study.add_trial>`\\ \\(trial\\)"
 msgstr ""
 
-#: ../../source/reference/generated/optuna.study.Study.rst:28:<autosummary>:1
+#: ../../source/reference/generated/optuna.study.Study.rst:31:<autosummary>:1
 #: of optuna.study.Study.add_trial:1
 msgid "Add trial to study."
 msgstr ""
 
-#: ../../source/reference/generated/optuna.study.Study.rst:28:<autosummary>:1
+#: ../../source/reference/generated/optuna.study.Study.rst:31:<autosummary>:1
+msgid ":obj:`add_trials <optuna.study.Study.add_trials>`\\ \\(trials\\)"
+msgstr ""
+
+#: ../../source/reference/generated/optuna.study.Study.rst:31:<autosummary>:1
+#: of optuna.study.Study.add_trials:1
+msgid "Add trials to study."
+msgstr ""
+
+#: ../../source/reference/generated/optuna.study.Study.rst:31:<autosummary>:1
+msgid ":obj:`ask <optuna.study.Study.ask>`\\ \\(\\[fixed\\_distributions\\]\\)"
+msgstr ""
+
+#: ../../source/reference/generated/optuna.study.Study.rst:31:<autosummary>:1
+#: of optuna.study.Study.ask:1
+msgid "Create a new trial from which hyperparameters can be suggested."
+msgstr ""
+
+#: ../../source/reference/generated/optuna.study.Study.rst:31:<autosummary>:1
 msgid ":obj:`enqueue_trial <optuna.study.Study.enqueue_trial>`\\ \\(params\\)"
 msgstr ""
 
-#: ../../source/reference/generated/optuna.study.Study.rst:28:<autosummary>:1
+#: ../../source/reference/generated/optuna.study.Study.rst:31:<autosummary>:1
 #: of optuna.study.Study.enqueue_trial:1
 msgid "Enqueue a trial with given parameter values."
 msgstr ""
 
-#: ../../source/reference/generated/optuna.study.Study.rst:28:<autosummary>:1
+#: ../../source/reference/generated/optuna.study.Study.rst:31:<autosummary>:1
 msgid ""
 ":obj:`get_trials <optuna.study.Study.get_trials>`\\ \\(\\[deepcopy\\, "
 "states\\]\\)"
 msgstr ""
 
-#: ../../source/reference/generated/optuna.study.Study.rst:28:<autosummary>:1
-#: of optuna.study.Study.add_trial:1:<autosummary>:1
-#: optuna.study.Study.get_trials:1 optuna.study.Study.trials:1
+#: ../../source/reference/generated/optuna.study.Study.rst:31:<autosummary>:1
+#: of optuna.study.BaseStudy.get_trials:1
+#: optuna.study.Study.add_trial:1:<autosummary>:1 optuna.study.Study.trials:1
 msgid "Return all trials in the study."
 msgstr ""
 
-#: ../../source/reference/generated/optuna.study.Study.rst:28:<autosummary>:1
+#: ../../source/reference/generated/optuna.study.Study.rst:31:<autosummary>:1
 msgid ""
 ":obj:`optimize <optuna.study.Study.optimize>`\\ \\(func\\[\\, "
 "n\\_trials\\, timeout\\, n\\_jobs\\, ...\\]\\)"
 msgstr ""
 
-#: ../../source/reference/generated/optuna.study.Study.rst:28:<autosummary>:1
+#: ../../source/reference/generated/optuna.study.Study.rst:31:<autosummary>:1
 #: of optuna.study.Study.optimize:1
 msgid "Optimize an objective function."
 msgstr ""
 
-#: ../../source/reference/generated/optuna.study.Study.rst:28:<autosummary>:1
+#: ../../source/reference/generated/optuna.study.Study.rst:31:<autosummary>:1
 msgid ""
 ":obj:`set_system_attr <optuna.study.Study.set_system_attr>`\\ \\(key\\, "
 "value\\)"
 msgstr ""
 
-#: ../../source/reference/generated/optuna.study.Study.rst:28:<autosummary>:1
+#: ../../source/reference/generated/optuna.study.Study.rst:31:<autosummary>:1
 #: of optuna.study.Study.set_system_attr:1
 msgid "Set a system attribute to the study."
 msgstr ""
 
-#: ../../source/reference/generated/optuna.study.Study.rst:28:<autosummary>:1
+#: ../../source/reference/generated/optuna.study.Study.rst:31:<autosummary>:1
 msgid ""
 ":obj:`set_user_attr <optuna.study.Study.set_user_attr>`\\ \\(key\\, "
 "value\\)"
 msgstr ""
 
-#: ../../source/reference/generated/optuna.study.Study.rst:28:<autosummary>:1
+#: ../../source/reference/generated/optuna.study.Study.rst:31:<autosummary>:1
 #: of optuna.study.Study.set_user_attr:1
 msgid "Set a user attribute to the study."
 msgstr ""
 
-#: ../../source/reference/generated/optuna.study.Study.rst:28:<autosummary>:1
+#: ../../source/reference/generated/optuna.study.Study.rst:31:<autosummary>:1
 msgid ":obj:`stop <optuna.study.Study.stop>`\\ \\(\\)"
 msgstr ""
 
-#: ../../source/reference/generated/optuna.study.Study.rst:28:<autosummary>:1
+#: ../../source/reference/generated/optuna.study.Study.rst:31:<autosummary>:1
 #: of optuna.study.Study.stop:1
 msgid "Exit from the current optimization loop after the running trials finish."
 msgstr ""
 
-#: ../../source/reference/generated/optuna.study.Study.rst:28:<autosummary>:1
+#: ../../source/reference/generated/optuna.study.Study.rst:31:<autosummary>:1
+msgid ""
+":obj:`tell <optuna.study.Study.tell>`\\ \\(trial\\[\\, values\\, "
+"state\\]\\)"
+msgstr ""
+
+#: ../../source/reference/generated/optuna.study.Study.rst:31:<autosummary>:1
+#: of optuna.study.Study.tell:1
+msgid "Finish a trial created with :func:`~optuna.study.Study.ask`."
+msgstr ""
+
+#: ../../source/reference/generated/optuna.study.Study.rst:31:<autosummary>:1
 msgid ""
 ":obj:`trials_dataframe <optuna.study.Study.trials_dataframe>`\\ "
 "\\(\\[attrs\\, multi\\_index\\]\\)"
 msgstr ""
 
-#: ../../source/reference/generated/optuna.study.Study.rst:28:<autosummary>:1
+#: ../../source/reference/generated/optuna.study.Study.rst:31:<autosummary>:1
 #: of optuna.study.Study.trials_dataframe:1
 msgid "Export trials as a pandas DataFrame_."
 msgstr ""
 
-#: ../../source/reference/generated/optuna.study.Study.rst:30
+#: ../../source/reference/generated/optuna.study.Study.rst:33
 msgid "Attributes"
 msgstr ""
 
@@ -211,9 +240,11 @@ msgstr ""
 msgid "The trial is validated before being added."
 msgstr ""
 
-#: of optuna.study.Study.add_trial:6 optuna.study.Study.enqueue_trial:7
-#: optuna.study.Study.get_trials:6 optuna.study.Study.optimize:10
-#: optuna.study.Study.set_user_attr:8 optuna.study.Study.stop:9
+#: of optuna.study.BaseStudy.get_trials:6 optuna.study.Study.add_trial:6
+#: optuna.study.Study.add_trials:6 optuna.study.Study.ask:9
+#: optuna.study.Study.ask:26 optuna.study.Study.enqueue_trial:7
+#: optuna.study.Study.optimize:10 optuna.study.Study.set_user_attr:8
+#: optuna.study.Study.stop:9 optuna.study.Study.tell:4
 #: optuna.study.Study.trials_dataframe:8 optuna.study.Study.user_attrs:8
 msgid "示例"
 msgstr ""
@@ -229,10 +260,11 @@ msgstr ""
 msgid "See :func:`~optuna.trial.create_trial` for how to create trials."
 msgstr ""
 
-#: of optuna.study.Study.add_trial optuna.study.Study.enqueue_trial
-#: optuna.study.Study.get_trials optuna.study.Study.optimize
+#: of optuna.study.BaseStudy.get_trials optuna.study.Study.add_trial
+#: optuna.study.Study.add_trials optuna.study.Study.ask
+#: optuna.study.Study.enqueue_trial optuna.study.Study.optimize
 #: optuna.study.Study.set_system_attr optuna.study.Study.set_user_attr
-#: optuna.study.Study.trials_dataframe
+#: optuna.study.Study.tell optuna.study.Study.trials_dataframe
 msgid "参数"
 msgstr ""
 
@@ -240,15 +272,24 @@ msgstr ""
 msgid "Trial to add."
 msgstr ""
 
-#: of optuna.study.Study.add_trial optuna.study.Study.best_params
-#: optuna.study.Study.best_trial optuna.study.Study.best_value
-#: optuna.study.Study.direction optuna.study.Study.optimize
-#: optuna.study.Study.stop
+#: of optuna.study.Study.add_trial optuna.study.Study.add_trials
+#: optuna.study.Study.best_params optuna.study.Study.best_trial
+#: optuna.study.Study.best_value optuna.study.Study.direction
+#: optuna.study.Study.optimize optuna.study.Study.stop optuna.study.Study.tell
 msgid "引发"
 msgstr ""
 
 #: of optuna.study.Study.add_trial:54
 msgid "If trial is an invalid state."
+msgstr ""
+
+#: of optuna.study.BaseStudy.get_trials optuna.study.Study.add_trial
+#: optuna.study.Study.add_trials optuna.study.Study.ask
+#: optuna.study.Study.enqueue_trial optuna.study.Study.optimize
+#: optuna.study.Study.set_system_attr optuna.study.Study.set_user_attr
+#: optuna.study.Study.stop optuna.study.Study.tell
+#: optuna.study.Study.trials_dataframe
+msgid "返回类型"
 msgstr ""
 
 #: of optuna.study.Study.add_trial:57
@@ -258,13 +299,68 @@ msgid ""
 "https://github.com/optuna/optuna/releases/tag/v2.0.0."
 msgstr ""
 
-#: of optuna.study.Study.best_params optuna.study.Study.best_trial
+#: of optuna.study.Study.add_trials:3
+msgid "The trials are validated before being added."
+msgstr ""
+
+#: of optuna.study.Study.add_trials:31
+msgid "See :func:`~optuna.study.Study.add_trial` for addition of each trial."
+msgstr ""
+
+#: of optuna.study.Study.add_trials:33
+msgid "Trials to add."
+msgstr ""
+
+#: of optuna.study.Study.add_trials:35
+msgid "If ``trials`` include invalid trial."
+msgstr ""
+
+#: of optuna.study.Study.add_trials:38
+msgid ""
+"Added in v2.5.0 as an experimental feature. The interface may change in "
+"newer versions without prior notice. See "
+"https://github.com/optuna/optuna/releases/tag/v2.5.0."
+msgstr ""
+
+#: of optuna.study.Study.ask:3
+msgid ""
+"This method is part of an alternative to "
+":func:`~optuna.study.Study.optimize` that allows controlling the lifetime"
+" of a trial outside the scope of ``func``. Each call to this method "
+"should be followed by a call to :func:`~optuna.study.Study.tell` to "
+"finish the created trial."
+msgstr ""
+
+#: of optuna.study.Study.ask:10
+msgid "Getting the trial object with the :func:`~optuna.study.Study.ask` method."
+msgstr ""
+
+#: of optuna.study.Study.ask:27
+msgid ""
+"Passing previously defined distributions to the "
+":func:`~optuna.study.Study.ask` method."
+msgstr ""
+
+#: of optuna.study.Study.ask:49
+msgid ""
+"A dictionary containing the parameter names and parameter's "
+"distributions. Each parameter in this dictionary is automatically "
+"suggested for the returned trial, even when the suggest method is not "
+"explicitly invoked by the user. If this argument is set to :obj:`None`, "
+"no parameter is automatically suggested."
+msgstr ""
+
+#: of optuna.study.BaseStudy.get_trials optuna.study.Study.ask
+#: optuna.study.Study.best_params optuna.study.Study.best_trial
 #: optuna.study.Study.best_trials optuna.study.Study.best_value
 #: optuna.study.Study.direction optuna.study.Study.directions
-#: optuna.study.Study.get_trials optuna.study.Study.system_attrs
-#: optuna.study.Study.trials optuna.study.Study.trials_dataframe
-#: optuna.study.Study.user_attrs
+#: optuna.study.Study.system_attrs optuna.study.Study.trials
+#: optuna.study.Study.trials_dataframe optuna.study.Study.user_attrs
 msgid "返回"
+msgstr ""
+
+#: of optuna.study.Study.ask:54
+msgid "A :class:`~optuna.trial.Trial`."
 msgstr ""
 
 #: of optuna.study.Study.best_params:3
@@ -321,11 +417,11 @@ msgid ""
 "https://github.com/optuna/optuna/releases/tag/v1.2.0."
 msgstr ""
 
-#: of optuna.study.Study.get_trials:3 optuna.study.Study.trials:3
+#: of optuna.study.BaseStudy.get_trials:3 optuna.study.Study.trials:3
 msgid "The returned trials are ordered by trial number."
 msgstr ""
 
-#: of optuna.study.Study.get_trials:23
+#: of optuna.study.BaseStudy.get_trials:23
 msgid ""
 "Flag to control whether to apply ``copy.deepcopy()`` to the trials. Note "
 "that if you set the flag to :obj:`False`, you shouldn't mutate any fields"
@@ -333,11 +429,11 @@ msgid ""
 "corrupt and unexpected behavior may happen."
 msgstr ""
 
-#: of optuna.study.Study.get_trials:27
+#: of optuna.study.BaseStudy.get_trials:27
 msgid "Trial states to filter on. If :obj:`None`, include all states."
 msgstr ""
 
-#: of optuna.study.Study.get_trials:29 optuna.study.Study.trials:7
+#: of optuna.study.BaseStudy.get_trials:29 optuna.study.Study.trials:7
 msgid "A list of :class:`~optuna.FrozenTrial` objects."
 msgstr ""
 
@@ -374,10 +470,29 @@ msgstr ""
 #: of optuna.study.Study.optimize:33
 msgid ""
 "The number of parallel jobs. If this argument is set to :obj:`-1`, the "
+"number is set to CPU count.  .. note::     ``n_jobs`` allows "
+"parallelization using :obj:`threading` and may suffer from     `Python's "
+"GIL <https://wiki.python.org/moin/GlobalInterpreterLock>`_.     It is "
+"recommended to use :ref:`process-based parallelization<distributed>`     "
+"if ``func`` is CPU bound."
+msgstr ""
+
+#: of optuna.study.Study.optimize:33
+msgid ""
+"The number of parallel jobs. If this argument is set to :obj:`-1`, the "
 "number is set to CPU count."
 msgstr ""
 
-#: of optuna.study.Study.optimize:35
+#: of optuna.study.Study.optimize:37
+msgid ""
+"``n_jobs`` allows parallelization using :obj:`threading` and may suffer "
+"from `Python's GIL "
+"<https://wiki.python.org/moin/GlobalInterpreterLock>`_. It is recommended"
+" to use :ref:`process-based parallelization<distributed>` if ``func`` is "
+"CPU bound."
+msgstr ""
+
+#: of optuna.study.Study.optimize:41
 msgid ""
 "A study continues to run even when a trial raises one of the exceptions "
 "specified in this argument. Default is an empty tuple, i.e. the study "
@@ -385,14 +500,14 @@ msgid ""
 ":class:`~optuna.exceptions.TrialPruned`."
 msgstr ""
 
-#: of optuna.study.Study.optimize:38
+#: of optuna.study.Study.optimize:44
 msgid ""
 "List of callback functions that are invoked at the end of each trial. "
 "Each function must accept two parameters with the following types in this"
 " order: :class:`~optuna.study.Study` and :class:`~optuna.FrozenTrial`."
 msgstr ""
 
-#: of optuna.study.Study.optimize:41
+#: of optuna.study.Study.optimize:47
 msgid ""
 "Flag to determine whether to automatically run garbage collection after "
 "each trial. Set to :obj:`True` to run the garbage collection, "
@@ -402,7 +517,7 @@ msgid ""
 ".. seealso::      :ref:`out-of-memory-gc-collect`"
 msgstr ""
 
-#: of optuna.study.Study.optimize:41
+#: of optuna.study.Study.optimize:47
 msgid ""
 "Flag to determine whether to automatically run garbage collection after "
 "each trial. Set to :obj:`True` to run the garbage collection, "
@@ -411,18 +526,18 @@ msgid ""
 "consumption over several trials, try setting this flag to :obj:`True`."
 msgstr ""
 
-#: of optuna.study.Study.optimize:49
+#: of optuna.study.Study.optimize:55
 msgid ":ref:`out-of-memory-gc-collect`"
 msgstr ""
 
-#: of optuna.study.Study.optimize:50
+#: of optuna.study.Study.optimize:56
 msgid ""
 "Flag to show progress bars or not. To disable progress bar, set this "
 "``False``. Currently, progress bar is experimental feature and disabled "
 "when ``n_jobs`` :math:`\\ne 1`."
 msgstr ""
 
-#: of optuna.study.Study.optimize:54
+#: of optuna.study.Study.optimize:60
 msgid "If nested invocation of this method occurs."
 msgstr ""
 
@@ -459,6 +574,45 @@ msgstr ""
 
 #: of optuna.study.Study.system_attrs:3
 msgid "A dictionary containing all system attributes."
+msgstr ""
+
+#: of optuna.study.Study.tell:46
+msgid "A :class:`~optuna.trial.Trial` object or a trial number."
+msgstr ""
+
+#: of optuna.study.Study.tell:47
+msgid ""
+"Optional objective value or a sequence of such values in case the study "
+"is used for multi-objective optimization. Argument must be provided if "
+"``state`` is :class:`~optuna.trial.TrialState.COMPLETE` and should be "
+":obj:`None` if ``state`` is :class:`~optuna.trial.TrialState.FAIL` or "
+":class:`~optuna.trial.TrialState.PRUNED`."
+msgstr ""
+
+#: of optuna.study.Study.tell:52
+msgid ""
+"State to be reported. Must be :class:`~optuna.trial.TrialState.COMPLETE`,"
+" :class:`~optuna.trial.TrialState.FAIL` or "
+":class:`~optuna.trial.TrialState.PRUNED`."
+msgstr ""
+
+#: of optuna.study.Study.tell:56
+msgid "If ``trial`` is not a :class:`~optuna.trial.Trial` or an :obj:`int`."
+msgstr ""
+
+#: of optuna.study.Study.tell:57
+msgid ""
+"If any of the following.     ``values`` is a sequence but its length does"
+" not match the number of objectives     for its associated study.     "
+"``state`` is :class:`~optuna.trial.TrialState.COMPLETE` but     "
+"``values`` is :obj:`None`.     ``state`` is "
+":class:`~optuna.trial.TrialState.FAIL` or     "
+":class:`~optuna.trial.TrialState.PRUNED` but     ``values`` is not "
+":obj:`None`.     ``state`` is not     "
+":class:`~optuna.trial.TrialState.COMPLETE`,     "
+":class:`~optuna.trial.TrialState.FAIL` or     "
+":class:`~optuna.trial.TrialState.PRUNED`.     ``trial`` is a trial number"
+" but no     trial exists with that number."
 msgstr ""
 
 #: of optuna.study.Study.trials:5

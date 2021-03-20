@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 2.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-14 18:04-0500\n"
+"POT-Creation-Date: 2021-03-20 13:35-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,11 +21,11 @@ msgstr ""
 msgid "optuna.pruners.HyperbandPruner"
 msgstr ""
 
-#: of optuna.pruners.HyperbandPruner:1
+#: of optuna.pruners._hyperband.HyperbandPruner:1
 msgid "Pruner using Hyperband."
 msgstr ""
 
-#: of optuna.pruners.HyperbandPruner:3
+#: of optuna.pruners._hyperband.HyperbandPruner:3
 msgid ""
 "As SuccessiveHalving (SHA) requires the number of configurations "
 ":math:`n` as its hyperparameter.  For a given finite budget :math:`B`, "
@@ -36,17 +36,17 @@ msgid ""
 "trade-off by trying different :math:`n` values for a fixed budget."
 msgstr ""
 
-#: of optuna.pruners.HyperbandPruner:11
+#: of optuna.pruners._hyperband.HyperbandPruner:11
 msgid ""
 "In the Hyperband paper, the counterpart of "
 ":class:`~optuna.samplers.RandomSampler` is used."
 msgstr ""
 
-#: of optuna.pruners.HyperbandPruner:13
+#: of optuna.pruners._hyperband.HyperbandPruner:13
 msgid "Optuna uses :class:`~optuna.samplers.TPESampler` by default."
 msgstr ""
 
-#: of optuna.pruners.HyperbandPruner:14
+#: of optuna.pruners._hyperband.HyperbandPruner:14
 msgid ""
 "`The benchmark result "
 "<https://github.com/optuna/optuna/pull/828#issuecomment-575457360>`_ "
@@ -54,7 +54,7 @@ msgid ""
 "samplers."
 msgstr ""
 
-#: of optuna.pruners.HyperbandPruner:19
+#: of optuna.pruners._hyperband.HyperbandPruner:19
 msgid ""
 "If you use ``HyperbandPruner`` with :class:`~optuna.samplers.TPESampler`,"
 " it's recommended to consider to set larger ``n_trials`` or ``timeout`` "
@@ -64,7 +64,7 @@ msgid ""
 ":class:`~optuna.trial.Trial`\\ s for its startup."
 msgstr ""
 
-#: of optuna.pruners.HyperbandPruner:25
+#: of optuna.pruners._hyperband.HyperbandPruner:25
 msgid ""
 "As Hyperband runs multiple "
 ":class:`~optuna.pruners.SuccessiveHalvingPruner` and collect trials based"
@@ -74,13 +74,13 @@ msgid ""
 " to adapt its search space."
 msgstr ""
 
-#: of optuna.pruners.HyperbandPruner:30
+#: of optuna.pruners._hyperband.HyperbandPruner:30
 msgid ""
 "Thus, for example, if ``HyperbandPruner`` has :math:`4` pruners in it, at"
 " least :math:`4 \\times 10` trials are consumed for startup."
 msgstr ""
 
-#: of optuna.pruners.HyperbandPruner:34
+#: of optuna.pruners._hyperband.HyperbandPruner:34
 msgid ""
 "Hyperband has several :class:`~optuna.pruners.SuccessiveHalvingPruner`. "
 "Each :class:`~optuna.pruners.SuccessiveHalvingPruner` is referred as "
@@ -95,23 +95,24 @@ msgid ""
 "detail."
 msgstr ""
 
-#: of optuna.pruners.HyperbandPruner:45
+#: of optuna.pruners._hyperband.HyperbandPruner:45
 msgid "Please refer to :meth:`~optuna.trial.Trial.report`."
 msgstr ""
 
-#: of optuna.pruners.HyperbandPruner:48
+#: of optuna.pruners._hyperband.HyperbandPruner:48
 msgid "示例"
 msgstr ""
 
-#: of optuna.pruners.HyperbandPruner:49
+#: of optuna.pruners._hyperband.HyperbandPruner:49
 msgid "We minimize an objective function with Hyperband pruning algorithm."
 msgstr ""
 
-#: of optuna.pruners.HyperbandPruner optuna.pruners.HyperbandPruner.prune
+#: of optuna.pruners._hyperband.HyperbandPruner
+#: optuna.pruners._hyperband.HyperbandPruner.prune
 msgid "参数"
 msgstr ""
 
-#: of optuna.pruners.HyperbandPruner:90
+#: of optuna.pruners._hyperband.HyperbandPruner:90
 msgid ""
 "A parameter for specifying the minimum resource allocated to a trial "
 "noted as :math:`r` in the paper. A smaller :math:`r` will give a result "
@@ -120,7 +121,7 @@ msgid ""
 ":class:`~optuna.pruners.SuccessiveHalvingPruner`."
 msgstr ""
 
-#: of optuna.pruners.HyperbandPruner:94
+#: of optuna.pruners._hyperband.HyperbandPruner:94
 msgid ""
 "A parameter for specifying the maximum resource allocated to a trial. "
 ":math:`R` in the paper corresponds to ``max_resource / min_resource``. "
@@ -136,7 +137,7 @@ msgid ""
 "manually specify the maximum possible step to ``max_resource``."
 msgstr ""
 
-#: of optuna.pruners.HyperbandPruner:94
+#: of optuna.pruners._hyperband.HyperbandPruner:94
 msgid ""
 "A parameter for specifying the maximum resource allocated to a trial. "
 ":math:`R` in the paper corresponds to ``max_resource / min_resource``. "
@@ -146,7 +147,7 @@ msgid ""
 "trials. The default value of this argument is \"auto\"."
 msgstr ""
 
-#: of optuna.pruners.HyperbandPruner:101
+#: of optuna.pruners._hyperband.HyperbandPruner:101
 msgid ""
 "With \"auto\", the maximum resource will be the largest step reported by "
 ":meth:`~optuna.trial.Trial.report` in the first, or one of the first if "
@@ -154,20 +155,20 @@ msgid ""
 "maximum resource is determined."
 msgstr ""
 
-#: of optuna.pruners.HyperbandPruner:107
+#: of optuna.pruners._hyperband.HyperbandPruner:107
 msgid ""
 "If the step of the last intermediate value may change with each trial, "
 "please manually specify the maximum possible step to ``max_resource``."
 msgstr ""
 
-#: of optuna.pruners.HyperbandPruner:109
+#: of optuna.pruners._hyperband.HyperbandPruner:109
 msgid ""
 "A parameter for specifying reduction factor of promotable trials noted as"
 " :math:`\\eta` in the paper. See the details for "
 ":class:`~optuna.pruners.SuccessiveHalvingPruner`."
 msgstr ""
 
-#: of optuna.pruners.HyperbandPruner:112
+#: of optuna.pruners._hyperband.HyperbandPruner:112
 msgid ""
 "Parameter specifying the number of trials required in a rung before any "
 "trial can be promoted. Incompatible with ``max_resouce`` is ``\"auto\"``."
@@ -178,16 +179,16 @@ msgstr ""
 msgid "Methods"
 msgstr ""
 
-#: of optuna.pruners.HyperbandPruner.prune:1:<autosummary>:1
+#: of optuna.pruners._hyperband.HyperbandPruner.prune:1:<autosummary>:1
 msgid ":obj:`prune <optuna.pruners.HyperbandPruner.prune>`\\ \\(study\\, trial\\)"
 msgstr ""
 
-#: of optuna.pruners.HyperbandPruner.prune:1
-#: optuna.pruners.HyperbandPruner.prune:1:<autosummary>:1
+#: of optuna.pruners._hyperband.HyperbandPruner.prune:1
+#: optuna.pruners._hyperband.HyperbandPruner.prune:1:<autosummary>:1
 msgid "Judge whether the trial should be pruned based on the reported values."
 msgstr ""
 
-#: of optuna.pruners.HyperbandPruner.prune:3
+#: of optuna.pruners._hyperband.HyperbandPruner.prune:3
 msgid ""
 "Note that this method is not supposed to be called by library users. "
 "Instead, :func:`optuna.trial.Trial.report` and "
@@ -195,21 +196,25 @@ msgid ""
 "implement pruning mechanism in an objective function."
 msgstr ""
 
-#: of optuna.pruners.HyperbandPruner.prune:7
+#: of optuna.pruners._hyperband.HyperbandPruner.prune:7
 msgid "Study object of the target study."
 msgstr ""
 
-#: of optuna.pruners.HyperbandPruner.prune:8
+#: of optuna.pruners._hyperband.HyperbandPruner.prune:8
 msgid ""
 "FrozenTrial object of the target trial. Take a copy before modifying this"
 " object."
 msgstr ""
 
-#: of optuna.pruners.HyperbandPruner.prune
+#: of optuna.pruners._hyperband.HyperbandPruner.prune
 msgid "返回"
 msgstr ""
 
-#: of optuna.pruners.HyperbandPruner.prune:11
+#: of optuna.pruners._hyperband.HyperbandPruner.prune:11
 msgid "A boolean value representing whether the trial should be pruned."
+msgstr ""
+
+#: of optuna.pruners._hyperband.HyperbandPruner.prune
+msgid "返回类型"
 msgstr ""
 

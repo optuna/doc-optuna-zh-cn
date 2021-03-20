@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 2.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-10 02:25-0500\n"
+"POT-Creation-Date: 2021-03-20 13:35-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,49 +21,41 @@ msgstr ""
 msgid "optuna.visualization.plot\\_parallel\\_coordinate"
 msgstr ""
 
-#: of optuna.visualization.plot_parallel_coordinate:1
-msgid "Plot the high-dimentional parameter relationships in a study."
+#: of optuna.visualization._parallel_coordinate.plot_parallel_coordinate:1
+msgid "Plot the high-dimensional parameter relationships in a study."
 msgstr ""
 
-#: of optuna.visualization.plot_parallel_coordinate:3
+#: of optuna.visualization._parallel_coordinate.plot_parallel_coordinate:3
 msgid ""
 "Note that, If a parameter contains missing values, a trial with missing "
 "values is not plotted."
 msgstr ""
 
-#: of optuna.visualization.plot_parallel_coordinate:6
+#: of optuna.visualization._parallel_coordinate.plot_parallel_coordinate:6
 msgid "示例"
 msgstr ""
 
-#: of optuna.visualization.plot_parallel_coordinate:7
+#: of optuna.visualization._parallel_coordinate.plot_parallel_coordinate:7
 msgid ""
-"The following code snippet shows how to plot the high-dimentional "
+"The following code snippet shows how to plot the high-dimensional "
 "parameter relationships."
 msgstr ""
 
-#: ../../source/reference/visualization/generated/optuna.visualization.plot_parallel_coordinate.rst:8
-msgid ""
-"(`Source code <../../../reference/visualization/generated/optuna-"
-"visualization-plot_parallel_coordinate-1.py>`__, `html "
-"<../../../reference/visualization/generated/optuna-visualization-"
-"plot_parallel_coordinate-1.html>`__)"
-msgstr ""
-
-#: of optuna.visualization.plot_parallel_coordinate
+#: of optuna.visualization._parallel_coordinate.plot_parallel_coordinate
 msgid "参数"
 msgstr ""
 
-#: of optuna.visualization.plot_parallel_coordinate:26
+#: of optuna.visualization._parallel_coordinate.plot_parallel_coordinate:27
 msgid ""
 "A :class:`~optuna.study.Study` object whose trials are plotted for their "
 "target values."
 msgstr ""
 
-#: of optuna.visualization.plot_parallel_coordinate:27
+#: of optuna.visualization._parallel_coordinate.plot_parallel_coordinate:28
 msgid "Parameter list to visualize. The default is all parameters."
 msgstr ""
 
-#: of optuna.visualization.plot_parallel_coordinate:28
+#: of optuna.visualization._parallel_coordinate.plot_parallel_coordinate:29
 msgid ""
 "A function to specify the value to display. If it is :obj:`None` and "
 "``study`` is being used for single-objective optimization, the objective "
@@ -71,38 +63,58 @@ msgid ""
 "being used for multi-objective optimization."
 msgstr ""
 
-#: of optuna.visualization.plot_parallel_coordinate:28
+#: of optuna.visualization._parallel_coordinate.plot_parallel_coordinate:29
 msgid ""
 "A function to specify the value to display. If it is :obj:`None` and "
 "``study`` is being used for single-objective optimization, the objective "
 "values are plotted."
 msgstr ""
 
-#: of optuna.visualization.plot_parallel_coordinate:32
+#: of optuna.visualization._parallel_coordinate.plot_parallel_coordinate:33
 msgid ""
 "Specify this argument if ``study`` is being used for multi-objective "
 "optimization."
 msgstr ""
 
-#: of optuna.visualization.plot_parallel_coordinate:33
+#: of optuna.visualization._parallel_coordinate.plot_parallel_coordinate:34
 msgid "Target's name to display on the axis label and the legend."
 msgstr ""
 
-#: of optuna.visualization.plot_parallel_coordinate
+#: of optuna.visualization._parallel_coordinate.plot_parallel_coordinate
 msgid "返回"
 msgstr ""
 
-#: of optuna.visualization.plot_parallel_coordinate:35
+#: of optuna.visualization._parallel_coordinate.plot_parallel_coordinate:36
 msgid "A :class:`plotly.graph_objs.Figure` object."
 msgstr ""
 
-#: of optuna.visualization.plot_parallel_coordinate
+#: of optuna.visualization._parallel_coordinate.plot_parallel_coordinate
 msgid "引发"
 msgstr ""
 
-#: of optuna.visualization.plot_parallel_coordinate:37
+#: of optuna.visualization._parallel_coordinate.plot_parallel_coordinate:38
 msgid ""
 "If ``target`` is :obj:`None` and ``study`` is being used for multi-"
 "objective     optimization."
 msgstr ""
+
+#: of optuna.visualization._parallel_coordinate.plot_parallel_coordinate
+msgid "返回类型"
+msgstr ""
+
+#~ msgid "Plot the high-dimentional parameter relationships in a study."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The following code snippet shows how "
+#~ "to plot the high-dimentional parameter"
+#~ " relationships."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "(`Source code <../../../reference/visualization/generated"
+#~ "/optuna-visualization-plot_parallel_coordinate-1.py>`__, "
+#~ "`html <../../../reference/visualization/generated/optuna-"
+#~ "visualization-plot_parallel_coordinate-1.html>`__)"
+#~ msgstr ""
 

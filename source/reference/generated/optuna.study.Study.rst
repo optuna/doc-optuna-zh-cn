@@ -13,12 +13,15 @@ optuna.study.Study
    .. autosummary::
    
       ~Study.add_trial
+      ~Study.add_trials
+      ~Study.ask
       ~Study.enqueue_trial
       ~Study.get_trials
       ~Study.optimize
       ~Study.set_system_attr
       ~Study.set_user_attr
       ~Study.stop
+      ~Study.tell
       ~Study.trials_dataframe
    
 

@@ -4,42 +4,67 @@
 
 ## Optuna 版本更新后文档更新的步骤
 
-克隆仓库到本地，并创建一个新分支。
+### 文档准备
 
-安装依赖（这一步推荐在虚拟环境下进行）：
+1. Clone [Optuna main repo](https://github.com/optuna/optuna) 到本地
+2. 将 Optuna repo 切换到你准备更新的版本的 commit
+3. Clone 本 repo 到本地, 并创建一个新分支用于更新翻译
 
-`pip install -r requirements.txt`
+### 对比文档变化
 
-生成当前版本的翻译文件：
+#### 依赖变化
 
-`sphinx-intl update -p build/locale -l zh_CN`
+检查 Optuna 中的 `setup.py`, 确认其中 `get_extras_require` 下的 `document` 中列出的依赖都已经包含在本 repo 的 `requirements.txt` 中.
+如果存在本 repo 的 `requirements.txt` 中没有的依赖, 将它们添加到 `requirements.txt` 中.
 
-在 `requirements.txt` 中修改 Optuna 到想要的版本号。
+#### 版本变化
 
-安装新版的 Optuna：
+如果目前的文档翻译是针对 `2.x` 版本的, 你想要更新翻译到 `2.y` 版本, 将本 repo 下 `requirements.txt` 中的 `optuna==2.x` 修改为 `optuna==2.y`.
 
-`pip install -r requirements.txt`
+安装新依赖:
 
-克隆 Optuna 的[主仓库](https://github.com/optuna/optuna) 到本地。
+```
+pip install -r requirements.txt
+```
 
-将 Optuna 的主仓库 reset 到你准备更新的版本发布的 commit。
+#### Config 变化
 
-将 Optuna 主仓库内的 `doc/source` 目录下的除 `config.py` 之外的所有文件拷贝到此仓库的 `source` 目录下，覆盖当前文件。
+对比 Optuna 中的 `docs/source/config.py` 和本 repo 下的 `source/config.py`. 除了最后若干行以外, 保持 `source/config.py` 与 `docs/source/config.py` 一致.
 
-更新翻译文件:
+#### 更新文档源文件
 
-`make gettext`
+用 Optuna 中的 `docs` 目录下的 `image` 和 `source` 文件夹覆盖本 repo 下的 `image` 和 `source`文件夹.
 
-`sphinx-intl update -p build/gettext -l zh_CN`
+**注意**
 
-更新翻译
+- 请跳过 Optuna 中的 `docs/source/config.py`
+- 不要覆盖或者删除 本 repo 中的 `source/locale` 文件夹
+
+### 提取翻译所需文档
+
+```
+make gettext
+sphinx-intl update -p build/gettext -l zh_CN
+```
+
+### 更新翻译
 
 1. 通过 gitdiff 查看所有 `.po` 文件的变动
 2. 对存在变动而且带有 `#, fuzzy` 的行进行修改（注意，通常情况下请忽略每个文件开头的 `#, fuzzy`）
 3. 查看所有的 `msgstr ""` 并对它们进行翻译 （`msgstr ""` 代表需要翻译但是没完成翻译的句子, 但是多行翻译也会存在首行为 `msgstr ""` 的情况，这时不一定代表翻译没完成）
 
-生成更新后的文档的静态网页，检查是否有错：
+### 检查
 
-`make -e SPHINXOPTS="-Dlanguage='zh_CN'" html`
+编译文档到 html:
 
-确认无误后，在当前分支提交修改并创建 PR，等待更新被 merge 到主分支中。
+```
+make -e SPHINXOPTS="-Dlanguage='zh_CN'" html
+```
+
+运行
+
+```
+cd build/html && python -m http.server
+```
+
+然后在 `http://[::]:8000` 检查翻译是否有错误.

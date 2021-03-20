@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 2.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-14 18:04-0500\n"
+"POT-Creation-Date: 2021-03-20 13:35-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,42 +21,42 @@ msgstr ""
 msgid "optuna.integration.KerasPruningCallback"
 msgstr ""
 
-#: of optuna.integration.KerasPruningCallback:1
+#: of optuna.integration.keras.KerasPruningCallback:1
 msgid "Keras callback to prune unpromising trials."
 msgstr ""
 
-#: of optuna.integration.KerasPruningCallback:3
+#: of optuna.integration.keras.KerasPruningCallback:3
 msgid ""
 "See `the example <https://github.com/optuna/optuna/blob/master/ "
-"examples/pruning/keras_integration.py>`__ if you want to add a pruning "
+"examples/keras/keras_integration.py>`__ if you want to add a pruning "
 "callback which observes validation accuracy."
 msgstr ""
 
-#: of optuna.integration.KerasPruningCallback
+#: of optuna.integration.keras.KerasPruningCallback
 msgid "参数"
 msgstr ""
 
-#: of optuna.integration.KerasPruningCallback:7
+#: of optuna.integration.keras.KerasPruningCallback:7
 msgid ""
 "A :class:`~optuna.trial.Trial` corresponding to the current evaluation of"
 " the objective function."
 msgstr ""
 
-#: of optuna.integration.KerasPruningCallback:9
+#: of optuna.integration.keras.KerasPruningCallback:9
 msgid ""
 "An evaluation metric for pruning, e.g., ``val_loss`` and "
 "``val_accuracy``. Please refer to `keras.Callback reference "
 "<https://keras.io/callbacks/#callback>`_ for further details."
 msgstr ""
 
-#: of optuna.integration.KerasPruningCallback:12
+#: of optuna.integration.keras.KerasPruningCallback:12
 msgid ""
 "Check if trial should be pruned every n-th epoch. By default "
 "``interval=1`` and pruning is performed after every epoch. Increase "
 "``interval`` to run several epochs faster before applying pruning."
 msgstr ""
 
-#: of optuna.integration.KerasPruningCallback:17
+#: of optuna.integration.keras.KerasPruningCallback:17
 msgid ""
 "Deprecated in v2.1.0. This feature will be removed in the future. The "
 "removal of this feature is currently scheduled for v4.0.0, but this "
@@ -64,7 +64,7 @@ msgid ""
 "https://github.com/optuna/optuna/releases/tag/v2.1.0."
 msgstr ""
 
-#: of optuna.integration.KerasPruningCallback:22
+#: of optuna.integration.keras.KerasPruningCallback:22
 msgid ""
 "Recent Keras release (2.4.0) simply redirects all APIs in the standalone "
 "keras package to point to tf.keras. There is now only one Keras: "
@@ -83,4 +83,12 @@ msgid ""
 "<optuna.integration.KerasPruningCallback.on_epoch_end>`\\ \\(epoch\\[\\, "
 "logs\\]\\)"
 msgstr ""
+
+#~ msgid ""
+#~ "See `the example "
+#~ "<https://github.com/optuna/optuna/blob/master/ "
+#~ "examples/pruning/keras_integration.py>`__ if you "
+#~ "want to add a pruning callback "
+#~ "which observes validation accuracy."
+#~ msgstr ""
 

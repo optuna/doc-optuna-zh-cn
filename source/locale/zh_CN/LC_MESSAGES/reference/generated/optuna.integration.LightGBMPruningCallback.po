@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 2.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-14 18:04-0500\n"
+"POT-Creation-Date: 2021-03-20 13:35-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,28 +21,28 @@ msgstr ""
 msgid "optuna.integration.LightGBMPruningCallback"
 msgstr ""
 
-#: of optuna.integration.LightGBMPruningCallback:1
+#: of optuna.integration.lightgbm.LightGBMPruningCallback:1
 msgid "Callback for LightGBM to prune unpromising trials."
 msgstr ""
 
-#: of optuna.integration.LightGBMPruningCallback:3
+#: of optuna.integration.lightgbm.LightGBMPruningCallback:3
 msgid ""
 "See `the example <https://github.com/optuna/optuna/blob/master/ "
-"examples/pruning/lightgbm_integration.py>`__ if you want to add a pruning"
-" callback which observes AUC of a LightGBM model."
+"examples/lightgbm/lightgbm_integration.py>`__ if you want to add a "
+"pruning callback which observes AUC of a LightGBM model."
 msgstr ""
 
-#: of optuna.integration.LightGBMPruningCallback
+#: of optuna.integration.lightgbm.LightGBMPruningCallback
 msgid "参数"
 msgstr ""
 
-#: of optuna.integration.LightGBMPruningCallback:8
+#: of optuna.integration.lightgbm.LightGBMPruningCallback:8
 msgid ""
 "A :class:`~optuna.trial.Trial` corresponding to the current evaluation of"
 " the objective function."
 msgstr ""
 
-#: of optuna.integration.LightGBMPruningCallback:10
+#: of optuna.integration.lightgbm.LightGBMPruningCallback:10
 msgid ""
 "An evaluation metric for pruning, e.g., ``binary_error`` and "
 "``multi_error``. Please refer to `LightGBM reference "
@@ -50,7 +50,7 @@ msgid ""
 "further details."
 msgstr ""
 
-#: of optuna.integration.LightGBMPruningCallback:15
+#: of optuna.integration.lightgbm.LightGBMPruningCallback:15
 msgid ""
 "The name of the target validation. Validation names are specified by "
 "``valid_names`` option of `train method "
@@ -61,4 +61,13 @@ msgid ""
 "<https://lightgbm.readthedocs.io/en/latest/Python-API.html#lightgbm.cv>`_"
 " instead of train method."
 msgstr ""
+
+#~ msgid ""
+#~ "See `the example "
+#~ "<https://github.com/optuna/optuna/blob/master/ "
+#~ "examples/pruning/lightgbm_integration.py>`__ if you "
+#~ "want to add a pruning callback "
+#~ "which observes AUC of a LightGBM "
+#~ "model."
+#~ msgstr ""
 

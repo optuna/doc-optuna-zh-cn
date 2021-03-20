@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 1.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-14 18:04-0500\n"
+"POT-Creation-Date: 2021-03-20 13:35-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -71,8 +71,10 @@ msgid ":obj:`optuna.samplers.CmaEsSampler <optuna.samplers.CmaEsSampler>`"
 msgstr ""
 
 #: ../../source/reference/samplers.rst:21:<autosummary>:1
-msgid "A Sampler using CMA-ES algorithm."
-msgstr "使用 CMA-ES 算法的 sampler."
+msgid ""
+"A Sampler using `cmaes <https://github.com/CyberAgent/cmaes>`_ as the "
+"backend."
+msgstr ""
 
 #: ../../source/reference/samplers.rst:21:<autosummary>:1
 msgid ""
