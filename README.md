@@ -6,9 +6,24 @@
 
 ### 文档准备
 
-1. Clone [Optuna main repo](https://github.com/optuna/optuna) 到本地
-2. 将 Optuna repo 切换到你准备更新的版本的 commit
-3. Clone 本 repo 到本地, 并创建一个新分支用于更新翻译
+Clone [Optuna main repo](https://github.com/optuna/optuna) 到本地
+
+```
+git clone git@github.com:optuna/optuna.git
+```
+
+将 Optuna repo 切换到你准备更新的版本的 commit 或者 tag. 假设我们要更新到 v2.6
+
+```
+git checkout tags/v2.6.0
+```
+
+Clone 本 repo 到本地, 并创建一个新分支用于更新翻译
+
+```
+git clone git@github.com:optuna/doc-optuna-zh-cn.git
+git checkout -b translate-v2.6.0
+```
 
 ### 对比文档变化
 
@@ -29,7 +44,12 @@ pip install -r requirements.txt
 
 #### Config 变化
 
-对比 Optuna 中的 `docs/source/config.py` 和本 repo 下的 `source/config.py`. 除了最后若干行以外, 保持 `source/config.py` 与 `docs/source/config.py` 一致.
+对比 Optuna 中的 `docs/source/config.py` 和本 repo 下的 `source/config.py`. 除了最后两行 (见下一个代码块) 以外, 保持 `source/config.py` 与 `docs/source/config.py` 一致, 因为这些配置是关于翻译文件位置的, 故原文档不包含此部份.
+
+```python
+locale_dirs = ['locale/']
+gettext_compact = False
+```
 
 #### 更新文档源文件
 

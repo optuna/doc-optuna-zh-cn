@@ -36,8 +36,8 @@ msgid ""
 "promising. In this document, we describe how to implement your own "
 "pruner, i.e., a custom strategy for determining when to stop a trial."
 msgstr "在 :mod:`optuna.pruners` 中, 我们描述了一个目标函数如何可选地包含一些 pruning 函数调用, "
-"这些函数允许 Optuna 去终结 tiral 的优化过程, 如果其中间结果看起来无望的话. "
-"在本文档中, 我们描述了如何实现一个你自己的 pruner, 也即一个定制的用于确定何时终止一个 trial 的策略."
+"这些函数允许 Optuna 去终结中间结果无望的 tiral. "
+"在本文档中, 我们描述了如何实现一个你自己的 pruner, 也即一个自定义 trial 终止条件的策略."
 
 #: ../../source/tutorial/20_recipes/006_user_defined_pruner.rst:24
 msgid "Overview of Pruning Interface"
@@ -106,9 +106,9 @@ msgid ""
 "(indicating pruning)."
 msgstr "我们想要优化运行在 sklearn iris  数据集上的随机梯度下降分类机 "
 "(``SGDClassifier``) 的 ``loss`` 和 ``alpha`` 超参数. "
-"我们实现了一个 pruner, 它将在特定步骤终结一个 trial, 如果其值处于"
-"所有其他所有trial在该步骤的值排名的最后一名的话. 我们在完成五个 trial "
-"和一个训练步骤的 \"热身\"之后开始考虑 pruning. 出于演示目的, 当该 pruner 将要"
+"我们将实现一个 pruner, 它将在特定 step 终结所有 trial 中 得分排名最后的 trial. "
+"我们在完成五个 trial "
+"和一个训练步骤的 \"热身\" 之后开始考虑 pruning. 出于演示目的, 当该 pruner 将要"
 "返回 True (意味着将要 prune) 时, 我们会从 prune() 中 print() 诊断信息."
 
 #: ../../source/tutorial/20_recipes/006_user_defined_pruner.rst:59

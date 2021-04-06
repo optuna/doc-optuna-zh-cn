@@ -37,8 +37,8 @@ msgid ""
 "code written with Optuna enjoys high modularity, and the user of Optuna "
 "can dynamically construct the search spaces for the hyperparameters."
 msgstr ""
-"*Optuna* 是一个特别为机器学习设计的自动超参数优化软件框架。它具有命令式的，*define-by-run* 风格的 API。由于这种 "
-"API 的存在，用 Optuna 编写的代码模块化程度很高，Optuna 的用户因此也可以动态地构造超参数的搜索空间。"
+"*Optuna* 是一个特别为机器学习设计的自动超参数优化软件框架.它具有命令式的, *define-by-run* 风格的 API.由于这种 "
+"API 的存在, 用 Optuna 编写的代码模块化程度很高, Optuna 的用户因此也可以动态地构造超参数的搜索空间."
 
 #: ../../source/index.rst:13
 msgid "Key Features"
@@ -58,7 +58,7 @@ msgstr ":doc:`轻量级、多功能和跨平台架构 <tutorial/10_key_features/
 msgid ""
 "Handle a wide variety of tasks with a simple installation that has few "
 "requirements."
-msgstr "只需少量依赖，简单安装完成后便可处理各种任务。"
+msgstr "只需少量依赖, 简单安装完成后便可处理各种任务."
 
 #: ../../source/index.rst:21
 
@@ -71,7 +71,7 @@ msgstr ":doc:`Python 式的搜索空间 <tutorial/10_key_features/002_configurat
 msgid ""
 "Define search spaces using familiar Python syntax including conditionals "
 "and loops."
-msgstr "利用熟悉的python 语法，如 条件语句和循环来定义搜索空间。"
+msgstr "利用熟悉的 Python 语法, 如 条件语句和循环来定义搜索空间."
 
 #: ../../source/index.rst:25
 msgid ""
@@ -83,7 +83,7 @@ msgstr ":doc:`高效的优化算法 <tutorial/10_key_features/003_efficient_opti
 msgid ""
 "Adopt state-of-the-art algorithms for sampling hyper parameters and "
 "efficiently pruning unpromising trials."
-msgstr "采用了最先进的超参数采样和最有效的对无望 trial 进行剪枝的算法。"
+msgstr "采用了最先进的超参数采样和最有效的对无望 trial 进行剪枝的算法."
 
 #: ../../source/index.rst:29
 
@@ -94,7 +94,7 @@ msgstr ":doc:`易用的并行优化 <tutorial/10_key_features/004_distributed>`"
 msgid ""
 "Scale studies to tens or hundreds or workers with little or no changes to"
 " the code."
-msgstr "仅需少量甚至无需代码修改便可将 study 分布到数十甚至数百个 worker。"
+msgstr "仅需少量甚至无需代码修改便可将 study 分布到数十甚至数百个 worker."
 
 #: ../../source/index.rst:33
 msgid ":doc:`Quick visualization <tutorial/10_key_features/005_visualization>`"
@@ -102,7 +102,7 @@ msgstr ":doc:`便捷的可视化 <tutorial/10_key_features/005_visualization>`"
 
 #: ../../source/index.rst:35
 msgid "Inspect optimization histories from a variety of plotting functions."
-msgstr "查询优化记录。"
+msgstr "查询优化记录."
 
 #: ../../source/index.rst:38
 msgid "Basic Concepts"
@@ -128,9 +128,9 @@ msgid ""
 "a framework designed for the automation and the acceleration of the "
 "optimization *studies*."
 msgstr ""
-"请参考下面的示例代码。一个 *study* 的目的是通过多次 *trial* (例如 ``n_trials=100`` ) "
-"来找出最佳的超参数值集（比如选择 ``classifier`` 还是 ``svm_c``）。而 Optuna 旨在加速和自动化此类 *study*"
-" 优化过程。"
+"请参考下面的示例代码.一个 *study* 的目的是通过多次 *trial* (例如 ``n_trials=100`` ) "
+"来找出最佳的超参数值集（比如选择 ``classifier`` 还是 ``svm_c``）.而 Optuna 旨在加速和自动化此类 *study*"
+" 优化过程."
 
 #: ../../source/index.rst:51
 msgid "|Open in Colab|"
@@ -146,7 +146,7 @@ msgid ""
 "reports, feature requests and questions."
 msgstr ""
 "可在 `GitHub Issues <https://github.com/optuna/optuna/issues>`__ "
-"报告bug、提feature request 和问问题。"
+"报告bug、提feature request 和问问题."
 
 #: ../../source/index.rst:87
 msgid ""
@@ -160,7 +160,7 @@ msgid ""
 "for questions."
 msgstr ""
 "可在 `StackOverflow <https://stackoverflow.com/questions/tagged/optuna>`__ "
-"提问。"
+"提问."
 
 #: ../../source/index.rst:94
 msgid "Contribution"

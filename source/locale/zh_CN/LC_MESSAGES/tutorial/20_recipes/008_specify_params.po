@@ -66,7 +66,7 @@ msgid ""
 "hyperparameters but have not evaluated them yet and decided to use Optuna"
 " to find better sets of hyperparameters."
 msgstr "在这个场景中, 我们假设你已经有了一些开箱即用的超参数但是还没有对他们"
-"进行求值过, 你决定用 Optuna 来找到更好的超参数."
+"进行过求值, 你决定用 Optuna 来找到更好的超参数."
 
 #: ../../source/tutorial/20_recipes/008_specify_params.rst:33
 msgid ""
@@ -79,8 +79,7 @@ msgstr "Optuna 有一个 API :func:`optuna.study.Study.enqueue_trial` , 它允�
 msgid ""
 "This section walks you through how to use this lit API with `LightGBM "
 "<https://lightgbm.readthedocs.io/en/latest/>`_."
-msgstr "这部分将向你介绍如何使用 `LightGBM "
-"<https://lightgbm.readthedocs.io/en/latest/>`_ 的 lit API."
+msgstr "这部分将结合 `LightGBM <https://lightgbm.readthedocs.io/en/latest/>`_ 向你介绍如何使用这些API."
 
 #: ../../source/tutorial/20_recipes/008_specify_params.rst:58
 msgid "Define the objective function."
@@ -111,7 +110,7 @@ msgid ""
 "hyperparameters and you have already evaluated them but the results are "
 "not desirable so that you are thinking of using Optuna."
 msgstr "在这个场景中, 我们假设你已经有了一些开箱即用的超参数, 而且你已经对他们"
-"进行求值过, 但是其结果并不让人满意. 因此你考虑使用 Optuna."
+"进行求值过, 但是其结果并不让人满意. 因此你考虑使用 Optuna 来找到更好的超参数."
 
 #: ../../source/tutorial/20_recipes/008_specify_params.rst:280
 msgid ""
