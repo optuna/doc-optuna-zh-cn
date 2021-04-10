@@ -66,7 +66,7 @@ msgid ""
 "hyperparameters but have not evaluated them yet and decided to use Optuna"
 " to find better sets of hyperparameters."
 msgstr "在这个场景中, 我们假设你已经有了一些开箱即用的超参数但是还没有对他们"
-"进行过求值, 你决定用 Optuna 来找到更好的超参数."
+"进行过求值, 你决定用 Optuna 来找到更好的超参数."
 
 #: ../../source/tutorial/20_recipes/008_specify_params.rst:33
 msgid ""
