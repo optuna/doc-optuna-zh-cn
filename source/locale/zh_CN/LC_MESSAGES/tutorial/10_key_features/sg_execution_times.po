@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 2.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-14 18:07-0500\n"
+"POT-Creation-Date: 2021-03-20 13:35-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,7 +22,7 @@ msgid "Computation times"
 msgstr ""
 
 #: ../../source/tutorial/10_key_features/sg_execution_times.rst:8
-msgid "**00:04.891** total execution time for **tutorial_10_key_features** files:"
+msgid "**00:06.136** total execution time for **tutorial_10_key_features** files:"
 msgstr ""
 
 #: ../../source/tutorial/10_key_features/sg_execution_times.rst:11
@@ -32,7 +32,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/tutorial/10_key_features/sg_execution_times.rst:11
-msgid "00:04.891"
+msgid "00:04.418"
 msgstr ""
 
 #: ../../source/tutorial/10_key_features/sg_execution_times.rst:11
@@ -44,26 +44,31 @@ msgid "0.0 MB"
 msgstr ""
 
 #: ../../source/tutorial/10_key_features/sg_execution_times.rst:13
-msgid ":ref:`sphx_glr_tutorial_10_key_features_001_first.py` (``001_first.py``)"
+msgid ""
+":ref:`sphx_glr_tutorial_10_key_features_003_efficient_optimization_algorithms.py`"
+" (``003_efficient_optimization_algorithms.py``)"
 msgstr ""
 
 #: ../../source/tutorial/10_key_features/sg_execution_times.rst:13
-#: ../../source/tutorial/10_key_features/sg_execution_times.rst:15
-#: ../../source/tutorial/10_key_features/sg_execution_times.rst:17
-#: ../../source/tutorial/10_key_features/sg_execution_times.rst:19
-msgid "00:00.000"
+msgid "00:01.018"
 msgstr ""
 
 #: ../../source/tutorial/10_key_features/sg_execution_times.rst:15
+msgid ":ref:`sphx_glr_tutorial_10_key_features_001_first.py` (``001_first.py``)"
+msgstr ""
+
+#: ../../source/tutorial/10_key_features/sg_execution_times.rst:15
+msgid "00:00.699"
+msgstr ""
+
+#: ../../source/tutorial/10_key_features/sg_execution_times.rst:17
 msgid ""
 ":ref:`sphx_glr_tutorial_10_key_features_002_configurations.py` "
 "(``002_configurations.py``)"
 msgstr ""
 
 #: ../../source/tutorial/10_key_features/sg_execution_times.rst:17
-msgid ""
-":ref:`sphx_glr_tutorial_10_key_features_003_efficient_optimization_algorithms.py`"
-" (``003_efficient_optimization_algorithms.py``)"
+msgid "00:00.001"
 msgstr ""
 
 #: ../../source/tutorial/10_key_features/sg_execution_times.rst:19
@@ -71,4 +76,16 @@ msgid ""
 ":ref:`sphx_glr_tutorial_10_key_features_004_distributed.py` "
 "(``004_distributed.py``)"
 msgstr ""
+
+#: ../../source/tutorial/10_key_features/sg_execution_times.rst:19
+msgid "00:00.000"
+msgstr ""
+
+#~ msgid ""
+#~ "**00:04.891** total execution time for "
+#~ "**tutorial_10_key_features** files:"
+#~ msgstr ""
+
+#~ msgid "00:04.891"
+#~ msgstr ""
 

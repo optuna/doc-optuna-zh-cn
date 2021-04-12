@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 2.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-14 18:04-0500\n"
+"POT-Creation-Date: 2021-03-20 13:35-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -31,6 +31,10 @@ msgstr ""
 
 #: of optuna.logging.set_verbosity:3
 msgid "Logging level, e.g., ``optuna.logging.DEBUG`` and ``optuna.logging.INFO``."
+msgstr ""
+
+#: of optuna.logging.set_verbosity
+msgid "返回类型"
 msgstr ""
 
 #: of optuna.logging.set_verbosity:6

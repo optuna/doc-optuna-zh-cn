@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 2.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-14 18:04-0500\n"
+"POT-Creation-Date: 2021-03-20 13:35-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,59 +21,59 @@ msgstr ""
 msgid "optuna.pruners.ThresholdPruner"
 msgstr ""
 
-#: of optuna.pruners.ThresholdPruner:1
+#: of optuna.pruners._threshold.ThresholdPruner:1
 msgid "Pruner to detect outlying metrics of the trials."
 msgstr ""
 
-#: of optuna.pruners.ThresholdPruner:3
+#: of optuna.pruners._threshold.ThresholdPruner:3
 msgid ""
 "Prune if a metric exceeds upper threshold, falls behind lower threshold "
 "or reaches ``nan``."
 msgstr ""
 
-#: of optuna.pruners.ThresholdPruner:7
+#: of optuna.pruners._threshold.ThresholdPruner:7
 msgid "示例"
 msgstr ""
 
-#: of optuna.pruners.ThresholdPruner:55
+#: of optuna.pruners._threshold.ThresholdPruner:55
 msgid "Args"
 msgstr ""
 
-#: of optuna.pruners.ThresholdPruner:44
+#: of optuna.pruners._threshold.ThresholdPruner:44
 msgid "lower:"
 msgstr ""
 
-#: of optuna.pruners.ThresholdPruner:44
+#: of optuna.pruners._threshold.ThresholdPruner:44
 msgid ""
 "A minimum value which determines whether pruner prunes or not. If an "
 "intermediate value is smaller than lower, it prunes."
 msgstr ""
 
-#: of optuna.pruners.ThresholdPruner:47
+#: of optuna.pruners._threshold.ThresholdPruner:47
 msgid "upper:"
 msgstr ""
 
-#: of optuna.pruners.ThresholdPruner:47
+#: of optuna.pruners._threshold.ThresholdPruner:47
 msgid ""
 "A maximum value which determines whether pruner prunes or not. If an "
 "intermediate value is larger than upper, it prunes."
 msgstr ""
 
-#: of optuna.pruners.ThresholdPruner:49
+#: of optuna.pruners._threshold.ThresholdPruner:49
 msgid "n_warmup_steps:"
 msgstr ""
 
-#: of optuna.pruners.ThresholdPruner:50
+#: of optuna.pruners._threshold.ThresholdPruner:50
 msgid ""
 "Pruning is disabled if the step is less than the given number of warmup "
 "steps."
 msgstr ""
 
-#: of optuna.pruners.ThresholdPruner:55
+#: of optuna.pruners._threshold.ThresholdPruner:55
 msgid "interval_steps:"
 msgstr ""
 
-#: of optuna.pruners.ThresholdPruner:52
+#: of optuna.pruners._threshold.ThresholdPruner:52
 msgid ""
 "Interval in number of steps between the pruning checks, offset by the "
 "warmup steps. If no value has been reported at the time of a pruning "
@@ -85,16 +85,16 @@ msgstr ""
 msgid "Methods"
 msgstr ""
 
-#: of optuna.pruners.ThresholdPruner.prune:1:<autosummary>:1
+#: of optuna.pruners._threshold.ThresholdPruner.prune:1:<autosummary>:1
 msgid ":obj:`prune <optuna.pruners.ThresholdPruner.prune>`\\ \\(study\\, trial\\)"
 msgstr ""
 
-#: of optuna.pruners.ThresholdPruner.prune:1
-#: optuna.pruners.ThresholdPruner.prune:1:<autosummary>:1
+#: of optuna.pruners._threshold.ThresholdPruner.prune:1
+#: optuna.pruners._threshold.ThresholdPruner.prune:1:<autosummary>:1
 msgid "Judge whether the trial should be pruned based on the reported values."
 msgstr ""
 
-#: of optuna.pruners.ThresholdPruner.prune:3
+#: of optuna.pruners._threshold.ThresholdPruner.prune:3
 msgid ""
 "Note that this method is not supposed to be called by library users. "
 "Instead, :func:`optuna.trial.Trial.report` and "
@@ -102,25 +102,29 @@ msgid ""
 "implement pruning mechanism in an objective function."
 msgstr ""
 
-#: of optuna.pruners.ThresholdPruner.prune
+#: of optuna.pruners._threshold.ThresholdPruner.prune
 msgid "参数"
 msgstr ""
 
-#: of optuna.pruners.ThresholdPruner.prune:7
+#: of optuna.pruners._threshold.ThresholdPruner.prune:7
 msgid "Study object of the target study."
 msgstr ""
 
-#: of optuna.pruners.ThresholdPruner.prune:8
+#: of optuna.pruners._threshold.ThresholdPruner.prune:8
 msgid ""
 "FrozenTrial object of the target trial. Take a copy before modifying this"
 " object."
 msgstr ""
 
-#: of optuna.pruners.ThresholdPruner.prune
+#: of optuna.pruners._threshold.ThresholdPruner.prune
 msgid "返回"
 msgstr ""
 
-#: of optuna.pruners.ThresholdPruner.prune:11
+#: of optuna.pruners._threshold.ThresholdPruner.prune:11
 msgid "A boolean value representing whether the trial should be pruned."
+msgstr ""
+
+#: of optuna.pruners._threshold.ThresholdPruner.prune
+msgid "返回类型"
 msgstr ""
 

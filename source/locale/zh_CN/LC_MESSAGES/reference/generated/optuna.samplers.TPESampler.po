@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 2.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-14 18:04-0500\n"
+"POT-Creation-Date: 2021-03-20 13:35-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,18 +21,18 @@ msgstr ""
 msgid "optuna.samplers.TPESampler"
 msgstr ""
 
-#: of optuna.samplers.TPESampler:1
+#: of optuna.samplers._tpe.sampler.TPESampler:1
 msgid "Sampler using TPE (Tree-structured Parzen Estimator) algorithm."
 msgstr ""
 
-#: of optuna.samplers.TPESampler:3
+#: of optuna.samplers._tpe.sampler.TPESampler:3
 msgid ""
 "This sampler is based on *independent sampling*. See also "
 ":class:`~optuna.samplers.BaseSampler` for more details of 'independent "
 "sampling'."
 msgstr ""
 
-#: of optuna.samplers.TPESampler:6
+#: of optuna.samplers._tpe.sampler.TPESampler:6
 msgid ""
 "On each trial, for each parameter, TPE fits one Gaussian Mixture Model "
 "(GMM) ``l(x)`` to the set of parameter values associated with the best "
@@ -41,39 +41,40 @@ msgid ""
 "``l(x)/g(x)``."
 msgstr ""
 
-#: of optuna.samplers.TPESampler:11
+#: of optuna.samplers._tpe.sampler.TPESampler:11
 msgid ""
 "For further information about TPE algorithm, please refer to the "
 "following papers:"
 msgstr ""
 
-#: of optuna.samplers.TPESampler:13
+#: of optuna.samplers._tpe.sampler.TPESampler:13
 msgid ""
 "`Algorithms for Hyper-Parameter Optimization "
 "<https://papers.nips.cc/paper/4443-algorithms-for-hyper-parameter-"
 "optimization.pdf>`_"
 msgstr ""
 
-#: of optuna.samplers.TPESampler:15
+#: of optuna.samplers._tpe.sampler.TPESampler:15
 msgid ""
 "`Making a Science of Model Search: Hyperparameter Optimization in "
 "Hundreds of Dimensions for Vision Architectures "
 "<http://proceedings.mlr.press/v28/bergstra13.pdf>`_"
 msgstr ""
 
-#: of optuna.samplers.TPESampler:19
-#: optuna.samplers.TPESampler.hyperopt_parameters:7
+#: of optuna.samplers._tpe.sampler.TPESampler:19
+#: optuna.samplers._tpe.sampler.TPESampler.hyperopt_parameters:7
 msgid "示例"
 msgstr ""
 
-#: of optuna.samplers.TPESampler optuna.samplers.TPESampler.after_trial
-#: optuna.samplers.TPESampler.infer_relative_search_space
-#: optuna.samplers.TPESampler.sample_independent
-#: optuna.samplers.TPESampler.sample_relative
+#: of optuna.samplers._tpe.sampler.TPESampler
+#: optuna.samplers._tpe.sampler.TPESampler.after_trial
+#: optuna.samplers._tpe.sampler.TPESampler.infer_relative_search_space
+#: optuna.samplers._tpe.sampler.TPESampler.sample_independent
+#: optuna.samplers._tpe.sampler.TPESampler.sample_relative
 msgid "参数"
 msgstr ""
 
-#: of optuna.samplers.TPESampler:34
+#: of optuna.samplers._tpe.sampler.TPESampler:34
 msgid ""
 "Enhance the stability of Parzen estimator by imposing a Gaussian prior "
 "when :obj:`True`. The prior is only effective if the sampling "
@@ -85,7 +86,7 @@ msgid ""
 ":class:`~optuna.distributions.IntLogUniformDistribution`."
 msgstr ""
 
-#: of optuna.samplers.TPESampler:41
+#: of optuna.samplers._tpe.sampler.TPESampler:41
 msgid ""
 "The weight of the prior. This argument is used in "
 ":class:`~optuna.distributions.UniformDistribution`, "
@@ -96,37 +97,37 @@ msgid ""
 ":class:`~optuna.distributions.CategoricalDistribution`."
 msgstr ""
 
-#: of optuna.samplers.TPESampler:48
+#: of optuna.samplers._tpe.sampler.TPESampler:48
 msgid ""
 "Enable a heuristic to limit the smallest variances of Gaussians used in "
 "the Parzen estimator."
 msgstr ""
 
-#: of optuna.samplers.TPESampler:50
+#: of optuna.samplers._tpe.sampler.TPESampler:50
 msgid ""
 "Take endpoints of domains into account when calculating variances of "
 "Gaussians in Parzen estimator. See the original paper for details on the "
 "heuristics to calculate the variances."
 msgstr ""
 
-#: of optuna.samplers.TPESampler:53
+#: of optuna.samplers._tpe.sampler.TPESampler:53
 msgid ""
 "The random sampling is used instead of the TPE algorithm until the given "
 "number of trials finish in the same study."
 msgstr ""
 
-#: of optuna.samplers.TPESampler:55
+#: of optuna.samplers._tpe.sampler.TPESampler:55
 msgid "Number of candidate samples used to calculate the expected improvement."
 msgstr ""
 
-#: of optuna.samplers.TPESampler:56
+#: of optuna.samplers._tpe.sampler.TPESampler:56
 msgid ""
 "A function that takes the number of finished trials and returns the "
 "number of trials to form a density function for samples with low grains. "
 "See the original paper for more details."
 msgstr ""
 
-#: of optuna.samplers.TPESampler:59
+#: of optuna.samplers._tpe.sampler.TPESampler:59
 msgid ""
 "A function that takes the number of finished trials and returns a weight "
 "for them. See `Making a Science of Model Search: Hyperparameter "
@@ -134,11 +135,11 @@ msgid ""
 "<http://proceedings.mlr.press/v28/bergstra13.pdf>`_ for more details."
 msgstr ""
 
-#: of optuna.samplers.TPESampler:63
+#: of optuna.samplers._tpe.sampler.TPESampler:63
 msgid "Seed for random number generator."
 msgstr ""
 
-#: of optuna.samplers.TPESampler:64
+#: of optuna.samplers._tpe.sampler.TPESampler:64
 msgid ""
 "If this is :obj:`True`, the multivariate TPE is used when suggesting "
 "parameters. The multivariate TPE is reported to outperform the "
@@ -150,7 +151,7 @@ msgid ""
 "https://github.com/optuna/optuna/releases/tag/v2.2.0."
 msgstr ""
 
-#: of optuna.samplers.TPESampler:64
+#: of optuna.samplers._tpe.sampler.TPESampler:64
 msgid ""
 "If this is :obj:`True`, the multivariate TPE is used when suggesting "
 "parameters. The multivariate TPE is reported to outperform the "
@@ -159,14 +160,14 @@ msgid ""
 "<http://proceedings.mlr.press/v80/falkner18a.html>`_ for more details."
 msgstr ""
 
-#: of optuna.samplers.TPESampler:70
+#: of optuna.samplers._tpe.sampler.TPESampler:70
 msgid ""
 "Added in v2.2.0 as an experimental feature. The interface may change in "
 "newer versions without prior notice. See "
 "https://github.com/optuna/optuna/releases/tag/v2.2.0."
 msgstr ""
 
-#: of optuna.samplers.TPESampler:73
+#: of optuna.samplers._tpe.sampler.TPESampler:73
 msgid ""
 "If this is :obj:`True` and ``multivariate=True``, a warning message is "
 "emitted when the value of a parameter is sampled by using an independent "
@@ -177,156 +178,165 @@ msgstr ""
 msgid "Methods"
 msgstr ""
 
-#: of optuna.samplers.TPESampler.after_trial:1:<autosummary>:1
+#: of optuna.samplers._tpe.sampler.TPESampler.after_trial:1:<autosummary>:1
 msgid ""
 ":obj:`after_trial <optuna.samplers.TPESampler.after_trial>`\\ \\(study\\,"
 " trial\\, state\\, values\\)"
 msgstr ""
 
-#: of optuna.samplers.TPESampler.after_trial:1
-#: optuna.samplers.TPESampler.after_trial:1:<autosummary>:1
+#: of optuna.samplers._tpe.sampler.TPESampler.after_trial:1
+#: optuna.samplers._tpe.sampler.TPESampler.after_trial:1:<autosummary>:1
 msgid "Trial post-processing."
 msgstr ""
 
-#: of optuna.samplers.TPESampler.after_trial:1:<autosummary>:1
+#: of optuna.samplers._tpe.sampler.TPESampler.after_trial:1:<autosummary>:1
 msgid ""
 ":obj:`hyperopt_parameters "
 "<optuna.samplers.TPESampler.hyperopt_parameters>`\\ \\(\\)"
 msgstr ""
 
-#: of optuna.samplers.TPESampler.after_trial:1:<autosummary>:1
-#: optuna.samplers.TPESampler.hyperopt_parameters:1
+#: of optuna.samplers._tpe.sampler.TPESampler.after_trial:1:<autosummary>:1
+#: optuna.samplers._tpe.sampler.TPESampler.hyperopt_parameters:1
 msgid "Return the the default parameters of hyperopt (v0.1.2)."
 msgstr ""
 
-#: of optuna.samplers.TPESampler.after_trial:1:<autosummary>:1
+#: of optuna.samplers._tpe.sampler.TPESampler.after_trial:1:<autosummary>:1
 msgid ""
 ":obj:`infer_relative_search_space "
 "<optuna.samplers.TPESampler.infer_relative_search_space>`\\ \\(study\\, "
 "trial\\)"
 msgstr ""
 
-#: of optuna.samplers.TPESampler.after_trial:1:<autosummary>:1
-#: optuna.samplers.TPESampler.infer_relative_search_space:1
+#: of optuna.samplers._tpe.sampler.TPESampler.after_trial:1:<autosummary>:1
+#: optuna.samplers._tpe.sampler.TPESampler.infer_relative_search_space:1
 msgid ""
 "Infer the search space that will be used by relative sampling in the "
 "target trial."
 msgstr ""
 
-#: of optuna.samplers.TPESampler.after_trial:1:<autosummary>:1
+#: of optuna.samplers._tpe.sampler.TPESampler.after_trial:1:<autosummary>:1
 msgid ":obj:`reseed_rng <optuna.samplers.TPESampler.reseed_rng>`\\ \\(\\)"
 msgstr ""
 
-#: of optuna.samplers.TPESampler.after_trial:1:<autosummary>:1
-#: optuna.samplers.TPESampler.reseed_rng:1
+#: of optuna.samplers._tpe.sampler.TPESampler.after_trial:1:<autosummary>:1
+#: optuna.samplers._tpe.sampler.TPESampler.reseed_rng:1
 msgid "Reseed sampler's random number generator."
 msgstr ""
 
-#: of optuna.samplers.TPESampler.after_trial:1:<autosummary>:1
+#: of optuna.samplers._tpe.sampler.TPESampler.after_trial:1:<autosummary>:1
 msgid ""
 ":obj:`sample_independent "
 "<optuna.samplers.TPESampler.sample_independent>`\\ \\(study\\, trial\\, "
 "param\\_name\\, ...\\)"
 msgstr ""
 
-#: of optuna.samplers.TPESampler.after_trial:1:<autosummary>:1
-#: optuna.samplers.TPESampler.sample_independent:1
+#: of optuna.samplers._tpe.sampler.TPESampler.after_trial:1:<autosummary>:1
+#: optuna.samplers._tpe.sampler.TPESampler.sample_independent:1
 msgid "Sample a parameter for a given distribution."
 msgstr ""
 
-#: of optuna.samplers.TPESampler.after_trial:1:<autosummary>:1
+#: of optuna.samplers._tpe.sampler.TPESampler.after_trial:1:<autosummary>:1
 msgid ""
 ":obj:`sample_relative <optuna.samplers.TPESampler.sample_relative>`\\ "
 "\\(study\\, trial\\, search\\_space\\)"
 msgstr ""
 
-#: of optuna.samplers.TPESampler.after_trial:1:<autosummary>:1
-#: optuna.samplers.TPESampler.sample_relative:1
+#: of optuna.samplers._tpe.sampler.TPESampler.after_trial:1:<autosummary>:1
+#: optuna.samplers._tpe.sampler.TPESampler.sample_relative:1
 msgid "Sample parameters in a given search space."
 msgstr ""
 
-#: of optuna.samplers.TPESampler.after_trial:3
+#: of optuna.samplers._tpe.sampler.TPESampler.after_trial:3
 msgid ""
 "This method is called after the objective function returns and right "
 "before the trials is finished and its state is stored."
 msgstr ""
 
-#: of optuna.samplers.TPESampler.after_trial:7
+#: of optuna.samplers._tpe.sampler.TPESampler.after_trial:7
 msgid ""
 "Added in v2.4.0 as an experimental feature. The interface may change in "
 "newer versions without prior notice. See "
 "https://github.com/optuna/optuna/releases/tag/v2.4.0."
 msgstr ""
 
-#: of optuna.samplers.TPESampler.after_trial:10
-#: optuna.samplers.TPESampler.infer_relative_search_space:8
-#: optuna.samplers.TPESampler.sample_independent:13
-#: optuna.samplers.TPESampler.sample_relative:12
+#: of optuna.samplers._tpe.sampler.TPESampler.after_trial:10
+#: optuna.samplers._tpe.sampler.TPESampler.infer_relative_search_space:8
+#: optuna.samplers._tpe.sampler.TPESampler.sample_independent:13
+#: optuna.samplers._tpe.sampler.TPESampler.sample_relative:12
 msgid "Target study object."
 msgstr ""
 
-#: of optuna.samplers.TPESampler.after_trial:11
-#: optuna.samplers.TPESampler.infer_relative_search_space:9
-#: optuna.samplers.TPESampler.sample_independent:14
-#: optuna.samplers.TPESampler.sample_relative:13
+#: of optuna.samplers._tpe.sampler.TPESampler.after_trial:11
+#: optuna.samplers._tpe.sampler.TPESampler.infer_relative_search_space:9
+#: optuna.samplers._tpe.sampler.TPESampler.sample_independent:14
+#: optuna.samplers._tpe.sampler.TPESampler.sample_relative:13
 msgid "Target trial object. Take a copy before modifying this object."
 msgstr ""
 
-#: of optuna.samplers.TPESampler.after_trial:13
+#: of optuna.samplers._tpe.sampler.TPESampler.after_trial:13
 msgid "Resulting trial state."
 msgstr ""
 
-#: of optuna.samplers.TPESampler.after_trial:14
+#: of optuna.samplers._tpe.sampler.TPESampler.after_trial:14
 msgid ""
 "Resulting trial values. Guaranteed to not be :obj:`None` if trial "
 "succeeded."
 msgstr ""
 
-#: of optuna.samplers.TPESampler.hyperopt_parameters:3
+#: of optuna.samplers._tpe.sampler.TPESampler.after_trial
+#: optuna.samplers._tpe.sampler.TPESampler.hyperopt_parameters
+#: optuna.samplers._tpe.sampler.TPESampler.infer_relative_search_space
+#: optuna.samplers._tpe.sampler.TPESampler.reseed_rng
+#: optuna.samplers._tpe.sampler.TPESampler.sample_independent
+#: optuna.samplers._tpe.sampler.TPESampler.sample_relative
+msgid "返回类型"
+msgstr ""
+
+#: of optuna.samplers._tpe.sampler.TPESampler.hyperopt_parameters:3
 msgid ""
 ":class:`~optuna.samplers.TPESampler` can be instantiated with the "
 "parameters returned by this method."
 msgstr ""
 
-#: of optuna.samplers.TPESampler.hyperopt_parameters:8
+#: of optuna.samplers._tpe.sampler.TPESampler.hyperopt_parameters:8
 msgid ""
 "Create a :class:`~optuna.samplers.TPESampler` instance with the default "
 "parameters of `hyperopt "
 "<https://github.com/hyperopt/hyperopt/tree/0.1.2>`_."
 msgstr ""
 
-#: of optuna.samplers.TPESampler.hyperopt_parameters
-#: optuna.samplers.TPESampler.infer_relative_search_space
-#: optuna.samplers.TPESampler.sample_independent
-#: optuna.samplers.TPESampler.sample_relative
+#: of optuna.samplers._tpe.sampler.TPESampler.hyperopt_parameters
+#: optuna.samplers._tpe.sampler.TPESampler.infer_relative_search_space
+#: optuna.samplers._tpe.sampler.TPESampler.sample_independent
+#: optuna.samplers._tpe.sampler.TPESampler.sample_relative
 msgid "返回"
 msgstr ""
 
-#: of optuna.samplers.TPESampler.hyperopt_parameters:26
+#: of optuna.samplers._tpe.sampler.TPESampler.hyperopt_parameters:26
 msgid "A dictionary containing the default parameters of hyperopt."
 msgstr ""
 
-#: of optuna.samplers.TPESampler.infer_relative_search_space:3
+#: of optuna.samplers._tpe.sampler.TPESampler.infer_relative_search_space:3
 msgid ""
 "This method is called right before "
 ":func:`~optuna.samplers.BaseSampler.sample_relative` method, and the "
-"search space returned by this method is pass to it. The parameters not "
+"search space returned by this method is passed to it. The parameters not "
 "contained in the search space will be sampled by using "
 ":func:`~optuna.samplers.BaseSampler.sample_independent` method."
 msgstr ""
 
-#: of optuna.samplers.TPESampler.infer_relative_search_space:12
+#: of optuna.samplers._tpe.sampler.TPESampler.infer_relative_search_space:12
 msgid "A dictionary containing the parameter names and parameter's distributions."
 msgstr ""
 
-#: of optuna.samplers.TPESampler.infer_relative_search_space:15
+#: of optuna.samplers._tpe.sampler.TPESampler.infer_relative_search_space:15
 msgid ""
 "Please refer to :func:`~optuna.samplers.intersection_search_space` as an "
 "implementation of "
 ":func:`~optuna.samplers.BaseSampler.infer_relative_search_space`."
 msgstr ""
 
-#: of optuna.samplers.TPESampler.reseed_rng:3
+#: of optuna.samplers._tpe.sampler.TPESampler.reseed_rng:3
 msgid ""
 "This method is called by the :class:`~optuna.study.Study` instance if "
 "trials are executed in parallel with the option ``n_jobs>1``. In that "
@@ -336,7 +346,7 @@ msgid ""
 "generator."
 msgstr ""
 
-#: of optuna.samplers.TPESampler.sample_independent:3
+#: of optuna.samplers._tpe.sampler.TPESampler.sample_independent:3
 msgid ""
 "This method is called only for the parameters not contained in the search"
 " space returned by :func:`~optuna.samplers.BaseSampler.sample_relative` "
@@ -344,29 +354,29 @@ msgid ""
 "relationship between parameters such as random sampling and TPE."
 msgstr ""
 
-#: of optuna.samplers.TPESampler.sample_independent:9
-#: optuna.samplers.TPESampler.sample_relative:8
+#: of optuna.samplers._tpe.sampler.TPESampler.sample_independent:9
+#: optuna.samplers._tpe.sampler.TPESampler.sample_relative:8
 msgid ""
 "The failed trials are ignored by any build-in samplers when they sample "
 "new parameters. Thus, failed trials are regarded as deleted in the "
 "samplers' perspective."
 msgstr ""
 
-#: of optuna.samplers.TPESampler.sample_independent:16
+#: of optuna.samplers._tpe.sampler.TPESampler.sample_independent:16
 msgid "Name of the sampled parameter."
 msgstr ""
 
-#: of optuna.samplers.TPESampler.sample_independent:17
+#: of optuna.samplers._tpe.sampler.TPESampler.sample_independent:17
 msgid ""
 "Distribution object that specifies a prior and/or scale of the sampling "
 "algorithm."
 msgstr ""
 
-#: of optuna.samplers.TPESampler.sample_independent:19
+#: of optuna.samplers._tpe.sampler.TPESampler.sample_independent:19
 msgid "A parameter value."
 msgstr ""
 
-#: of optuna.samplers.TPESampler.sample_relative:3
+#: of optuna.samplers._tpe.sampler.TPESampler.sample_relative:3
 msgid ""
 "This method is called once at the beginning of each trial, i.e., right "
 "before the evaluation of the objective function. This method is suitable "
@@ -374,13 +384,23 @@ msgid ""
 "Gaussian Process and CMA-ES."
 msgstr ""
 
-#: of optuna.samplers.TPESampler.sample_relative:15
+#: of optuna.samplers._tpe.sampler.TPESampler.sample_relative:15
 msgid ""
 "The search space returned by "
 ":func:`~optuna.samplers.BaseSampler.infer_relative_search_space`."
 msgstr ""
 
-#: of optuna.samplers.TPESampler.sample_relative:18
+#: of optuna.samplers._tpe.sampler.TPESampler.sample_relative:18
 msgid "A dictionary containing the parameter names and the values."
 msgstr ""
+
+#~ msgid ""
+#~ "This method is called right before "
+#~ ":func:`~optuna.samplers.BaseSampler.sample_relative` method, "
+#~ "and the search space returned by "
+#~ "this method is pass to it. The "
+#~ "parameters not contained in the search"
+#~ " space will be sampled by using "
+#~ ":func:`~optuna.samplers.BaseSampler.sample_independent` method."
+#~ msgstr ""
 

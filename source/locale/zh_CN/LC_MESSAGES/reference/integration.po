@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 1.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-14 18:04-0500\n"
+"POT-Creation-Date: 2021-03-20 13:35-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -221,7 +221,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/reference/integration.rst:68:<autosummary>:1
-msgid ":class:`optuna.integration.fastaiv2.FastAIV2PruningCallback` 的别名"
+msgid "alias of :class:`optuna.integration.fastaiv2.FastAIV2PruningCallback`"
 msgstr ""
 
 #: ../../source/reference/integration.rst:70
@@ -1913,4 +1913,7 @@ msgstr "用于清除无望 trial 的 XGBoost 回调函数。"
 #~ msgstr ""
 #~ ":class:`~optuna.study.Study` 实例。注意它必须在 "
 #~ ":func:`~optuna.study.Study.optimize` 已经被调用的情况下使用。"
+
+#~ msgid ":class:`optuna.integration.fastaiv2.FastAIV2PruningCallback` 的别名"
+#~ msgstr ""
 

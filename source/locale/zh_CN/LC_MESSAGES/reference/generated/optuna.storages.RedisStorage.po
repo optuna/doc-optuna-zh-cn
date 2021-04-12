@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 2.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-14 18:04-0500\n"
+"POT-Creation-Date: 2021-03-20 13:35-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,74 +21,76 @@ msgstr ""
 msgid "optuna.storages.RedisStorage"
 msgstr ""
 
-#: of optuna.storages.RedisStorage:1
+#: of optuna.storages._redis.RedisStorage:1
 msgid "Storage class for Redis backend."
 msgstr ""
 
-#: of optuna.storages.RedisStorage:3
+#: of optuna.storages._redis.RedisStorage:3
 msgid ""
 "Note that library users can instantiate this class, but the attributes "
 "provided by this class are not supposed to be directly accessed by them."
 msgstr ""
 
-#: of optuna.storages.RedisStorage:7
+#: of optuna.storages._redis.RedisStorage:7
 msgid "示例"
 msgstr ""
 
-#: of optuna.storages.RedisStorage:8
+#: of optuna.storages._redis.RedisStorage:8
 msgid ""
 "We create an :class:`~optuna.storages.RedisStorage` instance using the "
 "given redis database URL."
 msgstr ""
 
-#: of optuna.storages.RedisStorage
-#: optuna.storages.RedisStorage.check_trial_is_updatable
-#: optuna.storages.RedisStorage.create_new_study
-#: optuna.storages.RedisStorage.create_new_trial
-#: optuna.storages.RedisStorage.delete_study
-#: optuna.storages.RedisStorage.get_all_trials
-#: optuna.storages.RedisStorage.get_best_trial
-#: optuna.storages.RedisStorage.get_n_trials
-#: optuna.storages.RedisStorage.get_study_directions
-#: optuna.storages.RedisStorage.get_study_id_from_name
-#: optuna.storages.RedisStorage.get_study_id_from_trial_id
-#: optuna.storages.RedisStorage.get_study_name_from_id
-#: optuna.storages.RedisStorage.get_study_system_attrs
-#: optuna.storages.RedisStorage.get_study_user_attrs
-#: optuna.storages.RedisStorage.get_trial
-#: optuna.storages.RedisStorage.get_trial_id_from_study_id_trial_number
-#: optuna.storages.RedisStorage.get_trial_number_from_id
-#: optuna.storages.RedisStorage.get_trial_param
-#: optuna.storages.RedisStorage.get_trial_params
-#: optuna.storages.RedisStorage.get_trial_system_attrs
-#: optuna.storages.RedisStorage.get_trial_user_attrs
-#: optuna.storages.RedisStorage.read_trials_from_remote_storage
-#: optuna.storages.RedisStorage.set_study_directions
-#: optuna.storages.RedisStorage.set_study_system_attr
-#: optuna.storages.RedisStorage.set_study_user_attr
-#: optuna.storages.RedisStorage.set_trial_intermediate_value
-#: optuna.storages.RedisStorage.set_trial_param
-#: optuna.storages.RedisStorage.set_trial_state
-#: optuna.storages.RedisStorage.set_trial_system_attr
-#: optuna.storages.RedisStorage.set_trial_user_attr
-#: optuna.storages.RedisStorage.set_trial_values
+#: of optuna.storages._base.BaseStorage.check_trial_is_updatable
+#: optuna.storages._base.BaseStorage.fail_stale_trials
+#: optuna.storages._base.BaseStorage.get_n_trials
+#: optuna.storages._base.BaseStorage.get_trial_params
+#: optuna.storages._base.BaseStorage.get_trial_system_attrs
+#: optuna.storages._base.BaseStorage.get_trial_user_attrs
+#: optuna.storages._base.BaseStorage.record_heartbeat
+#: optuna.storages._redis.RedisStorage
+#: optuna.storages._redis.RedisStorage.create_new_study
+#: optuna.storages._redis.RedisStorage.create_new_trial
+#: optuna.storages._redis.RedisStorage.delete_study
+#: optuna.storages._redis.RedisStorage.get_all_trials
+#: optuna.storages._redis.RedisStorage.get_best_trial
+#: optuna.storages._redis.RedisStorage.get_study_directions
+#: optuna.storages._redis.RedisStorage.get_study_id_from_name
+#: optuna.storages._redis.RedisStorage.get_study_id_from_trial_id
+#: optuna.storages._redis.RedisStorage.get_study_name_from_id
+#: optuna.storages._redis.RedisStorage.get_study_system_attrs
+#: optuna.storages._redis.RedisStorage.get_study_user_attrs
+#: optuna.storages._redis.RedisStorage.get_trial
+#: optuna.storages._redis.RedisStorage.get_trial_id_from_study_id_trial_number
+#: optuna.storages._redis.RedisStorage.get_trial_number_from_id
+#: optuna.storages._redis.RedisStorage.get_trial_param
+#: optuna.storages._redis.RedisStorage.read_trials_from_remote_storage
+#: optuna.storages._redis.RedisStorage.set_study_directions
+#: optuna.storages._redis.RedisStorage.set_study_system_attr
+#: optuna.storages._redis.RedisStorage.set_study_user_attr
+#: optuna.storages._redis.RedisStorage.set_trial_intermediate_value
+#: optuna.storages._redis.RedisStorage.set_trial_param
+#: optuna.storages._redis.RedisStorage.set_trial_state
+#: optuna.storages._redis.RedisStorage.set_trial_system_attr
+#: optuna.storages._redis.RedisStorage.set_trial_user_attr
+#: optuna.storages._redis.RedisStorage.set_trial_values
 msgid "参数"
 msgstr ""
 
-#: of optuna.storages.RedisStorage:27
+#: of optuna.storages._redis.RedisStorage:27
 msgid ""
 "URL of the redis storage, password and db are optional. (ie: "
 "redis://localhost:6379)"
 msgstr ""
 
-#: of optuna.storages.RedisStorage:30
+#: of optuna.storages._redis.RedisStorage:30
 msgid ""
 "If you use plan to use Redis as a storage mechanism for optuna, make sure"
 " Redis in installed and running. Please execute ``$ pip install -U "
 "redis`` to install redis python library."
 msgstr ""
 
-#: of optuna.storages.RedisStorage:35
+#: of optuna.storages._redis.RedisStorage:35
 msgid ""
 "Added in v1.4.0 as an experimental feature. The interface may change in "
 "newer versions without prior notice. See "
@@ -99,716 +101,922 @@ msgstr ""
 msgid "Methods"
 msgstr ""
 
-#: of optuna.storages.RedisStorage.check_trial_is_updatable:1:<autosummary>:1
+#: of
+#: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
 msgid ""
 ":obj:`check_trial_is_updatable "
 "<optuna.storages.RedisStorage.check_trial_is_updatable>`\\ "
 "\\(trial\\_id\\, trial\\_state\\)"
 msgstr ""
 
-#: of optuna.storages.RedisStorage.check_trial_is_updatable:1
-#: optuna.storages.RedisStorage.check_trial_is_updatable:1:<autosummary>:1
+#: of optuna.storages._base.BaseStorage.check_trial_is_updatable:1
+#: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
 msgid "Check whether a trial state is updatable."
 msgstr ""
 
-#: of optuna.storages.RedisStorage.check_trial_is_updatable:1:<autosummary>:1
+#: of
+#: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
 msgid ""
 ":obj:`create_new_study <optuna.storages.RedisStorage.create_new_study>`\\"
 " \\(\\[study\\_name\\]\\)"
 msgstr ""
 
-#: of optuna.storages.RedisStorage.check_trial_is_updatable:1:<autosummary>:1
-#: optuna.storages.RedisStorage.create_new_study:1
+#: of
+#: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
+#: optuna.storages._redis.RedisStorage.create_new_study:1
 msgid "Create a new study from a name."
 msgstr ""
 
-#: of optuna.storages.RedisStorage.check_trial_is_updatable:1:<autosummary>:1
+#: of
+#: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
 msgid ""
 ":obj:`create_new_trial <optuna.storages.RedisStorage.create_new_trial>`\\"
 " \\(study\\_id\\[\\, template\\_trial\\]\\)"
 msgstr ""
 
-#: of optuna.storages.RedisStorage.check_trial_is_updatable:1:<autosummary>:1
-#: optuna.storages.RedisStorage.create_new_trial:1
+#: of
+#: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
+#: optuna.storages._redis.RedisStorage.create_new_trial:1
 msgid "Create and add a new trial to a study."
 msgstr ""
 
-#: of optuna.storages.RedisStorage.check_trial_is_updatable:1:<autosummary>:1
+#: of
+#: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
 msgid ""
 ":obj:`delete_study <optuna.storages.RedisStorage.delete_study>`\\ "
 "\\(study\\_id\\)"
 msgstr ""
 
-#: of optuna.storages.RedisStorage.check_trial_is_updatable:1:<autosummary>:1
-#: optuna.storages.RedisStorage.delete_study:1
+#: of
+#: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
+#: optuna.storages._redis.RedisStorage.delete_study:1
 msgid "Delete a study."
 msgstr ""
 
-#: of optuna.storages.RedisStorage.check_trial_is_updatable:1:<autosummary>:1
+#: of
+#: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
+msgid ""
+":obj:`fail_stale_trials "
+"<optuna.storages.RedisStorage.fail_stale_trials>`\\ \\(study\\_id\\)"
+msgstr ""
+
+#: of
+#: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
+#: optuna.storages._base.BaseStorage.fail_stale_trials:1
+msgid "Fail stale trials."
+msgstr ""
+
+#: of
+#: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
 msgid ""
 ":obj:`get_all_study_summaries "
 "<optuna.storages.RedisStorage.get_all_study_summaries>`\\ \\(\\)"
 msgstr ""
 
-#: of optuna.storages.RedisStorage.check_trial_is_updatable:1:<autosummary>:1
-#: optuna.storages.RedisStorage.get_all_study_summaries:1
+#: of
+#: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
+#: optuna.storages._redis.RedisStorage.get_all_study_summaries:1
 msgid "Read a list of :class:`~optuna.study.StudySummary` objects."
 msgstr ""
 
-#: of optuna.storages.RedisStorage.check_trial_is_updatable:1:<autosummary>:1
+#: of
+#: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
 msgid ""
 ":obj:`get_all_trials <optuna.storages.RedisStorage.get_all_trials>`\\ "
 "\\(study\\_id\\[\\, deepcopy\\, states\\]\\)"
 msgstr ""
 
-#: of optuna.storages.RedisStorage.check_trial_is_updatable:1:<autosummary>:1
-#: optuna.storages.RedisStorage.get_all_trials:1
+#: of
+#: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
+#: optuna.storages._redis.RedisStorage.get_all_trials:1
 msgid "Read all trials in a study."
 msgstr ""
 
-#: of optuna.storages.RedisStorage.check_trial_is_updatable:1:<autosummary>:1
+#: of
+#: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
 msgid ""
 ":obj:`get_best_trial <optuna.storages.RedisStorage.get_best_trial>`\\ "
 "\\(study\\_id\\)"
 msgstr ""
 
-#: of optuna.storages.RedisStorage.check_trial_is_updatable:1:<autosummary>:1
-#: optuna.storages.RedisStorage.get_best_trial:1
+#: of
+#: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
+#: optuna.storages._redis.RedisStorage.get_best_trial:1
 msgid "Return the trial with the best value in a study."
 msgstr ""
 
-#: of optuna.storages.RedisStorage.check_trial_is_updatable:1:<autosummary>:1
+#: of
+#: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
+msgid ""
+":obj:`get_failed_trial_callback "
+"<optuna.storages.RedisStorage.get_failed_trial_callback>`\\ \\(\\)"
+msgstr ""
+
+#: of
+#: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
+#: optuna.storages._base.BaseStorage.get_failed_trial_callback:1
+msgid "Get the failed trial callback function."
+msgstr ""
+
+#: of
+#: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
+msgid ""
+":obj:`get_heartbeat_interval "
+"<optuna.storages.RedisStorage.get_heartbeat_interval>`\\ \\(\\)"
+msgstr ""
+
+#: of
+#: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
+#: optuna.storages._base.BaseStorage.get_heartbeat_interval:1
+msgid "Get the heartbeat interval if it is set."
+msgstr ""
+
+#: of
+#: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
 msgid ""
 ":obj:`get_n_trials <optuna.storages.RedisStorage.get_n_trials>`\\ "
 "\\(study\\_id\\[\\, state\\]\\)"
 msgstr ""
 
-#: of optuna.storages.RedisStorage.check_trial_is_updatable:1:<autosummary>:1
-#: optuna.storages.RedisStorage.get_n_trials:1
+#: of
+#: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
+#: optuna.storages._base.BaseStorage.get_n_trials:1
 msgid "Count the number of trials in a study."
 msgstr ""
 
-#: of optuna.storages.RedisStorage.check_trial_is_updatable:1:<autosummary>:1
+#: of
+#: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
 msgid ""
 ":obj:`get_study_directions "
 "<optuna.storages.RedisStorage.get_study_directions>`\\ \\(study\\_id\\)"
 msgstr ""
 
-#: of optuna.storages.RedisStorage.check_trial_is_updatable:1:<autosummary>:1
-#: optuna.storages.RedisStorage.get_study_directions:1
+#: of
+#: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
+#: optuna.storages._redis.RedisStorage.get_study_directions:1
 msgid "Read whether a study maximizes or minimizes an objective."
 msgstr ""
 
-#: of optuna.storages.RedisStorage.check_trial_is_updatable:1:<autosummary>:1
+#: of
+#: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
 msgid ""
 ":obj:`get_study_id_from_name "
 "<optuna.storages.RedisStorage.get_study_id_from_name>`\\ "
 "\\(study\\_name\\)"
 msgstr ""
 
-#: of optuna.storages.RedisStorage.check_trial_is_updatable:1:<autosummary>:1
-#: optuna.storages.RedisStorage.get_study_id_from_name:1
+#: of
+#: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
+#: optuna.storages._redis.RedisStorage.get_study_id_from_name:1
 msgid "Read the ID of a study."
 msgstr ""
 
-#: of optuna.storages.RedisStorage.check_trial_is_updatable:1:<autosummary>:1
+#: of
+#: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
 msgid ""
 ":obj:`get_study_id_from_trial_id "
 "<optuna.storages.RedisStorage.get_study_id_from_trial_id>`\\ "
 "\\(trial\\_id\\)"
 msgstr ""
 
-#: of optuna.storages.RedisStorage.check_trial_is_updatable:1:<autosummary>:1
-#: optuna.storages.RedisStorage.get_study_id_from_trial_id:1
+#: of
+#: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
+#: optuna.storages._redis.RedisStorage.get_study_id_from_trial_id:1
 msgid "Read the ID of a study to which a trial belongs."
 msgstr ""
 
-#: of optuna.storages.RedisStorage.check_trial_is_updatable:1:<autosummary>:1
+#: of
+#: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
 msgid ""
 ":obj:`get_study_name_from_id "
 "<optuna.storages.RedisStorage.get_study_name_from_id>`\\ \\(study\\_id\\)"
 msgstr ""
 
-#: of optuna.storages.RedisStorage.check_trial_is_updatable:1:<autosummary>:1
-#: optuna.storages.RedisStorage.get_study_name_from_id:1
+#: of
+#: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
+#: optuna.storages._redis.RedisStorage.get_study_name_from_id:1
 msgid "Read the study name of a study."
 msgstr ""
 
-#: of optuna.storages.RedisStorage.check_trial_is_updatable:1:<autosummary>:1
+#: of
+#: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
 msgid ""
 ":obj:`get_study_system_attrs "
 "<optuna.storages.RedisStorage.get_study_system_attrs>`\\ \\(study\\_id\\)"
 msgstr ""
 
-#: of optuna.storages.RedisStorage.check_trial_is_updatable:1:<autosummary>:1
-#: optuna.storages.RedisStorage.get_study_system_attrs:1
+#: of
+#: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
+#: optuna.storages._redis.RedisStorage.get_study_system_attrs:1
 msgid "Read the optuna-internal attributes of a study."
 msgstr ""
 
-#: of optuna.storages.RedisStorage.check_trial_is_updatable:1:<autosummary>:1
+#: of
+#: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
 msgid ""
 ":obj:`get_study_user_attrs "
 "<optuna.storages.RedisStorage.get_study_user_attrs>`\\ \\(study\\_id\\)"
 msgstr ""
 
-#: of optuna.storages.RedisStorage.check_trial_is_updatable:1:<autosummary>:1
-#: optuna.storages.RedisStorage.get_study_user_attrs:1
+#: of
+#: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
+#: optuna.storages._redis.RedisStorage.get_study_user_attrs:1
 msgid "Read the user-defined attributes of a study."
 msgstr ""
 
-#: of optuna.storages.RedisStorage.check_trial_is_updatable:1:<autosummary>:1
+#: of
+#: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
 msgid ""
 ":obj:`get_trial <optuna.storages.RedisStorage.get_trial>`\\ "
 "\\(trial\\_id\\)"
 msgstr ""
 
-#: of optuna.storages.RedisStorage.check_trial_is_updatable:1:<autosummary>:1
-#: optuna.storages.RedisStorage.get_trial:1
+#: of
+#: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
+#: optuna.storages._redis.RedisStorage.get_trial:1
 msgid "Read a trial."
 msgstr ""
 
-#: of optuna.storages.RedisStorage.check_trial_is_updatable:1:<autosummary>:1
+#: of
+#: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
 msgid ""
 ":obj:`get_trial_id_from_study_id_trial_number "
 "<optuna.storages.RedisStorage.get_trial_id_from_study_id_trial_number>`\\"
 " \\(...\\)"
 msgstr ""
 
-#: of optuna.storages.RedisStorage.check_trial_is_updatable:1:<autosummary>:1
-#: optuna.storages.RedisStorage.get_trial_id_from_study_id_trial_number:1
+#: of
+#: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
+#: optuna.storages._redis.RedisStorage.get_trial_id_from_study_id_trial_number:1
 msgid "Read the trial id of a trial."
 msgstr ""
 
-#: of optuna.storages.RedisStorage.check_trial_is_updatable:1:<autosummary>:1
+#: of
+#: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
 msgid ""
 ":obj:`get_trial_number_from_id "
 "<optuna.storages.RedisStorage.get_trial_number_from_id>`\\ "
 "\\(trial\\_id\\)"
 msgstr ""
 
-#: of optuna.storages.RedisStorage.check_trial_is_updatable:1:<autosummary>:1
-#: optuna.storages.RedisStorage.get_trial_number_from_id:1
+#: of
+#: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
+#: optuna.storages._redis.RedisStorage.get_trial_number_from_id:1
 msgid "Read the trial number of a trial."
 msgstr ""
 
-#: of optuna.storages.RedisStorage.check_trial_is_updatable:1:<autosummary>:1
+#: of
+#: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
 msgid ""
 ":obj:`get_trial_param <optuna.storages.RedisStorage.get_trial_param>`\\ "
 "\\(trial\\_id\\, param\\_name\\)"
 msgstr ""
 
-#: of optuna.storages.RedisStorage.check_trial_is_updatable:1:<autosummary>:1
-#: optuna.storages.RedisStorage.get_trial_param:1
+#: of
+#: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
+#: optuna.storages._redis.RedisStorage.get_trial_param:1
 msgid "Read the parameter of a trial."
 msgstr ""
 
-#: of optuna.storages.RedisStorage.check_trial_is_updatable:1:<autosummary>:1
+#: of
+#: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
 msgid ""
 ":obj:`get_trial_params <optuna.storages.RedisStorage.get_trial_params>`\\"
 " \\(trial\\_id\\)"
 msgstr ""
 
-#: of optuna.storages.RedisStorage.check_trial_is_updatable:1:<autosummary>:1
-#: optuna.storages.RedisStorage.get_trial_params:1
+#: of
+#: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
+#: optuna.storages._base.BaseStorage.get_trial_params:1
 msgid "Read the parameter dictionary of a trial."
 msgstr ""
 
-#: of optuna.storages.RedisStorage.check_trial_is_updatable:1:<autosummary>:1
+#: of
+#: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
 msgid ""
 ":obj:`get_trial_system_attrs "
 "<optuna.storages.RedisStorage.get_trial_system_attrs>`\\ \\(trial\\_id\\)"
 msgstr ""
 
-#: of optuna.storages.RedisStorage.check_trial_is_updatable:1:<autosummary>:1
-#: optuna.storages.RedisStorage.get_trial_system_attrs:1
+#: of
+#: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
+#: optuna.storages._base.BaseStorage.get_trial_system_attrs:1
 msgid "Read the optuna-internal attributes of a trial."
 msgstr ""
 
-#: of optuna.storages.RedisStorage.check_trial_is_updatable:1:<autosummary>:1
+#: of
+#: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
 msgid ""
 ":obj:`get_trial_user_attrs "
 "<optuna.storages.RedisStorage.get_trial_user_attrs>`\\ \\(trial\\_id\\)"
 msgstr ""
 
-#: of optuna.storages.RedisStorage.check_trial_is_updatable:1:<autosummary>:1
-#: optuna.storages.RedisStorage.get_trial_user_attrs:1
+#: of
+#: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
+#: optuna.storages._base.BaseStorage.get_trial_user_attrs:1
 msgid "Read the user-defined attributes of a trial."
 msgstr ""
 
-#: of optuna.storages.RedisStorage.check_trial_is_updatable:1:<autosummary>:1
+#: of
+#: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
+msgid ""
+":obj:`is_heartbeat_enabled "
+"<optuna.storages.RedisStorage.is_heartbeat_enabled>`\\ \\(\\)"
+msgstr ""
+
+#: of
+#: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
+#: optuna.storages._base.BaseStorage.is_heartbeat_enabled:1
+msgid "Check whether the storage enables the heartbeat."
+msgstr ""
+
+#: of
+#: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
 msgid ""
 ":obj:`read_trials_from_remote_storage "
 "<optuna.storages.RedisStorage.read_trials_from_remote_storage>`\\ "
 "\\(study\\_id\\)"
 msgstr ""
 
-#: of optuna.storages.RedisStorage.check_trial_is_updatable:1:<autosummary>:1
-#: optuna.storages.RedisStorage.read_trials_from_remote_storage:1
+#: of
+#: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
+#: optuna.storages._redis.RedisStorage.read_trials_from_remote_storage:1
 msgid "Make an internal cache of trials up-to-date."
 msgstr ""
 
-#: of optuna.storages.RedisStorage.check_trial_is_updatable:1:<autosummary>:1
+#: of
+#: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
+msgid ""
+":obj:`record_heartbeat <optuna.storages.RedisStorage.record_heartbeat>`\\"
+" \\(trial\\_id\\)"
+msgstr ""
+
+#: of
+#: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
+#: optuna.storages._base.BaseStorage.record_heartbeat:1
+msgid "Record the heartbeat of the trial."
+msgstr ""
+
+#: of
+#: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
 msgid ""
 ":obj:`remove_session <optuna.storages.RedisStorage.remove_session>`\\ "
 "\\(\\)"
 msgstr ""
 
-#: of optuna.storages.RedisStorage.check_trial_is_updatable:1:<autosummary>:1
-#: optuna.storages.RedisStorage.remove_session:1
+#: of
+#: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
+#: optuna.storages._base.BaseStorage.remove_session:1
 msgid "Clean up all connections to a database."
 msgstr ""
 
-#: of optuna.storages.RedisStorage.check_trial_is_updatable:1:<autosummary>:1
+#: of
+#: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
 msgid ""
 ":obj:`set_study_directions "
 "<optuna.storages.RedisStorage.set_study_directions>`\\ \\(study\\_id\\, "
 "directions\\)"
 msgstr ""
 
-#: of optuna.storages.RedisStorage.check_trial_is_updatable:1:<autosummary>:1
-#: optuna.storages.RedisStorage.set_study_directions:1
+#: of
+#: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
+#: optuna.storages._redis.RedisStorage.set_study_directions:1
 msgid "Register optimization problem directions to a study."
 msgstr ""
 
-#: of optuna.storages.RedisStorage.check_trial_is_updatable:1:<autosummary>:1
+#: of
+#: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
 msgid ""
 ":obj:`set_study_system_attr "
 "<optuna.storages.RedisStorage.set_study_system_attr>`\\ \\(study\\_id\\, "
 "key\\, value\\)"
 msgstr ""
 
-#: of optuna.storages.RedisStorage.check_trial_is_updatable:1:<autosummary>:1
-#: optuna.storages.RedisStorage.set_study_system_attr:1
+#: of
+#: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
+#: optuna.storages._redis.RedisStorage.set_study_system_attr:1
 msgid "Register an optuna-internal attribute to a study."
 msgstr ""
 
-#: of optuna.storages.RedisStorage.check_trial_is_updatable:1:<autosummary>:1
+#: of
+#: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
 msgid ""
 ":obj:`set_study_user_attr "
 "<optuna.storages.RedisStorage.set_study_user_attr>`\\ \\(study\\_id\\, "
 "key\\, value\\)"
 msgstr ""
 
-#: of optuna.storages.RedisStorage.check_trial_is_updatable:1:<autosummary>:1
-#: optuna.storages.RedisStorage.set_study_user_attr:1
+#: of
+#: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
+#: optuna.storages._redis.RedisStorage.set_study_user_attr:1
 msgid "Register a user-defined attribute to a study."
 msgstr ""
 
-#: of optuna.storages.RedisStorage.check_trial_is_updatable:1:<autosummary>:1
+#: of
+#: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
 msgid ""
 ":obj:`set_trial_intermediate_value "
 "<optuna.storages.RedisStorage.set_trial_intermediate_value>`\\ "
 "\\(trial\\_id\\, step\\, ...\\)"
 msgstr ""
 
-#: of optuna.storages.RedisStorage.check_trial_is_updatable:1:<autosummary>:1
-#: optuna.storages.RedisStorage.set_trial_intermediate_value:1
+#: of
+#: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
+#: optuna.storages._redis.RedisStorage.set_trial_intermediate_value:1
 msgid "Report an intermediate value of an objective function."
 msgstr ""
 
-#: of optuna.storages.RedisStorage.check_trial_is_updatable:1:<autosummary>:1
+#: of
+#: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
 msgid ""
 ":obj:`set_trial_param <optuna.storages.RedisStorage.set_trial_param>`\\ "
 "\\(trial\\_id\\, param\\_name\\, ...\\)"
 msgstr ""
 
-#: of optuna.storages.RedisStorage.check_trial_is_updatable:1:<autosummary>:1
-#: optuna.storages.RedisStorage.set_trial_param:1
+#: of
+#: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
+#: optuna.storages._redis.RedisStorage.set_trial_param:1
 msgid "Set a parameter to a trial."
 msgstr ""
 
-#: of optuna.storages.RedisStorage.check_trial_is_updatable:1:<autosummary>:1
+#: of
+#: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
 msgid ""
 ":obj:`set_trial_state <optuna.storages.RedisStorage.set_trial_state>`\\ "
 "\\(trial\\_id\\, state\\)"
 msgstr ""
 
-#: of optuna.storages.RedisStorage.check_trial_is_updatable:1:<autosummary>:1
-#: optuna.storages.RedisStorage.set_trial_state:1
+#: of
+#: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
+#: optuna.storages._redis.RedisStorage.set_trial_state:1
 msgid "Update the state of a trial."
 msgstr ""
 
-#: of optuna.storages.RedisStorage.check_trial_is_updatable:1:<autosummary>:1
+#: of
+#: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
 msgid ""
 ":obj:`set_trial_system_attr "
 "<optuna.storages.RedisStorage.set_trial_system_attr>`\\ \\(trial\\_id\\, "
 "key\\, value\\)"
 msgstr ""
 
-#: of optuna.storages.RedisStorage.check_trial_is_updatable:1:<autosummary>:1
-#: optuna.storages.RedisStorage.set_trial_system_attr:1
+#: of
+#: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
+#: optuna.storages._redis.RedisStorage.set_trial_system_attr:1
 msgid "Set an optuna-internal attribute to a trial."
 msgstr ""
 
-#: of optuna.storages.RedisStorage.check_trial_is_updatable:1:<autosummary>:1
+#: of
+#: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
 msgid ""
 ":obj:`set_trial_user_attr "
 "<optuna.storages.RedisStorage.set_trial_user_attr>`\\ \\(trial\\_id\\, "
 "key\\, value\\)"
 msgstr ""
 
-#: of optuna.storages.RedisStorage.check_trial_is_updatable:1:<autosummary>:1
-#: optuna.storages.RedisStorage.set_trial_user_attr:1
+#: of
+#: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
+#: optuna.storages._redis.RedisStorage.set_trial_user_attr:1
 msgid "Set a user-defined attribute to a trial."
 msgstr ""
 
-#: of optuna.storages.RedisStorage.check_trial_is_updatable:1:<autosummary>:1
+#: of
+#: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
 msgid ""
 ":obj:`set_trial_values <optuna.storages.RedisStorage.set_trial_values>`\\"
 " \\(trial\\_id\\, values\\)"
 msgstr ""
 
-#: of optuna.storages.RedisStorage.check_trial_is_updatable:1:<autosummary>:1
-#: optuna.storages.RedisStorage.set_trial_values:1
+#: of
+#: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
+#: optuna.storages._redis.RedisStorage.set_trial_values:1
 msgid "Set return values of an objective function."
 msgstr ""
 
-#: of optuna.storages.RedisStorage.check_trial_is_updatable:3
+#: of optuna.storages._base.BaseStorage.check_trial_is_updatable:3
 msgid "ID of the trial. Only used for an error message."
 msgstr ""
 
-#: of optuna.storages.RedisStorage.check_trial_is_updatable:5
+#: of optuna.storages._base.BaseStorage.check_trial_is_updatable:5
 msgid "Trial state to check."
 msgstr ""
 
-#: of optuna.storages.RedisStorage.check_trial_is_updatable
-#: optuna.storages.RedisStorage.create_new_study
-#: optuna.storages.RedisStorage.create_new_trial
-#: optuna.storages.RedisStorage.delete_study
-#: optuna.storages.RedisStorage.get_all_trials
-#: optuna.storages.RedisStorage.get_best_trial
-#: optuna.storages.RedisStorage.get_n_trials
-#: optuna.storages.RedisStorage.get_study_directions
-#: optuna.storages.RedisStorage.get_study_id_from_name
-#: optuna.storages.RedisStorage.get_study_id_from_trial_id
-#: optuna.storages.RedisStorage.get_study_name_from_id
-#: optuna.storages.RedisStorage.get_study_system_attrs
-#: optuna.storages.RedisStorage.get_study_user_attrs
-#: optuna.storages.RedisStorage.get_trial
-#: optuna.storages.RedisStorage.get_trial_id_from_study_id_trial_number
-#: optuna.storages.RedisStorage.get_trial_number_from_id
-#: optuna.storages.RedisStorage.get_trial_param
-#: optuna.storages.RedisStorage.get_trial_params
-#: optuna.storages.RedisStorage.get_trial_system_attrs
-#: optuna.storages.RedisStorage.get_trial_user_attrs
-#: optuna.storages.RedisStorage.read_trials_from_remote_storage
-#: optuna.storages.RedisStorage.set_study_directions
-#: optuna.storages.RedisStorage.set_study_system_attr
-#: optuna.storages.RedisStorage.set_study_user_attr
-#: optuna.storages.RedisStorage.set_trial_intermediate_value
-#: optuna.storages.RedisStorage.set_trial_param
-#: optuna.storages.RedisStorage.set_trial_state
-#: optuna.storages.RedisStorage.set_trial_system_attr
-#: optuna.storages.RedisStorage.set_trial_user_attr
-#: optuna.storages.RedisStorage.set_trial_values
+#: of optuna.storages._base.BaseStorage.check_trial_is_updatable
+#: optuna.storages._base.BaseStorage.get_n_trials
+#: optuna.storages._base.BaseStorage.get_trial_params
+#: optuna.storages._base.BaseStorage.get_trial_system_attrs
+#: optuna.storages._base.BaseStorage.get_trial_user_attrs
+#: optuna.storages._redis.RedisStorage.create_new_study
+#: optuna.storages._redis.RedisStorage.create_new_trial
+#: optuna.storages._redis.RedisStorage.delete_study
+#: optuna.storages._redis.RedisStorage.get_all_trials
+#: optuna.storages._redis.RedisStorage.get_best_trial
+#: optuna.storages._redis.RedisStorage.get_study_directions
+#: optuna.storages._redis.RedisStorage.get_study_id_from_name
+#: optuna.storages._redis.RedisStorage.get_study_id_from_trial_id
+#: optuna.storages._redis.RedisStorage.get_study_name_from_id
+#: optuna.storages._redis.RedisStorage.get_study_system_attrs
+#: optuna.storages._redis.RedisStorage.get_study_user_attrs
+#: optuna.storages._redis.RedisStorage.get_trial
+#: optuna.storages._redis.RedisStorage.get_trial_id_from_study_id_trial_number
+#: optuna.storages._redis.RedisStorage.get_trial_number_from_id
+#: optuna.storages._redis.RedisStorage.get_trial_param
+#: optuna.storages._redis.RedisStorage.read_trials_from_remote_storage
+#: optuna.storages._redis.RedisStorage.set_study_directions
+#: optuna.storages._redis.RedisStorage.set_study_system_attr
+#: optuna.storages._redis.RedisStorage.set_study_user_attr
+#: optuna.storages._redis.RedisStorage.set_trial_intermediate_value
+#: optuna.storages._redis.RedisStorage.set_trial_param
+#: optuna.storages._redis.RedisStorage.set_trial_state
+#: optuna.storages._redis.RedisStorage.set_trial_system_attr
+#: optuna.storages._redis.RedisStorage.set_trial_user_attr
+#: optuna.storages._redis.RedisStorage.set_trial_values
 msgid "引发"
 msgstr ""
 
-#: of optuna.storages.RedisStorage.check_trial_is_updatable:7
-#: optuna.storages.RedisStorage.set_trial_intermediate_value:10
-#: optuna.storages.RedisStorage.set_trial_param:9
-#: optuna.storages.RedisStorage.set_trial_state:13
-#: optuna.storages.RedisStorage.set_trial_system_attr:10
-#: optuna.storages.RedisStorage.set_trial_user_attr:10
-#: optuna.storages.RedisStorage.set_trial_values:9
+#: of optuna.storages._base.BaseStorage.check_trial_is_updatable:7
+#: optuna.storages._redis.RedisStorage.set_trial_intermediate_value:10
+#: optuna.storages._redis.RedisStorage.set_trial_param:9
+#: optuna.storages._redis.RedisStorage.set_trial_state:13
+#: optuna.storages._redis.RedisStorage.set_trial_system_attr:10
+#: optuna.storages._redis.RedisStorage.set_trial_user_attr:10
+#: optuna.storages._redis.RedisStorage.set_trial_values:9
 msgid "If the trial is already finished."
 msgstr ""
 
-#: of optuna.storages.RedisStorage.create_new_study:3
+#: of optuna.storages._base.BaseStorage.check_trial_is_updatable
+#: optuna.storages._base.BaseStorage.fail_stale_trials
+#: optuna.storages._base.BaseStorage.get_failed_trial_callback
+#: optuna.storages._base.BaseStorage.get_heartbeat_interval
+#: optuna.storages._base.BaseStorage.get_n_trials
+#: optuna.storages._base.BaseStorage.get_trial_params
+#: optuna.storages._base.BaseStorage.get_trial_system_attrs
+#: optuna.storages._base.BaseStorage.get_trial_user_attrs
+#: optuna.storages._base.BaseStorage.is_heartbeat_enabled
+#: optuna.storages._base.BaseStorage.record_heartbeat
+#: optuna.storages._base.BaseStorage.remove_session
+#: optuna.storages._redis.RedisStorage.create_new_study
+#: optuna.storages._redis.RedisStorage.create_new_trial
+#: optuna.storages._redis.RedisStorage.delete_study
+#: optuna.storages._redis.RedisStorage.get_all_study_summaries
+#: optuna.storages._redis.RedisStorage.get_all_trials
+#: optuna.storages._redis.RedisStorage.get_best_trial
+#: optuna.storages._redis.RedisStorage.get_study_directions
+#: optuna.storages._redis.RedisStorage.get_study_id_from_name
+#: optuna.storages._redis.RedisStorage.get_study_id_from_trial_id
+#: optuna.storages._redis.RedisStorage.get_study_name_from_id
+#: optuna.storages._redis.RedisStorage.get_study_system_attrs
+#: optuna.storages._redis.RedisStorage.get_study_user_attrs
+#: optuna.storages._redis.RedisStorage.get_trial
+#: optuna.storages._redis.RedisStorage.get_trial_id_from_study_id_trial_number
+#: optuna.storages._redis.RedisStorage.get_trial_number_from_id
+#: optuna.storages._redis.RedisStorage.get_trial_param
+#: optuna.storages._redis.RedisStorage.read_trials_from_remote_storage
+#: optuna.storages._redis.RedisStorage.set_study_directions
+#: optuna.storages._redis.RedisStorage.set_study_system_attr
+#: optuna.storages._redis.RedisStorage.set_study_user_attr
+#: optuna.storages._redis.RedisStorage.set_trial_intermediate_value
+#: optuna.storages._redis.RedisStorage.set_trial_param
+#: optuna.storages._redis.RedisStorage.set_trial_state
+#: optuna.storages._redis.RedisStorage.set_trial_system_attr
+#: optuna.storages._redis.RedisStorage.set_trial_user_attr
+#: optuna.storages._redis.RedisStorage.set_trial_values
+msgid "返回类型"
+msgstr ""
+
+#: of optuna.storages._redis.RedisStorage.create_new_study:3
 msgid ""
 "If no name is specified, the storage class generates a name. The returned"
 " study ID is unique among all current and deleted studies."
 msgstr ""
 
-#: of optuna.storages.RedisStorage.create_new_study:6
+#: of optuna.storages._redis.RedisStorage.create_new_study:6
 msgid "Name of the new study to create."
 msgstr ""
 
-#: of optuna.storages.RedisStorage.create_new_study
-#: optuna.storages.RedisStorage.create_new_trial
-#: optuna.storages.RedisStorage.get_all_study_summaries
-#: optuna.storages.RedisStorage.get_all_trials
-#: optuna.storages.RedisStorage.get_best_trial
-#: optuna.storages.RedisStorage.get_n_trials
-#: optuna.storages.RedisStorage.get_study_directions
-#: optuna.storages.RedisStorage.get_study_id_from_name
-#: optuna.storages.RedisStorage.get_study_id_from_trial_id
-#: optuna.storages.RedisStorage.get_study_name_from_id
-#: optuna.storages.RedisStorage.get_study_system_attrs
-#: optuna.storages.RedisStorage.get_study_user_attrs
-#: optuna.storages.RedisStorage.get_trial
-#: optuna.storages.RedisStorage.get_trial_id_from_study_id_trial_number
-#: optuna.storages.RedisStorage.get_trial_number_from_id
-#: optuna.storages.RedisStorage.get_trial_param
-#: optuna.storages.RedisStorage.get_trial_params
-#: optuna.storages.RedisStorage.get_trial_system_attrs
-#: optuna.storages.RedisStorage.get_trial_user_attrs
-#: optuna.storages.RedisStorage.set_trial_state
+#: of optuna.storages._base.BaseStorage.fail_stale_trials
+#: optuna.storages._base.BaseStorage.get_failed_trial_callback
+#: optuna.storages._base.BaseStorage.get_heartbeat_interval
+#: optuna.storages._base.BaseStorage.get_n_trials
+#: optuna.storages._base.BaseStorage.get_trial_params
+#: optuna.storages._base.BaseStorage.get_trial_system_attrs
+#: optuna.storages._base.BaseStorage.get_trial_user_attrs
+#: optuna.storages._base.BaseStorage.is_heartbeat_enabled
+#: optuna.storages._redis.RedisStorage.create_new_study
+#: optuna.storages._redis.RedisStorage.create_new_trial
+#: optuna.storages._redis.RedisStorage.get_all_study_summaries
+#: optuna.storages._redis.RedisStorage.get_all_trials
+#: optuna.storages._redis.RedisStorage.get_best_trial
+#: optuna.storages._redis.RedisStorage.get_study_directions
+#: optuna.storages._redis.RedisStorage.get_study_id_from_name
+#: optuna.storages._redis.RedisStorage.get_study_id_from_trial_id
+#: optuna.storages._redis.RedisStorage.get_study_name_from_id
+#: optuna.storages._redis.RedisStorage.get_study_system_attrs
+#: optuna.storages._redis.RedisStorage.get_study_user_attrs
+#: optuna.storages._redis.RedisStorage.get_trial
+#: optuna.storages._redis.RedisStorage.get_trial_id_from_study_id_trial_number
+#: optuna.storages._redis.RedisStorage.get_trial_number_from_id
+#: optuna.storages._redis.RedisStorage.get_trial_param
+#: optuna.storages._redis.RedisStorage.set_trial_state
 msgid "返回"
 msgstr ""
 
-#: of optuna.storages.RedisStorage.create_new_study:8
+#: of optuna.storages._redis.RedisStorage.create_new_study:8
 msgid "ID of the created study."
 msgstr ""
 
-#: of optuna.storages.RedisStorage.create_new_study:10
+#: of optuna.storages._redis.RedisStorage.create_new_study:10
 msgid "If a study with the same ``study_name`` already exists."
 msgstr ""
 
-#: of optuna.storages.RedisStorage.create_new_trial:3
+#: of optuna.storages._redis.RedisStorage.create_new_trial:3
 msgid "The returned trial ID is unique among all current and deleted trials."
 msgstr ""
 
-#: of optuna.storages.RedisStorage.create_new_trial:5
-#: optuna.storages.RedisStorage.delete_study:3
-#: optuna.storages.RedisStorage.get_all_trials:3
-#: optuna.storages.RedisStorage.get_best_trial:5
-#: optuna.storages.RedisStorage.get_n_trials:3
-#: optuna.storages.RedisStorage.get_study_id_from_name:5
-#: optuna.storages.RedisStorage.get_study_id_from_trial_id:5
-#: optuna.storages.RedisStorage.get_study_name_from_id:3
-#: optuna.storages.RedisStorage.get_study_system_attrs:3
-#: optuna.storages.RedisStorage.get_study_user_attrs:3
-#: optuna.storages.RedisStorage.get_trial_id_from_study_id_trial_number:3
-#: optuna.storages.RedisStorage.read_trials_from_remote_storage:3
-#: optuna.storages.RedisStorage.set_study_directions:3
-#: optuna.storages.RedisStorage.set_study_system_attr:5
-#: optuna.storages.RedisStorage.set_study_user_attr:5
+#: of optuna.storages._base.BaseStorage.get_n_trials:3
+#: optuna.storages._redis.RedisStorage.create_new_trial:5
+#: optuna.storages._redis.RedisStorage.delete_study:3
+#: optuna.storages._redis.RedisStorage.get_all_trials:3
+#: optuna.storages._redis.RedisStorage.get_best_trial:5
+#: optuna.storages._redis.RedisStorage.get_study_id_from_name:5
+#: optuna.storages._redis.RedisStorage.get_study_id_from_trial_id:5
+#: optuna.storages._redis.RedisStorage.get_study_name_from_id:3
+#: optuna.storages._redis.RedisStorage.get_study_system_attrs:3
+#: optuna.storages._redis.RedisStorage.get_study_user_attrs:3
+#: optuna.storages._redis.RedisStorage.get_trial_id_from_study_id_trial_number:3
+#: optuna.storages._redis.RedisStorage.read_trials_from_remote_storage:3
+#: optuna.storages._redis.RedisStorage.set_study_directions:3
+#: optuna.storages._redis.RedisStorage.set_study_system_attr:5
+#: optuna.storages._redis.RedisStorage.set_study_user_attr:5
 msgid "ID of the study."
 msgstr ""
 
-#: of optuna.storages.RedisStorage.create_new_trial:6
+#: of optuna.storages._redis.RedisStorage.create_new_trial:6
 msgid ""
 "Template :class:`~optuna.trial.FronzenTrial` with default user-"
 "attributes, system-attributes, intermediate-values, and a state."
 msgstr ""
 
-#: of optuna.storages.RedisStorage.create_new_trial:9
+#: of optuna.storages._redis.RedisStorage.create_new_trial:9
 msgid "ID of the created trial."
 msgstr ""
 
-#: of optuna.storages.RedisStorage.create_new_trial:11
-#: optuna.storages.RedisStorage.delete_study:5
-#: optuna.storages.RedisStorage.get_all_trials:10
-#: optuna.storages.RedisStorage.get_best_trial:9
-#: optuna.storages.RedisStorage.get_n_trials:8
-#: optuna.storages.RedisStorage.get_study_directions:7
-#: optuna.storages.RedisStorage.get_study_name_from_id:7
-#: optuna.storages.RedisStorage.get_study_system_attrs:7
-#: optuna.storages.RedisStorage.get_study_user_attrs:7
-#: optuna.storages.RedisStorage.read_trials_from_remote_storage:5
-#: optuna.storages.RedisStorage.set_study_directions:8
-#: optuna.storages.RedisStorage.set_study_system_attr:9
-#: optuna.storages.RedisStorage.set_study_user_attr:9
+#: of optuna.storages._base.BaseStorage.get_n_trials:8
+#: optuna.storages._redis.RedisStorage.create_new_trial:11
+#: optuna.storages._redis.RedisStorage.delete_study:5
+#: optuna.storages._redis.RedisStorage.get_all_trials:10
+#: optuna.storages._redis.RedisStorage.get_best_trial:9
+#: optuna.storages._redis.RedisStorage.get_study_directions:7
+#: optuna.storages._redis.RedisStorage.get_study_name_from_id:7
+#: optuna.storages._redis.RedisStorage.get_study_system_attrs:7
+#: optuna.storages._redis.RedisStorage.get_study_user_attrs:7
+#: optuna.storages._redis.RedisStorage.read_trials_from_remote_storage:5
+#: optuna.storages._redis.RedisStorage.set_study_directions:8
+#: optuna.storages._redis.RedisStorage.set_study_system_attr:9
+#: optuna.storages._redis.RedisStorage.set_study_user_attr:9
 msgid "If no study with the matching ``study_id`` exists."
 msgstr ""
 
-#: of optuna.storages.RedisStorage.get_all_study_summaries:3
+#: of optuna.storages._base.BaseStorage.fail_stale_trials:3
+msgid ""
+"The running trials whose heartbeat has not been updated for a long time "
+"will be failed, that is, those states will be changed to "
+":obj:`~optuna.trial.TrialState.FAIL`. The grace period is ``2 * "
+"heartbeat_interval``."
+msgstr ""
+
+#: of optuna.storages._base.BaseStorage.fail_stale_trials:7
+msgid "ID of the related study."
+msgstr ""
+
+#: of optuna.storages._base.BaseStorage.fail_stale_trials:9
+msgid "List of trial IDs of the failed trials."
+msgstr ""
+
+#: of optuna.storages._redis.RedisStorage.get_all_study_summaries:3
 msgid "A list of :class:`~optuna.study.StudySummary` objects."
 msgstr ""
 
-#: of optuna.storages.RedisStorage.get_all_trials:4
+#: of optuna.storages._redis.RedisStorage.get_all_trials:4
 msgid ""
 "Whether to copy the list of trials before returning. Set to :obj:`True` "
 "if you intend to update the list or elements of the list."
 msgstr ""
 
-#: of optuna.storages.RedisStorage.get_all_trials:6
-#: optuna.storages.RedisStorage.get_n_trials:4
+#: of optuna.storages._base.BaseStorage.get_n_trials:4
+#: optuna.storages._redis.RedisStorage.get_all_trials:6
 msgid "Trial states to filter on. If :obj:`None`, include all states."
 msgstr ""
 
-#: of optuna.storages.RedisStorage.get_all_trials:8
+#: of optuna.storages._redis.RedisStorage.get_all_trials:8
 msgid "List of trials in the study."
 msgstr ""
 
-#: of optuna.storages.RedisStorage.get_best_trial:3
+#: of optuna.storages._redis.RedisStorage.get_best_trial:3
 msgid "This method is valid only during single-objective optimization."
 msgstr ""
 
-#: of optuna.storages.RedisStorage.get_best_trial:7
+#: of optuna.storages._redis.RedisStorage.get_best_trial:7
 msgid ""
 "The trial with the best objective value among all finished trials in the "
 "study."
 msgstr ""
 
-#: of optuna.storages.RedisStorage.get_best_trial:10
+#: of optuna.storages._redis.RedisStorage.get_best_trial:10
 msgid "If the study has more than one direction."
 msgstr ""
 
-#: of optuna.storages.RedisStorage.get_best_trial:11
+#: of optuna.storages._redis.RedisStorage.get_best_trial:11
 msgid "If no trials have been completed."
 msgstr ""
 
-#: of optuna.storages.RedisStorage.get_n_trials:6
+#: of optuna.storages._base.BaseStorage.get_failed_trial_callback:3
+msgid "The failed trial callback function if it is set, otherwise :obj:`None`."
+msgstr ""
+
+#: of optuna.storages._base.BaseStorage.get_heartbeat_interval:3
+msgid "The heartbeat interval if it is set, otherwise :obj:`None`."
+msgstr ""
+
+#: of optuna.storages._base.BaseStorage.get_n_trials:6
 msgid "Number of trials in the study."
 msgstr ""
 
-#: of optuna.storages.RedisStorage.get_study_directions:3
+#: of optuna.storages._redis.RedisStorage.get_study_directions:3
 msgid "ID of a study."
 msgstr ""
 
-#: of optuna.storages.RedisStorage.get_study_directions:5
+#: of optuna.storages._redis.RedisStorage.get_study_directions:5
 msgid "Optimization directions list of the study."
 msgstr ""
 
-#: of optuna.storages.RedisStorage.get_study_id_from_name:3
-#: optuna.storages.RedisStorage.get_study_name_from_id:5
+#: of optuna.storages._redis.RedisStorage.get_study_id_from_name:3
+#: optuna.storages._redis.RedisStorage.get_study_name_from_id:5
 msgid "Name of the study."
 msgstr ""
 
-#: of optuna.storages.RedisStorage.get_study_id_from_name:7
+#: of optuna.storages._redis.RedisStorage.get_study_id_from_name:7
 msgid "If no study with the matching ``study_name`` exists."
 msgstr ""
 
-#: of optuna.storages.RedisStorage.get_study_id_from_trial_id:3
-#: optuna.storages.RedisStorage.get_trial:3
-#: optuna.storages.RedisStorage.get_trial_id_from_study_id_trial_number:6
-#: optuna.storages.RedisStorage.get_trial_number_from_id:7
-#: optuna.storages.RedisStorage.get_trial_param:3
-#: optuna.storages.RedisStorage.get_trial_params:3
-#: optuna.storages.RedisStorage.get_trial_system_attrs:3
-#: optuna.storages.RedisStorage.get_trial_user_attrs:3
-#: optuna.storages.RedisStorage.set_trial_intermediate_value:5
-#: optuna.storages.RedisStorage.set_trial_param:3
-#: optuna.storages.RedisStorage.set_trial_state:3
-#: optuna.storages.RedisStorage.set_trial_system_attr:5
-#: optuna.storages.RedisStorage.set_trial_user_attr:5
-#: optuna.storages.RedisStorage.set_trial_values:5
+#: of optuna.storages._base.BaseStorage.get_trial_params:3
+#: optuna.storages._base.BaseStorage.get_trial_system_attrs:3
+#: optuna.storages._base.BaseStorage.get_trial_user_attrs:3
+#: optuna.storages._base.BaseStorage.record_heartbeat:3
+#: optuna.storages._redis.RedisStorage.get_study_id_from_trial_id:3
+#: optuna.storages._redis.RedisStorage.get_trial:3
+#: optuna.storages._redis.RedisStorage.get_trial_id_from_study_id_trial_number:6
+#: optuna.storages._redis.RedisStorage.get_trial_number_from_id:7
+#: optuna.storages._redis.RedisStorage.get_trial_param:3
+#: optuna.storages._redis.RedisStorage.set_trial_intermediate_value:5
+#: optuna.storages._redis.RedisStorage.set_trial_param:3
+#: optuna.storages._redis.RedisStorage.set_trial_state:3
+#: optuna.storages._redis.RedisStorage.set_trial_system_attr:5
+#: optuna.storages._redis.RedisStorage.set_trial_user_attr:5
+#: optuna.storages._redis.RedisStorage.set_trial_values:5
 msgid "ID of the trial."
 msgstr ""
 
-#: of optuna.storages.RedisStorage.get_study_id_from_trial_id:7
-#: optuna.storages.RedisStorage.get_trial:7
-#: optuna.storages.RedisStorage.get_trial_number_from_id:11
-#: optuna.storages.RedisStorage.get_trial_params:8
-#: optuna.storages.RedisStorage.get_trial_system_attrs:7
-#: optuna.storages.RedisStorage.get_trial_user_attrs:7
-#: optuna.storages.RedisStorage.set_trial_intermediate_value:9
-#: optuna.storages.RedisStorage.set_trial_param:8
-#: optuna.storages.RedisStorage.set_trial_state:12
-#: optuna.storages.RedisStorage.set_trial_system_attr:9
-#: optuna.storages.RedisStorage.set_trial_user_attr:9
-#: optuna.storages.RedisStorage.set_trial_values:8
+#: of optuna.storages._base.BaseStorage.get_trial_params:8
+#: optuna.storages._base.BaseStorage.get_trial_system_attrs:7
+#: optuna.storages._base.BaseStorage.get_trial_user_attrs:7
+#: optuna.storages._redis.RedisStorage.get_study_id_from_trial_id:7
+#: optuna.storages._redis.RedisStorage.get_trial:7
+#: optuna.storages._redis.RedisStorage.get_trial_number_from_id:11
+#: optuna.storages._redis.RedisStorage.set_trial_intermediate_value:9
+#: optuna.storages._redis.RedisStorage.set_trial_param:8
+#: optuna.storages._redis.RedisStorage.set_trial_state:12
+#: optuna.storages._redis.RedisStorage.set_trial_system_attr:9
+#: optuna.storages._redis.RedisStorage.set_trial_user_attr:9
+#: optuna.storages._redis.RedisStorage.set_trial_values:8
 msgid "If no trial with the matching ``trial_id`` exists."
 msgstr ""
 
-#: of optuna.storages.RedisStorage.get_study_system_attrs:5
+#: of optuna.storages._redis.RedisStorage.get_study_system_attrs:5
 msgid "Dictionary with the optuna-internal attributes of the study."
 msgstr ""
 
-#: of optuna.storages.RedisStorage.get_study_user_attrs:5
+#: of optuna.storages._redis.RedisStorage.get_study_user_attrs:5
 msgid "Dictionary with the user attributes of the study."
 msgstr ""
 
-#: of optuna.storages.RedisStorage.get_trial:5
+#: of optuna.storages._redis.RedisStorage.get_trial:5
 msgid "Trial with a matching trial ID."
 msgstr ""
 
-#: of optuna.storages.RedisStorage.get_trial_id_from_study_id_trial_number:4
-#: optuna.storages.RedisStorage.get_trial_number_from_id:9
+#: of
+#: optuna.storages._redis.RedisStorage.get_trial_id_from_study_id_trial_number:4
+#: optuna.storages._redis.RedisStorage.get_trial_number_from_id:9
 msgid "Number of the trial."
 msgstr ""
 
-#: of optuna.storages.RedisStorage.get_trial_id_from_study_id_trial_number:8
+#: of
+#: optuna.storages._redis.RedisStorage.get_trial_id_from_study_id_trial_number:8
 msgid "If no trial with the matching ``study_id`` and ``trial_number`` exists."
 msgstr ""
 
-#: of optuna.storages.RedisStorage.get_trial_number_from_id:5
+#: of optuna.storages._redis.RedisStorage.get_trial_number_from_id:5
 msgid "The trial number is only unique within a study, and is sequential."
 msgstr ""
 
-#: of optuna.storages.RedisStorage.get_trial_param:4
-#: optuna.storages.RedisStorage.set_trial_param:4
+#: of optuna.storages._redis.RedisStorage.get_trial_param:4
+#: optuna.storages._redis.RedisStorage.set_trial_param:4
 msgid "Name of the parameter."
 msgstr ""
 
-#: of optuna.storages.RedisStorage.get_trial_param:6
+#: of optuna.storages._redis.RedisStorage.get_trial_param:6
 msgid "Internal representation of the parameter."
 msgstr ""
 
-#: of optuna.storages.RedisStorage.get_trial_param:8
+#: of optuna.storages._redis.RedisStorage.get_trial_param:8
 msgid ""
 "If no trial with the matching ``trial_id`` exists.     If no such "
 "parameter exists."
 msgstr ""
 
-#: of optuna.storages.RedisStorage.get_trial_params:5
+#: of optuna.storages._base.BaseStorage.get_trial_params:5
 msgid ""
 "Dictionary of a parameters. Keys are parameter names and values are "
 "internal representations of the parameter values."
 msgstr ""
 
-#: of optuna.storages.RedisStorage.get_trial_system_attrs:5
+#: of optuna.storages._base.BaseStorage.get_trial_system_attrs:5
 msgid "Dictionary with the optuna-internal attributes of the trial."
 msgstr ""
 
-#: of optuna.storages.RedisStorage.get_trial_user_attrs:5
+#: of optuna.storages._base.BaseStorage.get_trial_user_attrs:5
 msgid "Dictionary with the user-defined attributes of the trial."
 msgstr ""
 
-#: of optuna.storages.RedisStorage.set_study_directions:4
+#: of optuna.storages._base.BaseStorage.is_heartbeat_enabled:3
+msgid ""
+":obj:`True` if the storage supports the heartbeat and the return value of"
+" :meth:`~optuna.storages.BaseStorage.get_heartbeat_interval` is an "
+"integer, otherwise :obj:`False`."
+msgstr ""
+
+#: of optuna.storages._redis.RedisStorage.set_study_directions:4
 msgid ""
 "A sequence of direction whose element is either "
 ":obj:`~optuna.study.StudyDirection.MAXIMIZE` or "
 ":obj:`~optuna.study.StudyDirection.MINIMIZE`."
 msgstr ""
 
-#: of optuna.storages.RedisStorage.set_study_directions:9
+#: of optuna.storages._redis.RedisStorage.set_study_directions:9
 msgid ""
 "If the directions are already set and the each coordinate of passed "
 "``directions``     is the opposite direction or "
 ":obj:`~optuna.study.StudyDirection.NOT_SET`."
 msgstr ""
 
-#: of optuna.storages.RedisStorage.set_study_system_attr:3
-#: optuna.storages.RedisStorage.set_study_user_attr:3
-#: optuna.storages.RedisStorage.set_trial_system_attr:3
-#: optuna.storages.RedisStorage.set_trial_user_attr:3
+#: of optuna.storages._redis.RedisStorage.set_study_system_attr:3
+#: optuna.storages._redis.RedisStorage.set_study_user_attr:3
+#: optuna.storages._redis.RedisStorage.set_trial_system_attr:3
+#: optuna.storages._redis.RedisStorage.set_trial_user_attr:3
 msgid "This method overwrites any existing attribute."
 msgstr ""
 
-#: of optuna.storages.RedisStorage.set_study_system_attr:6
-#: optuna.storages.RedisStorage.set_study_user_attr:6
-#: optuna.storages.RedisStorage.set_trial_system_attr:6
-#: optuna.storages.RedisStorage.set_trial_user_attr:6
+#: of optuna.storages._redis.RedisStorage.set_study_system_attr:6
+#: optuna.storages._redis.RedisStorage.set_study_user_attr:6
+#: optuna.storages._redis.RedisStorage.set_trial_system_attr:6
+#: optuna.storages._redis.RedisStorage.set_trial_user_attr:6
 msgid "Attribute key."
 msgstr ""
 
-#: of optuna.storages.RedisStorage.set_study_system_attr:7
-#: optuna.storages.RedisStorage.set_study_user_attr:7
-#: optuna.storages.RedisStorage.set_trial_system_attr:7
-#: optuna.storages.RedisStorage.set_trial_user_attr:7
+#: of optuna.storages._redis.RedisStorage.set_study_system_attr:7
+#: optuna.storages._redis.RedisStorage.set_study_user_attr:7
+#: optuna.storages._redis.RedisStorage.set_trial_system_attr:7
+#: optuna.storages._redis.RedisStorage.set_trial_user_attr:7
 msgid "Attribute value. It should be JSON serializable."
 msgstr ""
 
-#: of optuna.storages.RedisStorage.set_trial_intermediate_value:3
+#: of optuna.storages._redis.RedisStorage.set_trial_intermediate_value:3
 msgid ""
 "This method overwrites any existing intermediate value associated with "
 "the given step."
 msgstr ""
 
-#: of optuna.storages.RedisStorage.set_trial_intermediate_value:6
+#: of optuna.storages._redis.RedisStorage.set_trial_intermediate_value:6
 msgid "Step of the trial (e.g., the epoch when training a neural network)."
 msgstr ""
 
-#: of optuna.storages.RedisStorage.set_trial_intermediate_value:7
+#: of optuna.storages._redis.RedisStorage.set_trial_intermediate_value:7
 msgid "Intermediate value corresponding to the step."
 msgstr ""
 
-#: of optuna.storages.RedisStorage.set_trial_param:5
+#: of optuna.storages._redis.RedisStorage.set_trial_param:5
 msgid "Internal representation of the parameter value."
 msgstr ""
 
-#: of optuna.storages.RedisStorage.set_trial_param:6
+#: of optuna.storages._redis.RedisStorage.set_trial_param:6
 msgid "Sampled distribution of the parameter."
 msgstr ""
 
-#: of optuna.storages.RedisStorage.set_trial_state:4
+#: of optuna.storages._redis.RedisStorage.set_trial_state:4
 msgid "New state of the trial."
 msgstr ""
 
-#: of optuna.storages.RedisStorage.set_trial_state:6
+#: of optuna.storages._redis.RedisStorage.set_trial_state:6
 msgid ""
 ":obj:`True` if the state is successfully updated. :obj:`False` if the "
 "state is kept the same. The latter happens when this method tries to "
@@ -816,11 +1024,11 @@ msgid ""
 ":obj:`~optuna.trial.TrialState.RUNNING`."
 msgstr ""
 
-#: of optuna.storages.RedisStorage.set_trial_values:3
+#: of optuna.storages._redis.RedisStorage.set_trial_values:3
 msgid "This method overwrites any existing trial values."
 msgstr ""
 
-#: of optuna.storages.RedisStorage.set_trial_values:6
+#: of optuna.storages._redis.RedisStorage.set_trial_values:6
 msgid "Values of the objective function."
 msgstr ""
 

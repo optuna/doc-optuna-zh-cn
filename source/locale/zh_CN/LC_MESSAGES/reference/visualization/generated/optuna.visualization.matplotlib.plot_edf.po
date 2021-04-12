@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 2.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-14 18:04-0500\n"
+"POT-Creation-Date: 2021-03-20 13:35-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,37 +21,37 @@ msgstr ""
 msgid "optuna.visualization.matplotlib.plot\\_edf"
 msgstr ""
 
-#: of optuna.visualization.matplotlib.plot_edf:1
+#: of optuna.visualization.matplotlib._edf.plot_edf:1
 msgid ""
 "Plot the objective value EDF (empirical distribution function) of a study"
 " with Matplotlib."
 msgstr ""
 
-#: of optuna.visualization.matplotlib.plot_edf:4
+#: of optuna.visualization.matplotlib._edf.plot_edf:4
 msgid ""
 "Please refer to :func:`optuna.visualization.plot_edf` for an example, "
 "where this function can be replaced with it."
 msgstr ""
 
-#: of optuna.visualization.matplotlib.plot_edf:8
+#: of optuna.visualization.matplotlib._edf.plot_edf:8
 msgid "示例"
 msgstr ""
 
-#: of optuna.visualization.matplotlib.plot_edf:9
+#: of optuna.visualization.matplotlib._edf.plot_edf:9
 msgid "The following code snippet shows how to plot EDF."
 msgstr ""
 
-#: of optuna.visualization.matplotlib.plot_edf
+#: of optuna.visualization.matplotlib._edf.plot_edf
 msgid "参数"
 msgstr ""
 
-#: of optuna.visualization.matplotlib.plot_edf:46
+#: of optuna.visualization.matplotlib._edf.plot_edf:46
 msgid ""
 "A target :class:`~optuna.study.Study` object. You can pass multiple "
 "studies if you want to compare those EDFs."
 msgstr ""
 
-#: of optuna.visualization.matplotlib.plot_edf:48
+#: of optuna.visualization.matplotlib._edf.plot_edf:48
 msgid ""
 "A function to specify the value to display. If it is :obj:`None` and "
 "``study`` is being used for single-objective optimization, the objective "
@@ -59,42 +59,46 @@ msgid ""
 "being used for multi-objective optimization."
 msgstr ""
 
-#: of optuna.visualization.matplotlib.plot_edf:48
+#: of optuna.visualization.matplotlib._edf.plot_edf:48
 msgid ""
 "A function to specify the value to display. If it is :obj:`None` and "
 "``study`` is being used for single-objective optimization, the objective "
 "values are plotted."
 msgstr ""
 
-#: of optuna.visualization.matplotlib.plot_edf:52
+#: of optuna.visualization.matplotlib._edf.plot_edf:52
 msgid ""
 "Specify this argument if ``study`` is being used for multi-objective "
 "optimization."
 msgstr ""
 
-#: of optuna.visualization.matplotlib.plot_edf:53
+#: of optuna.visualization.matplotlib._edf.plot_edf:53
 msgid "Target's name to display on the axis label."
 msgstr ""
 
-#: of optuna.visualization.matplotlib.plot_edf
+#: of optuna.visualization.matplotlib._edf.plot_edf
 msgid "返回"
 msgstr ""
 
-#: of optuna.visualization.matplotlib.plot_edf:55
+#: of optuna.visualization.matplotlib._edf.plot_edf:55
 msgid "A :class:`matplotlib.axes.Axes` object."
 msgstr ""
 
-#: of optuna.visualization.matplotlib.plot_edf
+#: of optuna.visualization.matplotlib._edf.plot_edf
 msgid "引发"
 msgstr ""
 
-#: of optuna.visualization.matplotlib.plot_edf:57
+#: of optuna.visualization.matplotlib._edf.plot_edf:57
 msgid ""
 "If ``target`` is :obj:`None` and ``study`` is being used for multi-"
 "objective     optimization."
 msgstr ""
 
-#: of optuna.visualization.matplotlib.plot_edf:60
+#: of optuna.visualization.matplotlib._edf.plot_edf
+msgid "返回类型"
+msgstr ""
+
+#: of optuna.visualization.matplotlib._edf.plot_edf:60
 msgid ""
 "Added in v2.2.0 as an experimental feature. The interface may change in "
 "newer versions without prior notice. See "

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 2.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-14 18:04-0500\n"
+"POT-Creation-Date: 2021-03-20 13:35-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -28,11 +28,12 @@ msgstr ""
 #: of optuna.distributions.DiscreteUniformDistribution:3
 msgid ""
 "This object is instantiated by "
+":func:`~optuna.trial.Trial.suggest_uniform` with ``step`` argument and "
 ":func:`~optuna.trial.Trial.suggest_discrete_uniform`, and passed to "
 ":mod:`~optuna.samplers` in general."
 msgstr ""
 
-#: of optuna.distributions.DiscreteUniformDistribution:7
+#: of optuna.distributions.DiscreteUniformDistribution:8
 msgid ""
 "If the range :math:`[\\mathsf{low}, \\mathsf{high}]` is not divisible by "
 ":math:`q`, :math:`\\mathsf{high}` will be replaced with the maximum of "
@@ -40,19 +41,19 @@ msgid ""
 "integer."
 msgstr ""
 
-#: of optuna.distributions.DiscreteUniformDistribution:13
+#: of optuna.distributions.DiscreteUniformDistribution:14
 msgid ""
 "Lower endpoint of the range of the distribution. ``low`` is included in "
 "the range."
 msgstr ""
 
-#: of optuna.distributions.DiscreteUniformDistribution:17
+#: of optuna.distributions.DiscreteUniformDistribution:18
 msgid ""
 "Upper endpoint of the range of the distribution. ``high`` is included in "
 "the range."
 msgstr ""
 
-#: of optuna.distributions.DiscreteUniformDistribution:21
+#: of optuna.distributions.DiscreteUniformDistribution:22
 msgid "A discretization step."
 msgstr ""
 
@@ -60,7 +61,7 @@ msgstr ""
 msgid "引发"
 msgstr ""
 
-#: of optuna.distributions.DiscreteUniformDistribution:23
+#: of optuna.distributions.DiscreteUniformDistribution:24
 msgid "If ``low`` value is larger than ``high`` value."
 msgstr ""
 
@@ -86,8 +87,8 @@ msgid ""
 "\\(param\\_value\\_in\\_internal\\_repr\\)"
 msgstr ""
 
-#: of optuna.distributions.DiscreteUniformDistribution.single:1:<autosummary>:1
-#: optuna.distributions.DiscreteUniformDistribution.to_external_repr:1
+#: of optuna.distributions.BaseDistribution.to_external_repr:1
+#: optuna.distributions.DiscreteUniformDistribution.single:1:<autosummary>:1
 msgid ""
 "Convert internal representation of a parameter value into external "
 "representation."
@@ -100,16 +101,16 @@ msgid ""
 "\\(param\\_value\\_in\\_external\\_repr\\)"
 msgstr ""
 
-#: of optuna.distributions.DiscreteUniformDistribution.single:1:<autosummary>:1
-#: optuna.distributions.DiscreteUniformDistribution.to_internal_repr:1
+#: of optuna.distributions.BaseDistribution.to_internal_repr:1
+#: optuna.distributions.DiscreteUniformDistribution.single:1:<autosummary>:1
 msgid ""
 "Convert external representation of a parameter value into internal "
 "representation."
 msgstr ""
 
-#: of optuna.distributions.DiscreteUniformDistribution.single
-#: optuna.distributions.DiscreteUniformDistribution.to_external_repr
-#: optuna.distributions.DiscreteUniformDistribution.to_internal_repr
+#: of optuna.distributions.BaseDistribution.to_external_repr
+#: optuna.distributions.BaseDistribution.to_internal_repr
+#: optuna.distributions.DiscreteUniformDistribution.single
 msgid "返回"
 msgstr ""
 
@@ -119,18 +120,30 @@ msgid ""
 "value, otherwise :obj:`False`."
 msgstr ""
 
-#: of optuna.distributions.DiscreteUniformDistribution.to_external_repr
-#: optuna.distributions.DiscreteUniformDistribution.to_internal_repr
+#: of optuna.distributions.BaseDistribution.to_external_repr
+#: optuna.distributions.BaseDistribution.to_internal_repr
+#: optuna.distributions.DiscreteUniformDistribution.single
+msgid "返回类型"
+msgstr ""
+
+#: of optuna.distributions.BaseDistribution.to_external_repr
+#: optuna.distributions.BaseDistribution.to_internal_repr
 msgid "参数"
 msgstr ""
 
-#: of optuna.distributions.DiscreteUniformDistribution.to_external_repr:3
-#: optuna.distributions.DiscreteUniformDistribution.to_internal_repr:5
+#: of optuna.distributions.BaseDistribution.to_external_repr:3
+#: optuna.distributions.BaseDistribution.to_internal_repr:5
 msgid "Optuna's internal representation of a parameter value."
 msgstr ""
 
-#: of optuna.distributions.DiscreteUniformDistribution.to_external_repr:5
-#: optuna.distributions.DiscreteUniformDistribution.to_internal_repr:3
+#: of optuna.distributions.BaseDistribution.to_external_repr:5
+#: optuna.distributions.BaseDistribution.to_internal_repr:3
 msgid "Optuna's external representation of a parameter value."
 msgstr ""
+
+#~ msgid ""
+#~ "This object is instantiated by "
+#~ ":func:`~optuna.trial.Trial.suggest_discrete_uniform`, and "
+#~ "passed to :mod:`~optuna.samplers` in general."
+#~ msgstr ""
 

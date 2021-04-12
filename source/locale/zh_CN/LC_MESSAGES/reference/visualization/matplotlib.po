@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 2.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-14 18:04-0500\n"
+"POT-Creation-Date: 2021-03-20 13:35-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -76,8 +76,9 @@ msgid ""
 msgstr ""
 
 #: ../../source/reference/visualization/matplotlib.rst:20:<autosummary>:1
+#, fuzzy
 msgid ""
-"Plot the high-dimentional parameter relationships in a study with "
+"Plot the high-dimensional parameter relationships in a study with "
 "Matplotlib."
 msgstr "使用 Matplotlib 绘制 study 中的高维参数关系。"
 

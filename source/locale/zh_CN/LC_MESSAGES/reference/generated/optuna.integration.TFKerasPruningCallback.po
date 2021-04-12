@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 2.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-14 18:04-0500\n"
+"POT-Creation-Date: 2021-03-20 13:35-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,34 +21,34 @@ msgstr ""
 msgid "optuna.integration.TFKerasPruningCallback"
 msgstr ""
 
-#: of optuna.integration.TFKerasPruningCallback:1
+#: of optuna.integration.tfkeras.TFKerasPruningCallback:1
 msgid "tf.keras callback to prune unpromising trials."
 msgstr ""
 
-#: of optuna.integration.TFKerasPruningCallback:3
+#: of optuna.integration.tfkeras.TFKerasPruningCallback:3
 msgid ""
 "This callback is intend to be compatible for TensorFlow v1 and v2, but "
-"only tested with TensorFlow v1."
+"only tested with TensorFlow v2."
 msgstr ""
 
-#: of optuna.integration.TFKerasPruningCallback:6
+#: of optuna.integration.tfkeras.TFKerasPruningCallback:6
 msgid ""
 "See `the example <https://github.com/optuna/optuna/blob/master/ "
-"examples/pruning/tfkeras_integration.py>`__ if you want to add a pruning "
+"examples/tfkeras/tfkeras_integration.py>`__ if you want to add a pruning "
 "callback which observes the validation accuracy."
 msgstr ""
 
-#: of optuna.integration.TFKerasPruningCallback
+#: of optuna.integration.tfkeras.TFKerasPruningCallback
 msgid "参数"
 msgstr ""
 
-#: of optuna.integration.TFKerasPruningCallback:10
+#: of optuna.integration.tfkeras.TFKerasPruningCallback:10
 msgid ""
 "A :class:`~optuna.trial.Trial` corresponding to the current evaluation of"
 " the objective function."
 msgstr ""
 
-#: of optuna.integration.TFKerasPruningCallback:12
+#: of optuna.integration.tfkeras.TFKerasPruningCallback:12
 msgid "An evaluation metric for pruning, e.g., ``val_loss`` or ``val_acc``."
 msgstr ""
 
@@ -62,4 +62,18 @@ msgid ""
 "<optuna.integration.TFKerasPruningCallback.on_epoch_end>`\\ "
 "\\(epoch\\[\\, logs\\]\\)"
 msgstr ""
+
+#~ msgid ""
+#~ "This callback is intend to be "
+#~ "compatible for TensorFlow v1 and v2, "
+#~ "but only tested with TensorFlow v1."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "See `the example "
+#~ "<https://github.com/optuna/optuna/blob/master/ "
+#~ "examples/pruning/tfkeras_integration.py>`__ if you "
+#~ "want to add a pruning callback "
+#~ "which observes the validation accuracy."
+#~ msgstr ""
 

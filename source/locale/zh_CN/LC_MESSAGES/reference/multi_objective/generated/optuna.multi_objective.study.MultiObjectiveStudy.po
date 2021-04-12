@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 2.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-14 18:04-0500\n"
+"POT-Creation-Date: 2021-03-20 13:35-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -232,6 +232,7 @@ msgstr ""
 
 #: of optuna.multi_objective.study.MultiObjectiveStudy.enqueue_trial
 #: optuna.multi_objective.study.MultiObjectiveStudy.get_trials
+#: optuna.multi_objective.study.MultiObjectiveStudy.optimize
 #: optuna.multi_objective.study.MultiObjectiveStudy.set_system_attr
 #: optuna.multi_objective.study.MultiObjectiveStudy.set_user_attr
 msgid "参数"
@@ -239,6 +240,15 @@ msgstr ""
 
 #: of optuna.multi_objective.study.MultiObjectiveStudy.enqueue_trial:9
 msgid "Parameter values to pass your objective function."
+msgstr ""
+
+#: of optuna.multi_objective.study.MultiObjectiveStudy.enqueue_trial
+#: optuna.multi_objective.study.MultiObjectiveStudy.get_pareto_front_trials
+#: optuna.multi_objective.study.MultiObjectiveStudy.get_trials
+#: optuna.multi_objective.study.MultiObjectiveStudy.optimize
+#: optuna.multi_objective.study.MultiObjectiveStudy.set_system_attr
+#: optuna.multi_objective.study.MultiObjectiveStudy.set_user_attr
+msgid "返回类型"
 msgstr ""
 
 #: of

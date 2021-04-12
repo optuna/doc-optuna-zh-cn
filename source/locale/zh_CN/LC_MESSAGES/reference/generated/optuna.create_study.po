@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 2.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-14 18:04-0500\n"
+"POT-Creation-Date: 2021-03-20 13:35-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,19 +21,19 @@ msgstr ""
 msgid "optuna.create\\_study"
 msgstr ""
 
-#: of optuna.create_study:1
+#: of optuna.study.create_study:1
 msgid "Create a new :class:`~optuna.study.Study`."
 msgstr ""
 
-#: of optuna.create_study:4
+#: of optuna.study.create_study:4
 msgid "示例"
 msgstr ""
 
-#: of optuna.create_study
+#: of optuna.study.create_study
 msgid "参数"
 msgstr ""
 
-#: of optuna.create_study:18
+#: of optuna.study.create_study:18
 msgid ""
 "Database URL. If this argument is set to None, in-memory storage is used,"
 " and the :class:`~optuna.study.Study` will not be persistent.  .. note::"
@@ -49,13 +49,13 @@ msgid ""
 "https://docs.sqlalchemy.org/en/latest/core/engines.html"
 msgstr ""
 
-#: of optuna.create_study:18
+#: of optuna.study.create_study:18
 msgid ""
 "Database URL. If this argument is set to None, in-memory storage is used,"
 " and the :class:`~optuna.study.Study` will not be persistent."
 msgstr ""
 
-#: of optuna.create_study:22
+#: of optuna.study.create_study:22
 msgid ""
 "When a database URL is passed, Optuna internally uses `SQLAlchemy`_ to "
 "handle the database. Please refer to `SQLAlchemy's document`_ for further"
@@ -65,7 +65,7 @@ msgid ""
 " URL."
 msgstr ""
 
-#: of optuna.create_study:32
+#: of optuna.study.create_study:32
 msgid ""
 "A sampler object that implements background algorithm for value "
 "suggestion. If :obj:`None` is specified, "
@@ -74,20 +74,20 @@ msgid ""
 "objective optimization. See also :class:`~optuna.samplers`."
 msgstr ""
 
-#: of optuna.create_study:36
+#: of optuna.study.create_study:36
 msgid ""
 "A pruner object that decides early stopping of unpromising trials. If "
 ":obj:`None` is specified, :class:`~optuna.pruners.MedianPruner` is used "
 "as the default. See also :class:`~optuna.pruners`."
 msgstr ""
 
-#: of optuna.create_study:39
+#: of optuna.study.create_study:39
 msgid ""
 "Study's name. If this argument is set to None, a unique name is generated"
 " automatically."
 msgstr ""
 
-#: of optuna.create_study:41
+#: of optuna.study.create_study:41
 msgid ""
 "Direction of optimization. Set ``minimize`` for minimization and "
 "``maximize`` for maximization.  .. note::     If none of `direction` and "
@@ -95,23 +95,23 @@ msgid ""
 "\"minimize\"."
 msgstr ""
 
-#: of optuna.create_study:41
+#: of optuna.study.create_study:41
 msgid ""
 "Direction of optimization. Set ``minimize`` for minimization and "
 "``maximize`` for maximization."
 msgstr ""
 
-#: of optuna.create_study:45
+#: of optuna.study.create_study:45
 msgid ""
 "If none of `direction` and `directions` are specified, the direction of "
 "the study is set to \"minimize\"."
 msgstr ""
 
-#: of optuna.create_study:47
+#: of optuna.study.create_study:47
 msgid "A sequence of directions during multi-objective optimization."
 msgstr ""
 
-#: of optuna.create_study:48
+#: of optuna.study.create_study:48
 msgid ""
 "Flag to control the behavior to handle a conflict of study names. In the "
 "case where a study named ``study_name`` already exists in the "
@@ -120,19 +120,19 @@ msgid ""
 " the study is skipped, and the existing one is returned."
 msgstr ""
 
-#: of optuna.create_study
+#: of optuna.study.create_study
 msgid "返回"
 msgstr ""
 
-#: of optuna.create_study:54
+#: of optuna.study.create_study:54
 msgid "A :class:`~optuna.study.Study` object."
 msgstr ""
 
-#: of optuna.create_study
+#: of optuna.study.create_study
 msgid "引发"
 msgstr ""
 
-#: of optuna.create_study:56
+#: of optuna.study.create_study:56
 msgid ""
 "If the length of ``directions`` is zero.     Or, if ``direction`` is "
 "neither 'minimize' nor 'maximize' when it is a string.     Or, if the "
@@ -140,7 +140,11 @@ msgid ""
 "if both ``direction`` and ``directions`` are specified."
 msgstr ""
 
-#: of optuna.create_study:58
+#: of optuna.study.create_study
+msgid "返回类型"
+msgstr ""
+
+#: of optuna.study.create_study:58
 msgid ""
 ":func:`optuna.create_study` is an alias of "
 ":func:`optuna.study.create_study`."

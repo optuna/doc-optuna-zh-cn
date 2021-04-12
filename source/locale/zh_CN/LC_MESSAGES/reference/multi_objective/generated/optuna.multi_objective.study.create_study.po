@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 2.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-14 18:04-0500\n"
+"POT-Creation-Date: 2021-03-20 13:35-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -100,6 +100,10 @@ msgstr ""
 
 #: of optuna.multi_objective.study.create_study:51
 msgid "A :class:`~optuna.multi_objective.study.MultiObjectiveStudy` object."
+msgstr ""
+
+#: of optuna.multi_objective.study.create_study
+msgid "返回类型"
 msgstr ""
 
 #: of optuna.multi_objective.study.create_study:54

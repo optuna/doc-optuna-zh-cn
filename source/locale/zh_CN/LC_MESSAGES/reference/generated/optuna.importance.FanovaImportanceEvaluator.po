@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 2.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-14 18:04-0500\n"
+"POT-Creation-Date: 2021-03-20 13:35-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,18 +21,18 @@ msgstr ""
 msgid "optuna.importance.FanovaImportanceEvaluator"
 msgstr ""
 
-#: of optuna.importance.FanovaImportanceEvaluator:1
+#: of optuna.importance._fanova._evaluator.FanovaImportanceEvaluator:1
 msgid "fANOVA importance evaluator."
 msgstr ""
 
-#: of optuna.importance.FanovaImportanceEvaluator:3
+#: of optuna.importance._fanova._evaluator.FanovaImportanceEvaluator:3
 msgid ""
 "Implements the fANOVA hyperparameter importance evaluation algorithm in "
 "`An Efficient Approach for Assessing Hyperparameter Importance "
 "<http://proceedings.mlr.press/v32/hutter14.html>`_."
 msgstr ""
 
-#: of optuna.importance.FanovaImportanceEvaluator:7
+#: of optuna.importance._fanova._evaluator.FanovaImportanceEvaluator:7
 msgid ""
 "Given a study, fANOVA fits a random forest regression model that predicts"
 " the objective value given a parameter configuration. The more accurate "
@@ -40,13 +40,13 @@ msgid ""
 "are."
 msgstr ""
 
-#: of optuna.importance.FanovaImportanceEvaluator:13
+#: of optuna.importance._fanova._evaluator.FanovaImportanceEvaluator:13
 msgid ""
 "Requires the `sklearn <https://github.com/scikit-learn/scikit-learn>`_ "
 "Python package."
 msgstr ""
 
-#: of optuna.importance.FanovaImportanceEvaluator:17
+#: of optuna.importance._fanova._evaluator.FanovaImportanceEvaluator:17
 msgid ""
 "Pairwise and higher order importances are not supported through this "
 "class. They can be computed using "
@@ -54,7 +54,7 @@ msgid ""
 "recommended as interfaces may change without prior notice."
 msgstr ""
 
-#: of optuna.importance.FanovaImportanceEvaluator:23
+#: of optuna.importance._fanova._evaluator.FanovaImportanceEvaluator:23
 msgid ""
 "The performance of fANOVA depends on the prediction performance of the "
 "underlying random forest model. In order to obtain high prediction "
@@ -63,26 +63,26 @@ msgid ""
 "such as :class:`~optuna.samplers.RandomSampler`."
 msgstr ""
 
-#: of optuna.importance.FanovaImportanceEvaluator:30
+#: of optuna.importance._fanova._evaluator.FanovaImportanceEvaluator:30
 msgid ""
 "For how to cite the original work, please refer to "
 "https://automl.github.io/fanova/cite.html."
 msgstr ""
 
-#: of optuna.importance.FanovaImportanceEvaluator
-#: optuna.importance.FanovaImportanceEvaluator.evaluate
+#: of optuna.importance._fanova._evaluator.FanovaImportanceEvaluator
+#: optuna.importance._fanova._evaluator.FanovaImportanceEvaluator.evaluate
 msgid "参数"
 msgstr ""
 
-#: of optuna.importance.FanovaImportanceEvaluator:33
+#: of optuna.importance._fanova._evaluator.FanovaImportanceEvaluator:33
 msgid "The number of trees in the forest."
 msgstr ""
 
-#: of optuna.importance.FanovaImportanceEvaluator:34
+#: of optuna.importance._fanova._evaluator.FanovaImportanceEvaluator:34
 msgid "The maximum depth of the trees in the forest."
 msgstr ""
 
-#: of optuna.importance.FanovaImportanceEvaluator:35
+#: of optuna.importance._fanova._evaluator.FanovaImportanceEvaluator:35
 msgid ""
 "Controls the randomness of the forest. For deterministic behavior, "
 "specify a value other than :obj:`None`."
@@ -92,40 +92,44 @@ msgstr ""
 msgid "Methods"
 msgstr ""
 
-#: of optuna.importance.FanovaImportanceEvaluator.evaluate:1:<autosummary>:1
+#: of
+#: optuna.importance._fanova._evaluator.FanovaImportanceEvaluator.evaluate:1:<autosummary>:1
 msgid ""
 ":obj:`evaluate <optuna.importance.FanovaImportanceEvaluator.evaluate>`\\ "
 "\\(study\\[\\, params\\, target\\]\\)"
 msgstr ""
 
-#: of optuna.importance.FanovaImportanceEvaluator.evaluate:1
-#: optuna.importance.FanovaImportanceEvaluator.evaluate:1:<autosummary>:1
+#: of optuna.importance._fanova._evaluator.FanovaImportanceEvaluator.evaluate:1
+#: optuna.importance._fanova._evaluator.FanovaImportanceEvaluator.evaluate:1:<autosummary>:1
 msgid ""
 "Evaluate parameter importances based on completed trials in the given "
 "study."
 msgstr ""
 
-#: of optuna.importance.FanovaImportanceEvaluator.evaluate:5
+#: of optuna.importance._fanova._evaluator.FanovaImportanceEvaluator.evaluate:5
 msgid "This method is not meant to be called by library users."
 msgstr ""
 
-#: of optuna.importance.FanovaImportanceEvaluator.evaluate:9
+#: of optuna.importance._fanova._evaluator.FanovaImportanceEvaluator.evaluate:9
 msgid ""
 "Please refer to :func:`~optuna.importance.get_param_importances` for how "
 "a concrete evaluator should implement this method."
 msgstr ""
 
-#: of optuna.importance.FanovaImportanceEvaluator.evaluate:12
+#: of
+#: optuna.importance._fanova._evaluator.FanovaImportanceEvaluator.evaluate:12
 msgid "An optimized study."
 msgstr ""
 
-#: of optuna.importance.FanovaImportanceEvaluator.evaluate:13
+#: of
+#: optuna.importance._fanova._evaluator.FanovaImportanceEvaluator.evaluate:13
 msgid ""
 "A list of names of parameters to assess. If :obj:`None`, all parameters "
 "that are present in all of the completed trials are assessed."
 msgstr ""
 
-#: of optuna.importance.FanovaImportanceEvaluator.evaluate:16
+#: of
+#: optuna.importance._fanova._evaluator.FanovaImportanceEvaluator.evaluate:16
 msgid ""
 "A function to specify the value to evaluate importances. If it is "
 ":obj:`None` and ``study`` is being used for single-objective "
@@ -133,36 +137,44 @@ msgid ""
 "argument if ``study`` is being used for multi-objective     optimization."
 msgstr ""
 
-#: of optuna.importance.FanovaImportanceEvaluator.evaluate:16
+#: of
+#: optuna.importance._fanova._evaluator.FanovaImportanceEvaluator.evaluate:16
 msgid ""
 "A function to specify the value to evaluate importances. If it is "
 ":obj:`None` and ``study`` is being used for single-objective "
 "optimization, the objective values are used."
 msgstr ""
 
-#: of optuna.importance.FanovaImportanceEvaluator.evaluate:21
+#: of
+#: optuna.importance._fanova._evaluator.FanovaImportanceEvaluator.evaluate:21
 msgid ""
 "Specify this argument if ``study`` is being used for multi-objective "
 "optimization."
 msgstr ""
 
-#: of optuna.importance.FanovaImportanceEvaluator.evaluate
+#: of optuna.importance._fanova._evaluator.FanovaImportanceEvaluator.evaluate
 msgid "返回"
 msgstr ""
 
-#: of optuna.importance.FanovaImportanceEvaluator.evaluate:24
+#: of
+#: optuna.importance._fanova._evaluator.FanovaImportanceEvaluator.evaluate:24
 msgid ""
 "An :class:`collections.OrderedDict` where the keys are parameter names "
 "and the values are assessed importances."
 msgstr ""
 
-#: of optuna.importance.FanovaImportanceEvaluator.evaluate
+#: of optuna.importance._fanova._evaluator.FanovaImportanceEvaluator.evaluate
 msgid "引发"
 msgstr ""
 
-#: of optuna.importance.FanovaImportanceEvaluator.evaluate:27
+#: of
+#: optuna.importance._fanova._evaluator.FanovaImportanceEvaluator.evaluate:27
 msgid ""
 "If ``target`` is :obj:`None` and ``study`` is being used for multi-"
 "objective     optimization."
+msgstr ""
+
+#: of optuna.importance._fanova._evaluator.FanovaImportanceEvaluator.evaluate
+msgid "返回类型"
 msgstr ""
 

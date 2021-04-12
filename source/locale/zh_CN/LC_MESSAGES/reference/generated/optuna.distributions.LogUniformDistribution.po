@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 2.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-14 18:04-0500\n"
+"POT-Creation-Date: 2021-03-20 13:35-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -27,20 +27,20 @@ msgstr ""
 
 #: of optuna.distributions.LogUniformDistribution:3
 msgid ""
-"This object is instantiated by "
-":func:`~optuna.trial.Trial.suggest_loguniform`, and passed to "
-":mod:`~optuna.samplers` in general."
+"This object is instantiated by :func:`~optuna.trial.Trial.suggest_float` "
+"with ``log=True`` and :func:`~optuna.trial.Trial.suggest_loguniform`, and"
+" passed to :mod:`~optuna.samplers` in general."
 msgstr ""
 
-#: of optuna.distributions.LogUniformDistribution:8
+#: of optuna.distributions.LogUniformDistribution:9
 msgid ""
 "Lower endpoint of the range of the distribution. ``low`` is included in "
 "the range."
 msgstr ""
 
-#: of optuna.distributions.LogUniformDistribution:12
+#: of optuna.distributions.LogUniformDistribution:13
 msgid ""
-"Upper endpoint of the range of the distribution. ``high`` is excluded "
+"Upper endpoint of the range of the distribution. ``high`` is included "
 "from the range."
 msgstr ""
 
@@ -48,7 +48,7 @@ msgstr ""
 msgid "引发"
 msgstr ""
 
-#: of optuna.distributions.LogUniformDistribution:14
+#: of optuna.distributions.LogUniformDistribution:15
 msgid ""
 "If ``low`` value is larger than ``high`` value, or ``low`` value is "
 "smaller than or     equal to 0."
@@ -76,8 +76,8 @@ msgid ""
 "\\(param\\_value\\_in\\_internal\\_repr\\)"
 msgstr ""
 
-#: of optuna.distributions.LogUniformDistribution.single:1:<autosummary>:1
-#: optuna.distributions.LogUniformDistribution.to_external_repr:1
+#: of optuna.distributions.BaseDistribution.to_external_repr:1
+#: optuna.distributions.LogUniformDistribution.single:1:<autosummary>:1
 msgid ""
 "Convert internal representation of a parameter value into external "
 "representation."
@@ -90,16 +90,16 @@ msgid ""
 "\\(param\\_value\\_in\\_external\\_repr\\)"
 msgstr ""
 
-#: of optuna.distributions.LogUniformDistribution.single:1:<autosummary>:1
-#: optuna.distributions.LogUniformDistribution.to_internal_repr:1
+#: of optuna.distributions.BaseDistribution.to_internal_repr:1
+#: optuna.distributions.LogUniformDistribution.single:1:<autosummary>:1
 msgid ""
 "Convert external representation of a parameter value into internal "
 "representation."
 msgstr ""
 
-#: of optuna.distributions.LogUniformDistribution.single
-#: optuna.distributions.LogUniformDistribution.to_external_repr
-#: optuna.distributions.LogUniformDistribution.to_internal_repr
+#: of optuna.distributions.BaseDistribution.to_external_repr
+#: optuna.distributions.BaseDistribution.to_internal_repr
+#: optuna.distributions.LogUniformDistribution.single
 msgid "返回"
 msgstr ""
 
@@ -109,18 +109,36 @@ msgid ""
 "value, otherwise :obj:`False`."
 msgstr ""
 
-#: of optuna.distributions.LogUniformDistribution.to_external_repr
-#: optuna.distributions.LogUniformDistribution.to_internal_repr
+#: of optuna.distributions.BaseDistribution.to_external_repr
+#: optuna.distributions.BaseDistribution.to_internal_repr
+#: optuna.distributions.LogUniformDistribution.single
+msgid "返回类型"
+msgstr ""
+
+#: of optuna.distributions.BaseDistribution.to_external_repr
+#: optuna.distributions.BaseDistribution.to_internal_repr
 msgid "参数"
 msgstr ""
 
-#: of optuna.distributions.LogUniformDistribution.to_external_repr:3
-#: optuna.distributions.LogUniformDistribution.to_internal_repr:5
+#: of optuna.distributions.BaseDistribution.to_external_repr:3
+#: optuna.distributions.BaseDistribution.to_internal_repr:5
 msgid "Optuna's internal representation of a parameter value."
 msgstr ""
 
-#: of optuna.distributions.LogUniformDistribution.to_external_repr:5
-#: optuna.distributions.LogUniformDistribution.to_internal_repr:3
+#: of optuna.distributions.BaseDistribution.to_external_repr:5
+#: optuna.distributions.BaseDistribution.to_internal_repr:3
 msgid "Optuna's external representation of a parameter value."
 msgstr ""
+
+#~ msgid ""
+#~ "This object is instantiated by "
+#~ ":func:`~optuna.trial.Trial.suggest_loguniform`, and passed"
+#~ " to :mod:`~optuna.samplers` in general."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Upper endpoint of the range of the"
+#~ " distribution. ``high`` is excluded from"
+#~ " the range."
+#~ msgstr ""
 

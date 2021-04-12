@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 2.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-14 18:04-0500\n"
+"POT-Creation-Date: 2021-03-20 13:35-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -46,7 +46,9 @@ msgstr "实现具体任务对应的算法来改进优化性能，或者"
 msgid ""
 "wrap other optimization libraries to integrate them into Optuna pipelines"
 " (e.g., :class:`~optuna.integration.SkoptSampler`)."
-msgstr "将其他的优化框架包装起来，整合进 Optuna 的流水线中 (比如  :class:`~optuna.integration.SkoptSampler` )."
+msgstr ""
+"将其他的优化框架包装起来，整合进 Optuna 的流水线中 (比如  "
+":class:`~optuna.integration.SkoptSampler` )."
 
 #: ../../source/tutorial/20_recipes/005_user_defined_sampler.rst:23
 msgid ""
@@ -59,19 +61,21 @@ msgid "Overview of Sampler"
 msgstr "Sampler 概述"
 
 #: ../../source/tutorial/20_recipes/005_user_defined_sampler.rst:29
+#, fuzzy
 msgid ""
 "A sampler has the responsibility to determine the parameter values to be "
 "evaluated in a trial. When a `suggest` API (e.g., "
-":func:`~optuna.trial.Trial.suggest_uniform`) is called inside an "
-"objective function, the corresponding distribution object (e.g., "
+":func:`~optuna.trial.Trial.suggest_float`) is called inside an objective "
+"function, the corresponding distribution object (e.g., "
 ":class:`~optuna.distributions.UniformDistribution`) is created "
 "internally. A sampler samples a parameter value from the distribution. "
 "The sampled value is returned to the caller of the `suggest` API and "
 "evaluated in the objective function."
-msgstr "Sampler 负责产生要被用在 trial 中求值的参数值。"
-"在目标函数内，当一个  `suggest` API (比如 :func:`~optuna.trial.Trial.suggest_uniform`) 被调用时，一个对应的分布对象 (比如 :class:`~optuna.distributions.UniformDistribution`) 就会从内部被创建。"
-"Sampler 则从该分布汇总采样一个参数值。该采样值会被返回给 `suggest` API 的调用者，进而在目标函数内被求值。"
-
+msgstr ""
+"Sampler 负责产生要被用在 trial 中求值的参数值. 在目标函数内, 当一个  `suggest` API (比如 "
+":func:`~optuna.trial.Trial.suggest_float`) 被调用时, 一个对应的分布对象 (比如 "
+":class:`~optuna.distributions.UniformDistribution`) 就会从内部被创建. Sampler "
+"则从该分布汇总采样一个参数值. 该采样值会被返回给 `suggest` API 的调用者，进而在目标函数内被求值。"
 
 #: ../../source/tutorial/20_recipes/005_user_defined_sampler.rst:32
 msgid ""
@@ -81,9 +85,11 @@ msgid ""
 ":meth:`~optuna.samplers.BaseSampler.infer_relative_search_space`, "
 ":meth:`~optuna.samplers.BaseSampler.sample_relative`, and "
 ":meth:`~optuna.samplers.BaseSampler.sample_independent`."
-msgstr "为了创建一个新的 sampler, 你所定义的类需继承 :class:`~optuna.samplers.BaseSampler`."
-"该基类提供三个抽象方法：:meth:`~optuna.samplers.BaseSampler.infer_relative_search_space`, :meth:`~optuna.samplers.BaseSampler.sample_relative` 和 :meth:`~optuna.samplers.BaseSampler.sample_independent`."
-
+msgstr ""
+"为了创建一个新的 sampler, 你所定义的类需继承 "
+":class:`~optuna.samplers.BaseSampler`.该基类提供三个抽象方法：:meth:`~optuna.samplers.BaseSampler.infer_relative_search_space`,"
+" :meth:`~optuna.samplers.BaseSampler.sample_relative` 和 "
+":meth:`~optuna.samplers.BaseSampler.sample_independent`."
 
 #: ../../source/tutorial/20_recipes/005_user_defined_sampler.rst:38
 msgid ""
@@ -91,7 +97,9 @@ msgid ""
 "**relative sampling** that can consider the correlation of the parameters"
 " in a trial, and the other is **independent sampling** that samples each "
 "parameter independently."
-msgstr "从这些方法名可以看出，Optuna 支持两种类型的采样过程：一种是 **relative sampling**, 它考虑了单个 trial 内参数之间的相关性， 另一种是 **independent sampling**, 它对各个参数的采样是彼此独立的。"
+msgstr ""
+"从这些方法名可以看出，Optuna 支持两种类型的采样过程：一种是 **relative sampling**, 它考虑了单个 trial "
+"内参数之间的相关性， 另一种是 **independent sampling**, 它对各个参数的采样是彼此独立的。"
 
 #: ../../source/tutorial/20_recipes/005_user_defined_sampler.rst:40
 msgid ""
@@ -103,17 +111,19 @@ msgid ""
 "objective function, "
 ":meth:`~optuna.samplers.BaseSampler.sample_independent` is used to sample"
 " parameters that don't belong to the relative search space."
-msgstr "在一个 trial 刚开始时，:meth:`~optuna.samplers.BaseSampler.infer_relative_search_space` 会被调用，它向该 trial 提供一个相对搜索空间。"
-"之后， :meth:`~optuna.samplers.BaseSampler.sample_relative` 会被触发，它从该搜索空间中对相对参数进行采样。"
-"在目标函数的执行过程中，:meth:`~optuna.samplers.BaseSampler.sample_independent` 用于对不属于该相对搜索空间的参数进行采样。"
-
+msgstr ""
+"在一个 trial "
+"刚开始时，:meth:`~optuna.samplers.BaseSampler.infer_relative_search_space` "
+"会被调用，它向该 trial 提供一个相对搜索空间。之后， "
+":meth:`~optuna.samplers.BaseSampler.sample_relative` "
+"会被触发，它从该搜索空间中对相对参数进行采样。在目标函数的执行过程中，:meth:`~optuna.samplers.BaseSampler.sample_independent`"
+" 用于对不属于该相对搜索空间的参数进行采样。"
 
 #: ../../source/tutorial/20_recipes/005_user_defined_sampler.rst:43
 msgid ""
 "Please refer to the document of :class:`~optuna.samplers.BaseSampler` for"
 " further details."
 msgstr "更多细节参见 :class:`~optuna.samplers.BaseSampler` 的文档。"
-
 
 #: ../../source/tutorial/20_recipes/005_user_defined_sampler.rst:47
 msgid "An Example: Implementing SimulatedAnnealingSampler"
@@ -123,7 +133,9 @@ msgstr "案例: 实现模拟退火 Sampler (SimulatedAnnealingSampler)"
 msgid ""
 "For example, the following code defines a sampler based on `Simulated "
 "Annealing (SA) <https://en.wikipedia.org/wiki/Simulated_annealing>`_:"
-msgstr "下面的代码根据 `Simulated Annealing (SA) <https://en.wikipedia.org/wiki/Simulated_annealing>`_ 定义类一个 sampler："
+msgstr ""
+"下面的代码根据 `Simulated Annealing (SA) "
+"<https://en.wikipedia.org/wiki/Simulated_annealing>`_ 定义类一个 sampler："
 
 #: ../../source/tutorial/20_recipes/005_user_defined_sampler.rst:118
 msgid ""
@@ -132,11 +144,10 @@ msgid ""
 "support those features, please see "
 "`examples/samplers/simulated_annealing.py "
 "<https://github.com/optuna/optuna/blob/master/examples/samplers/simulated_annealing_sampler.py>`_."
-msgstr "为了代码的简洁性，上面的实现没有支持一些特性 (比如 maximization). "
-"如果你对如何实现这些特性感兴趣，请看 "
+msgstr ""
+"为了代码的简洁性，上面的实现没有支持一些特性 (比如 maximization). 如果你对如何实现这些特性感兴趣，请看 "
 "`examples/samplers/simulated_annealing.py "
 "<https://github.com/optuna/optuna/blob/master/examples/samplers/simulated_annealing_sampler.py>`_."
-
 
 #: ../../source/tutorial/20_recipes/005_user_defined_sampler.rst:124
 msgid ""
@@ -152,7 +163,9 @@ msgstr ""
 msgid ""
 "In this optimization, the values of ``x`` and ``y`` parameters are "
 "sampled by using ``SimulatedAnnealingSampler.sample_relative`` method."
-msgstr "在上面这个优化过程中，参数 ``x`` 和 ``y`` 的值都是由 ``SimulatedAnnealingSampler.sample_relative`` 方法采样得出的。"
+msgstr ""
+"在上面这个优化过程中，参数 ``x`` 和 ``y`` 的值都是由 "
+"``SimulatedAnnealingSampler.sample_relative`` 方法采样得出的。"
 
 #: ../../source/tutorial/20_recipes/005_user_defined_sampler.rst:166
 msgid ""
@@ -163,12 +176,13 @@ msgid ""
 "``SimulatedAnnealingSampler.infer_relative_search_space`` cannot infer "
 "the search space if there are no complete trials."
 msgstr ""
-"严格意义上说，在第一个 trial 中，``SimulatedAnnealingSampler.sample_independent`` 用于采样参数值。"
-"因为，如果没有已经完成的 trial 的话， ``SimulatedAnnealingSampler.infer_relative_search_space``  中的 :func:`~optuna.samplers.intersection_search_space` 是无法对搜索空间进行推断的。"
-
+"严格意义上说，在第一个 trial 中，``SimulatedAnnealingSampler.sample_independent`` "
+"用于采样参数值。因为，如果没有已经完成的 trial 的话， "
+"``SimulatedAnnealingSampler.infer_relative_search_space``  中的 "
+":func:`~optuna.samplers.intersection_search_space` 是无法对搜索空间进行推断的。"
 
 #: ../../source/tutorial/20_recipes/005_user_defined_sampler.rst:175
-msgid "**Total running time of the script:** ( 0 minutes  0.343 seconds)"
+msgid "**Total running time of the script:** ( 0 minutes  0.351 seconds)"
 msgstr ""
 
 #: ../../source/tutorial/20_recipes/005_user_defined_sampler.rst:190
@@ -186,4 +200,3 @@ msgstr ""
 #: ../../source/tutorial/20_recipes/005_user_defined_sampler.rst:203
 msgid "`Gallery generated by Sphinx-Gallery <https://sphinx-gallery.github.io>`_"
 msgstr ""
-

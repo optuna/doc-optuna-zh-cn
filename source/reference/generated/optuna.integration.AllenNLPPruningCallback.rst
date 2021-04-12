@@ -12,6 +12,7 @@ optuna.integration.AllenNLPPruningCallback
 
    .. autosummary::
    
+      ~AllenNLPPruningCallback.on_epoch
       ~AllenNLPPruningCallback.register
    
 

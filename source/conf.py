@@ -18,15 +18,16 @@
 
 import pkg_resources
 
+import plotly.io as pio
 from sphinx_gallery.sorting import FileNameSortKey
 
-__version__ = pkg_resources.get_distribution('optuna').version
+__version__ = pkg_resources.get_distribution("optuna").version
 
 # -- Project information -----------------------------------------------------
 
-project = 'Optuna'
-copyright = '2018, Optuna Contributors.'
-author = 'Optuna Contributors.'
+project = "Optuna"
+copyright = "2018, Optuna Contributors."
+author = "Optuna Contributors."
 
 # The short X.Y version
 version = __version__
@@ -43,18 +44,19 @@ release = __version__
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-    'sphinx.ext.autodoc',
-    'sphinx.ext.autosummary',
-    'sphinx.ext.doctest',
+    "sphinx.ext.autodoc",
+    "sphinx.ext.autosummary",
+    "sphinx.ext.doctest",
     "sphinx.ext.imgconverter",
-    'sphinx.ext.intersphinx',
-    'sphinx.ext.mathjax',
-    'sphinx.ext.napoleon',
-    'sphinx.ext.viewcode',
-    'sphinx.ext.githubpages',
-    'cliff.sphinxext',
-    'sphinx_gallery.gen_gallery',
-    'matplotlib.sphinxext.plot_directive',
+    "sphinx.ext.intersphinx",
+    "sphinx.ext.mathjax",
+    "sphinx.ext.napoleon",
+    "sphinx.ext.viewcode",
+    "sphinx.ext.githubpages",
+    "cliff.sphinxext",
+    "sphinx_copybutton",
+    "sphinx_gallery.gen_gallery",
+    "matplotlib.sphinxext.plot_directive",
     "sphinx_plotly_directive",
 ]
 
@@ -96,9 +98,7 @@ html_theme = 'sphinx_rtd_theme'
 # further.  For a list of options available for each theme, see the
 # documentation.
 #
-html_theme_options = {
-    'logo_only': True
-}
+html_theme_options = {"logo_only": True, "navigation_with_keys": True}
 
 html_favicon = '../image/favicon.ico'
 
@@ -107,7 +107,7 @@ html_logo = '../image/optuna-logo.png'
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
-html_static_path = ['_static', 'plotly_figures']
+html_static_path = ["_static"]
 html_css_files = ["css/custom.css"]
 
 # Custom sidebar templates, must be a dictionary that maps document names
@@ -149,8 +149,8 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'Optuna.tex', 'Optuna Documentation',
-     'Optuna Contributors.', 'manual'),
+    (master_doc, "Optuna.tex", "Optuna Documentation", "Optuna Contributors.",
+     "manual"),
 ]
 
 # -- Options for manual page output ------------------------------------------
@@ -165,30 +165,41 @@ man_pages = [(master_doc, 'optuna', 'Optuna Documentation', [author], 1)]
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'Optuna', 'Optuna Documentation', author, 'Optuna',
-     'One line description of project.', 'Miscellaneous'),
+    (
+        master_doc,
+        "Optuna",
+        "Optuna Documentation",
+        author,
+        "Optuna",
+        "One line description of project.",
+        "Miscellaneous",
+    ),
 ]
 
 intersphinx_mapping = {'python': ('https://docs.python.org/3', None)}
 
 # -- Extension configuration -------------------------------------------------
 autosummary_generate = True
+autodoc_typehints = "description"
 autodoc_default_options = {
-    'members': True,
-    'inherited-members': True,
-    'exclude-members': 'with_traceback',
+    "members": True,
+    "inherited-members": True,
+    "exclude-members": "with_traceback",
 }
 
+# Sphinx Gallery
+pio.renderers.default = "sphinx_gallery"
+
 sphinx_gallery_conf = {
-    'examples_dirs': [
-        '../tutorial',
+    "examples_dirs": [
+        "../tutorial",
     ],
-    'gallery_dirs': [
-        'tutorial',
+    "gallery_dirs": [
+        "tutorial",
     ],
-    'within_subsection_order': FileNameSortKey,
-    'filename_pattern': r'/*\.py',
-    'first_notebook_cell': None,
+    "within_subsection_order": FileNameSortKey,
+    "filename_pattern": r"/*\.py",
+    "first_notebook_cell": None,
 }
 
 # matplotlib plot directive
@@ -197,5 +208,11 @@ plot_formats = [("png", 90)]
 plot_html_show_formats = False
 plot_html_show_source_link = False
 
+# sphinx plotly directive
+plotly_include_source = True
+plotly_formats = ["html"]
+plotly_html_show_formats = False
+plotly_html_show_source_link = False
+
 locale_dirs = ['locale/']
-gettext_compact = False     # optional.
+gettext_compact = False  # optional.

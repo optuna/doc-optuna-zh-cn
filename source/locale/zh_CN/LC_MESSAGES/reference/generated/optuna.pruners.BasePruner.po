@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 2.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-14 18:04-0500\n"
+"POT-Creation-Date: 2021-03-20 13:35-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,7 +21,7 @@ msgstr ""
 msgid "optuna.pruners.BasePruner"
 msgstr ""
 
-#: of optuna.pruners.BasePruner:1
+#: of optuna.pruners._base.BasePruner:1
 msgid "Base class for pruners."
 msgstr ""
 
@@ -29,16 +29,16 @@ msgstr ""
 msgid "Methods"
 msgstr ""
 
-#: of optuna.pruners.BasePruner.prune:1:<autosummary>:1
+#: of optuna.pruners._base.BasePruner.prune:1:<autosummary>:1
 msgid ":obj:`prune <optuna.pruners.BasePruner.prune>`\\ \\(study\\, trial\\)"
 msgstr ""
 
-#: of optuna.pruners.BasePruner.prune:1
-#: optuna.pruners.BasePruner.prune:1:<autosummary>:1
+#: of optuna.pruners._base.BasePruner.prune:1
+#: optuna.pruners._base.BasePruner.prune:1:<autosummary>:1
 msgid "Judge whether the trial should be pruned based on the reported values."
 msgstr ""
 
-#: of optuna.pruners.BasePruner.prune:3
+#: of optuna.pruners._base.BasePruner.prune:3
 msgid ""
 "Note that this method is not supposed to be called by library users. "
 "Instead, :func:`optuna.trial.Trial.report` and "
@@ -46,25 +46,29 @@ msgid ""
 "implement pruning mechanism in an objective function."
 msgstr ""
 
-#: of optuna.pruners.BasePruner.prune
+#: of optuna.pruners._base.BasePruner.prune
 msgid "参数"
 msgstr ""
 
-#: of optuna.pruners.BasePruner.prune:7
+#: of optuna.pruners._base.BasePruner.prune:7
 msgid "Study object of the target study."
 msgstr ""
 
-#: of optuna.pruners.BasePruner.prune:8
+#: of optuna.pruners._base.BasePruner.prune:8
 msgid ""
 "FrozenTrial object of the target trial. Take a copy before modifying this"
 " object."
 msgstr ""
 
-#: of optuna.pruners.BasePruner.prune
+#: of optuna.pruners._base.BasePruner.prune
 msgid "返回"
 msgstr ""
 
-#: of optuna.pruners.BasePruner.prune:11
+#: of optuna.pruners._base.BasePruner.prune:11
 msgid "A boolean value representing whether the trial should be pruned."
+msgstr ""
+
+#: of optuna.pruners._base.BasePruner.prune
+msgid "返回类型"
 msgstr ""
 

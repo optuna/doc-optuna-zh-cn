@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 2.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-14 18:04-0500\n"
+"POT-Creation-Date: 2021-03-20 13:35-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,18 +21,18 @@ msgstr ""
 msgid "optuna.trial.Trial"
 msgstr ""
 
-#: of optuna.trial.Trial:1
+#: of optuna.trial._trial.Trial:1
 msgid "A trial is a process of evaluating an objective function."
 msgstr ""
 
-#: of optuna.trial.Trial:3
+#: of optuna.trial._trial.Trial:3
 msgid ""
 "This object is passed to an objective function and provides interfaces to"
 " get parameter suggestion, manage the trial's state, and set/get user-"
 "defined attributes of the trial."
 msgstr ""
 
-#: of optuna.trial.Trial:6
+#: of optuna.trial._trial.Trial:6
 msgid ""
 "Note that the direct use of this constructor is not recommended. This "
 "object is seamlessly instantiated and passed to the objective function "
@@ -40,20 +40,23 @@ msgid ""
 "users do not care about instantiation of this object."
 msgstr ""
 
-#: of optuna.trial.Trial optuna.trial.Trial.report
-#: optuna.trial.Trial.set_system_attr optuna.trial.Trial.set_user_attr
-#: optuna.trial.Trial.suggest_categorical
-#: optuna.trial.Trial.suggest_discrete_uniform optuna.trial.Trial.suggest_float
-#: optuna.trial.Trial.suggest_int optuna.trial.Trial.suggest_loguniform
-#: optuna.trial.Trial.suggest_uniform
+#: of optuna.trial._trial.Trial optuna.trial._trial.Trial.report
+#: optuna.trial._trial.Trial.set_system_attr
+#: optuna.trial._trial.Trial.set_user_attr
+#: optuna.trial._trial.Trial.suggest_categorical
+#: optuna.trial._trial.Trial.suggest_discrete_uniform
+#: optuna.trial._trial.Trial.suggest_float
+#: optuna.trial._trial.Trial.suggest_int
+#: optuna.trial._trial.Trial.suggest_loguniform
+#: optuna.trial._trial.Trial.suggest_uniform
 msgid "参数"
 msgstr ""
 
-#: of optuna.trial.Trial:11
+#: of optuna.trial._trial.Trial:11
 msgid "A :class:`~optuna.study.Study` object."
 msgstr ""
 
-#: of optuna.trial.Trial:12
+#: of optuna.trial._trial.Trial:12
 msgid "A trial ID that is automatically generated."
 msgstr ""
 
@@ -66,7 +69,7 @@ msgid ":obj:`report <optuna.trial.Trial.report>`\\ \\(value\\, step\\)"
 msgstr ""
 
 #: ../../source/reference/generated/optuna.trial.Trial.rst:30:<autosummary>:1
-#: of optuna.trial.Trial.report:1
+#: of optuna.trial._trial.Trial.report:1
 msgid "Report an objective function value for a given step."
 msgstr ""
 
@@ -77,7 +80,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/reference/generated/optuna.trial.Trial.rst:30:<autosummary>:1
-#: of optuna.trial.Trial.set_system_attr:1
+#: of optuna.trial._trial.Trial.set_system_attr:1
 msgid "Set system attributes to the trial."
 msgstr ""
 
@@ -88,7 +91,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/reference/generated/optuna.trial.Trial.rst:30:<autosummary>:1
-#: of optuna.trial.Trial.set_user_attr:1
+#: of optuna.trial._trial.Trial.set_user_attr:1
 msgid "Set user attributes to the trial."
 msgstr ""
 
@@ -97,7 +100,7 @@ msgid ":obj:`should_prune <optuna.trial.Trial.should_prune>`\\ \\(\\)"
 msgstr ""
 
 #: ../../source/reference/generated/optuna.trial.Trial.rst:30:<autosummary>:1
-#: of optuna.trial.Trial.should_prune:1
+#: of optuna.trial._trial.Trial.should_prune:1
 msgid "Suggest whether the trial should be pruned or not."
 msgstr ""
 
@@ -108,7 +111,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/reference/generated/optuna.trial.Trial.rst:30:<autosummary>:1
-#: of optuna.trial.Trial.suggest_categorical:1
+#: of optuna.trial._trial.Trial.suggest_categorical:1
 msgid "Suggest a value for the categorical parameter."
 msgstr ""
 
@@ -120,7 +123,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/reference/generated/optuna.trial.Trial.rst:30:<autosummary>:1
-#: of optuna.trial.Trial.suggest_discrete_uniform:1
+#: of optuna.trial._trial.Trial.suggest_discrete_uniform:1
 msgid "Suggest a value for the discrete parameter."
 msgstr ""
 
@@ -131,7 +134,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/reference/generated/optuna.trial.Trial.rst:30:<autosummary>:1
-#: of optuna.trial.Trial.suggest_float:1
+#: of optuna.trial._trial.Trial.suggest_float:1
 msgid "Suggest a value for the floating point parameter."
 msgstr ""
 
@@ -142,7 +145,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/reference/generated/optuna.trial.Trial.rst:30:<autosummary>:1
-#: of optuna.trial.Trial.suggest_int:1
+#: of optuna.trial._trial.Trial.suggest_int:1
 msgid "Suggest a value for the integer parameter."
 msgstr ""
 
@@ -153,8 +156,8 @@ msgid ""
 msgstr ""
 
 #: ../../source/reference/generated/optuna.trial.Trial.rst:30:<autosummary>:1
-#: of optuna.trial.Trial.suggest_loguniform:1
-#: optuna.trial.Trial.suggest_uniform:1
+#: of optuna.trial._trial.Trial.suggest_loguniform:1
+#: optuna.trial._trial.Trial.suggest_uniform:1
 msgid "Suggest a value for the continuous parameter."
 msgstr ""
 
@@ -224,10 +227,13 @@ msgstr ""
 
 #: of optuna.trial.Trial.datetime_start optuna.trial.Trial.distributions
 #: optuna.trial.Trial.number optuna.trial.Trial.params
-#: optuna.trial.Trial.should_prune optuna.trial.Trial.suggest_categorical
-#: optuna.trial.Trial.suggest_discrete_uniform optuna.trial.Trial.suggest_float
-#: optuna.trial.Trial.suggest_loguniform optuna.trial.Trial.suggest_uniform
 #: optuna.trial.Trial.system_attrs optuna.trial.Trial.user_attrs
+#: optuna.trial._trial.Trial.should_prune
+#: optuna.trial._trial.Trial.suggest_categorical
+#: optuna.trial._trial.Trial.suggest_discrete_uniform
+#: optuna.trial._trial.Trial.suggest_float
+#: optuna.trial._trial.Trial.suggest_loguniform
+#: optuna.trial._trial.Trial.suggest_uniform
 msgid "返回"
 msgstr ""
 
@@ -247,43 +253,46 @@ msgstr ""
 msgid "A dictionary containing all parameters."
 msgstr ""
 
-#: of optuna.trial.Trial.report:3
+#: of optuna.trial._trial.Trial.report:3
 msgid ""
 "The reported values are used by the pruners to determine whether this "
 "trial should be pruned."
 msgstr ""
 
-#: of optuna.trial.Trial.report:7
+#: of optuna.trial._trial.Trial.report:7
 msgid "Please refer to :class:`~optuna.pruners.BasePruner`."
 msgstr ""
 
-#: of optuna.trial.Trial.report:10
+#: of optuna.trial._trial.Trial.report:10
 msgid ""
 "The reported value is converted to ``float`` type by applying ``float()``"
 " function internally. Thus, it accepts all float-like types (e.g., "
 "``numpy.float32``). If the conversion fails, a ``TypeError`` is raised."
 msgstr ""
 
-#: of optuna.trial.Trial.report:15 optuna.trial.Trial.set_user_attr:6
-#: optuna.trial.Trial.suggest_categorical:6
-#: optuna.trial.Trial.suggest_discrete_uniform:13
-#: optuna.trial.Trial.suggest_float:15 optuna.trial.Trial.suggest_int:6
-#: optuna.trial.Trial.suggest_loguniform:8 optuna.trial.Trial.suggest_uniform:8
+#: of optuna.trial._trial.Trial.report:15
+#: optuna.trial._trial.Trial.set_user_attr:6
+#: optuna.trial._trial.Trial.suggest_categorical:6
+#: optuna.trial._trial.Trial.suggest_discrete_uniform:13
+#: optuna.trial._trial.Trial.suggest_float:15
+#: optuna.trial._trial.Trial.suggest_int:6
+#: optuna.trial._trial.Trial.suggest_loguniform:8
+#: optuna.trial._trial.Trial.suggest_uniform:8
 msgid "示例"
 msgstr ""
 
-#: of optuna.trial.Trial.report:16
+#: of optuna.trial._trial.Trial.report:16
 msgid ""
 "Report intermediate scores of `SGDClassifier <https://scikit-"
 "learn.org/stable/modules/ "
 "generated/sklearn.linear_model.SGDClassifier.html>`_ training."
 msgstr ""
 
-#: of optuna.trial.Trial.report:47
+#: of optuna.trial._trial.Trial.report:47
 msgid "A value returned from the objective function."
 msgstr ""
 
-#: of optuna.trial.Trial.report:48
+#: of optuna.trial._trial.Trial.report:48
 msgid ""
 "Step of the trial (e.g., Epoch of neural network training). Note that "
 "pruners assume that ``step`` starts at zero. For example, "
@@ -291,95 +300,113 @@ msgid ""
 "than ``n_warmup_steps`` as the warmup mechanism."
 msgstr ""
 
-#: of optuna.trial.Trial.report optuna.trial.Trial.should_prune
-#: optuna.trial.Trial.suggest_float optuna.trial.Trial.suggest_int
+#: of optuna.trial._trial.Trial.report optuna.trial._trial.Trial.should_prune
+#: optuna.trial._trial.Trial.suggest_float
+#: optuna.trial._trial.Trial.suggest_int
 msgid "引发"
 msgstr ""
 
-#: of optuna.trial.Trial.report:53 optuna.trial.Trial.should_prune:18
+#: of optuna.trial._trial.Trial.report:53
+#: optuna.trial._trial.Trial.should_prune:18
 msgid "If trial is being used for multi-objective optimization."
 msgstr ""
 
-#: of optuna.trial.Trial.set_system_attr:3
+#: of optuna.trial._trial.Trial.report
+#: optuna.trial._trial.Trial.set_system_attr
+#: optuna.trial._trial.Trial.set_user_attr
+#: optuna.trial._trial.Trial.should_prune
+#: optuna.trial._trial.Trial.suggest_categorical
+#: optuna.trial._trial.Trial.suggest_discrete_uniform
+#: optuna.trial._trial.Trial.suggest_float
+#: optuna.trial._trial.Trial.suggest_int
+#: optuna.trial._trial.Trial.suggest_loguniform
+#: optuna.trial._trial.Trial.suggest_uniform
+msgid "返回类型"
+msgstr ""
+
+#: of optuna.trial._trial.Trial.set_system_attr:3
 msgid ""
 "Note that Optuna internally uses this method to save system messages such"
 " as failure reason of trials. Please use "
 ":func:`~optuna.trial.Trial.set_user_attr` to set users' attributes."
 msgstr ""
 
-#: of optuna.trial.Trial.set_system_attr:7 optuna.trial.Trial.set_user_attr:42
+#: of optuna.trial._trial.Trial.set_system_attr:7
+#: optuna.trial._trial.Trial.set_user_attr:42
 msgid "A key string of the attribute."
 msgstr ""
 
-#: of optuna.trial.Trial.set_system_attr:8 optuna.trial.Trial.set_user_attr:43
+#: of optuna.trial._trial.Trial.set_system_attr:8
+#: optuna.trial._trial.Trial.set_user_attr:43
 msgid "A value of the attribute. The value should be JSON serializable."
 msgstr ""
 
-#: of optuna.trial.Trial.set_user_attr:3
+#: of optuna.trial._trial.Trial.set_user_attr:3
 msgid ""
 "The user attributes in the trial can be access via "
 ":func:`optuna.trial.Trial.user_attrs`."
 msgstr ""
 
-#: of optuna.trial.Trial.set_user_attr:7
+#: of optuna.trial._trial.Trial.set_user_attr:7
 msgid "Save fixed hyperparameters of neural network training."
 msgstr ""
 
-#: of optuna.trial.Trial.should_prune:3
+#: of optuna.trial._trial.Trial.should_prune:3
 msgid ""
 "The suggestion is made by a pruning algorithm associated with the trial "
 "and is based on previously reported values. The algorithm can be "
 "specified when constructing a :class:`~optuna.study.Study`."
 msgstr ""
 
-#: of optuna.trial.Trial.should_prune:8
+#: of optuna.trial._trial.Trial.should_prune:8
 msgid ""
 "If no values have been reported, the algorithm cannot make meaningful "
 "suggestions. Similarly, if this method is called multiple times with the "
 "exact same set of reported values, the suggestions will be the same."
 msgstr ""
 
-#: of optuna.trial.Trial.should_prune:13
+#: of optuna.trial._trial.Trial.should_prune:13
 msgid "Please refer to the example code in :func:`optuna.trial.Trial.report`."
 msgstr ""
 
-#: of optuna.trial.Trial.should_prune:15
+#: of optuna.trial._trial.Trial.should_prune:15
 msgid ""
 "A boolean value. If :obj:`True`, the trial should be pruned according to "
 "the configured pruning algorithm. Otherwise, the trial should continue."
 msgstr ""
 
-#: of optuna.trial.Trial.suggest_categorical:3
+#: of optuna.trial._trial.Trial.suggest_categorical:3
 msgid "The value is sampled from ``choices``."
 msgstr ""
 
-#: of optuna.trial.Trial.suggest_categorical:7
+#: of optuna.trial._trial.Trial.suggest_categorical:7
 msgid ""
 "Suggest a kernel function of `SVC <https://scikit-"
 "learn.org/stable/modules/generated/ sklearn.svm.SVC.html>`_."
 msgstr ""
 
-#: of optuna.trial.Trial.suggest_categorical:33
-#: optuna.trial.Trial.suggest_discrete_uniform:41
-#: optuna.trial.Trial.suggest_float:54 optuna.trial.Trial.suggest_int:33
-#: optuna.trial.Trial.suggest_loguniform:35
-#: optuna.trial.Trial.suggest_uniform:40
+#: of optuna.trial._trial.Trial.suggest_categorical:33
+#: optuna.trial._trial.Trial.suggest_discrete_uniform:41
+#: optuna.trial._trial.Trial.suggest_float:54
+#: optuna.trial._trial.Trial.suggest_int:33
+#: optuna.trial._trial.Trial.suggest_loguniform:35
+#: optuna.trial._trial.Trial.suggest_uniform:40
 msgid "A parameter name."
 msgstr ""
 
-#: of optuna.trial.Trial.suggest_categorical:34
+#: of optuna.trial._trial.Trial.suggest_categorical:34
 msgid "Parameter value candidates."
 msgstr ""
 
-#: of optuna.trial.Trial.suggest_categorical:37
+#: of optuna.trial._trial.Trial.suggest_categorical:37
 msgid ":class:`~optuna.distributions.CategoricalDistribution`."
 msgstr ""
 
-#: of optuna.trial.Trial.suggest_categorical:39
+#: of optuna.trial._trial.Trial.suggest_categorical:39
 msgid "A suggested value."
 msgstr ""
 
-#: of optuna.trial.Trial.suggest_discrete_uniform:3
+#: of optuna.trial._trial.Trial.suggest_discrete_uniform:3
 msgid ""
 "The value is sampled from the range :math:`[\\mathsf{low}, "
 "\\mathsf{high}]`, and the step of discretization is :math:`q`. More "
@@ -391,7 +418,7 @@ msgid ""
 "changed values."
 msgstr ""
 
-#: of optuna.trial.Trial.suggest_discrete_uniform:14
+#: of optuna.trial._trial.Trial.suggest_discrete_uniform:14
 msgid ""
 "Suggest a fraction of samples used for fitting the individual learners of"
 " `GradientBoostingClassifier <https://scikit-"
@@ -399,34 +426,37 @@ msgid ""
 "sklearn.ensemble.GradientBoostingClassifier.html>`_."
 msgstr ""
 
-#: of optuna.trial.Trial.suggest_discrete_uniform:42
-#: optuna.trial.Trial.suggest_float:55 optuna.trial.Trial.suggest_int:34
-#: optuna.trial.Trial.suggest_loguniform:36
-#: optuna.trial.Trial.suggest_uniform:41
+#: of optuna.trial._trial.Trial.suggest_discrete_uniform:42
+#: optuna.trial._trial.Trial.suggest_float:55
+#: optuna.trial._trial.Trial.suggest_int:34
+#: optuna.trial._trial.Trial.suggest_loguniform:36
+#: optuna.trial._trial.Trial.suggest_uniform:41
 msgid ""
 "Lower endpoint of the range of suggested values. ``low`` is included in "
 "the range."
 msgstr ""
 
-#: of optuna.trial.Trial.suggest_discrete_uniform:43
-#: optuna.trial.Trial.suggest_int:35
+#: of optuna.trial._trial.Trial.suggest_discrete_uniform:43
+#: optuna.trial._trial.Trial.suggest_int:35
 msgid ""
 "Upper endpoint of the range of suggested values. ``high`` is included in "
 "the range."
 msgstr ""
 
-#: of optuna.trial.Trial.suggest_discrete_uniform:44
-#: optuna.trial.Trial.suggest_float:62 optuna.trial.Trial.suggest_int:36
+#: of optuna.trial._trial.Trial.suggest_discrete_uniform:44
+#: optuna.trial._trial.Trial.suggest_float:62
+#: optuna.trial._trial.Trial.suggest_int:36
 msgid "A step of discretization."
 msgstr ""
 
-#: of optuna.trial.Trial.suggest_discrete_uniform:46
-#: optuna.trial.Trial.suggest_float:78 optuna.trial.Trial.suggest_loguniform:40
-#: optuna.trial.Trial.suggest_uniform:45
+#: of optuna.trial._trial.Trial.suggest_discrete_uniform:46
+#: optuna.trial._trial.Trial.suggest_float:78
+#: optuna.trial._trial.Trial.suggest_loguniform:40
+#: optuna.trial._trial.Trial.suggest_uniform:45
 msgid "A suggested float value."
 msgstr ""
 
-#: of optuna.trial.Trial.suggest_float:3
+#: of optuna.trial._trial.Trial.suggest_float:3
 msgid ""
 "Note that this is a wrapper method for "
 ":func:`~optuna.trial.Trial.suggest_uniform`, "
@@ -434,20 +464,20 @@ msgid ""
 ":func:`~optuna.trial.Trial.suggest_discrete_uniform`."
 msgstr ""
 
-#: of optuna.trial.Trial.suggest_float:10
+#: of optuna.trial._trial.Trial.suggest_float:10
 msgid ""
 "Please see also :func:`~optuna.trial.Trial.suggest_uniform`, "
 ":func:`~optuna.trial.Trial.suggest_loguniform` and "
 ":func:`~optuna.trial.Trial.suggest_discrete_uniform`."
 msgstr ""
 
-#: of optuna.trial.Trial.suggest_float:16
+#: of optuna.trial._trial.Trial.suggest_float:16
 msgid ""
 "Suggest a momentum, learning rate and scaling factor of learning rate for"
 " neural network training."
 msgstr ""
 
-#: of optuna.trial.Trial.suggest_float:56
+#: of optuna.trial._trial.Trial.suggest_float:56
 msgid ""
 "Upper endpoint of the range of suggested values. ``high`` is excluded "
 "from the range.  .. note::     If ``step`` is specified, ``high`` is "
@@ -455,36 +485,36 @@ msgid ""
 ":func:`~optuna.trial.Trial.suggest_discrete_uniform`."
 msgstr ""
 
-#: of optuna.trial.Trial.suggest_float:56
-#: optuna.trial.Trial.suggest_loguniform:37
-#: optuna.trial.Trial.suggest_uniform:42
+#: of optuna.trial._trial.Trial.suggest_float:56
+#: optuna.trial._trial.Trial.suggest_loguniform:37
+#: optuna.trial._trial.Trial.suggest_uniform:42
 msgid ""
 "Upper endpoint of the range of suggested values. ``high`` is excluded "
 "from the range."
 msgstr ""
 
-#: of optuna.trial.Trial.suggest_float:60
+#: of optuna.trial._trial.Trial.suggest_float:60
 msgid ""
 "If ``step`` is specified, ``high`` is included as well as ``low`` because"
 " this method falls back to "
 ":func:`~optuna.trial.Trial.suggest_discrete_uniform`."
 msgstr ""
 
-#: of optuna.trial.Trial.suggest_float:62
+#: of optuna.trial._trial.Trial.suggest_float:62
 msgid ""
 "A step of discretization.  .. note::     The ``step`` and ``log`` "
 "arguments cannot be used at the same time. To set     the ``step`` "
 "argument to a float number, set the ``log`` argument to ``False``."
 msgstr ""
 
-#: of optuna.trial.Trial.suggest_float:65
+#: of optuna.trial._trial.Trial.suggest_float:65
 msgid ""
 "The ``step`` and ``log`` arguments cannot be used at the same time. To "
 "set the ``step`` argument to a float number, set the ``log`` argument to "
 "``False``."
 msgstr ""
 
-#: of optuna.trial.Trial.suggest_float:67
+#: of optuna.trial._trial.Trial.suggest_float:67
 msgid ""
 "A flag to sample the value from the log domain or not. If ``log`` is "
 "true, the value is sampled from the range in the log domain. Otherwise, "
@@ -495,7 +525,7 @@ msgid ""
 "``None``."
 msgstr ""
 
-#: of optuna.trial.Trial.suggest_float:67
+#: of optuna.trial._trial.Trial.suggest_float:67
 msgid ""
 "A flag to sample the value from the log domain or not. If ``log`` is "
 "true, the value is sampled from the range in the log domain. Otherwise, "
@@ -503,31 +533,31 @@ msgid ""
 ":func:`suggest_uniform` and :func:`suggest_loguniform`."
 msgstr ""
 
-#: of optuna.trial.Trial.suggest_float:73
+#: of optuna.trial._trial.Trial.suggest_float:73
 msgid ""
 "The ``step`` and ``log`` arguments cannot be used at the same time. To "
 "set the ``log`` argument to ``True``, set the ``step`` argument to "
 "``None``."
 msgstr ""
 
-#: of optuna.trial.Trial.suggest_float:76
+#: of optuna.trial._trial.Trial.suggest_float:76
 msgid "If ``step is not None`` and ``log = True`` are specified."
 msgstr ""
 
-#: of optuna.trial.Trial.suggest_int:3
+#: of optuna.trial._trial.Trial.suggest_int:3
 msgid ""
 "The value is sampled from the integers in :math:`[\\mathsf{low}, "
 "\\mathsf{high}]`."
 msgstr ""
 
-#: of optuna.trial.Trial.suggest_int:7
+#: of optuna.trial._trial.Trial.suggest_int:7
 msgid ""
 "Suggest the number of trees in `RandomForestClassifier <https://scikit-"
 "learn.org/ "
 "stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html>`_."
 msgstr ""
 
-#: of optuna.trial.Trial.suggest_int:36
+#: of optuna.trial._trial.Trial.suggest_int:36
 msgid ""
 "A step of discretization.  .. note::     Note that :math:`\\mathsf{high}`"
 " is modified if the range is not divisible by     :math:`\\mathsf{step}`."
@@ -541,14 +571,14 @@ msgid ""
 "``log`` argument to ``False``."
 msgstr ""
 
-#: of optuna.trial.Trial.suggest_int:39
+#: of optuna.trial._trial.Trial.suggest_int:39
 msgid ""
 "Note that :math:`\\mathsf{high}` is modified if the range is not "
 "divisible by :math:`\\mathsf{step}`. Please check the warning messages to"
 " find the changed values."
 msgstr ""
 
-#: of optuna.trial.Trial.suggest_int:44
+#: of optuna.trial._trial.Trial.suggest_int:44
 msgid ""
 "The method returns one of the values in the sequence "
 ":math:`\\mathsf{low}, \\mathsf{low} + \\mathsf{step}, \\mathsf{low} + 2 *"
@@ -556,14 +586,14 @@ msgid ""
 "\\mathsf{high}`, where :math:`k` denotes an integer."
 msgstr ""
 
-#: of optuna.trial.Trial.suggest_int:50
+#: of optuna.trial._trial.Trial.suggest_int:50
 msgid ""
 "The ``step != 1`` and ``log`` arguments cannot be used at the same time. "
 "To set the ``step`` argument :math:`\\mathsf{step} \\ge 2`, set the "
 "``log`` argument to ``False``."
 msgstr ""
 
-#: of optuna.trial.Trial.suggest_int:53
+#: of optuna.trial._trial.Trial.suggest_int:53
 msgid ""
 "A flag to sample the value from the log domain or not.  .. note::     If "
 "``log`` is true, at first, the range of suggested values is divided into"
@@ -579,11 +609,11 @@ msgid ""
 "argument to 1."
 msgstr ""
 
-#: of optuna.trial.Trial.suggest_int:53
+#: of optuna.trial._trial.Trial.suggest_int:53
 msgid "A flag to sample the value from the log domain or not."
 msgstr ""
 
-#: of optuna.trial.Trial.suggest_int:56
+#: of optuna.trial._trial.Trial.suggest_int:56
 msgid ""
 "If ``log`` is true, at first, the range of suggested values is divided "
 "into grid points of width 1. The range of suggested values is then "
@@ -595,37 +625,37 @@ msgid ""
 "more sampled than higher values."
 msgstr ""
 
-#: of optuna.trial.Trial.suggest_int:66
+#: of optuna.trial._trial.Trial.suggest_int:66
 msgid ""
 "The ``step != 1`` and ``log`` arguments cannot be used at the same time. "
 "To set the ``log`` argument to ``True``, set the ``step`` argument to 1."
 msgstr ""
 
-#: of optuna.trial.Trial.suggest_int:69
+#: of optuna.trial._trial.Trial.suggest_int:69
 msgid "If ``step != 1`` and ``log = True`` are specified."
 msgstr ""
 
-#: of optuna.trial.Trial.suggest_loguniform:3
+#: of optuna.trial._trial.Trial.suggest_loguniform:3
 msgid ""
 "The value is sampled from the range :math:`[\\mathsf{low}, "
 "\\mathsf{high})` in the log domain. When :math:`\\mathsf{low} = "
 "\\mathsf{high}`, the value of :math:`\\mathsf{low}` will be returned."
 msgstr ""
 
-#: of optuna.trial.Trial.suggest_loguniform:9
+#: of optuna.trial._trial.Trial.suggest_loguniform:9
 msgid ""
 "Suggest penalty parameter ``C`` of `SVC <https://scikit-"
 "learn.org/stable/modules/ generated/sklearn.svm.SVC.html>`_."
 msgstr ""
 
-#: of optuna.trial.Trial.suggest_uniform:3
+#: of optuna.trial._trial.Trial.suggest_uniform:3
 msgid ""
 "The value is sampled from the range :math:`[\\mathsf{low}, "
 "\\mathsf{high})` in the linear domain. When :math:`\\mathsf{low} = "
 "\\mathsf{high}`, the value of :math:`\\mathsf{low}` will be returned."
 msgstr ""
 
-#: of optuna.trial.Trial.suggest_uniform:9
+#: of optuna.trial._trial.Trial.suggest_uniform:9
 msgid "Suggest a momentum for neural network training."
 msgstr ""
 

@@ -142,3 +142,5 @@ source/tutorial/
 
 example*
 *.db
+
+MNIST
