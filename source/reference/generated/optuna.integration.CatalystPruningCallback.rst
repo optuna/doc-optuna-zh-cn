@@ -1,4 +1,4 @@
-optuna.integration.CatalystPruningCallback
+﻿optuna.integration.CatalystPruningCallback
 ==========================================
 
 .. currentmodule:: optuna.integration
@@ -7,12 +7,6 @@ optuna.integration.CatalystPruningCallback
 
    
    
-   
-   .. rubric:: Methods
-
-   .. autosummary::
-   
-      ~CatalystPruningCallback.on_epoch_end
    
 
 

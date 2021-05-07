@@ -1,4 +1,4 @@
-optuna.integration.PyTorchLightningPruningCallback
+﻿optuna.integration.PyTorchLightningPruningCallback
 ==================================================
 
 .. currentmodule:: optuna.integration

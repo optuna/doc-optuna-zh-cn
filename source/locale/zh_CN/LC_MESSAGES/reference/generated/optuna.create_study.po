@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 2.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-20 13:35-0400\n"
+"POT-Creation-Date: 2021-05-06 18:29-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -90,25 +90,23 @@ msgstr ""
 #: of optuna.study.create_study:41
 msgid ""
 "Direction of optimization. Set ``minimize`` for minimization and "
-"``maximize`` for maximization.  .. note::     If none of `direction` and "
-"`directions` are specified, the direction of the study     is set to "
-"\"minimize\"."
+"``maximize`` for maximization. You can also pass the corresponding "
+":class:`~optuna.study.StudyDirection` object.  .. note::     If none of "
+"`direction` and `directions` are specified, the direction of the study"
+"     is set to \"minimize\"."
 msgstr ""
 
 #: of optuna.study.create_study:41
 msgid ""
 "Direction of optimization. Set ``minimize`` for minimization and "
-"``maximize`` for maximization."
+"``maximize`` for maximization. You can also pass the corresponding "
+":class:`~optuna.study.StudyDirection` object."
 msgstr ""
 
-#: of optuna.study.create_study:45
+#: of optuna.study.create_study:46
 msgid ""
 "If none of `direction` and `directions` are specified, the direction of "
 "the study is set to \"minimize\"."
-msgstr ""
-
-#: of optuna.study.create_study:47
-msgid "A sequence of directions during multi-objective optimization."
 msgstr ""
 
 #: of optuna.study.create_study:48
@@ -120,11 +118,15 @@ msgid ""
 " the study is skipped, and the existing one is returned."
 msgstr ""
 
+#: of optuna.study.create_study:53
+msgid "A sequence of directions during multi-objective optimization."
+msgstr ""
+
 #: of optuna.study.create_study
 msgid "返回"
 msgstr ""
 
-#: of optuna.study.create_study:54
+#: of optuna.study.create_study:55
 msgid "A :class:`~optuna.study.Study` object."
 msgstr ""
 
@@ -132,7 +134,7 @@ msgstr ""
 msgid "引发"
 msgstr ""
 
-#: of optuna.study.create_study:56
+#: of optuna.study.create_study:57
 msgid ""
 "If the length of ``directions`` is zero.     Or, if ``direction`` is "
 "neither 'minimize' nor 'maximize' when it is a string.     Or, if the "
@@ -144,9 +146,24 @@ msgstr ""
 msgid "返回类型"
 msgstr ""
 
-#: of optuna.study.create_study:58
+#: of optuna.study.create_study:59
 msgid ""
 ":func:`optuna.create_study` is an alias of "
 ":func:`optuna.study.create_study`."
 msgstr ""
+
+#~ msgid ""
+#~ "Direction of optimization. Set ``minimize``"
+#~ " for minimization and ``maximize`` for "
+#~ "maximization.  .. note::     If none of"
+#~ " `direction` and `directions` are "
+#~ "specified, the direction of the study"
+#~ "     is set to \"minimize\"."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Direction of optimization. Set ``minimize``"
+#~ " for minimization and ``maximize`` for "
+#~ "maximization."
+#~ msgstr ""
 

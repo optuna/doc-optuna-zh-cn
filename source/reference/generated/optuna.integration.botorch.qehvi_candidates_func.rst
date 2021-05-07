@@ -1,4 +1,4 @@
-optuna.integration.botorch.qehvi\_candidates\_func
+﻿optuna.integration.botorch.qehvi\_candidates\_func
 ==================================================
 
 .. currentmodule:: optuna.integration.botorch

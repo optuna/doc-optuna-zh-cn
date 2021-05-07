@@ -1,4 +1,4 @@
-optuna.samplers.TPESampler
+﻿optuna.samplers.TPESampler
 ==========================
 
 .. currentmodule:: optuna.samplers

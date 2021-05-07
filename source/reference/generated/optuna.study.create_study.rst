@@ -1,4 +1,4 @@
-optuna.study.create\_study
+﻿optuna.study.create\_study
 ==========================
 
 .. currentmodule:: optuna.study

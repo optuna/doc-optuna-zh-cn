@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 2.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-14 18:06-0500\n"
+"POT-Creation-Date: 2021-05-06 18:29-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,31 +21,31 @@ msgstr ""
 msgid "optuna.integration.OptunaSearchCV"
 msgstr ""
 
-#: of optuna.integration.OptunaSearchCV:1
+#: of optuna.integration.sklearn.OptunaSearchCV:1
 msgid "Hyperparameter search with cross-validation."
 msgstr ""
 
-#: of optuna.integration.OptunaSearchCV optuna.integration.OptunaSearchCV.fit
-#: optuna.integration.OptunaSearchCV.get_params
-#: optuna.integration.OptunaSearchCV.score
-#: optuna.integration.OptunaSearchCV.set_params
+#: of optuna.integration.sklearn.OptunaSearchCV
+#: optuna.integration.sklearn.OptunaSearchCV.fit
+#: optuna.integration.sklearn.OptunaSearchCV.score
+#: sklearn.base.BaseEstimator.get_params sklearn.base.BaseEstimator.set_params
 msgid "参数"
 msgstr ""
 
-#: of optuna.integration.OptunaSearchCV:3
+#: of optuna.integration.sklearn.OptunaSearchCV:3
 msgid ""
 "Object to use to fit the data. This is assumed to implement the scikit-"
 "learn estimator interface. Either this needs to provide ``score``, or "
 "``scoring`` must be passed."
 msgstr ""
 
-#: of optuna.integration.OptunaSearchCV:6
+#: of optuna.integration.sklearn.OptunaSearchCV:6
 msgid ""
 "Dictionary where keys are parameters and values are distributions. "
 "Distributions are assumed to implement the optuna distribution interface."
 msgstr ""
 
-#: of optuna.integration.OptunaSearchCV:9
+#: of optuna.integration.sklearn.OptunaSearchCV:9
 msgid ""
 "Cross-validation strategy. Possible inputs for cv are:  - integer to "
 "specify the number of folds in a CV splitter, - a CV splitter, - an "
@@ -55,36 +55,36 @@ msgid ""
 "used. otherwise, ``sklearn.model_selection.KFold`` is used."
 msgstr ""
 
-#: of optuna.integration.OptunaSearchCV:9
+#: of optuna.integration.sklearn.OptunaSearchCV:9
 msgid "Cross-validation strategy. Possible inputs for cv are:"
 msgstr ""
 
-#: of optuna.integration.OptunaSearchCV:11
+#: of optuna.integration.sklearn.OptunaSearchCV:11
 msgid "integer to specify the number of folds in a CV splitter,"
 msgstr ""
 
-#: of optuna.integration.OptunaSearchCV:12
+#: of optuna.integration.sklearn.OptunaSearchCV:12
 msgid "a CV splitter,"
 msgstr ""
 
-#: of optuna.integration.OptunaSearchCV:13
+#: of optuna.integration.sklearn.OptunaSearchCV:13
 msgid "an iterable yielding (train, validation) splits as arrays of indices."
 msgstr ""
 
-#: of optuna.integration.OptunaSearchCV:15
+#: of optuna.integration.sklearn.OptunaSearchCV:15
 msgid ""
 "For integer, if :obj:`estimator` is a classifier and :obj:`y` is either "
 "binary or multiclass, ``sklearn.model_selection.StratifiedKFold`` is "
 "used. otherwise, ``sklearn.model_selection.KFold`` is used."
 msgstr ""
 
-#: of optuna.integration.OptunaSearchCV:19
+#: of optuna.integration.sklearn.OptunaSearchCV:19
 msgid ""
 "If :obj:`True`, pruning is performed in the case where the underlying "
 "estimator supports ``partial_fit``."
 msgstr ""
 
-#: of optuna.integration.OptunaSearchCV:21
+#: of optuna.integration.sklearn.OptunaSearchCV:21
 msgid ""
 "Value to assign to the score if an error occurs in fitting. If 'raise', "
 "the error is raised. If numeric, ``sklearn.exceptions.FitFailedWarning`` "
@@ -92,17 +92,52 @@ msgid ""
 "the error."
 msgstr ""
 
-#: of optuna.integration.OptunaSearchCV:25
+#: of optuna.integration.sklearn.OptunaSearchCV:25
 msgid ""
 "Maximum number of epochs. This is only used if the underlying estimator "
 "supports ``partial_fit``."
 msgstr ""
 
-#: of optuna.integration.OptunaSearchCV:27
-msgid "Number of parallel jobs. :obj:`-1` means using all processors."
+#: of optuna.integration.sklearn.OptunaSearchCV:27
+msgid ""
+"Number of :obj:`threading` based parallel jobs. :obj:`-1` means using the"
+" number is set to CPU count.      .. note::         ``n_jobs`` allows "
+"parallelization using :obj:`threading` and may suffer from         "
+"`Python's GIL <https://wiki.python.org/moin/GlobalInterpreterLock>`_."
+"         It is recommended to use :ref:`process-based "
+"parallelization<distributed>`         if ``func`` is CPU bound.      .. "
+"warning::         Deprecated in v2.7.0. This feature will be removed in "
+"the future.         It is recommended to use :ref:`process-based "
+"parallelization<distributed>`.         The removal of this feature is "
+"currently scheduled for v4.0.0, but this         schedule is subject to "
+"change.         See https://github.com/optuna/optuna/releases/tag/v2.7.0."
 msgstr ""
 
-#: of optuna.integration.OptunaSearchCV:28
+#: of optuna.integration.sklearn.OptunaSearchCV:27
+msgid ""
+"Number of :obj:`threading` based parallel jobs. :obj:`-1` means using the"
+" number is set to CPU count."
+msgstr ""
+
+#: of optuna.integration.sklearn.OptunaSearchCV:31
+msgid ""
+"``n_jobs`` allows parallelization using :obj:`threading` and may suffer "
+"from `Python's GIL "
+"<https://wiki.python.org/moin/GlobalInterpreterLock>`_. It is recommended"
+" to use :ref:`process-based parallelization<distributed>` if ``func`` is "
+"CPU bound."
+msgstr ""
+
+#: of optuna.integration.sklearn.OptunaSearchCV:37
+msgid ""
+"Deprecated in v2.7.0. This feature will be removed in the future. It is "
+"recommended to use :ref:`process-based parallelization<distributed>`. The"
+" removal of this feature is currently scheduled for v4.0.0, but this "
+"schedule is subject to change. See "
+"https://github.com/optuna/optuna/releases/tag/v2.7.0."
+msgstr ""
+
+#: of optuna.integration.sklearn.OptunaSearchCV:42
 msgid ""
 "Number of trials. If :obj:`None`, there is no limitation on the number of"
 " trials. If :obj:`timeout` is also set to :obj:`None`, the study "
@@ -110,7 +145,7 @@ msgid ""
 " Ctrl+C or SIGTERM. This trades off runtime vs quality of the solution."
 msgstr ""
 
-#: of optuna.integration.OptunaSearchCV:33
+#: of optuna.integration.sklearn.OptunaSearchCV:47
 msgid ""
 "Seed of the pseudo random number generator. If int, this is the seed used"
 " by the random number generator. If ``numpy.random.RandomState`` object, "
@@ -118,14 +153,14 @@ msgid ""
 "state from ``numpy.random`` is used."
 msgstr ""
 
-#: of optuna.integration.OptunaSearchCV:38
+#: of optuna.integration.sklearn.OptunaSearchCV:52
 msgid ""
 "If :obj:`True`, refit the estimator with the best found hyperparameters. "
 "The refitted estimator is made available at the ``best_estimator_`` "
 "attribute and permits using ``predict`` directly."
 msgstr ""
 
-#: of optuna.integration.OptunaSearchCV:42
+#: of optuna.integration.sklearn.OptunaSearchCV:56
 msgid ""
 "If :obj:`True`, training scores will be included. Computing training "
 "scores is used to get insights on how different hyperparameter settings "
@@ -135,38 +170,38 @@ msgid ""
 "performance."
 msgstr ""
 
-#: of optuna.integration.OptunaSearchCV:49
+#: of optuna.integration.sklearn.OptunaSearchCV:63
 msgid ""
 "String or callable to evaluate the predictions on the validation data. If"
 " :obj:`None`, ``score`` on the estimator is used."
 msgstr ""
 
-#: of optuna.integration.OptunaSearchCV:51
+#: of optuna.integration.sklearn.OptunaSearchCV:65
 msgid ""
 "Study corresponds to the optimization task. If :obj:`None`, a new study "
 "is created."
 msgstr ""
 
-#: of optuna.integration.OptunaSearchCV:53
+#: of optuna.integration.sklearn.OptunaSearchCV:67
 msgid ""
 "Proportion of samples that are used during hyperparameter search.  - If "
 "int, then draw ``subsample`` samples. - If float, then draw ``subsample``"
 " * ``X.shape[0]`` samples."
 msgstr ""
 
-#: of optuna.integration.OptunaSearchCV:53
+#: of optuna.integration.sklearn.OptunaSearchCV:67
 msgid "Proportion of samples that are used during hyperparameter search."
 msgstr ""
 
-#: of optuna.integration.OptunaSearchCV:55
+#: of optuna.integration.sklearn.OptunaSearchCV:69
 msgid "If int, then draw ``subsample`` samples."
 msgstr ""
 
-#: of optuna.integration.OptunaSearchCV:56
+#: of optuna.integration.sklearn.OptunaSearchCV:70
 msgid "If float, then draw ``subsample`` * ``X.shape[0]`` samples."
 msgstr ""
 
-#: of optuna.integration.OptunaSearchCV:57
+#: of optuna.integration.sklearn.OptunaSearchCV:71
 msgid ""
 "Time limit in seconds for the search of appropriate models. If "
 ":obj:`None`, the study is executed without time limitation. If "
@@ -175,43 +210,43 @@ msgid ""
 " This trades off runtime vs quality of the solution."
 msgstr ""
 
-#: of optuna.integration.OptunaSearchCV:63
+#: of optuna.integration.sklearn.OptunaSearchCV:77
 msgid "Verbosity level. The higher, the more messages."
 msgstr ""
 
-#: of optuna.integration.OptunaSearchCV:67
+#: of optuna.integration.sklearn.OptunaSearchCV:81
 msgid ""
 "Estimator that was chosen by the search. This is present only if "
 "``refit`` is set to :obj:`True`."
 msgstr ""
 
-#: of optuna.integration.OptunaSearchCV:72
+#: of optuna.integration.sklearn.OptunaSearchCV:86
 msgid "Number of cross-validation splits."
 msgstr ""
 
-#: of optuna.integration.OptunaSearchCV:76
+#: of optuna.integration.sklearn.OptunaSearchCV:90
 msgid ""
 "Time for refitting the best estimator. This is present only if ``refit`` "
 "is set to :obj:`True`."
 msgstr ""
 
-#: of optuna.integration.OptunaSearchCV:81
+#: of optuna.integration.sklearn.OptunaSearchCV:95
 msgid "Indices of samples that are used during hyperparameter search."
 msgstr ""
 
-#: of optuna.integration.OptunaSearchCV:85
+#: of optuna.integration.sklearn.OptunaSearchCV:99
 msgid "Scorer function."
 msgstr ""
 
-#: of optuna.integration.OptunaSearchCV:89
+#: of optuna.integration.sklearn.OptunaSearchCV:103
 msgid "Actual study."
 msgstr ""
 
-#: of optuna.integration.OptunaSearchCV:92
+#: of optuna.integration.sklearn.OptunaSearchCV:106
 msgid "实际案例"
 msgstr ""
 
-#: of optuna.integration.OptunaSearchCV:107
+#: of optuna.integration.sklearn.OptunaSearchCV:121
 msgid ""
 "Added in v0.17.0 as an experimental feature. The interface may change in "
 "newer versions without prior notice. See "
@@ -229,7 +264,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/reference/generated/optuna.integration.OptunaSearchCV.rst:24:<autosummary>:1
-#: of optuna.integration.OptunaSearchCV.fit:1
+#: of optuna.integration.sklearn.OptunaSearchCV.fit:1
 msgid "Run fit with all sets of parameters."
 msgstr ""
 
@@ -240,7 +275,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/reference/generated/optuna.integration.OptunaSearchCV.rst:24:<autosummary>:1
-#: of optuna.integration.OptunaSearchCV.get_params:1
+#: of sklearn.base.BaseEstimator.get_params:1
 msgid "Get parameters for this estimator."
 msgstr ""
 
@@ -251,7 +286,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/reference/generated/optuna.integration.OptunaSearchCV.rst:24:<autosummary>:1
-#: of optuna.integration.OptunaSearchCV.score:1
+#: of optuna.integration.sklearn.OptunaSearchCV.score:1
 msgid "Return the score on the given data."
 msgstr ""
 
@@ -262,7 +297,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/reference/generated/optuna.integration.OptunaSearchCV.rst:24:<autosummary>:1
-#: of optuna.integration.OptunaSearchCV.set_params:1
+#: of sklearn.base.BaseEstimator.set_params:1
 msgid "Set the parameters of this estimator."
 msgstr ""
 
@@ -437,50 +472,48 @@ msgid ""
 "``decision_function`` and ``refit`` is set to :obj:`True`."
 msgstr ""
 
-#: of optuna.integration.OptunaSearchCV.fit:3
+#: of optuna.integration.sklearn.OptunaSearchCV.fit:3
 msgid "Training data."
 msgstr ""
 
-#: of optuna.integration.OptunaSearchCV.fit:4
-#: optuna.integration.OptunaSearchCV.score:4
+#: of optuna.integration.sklearn.OptunaSearchCV.fit:4
+#: optuna.integration.sklearn.OptunaSearchCV.score:4
 msgid "Target variable."
 msgstr ""
 
-#: of optuna.integration.OptunaSearchCV.fit:5
+#: of optuna.integration.sklearn.OptunaSearchCV.fit:5
 msgid ""
 "Group labels for the samples used while splitting the dataset into "
 "train/validation set."
 msgstr ""
 
-#: of optuna.integration.OptunaSearchCV.fit:7
+#: of optuna.integration.sklearn.OptunaSearchCV.fit:7
 msgid "Parameters passed to ``fit`` on the estimator."
 msgstr ""
 
-#: of optuna.integration.OptunaSearchCV.fit
-#: optuna.integration.OptunaSearchCV.get_params
-#: optuna.integration.OptunaSearchCV.score
-#: optuna.integration.OptunaSearchCV.set_params
+#: of optuna.integration.sklearn.OptunaSearchCV.fit
+#: optuna.integration.sklearn.OptunaSearchCV.score
+#: sklearn.base.BaseEstimator.get_params sklearn.base.BaseEstimator.set_params
 msgid "返回"
 msgstr ""
 
-#: of optuna.integration.OptunaSearchCV.fit:9
+#: of optuna.integration.sklearn.OptunaSearchCV.fit:9
 msgid "Return self."
 msgstr ""
 
-#: of optuna.integration.OptunaSearchCV.fit
-#: optuna.integration.OptunaSearchCV.get_params
-#: optuna.integration.OptunaSearchCV.score
-#: optuna.integration.OptunaSearchCV.set_params
+#: of optuna.integration.sklearn.OptunaSearchCV.fit
+#: optuna.integration.sklearn.OptunaSearchCV.score
+#: sklearn.base.BaseEstimator.get_params sklearn.base.BaseEstimator.set_params
 msgid "返回类型"
 msgstr ""
 
-#: of optuna.integration.OptunaSearchCV.get_params:3
+#: of sklearn.base.BaseEstimator.get_params:3
 msgid ""
 "If True, will return the parameters for this estimator and contained "
 "subobjects that are estimators."
 msgstr ""
 
-#: of optuna.integration.OptunaSearchCV.get_params:7
+#: of sklearn.base.BaseEstimator.get_params:7
 msgid "**params** -- Parameter names mapped to their values."
 msgstr ""
 
@@ -508,11 +541,11 @@ msgid ""
 "``predict_proba`` and ``refit`` is set to :obj:`True`."
 msgstr ""
 
-#: of optuna.integration.OptunaSearchCV.score:3
+#: of optuna.integration.sklearn.OptunaSearchCV.score:3
 msgid "Data."
 msgstr ""
 
-#: of optuna.integration.OptunaSearchCV.score:6
+#: of optuna.integration.sklearn.OptunaSearchCV.score:6
 msgid "Scaler score."
 msgstr ""
 
@@ -522,7 +555,7 @@ msgid ""
 "``score_samples`` and ``refit`` is set to :obj:`True`."
 msgstr ""
 
-#: of optuna.integration.OptunaSearchCV.set_params:3
+#: of sklearn.base.BaseEstimator.set_params:3
 msgid ""
 "The method works on simple estimators as well as on nested objects (such "
 "as pipelines). The latter have parameters of the form "
@@ -530,11 +563,11 @@ msgid ""
 "component of a nested object."
 msgstr ""
 
-#: of optuna.integration.OptunaSearchCV.set_params:8
+#: of sklearn.base.BaseEstimator.set_params:8
 msgid "Estimator parameters."
 msgstr ""
 
-#: of optuna.integration.OptunaSearchCV.set_params:11
+#: of sklearn.base.BaseEstimator.set_params:11
 msgid "**self** -- Estimator instance."
 msgstr ""
 
@@ -543,4 +576,7 @@ msgid ""
 "This is available only if the underlying estimator supports ``transform``"
 " and ``refit`` is set to :obj:`True`."
 msgstr ""
+
+#~ msgid "Number of parallel jobs. :obj:`-1` means using all processors."
+#~ msgstr ""
 

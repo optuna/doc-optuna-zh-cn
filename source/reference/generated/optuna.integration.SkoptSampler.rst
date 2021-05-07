@@ -1,4 +1,4 @@
-optuna.integration.SkoptSampler
+﻿optuna.integration.SkoptSampler
 ===============================
 
 .. currentmodule:: optuna.integration

@@ -1,4 +1,4 @@
-optuna.samplers.CmaEsSampler
+﻿optuna.samplers.CmaEsSampler
 ============================
 
 .. currentmodule:: optuna.samplers

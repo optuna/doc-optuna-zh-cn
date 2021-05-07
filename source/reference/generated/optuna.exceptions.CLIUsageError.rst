@@ -1,4 +1,4 @@
-optuna.exceptions.CLIUsageError
+﻿optuna.exceptions.CLIUsageError
 ===============================
 
 .. currentmodule:: optuna.exceptions

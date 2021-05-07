@@ -1,4 +1,4 @@
-optuna.trial.create\_trial
+﻿optuna.trial.create\_trial
 ==========================
 
 .. currentmodule:: optuna.trial

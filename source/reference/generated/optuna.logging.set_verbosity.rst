@@ -1,4 +1,4 @@
-optuna.logging.set\_verbosity
+﻿optuna.logging.set\_verbosity
 =============================
 
 .. currentmodule:: optuna.logging

@@ -1,4 +1,4 @@
-optuna.samplers.PartialFixedSampler
+﻿optuna.samplers.PartialFixedSampler
 ===================================
 
 .. currentmodule:: optuna.samplers

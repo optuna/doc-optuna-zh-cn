@@ -1,4 +1,4 @@
-optuna.integration.lightgbm.train
+﻿optuna.integration.lightgbm.train
 =================================
 
 .. currentmodule:: optuna.integration.lightgbm

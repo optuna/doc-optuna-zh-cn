@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 2.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-20 13:35-0400\n"
+"POT-Creation-Date: 2021-05-06 18:29-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,7 +22,7 @@ msgid "Computation times"
 msgstr "计算耗时"
 
 #: ../../source/tutorial/20_recipes/sg_execution_times.rst:8
-msgid "**01:47.465** total execution time for **tutorial_20_recipes** files:"
+msgid "**02:08.461** total execution time for **tutorial_20_recipes** files:"
 msgstr ""
 
 #: ../../source/tutorial/20_recipes/sg_execution_times.rst:11
@@ -32,7 +32,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/tutorial/20_recipes/sg_execution_times.rst:11
-msgid "01:38.712"
+msgid "02:07.469"
 msgstr ""
 
 #: ../../source/tutorial/20_recipes/sg_execution_times.rst:11
@@ -43,71 +43,106 @@ msgstr ""
 #: ../../source/tutorial/20_recipes/sg_execution_times.rst:21
 #: ../../source/tutorial/20_recipes/sg_execution_times.rst:23
 #: ../../source/tutorial/20_recipes/sg_execution_times.rst:25
+#: ../../source/tutorial/20_recipes/sg_execution_times.rst:27
+#: ../../source/tutorial/20_recipes/sg_execution_times.rst:29
 msgid "0.0 MB"
 msgstr ""
 
 #: ../../source/tutorial/20_recipes/sg_execution_times.rst:13
 msgid ""
-":ref:`sphx_glr_tutorial_20_recipes_008_specify_params.py` "
-"(``008_specify_params.py``)"
-msgstr ""
-
-#: ../../source/tutorial/20_recipes/sg_execution_times.rst:13
-msgid "00:06.699"
-msgstr ""
-
-#: ../../source/tutorial/20_recipes/sg_execution_times.rst:15
-msgid ""
 ":ref:`sphx_glr_tutorial_20_recipes_006_user_defined_pruner.py` "
 "(``006_user_defined_pruner.py``)"
 msgstr ""
 
+#: ../../source/tutorial/20_recipes/sg_execution_times.rst:13
+msgid "00:00.764"
+msgstr ""
+
 #: ../../source/tutorial/20_recipes/sg_execution_times.rst:15
-msgid "00:00.693"
+msgid ""
+":ref:`sphx_glr_tutorial_20_recipes_009_ask_and_tell.py` "
+"(``009_ask_and_tell.py``)"
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/sg_execution_times.rst:15
+msgid "00:00.155"
 msgstr ""
 
 #: ../../source/tutorial/20_recipes/sg_execution_times.rst:17
+msgid ""
+":ref:`sphx_glr_tutorial_20_recipes_010_reuse_best_trial.py` "
+"(``010_reuse_best_trial.py``)"
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/sg_execution_times.rst:17
+msgid "00:00.072"
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/sg_execution_times.rst:19
 msgid ":ref:`sphx_glr_tutorial_20_recipes_001_rdb.py` (``001_rdb.py``)"
 msgstr ""
 
-#: ../../source/tutorial/20_recipes/sg_execution_times.rst:17
-msgid "00:00.521"
-msgstr ""
-
 #: ../../source/tutorial/20_recipes/sg_execution_times.rst:19
-msgid ""
-":ref:`sphx_glr_tutorial_20_recipes_005_user_defined_sampler.py` "
-"(``005_user_defined_sampler.py``)"
-msgstr ""
-
-#: ../../source/tutorial/20_recipes/sg_execution_times.rst:19
-msgid "00:00.351"
-msgstr ""
-
 #: ../../source/tutorial/20_recipes/sg_execution_times.rst:21
-msgid ":ref:`sphx_glr_tutorial_20_recipes_004_cli.py` (``004_cli.py``)"
-msgstr ""
-
-#: ../../source/tutorial/20_recipes/sg_execution_times.rst:21
-msgid "00:00.307"
-msgstr ""
-
 #: ../../source/tutorial/20_recipes/sg_execution_times.rst:23
+#: ../../source/tutorial/20_recipes/sg_execution_times.rst:25
+#: ../../source/tutorial/20_recipes/sg_execution_times.rst:27
+#: ../../source/tutorial/20_recipes/sg_execution_times.rst:29
+msgid "00:00.000"
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/sg_execution_times.rst:21
 msgid ""
 ":ref:`sphx_glr_tutorial_20_recipes_003_attributes.py` "
 "(``003_attributes.py``)"
 msgstr ""
 
 #: ../../source/tutorial/20_recipes/sg_execution_times.rst:23
-msgid "00:00.175"
+msgid ":ref:`sphx_glr_tutorial_20_recipes_004_cli.py` (``004_cli.py``)"
 msgstr ""
 
 #: ../../source/tutorial/20_recipes/sg_execution_times.rst:25
+msgid ""
+":ref:`sphx_glr_tutorial_20_recipes_005_user_defined_sampler.py` "
+"(``005_user_defined_sampler.py``)"
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/sg_execution_times.rst:27
 msgid ""
 ":ref:`sphx_glr_tutorial_20_recipes_007_optuna_callback.py` "
 "(``007_optuna_callback.py``)"
 msgstr ""
 
-#: ../../source/tutorial/20_recipes/sg_execution_times.rst:25
-msgid "00:00.007"
+#: ../../source/tutorial/20_recipes/sg_execution_times.rst:29
+msgid ""
+":ref:`sphx_glr_tutorial_20_recipes_008_specify_params.py` "
+"(``008_specify_params.py``)"
 msgstr ""
+
+#~ msgid "**01:47.465** total execution time for **tutorial_20_recipes** files:"
+#~ msgstr ""
+
+#~ msgid "01:38.712"
+#~ msgstr ""
+
+#~ msgid "00:06.699"
+#~ msgstr ""
+
+#~ msgid "00:00.693"
+#~ msgstr ""
+
+#~ msgid "00:00.521"
+#~ msgstr ""
+
+#~ msgid "00:00.351"
+#~ msgstr ""
+
+#~ msgid "00:00.307"
+#~ msgstr ""
+
+#~ msgid "00:00.175"
+#~ msgstr ""
+
+#~ msgid "00:00.007"
+#~ msgstr ""
+

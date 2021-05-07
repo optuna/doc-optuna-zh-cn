@@ -1,4 +1,4 @@
-optuna.multi\_objective.trial.MultiObjectiveTrial
+﻿optuna.multi\_objective.trial.MultiObjectiveTrial
 =================================================
 
 .. currentmodule:: optuna.multi_objective.trial

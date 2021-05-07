@@ -1,4 +1,4 @@
-optuna.pruners.SuccessiveHalvingPruner
+﻿optuna.pruners.SuccessiveHalvingPruner
 ======================================
 
 .. currentmodule:: optuna.pruners

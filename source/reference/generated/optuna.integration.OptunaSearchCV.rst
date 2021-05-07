@@ -1,4 +1,4 @@
-optuna.integration.OptunaSearchCV
+﻿optuna.integration.OptunaSearchCV
 =================================
 
 .. currentmodule:: optuna.integration

@@ -1,4 +1,4 @@
-optuna.visualization.matplotlib.plot\_parallel\_coordinate
+﻿optuna.visualization.matplotlib.plot\_parallel\_coordinate
 ==========================================================
 
 .. currentmodule:: optuna.visualization.matplotlib

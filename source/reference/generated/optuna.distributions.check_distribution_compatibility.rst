@@ -1,4 +1,4 @@
-optuna.distributions.check\_distribution\_compatibility
+﻿optuna.distributions.check\_distribution\_compatibility
 =======================================================
 
 .. currentmodule:: optuna.distributions

@@ -1,4 +1,4 @@
-optuna.distributions.IntLogUniformDistribution
+﻿optuna.distributions.IntLogUniformDistribution
 ==============================================
 
 .. currentmodule:: optuna.distributions

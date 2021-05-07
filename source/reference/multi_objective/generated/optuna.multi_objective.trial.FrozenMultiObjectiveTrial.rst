@@ -1,4 +1,4 @@
-optuna.multi\_objective.trial.FrozenMultiObjectiveTrial
+﻿optuna.multi\_objective.trial.FrozenMultiObjectiveTrial
 =======================================================
 
 .. currentmodule:: optuna.multi_objective.trial

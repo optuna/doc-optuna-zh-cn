@@ -1,4 +1,4 @@
-optuna.logging.get\_verbosity
+﻿optuna.logging.get\_verbosity
 =============================
 
 .. currentmodule:: optuna.logging

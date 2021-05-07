@@ -1,4 +1,4 @@
-optuna.integration.MXNetPruningCallback
+﻿optuna.integration.MXNetPruningCallback
 =======================================
 
 .. currentmodule:: optuna.integration

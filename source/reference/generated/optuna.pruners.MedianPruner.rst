@@ -1,4 +1,4 @@
-optuna.pruners.MedianPruner
+﻿optuna.pruners.MedianPruner
 ===========================
 
 .. currentmodule:: optuna.pruners

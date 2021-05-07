@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 2.6.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-20 13:35-0400\n"
+"POT-Creation-Date: 2021-05-06 18:29-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,90 +17,93 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.8.0\n"
 
-#: ../../source/tutorial/20_recipes/007_optuna_callback.rst:6
+#: ../../source/tutorial/20_recipes/007_optuna_callback.rst:13
 msgid ""
 "Click :ref:`here "
-"<sphx_glr_download_tutorial_20_recipes_007_optuna_callback.py>`     to "
+"<sphx_glr_download_tutorial_20_recipes_007_optuna_callback.py>` to "
 "download the full example code"
 msgstr ""
 
-#: ../../source/tutorial/20_recipes/007_optuna_callback.rst:15
+#: ../../source/tutorial/20_recipes/007_optuna_callback.rst:24
 msgid "Callback for Study.optimize"
 msgstr "Study.optimize 的回调"
 
-#: ../../source/tutorial/20_recipes/007_optuna_callback.rst:17
+#: ../../source/tutorial/20_recipes/007_optuna_callback.rst:26
 msgid ""
 "This tutorial showcases how to use & implement Optuna ``Callback`` for "
 ":func:`~optuna.study.Study.optimize`."
-msgstr "本教程展示了如何使用和实现一个 用于 :func:`~optuna.study.Study.optimize` 的"
-"Optuna ``Callback`` ."
+msgstr ""
+"本教程展示了如何使用和实现一个 用于 :func:`~optuna.study.Study.optimize` 的Optuna "
+"``Callback`` ."
 
-#: ../../source/tutorial/20_recipes/007_optuna_callback.rst:19
+#: ../../source/tutorial/20_recipes/007_optuna_callback.rst:28
 msgid ""
 "``Callback`` is called after every evaluation of ``objective``, and it "
 "takes :class:`~optuna.study.Study` and :class:`~optuna.trial.FrozenTrial`"
 " as arguments, and does some work."
-msgstr "``Callback`` 会在 ``objective`` 每次求值以后被调用一次, 它接受"
-" :class:`~optuna.study.Study` 和 :class:`~optuna.trial.FrozenTrial` 作为参数并进行处理."
+msgstr ""
+"``Callback`` 会在 ``objective`` 每次求值以后被调用一次, 它接受 "
+":class:`~optuna.study.Study` 和 :class:`~optuna.trial.FrozenTrial` "
+"作为参数并进行处理."
 
-#: ../../source/tutorial/20_recipes/007_optuna_callback.rst:22
+#: ../../source/tutorial/20_recipes/007_optuna_callback.rst:31
 msgid ":class:`~optuna.integration.MLflowCallback` is a great example."
 msgstr ":class:`~optuna.integration.MLflowCallback` 是个好例子."
 
-#: ../../source/tutorial/20_recipes/007_optuna_callback.rst:25
+#: ../../source/tutorial/20_recipes/007_optuna_callback.rst:36
 msgid "Stop optimization after some trials are pruned in a row"
 msgstr "在特定数量的 trial 被剪枝后终止优化"
 
-#: ../../source/tutorial/20_recipes/007_optuna_callback.rst:27
+#: ../../source/tutorial/20_recipes/007_optuna_callback.rst:38
 msgid ""
 "This example implements a stateful callback which stops the optimization "
 "if a certain number of trials are pruned in a row. The number of trials "
 "pruned in a row is specified by ``threshold``."
-msgstr "本例实现了一个有状态的回调函数. 如果特定数目的 trial 被剪枝了, 它将"
-"终止优化. 被剪枝的 trial 数是通过 ``threshold`` 来指定的."
+msgstr ""
+"本例实现了一个有状态的回调函数. 如果特定数目的 trial 被剪枝了, 它将终止优化. 被剪枝的 trial 数是通过 "
+"``threshold`` 来指定的."
 
-#: ../../source/tutorial/20_recipes/007_optuna_callback.rst:61
+#: ../../source/tutorial/20_recipes/007_optuna_callback.rst:75
 msgid ""
 "This objective prunes all the trials except for the first 5 trials "
 "(``trial.number`` starts with 0)."
-msgstr "该目标函数会对除了前五个 trial 之外的所有trial 进行剪枝"
-" (``trial.number`` 从 0 开始计数)."
+msgstr "该目标函数会对除了前五个 trial 之外的所有trial 进行剪枝 (``trial.number`` 从 0 开始计数)."
 
-#: ../../source/tutorial/20_recipes/007_optuna_callback.rst:80
+#: ../../source/tutorial/20_recipes/007_optuna_callback.rst:97
 msgid ""
 "Here, we set the threshold to ``2``: optimization finishes once two "
 "trials are pruned in a row. So, we expect this study to stop after 7 "
 "trials."
-msgstr "在这里, 我们将阈值设置为 ``2``: 优化过程会在一旦两个 trial 被剪枝后发生. "
-"因此, 我们预期该 study 会在 7 个 trial 后停止."
+msgstr ""
+"在这里, 我们将阈值设置为 ``2``: 优化过程会在一旦两个 trial 被剪枝后发生. 因此, 我们预期该 study 会在 7 个 "
+"trial 后停止."
 
-#: ../../source/tutorial/20_recipes/007_optuna_callback.rst:103
+#: ../../source/tutorial/20_recipes/007_optuna_callback.rst:121
 msgid "Out:"
 msgstr ""
 
-#: ../../source/tutorial/20_recipes/007_optuna_callback.rst:119
+#: ../../source/tutorial/20_recipes/007_optuna_callback.rst:139
 msgid ""
 "As you can see in the log above, the study stopped after 7 trials as "
 "expected."
 msgstr "从上面的日志中可以看出, study 如期在 7 个trial 之后停止了."
 
-#: ../../source/tutorial/20_recipes/007_optuna_callback.rst:124
-msgid "**Total running time of the script:** ( 0 minutes  0.007 seconds)"
+#: ../../source/tutorial/20_recipes/007_optuna_callback.rst:144
+msgid "**Total running time of the script:** ( 0 minutes  0.006 seconds)"
 msgstr ""
 
-#: ../../source/tutorial/20_recipes/007_optuna_callback.rst:139
+#: ../../source/tutorial/20_recipes/007_optuna_callback.rst:159
 msgid ""
 ":download:`Download Python source code: 007_optuna_callback.py "
 "<007_optuna_callback.py>`"
 msgstr ""
 
-#: ../../source/tutorial/20_recipes/007_optuna_callback.rst:145
+#: ../../source/tutorial/20_recipes/007_optuna_callback.rst:165
 msgid ""
 ":download:`Download Jupyter notebook: 007_optuna_callback.ipynb "
 "<007_optuna_callback.ipynb>`"
 msgstr ""
 
-#: ../../source/tutorial/20_recipes/007_optuna_callback.rst:152
+#: ../../source/tutorial/20_recipes/007_optuna_callback.rst:172
 msgid "`Gallery generated by Sphinx-Gallery <https://sphinx-gallery.github.io>`_"
 msgstr ""
-

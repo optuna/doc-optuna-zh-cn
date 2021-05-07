@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 1.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-14 18:04-0500\n"
+"POT-Creation-Date: 2021-05-06 17:44-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -61,7 +61,6 @@ msgid ""
 msgstr "只需少量依赖, 简单安装完成后便可处理各种任务."
 
 #: ../../source/index.rst:21
-
 msgid ""
 ":doc:`Pythonic search spaces "
 "<tutorial/10_key_features/002_configurations>`"
@@ -77,16 +76,18 @@ msgstr "利用熟悉的 Python 语法, 如 条件语句和循环来定义搜索�
 msgid ""
 ":doc:`Efficient optimization algorithms "
 "<tutorial/10_key_features/003_efficient_optimization_algorithms>`"
-msgstr ":doc:`高效的优化算法 <tutorial/10_key_features/003_efficient_optimization_algorithms>`"
+msgstr ""
+":doc:`高效的优化算法 "
+"<tutorial/10_key_features/003_efficient_optimization_algorithms>`"
 
 #: ../../source/index.rst:27
+#, fuzzy
 msgid ""
-"Adopt state-of-the-art algorithms for sampling hyper parameters and "
+"Adopt state-of-the-art algorithms for sampling hyperparameters and "
 "efficiently pruning unpromising trials."
 msgstr "采用了最先进的超参数采样和最有效的对无望 trial 进行剪枝的算法."
 
 #: ../../source/index.rst:29
-
 msgid ":doc:`Easy parallelization <tutorial/10_key_features/004_distributed>`"
 msgstr ":doc:`易用的并行优化 <tutorial/10_key_features/004_distributed>`"
 

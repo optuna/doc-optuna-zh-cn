@@ -1,4 +1,4 @@
-optuna.visualization.plot\_slice
+﻿optuna.visualization.plot\_slice
 ================================
 
 .. currentmodule:: optuna.visualization

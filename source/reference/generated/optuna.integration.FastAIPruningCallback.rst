@@ -1,4 +1,4 @@
-optuna.integration.FastAIPruningCallback
+﻿optuna.integration.FastAIPruningCallback
 ========================================
 
 .. currentmodule:: optuna.integration

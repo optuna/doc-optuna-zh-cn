@@ -1,4 +1,4 @@
-optuna.samplers.RandomSampler
+﻿optuna.samplers.RandomSampler
 =============================
 
 .. currentmodule:: optuna.samplers

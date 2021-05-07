@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 2.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-20 13:35-0400\n"
+"POT-Creation-Date: 2021-05-06 18:29-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,72 +17,72 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.8.0\n"
 
-#: ../../source/tutorial/10_key_features/002_configurations.rst:6
+#: ../../source/tutorial/10_key_features/002_configurations.rst:13
 msgid ""
 "Click :ref:`here "
-"<sphx_glr_download_tutorial_10_key_features_002_configurations.py>`     "
-"to download the full example code"
+"<sphx_glr_download_tutorial_10_key_features_002_configurations.py>` to "
+"download the full example code"
 msgstr ""
 
-#: ../../source/tutorial/10_key_features/002_configurations.rst:15
+#: ../../source/tutorial/10_key_features/002_configurations.rst:24
 msgid "Pythonic Search Space"
 msgstr "Python 式的搜索空间"
 
-#: ../../source/tutorial/10_key_features/002_configurations.rst:17
+#: ../../source/tutorial/10_key_features/002_configurations.rst:26
 msgid "For hyperparameter sampling, Optuna provides the following features:"
 msgstr "对于超参数采样，Optuna 提供了以下特性："
 
-#: ../../source/tutorial/10_key_features/002_configurations.rst:19
+#: ../../source/tutorial/10_key_features/002_configurations.rst:28
 msgid ":func:`optuna.trial.Trial.suggest_categorical` for categorical parameters"
 msgstr ":func:`optuna.trial.Trial.suggest_categorical`  用于类别参数"
 
-#: ../../source/tutorial/10_key_features/002_configurations.rst:20
+#: ../../source/tutorial/10_key_features/002_configurations.rst:29
 msgid ":func:`optuna.trial.Trial.suggest_int` for integer parameters"
 msgstr ":func:`optuna.trial.Trial.suggest_int` 用于整形参数"
 
-#: ../../source/tutorial/10_key_features/002_configurations.rst:21
+#: ../../source/tutorial/10_key_features/002_configurations.rst:30
 msgid ":func:`optuna.trial.Trial.suggest_float` for floating point parameters"
 msgstr ":func:`optuna.trial.Trial.suggest_float` 用于浮点型参数"
 
-#: ../../source/tutorial/10_key_features/002_configurations.rst:23
+#: ../../source/tutorial/10_key_features/002_configurations.rst:32
 msgid ""
 "With optional arguments of ``step`` and ``log``, we can discretize or "
 "take the logarithm of integer and floating point parameters."
 msgstr "通过可选的 ``step`` 与 ``log`` 参数，我们可以对整形或者浮点型参数进行离散化或者取对数操作。"
 
-#: ../../source/tutorial/10_key_features/002_configurations.rst:65
+#: ../../source/tutorial/10_key_features/002_configurations.rst:77
 msgid "Defining Parameter Spaces"
 msgstr "定义参数空间"
 
-#: ../../source/tutorial/10_key_features/002_configurations.rst:67
+#: ../../source/tutorial/10_key_features/002_configurations.rst:79
 msgid ""
 "In Optuna, we define search spaces using familiar Python syntax including"
 " conditionals and loops."
 msgstr "在 Optuna 中，我们使用和 Python 语法类似的方式来定义搜索空间，其中包含条件和循环语句。"
 
-#: ../../source/tutorial/10_key_features/002_configurations.rst:69
+#: ../../source/tutorial/10_key_features/002_configurations.rst:81
 msgid "Also, you can use branches or loops depending on the parameter values."
 msgstr "类似地，你也可以根据参数值采用分支或者循环。"
 
-#: ../../source/tutorial/10_key_features/002_configurations.rst:71
+#: ../../source/tutorial/10_key_features/002_configurations.rst:83
 msgid ""
 "For more various use, see `examples "
 "<https://github.com/optuna/optuna/tree/master/examples>`_."
 msgstr "更多用法见 `examples <https://github.com/optuna/optuna/tree/master/examples>`_."
 
-#: ../../source/tutorial/10_key_features/002_configurations.rst:73
+#: ../../source/tutorial/10_key_features/002_configurations.rst:87
 msgid "Branches:"
 msgstr "分支："
 
-#: ../../source/tutorial/10_key_features/002_configurations.rst:99
+#: ../../source/tutorial/10_key_features/002_configurations.rst:116
 msgid "Loops:"
 msgstr "循环："
 
-#: ../../source/tutorial/10_key_features/002_configurations.rst:121
+#: ../../source/tutorial/10_key_features/002_configurations.rst:140
 msgid "Note on the Number of Parameters"
 msgstr "关于参数个数的注意事项"
 
-#: ../../source/tutorial/10_key_features/002_configurations.rst:123
+#: ../../source/tutorial/10_key_features/002_configurations.rst:142
 msgid ""
 "The difficulty of optimization increases roughly exponentially with "
 "regard to the number of parameters. That is, the number of necessary "
@@ -92,26 +92,22 @@ msgstr ""
 "随着参数个数的增长，优化的难度约呈指数增长。也就是说，当你增加参数的个数的时候，优化所需要的 trial "
 "个数会呈指数增长。因此我们不推荐增加不必要的参数。"
 
-#: ../../source/tutorial/10_key_features/002_configurations.rst:128
+#: ../../source/tutorial/10_key_features/002_configurations.rst:147
 msgid "**Total running time of the script:** ( 0 minutes  0.001 seconds)"
 msgstr ""
 
-#: ../../source/tutorial/10_key_features/002_configurations.rst:143
+#: ../../source/tutorial/10_key_features/002_configurations.rst:162
 msgid ""
 ":download:`Download Python source code: 002_configurations.py "
 "<002_configurations.py>`"
 msgstr ""
 
-#: ../../source/tutorial/10_key_features/002_configurations.rst:149
+#: ../../source/tutorial/10_key_features/002_configurations.rst:168
 msgid ""
 ":download:`Download Jupyter notebook: 002_configurations.ipynb "
 "<002_configurations.ipynb>`"
 msgstr ""
 
-#: ../../source/tutorial/10_key_features/002_configurations.rst:156
+#: ../../source/tutorial/10_key_features/002_configurations.rst:175
 msgid "`Gallery generated by Sphinx-Gallery <https://sphinx-gallery.github.io>`_"
 msgstr ""
-
-#~ msgid "**Total running time of the script:** ( 0 minutes  0.003 seconds)"
-#~ msgstr ""
-

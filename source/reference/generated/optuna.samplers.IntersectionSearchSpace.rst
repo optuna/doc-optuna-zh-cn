@@ -1,4 +1,4 @@
-optuna.samplers.IntersectionSearchSpace
+﻿optuna.samplers.IntersectionSearchSpace
 =======================================
 
 .. currentmodule:: optuna.samplers

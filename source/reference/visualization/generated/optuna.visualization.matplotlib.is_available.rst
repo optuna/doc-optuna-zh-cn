@@ -1,4 +1,4 @@
-optuna.visualization.matplotlib.is\_available
+﻿optuna.visualization.matplotlib.is\_available
 =============================================
 
 .. currentmodule:: optuna.visualization.matplotlib

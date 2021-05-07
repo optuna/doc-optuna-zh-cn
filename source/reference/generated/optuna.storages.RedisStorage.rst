@@ -1,4 +1,4 @@
-optuna.storages.RedisStorage
+﻿optuna.storages.RedisStorage
 ============================
 
 .. currentmodule:: optuna.storages

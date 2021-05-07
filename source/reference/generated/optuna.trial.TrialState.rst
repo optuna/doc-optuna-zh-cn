@@ -1,4 +1,4 @@
-optuna.trial.TrialState
+﻿optuna.trial.TrialState
 =======================
 
 .. currentmodule:: optuna.trial

@@ -1,4 +1,4 @@
-optuna.integration.TensorFlowPruningHook
+﻿optuna.integration.TensorFlowPruningHook
 ========================================
 
 .. currentmodule:: optuna.integration

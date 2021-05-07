@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 2.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-20 13:35-0400\n"
+"POT-Creation-Date: 2021-05-06 18:29-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -241,10 +241,10 @@ msgid "The trial is validated before being added."
 msgstr ""
 
 #: of optuna.study.BaseStudy.get_trials:6 optuna.study.Study.add_trial:6
-#: optuna.study.Study.add_trials:6 optuna.study.Study.ask:9
-#: optuna.study.Study.ask:26 optuna.study.Study.enqueue_trial:7
+#: optuna.study.Study.add_trials:6 optuna.study.Study.ask:13
+#: optuna.study.Study.ask:30 optuna.study.Study.enqueue_trial:7
 #: optuna.study.Study.optimize:10 optuna.study.Study.set_user_attr:8
-#: optuna.study.Study.stop:9 optuna.study.Study.tell:4
+#: optuna.study.Study.stop:9 optuna.study.Study.tell:8
 #: optuna.study.Study.trials_dataframe:8 optuna.study.Study.user_attrs:8
 msgid "示例"
 msgstr ""
@@ -331,17 +331,21 @@ msgid ""
 "finish the created trial."
 msgstr ""
 
-#: of optuna.study.Study.ask:10
+#: of optuna.study.Study.ask:10 optuna.study.Study.tell:5
+msgid "The :ref:`ask_and_tell` tutorial provides use-cases with examples."
+msgstr ""
+
+#: of optuna.study.Study.ask:14
 msgid "Getting the trial object with the :func:`~optuna.study.Study.ask` method."
 msgstr ""
 
-#: of optuna.study.Study.ask:27
+#: of optuna.study.Study.ask:31
 msgid ""
 "Passing previously defined distributions to the "
 ":func:`~optuna.study.Study.ask` method."
 msgstr ""
 
-#: of optuna.study.Study.ask:49
+#: of optuna.study.Study.ask:53
 msgid ""
 "A dictionary containing the parameter names and parameter's "
 "distributions. Each parameter in this dictionary is automatically "
@@ -359,7 +363,7 @@ msgstr ""
 msgid "返回"
 msgstr ""
 
-#: of optuna.study.Study.ask:54
+#: of optuna.study.Study.ask:58
 msgid "A :class:`~optuna.trial.Trial`."
 msgstr ""
 
@@ -474,7 +478,12 @@ msgid ""
 "parallelization using :obj:`threading` and may suffer from     `Python's "
 "GIL <https://wiki.python.org/moin/GlobalInterpreterLock>`_.     It is "
 "recommended to use :ref:`process-based parallelization<distributed>`     "
-"if ``func`` is CPU bound."
+"if ``func`` is CPU bound.  .. warning::     Deprecated in v2.7.0. This "
+"feature will be removed in the future.     It is recommended to use :ref"
+":`process-based parallelization<distributed>`.     The removal of this "
+"feature is currently scheduled for v4.0.0, but this     schedule is "
+"subject to change.     See "
+"https://github.com/optuna/optuna/releases/tag/v2.7.0."
 msgstr ""
 
 #: of optuna.study.Study.optimize:33
@@ -492,7 +501,16 @@ msgid ""
 "CPU bound."
 msgstr ""
 
-#: of optuna.study.Study.optimize:41
+#: of optuna.study.Study.optimize:43
+msgid ""
+"Deprecated in v2.7.0. This feature will be removed in the future. It is "
+"recommended to use :ref:`process-based parallelization<distributed>`. The"
+" removal of this feature is currently scheduled for v4.0.0, but this "
+"schedule is subject to change. See "
+"https://github.com/optuna/optuna/releases/tag/v2.7.0."
+msgstr ""
+
+#: of optuna.study.Study.optimize:48
 msgid ""
 "A study continues to run even when a trial raises one of the exceptions "
 "specified in this argument. Default is an empty tuple, i.e. the study "
@@ -500,14 +518,14 @@ msgid ""
 ":class:`~optuna.exceptions.TrialPruned`."
 msgstr ""
 
-#: of optuna.study.Study.optimize:44
+#: of optuna.study.Study.optimize:51
 msgid ""
 "List of callback functions that are invoked at the end of each trial. "
 "Each function must accept two parameters with the following types in this"
 " order: :class:`~optuna.study.Study` and :class:`~optuna.FrozenTrial`."
 msgstr ""
 
-#: of optuna.study.Study.optimize:47
+#: of optuna.study.Study.optimize:54
 msgid ""
 "Flag to determine whether to automatically run garbage collection after "
 "each trial. Set to :obj:`True` to run the garbage collection, "
@@ -517,7 +535,7 @@ msgid ""
 ".. seealso::      :ref:`out-of-memory-gc-collect`"
 msgstr ""
 
-#: of optuna.study.Study.optimize:47
+#: of optuna.study.Study.optimize:54
 msgid ""
 "Flag to determine whether to automatically run garbage collection after "
 "each trial. Set to :obj:`True` to run the garbage collection, "
@@ -526,18 +544,18 @@ msgid ""
 "consumption over several trials, try setting this flag to :obj:`True`."
 msgstr ""
 
-#: of optuna.study.Study.optimize:55
+#: of optuna.study.Study.optimize:62
 msgid ":ref:`out-of-memory-gc-collect`"
 msgstr ""
 
-#: of optuna.study.Study.optimize:56
+#: of optuna.study.Study.optimize:63
 msgid ""
 "Flag to show progress bars or not. To disable progress bar, set this "
 "``False``. Currently, progress bar is experimental feature and disabled "
 "when ``n_jobs`` :math:`\\ne 1`."
 msgstr ""
 
-#: of optuna.study.Study.optimize:60
+#: of optuna.study.Study.optimize:67
 msgid "If nested invocation of this method occurs."
 msgstr ""
 
@@ -576,11 +594,11 @@ msgstr ""
 msgid "A dictionary containing all system attributes."
 msgstr ""
 
-#: of optuna.study.Study.tell:46
+#: of optuna.study.Study.tell:50
 msgid "A :class:`~optuna.trial.Trial` object or a trial number."
 msgstr ""
 
-#: of optuna.study.Study.tell:47
+#: of optuna.study.Study.tell:51
 msgid ""
 "Optional objective value or a sequence of such values in case the study "
 "is used for multi-objective optimization. Argument must be provided if "
@@ -589,18 +607,18 @@ msgid ""
 ":class:`~optuna.trial.TrialState.PRUNED`."
 msgstr ""
 
-#: of optuna.study.Study.tell:52
+#: of optuna.study.Study.tell:56
 msgid ""
 "State to be reported. Must be :class:`~optuna.trial.TrialState.COMPLETE`,"
 " :class:`~optuna.trial.TrialState.FAIL` or "
 ":class:`~optuna.trial.TrialState.PRUNED`."
 msgstr ""
 
-#: of optuna.study.Study.tell:56
+#: of optuna.study.Study.tell:60
 msgid "If ``trial`` is not a :class:`~optuna.trial.Trial` or an :obj:`int`."
 msgstr ""
 
-#: of optuna.study.Study.tell:57
+#: of optuna.study.Study.tell:61
 msgid ""
 "If any of the following.     ``values`` is a sequence but its length does"
 " not match the number of objectives     for its associated study.     "
@@ -656,4 +674,17 @@ msgstr ""
 #: of optuna.study.Study.user_attrs:32
 msgid "A dictionary containing all user attributes."
 msgstr ""
+
+#~ msgid ""
+#~ "The number of parallel jobs. If "
+#~ "this argument is set to :obj:`-1`, "
+#~ "the number is set to CPU count."
+#~ "  .. note::     ``n_jobs`` allows "
+#~ "parallelization using :obj:`threading` and may"
+#~ " suffer from     `Python's GIL "
+#~ "<https://wiki.python.org/moin/GlobalInterpreterLock>`_.     It"
+#~ " is recommended to use :ref:`process-"
+#~ "based parallelization<distributed>`     if ``func``"
+#~ " is CPU bound."
+#~ msgstr ""
 

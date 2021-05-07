@@ -1,4 +1,4 @@
-optuna.multi\_objective.study.MultiObjectiveStudy
+﻿optuna.multi\_objective.study.MultiObjectiveStudy
 =================================================
 
 .. currentmodule:: optuna.multi_objective.study

@@ -1,4 +1,4 @@
-optuna.samplers.MOTPESampler
+﻿optuna.samplers.MOTPESampler
 ============================
 
 .. currentmodule:: optuna.samplers

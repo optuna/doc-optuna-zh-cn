@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 1.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-06-17 19:47-0400\n"
+"POT-Creation-Date: 2021-05-06 18:22-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,293 +17,43 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.8.0\n"
 
-#: ../../source/tutorial/attributes.rst:4
-msgid "User Attributes"
-msgstr ""
-
-#: ../../source/tutorial/attributes.rst:6
-msgid "This feature is to annotate experiments with user-defined attributes."
-msgstr ""
-
-#: ../../source/tutorial/attributes.rst:10
-msgid "Adding User Attributes to Studies"
-msgstr ""
-
-#: ../../source/tutorial/attributes.rst:12
+#: ../../source/tutorial/10_key_features/001_first.rst:13
 msgid ""
-"A :class:`~optuna.study.Study` object provides "
-":func:`~optuna.study.Study.set_user_attr` method to register a pair of "
-"key and value as an user-defined attribute. A key is supposed to be a "
-"``str``, and a value be any object serializable with ``json.dumps``."
+"Click :ref:`here "
+"<sphx_glr_download_tutorial_10_key_features_001_first.py>` to download "
+"the full example code"
 msgstr ""
 
-#: ../../source/tutorial/attributes.rst:24
+#: ../../source/tutorial/10_key_features/001_first.rst:24
+msgid "Lightweight, versatile, and platform agnostic architecture"
+msgstr ""
+
+#: ../../source/tutorial/10_key_features/001_first.rst:26
 msgid ""
-"We can access annotated attributes with "
-":attr:`~optuna.study.Study.user_attr` property."
+"Optuna is entirely written in Python and has few dependencies. This means"
+" that we can quickly move to the real example once you get interested in "
+"Optuna."
 msgstr ""
 
-#: ../../source/tutorial/attributes.rst:30
-msgid ""
-":class:`~optuna.struct.StudySummary` object, which can be retrieved by "
-":func:`~optuna.study.get_all_study_summaries`, also contains user-defined"
-" attributes."
-msgstr ""
-
-#: ../../source/tutorial/attributes.rst:39
-msgid ""
-"``optuna study set-user-attr`` command, which sets an attribute via "
-"command line interface."
-msgstr ""
-
-#: ../../source/tutorial/attributes.rst:43
-msgid "Adding User Attributes to Trials"
-msgstr ""
-
-#: ../../source/tutorial/attributes.rst:45
-msgid ""
-"As with :class:`~optuna.study.Study`, a :class:`~optuna.trial.Trial` "
-"object provides :func:`~optuna.trial.Trial.set_user_attr` method. "
-"Attributes are set inside an objective function."
-msgstr ""
-
-#: ../../source/tutorial/attributes.rst:64
-msgid "We can access annotated attributes as:"
-msgstr ""
-
-#: ../../source/tutorial/attributes.rst:70
-msgid ""
-"Note that, in this example, the attribute is not annotated to a "
-":class:`~optuna.study.Study` but a single :class:`~optuna.trial.Trial`."
-msgstr ""
-
-#: ../../source/tutorial/cli.rst:4
-msgid "Command-Line Interface"
-msgstr ""
-
-#: ../../source/tutorial/cli.rst:1
-msgid "Command"
-msgstr ""
-
-#: ../../source/tutorial/cli.rst:1
-msgid "Description"
-msgstr ""
-
-#: ../../source/tutorial/cli.rst:1
-msgid "create-study"
-msgstr ""
-
-#: ../../source/tutorial/cli.rst:1
-msgid "Create a new study."
-msgstr ""
-
-#: ../../source/tutorial/cli.rst:1
-msgid "delete-study"
-msgstr ""
-
-#: ../../source/tutorial/cli.rst:1
-msgid "Delete a specified study."
-msgstr ""
-
-#: ../../source/tutorial/cli.rst:1
-msgid "dashboard"
-msgstr ""
-
-#: ../../source/tutorial/cli.rst:1
-msgid "Launch web dashboard (beta)."
-msgstr ""
-
-#: ../../source/tutorial/cli.rst:1
-msgid "storage upgrade"
-msgstr ""
-
-#: ../../source/tutorial/cli.rst:1
-msgid "Upgrade the schema of a storage."
-msgstr ""
-
-#: ../../source/tutorial/cli.rst:1
-msgid "studies"
-msgstr ""
-
-#: ../../source/tutorial/cli.rst:1
-msgid "Show a list of studies."
-msgstr ""
-
-#: ../../source/tutorial/cli.rst:1
-msgid "study optimize"
-msgstr ""
-
-#: ../../source/tutorial/cli.rst:1
-msgid "Start optimization of a study."
-msgstr ""
-
-#: ../../source/tutorial/cli.rst:1
-msgid "study set-user-attr"
-msgstr ""
-
-#: ../../source/tutorial/cli.rst:1
-msgid "Set a user attribute to a study."
-msgstr ""
-
-#: ../../source/tutorial/cli.rst:18
-msgid "Optuna provides command-line interface as shown in the above table."
-msgstr ""
-
-#: ../../source/tutorial/cli.rst:20
-msgid ""
-"Let us assume you are not in IPython shell and writing Python script "
-"files instead. It is totally fine to write scripts like the following:"
-msgstr ""
-
-#: ../../source/tutorial/cli.rst:38
-msgid ""
-"However, we can reduce boilerplate codes by using our ``optuna`` command."
-" Let us assume that ``foo.py`` contains only the following code."
-msgstr ""
-
-#: ../../source/tutorial/cli.rst:47
-msgid ""
-"Even so, we can invoke the optimization as follows. (Don't care about "
-"``--storage sqlite:///example.db`` for now, which is described in "
-":ref:`rdb`.)"
-msgstr ""
-
-#: ../../source/tutorial/cli.rst:63
-msgid ""
-"Please note that ``foo.py`` only contains the definition of the objective"
-" function. By giving the script file name and the method name of "
-"objective function to ``optuna study optimize`` command, we can invoke "
-"the optimization."
-msgstr ""
-
-#: ../../source/tutorial/configurations.rst:4
-msgid "Advanced Configurations"
-msgstr ""
-
-#: ../../source/tutorial/configurations.rst:7
-msgid "Defining Parameter Spaces"
-msgstr ""
-
-#: ../../source/tutorial/configurations.rst:9
-msgid "Optuna supports five kinds of parameters."
-msgstr ""
-
-#: ../../source/tutorial/configurations.rst:32
-msgid "Branches and Loops"
-msgstr ""
-
-#: ../../source/tutorial/configurations.rst:34
-msgid "You can use branches or loops depending on the parameter values."
-msgstr ""
-
-#: ../../source/tutorial/configurations.rst:63
-msgid ""
-"Please also refer to `examples "
-"<https://github.com/optuna/optuna/tree/master/examples>`_."
-msgstr ""
-
-#: ../../source/tutorial/configurations.rst:67
-msgid "Note on the Number of Parameters"
-msgstr ""
-
-#: ../../source/tutorial/configurations.rst:69
-msgid ""
-"The difficulty of optimization increases roughly exponentially with "
-"regard to the number of parameters. That is, the number of necessary "
-"trials increases exponentially when you increase the number of "
-"parameters, so it is recommended to not add unimportant parameters."
-msgstr ""
-
-#: ../../source/tutorial/configurations.rst:73
-msgid "Arguments for `Study.optimize`"
-msgstr ""
-
-#: ../../source/tutorial/configurations.rst:75
-msgid ""
-"The method :func:`~optuna.study.Study.optimize` (and ``optuna study "
-"optimize`` CLI command as well) has several useful options such as "
-"``timeout``. For details, please refer to the API reference for "
-":func:`~optuna.study.Study.optimize`."
-msgstr ""
-
-#: ../../source/tutorial/configurations.rst:79
-msgid ""
-"**FYI**: If you give neither ``n_trials`` nor ``timeout`` options, the "
-"optimization continues until it receives a termination signal such as "
-"Ctrl+C or SIGTERM. This is useful for use cases such as when it is hard "
-"to estimate the computational costs required to optimize your objective "
-"function."
-msgstr ""
-
-#: ../../source/tutorial/distributed.rst:4
-msgid "Distributed Optimization"
-msgstr ""
-
-#: ../../source/tutorial/distributed.rst:6
-msgid ""
-"There is no complicated setup but just sharing the same study name among "
-"nodes/processes."
-msgstr ""
-
-#: ../../source/tutorial/distributed.rst:8
-msgid ""
-"First, create a shared study using ``optuna create-study`` command (or "
-"using :func:`optuna.create_study` in a Python script)."
-msgstr ""
-
-#: ../../source/tutorial/distributed.rst:15
-msgid ""
-"Then, write an optimization script. Let's assume that ``foo.py`` contains"
-" the following code."
-msgstr ""
-
-#: ../../source/tutorial/distributed.rst:29
-msgid ""
-"Finally, run the shared study from multiple processes. For example, run "
-"``Process 1`` in a terminal, and do ``Process 2`` in another one. They "
-"get parameter suggestions based on shared trials' history."
-msgstr ""
-
-#: ../../source/tutorial/distributed.rst:33
-msgid "Process 1:"
-msgstr ""
-
-#: ../../source/tutorial/distributed.rst:42
-msgid "Process 2 (the same command as process 1):"
-msgstr ""
-
-#: ../../source/tutorial/distributed.rst:52
-msgid ""
-"We do not recommend SQLite for large scale distributed optimizations "
-"because it may cause serious performance issues. Please consider to use "
-"another database engine like PostgreSQL or MySQL."
-msgstr ""
-
-#: ../../source/tutorial/distributed.rst:55
-msgid ""
-"Please avoid putting the SQLite database on NFS when running distributed "
-"optimizations. See also: https://www.sqlite.org/faq.html#q5"
-msgstr ""
-
-#: ../../source/tutorial/first.rst:4
-msgid "First Optimization"
-msgstr ""
-
-#: ../../source/tutorial/first.rst:8
+#: ../../source/tutorial/10_key_features/001_first.rst:31
 msgid "Quadratic Function Example"
 msgstr ""
 
-#: ../../source/tutorial/first.rst:10
+#: ../../source/tutorial/10_key_features/001_first.rst:33
 msgid ""
-"Usually, Optuna is used to optimize hyper-parameters, but as an example, "
-"let us directly optimize a quadratic function in an IPython shell."
+"Usually, Optuna is used to optimize hyperparameters, but as an example, "
+"let's optimize a simple quadratic function: :math:`(x - 2)^2`."
 msgstr ""
 
-#: ../../source/tutorial/first.rst:16
-msgid "The objective function is what will be optimized."
+#: ../../source/tutorial/10_key_features/001_first.rst:38
+msgid "First of all, import :mod:`optuna`."
 msgstr ""
 
-#: ../../source/tutorial/first.rst:25
+#: ../../source/tutorial/10_key_features/001_first.rst:57
+msgid "In optuna, conventionally functions to be optimized are named `objective`."
+msgstr ""
+
+#: ../../source/tutorial/10_key_features/001_first.rst:79
 msgid ""
 "This function returns the value of :math:`(x - 2)^2`. Our goal is to find"
 " the value of ``x`` that minimizes the output of the ``objective`` "
@@ -312,133 +62,391 @@ msgid ""
 "values of ``x``."
 msgstr ""
 
-#: ../../source/tutorial/first.rst:27
+#: ../../source/tutorial/10_key_features/001_first.rst:84
 msgid ""
 "A :class:`~optuna.trial.Trial` object corresponds to a single execution "
 "of the objective function and is internally instantiated upon each "
 "invocation of the function."
 msgstr ""
 
-#: ../../source/tutorial/first.rst:29
+#: ../../source/tutorial/10_key_features/001_first.rst:87
 msgid ""
 "The `suggest` APIs (for example, "
-":func:`~optuna.trial.Trial.suggest_uniform`) are called inside the "
+":func:`~optuna.trial.Trial.suggest_float`) are called inside the "
 "objective function to obtain parameters for a trial. "
-":func:`~optuna.trial.Trial.suggest_uniform` selects parameters uniformly "
-"within the range provided. In our example, from -10 to 10."
+":func:`~optuna.trial.Trial.suggest_float` selects parameters uniformly "
+"within the range provided. In our example, from :math:`-10` to "
+":math:`10`."
 msgstr ""
 
-#: ../../source/tutorial/first.rst:31
+#: ../../source/tutorial/10_key_features/001_first.rst:92
 msgid ""
 "To start the optimization, we create a study object and pass the "
 "objective function to method :func:`~optuna.study.Study.optimize` as "
 "follows."
 msgstr ""
 
-#: ../../source/tutorial/first.rst:38 ../../source/tutorial/first.rst:58
-#: ../../source/tutorial/first.rst:87 ../../source/tutorial/first.rst:99
-#: ../../source/tutorial/first.rst:111 ../../source/tutorial/first.rst:123
-#: ../../source/tutorial/first.rst:137 ../../source/tutorial/first.rst:155
-#: ../../source/tutorial/rdb.rst:66
-msgid "Out:"
-msgstr ""
-
-#: ../../source/tutorial/first.rst:52
+#: ../../source/tutorial/10_key_features/001_first.rst:113
 msgid "You can get the best parameter as follows."
 msgstr ""
 
-#: ../../source/tutorial/first.rst:64
-msgid ""
-"We can see that Optuna found the best ``x`` value ``2.001707713205946``, "
-"which is close to the optimal value of ``2``."
+#: ../../source/tutorial/10_key_features/001_first.rst:130
+#: ../../source/tutorial/10_key_features/001_first.rst:183
+#: ../../source/tutorial/10_key_features/001_first.rst:210
+#: ../../source/tutorial/10_key_features/001_first.rst:237
+#: ../../source/tutorial/10_key_features/001_first.rst:264
+#: ../../source/tutorial/10_key_features/001_first.rst:291
+#: ../../source/tutorial/10_key_features/001_first.rst:337
+#: ../../source/tutorial/10_key_features/001_first.rst:364
+#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:85
+#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:117
+#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:223
+#: ../../source/tutorial/20_recipes/001_rdb.rst:64
+#: ../../source/tutorial/20_recipes/001_rdb.rst:96
+#: ../../source/tutorial/20_recipes/001_rdb.rst:130
+#: ../../source/tutorial/20_recipes/001_rdb.rst:164
+#: ../../source/tutorial/20_recipes/001_rdb.rst:190
+#: ../../source/tutorial/20_recipes/001_rdb.rst:227
+#: ../../source/tutorial/20_recipes/002_multi_objective.rst:160
+#: ../../source/tutorial/20_recipes/002_multi_objective.rst:372
+#: ../../source/tutorial/20_recipes/003_attributes.rst:79
+#: ../../source/tutorial/20_recipes/003_attributes.rst:109
+#: ../../source/tutorial/20_recipes/003_attributes.rst:177
+#: ../../source/tutorial/20_recipes/004_cli.rst:68
+#: ../../source/tutorial/20_recipes/005_user_defined_sampler.rst:165
+#: ../../source/tutorial/20_recipes/006_user_defined_pruner.rst:159
+#: ../../source/tutorial/20_recipes/007_optuna_callback.rst:121
+#: ../../source/tutorial/20_recipes/008_specify_params.rst:168
+#: ../../source/tutorial/20_recipes/008_specify_params.rst:345
+#: ../../source/tutorial/20_recipes/009_ask_and_tell.rst:91
+#: ../../source/tutorial/20_recipes/009_ask_and_tell.rst:260
+#: ../../source/tutorial/20_recipes/010_reuse_best_trial.rst:71
+#: ../../source/tutorial/20_recipes/010_reuse_best_trial.rst:132
+msgid "Out:"
 msgstr ""
 
-#: ../../source/tutorial/first.rst:67
+#: ../../source/tutorial/10_key_features/001_first.rst:141
 msgid ""
-"When used to search for hyper-parameters in machine learning, usually the"
-" objective function would return the loss or accuracy of the model."
+"We can see that the ``x`` value found by Optuna is close to the optimal "
+"value of ``2``."
 msgstr ""
 
-#: ../../source/tutorial/first.rst:70
+#: ../../source/tutorial/10_key_features/001_first.rst:146
+msgid ""
+"When used to search for hyperparameters in machine learning, usually the "
+"objective function would return the loss or accuracy of the model."
+msgstr ""
+
+#: ../../source/tutorial/10_key_features/001_first.rst:153
 msgid "Study Object"
 msgstr ""
 
-#: ../../source/tutorial/first.rst:72
+#: ../../source/tutorial/10_key_features/001_first.rst:155
 msgid "Let us clarify the terminology in Optuna as follows:"
 msgstr ""
 
-#: ../../source/tutorial/first.rst:74
+#: ../../source/tutorial/10_key_features/001_first.rst:157
 msgid "**Trial**: A single call of the objective function"
 msgstr ""
 
-#: ../../source/tutorial/first.rst:75
+#: ../../source/tutorial/10_key_features/001_first.rst:158
 msgid "**Study**: An optimization session, which is a set of trials"
 msgstr ""
 
-#: ../../source/tutorial/first.rst:76
+#: ../../source/tutorial/10_key_features/001_first.rst:159
 msgid ""
 "**Parameter**: A variable whose value is to be optimized, such as ``x`` "
 "in the above example"
 msgstr ""
 
-#: ../../source/tutorial/first.rst:78
+#: ../../source/tutorial/10_key_features/001_first.rst:161
 msgid ""
 "In Optuna, we use the study object to manage optimization. Method "
 ":func:`~optuna.study.create_study` returns a study object. A study object"
 " has useful properties for analyzing the optimization outcome."
 msgstr ""
 
-#: ../../source/tutorial/first.rst:81
-msgid "To get the best parameter:"
+#: ../../source/tutorial/10_key_features/001_first.rst:167
+msgid "To get the dictionary of parameter name and parameter values:"
 msgstr ""
 
-#: ../../source/tutorial/first.rst:93
-msgid "To get the best value:"
+#: ../../source/tutorial/10_key_features/001_first.rst:194
+msgid "To get the best observed value of the objective function:"
 msgstr ""
 
-#: ../../source/tutorial/first.rst:105
+#: ../../source/tutorial/10_key_features/001_first.rst:221
 msgid "To get the best trial:"
 msgstr ""
 
-#: ../../source/tutorial/first.rst:117
+#: ../../source/tutorial/10_key_features/001_first.rst:248
 msgid "To get all trials:"
 msgstr ""
 
-#: ../../source/tutorial/first.rst:131
+#: ../../source/tutorial/10_key_features/001_first.rst:275
 msgid "To get the number of trials:"
 msgstr ""
 
-#: ../../source/tutorial/first.rst:143
+#: ../../source/tutorial/10_key_features/001_first.rst:302
 msgid ""
 "By executing :func:`~optuna.study.Study.optimize` again, we can continue "
 "the optimization."
 msgstr ""
 
-#: ../../source/tutorial/first.rst:149
+#: ../../source/tutorial/10_key_features/001_first.rst:321
 msgid "To get the updated number of trials:"
 msgstr ""
 
-#: ../../source/tutorial/index.rst:2
-msgid "Tutorial"
-msgstr ""
-
-#: ../../source/tutorial/pruning.rst:4
-msgid "Pruning Unpromising Trials"
-msgstr ""
-
-#: ../../source/tutorial/pruning.rst:6
+#: ../../source/tutorial/10_key_features/001_first.rst:348
 msgid ""
-"This feature automatically stops unpromising trials at the early stages "
-"of the training (a.k.a., automated early-stopping). Optuna provides "
-"interfaces to concisely implement the pruning mechanism in iterative "
-"training algorithms."
+"As the objective function is so easy that the last 100 trials don't "
+"improve the result. However, we can check the result again:"
 msgstr ""
 
-#: ../../source/tutorial/pruning.rst:11
+#: ../../source/tutorial/10_key_features/001_first.rst:376
+msgid "**Total running time of the script:** ( 0 minutes  0.789 seconds)"
+msgstr ""
+
+#: ../../source/tutorial/10_key_features/001_first.rst:391
+msgid ":download:`Download Python source code: 001_first.py <001_first.py>`"
+msgstr ""
+
+#: ../../source/tutorial/10_key_features/001_first.rst:397
+msgid ":download:`Download Jupyter notebook: 001_first.ipynb <001_first.ipynb>`"
+msgstr ""
+
+#: ../../source/tutorial/10_key_features/001_first.rst:404
+#: ../../source/tutorial/10_key_features/002_configurations.rst:175
+#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:331
+#: ../../source/tutorial/10_key_features/004_distributed.rst:138
+#: ../../source/tutorial/10_key_features/005_visualization.rst:394
+#: ../../source/tutorial/20_recipes/001_rdb.rst:270
+#: ../../source/tutorial/20_recipes/002_multi_objective.rst:420
+#: ../../source/tutorial/20_recipes/003_attributes.rst:222
+#: ../../source/tutorial/20_recipes/004_cli.rst:155
+#: ../../source/tutorial/20_recipes/005_user_defined_sampler.rst:218
+#: ../../source/tutorial/20_recipes/006_user_defined_pruner.rst:217
+#: ../../source/tutorial/20_recipes/007_optuna_callback.rst:172
+#: ../../source/tutorial/20_recipes/008_specify_params.rst:493
+#: ../../source/tutorial/20_recipes/009_ask_and_tell.rst:368
+#: ../../source/tutorial/20_recipes/010_reuse_best_trial.rst:182
+#: ../../source/tutorial/index.rst:394
+msgid "`Gallery generated by Sphinx-Gallery <https://sphinx-gallery.github.io>`_"
+msgstr ""
+
+#: ../../source/tutorial/10_key_features/002_configurations.rst:13
+msgid ""
+"Click :ref:`here "
+"<sphx_glr_download_tutorial_10_key_features_002_configurations.py>` to "
+"download the full example code"
+msgstr ""
+
+#: ../../source/tutorial/10_key_features/002_configurations.rst:24
+msgid "Pythonic Search Space"
+msgstr ""
+
+#: ../../source/tutorial/10_key_features/002_configurations.rst:26
+msgid "For hyperparameter sampling, Optuna provides the following features:"
+msgstr ""
+
+#: ../../source/tutorial/10_key_features/002_configurations.rst:28
+msgid ":func:`optuna.trial.Trial.suggest_categorical` for categorical parameters"
+msgstr ""
+
+#: ../../source/tutorial/10_key_features/002_configurations.rst:29
+msgid ":func:`optuna.trial.Trial.suggest_int` for integer parameters"
+msgstr ""
+
+#: ../../source/tutorial/10_key_features/002_configurations.rst:30
+msgid ":func:`optuna.trial.Trial.suggest_float` for floating point parameters"
+msgstr ""
+
+#: ../../source/tutorial/10_key_features/002_configurations.rst:32
+msgid ""
+"With optional arguments of ``step`` and ``log``, we can discretize or "
+"take the logarithm of integer and floating point parameters."
+msgstr ""
+
+#: ../../source/tutorial/10_key_features/002_configurations.rst:77
+msgid "Defining Parameter Spaces"
+msgstr ""
+
+#: ../../source/tutorial/10_key_features/002_configurations.rst:79
+msgid ""
+"In Optuna, we define search spaces using familiar Python syntax including"
+" conditionals and loops."
+msgstr ""
+
+#: ../../source/tutorial/10_key_features/002_configurations.rst:81
+msgid "Also, you can use branches or loops depending on the parameter values."
+msgstr ""
+
+#: ../../source/tutorial/10_key_features/002_configurations.rst:83
+msgid ""
+"For more various use, see `examples "
+"<https://github.com/optuna/optuna/tree/master/examples>`_."
+msgstr ""
+
+#: ../../source/tutorial/10_key_features/002_configurations.rst:87
+msgid "Branches:"
+msgstr ""
+
+#: ../../source/tutorial/10_key_features/002_configurations.rst:116
+msgid "Loops:"
+msgstr ""
+
+#: ../../source/tutorial/10_key_features/002_configurations.rst:140
+msgid "Note on the Number of Parameters"
+msgstr ""
+
+#: ../../source/tutorial/10_key_features/002_configurations.rst:142
+msgid ""
+"The difficulty of optimization increases roughly exponentially with "
+"regard to the number of parameters. That is, the number of necessary "
+"trials increases exponentially when you increase the number of "
+"parameters, so it is recommended to not add unimportant parameters."
+msgstr ""
+
+#: ../../source/tutorial/10_key_features/002_configurations.rst:147
+msgid "**Total running time of the script:** ( 0 minutes  0.001 seconds)"
+msgstr ""
+
+#: ../../source/tutorial/10_key_features/002_configurations.rst:162
+msgid ""
+":download:`Download Python source code: 002_configurations.py "
+"<002_configurations.py>`"
+msgstr ""
+
+#: ../../source/tutorial/10_key_features/002_configurations.rst:168
+msgid ""
+":download:`Download Jupyter notebook: 002_configurations.ipynb "
+"<002_configurations.ipynb>`"
+msgstr ""
+
+#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:13
+msgid ""
+"Click :ref:`here "
+"<sphx_glr_download_tutorial_10_key_features_003_efficient_optimization_algorithms.py>`"
+" to download the full example code"
+msgstr ""
+
+#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:24
+msgid "Efficient Optimization Algorithms"
+msgstr ""
+
+#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:26
+msgid ""
+"Optuna enables efficient hyperparameter optimization by adopting state-"
+"of-the-art algorithms for sampling hyperparameters and pruning "
+"efficiently unpromising trials."
+msgstr ""
+
+#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:31
+msgid "Sampling Algorithms"
+msgstr ""
+
+#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:33
+msgid ""
+"Samplers basically continually narrow down the search space using the "
+"records of suggested parameter values and evaluated objective values, "
+"leading to an optimal search space which giving off parameters leading to"
+" better objective values. More detailed explanation of how samplers "
+"suggest parameters is in :class:`optuna.samplers.BaseSampler`."
+msgstr ""
+
+#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:37
+msgid "Optuna provides the following sampling algorithms:"
+msgstr ""
+
+#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:39
+msgid ""
+"Tree-structured Parzen Estimator algorithm implemented in "
+":class:`optuna.samplers.TPESampler`"
+msgstr ""
+
+#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:41
+msgid ""
+"CMA-ES based algorithm implemented in "
+":class:`optuna.samplers.CmaEsSampler`"
+msgstr ""
+
+#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:43
+msgid "Grid Search implemented in :class:`optuna.samplers.GridSampler`"
+msgstr ""
+
+#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:45
+msgid "Random Search implemented in :class:`optuna.samplers.RandomSampler`"
+msgstr ""
+
+#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:47
+msgid "The default sampler is :class:`optuna.samplers.TPESampler`."
+msgstr ""
+
+#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:50
+msgid "Switching Samplers"
+msgstr ""
+
+#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:69
+msgid "By default, Optuna uses :class:`~optuna.samplers.TPESampler` as follows."
+msgstr ""
+
+#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:96
+msgid ""
+"If you want to use different samplers for example "
+":class:`~optuna.samplers.RandomSampler` and "
+":class:`~optuna.samplers.CmaEsSampler`,"
+msgstr ""
+
+#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:130
+msgid "Pruning Algorithms"
+msgstr ""
+
+#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:132
+msgid ""
+"``Pruners`` automatically stop unpromising trials at the early stages of "
+"the training (a.k.a., automated early-stopping)."
+msgstr ""
+
+#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:134
+msgid "Optuna provides the following pruning algorithms:"
+msgstr ""
+
+#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:136
+msgid ""
+"Asynchronous Successive Halving algorithm implemted in "
+":class:`optuna.pruners.SuccessiveHalvingPruner`"
+msgstr ""
+
+#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:138
+msgid "Hyperband algorithm implemented in :class:`optuna.pruners.HyperbandPruner`"
+msgstr ""
+
+#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:140
+msgid ""
+"Median pruning algorithm implemented in "
+":class:`optuna.pruners.MedianPruner`"
+msgstr ""
+
+#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:142
+msgid ""
+"Threshold pruning algorithm implemented in "
+":class:`optuna.pruners.ThresholdPruner`"
+msgstr ""
+
+#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:144
+msgid ""
+"We use :class:`optuna.pruners.MedianPruner` in most examples, though "
+"basically it is outperformed by "
+":class:`optuna.pruners.SuccessiveHalvingPruner` and "
+":class:`optuna.pruners.HyperbandPruner` as in `this benchmark result "
+"<https://github.com/optuna/optuna/wiki/%5BUnder-Construction%5D-"
+"Benchmarks-with-Kurobako>`_."
+msgstr ""
+
+#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:150
 msgid "Activating Pruners"
 msgstr ""
 
-#: ../../source/tutorial/pruning.rst:12
+#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:151
 msgid ""
 "To turn on the pruning feature, you need to call "
 ":func:`~optuna.trial.Trial.report` and "
@@ -449,82 +457,442 @@ msgid ""
 "condition."
 msgstr ""
 
-#: ../../source/tutorial/pruning.rst:53
-msgid "Executing the script above:"
-msgstr ""
-
-#: ../../source/tutorial/pruning.rst:70
+#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:155
 msgid ""
-"``Trial 5 pruned.``, etc. in the log messages means several trials were "
-"stopped before they finished all of the iterations."
+"We would recommend using integration modules for major machine learning "
+"frameworks. Exclusive list is :mod:`optuna.integration` and usecases are "
+"available in  `optuna/examples "
+"<https://github.com/optuna/optuna/tree/master/examples/>`_."
 msgstr ""
 
-#: ../../source/tutorial/pruning.rst:74
+#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:205
+msgid "Set up the median stopping rule as the pruning condition."
+msgstr ""
+
+#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:254
+msgid ""
+"As you can see, several trials were pruned (stopped) before they finished"
+" all of the iterations. The format of message is ``\"Trial <Trial Number>"
+" pruned.\"``."
+msgstr ""
+
+#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:260
+msgid "Which Sampler and Pruner Should be Used?"
+msgstr ""
+
+#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:262
+msgid ""
+"From the benchmark results which are available at `optuna/optuna - wiki "
+"\"Benchmarks with Kurobako\" <https://github.com/optuna/optuna/wiki"
+"/%5BUnder-Construction%5D-Benchmarks>`_, at least for not deep learning "
+"tasks, we would say that"
+msgstr ""
+
+#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:264
+msgid ""
+"For :class:`optuna.samplers.RandomSampler`, "
+":class:`optuna.pruners.MedianPruner` is the best."
+msgstr ""
+
+#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:265
+msgid ""
+"For :class:`optuna.samplers.TPESampler`, "
+":class:`optuna.pruners.Hyperband` is the best."
+msgstr ""
+
+#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:267
+msgid ""
+"However, note that the benchmark is not deep learning. For deep learning "
+"tasks, consult the below table from `Ozaki et al, Hyperparameter "
+"Optimization Methods: Overview and Characteristics, in IEICE Trans, "
+"Vol.J103-D No.9 pp.615-631, 2020 "
+"<https://doi.org/10.14923/transinfj.2019JDR0003>`_,"
+msgstr ""
+
+#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:272
+msgid "Parallel Compute Resource"
+msgstr ""
+
+#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:272
+msgid "Categorical/Conditional Hyperparameters"
+msgstr ""
+
+#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:272
+msgid "Recommended Algorithms"
+msgstr ""
+
+#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:274
+msgid "Limited"
+msgstr ""
+
+#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:274
+#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:278
+msgid "No"
+msgstr ""
+
+#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:274
+msgid "TPE. GP-EI if search space is low-dimensional and continuous."
+msgstr ""
+
+#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:276
+#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:280
+msgid "Yes"
+msgstr ""
+
+#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:276
+msgid "TPE. GP-EI if search space is low-dimensional and continuous"
+msgstr ""
+
+#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:278
+msgid "Sufficient"
+msgstr ""
+
+#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:278
+msgid "CMA-ES, Random Search"
+msgstr ""
+
+#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:280
+msgid "Random Search or Genetic Algorithm"
+msgstr ""
+
+#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:287
 msgid "Integration Modules for Pruning"
 msgstr ""
 
-#: ../../source/tutorial/pruning.rst:75
+#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:288
 msgid ""
 "To implement pruning mechanism in much simpler forms, Optuna provides "
 "integration modules for the following libraries."
 msgstr ""
 
-#: ../../source/tutorial/pruning.rst:77
-msgid "XGBoost: :class:`optuna.integration.XGBoostPruningCallback`"
-msgstr ""
-
-#: ../../source/tutorial/pruning.rst:78
-msgid "LightGBM: :class:`optuna.integration.LightGBMPruningCallback`"
-msgstr ""
-
-#: ../../source/tutorial/pruning.rst:79
-msgid "Chainer: :class:`optuna.integration.ChainerPruningExtension`"
-msgstr ""
-
-#: ../../source/tutorial/pruning.rst:80
-msgid "Keras: :class:`optuna.integration.KerasPruningCallback`"
-msgstr ""
-
-#: ../../source/tutorial/pruning.rst:81
-msgid "TensorFlow :class:`optuna.integration.TensorFlowPruningHook`"
-msgstr ""
-
-#: ../../source/tutorial/pruning.rst:82
-msgid "tf.keras :class:`optuna.integration.TFKerasPruningCallback`"
-msgstr ""
-
-#: ../../source/tutorial/pruning.rst:83
-msgid "MXNet :class:`optuna.integration.MXNetPruningCallback`"
-msgstr ""
-
-#: ../../source/tutorial/pruning.rst:84
-msgid "PyTorch Ignite :class:`optuna.integration.PyTorchIgnitePruningHandler`"
-msgstr ""
-
-#: ../../source/tutorial/pruning.rst:85
+#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:290
 msgid ""
-"PyTorch Lightning "
-":class:`optuna.integration.PyTorchLightningPruningCallback`"
+"For the complete list of Optuna's integration modules, see "
+":mod:`optuna.integration`."
 msgstr ""
 
-#: ../../source/tutorial/pruning.rst:86
-msgid "FastAI :class:`optuna.integration.FastAIPruningCallback`"
-msgstr ""
-
-#: ../../source/tutorial/pruning.rst:88
+#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:292
 msgid ""
 "For example, :class:`~optuna.integration.XGBoostPruningCallback` "
 "introduces pruning without directly changing the logic of training "
 "iteration. (See also `example "
-"<https://github.com/optuna/optuna/blob/master/examples/pruning/xgboost_integration.py>`_"
+"<https://github.com/optuna/optuna/blob/master/examples/xgboost/xgboost_integration.py>`_"
 " for the entire script.)"
 msgstr ""
 
-#: ../../source/tutorial/rdb.rst:4
+#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:303
+msgid "**Total running time of the script:** ( 0 minutes  1.440 seconds)"
+msgstr ""
+
+#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:318
+msgid ""
+":download:`Download Python source code: "
+"003_efficient_optimization_algorithms.py "
+"<003_efficient_optimization_algorithms.py>`"
+msgstr ""
+
+#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:324
+msgid ""
+":download:`Download Jupyter notebook: "
+"003_efficient_optimization_algorithms.ipynb "
+"<003_efficient_optimization_algorithms.ipynb>`"
+msgstr ""
+
+#: ../../source/tutorial/10_key_features/004_distributed.rst:13
+msgid ""
+"Click :ref:`here "
+"<sphx_glr_download_tutorial_10_key_features_004_distributed.py>` to "
+"download the full example code"
+msgstr ""
+
+#: ../../source/tutorial/10_key_features/004_distributed.rst:24
+msgid "Easy Parallelization"
+msgstr ""
+
+#: ../../source/tutorial/10_key_features/004_distributed.rst:26
+msgid "It's straightforward to parallelize :func:`optuna.study.Study.optimize`."
+msgstr ""
+
+#: ../../source/tutorial/10_key_features/004_distributed.rst:28
+msgid "If you want to manually execute Optuna optimization:"
+msgstr ""
+
+#: ../../source/tutorial/10_key_features/004_distributed.rst:30
+msgid "start an RDB server (this example uses MySQL)"
+msgstr ""
+
+#: ../../source/tutorial/10_key_features/004_distributed.rst:31
+msgid "create a study with `--storage` argument"
+msgstr ""
+
+#: ../../source/tutorial/10_key_features/004_distributed.rst:32
+msgid "share the study among multiple nodes and processes"
+msgstr ""
+
+#: ../../source/tutorial/10_key_features/004_distributed.rst:34
+msgid ""
+"Of course, you can use Kubernetes as in `the kubernetes examples "
+"<https://github.com/optuna/optuna/tree/master/examples/kubernetes>`_."
+msgstr ""
+
+#: ../../source/tutorial/10_key_features/004_distributed.rst:36
+msgid ""
+"To just see how parallel optimization works in Optuna, check the below "
+"video."
+msgstr ""
+
+#: ../../source/tutorial/10_key_features/004_distributed.rst:44
+msgid "Create a Study"
+msgstr ""
+
+#: ../../source/tutorial/10_key_features/004_distributed.rst:46
+msgid ""
+"You can create a study using ``optuna create-study`` command. "
+"Alternatively, in Python script you can use :func:`optuna.create_study`."
+msgstr ""
+
+#: ../../source/tutorial/10_key_features/004_distributed.rst:57
+msgid ""
+"Then, write an optimization script. Let's assume that ``foo.py`` contains"
+" the following code."
+msgstr ""
+
+#: ../../source/tutorial/10_key_features/004_distributed.rst:77
+msgid "Share the Study among Multiple Nodes and Processes"
+msgstr ""
+
+#: ../../source/tutorial/10_key_features/004_distributed.rst:79
+msgid ""
+"Finally, run the shared study from multiple processes. For example, run "
+"``Process 1`` in a terminal, and do ``Process 2`` in another one. They "
+"get parameter suggestions based on shared trials' history."
+msgstr ""
+
+#: ../../source/tutorial/10_key_features/004_distributed.rst:83
+msgid "Process 1:"
+msgstr ""
+
+#: ../../source/tutorial/10_key_features/004_distributed.rst:92
+msgid "Process 2 (the same command as process 1):"
+msgstr ""
+
+#: ../../source/tutorial/10_key_features/004_distributed.rst:102
+msgid ""
+"We do not recommend SQLite for distributed optimizations at scale because"
+" it may cause deadlocks and serious performance issues. Please consider "
+"to use another database engine like PostgreSQL or MySQL."
+msgstr ""
+
+#: ../../source/tutorial/10_key_features/004_distributed.rst:105
+msgid ""
+"Please avoid putting the SQLite database on NFS when running distributed "
+"optimizations. See also: https://www.sqlite.org/faq.html#q5"
+msgstr ""
+
+#: ../../source/tutorial/10_key_features/004_distributed.rst:110
+msgid "**Total running time of the script:** ( 0 minutes  0.000 seconds)"
+msgstr ""
+
+#: ../../source/tutorial/10_key_features/004_distributed.rst:125
+msgid ""
+":download:`Download Python source code: 004_distributed.py "
+"<004_distributed.py>`"
+msgstr ""
+
+#: ../../source/tutorial/10_key_features/004_distributed.rst:131
+msgid ""
+":download:`Download Jupyter notebook: 004_distributed.ipynb "
+"<004_distributed.ipynb>`"
+msgstr ""
+
+#: ../../source/tutorial/10_key_features/005_visualization.rst:13
+msgid ""
+"Click :ref:`here "
+"<sphx_glr_download_tutorial_10_key_features_005_visualization.py>` to "
+"download the full example code"
+msgstr ""
+
+#: ../../source/tutorial/10_key_features/005_visualization.rst:24
+msgid "Quick Visualization for Hyperparameter Optimization Analysis"
+msgstr ""
+
+#: ../../source/tutorial/10_key_features/005_visualization.rst:26
+msgid ""
+"Optuna provides various visualization features in "
+":mod:`optuna.visualization` to analyze optimization results visually."
+msgstr ""
+
+#: ../../source/tutorial/10_key_features/005_visualization.rst:28
+msgid ""
+"This tutorial walks you through this module by visualizing the history of"
+" lightgbm model for breast cancer dataset."
+msgstr ""
+
+#: ../../source/tutorial/10_key_features/005_visualization.rst:63
+#: ../../source/tutorial/20_recipes/008_specify_params.rst:70
+msgid "Define the objective function."
+msgstr ""
+
+#: ../../source/tutorial/10_key_features/005_visualization.rst:125
+msgid "Plot functions"
+msgstr ""
+
+#: ../../source/tutorial/10_key_features/005_visualization.rst:126
+msgid ""
+"Visualize the optimization history. See "
+":func:`~optuna.visualization.plot_optimization_history` for the details."
+msgstr ""
+
+#: ../../source/tutorial/10_key_features/005_visualization.rst:150
+msgid ""
+"Visualize the learning curves of the trials. See "
+":func:`~optuna.visualization.plot_intermediate_values` for the details."
+msgstr ""
+
+#: ../../source/tutorial/10_key_features/005_visualization.rst:174
+msgid ""
+"Visualize high-dimensional parameter relationships. See "
+":func:`~optuna.visualization.plot_parallel_coordinate` for the details."
+msgstr ""
+
+#: ../../source/tutorial/10_key_features/005_visualization.rst:198
+#: ../../source/tutorial/10_key_features/005_visualization.rst:246
+#: ../../source/tutorial/10_key_features/005_visualization.rst:294
+msgid "Select parameters to visualize."
+msgstr ""
+
+#: ../../source/tutorial/10_key_features/005_visualization.rst:222
+msgid ""
+"Visualize hyperparameter relationships. See "
+":func:`~optuna.visualization.plot_contour` for the details."
+msgstr ""
+
+#: ../../source/tutorial/10_key_features/005_visualization.rst:270
+msgid ""
+"Visualize individual hyperparameters as slice plot. See "
+":func:`~optuna.visualization.plot_slice` for the details."
+msgstr ""
+
+#: ../../source/tutorial/10_key_features/005_visualization.rst:318
+msgid ""
+"Visualize parameter importances. See "
+":func:`~optuna.visualization.plot_param_importances` for the details."
+msgstr ""
+
+#: ../../source/tutorial/10_key_features/005_visualization.rst:342
+msgid ""
+"Visualize empirical distribution function. See "
+":func:`~optuna.visualization.plot_edf` for the details."
+msgstr ""
+
+#: ../../source/tutorial/10_key_features/005_visualization.rst:366
+msgid "**Total running time of the script:** ( 0 minutes  5.513 seconds)"
+msgstr ""
+
+#: ../../source/tutorial/10_key_features/005_visualization.rst:381
+msgid ""
+":download:`Download Python source code: 005_visualization.py "
+"<005_visualization.py>`"
+msgstr ""
+
+#: ../../source/tutorial/10_key_features/005_visualization.rst:387
+msgid ""
+":download:`Download Jupyter notebook: 005_visualization.ipynb "
+"<005_visualization.ipynb>`"
+msgstr ""
+
+#: ../../source/tutorial/10_key_features/sg_execution_times.rst:7
+#: ../../source/tutorial/20_recipes/sg_execution_times.rst:7
+msgid "Computation times"
+msgstr ""
+
+#: ../../source/tutorial/10_key_features/sg_execution_times.rst:8
+msgid "**00:07.743** total execution time for **tutorial_10_key_features** files:"
+msgstr ""
+
+#: ../../source/tutorial/10_key_features/sg_execution_times.rst:11
+msgid ""
+":ref:`sphx_glr_tutorial_10_key_features_005_visualization.py` "
+"(``005_visualization.py``)"
+msgstr ""
+
+#: ../../source/tutorial/10_key_features/sg_execution_times.rst:11
+msgid "00:05.513"
+msgstr ""
+
+#: ../../source/tutorial/10_key_features/sg_execution_times.rst:11
+#: ../../source/tutorial/10_key_features/sg_execution_times.rst:13
+#: ../../source/tutorial/10_key_features/sg_execution_times.rst:15
+#: ../../source/tutorial/10_key_features/sg_execution_times.rst:17
+#: ../../source/tutorial/10_key_features/sg_execution_times.rst:19
+#: ../../source/tutorial/20_recipes/sg_execution_times.rst:11
+#: ../../source/tutorial/20_recipes/sg_execution_times.rst:13
+#: ../../source/tutorial/20_recipes/sg_execution_times.rst:15
+#: ../../source/tutorial/20_recipes/sg_execution_times.rst:17
+#: ../../source/tutorial/20_recipes/sg_execution_times.rst:19
+#: ../../source/tutorial/20_recipes/sg_execution_times.rst:21
+#: ../../source/tutorial/20_recipes/sg_execution_times.rst:23
+#: ../../source/tutorial/20_recipes/sg_execution_times.rst:25
+#: ../../source/tutorial/20_recipes/sg_execution_times.rst:27
+#: ../../source/tutorial/20_recipes/sg_execution_times.rst:29
+msgid "0.0 MB"
+msgstr ""
+
+#: ../../source/tutorial/10_key_features/sg_execution_times.rst:13
+msgid ""
+":ref:`sphx_glr_tutorial_10_key_features_003_efficient_optimization_algorithms.py`"
+" (``003_efficient_optimization_algorithms.py``)"
+msgstr ""
+
+#: ../../source/tutorial/10_key_features/sg_execution_times.rst:13
+msgid "00:01.440"
+msgstr ""
+
+#: ../../source/tutorial/10_key_features/sg_execution_times.rst:15
+msgid ":ref:`sphx_glr_tutorial_10_key_features_001_first.py` (``001_first.py``)"
+msgstr ""
+
+#: ../../source/tutorial/10_key_features/sg_execution_times.rst:15
+msgid "00:00.789"
+msgstr ""
+
+#: ../../source/tutorial/10_key_features/sg_execution_times.rst:17
+msgid ""
+":ref:`sphx_glr_tutorial_10_key_features_002_configurations.py` "
+"(``002_configurations.py``)"
+msgstr ""
+
+#: ../../source/tutorial/10_key_features/sg_execution_times.rst:17
+msgid "00:00.001"
+msgstr ""
+
+#: ../../source/tutorial/10_key_features/sg_execution_times.rst:19
+msgid ""
+":ref:`sphx_glr_tutorial_10_key_features_004_distributed.py` "
+"(``004_distributed.py``)"
+msgstr ""
+
+#: ../../source/tutorial/10_key_features/sg_execution_times.rst:19
+#: ../../source/tutorial/20_recipes/sg_execution_times.rst:19
+#: ../../source/tutorial/20_recipes/sg_execution_times.rst:21
+#: ../../source/tutorial/20_recipes/sg_execution_times.rst:23
+#: ../../source/tutorial/20_recipes/sg_execution_times.rst:25
+#: ../../source/tutorial/20_recipes/sg_execution_times.rst:27
+#: ../../source/tutorial/20_recipes/sg_execution_times.rst:29
+msgid "00:00.000"
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/001_rdb.rst:13
+msgid ""
+"Click :ref:`here <sphx_glr_download_tutorial_20_recipes_001_rdb.py>` to "
+"download the full example code"
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/001_rdb.rst:24
 msgid "Saving/Resuming Study with RDB Backend"
 msgstr ""
 
-#: ../../source/tutorial/rdb.rst:6
+#: ../../source/tutorial/20_recipes/001_rdb.rst:26
 msgid ""
 "An RDB backend enables persistent experiments (i.e., to save and resume a"
 " study) as well as access to history of studies. In addition, we can run "
@@ -532,121 +900,403 @@ msgid ""
 ":ref:`distributed`."
 msgstr ""
 
-#: ../../source/tutorial/rdb.rst:9
+#: ../../source/tutorial/20_recipes/001_rdb.rst:29
 msgid ""
 "In this section, let's try simple examples running on a local environment"
 " with SQLite DB."
 msgstr ""
 
-#: ../../source/tutorial/rdb.rst:12
+#: ../../source/tutorial/20_recipes/001_rdb.rst:32
 msgid ""
 "You can also utilize other RDB backends, e.g., PostgreSQL or MySQL, by "
-"setting the storage argument to the DB's URL. Please refer to "
+"setting the storage argument to the DB's URL. Please refer to "
 "`SQLAlchemy's document "
 "<https://docs.sqlalchemy.org/en/latest/core/engines.html#database-urls>`_"
 " for how to set up the URL."
 msgstr ""
 
-#: ../../source/tutorial/rdb.rst:17
+#: ../../source/tutorial/20_recipes/001_rdb.rst:37
 msgid "New Study"
 msgstr ""
 
-#: ../../source/tutorial/rdb.rst:19
+#: ../../source/tutorial/20_recipes/001_rdb.rst:39
 msgid ""
 "We can create a persistent study by calling "
 ":func:`~optuna.study.create_study` function as follows. An SQLite file "
 "``example.db`` is automatically initialized with a new study record."
 msgstr ""
 
-#: ../../source/tutorial/rdb.rst:28
+#: ../../source/tutorial/20_recipes/001_rdb.rst:75
 msgid ""
 "To run a study, call :func:`~optuna.study.Study.optimize` method passing "
 "an objective function."
 msgstr ""
 
-#: ../../source/tutorial/rdb.rst:39
+#: ../../source/tutorial/20_recipes/001_rdb.rst:110
 msgid "Resume Study"
 msgstr ""
 
-#: ../../source/tutorial/rdb.rst:41
+#: ../../source/tutorial/20_recipes/001_rdb.rst:112
 msgid ""
 "To resume a study, instantiate a :class:`~optuna.study.Study` object "
-"passing the study name ``example-study`` and the DB URL "
-"``sqlite:///example.db``."
+"passing the study name ``example-study`` and the DB URL ``sqlite"
+":///example-study.db``."
 msgstr ""
 
-#: ../../source/tutorial/rdb.rst:49
+#: ../../source/tutorial/20_recipes/001_rdb.rst:145
 msgid "Experimental History"
 msgstr ""
 
-#: ../../source/tutorial/rdb.rst:51
+#: ../../source/tutorial/20_recipes/001_rdb.rst:147
 msgid ""
 "We can access histories of studies and trials via the "
 ":class:`~optuna.study.Study` class. For example, we can get all trials of"
 " ``example-study`` as:"
 msgstr ""
 
-#: ../../source/tutorial/rdb.rst:60
+#: ../../source/tutorial/20_recipes/001_rdb.rst:175
 msgid ""
 "The method :func:`~optuna.study.Study.trials_dataframe` returns a pandas "
 "dataframe like:"
 msgstr ""
 
-#: ../../source/tutorial/rdb.rst:78
+#: ../../source/tutorial/20_recipes/001_rdb.rst:207
 msgid ""
 "A :class:`~optuna.study.Study` object also provides properties such as "
 ":attr:`~optuna.study.Study.trials`, "
 ":attr:`~optuna.study.Study.best_value`, "
-":attr:`~optuna.study.Study.best_params` (see also :ref:`firstopt`)."
+":attr:`~optuna.study.Study.best_params` (see also :ref:`first`)."
 msgstr ""
 
-#: ../../source/tutorial/sampler.rst:4
+#: ../../source/tutorial/20_recipes/001_rdb.rst:242
+msgid "**Total running time of the script:** ( 0 minutes  0.490 seconds)"
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/001_rdb.rst:257
+msgid ":download:`Download Python source code: 001_rdb.py <001_rdb.py>`"
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/001_rdb.rst:263
+msgid ":download:`Download Jupyter notebook: 001_rdb.ipynb <001_rdb.ipynb>`"
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/002_multi_objective.rst:6
+msgid ""
+"Click :ref:`here "
+"<sphx_glr_download_tutorial_20_recipes_002_multi_objective.py>`     to "
+"download the full example code"
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/002_multi_objective.rst:15
+msgid "Multi-objective Optimization with Optuna"
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/002_multi_objective.rst:17
+msgid ""
+"This tutorial showcases Optuna's multi-objective optimization feature by "
+"optimizing the validation accuracy of Fashion MNIST dataset and the FLOPS"
+" of the model implemented in PyTorch."
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/002_multi_objective.rst:20
+msgid ""
+"We use `thop <https://github.com/Lyken17/pytorch-OpCounter>`_ to measure "
+"FLOPS."
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/002_multi_objective.rst:94
+msgid ""
+"Define multi-objective objective function. Objectives are FLOPS and "
+"accuracy."
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/002_multi_objective.rst:138
+msgid "Run multi-objective optimization"
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/002_multi_objective.rst:140
+msgid ""
+"If your optimization problem is multi-objective, Optuna assumes that you "
+"will specify the optimization direction for each objective. Specifically,"
+" in this example, we want to minimize the FLOPS (we want a faster model) "
+"and maximize the accuracy. So we set ``directions`` to ``[\"minimize\", "
+"\"maximize\"]``."
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/002_multi_objective.rst:360
+msgid "Check trials on pareto front visually"
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/002_multi_objective.rst:392
+msgid "**Total running time of the script:** ( 2 minutes  7.469 seconds)"
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/002_multi_objective.rst:407
+msgid ""
+":download:`Download Python source code: 002_multi_objective.py "
+"<002_multi_objective.py>`"
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/002_multi_objective.rst:413
+msgid ""
+":download:`Download Jupyter notebook: 002_multi_objective.ipynb "
+"<002_multi_objective.ipynb>`"
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/003_attributes.rst:13
+msgid ""
+"Click :ref:`here "
+"<sphx_glr_download_tutorial_20_recipes_003_attributes.py>` to download "
+"the full example code"
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/003_attributes.rst:24
+msgid "User Attributes"
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/003_attributes.rst:26
+msgid "This feature is to annotate experiments with user-defined attributes."
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/003_attributes.rst:31
+msgid "Adding User Attributes to Studies"
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/003_attributes.rst:33
+msgid ""
+"A :class:`~optuna.study.Study` object provides "
+":func:`~optuna.study.Study.set_user_attr` method to register a pair of "
+"key and value as an user-defined attribute. A key is supposed to be a "
+"``str``, and a value be any object serializable with ``json.dumps``."
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/003_attributes.rst:63
+msgid ""
+"We can access annotated attributes with "
+":attr:`~optuna.study.Study.user_attr` property."
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/003_attributes.rst:90
+msgid ""
+":class:`~optuna.struct.StudySummary` object, which can be retrieved by "
+":func:`~optuna.study.get_all_study_summaries`, also contains user-defined"
+" attributes."
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/003_attributes.rst:121
+msgid ""
+"``optuna study set-user-attr`` command, which sets an attribute via "
+"command line interface."
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/003_attributes.rst:126
+msgid "Adding User Attributes to Trials"
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/003_attributes.rst:128
+msgid ""
+"As with :class:`~optuna.study.Study`, a :class:`~optuna.trial.Trial` "
+"object provides :func:`~optuna.trial.Trial.set_user_attr` method. "
+"Attributes are set inside an objective function."
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/003_attributes.rst:162
+msgid "We can access annotated attributes as:"
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/003_attributes.rst:188
+msgid ""
+"Note that, in this example, the attribute is not annotated to a "
+":class:`~optuna.study.Study` but a single :class:`~optuna.trial.Trial`."
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/003_attributes.rst:194
+msgid "**Total running time of the script:** ( 0 minutes  0.181 seconds)"
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/003_attributes.rst:209
+msgid ""
+":download:`Download Python source code: 003_attributes.py "
+"<003_attributes.py>`"
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/003_attributes.rst:215
+msgid ""
+":download:`Download Jupyter notebook: 003_attributes.ipynb "
+"<003_attributes.ipynb>`"
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/004_cli.rst:13
+msgid ""
+"Click :ref:`here <sphx_glr_download_tutorial_20_recipes_004_cli.py>` to "
+"download the full example code"
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/004_cli.rst:24
+msgid "Command-Line Interface"
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/004_cli.rst:1
+msgid "Command"
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/004_cli.rst:1
+msgid "Description"
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/004_cli.rst:1
+msgid "create-study"
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/004_cli.rst:1
+msgid "Create a new study."
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/004_cli.rst:1
+msgid "delete-study"
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/004_cli.rst:1
+msgid "Delete a specified study."
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/004_cli.rst:1
+msgid "dashboard"
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/004_cli.rst:1
+msgid "Launch web dashboard (beta)."
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/004_cli.rst:1
+msgid "storage upgrade"
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/004_cli.rst:1
+msgid "Upgrade the schema of a storage."
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/004_cli.rst:1
+msgid "studies"
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/004_cli.rst:1
+msgid "Show a list of studies."
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/004_cli.rst:1
+msgid "study optimize"
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/004_cli.rst:1
+msgid "Start optimization of a study."
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/004_cli.rst:1
+msgid "study set-user-attr"
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/004_cli.rst:1
+msgid "Set a user attribute to a study."
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/004_cli.rst:38
+msgid "Optuna provides command-line interface as shown in the above table."
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/004_cli.rst:40
+msgid ""
+"Let us assume you are not in IPython shell and writing Python script "
+"files instead. It is totally fine to write scripts like the following:"
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/004_cli.rst:80
+msgid ""
+"However, we can reduce boilerplate codes by using our ``optuna`` command."
+" Let us assume that ``foo.py`` contains only the following code."
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/004_cli.rst:103
+msgid ""
+"Even so, we can invoke the optimization as follows. (Don't care about "
+"``--storage sqlite:///example.db`` for now, which is described in "
+":ref:`rdb`.)"
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/004_cli.rst:120
+msgid ""
+"Please note that ``foo.py`` only contains the definition of the objective"
+" function. By giving the script file name and the method name of "
+"objective function to ``optuna study optimize`` command, we can invoke "
+"the optimization."
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/004_cli.rst:127
+msgid "**Total running time of the script:** ( 0 minutes  0.413 seconds)"
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/004_cli.rst:142
+msgid ":download:`Download Python source code: 004_cli.py <004_cli.py>`"
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/004_cli.rst:148
+msgid ":download:`Download Jupyter notebook: 004_cli.ipynb <004_cli.ipynb>`"
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/005_user_defined_sampler.rst:13
+msgid ""
+"Click :ref:`here "
+"<sphx_glr_download_tutorial_20_recipes_005_user_defined_sampler.py>` to "
+"download the full example code"
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/005_user_defined_sampler.rst:24
 msgid "User-Defined Sampler"
 msgstr ""
 
-#: ../../source/tutorial/sampler.rst:6
+#: ../../source/tutorial/20_recipes/005_user_defined_sampler.rst:26
 msgid "Thanks to user-defined samplers, you can:"
 msgstr ""
 
-#: ../../source/tutorial/sampler.rst:8
+#: ../../source/tutorial/20_recipes/005_user_defined_sampler.rst:28
 msgid "experiment your own sampling algorithms,"
 msgstr ""
 
-#: ../../source/tutorial/sampler.rst:9
+#: ../../source/tutorial/20_recipes/005_user_defined_sampler.rst:29
 msgid ""
 "implement task-specific algorithms to refine the optimization "
 "performance, or"
 msgstr ""
 
-#: ../../source/tutorial/sampler.rst:10
+#: ../../source/tutorial/20_recipes/005_user_defined_sampler.rst:30
 msgid ""
 "wrap other optimization libraries to integrate them into Optuna pipelines"
 " (e.g., :class:`~optuna.integration.SkoptSampler`)."
 msgstr ""
 
-#: ../../source/tutorial/sampler.rst:12
+#: ../../source/tutorial/20_recipes/005_user_defined_sampler.rst:32
 msgid ""
 "This section describes the internal behavior of sampler classes and shows"
 " an example of implementing a user-defined sampler."
 msgstr ""
 
-#: ../../source/tutorial/sampler.rst:16
+#: ../../source/tutorial/20_recipes/005_user_defined_sampler.rst:36
 msgid "Overview of Sampler"
 msgstr ""
 
-#: ../../source/tutorial/sampler.rst:18
+#: ../../source/tutorial/20_recipes/005_user_defined_sampler.rst:38
 msgid ""
 "A sampler has the responsibility to determine the parameter values to be "
 "evaluated in a trial. When a `suggest` API (e.g., "
-":func:`~optuna.trial.Trial.suggest_uniform`) is called inside an "
-"objective function, the corresponding distribution object (e.g., "
+":func:`~optuna.trial.Trial.suggest_float`) is called inside an objective "
+"function, the corresponding distribution object (e.g., "
 ":class:`~optuna.distributions.UniformDistribution`) is created "
 "internally. A sampler samples a parameter value from the distribution. "
 "The sampled value is returned to the caller of the `suggest` API and "
 "evaluated in the objective function."
 msgstr ""
 
-#: ../../source/tutorial/sampler.rst:21
+#: ../../source/tutorial/20_recipes/005_user_defined_sampler.rst:41
 msgid ""
 "To create a new sampler, you need to define a class that inherits "
 ":class:`~optuna.samplers.BaseSampler`. The base class has three abstract "
@@ -656,7 +1306,7 @@ msgid ""
 ":meth:`~optuna.samplers.BaseSampler.sample_independent`."
 msgstr ""
 
-#: ../../source/tutorial/sampler.rst:27
+#: ../../source/tutorial/20_recipes/005_user_defined_sampler.rst:47
 msgid ""
 "As the method names imply, Optuna supports two types of sampling: one is "
 "**relative sampling** that can consider the correlation of the parameters"
@@ -664,7 +1314,7 @@ msgid ""
 "parameter independently."
 msgstr ""
 
-#: ../../source/tutorial/sampler.rst:29
+#: ../../source/tutorial/20_recipes/005_user_defined_sampler.rst:49
 msgid ""
 "At the beginning of a trial, "
 ":meth:`~optuna.samplers.BaseSampler.infer_relative_search_space` is "
@@ -676,23 +1326,23 @@ msgid ""
 " parameters that don't belong to the relative search space."
 msgstr ""
 
-#: ../../source/tutorial/sampler.rst:32
+#: ../../source/tutorial/20_recipes/005_user_defined_sampler.rst:52
 msgid ""
 "Please refer to the document of :class:`~optuna.samplers.BaseSampler` for"
 " further details."
 msgstr ""
 
-#: ../../source/tutorial/sampler.rst:36
+#: ../../source/tutorial/20_recipes/005_user_defined_sampler.rst:56
 msgid "An Example: Implementing SimulatedAnnealingSampler"
 msgstr ""
 
-#: ../../source/tutorial/sampler.rst:38
+#: ../../source/tutorial/20_recipes/005_user_defined_sampler.rst:58
 msgid ""
 "For example, the following code defines a sampler based on `Simulated "
 "Annealing (SA) <https://en.wikipedia.org/wiki/Simulated_annealing>`_:"
 msgstr ""
 
-#: ../../source/tutorial/sampler.rst:102
+#: ../../source/tutorial/20_recipes/005_user_defined_sampler.rst:130
 msgid ""
 "In favor of code simplicity, the above implementation doesn't support "
 "some features (e.g., maximization). If you're interested in how to "
@@ -701,19 +1351,19 @@ msgid ""
 "<https://github.com/optuna/optuna/blob/master/examples/samplers/simulated_annealing_sampler.py>`_."
 msgstr ""
 
-#: ../../source/tutorial/sampler.rst:108
+#: ../../source/tutorial/20_recipes/005_user_defined_sampler.rst:136
 msgid ""
 "You can use ``SimulatedAnnealingSampler`` in the same way as built-in "
 "samplers as follows:"
 msgstr ""
 
-#: ../../source/tutorial/sampler.rst:122
+#: ../../source/tutorial/20_recipes/005_user_defined_sampler.rst:177
 msgid ""
 "In this optimization, the values of ``x`` and ``y`` parameters are "
 "sampled by using ``SimulatedAnnealingSampler.sample_relative`` method."
 msgstr ""
 
-#: ../../source/tutorial/sampler.rst:126
+#: ../../source/tutorial/20_recipes/005_user_defined_sampler.rst:181
 msgid ""
 "Strictly speaking, in the first trial, "
 "``SimulatedAnnealingSampler.sample_independent`` method is used to sample"
@@ -723,3 +1373,735 @@ msgid ""
 "the search space if there are no complete trials."
 msgstr ""
 
+#: ../../source/tutorial/20_recipes/005_user_defined_sampler.rst:190
+msgid "**Total running time of the script:** ( 0 minutes  0.438 seconds)"
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/005_user_defined_sampler.rst:205
+msgid ""
+":download:`Download Python source code: 005_user_defined_sampler.py "
+"<005_user_defined_sampler.py>`"
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/005_user_defined_sampler.rst:211
+msgid ""
+":download:`Download Jupyter notebook: 005_user_defined_sampler.ipynb "
+"<005_user_defined_sampler.ipynb>`"
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/006_user_defined_pruner.rst:6
+msgid ""
+"Click :ref:`here "
+"<sphx_glr_download_tutorial_20_recipes_006_user_defined_pruner.py>`     "
+"to download the full example code"
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/006_user_defined_pruner.rst:15
+msgid "User-Defined Pruner"
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/006_user_defined_pruner.rst:17
+msgid ""
+"In :mod:`optuna.pruners`, we described how an objective function can "
+"optionally include calls to a pruning feature which allows Optuna to "
+"terminate an optimization trial when intermediate results do not appear "
+"promising. In this document, we describe how to implement your own "
+"pruner, i.e., a custom strategy for determining when to stop a trial."
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/006_user_defined_pruner.rst:24
+msgid "Overview of Pruning Interface"
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/006_user_defined_pruner.rst:26
+msgid ""
+"The :func:`~optuna.study.create_study` constructor takes, as an optional "
+"argument, a pruner inheriting from :class:`~optuna.pruners.BasePruner`. "
+"The pruner should implement the abstract method "
+":func:`~optuna.pruners.BasePruner.prune`, which takes arguments for the "
+"associated :class:`~optuna.study.Study` and :class:`~optuna.trial.Trial` "
+"and returns a boolean value: :obj:`True` if the trial should be pruned "
+"and :obj:`False` otherwise. Using the Study and Trial objects, you can "
+"access all other trials through the :func:`~optuna.study.Study.get_trial`"
+" method and, and from a trial, its reported intermediate values through "
+"the :func:`~optuna.trial.FrozenTrial.intermediate_values` (a dictionary "
+"which maps an integer ``step`` to a float value)."
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/006_user_defined_pruner.rst:38
+msgid ""
+"You can refer to the source code of the built-in Optuna pruners as "
+"templates for building your own. In this document, for illustration, we "
+"describe the construction and usage of a simple (but aggressive) pruner "
+"which prunes trials that are in last place compared to completed trials "
+"at the same step."
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/006_user_defined_pruner.rst:44
+msgid ""
+"Please refer to the documentation of :class:`~optuna.pruners.BasePruner` "
+"or, for example, :class:`~optuna.pruners.ThresholdPruner` or "
+":class:`~optuna.pruners.PercentilePruner` for more robust examples of "
+"pruner implementation, including error checking and complex pruner-"
+"internal logic."
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/006_user_defined_pruner.rst:50
+msgid "An Example: Implementing ``LastPlacePruner``"
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/006_user_defined_pruner.rst:52
+msgid ""
+"We aim to optimize the ``loss`` and ``alpha`` hyperparameters for a "
+"stochastic gradient descent classifier (``SGDClassifier``) run on the "
+"sklearn iris dataset. We implement a pruner which terminates a trial at a"
+" certain step if it is in last place compared to completed trials at the "
+"same step. We begin considering pruning after a \"warmup\" of 1 training "
+"step and 5 completed trials. For demonstration purposes, we :func:`print`"
+" a diagnostic message from ``prune`` when it is about to return "
+":obj:`True` (indicating pruning)."
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/006_user_defined_pruner.rst:60
+msgid ""
+"It may be important to note that the ``SGDClassifier`` score, as it is "
+"evaluated on a holdout set, decreases with enough training steps due to "
+"overfitting. This means that a trial could be pruned even if it had a "
+"favorable (high) value on a previous training set. After pruning, Optuna "
+"will take the intermediate value last reported as the value of the trial."
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/006_user_defined_pruner.rst:119
+msgid ""
+"Lastly, let's confirm the implementation is correct with the simple "
+"hyperparameter optimization."
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/006_user_defined_pruner.rst:189
+msgid "**Total running time of the script:** ( 0 minutes  0.764 seconds)"
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/006_user_defined_pruner.rst:204
+msgid ""
+":download:`Download Python source code: 006_user_defined_pruner.py "
+"<006_user_defined_pruner.py>`"
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/006_user_defined_pruner.rst:210
+msgid ""
+":download:`Download Jupyter notebook: 006_user_defined_pruner.ipynb "
+"<006_user_defined_pruner.ipynb>`"
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/007_optuna_callback.rst:13
+msgid ""
+"Click :ref:`here "
+"<sphx_glr_download_tutorial_20_recipes_007_optuna_callback.py>` to "
+"download the full example code"
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/007_optuna_callback.rst:24
+msgid "Callback for Study.optimize"
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/007_optuna_callback.rst:26
+msgid ""
+"This tutorial showcases how to use & implement Optuna ``Callback`` for "
+":func:`~optuna.study.Study.optimize`."
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/007_optuna_callback.rst:28
+msgid ""
+"``Callback`` is called after every evaluation of ``objective``, and it "
+"takes :class:`~optuna.study.Study` and :class:`~optuna.trial.FrozenTrial`"
+" as arguments, and does some work."
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/007_optuna_callback.rst:31
+msgid ":class:`~optuna.integration.MLflowCallback` is a great example."
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/007_optuna_callback.rst:36
+msgid "Stop optimization after some trials are pruned in a row"
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/007_optuna_callback.rst:38
+msgid ""
+"This example implements a stateful callback which stops the optimization "
+"if a certain number of trials are pruned in a row. The number of trials "
+"pruned in a row is specified by ``threshold``."
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/007_optuna_callback.rst:75
+msgid ""
+"This objective prunes all the trials except for the first 5 trials "
+"(``trial.number`` starts with 0)."
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/007_optuna_callback.rst:97
+msgid ""
+"Here, we set the threshold to ``2``: optimization finishes once two "
+"trials are pruned in a row. So, we expect this study to stop after 7 "
+"trials."
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/007_optuna_callback.rst:139
+msgid ""
+"As you can see in the log above, the study stopped after 7 trials as "
+"expected."
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/007_optuna_callback.rst:144
+msgid "**Total running time of the script:** ( 0 minutes  0.006 seconds)"
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/007_optuna_callback.rst:159
+msgid ""
+":download:`Download Python source code: 007_optuna_callback.py "
+"<007_optuna_callback.py>`"
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/007_optuna_callback.rst:165
+msgid ""
+":download:`Download Jupyter notebook: 007_optuna_callback.ipynb "
+"<007_optuna_callback.ipynb>`"
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/008_specify_params.rst:13
+msgid ""
+"Click :ref:`here "
+"<sphx_glr_download_tutorial_20_recipes_008_specify_params.py>` to "
+"download the full example code"
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/008_specify_params.rst:24
+msgid "Specify Hyperparameters Manually"
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/008_specify_params.rst:26
+msgid ""
+"It's natural that you have some specific sets of hyperparameters to try "
+"first such as initial learning rate values and the number of leaves. "
+"Also, it's also possible that you've already tried those sets before "
+"having Optuna find better sets of hyperparameters."
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/008_specify_params.rst:31
+msgid "Optuna provides two APIs to support such cases:"
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/008_specify_params.rst:33
+msgid ""
+"Passing those sets of hyperparameters and let Optuna evaluate them - "
+":func:`~optuna.study.Study.enqueue_trial`"
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/008_specify_params.rst:34
+msgid ""
+"Adding the results of those sets as completed ``Trial``\\s - "
+":func:`~optuna.study.Study.add_trial`"
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/008_specify_params.rst:37
+msgid "First Scenario: Have Optuna evaluate your hyperparameters"
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/008_specify_params.rst:39
+msgid ""
+"In this scenario, let's assume you have some out-of-box sets of "
+"hyperparameters but have not evaluated them yet and decided to use Optuna"
+" to find better sets of hyperparameters."
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/008_specify_params.rst:42
+msgid ""
+"Optuna has :func:`optuna.study.Study.enqueue_trial` which lets you pass "
+"those sets of hyperparameters to Optuna and Optuna will evaluate them."
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/008_specify_params.rst:45
+msgid ""
+"This section walks you through how to use this lit API with `LightGBM "
+"<https://lightgbm.readthedocs.io/en/latest/>`_."
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/008_specify_params.rst:113
+msgid "Then, construct ``Study`` for hyperparameter optimization."
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/008_specify_params.rst:131
+msgid ""
+"Here, we get Optuna evaluate some sets with larger ``\"bagging_fraq\"`` "
+"value and the default values."
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/008_specify_params.rst:291
+msgid "Second scenario: Have Optuna utilize already evaluated hyperparameters"
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/008_specify_params.rst:293
+msgid ""
+"In this scenario, let's assume you have some out-of-box sets of "
+"hyperparameters and you have already evaluated them but the results are "
+"not desirable so that you are thinking of using Optuna."
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/008_specify_params.rst:297
+msgid ""
+"Optuna has :func:`optuna.study.Study.add_trial` which lets you register "
+"those results to Optuna and then Optuna will sample hyperparameters "
+"taking them into account."
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/008_specify_params.rst:300
+msgid "In this section,  the ``objective`` is the same as the first scenario."
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/008_specify_params.rst:465
+msgid "**Total running time of the script:** ( 0 minutes  7.480 seconds)"
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/008_specify_params.rst:480
+msgid ""
+":download:`Download Python source code: 008_specify_params.py "
+"<008_specify_params.py>`"
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/008_specify_params.rst:486
+msgid ""
+":download:`Download Jupyter notebook: 008_specify_params.ipynb "
+"<008_specify_params.ipynb>`"
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/009_ask_and_tell.rst:6
+msgid ""
+"Click :ref:`here "
+"<sphx_glr_download_tutorial_20_recipes_009_ask_and_tell.py>`     to "
+"download the full example code"
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/009_ask_and_tell.rst:15
+msgid "Ask-and-Tell Interface"
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/009_ask_and_tell.rst:17
+msgid ""
+"Optuna has an `Ask-and-Tell` interface, which provides a more flexible "
+"interface for hyperparameter optimization. This tutorial explains three "
+"use-cases when the ask-and-tell interface is beneficial:"
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/009_ask_and_tell.rst:20
+msgid ""
+":ref:`Apply-optuna-to-an-existing-optimization-problem-with-minimum-"
+"modifications`"
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/009_ask_and_tell.rst:21
+msgid ":ref:`Define-and-Run`"
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/009_ask_and_tell.rst:22
+msgid ":ref:`Batch-Optimization`"
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/009_ask_and_tell.rst:28
+msgid ""
+"Apply Optuna to an existing optimization problem with minimum "
+"modifications"
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/009_ask_and_tell.rst:30
+msgid ""
+"Let's consider the traditional supervised classification problem; you aim"
+" to maximize the validation accuracy. To do so, you train "
+"`LogisticRegression` as a simple model."
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/009_ask_and_tell.rst:59
+msgid ""
+"Then you try to optimize hyperparameters ``C`` and ``solver`` of the "
+"classifier by using optuna. When you introduce optuna naively, you define"
+" an ``objective`` function such that it takes ``trial`` and calls "
+"``suggest_*`` methods of ``trial`` to sample the hyperparameters:"
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/009_ask_and_tell.rst:107
+msgid ""
+"This interface is not flexible enough. For example, if ``objective`` "
+"requires additional arguments other than ``trial``, you need to define a "
+"class as in `How to define objective functions that have own arguments? "
+"<../../faq.html#how-to-define-objective-functions-that-have-own-"
+"arguments>`_. The ask-and-tell interface provides a more flexible syntax "
+"to optimize hyperparameters. The following example is equivalent to the "
+"previous code block."
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/009_ask_and_tell.rst:140
+msgid ""
+"The main difference is to use two methods: :func:`optuna.study.Study.ask`"
+" and :func:`optuna.study.Study.tell`. :func:`optuna.study.Study.ask` "
+"creates a trial that can sample hyperparameters, and "
+":func:`optuna.study.Study.tell` finishes the trial by passing ``trial`` "
+"and an objective value. You can apply Optuna's hyperparameter "
+"optimization to your original code without an ``objective`` function."
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/009_ask_and_tell.rst:147
+msgid ""
+"If you want to make your optimization faster with a pruner, you need to "
+"explicitly pass the state of trial to the argument of "
+":func:`optuna.study.Study.tell` method as follows:"
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/009_ask_and_tell.rst:199
+msgid ""
+":func:`optuna.study.Study.tell` method can take a trial number rather "
+"than the trial object. ``study.tell(trial.number, y)`` is equivalent to "
+"``study.tell(trial, y)``."
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/009_ask_and_tell.rst:206
+msgid "Define-and-Run"
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/009_ask_and_tell.rst:207
+msgid ""
+"The ask-and-tell interface supports both `define-by-run` and `define-and-"
+"run` APIs. This section shows the example of the `define-and-run` API in "
+"addition to the define-by-run example above."
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/009_ask_and_tell.rst:211
+msgid ""
+"Define distributions for the hyperparameters before calling the "
+":func:`optuna.study.Study.ask` method for define-and-run API. For "
+"example,"
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/009_ask_and_tell.rst:231
+msgid ""
+"Pass ``distributions`` to :func:`optuna.study.Study.ask` method at each "
+"call. The retuned ``trial`` contains the suggested hyperparameters."
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/009_ask_and_tell.rst:276
+msgid "Batch Optimization"
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/009_ask_and_tell.rst:277
+msgid ""
+"The ask-and-tell interface enables us to optimize a batched objective for"
+" faster optimization. For example, parallelizable evaluation, operation "
+"over vectors, etc."
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/009_ask_and_tell.rst:280
+msgid ""
+"The following objective takes batched hyperparameters ``xs`` instead of a"
+" single hyperparameter and calculates the objective over the full vector."
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/009_ask_and_tell.rst:299
+msgid ""
+"In the following example, the number of hyperparameters in a batch is "
+":math:`10`, and ``batched_objective`` is evaluated three times. Thus, the"
+" number of trials is :math:`30`. Note that you need to store either "
+"``trial_ids`` or ``trial`` to call :func:`optuna.study.Study.tell` method"
+" after the batched evaluations."
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/009_ask_and_tell.rst:340
+msgid "**Total running time of the script:** ( 0 minutes  0.155 seconds)"
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/009_ask_and_tell.rst:355
+msgid ""
+":download:`Download Python source code: 009_ask_and_tell.py "
+"<009_ask_and_tell.py>`"
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/009_ask_and_tell.rst:361
+msgid ""
+":download:`Download Jupyter notebook: 009_ask_and_tell.ipynb "
+"<009_ask_and_tell.ipynb>`"
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/010_reuse_best_trial.rst:6
+msgid ""
+"Click :ref:`here "
+"<sphx_glr_download_tutorial_20_recipes_010_reuse_best_trial.py>`     to "
+"download the full example code"
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/010_reuse_best_trial.rst:15
+msgid "Re-use the best values"
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/010_reuse_best_trial.rst:17
+msgid ""
+"In some cases, you may want to re-evaluate the objective function with "
+"the best hyperparameters again after the hyperparameter optimization."
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/010_reuse_best_trial.rst:20
+msgid "For example,"
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/010_reuse_best_trial.rst:22
+msgid ""
+"You have found good hyperparameters with Optuna and want to run a similar"
+" `objective` function using the best hyperparameters found so far to "
+"further analyze the results, or"
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/010_reuse_best_trial.rst:23
+msgid ""
+"You have optimized with Optuna using a partial dataset to reduce training"
+" time. After the hyperparameter tuning, you want to train the model using"
+" the whole dataset with the best hyperparameter values found."
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/010_reuse_best_trial.rst:25
+msgid ""
+":class:`~optuna.study.Study.best_trial` provides an interface to re-"
+"evaluate the objective function with the current best hyperparameter "
+"values."
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/010_reuse_best_trial.rst:27
+msgid ""
+"This tutorial shows an example of how to re-run a different `objective` "
+"function with the current best values, like the first example above."
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/010_reuse_best_trial.rst:31
+msgid "Investigating the best model further"
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/010_reuse_best_trial.rst:33
+msgid ""
+"Let's consider a classical supervised classification problem with Optuna "
+"as follows:"
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/010_reuse_best_trial.rst:80
+msgid ""
+"Suppose after the hyperparameter optimization, you want to calculate "
+"other evaluation metrics such as recall, precision, and f1-score on the "
+"same dataset. You can define another objective function that shares most "
+"of the ``objective`` function to reproduce the model with the best "
+"hyperparameters."
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/010_reuse_best_trial.rst:118
+msgid "Pass ``study.best_trial`` as the argument of ``detailed_objective``."
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/010_reuse_best_trial.rst:142
+msgid ""
+"The difference between :class:`~optuna.study.Study.best_trial` and "
+"ordinal trials"
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/010_reuse_best_trial.rst:144
+msgid ""
+"This uses :class:`~optuna.study.Study.best_trial`, which returns the "
+"`best_trial` as a :class:`~optuna.trial.FrozenTrial`. The "
+":class:`~optuna.trial.FrozenTrial` is different from an active trial and "
+"behaves differently from :class:`~optuna.trial.Trial` in some situations."
+" For example, pruning does not work because "
+":class:`~optuna.trial.FrozenTrial.should_prune` always returns ``False``."
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/010_reuse_best_trial.rst:154
+msgid "**Total running time of the script:** ( 0 minutes  0.072 seconds)"
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/010_reuse_best_trial.rst:169
+msgid ""
+":download:`Download Python source code: 010_reuse_best_trial.py "
+"<010_reuse_best_trial.py>`"
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/010_reuse_best_trial.rst:175
+msgid ""
+":download:`Download Jupyter notebook: 010_reuse_best_trial.ipynb "
+"<010_reuse_best_trial.ipynb>`"
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/sg_execution_times.rst:8
+msgid "**02:08.461** total execution time for **tutorial_20_recipes** files:"
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/sg_execution_times.rst:11
+msgid ""
+":ref:`sphx_glr_tutorial_20_recipes_002_multi_objective.py` "
+"(``002_multi_objective.py``)"
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/sg_execution_times.rst:11
+msgid "02:07.469"
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/sg_execution_times.rst:13
+msgid ""
+":ref:`sphx_glr_tutorial_20_recipes_006_user_defined_pruner.py` "
+"(``006_user_defined_pruner.py``)"
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/sg_execution_times.rst:13
+msgid "00:00.764"
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/sg_execution_times.rst:15
+msgid ""
+":ref:`sphx_glr_tutorial_20_recipes_009_ask_and_tell.py` "
+"(``009_ask_and_tell.py``)"
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/sg_execution_times.rst:15
+msgid "00:00.155"
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/sg_execution_times.rst:17
+msgid ""
+":ref:`sphx_glr_tutorial_20_recipes_010_reuse_best_trial.py` "
+"(``010_reuse_best_trial.py``)"
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/sg_execution_times.rst:17
+msgid "00:00.072"
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/sg_execution_times.rst:19
+msgid ":ref:`sphx_glr_tutorial_20_recipes_001_rdb.py` (``001_rdb.py``)"
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/sg_execution_times.rst:21
+msgid ""
+":ref:`sphx_glr_tutorial_20_recipes_003_attributes.py` "
+"(``003_attributes.py``)"
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/sg_execution_times.rst:23
+msgid ":ref:`sphx_glr_tutorial_20_recipes_004_cli.py` (``004_cli.py``)"
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/sg_execution_times.rst:25
+msgid ""
+":ref:`sphx_glr_tutorial_20_recipes_005_user_defined_sampler.py` "
+"(``005_user_defined_sampler.py``)"
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/sg_execution_times.rst:27
+msgid ""
+":ref:`sphx_glr_tutorial_20_recipes_007_optuna_callback.py` "
+"(``007_optuna_callback.py``)"
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/sg_execution_times.rst:29
+msgid ""
+":ref:`sphx_glr_tutorial_20_recipes_008_specify_params.py` "
+"(``008_specify_params.py``)"
+msgstr ""
+
+#: ../../source/tutorial/index.rst:8
+msgid "Tutorial"
+msgstr ""
+
+#: ../../source/tutorial/index.rst:10
+msgid ""
+"If you are new to Optuna or want a general introduction, we highly "
+"recommend the below video."
+msgstr "如果你不熟悉Optuna或者需要一个一般的介绍，我们强烈推荐下面这个视频。"
+
+#: ../../source/tutorial/index.rst:31
+msgid "Key Features"
+msgstr ""
+
+#: ../../source/tutorial/index.rst:33
+msgid ""
+"Showcases Optuna's `Key Features "
+"<https://github.com/optuna/optuna/blob/master/README.md#key-features>`_."
+msgstr ""
+
+#: ../../source/tutorial/index.rst:46
+msgid ":ref:`sphx_glr_tutorial_10_key_features_001_first.py`"
+msgstr ""
+
+#: ../../source/tutorial/index.rst:67
+msgid ":ref:`sphx_glr_tutorial_10_key_features_002_configurations.py`"
+msgstr ""
+
+#: ../../source/tutorial/index.rst:88
+msgid ":ref:`sphx_glr_tutorial_10_key_features_003_efficient_optimization_algorithms.py`"
+msgstr ""
+
+#: ../../source/tutorial/index.rst:109
+msgid ":ref:`sphx_glr_tutorial_10_key_features_004_distributed.py`"
+msgstr ""
+
+#: ../../source/tutorial/index.rst:130
+msgid ":ref:`sphx_glr_tutorial_10_key_features_005_visualization.py`"
+msgstr ""
+
+#: ../../source/tutorial/index.rst:152
+msgid "Recipes"
+msgstr ""
+
+#: ../../source/tutorial/index.rst:154
+msgid "Showcases the recipes that might help you using Optuna with comfort."
+msgstr ""
+
+#: ../../source/tutorial/index.rst:167
+msgid ":ref:`sphx_glr_tutorial_20_recipes_001_rdb.py`"
+msgstr ""
+
+#: ../../source/tutorial/index.rst:188
+msgid ":ref:`sphx_glr_tutorial_20_recipes_002_multi_objective.py`"
+msgstr ""
+
+#: ../../source/tutorial/index.rst:209
+msgid ":ref:`sphx_glr_tutorial_20_recipes_003_attributes.py`"
+msgstr ""
+
+#: ../../source/tutorial/index.rst:230
+msgid ":ref:`sphx_glr_tutorial_20_recipes_004_cli.py`"
+msgstr ""
+
+#: ../../source/tutorial/index.rst:251
+msgid ":ref:`sphx_glr_tutorial_20_recipes_005_user_defined_sampler.py`"
+msgstr ""
+
+#: ../../source/tutorial/index.rst:272
+msgid ":ref:`sphx_glr_tutorial_20_recipes_006_user_defined_pruner.py`"
+msgstr ""
+
+#: ../../source/tutorial/index.rst:293
+msgid ":ref:`sphx_glr_tutorial_20_recipes_007_optuna_callback.py`"
+msgstr ""
+
+#: ../../source/tutorial/index.rst:314
+msgid ":ref:`sphx_glr_tutorial_20_recipes_008_specify_params.py`"
+msgstr ""
+
+#: ../../source/tutorial/index.rst:335
+msgid ":ref:`sphx_glr_tutorial_20_recipes_009_ask_and_tell.py`"
+msgstr ""
+
+#: ../../source/tutorial/index.rst:356
+msgid ":ref:`sphx_glr_tutorial_20_recipes_010_reuse_best_trial.py`"
+msgstr ""
+
+#: ../../source/tutorial/index.rst:381
+msgid ""
+":download:`Download all examples in Python source code: "
+"tutorial_python.zip </tutorial/tutorial_python.zip>`"
+msgstr ""
+
+#: ../../source/tutorial/index.rst:387
+msgid ""
+":download:`Download all examples in Jupyter notebooks: "
+"tutorial_jupyter.zip </tutorial/tutorial_jupyter.zip>`"
+msgstr ""

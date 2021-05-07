@@ -1,4 +1,4 @@
-optuna.pruners.NopPruner
+﻿optuna.pruners.NopPruner
 ========================
 
 .. currentmodule:: optuna.pruners

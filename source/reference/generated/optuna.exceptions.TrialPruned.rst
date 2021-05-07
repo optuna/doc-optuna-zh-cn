@@ -1,4 +1,4 @@
-optuna.exceptions.TrialPruned
+﻿optuna.exceptions.TrialPruned
 =============================
 
 .. currentmodule:: optuna.exceptions

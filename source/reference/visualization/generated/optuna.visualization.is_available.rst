@@ -1,4 +1,4 @@
-optuna.visualization.is\_available
+﻿optuna.visualization.is\_available
 ==================================
 
 .. currentmodule:: optuna.visualization

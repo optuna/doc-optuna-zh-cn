@@ -1,4 +1,4 @@
-optuna.integration.ChainerMNStudy
+﻿optuna.integration.ChainerMNStudy
 =================================
 
 .. currentmodule:: optuna.integration

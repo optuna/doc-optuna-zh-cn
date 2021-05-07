@@ -1,4 +1,4 @@
-optuna.get\_all\_study\_summaries
+﻿optuna.get\_all\_study\_summaries
 =================================
 
 .. currentmodule:: optuna

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 2.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-20 13:35-0400\n"
+"POT-Creation-Date: 2021-05-06 18:29-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,32 +17,32 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.8.0\n"
 
-#: ../../source/tutorial/20_recipes/005_user_defined_sampler.rst:6
+#: ../../source/tutorial/20_recipes/005_user_defined_sampler.rst:13
 msgid ""
 "Click :ref:`here "
-"<sphx_glr_download_tutorial_20_recipes_005_user_defined_sampler.py>`     "
-"to download the full example code"
+"<sphx_glr_download_tutorial_20_recipes_005_user_defined_sampler.py>` to "
+"download the full example code"
 msgstr ""
 
-#: ../../source/tutorial/20_recipes/005_user_defined_sampler.rst:15
+#: ../../source/tutorial/20_recipes/005_user_defined_sampler.rst:24
 msgid "User-Defined Sampler"
 msgstr "用户定义的采样器 (Sampler)"
 
-#: ../../source/tutorial/20_recipes/005_user_defined_sampler.rst:17
+#: ../../source/tutorial/20_recipes/005_user_defined_sampler.rst:26
 msgid "Thanks to user-defined samplers, you can:"
 msgstr "你可以用用户定义的 sampler 来实现："
 
-#: ../../source/tutorial/20_recipes/005_user_defined_sampler.rst:19
+#: ../../source/tutorial/20_recipes/005_user_defined_sampler.rst:28
 msgid "experiment your own sampling algorithms,"
 msgstr "试验你自己的采样算法，"
 
-#: ../../source/tutorial/20_recipes/005_user_defined_sampler.rst:20
+#: ../../source/tutorial/20_recipes/005_user_defined_sampler.rst:29
 msgid ""
 "implement task-specific algorithms to refine the optimization "
 "performance, or"
 msgstr "实现具体任务对应的算法来改进优化性能，或者"
 
-#: ../../source/tutorial/20_recipes/005_user_defined_sampler.rst:21
+#: ../../source/tutorial/20_recipes/005_user_defined_sampler.rst:30
 msgid ""
 "wrap other optimization libraries to integrate them into Optuna pipelines"
 " (e.g., :class:`~optuna.integration.SkoptSampler`)."
@@ -50,17 +50,17 @@ msgstr ""
 "将其他的优化框架包装起来，整合进 Optuna 的流水线中 (比如  "
 ":class:`~optuna.integration.SkoptSampler` )."
 
-#: ../../source/tutorial/20_recipes/005_user_defined_sampler.rst:23
+#: ../../source/tutorial/20_recipes/005_user_defined_sampler.rst:32
 msgid ""
 "This section describes the internal behavior of sampler classes and shows"
 " an example of implementing a user-defined sampler."
 msgstr "本节将介绍 sampler 类的内部行为，并展示一个实现用户自定义 sampler 的例子。"
 
-#: ../../source/tutorial/20_recipes/005_user_defined_sampler.rst:27
+#: ../../source/tutorial/20_recipes/005_user_defined_sampler.rst:36
 msgid "Overview of Sampler"
 msgstr "Sampler 概述"
 
-#: ../../source/tutorial/20_recipes/005_user_defined_sampler.rst:29
+#: ../../source/tutorial/20_recipes/005_user_defined_sampler.rst:38
 #, fuzzy
 msgid ""
 "A sampler has the responsibility to determine the parameter values to be "
@@ -77,7 +77,7 @@ msgstr ""
 ":class:`~optuna.distributions.UniformDistribution`) 就会从内部被创建. Sampler "
 "则从该分布汇总采样一个参数值. 该采样值会被返回给 `suggest` API 的调用者，进而在目标函数内被求值。"
 
-#: ../../source/tutorial/20_recipes/005_user_defined_sampler.rst:32
+#: ../../source/tutorial/20_recipes/005_user_defined_sampler.rst:41
 msgid ""
 "To create a new sampler, you need to define a class that inherits "
 ":class:`~optuna.samplers.BaseSampler`. The base class has three abstract "
@@ -91,7 +91,7 @@ msgstr ""
 " :meth:`~optuna.samplers.BaseSampler.sample_relative` 和 "
 ":meth:`~optuna.samplers.BaseSampler.sample_independent`."
 
-#: ../../source/tutorial/20_recipes/005_user_defined_sampler.rst:38
+#: ../../source/tutorial/20_recipes/005_user_defined_sampler.rst:47
 msgid ""
 "As the method names imply, Optuna supports two types of sampling: one is "
 "**relative sampling** that can consider the correlation of the parameters"
@@ -101,7 +101,7 @@ msgstr ""
 "从这些方法名可以看出，Optuna 支持两种类型的采样过程：一种是 **relative sampling**, 它考虑了单个 trial "
 "内参数之间的相关性， 另一种是 **independent sampling**, 它对各个参数的采样是彼此独立的。"
 
-#: ../../source/tutorial/20_recipes/005_user_defined_sampler.rst:40
+#: ../../source/tutorial/20_recipes/005_user_defined_sampler.rst:49
 msgid ""
 "At the beginning of a trial, "
 ":meth:`~optuna.samplers.BaseSampler.infer_relative_search_space` is "
@@ -119,17 +119,17 @@ msgstr ""
 "会被触发，它从该搜索空间中对相对参数进行采样。在目标函数的执行过程中，:meth:`~optuna.samplers.BaseSampler.sample_independent`"
 " 用于对不属于该相对搜索空间的参数进行采样。"
 
-#: ../../source/tutorial/20_recipes/005_user_defined_sampler.rst:43
+#: ../../source/tutorial/20_recipes/005_user_defined_sampler.rst:52
 msgid ""
 "Please refer to the document of :class:`~optuna.samplers.BaseSampler` for"
 " further details."
 msgstr "更多细节参见 :class:`~optuna.samplers.BaseSampler` 的文档。"
 
-#: ../../source/tutorial/20_recipes/005_user_defined_sampler.rst:47
+#: ../../source/tutorial/20_recipes/005_user_defined_sampler.rst:56
 msgid "An Example: Implementing SimulatedAnnealingSampler"
 msgstr "案例: 实现模拟退火 Sampler (SimulatedAnnealingSampler)"
 
-#: ../../source/tutorial/20_recipes/005_user_defined_sampler.rst:49
+#: ../../source/tutorial/20_recipes/005_user_defined_sampler.rst:58
 msgid ""
 "For example, the following code defines a sampler based on `Simulated "
 "Annealing (SA) <https://en.wikipedia.org/wiki/Simulated_annealing>`_:"
@@ -137,7 +137,7 @@ msgstr ""
 "下面的代码根据 `Simulated Annealing (SA) "
 "<https://en.wikipedia.org/wiki/Simulated_annealing>`_ 定义类一个 sampler："
 
-#: ../../source/tutorial/20_recipes/005_user_defined_sampler.rst:118
+#: ../../source/tutorial/20_recipes/005_user_defined_sampler.rst:130
 msgid ""
 "In favor of code simplicity, the above implementation doesn't support "
 "some features (e.g., maximization). If you're interested in how to "
@@ -149,17 +149,17 @@ msgstr ""
 "`examples/samplers/simulated_annealing.py "
 "<https://github.com/optuna/optuna/blob/master/examples/samplers/simulated_annealing_sampler.py>`_."
 
-#: ../../source/tutorial/20_recipes/005_user_defined_sampler.rst:124
+#: ../../source/tutorial/20_recipes/005_user_defined_sampler.rst:136
 msgid ""
 "You can use ``SimulatedAnnealingSampler`` in the same way as built-in "
 "samplers as follows:"
 msgstr "你可以像使用内置的 sampler 一样使用  ``SimulatedAnnealingSampler``:"
 
-#: ../../source/tutorial/20_recipes/005_user_defined_sampler.rst:152
+#: ../../source/tutorial/20_recipes/005_user_defined_sampler.rst:165
 msgid "Out:"
 msgstr ""
 
-#: ../../source/tutorial/20_recipes/005_user_defined_sampler.rst:162
+#: ../../source/tutorial/20_recipes/005_user_defined_sampler.rst:177
 msgid ""
 "In this optimization, the values of ``x`` and ``y`` parameters are "
 "sampled by using ``SimulatedAnnealingSampler.sample_relative`` method."
@@ -167,7 +167,7 @@ msgstr ""
 "在上面这个优化过程中，参数 ``x`` 和 ``y`` 的值都是由 "
 "``SimulatedAnnealingSampler.sample_relative`` 方法采样得出的。"
 
-#: ../../source/tutorial/20_recipes/005_user_defined_sampler.rst:166
+#: ../../source/tutorial/20_recipes/005_user_defined_sampler.rst:181
 msgid ""
 "Strictly speaking, in the first trial, "
 "``SimulatedAnnealingSampler.sample_independent`` method is used to sample"
@@ -181,22 +181,22 @@ msgstr ""
 "``SimulatedAnnealingSampler.infer_relative_search_space``  中的 "
 ":func:`~optuna.samplers.intersection_search_space` 是无法对搜索空间进行推断的。"
 
-#: ../../source/tutorial/20_recipes/005_user_defined_sampler.rst:175
-msgid "**Total running time of the script:** ( 0 minutes  0.351 seconds)"
+#: ../../source/tutorial/20_recipes/005_user_defined_sampler.rst:190
+msgid "**Total running time of the script:** ( 0 minutes  0.438 seconds)"
 msgstr ""
 
-#: ../../source/tutorial/20_recipes/005_user_defined_sampler.rst:190
+#: ../../source/tutorial/20_recipes/005_user_defined_sampler.rst:205
 msgid ""
 ":download:`Download Python source code: 005_user_defined_sampler.py "
 "<005_user_defined_sampler.py>`"
 msgstr ""
 
-#: ../../source/tutorial/20_recipes/005_user_defined_sampler.rst:196
+#: ../../source/tutorial/20_recipes/005_user_defined_sampler.rst:211
 msgid ""
 ":download:`Download Jupyter notebook: 005_user_defined_sampler.ipynb "
 "<005_user_defined_sampler.ipynb>`"
 msgstr ""
 
-#: ../../source/tutorial/20_recipes/005_user_defined_sampler.rst:203
+#: ../../source/tutorial/20_recipes/005_user_defined_sampler.rst:218
 msgid "`Gallery generated by Sphinx-Gallery <https://sphinx-gallery.github.io>`_"
 msgstr ""

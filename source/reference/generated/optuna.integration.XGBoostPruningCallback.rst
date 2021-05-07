@@ -1,4 +1,4 @@
-optuna.integration.XGBoostPruningCallback
+﻿optuna.integration.XGBoostPruningCallback
 =========================================
 
 .. currentmodule:: optuna.integration

@@ -1,4 +1,4 @@
-optuna.visualization.plot\_parallel\_coordinate
+﻿optuna.visualization.plot\_parallel\_coordinate
 ===============================================
 
 .. currentmodule:: optuna.visualization

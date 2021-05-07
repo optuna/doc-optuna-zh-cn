@@ -1,4 +1,4 @@
-optuna.logging.disable\_default\_handler
+﻿optuna.logging.disable\_default\_handler
 ========================================
 
 .. currentmodule:: optuna.logging

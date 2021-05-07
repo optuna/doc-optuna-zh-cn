@@ -1,4 +1,4 @@
-optuna.distributions.distribution\_to\_json
+﻿optuna.distributions.distribution\_to\_json
 ===========================================
 
 .. currentmodule:: optuna.distributions

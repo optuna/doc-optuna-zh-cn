@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 2.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-14 18:04-0500\n"
+"POT-Creation-Date: 2021-05-06 18:29-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,48 +21,69 @@ msgstr ""
 msgid "optuna.integration.CatalystPruningCallback"
 msgstr ""
 
-#: of optuna.integration.CatalystPruningCallback:1
+#: of optuna.integration.catalyst.CatalystPruningCallback:1
 msgid "Catalyst callback to prune unpromising trials."
 msgstr ""
 
-#: of optuna.integration.CatalystPruningCallback:3
+#: of optuna.integration.catalyst.CatalystPruningCallback:3
 msgid ""
-"See `the example <https://github.com/optuna/optuna/blob/master/ "
-"examples/catalyst_simple.py>`_ if you want to add a pruning callback "
-"which observes the accuracy of Catalyst's ``SupervisedRunner``."
+"This class is an alias to Catalyst's `OptunaPruningCallback <https"
+"://catalyst-"
+"team.github.io/catalyst/api/callbacks.html?highlight=optuna#catalyst.callbacks.optuna.OptunaPruningCallback>`_."
 msgstr ""
 
-#: of optuna.integration.CatalystPruningCallback
-msgid "参数"
+#: of optuna.integration.catalyst.CatalystPruningCallback:6
+msgid "See the Catalyst's documentation for the detailed description."
 msgstr ""
 
-#: of optuna.integration.CatalystPruningCallback:7
+#: of optuna.integration.catalyst.CatalystPruningCallback:9
 msgid ""
-"A :class:`~optuna.trial.Trial` corresponding to the current evaluation of"
-" the objective function."
+"Deprecated in v2.7.0. This feature will be removed in the future. The "
+"removal of this feature is currently scheduled for v4.0.0, but this "
+"schedule is subject to change. See "
+"https://github.com/optuna/optuna/releases/tag/v2.7.0."
 msgstr ""
 
-#: of optuna.integration.CatalystPruningCallback:9
-msgid ""
-"Name of a metric, which is passed to `catalyst.core.State.valid_metrics` "
-"dictionary to fetch the value of metric computed on validation set. "
-"Pruning decision is made based on this value."
-msgstr ""
+#~ msgid ""
+#~ "See `the example "
+#~ "<https://github.com/optuna/optuna/blob/master/ "
+#~ "examples/catalyst_simple.py>`_ if you want to"
+#~ " add a pruning callback which "
+#~ "observes the accuracy of Catalyst's "
+#~ "``SupervisedRunner``."
+#~ msgstr ""
 
-#: of optuna.integration.CatalystPruningCallback:15
-msgid ""
-"Added in v2.0.0 as an experimental feature. The interface may change in "
-"newer versions without prior notice. See "
-"https://github.com/optuna/optuna/releases/tag/v2.0.0."
-msgstr ""
+#~ msgid "参数"
+#~ msgstr ""
 
-#: ../../source/reference/generated/optuna.integration.CatalystPruningCallback.rst:12
-msgid "Methods"
-msgstr ""
+#~ msgid ""
+#~ "A :class:`~optuna.trial.Trial` corresponding to "
+#~ "the current evaluation of the objective"
+#~ " function."
+#~ msgstr ""
 
-#: ../../source/reference/generated/optuna.integration.CatalystPruningCallback.rst:15:<autosummary>:1
-msgid ""
-":obj:`on_epoch_end "
-"<optuna.integration.CatalystPruningCallback.on_epoch_end>`\\ \\(state\\)"
-msgstr ""
+#~ msgid ""
+#~ "Name of a metric, which is passed"
+#~ " to `catalyst.core.State.valid_metrics` dictionary "
+#~ "to fetch the value of metric "
+#~ "computed on validation set. Pruning "
+#~ "decision is made based on this "
+#~ "value."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Added in v2.0.0 as an experimental "
+#~ "feature. The interface may change in "
+#~ "newer versions without prior notice. See"
+#~ " https://github.com/optuna/optuna/releases/tag/v2.0.0."
+#~ msgstr ""
+
+#~ msgid "Methods"
+#~ msgstr ""
+
+#~ msgid ""
+#~ ":obj:`on_epoch_end "
+#~ "<optuna.integration.CatalystPruningCallback.on_epoch_end>`\\ "
+#~ "\\(state\\)"
+#~ msgstr ""
 

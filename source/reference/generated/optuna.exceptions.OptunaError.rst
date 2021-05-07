@@ -1,4 +1,4 @@
-optuna.exceptions.OptunaError
+﻿optuna.exceptions.OptunaError
 =============================
 
 .. currentmodule:: optuna.exceptions

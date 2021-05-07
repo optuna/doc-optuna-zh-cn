@@ -1,4 +1,4 @@
-optuna.pruners.BasePruner
+﻿optuna.pruners.BasePruner
 =========================
 
 .. currentmodule:: optuna.pruners

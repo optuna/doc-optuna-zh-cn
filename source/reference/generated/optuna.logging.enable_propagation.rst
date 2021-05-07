@@ -1,4 +1,4 @@
-optuna.logging.enable\_propagation
+﻿optuna.logging.enable\_propagation
 ==================================
 
 .. currentmodule:: optuna.logging

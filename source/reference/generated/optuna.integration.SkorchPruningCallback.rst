@@ -1,4 +1,4 @@
-optuna.integration.SkorchPruningCallback
+﻿optuna.integration.SkorchPruningCallback
 ========================================
 
 .. currentmodule:: optuna.integration

@@ -1,4 +1,4 @@
-optuna.samplers.NSGAIISampler
+﻿optuna.samplers.NSGAIISampler
 =============================
 
 .. currentmodule:: optuna.samplers

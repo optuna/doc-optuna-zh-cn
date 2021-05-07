@@ -1,4 +1,4 @@
-optuna.integration.LightGBMPruningCallback
+﻿optuna.integration.LightGBMPruningCallback
 ==========================================
 
 .. currentmodule:: optuna.integration

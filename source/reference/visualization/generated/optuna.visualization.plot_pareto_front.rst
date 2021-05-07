@@ -1,4 +1,4 @@
-optuna.visualization.plot\_pareto\_front
+﻿optuna.visualization.plot\_pareto\_front
 ========================================
 
 .. currentmodule:: optuna.visualization

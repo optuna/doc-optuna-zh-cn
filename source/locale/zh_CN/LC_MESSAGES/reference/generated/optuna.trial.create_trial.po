@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 2.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-20 13:35-0400\n"
+"POT-Creation-Date: 2021-05-06 18:29-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -44,9 +44,8 @@ msgstr ""
 
 #: of optuna.trial._frozen.create_trial:35
 msgid ""
-"When ``state`` is :obj:`None` or ``TrialState.COMPLETE``, the following "
-"parameters are required: * ``params`` * ``distributions`` * ``value`` or "
-"``values``"
+"When ``state`` is ``TrialState.COMPLETE``, the following parameters are "
+"required: * ``params`` * ``distributions`` * ``value`` or ``values``"
 msgstr ""
 
 #: of optuna.trial._frozen.create_trial
@@ -130,5 +129,12 @@ msgstr ""
 #~ "if the problem is multi-objective "
 #~ "optimization. Must be specified if "
 #~ "``state`` is :class:`TrialState.COMPLETE`."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "When ``state`` is :obj:`None` or "
+#~ "``TrialState.COMPLETE``, the following parameters"
+#~ " are required: * ``params`` * "
+#~ "``distributions`` * ``value`` or ``values``"
 #~ msgstr ""
 
