@@ -32,7 +32,7 @@ msgstr "重新使用最佳值"
 msgid ""
 "In some cases, you may want to re-evaluate the objective function with "
 "the best hyperparameters again after the hyperparameter optimization."
-msgstr "有时候, 在完成超参数优化以后, 你可能要用最佳的超参数对对目标函数重新求值."
+msgstr "有时候, 在完成超参数优化以后, 你可能要用最佳的超参数对目标函数重新求值."
 
 #: ../../source/tutorial/20_recipes/010_reuse_best_trial.rst:20
 msgid "For example,"

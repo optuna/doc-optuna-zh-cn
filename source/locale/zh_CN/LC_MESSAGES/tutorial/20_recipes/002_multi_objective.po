@@ -34,7 +34,7 @@ msgid ""
 "This tutorial showcases Optuna's multi-objective optimization feature by "
 "optimizing the validation accuracy of Fashion MNIST dataset and the FLOPS"
 " of the model implemented in PyTorch."
-msgstr "本教程借由同时优化 PyTorch 编写的模型在 MNIST 数据集上的验证集准确度以及 FLOPS 来展示 Optuna 的多目标优化特性."
+msgstr "本教程借由同时优化 PyTorch 编写的模型在 Fashion MNIST 数据集上的验证集准确度以及 FLOPS 来展示 Optuna 的多目标优化特性."
 
 #: ../../source/tutorial/20_recipes/002_multi_objective.rst:20
 msgid ""

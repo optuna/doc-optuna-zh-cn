@@ -34,7 +34,7 @@ msgid ""
 "interface for hyperparameter optimization. This tutorial explains three "
 "use-cases when the ask-and-tell interface is beneficial:"
 msgstr "Optuna 带有 `Ask-and-Tell` 接口, 它为超参数优化提供了一个更灵活的接口."
-"本教程展示了, 在三种情况下 ask-and-tell 接口是有益的."
+"本教程将展示三种可以用到ask-and-tell接口的情况."
 
 #: ../../source/tutorial/20_recipes/009_ask_and_tell.rst:20
 msgid ""
@@ -88,9 +88,9 @@ msgid ""
 "to optimize hyperparameters. The following example is equivalent to the "
 "previous code block."
 msgstr "这个接口并不灵活. 比如, 如果 ``objective`` "
-"需要不同于 ``trial`` 的额外参数, 你就需要顶一个类, 如同 `How to define objective functions that have own arguments? "
+"需要不同于 ``trial`` 的额外参数, 你就需要顶一个类, 就像 `How to define objective functions that have own arguments? "
 "<../../faq.html#how-to-define-objective-functions-that-have-own-"
-"arguments>`_ 里所做的. 而 ask-and-tell 接口提供了更加灵活的语法来优化超参数. 下面的例子等同于上面的代码块."
+"arguments>`_ 里做的那样. 而 ask-and-tell 接口提供了更加灵活的语法来优化超参数. 下面的例子等同于上面的代码块."
 
 #: ../../source/tutorial/20_recipes/009_ask_and_tell.rst:140
 msgid ""
@@ -158,7 +158,7 @@ msgid ""
 "The ask-and-tell interface enables us to optimize a batched objective for"
 " faster optimization. For example, parallelizable evaluation, operation "
 "over vectors, etc."
-msgstr "为了更快的优化, ask-and-tell 接口使我们可以优化一个批目标函数. 比如, 并行求值, 向量操作等."
+msgstr "为了更快地完成优化, ask-and-tell 接口使我们可以优化一个批目标函数. 比如, 并行求值, 向量操作等."
 
 #: ../../source/tutorial/20_recipes/009_ask_and_tell.rst:280
 msgid ""
