@@ -172,7 +172,7 @@ msgid ""
 "please follow the `contribution guide "
 "<https://github.com/optuna/optuna/blob/master/CONTRIBUTING.md>`__."
 msgstr ""
-"欢迎大家对Optuna的一切贡献！但是在发送pull request时请遵从 `contribution guide "
+"欢迎大家对Optuna的一切贡献！但是在发送 pull request 时请遵从 `contribution guide "
 "<https://github.com/optuna/optuna/blob/master/CONTRIBUTING.md>`__ 的规范."
 
 #: ../../source/index.rst:100

@@ -375,7 +375,7 @@ msgstr "如果使用 :class:`~optuna.trial.FixedTrial` 的话，你也可以用�
 
 #: ../../source/faq.rst:309
 msgid "How do I avoid running out of memory (OOM) when optimizing studies?"
-msgstr ""
+msgstr "在优化时, 我该如何避免耗尽内存 (running out of memory, OOM)?"
 
 #: ../../source/faq.rst:311
 msgid ""
