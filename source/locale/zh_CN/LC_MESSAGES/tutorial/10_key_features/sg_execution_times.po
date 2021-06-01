@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 2.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-20 13:35-0400\n"
+"POT-Creation-Date: 2021-05-06 18:29-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,7 +22,7 @@ msgid "Computation times"
 msgstr ""
 
 #: ../../source/tutorial/10_key_features/sg_execution_times.rst:8
-msgid "**00:06.136** total execution time for **tutorial_10_key_features** files:"
+msgid "**00:07.743** total execution time for **tutorial_10_key_features** files:"
 msgstr ""
 
 #: ../../source/tutorial/10_key_features/sg_execution_times.rst:11
@@ -32,7 +32,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/tutorial/10_key_features/sg_execution_times.rst:11
-msgid "00:04.418"
+msgid "00:05.513"
 msgstr ""
 
 #: ../../source/tutorial/10_key_features/sg_execution_times.rst:11
@@ -50,7 +50,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/tutorial/10_key_features/sg_execution_times.rst:13
-msgid "00:01.018"
+msgid "00:01.440"
 msgstr ""
 
 #: ../../source/tutorial/10_key_features/sg_execution_times.rst:15
@@ -58,7 +58,7 @@ msgid ":ref:`sphx_glr_tutorial_10_key_features_001_first.py` (``001_first.py``)"
 msgstr ""
 
 #: ../../source/tutorial/10_key_features/sg_execution_times.rst:15
-msgid "00:00.699"
+msgid "00:00.789"
 msgstr ""
 
 #: ../../source/tutorial/10_key_features/sg_execution_times.rst:17
@@ -80,12 +80,4 @@ msgstr ""
 #: ../../source/tutorial/10_key_features/sg_execution_times.rst:19
 msgid "00:00.000"
 msgstr ""
-
-#~ msgid ""
-#~ "**00:04.891** total execution time for "
-#~ "**tutorial_10_key_features** files:"
-#~ msgstr ""
-
-#~ msgid "00:04.891"
-#~ msgstr ""
 

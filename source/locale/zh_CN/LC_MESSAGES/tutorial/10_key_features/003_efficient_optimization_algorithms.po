@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 2.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-20 13:35-0400\n"
+"POT-Creation-Date: 2021-05-06 18:29-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,29 +17,29 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.8.0\n"
 
-#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:6
+#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:13
 msgid ""
 "Click :ref:`here "
 "<sphx_glr_download_tutorial_10_key_features_003_efficient_optimization_algorithms.py>`"
-"     to download the full example code"
+" to download the full example code"
 msgstr ""
 
-#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:15
+#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:24
 msgid "Efficient Optimization Algorithms"
 msgstr "高效的优化算法"
 
-#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:17
+#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:26
 msgid ""
 "Optuna enables efficient hyperparameter optimization by adopting state-"
 "of-the-art algorithms for sampling hyperparameters and pruning "
 "efficiently unpromising trials."
 msgstr "通过采用最先进的超参数采样算法和对无望 trial 的剪枝， Optuna使得高效的超参数优化成为可能。"
 
-#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:22
+#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:31
 msgid "Sampling Algorithms"
 msgstr "采样算法"
 
-#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:24
+#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:33
 msgid ""
 "Samplers basically continually narrow down the search space using the "
 "records of suggested parameter values and evaluated objective values, "
@@ -50,11 +50,11 @@ msgstr ""
 "利用 suggested 参数值和评估的目标值的记录，采样器基本上不断缩小搜索空间，直到找到一个最佳的搜索空间，其产生的参数会带来 "
 "更好的目标函数值。关于采样器如何 suggest 参数的更详细的解释见 :class:`optuna.samplers.BaseSampler`."
 
-#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:28
+#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:37
 msgid "Optuna provides the following sampling algorithms:"
 msgstr "Optuna 提供了下列采样算法："
 
-#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:30
+#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:39
 msgid ""
 "Tree-structured Parzen Estimator algorithm implemented in "
 ":class:`optuna.samplers.TPESampler`"
@@ -62,39 +62,39 @@ msgstr ""
 ":class:`optuna.samplers.TPESampler` 实现的 Tree-structured Parzen Estimator "
 "算法"
 
-#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:32
+#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:41
 msgid ""
 "CMA-ES based algorithm implemented in "
 ":class:`optuna.samplers.CmaEsSampler`"
 msgstr ":class:`optuna.samplers.CmaEsSampler` 实现的 CMA-ES 算法"
 
-#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:34
+#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:43
 msgid "Grid Search implemented in :class:`optuna.samplers.GridSampler`"
 msgstr ":class:`optuna.samplers.GridSampler` 实现的网格搜索"
 
-#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:36
+#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:45
 msgid "Random Search implemented in :class:`optuna.samplers.RandomSampler`"
 msgstr ":class:`optuna.samplers.RandomSampler` 实现的随机搜索"
 
-#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:38
+#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:47
 msgid "The default sampler is :class:`optuna.samplers.TPESampler`."
 msgstr "默认的采样器是 :class:`optuna.samplers.TPESampler`."
 
-#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:41
+#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:50
 msgid "Switching Samplers"
 msgstr "切换采样器"
 
-#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:57
+#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:69
 msgid "By default, Optuna uses :class:`~optuna.samplers.TPESampler` as follows."
 msgstr "默认情况下， Optuna 这样使用 :class:`~optuna.samplers.TPESampler`."
 
-#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:72
-#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:101
-#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:201
+#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:85
+#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:117
+#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:223
 msgid "Out:"
 msgstr ""
 
-#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:81
+#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:96
 msgid ""
 "If you want to use different samplers for example "
 ":class:`~optuna.samplers.RandomSampler` and "
@@ -103,21 +103,21 @@ msgstr ""
 "如果你希望使用其他采样器，比如 :class:`~optuna.samplers.RandomSampler` 和 "
 ":class:`~optuna.samplers.CmaEsSampler`,"
 
-#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:112
+#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:130
 msgid "Pruning Algorithms"
 msgstr "剪枝算法"
 
-#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:114
+#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:132
 msgid ""
 "``Pruners`` automatically stop unpromising trials at the early stages of "
 "the training (a.k.a., automated early-stopping)."
 msgstr "``Pruners``  自动在训练的早期（也就是自动化的 early-stopping）终止无望的 trial."
 
-#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:116
+#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:134
 msgid "Optuna provides the following pruning algorithms:"
 msgstr "Optuna 提供以下剪枝算法："
 
-#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:118
+#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:136
 msgid ""
 "Asynchronous Successive Halving algorithm implemted in "
 ":class:`optuna.pruners.SuccessiveHalvingPruner`"
@@ -125,23 +125,23 @@ msgstr ""
 ":class:`optuna.pruners.SuccessiveHalvingPruner` 实现的 Asynchronous "
 "Successive Halving 算法。"
 
-#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:120
+#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:138
 msgid "Hyperband algorithm implemented in :class:`optuna.pruners.HyperbandPruner`"
 msgstr ":class:`optuna.pruners.HyperbandPruner` 实现的 Hyperband 算法。"
 
-#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:122
+#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:140
 msgid ""
 "Median pruning algorithm implemented in "
 ":class:`optuna.pruners.MedianPruner`"
 msgstr ":class:`optuna.pruners.MedianPruner` 实现的中位数剪枝算法"
 
-#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:124
+#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:142
 msgid ""
 "Threshold pruning algorithm implemented in "
 ":class:`optuna.pruners.ThresholdPruner`"
 msgstr ":class:`optuna.pruners.ThresholdPruner` 实现的阈值剪枝算法"
 
-#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:126
+#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:144
 msgid ""
 "We use :class:`optuna.pruners.MedianPruner` in most examples, though "
 "basically it is outperformed by "
@@ -155,11 +155,11 @@ msgstr ""
 ":class:`optuna.pruners.HyperbandPruner` 超过，就像在 `这个基准测试结果 "
 "<https://github.com/optuna/optuna/wiki/Benchmarks-with-Kurobako>`_ 中那样."
 
-#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:132
+#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:150
 msgid "Activating Pruners"
 msgstr "激活 Pruner"
 
-#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:133
+#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:151
 msgid ""
 "To turn on the pruning feature, you need to call "
 ":func:`~optuna.trial.Trial.report` and "
@@ -174,7 +174,7 @@ msgstr ""
 ":func:`~optuna.trial.Trial.report` 定期监控目标函数的中间值. "
 ":func:`~optuna.trial.Trial.should_prune` 确定终结那些没有达到预先设定条件的 trial."
 
-#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:137
+#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:155
 msgid ""
 "We would recommend using integration modules for major machine learning "
 "frameworks. Exclusive list is :mod:`optuna.integration` and usecases are "
@@ -185,11 +185,11 @@ msgstr ""
 "`optuna/examples "
 "<https://github.com/optuna/optuna/tree/master/examples/>`_."
 
-#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:184
+#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:205
 msgid "Set up the median stopping rule as the pruning condition."
 msgstr "将中位数终止规则设置为剪枝条件。"
 
-#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:230
+#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:254
 msgid ""
 "As you can see, several trials were pruned (stopped) before they finished"
 " all of the iterations. The format of message is ``\"Trial <Trial Number>"
@@ -198,11 +198,11 @@ msgstr ""
 "如你所见，有几个 trial 在其迭代完成之前被剪枝（终止）了。消息格式是 ``\"Trial <Trial Number> "
 "pruned.\"``."
 
-#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:234
+#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:260
 msgid "Which Sampler and Pruner Should be Used?"
 msgstr "应该使用哪个 pruner 呢？"
 
-#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:236
+#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:262
 msgid ""
 "From the benchmark results which are available at `optuna/optuna - wiki "
 "\"Benchmarks with Kurobako\" <https://github.com/optuna/optuna/wiki"
@@ -213,7 +213,7 @@ msgstr ""
 "<https://github.com/optuna/optuna/wiki/Benchmarks-with-Kurobako>`_ "
 "里的基准测试结果，我们推荐"
 
-#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:238
+#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:264
 msgid ""
 "For :class:`optuna.samplers.RandomSampler`, "
 ":class:`optuna.pruners.MedianPruner` is the best."
@@ -221,7 +221,7 @@ msgstr ""
 "对 :class:`optuna.samplers.RandomSampler` 而言 "
 ":class:`optuna.pruners.MedianPruner` 是最好的。"
 
-#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:239
+#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:265
 msgid ""
 "For :class:`optuna.samplers.TPESampler`, "
 ":class:`optuna.pruners.Hyperband` is the best."
@@ -229,7 +229,7 @@ msgstr ""
 "对于 :class:`optuna.samplers.TPESampler` 而言 "
 ":class:`optuna.pruners.Hyperband` 是最好的。"
 
-#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:241
+#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:267
 msgid ""
 "However, note that the benchmark is not deep learning. For deep learning "
 "tasks, consult the below table from `Ozaki et al, Hyperparameter "
@@ -242,69 +242,69 @@ msgstr ""
 "pp.615-631, 2020 <https://doi.org/10.14923/transinfj.2019JDR0003>`_ "
 "里的这张表格。"
 
-#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:246
+#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:272
 msgid "Parallel Compute Resource"
 msgstr ""
 
-#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:246
+#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:272
 msgid "Categorical/Conditional Hyperparameters"
 msgstr ""
 
-#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:246
+#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:272
 msgid "Recommended Algorithms"
 msgstr ""
 
-#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:248
+#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:274
 msgid "Limited"
 msgstr ""
 
-#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:248
-#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:252
+#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:274
+#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:278
 msgid "No"
 msgstr ""
 
-#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:248
+#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:274
 msgid "TPE. GP-EI if search space is low-dimensional and continuous."
 msgstr ""
 
-#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:250
-#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:254
+#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:276
+#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:280
 msgid "Yes"
 msgstr ""
 
-#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:250
+#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:276
 msgid "TPE. GP-EI if search space is low-dimensional and continuous"
 msgstr ""
 
-#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:252
+#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:278
 msgid "Sufficient"
 msgstr ""
 
-#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:252
+#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:278
 msgid "CMA-ES, Random Search"
 msgstr ""
 
-#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:254
+#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:280
 msgid "Random Search or Genetic Algorithm"
 msgstr ""
 
-#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:259
+#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:287
 msgid "Integration Modules for Pruning"
 msgstr "用于剪枝的集成模块"
 
-#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:260
+#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:288
 msgid ""
 "To implement pruning mechanism in much simpler forms, Optuna provides "
 "integration modules for the following libraries."
 msgstr "为了用最简单的形式实现剪枝算法，Optuna 为以下库提供了集成模块。"
 
-#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:262
+#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:290
 msgid ""
 "For the complete list of Optuna's integration modules, see "
 ":mod:`optuna.integration`."
 msgstr "关于 Optuna 集成模块的完整列表，参见 :mod:`optuna.integration`."
 
-#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:264
+#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:292
 #, fuzzy
 msgid ""
 "For example, :class:`~optuna.integration.XGBoostPruningCallback` "
@@ -318,28 +318,24 @@ msgstr ""
 "<https://github.com/optuna/optuna/blob/master/examples/pruning/xgboost_integration.py>`_"
 " .)"
 
-#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:275
-msgid "**Total running time of the script:** ( 0 minutes  1.018 seconds)"
+#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:303
+msgid "**Total running time of the script:** ( 0 minutes  1.440 seconds)"
 msgstr ""
 
-#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:290
+#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:318
 msgid ""
 ":download:`Download Python source code: "
 "003_efficient_optimization_algorithms.py "
 "<003_efficient_optimization_algorithms.py>`"
 msgstr ""
 
-#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:296
+#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:324
 msgid ""
 ":download:`Download Jupyter notebook: "
 "003_efficient_optimization_algorithms.ipynb "
 "<003_efficient_optimization_algorithms.ipynb>`"
 msgstr ""
 
-#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:303
+#: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:331
 msgid "`Gallery generated by Sphinx-Gallery <https://sphinx-gallery.github.io>`_"
 msgstr ""
-
-#~ msgid "**Total running time of the script:** ( 0 minutes  1.627 seconds)"
-#~ msgstr ""
-

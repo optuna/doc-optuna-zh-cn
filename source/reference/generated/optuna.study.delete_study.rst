@@ -1,4 +1,4 @@
-optuna.study.delete\_study
+﻿optuna.study.delete\_study
 ==========================
 
 .. currentmodule:: optuna.study

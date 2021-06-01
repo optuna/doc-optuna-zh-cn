@@ -1,4 +1,4 @@
-optuna.multi\_objective.samplers.RandomMultiObjectiveSampler
+﻿optuna.multi\_objective.samplers.RandomMultiObjectiveSampler
 ============================================================
 
 .. currentmodule:: optuna.multi_objective.samplers

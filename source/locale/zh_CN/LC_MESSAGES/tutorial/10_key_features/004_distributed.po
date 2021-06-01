@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 2.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-14 18:04-0500\n"
+"POT-Creation-Date: 2021-05-06 18:29-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,118 +17,122 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.8.0\n"
 
-#: ../../source/tutorial/10_key_features/004_distributed.rst:6
+#: ../../source/tutorial/10_key_features/004_distributed.rst:13
 msgid ""
 "Click :ref:`here "
-"<sphx_glr_download_tutorial_10_key_features_004_distributed.py>`     to "
+"<sphx_glr_download_tutorial_10_key_features_004_distributed.py>` to "
 "download the full example code"
 msgstr ""
 
-#: ../../source/tutorial/10_key_features/004_distributed.rst:15
+#: ../../source/tutorial/10_key_features/004_distributed.rst:24
 msgid "Easy Parallelization"
 msgstr "简单的并行化"
 
-#: ../../source/tutorial/10_key_features/004_distributed.rst:17
+#: ../../source/tutorial/10_key_features/004_distributed.rst:26
 msgid "It's straightforward to parallelize :func:`optuna.study.Study.optimize`."
 msgstr "并行化非常直接 :func:`optuna.study.Study.optimize`."
 
-#: ../../source/tutorial/10_key_features/004_distributed.rst:19
+#: ../../source/tutorial/10_key_features/004_distributed.rst:28
 msgid "If you want to manually execute Optuna optimization:"
 msgstr "如果你想要手动执行 Optuna 的优化："
 
-#: ../../source/tutorial/10_key_features/004_distributed.rst:21
+#: ../../source/tutorial/10_key_features/004_distributed.rst:30
 msgid "start an RDB server (this example uses MySQL)"
 msgstr "启动一个 RDB 服务器（在本例中我们用 MySQL）"
 
-#: ../../source/tutorial/10_key_features/004_distributed.rst:22
+#: ../../source/tutorial/10_key_features/004_distributed.rst:31
 msgid "create a study with `--storage` argument"
 msgstr "通过 `--storage` 参数创建 study"
 
-#: ../../source/tutorial/10_key_features/004_distributed.rst:23
+#: ../../source/tutorial/10_key_features/004_distributed.rst:32
 msgid "share the study among multiple nodes and processes"
 msgstr "在多个节点和进程之间共享 study"
 
-#: ../../source/tutorial/10_key_features/004_distributed.rst:25
+#: ../../source/tutorial/10_key_features/004_distributed.rst:34
 msgid ""
 "Of course, you can use Kubernetes as in `the kubernetes examples "
 "<https://github.com/optuna/optuna/tree/master/examples/kubernetes>`_."
-msgstr "当然，你可以像 `the kubernetes examples "
-"<https://github.com/optuna/optuna/tree/master/examples/kubernetes>`_ 里一样使用 Kubernetes."
+msgstr ""
+"当然，你可以像 `the kubernetes examples "
+"<https://github.com/optuna/optuna/tree/master/examples/kubernetes>`_ "
+"里一样使用 Kubernetes."
 
-#: ../../source/tutorial/10_key_features/004_distributed.rst:27
+#: ../../source/tutorial/10_key_features/004_distributed.rst:36
 msgid ""
 "To just see how parallel optimization works in Optuna, check the below "
 "video."
 msgstr "要看并行优化怎么进行的化，请查看下面这个视频。"
 
-#: ../../source/tutorial/10_key_features/004_distributed.rst:35
+#: ../../source/tutorial/10_key_features/004_distributed.rst:44
 msgid "Create a Study"
 msgstr "创建 study"
 
-#: ../../source/tutorial/10_key_features/004_distributed.rst:37
+#: ../../source/tutorial/10_key_features/004_distributed.rst:46
 msgid ""
 "You can create a study using ``optuna create-study`` command. "
 "Alternatively, in Python script you can use :func:`optuna.create_study`."
-msgstr "你可以通过 ``optuna create-study`` 来创建 study."
-"或者在 Python 脚本中通过 :func:`optuna.create_study` 也行。"
+msgstr ""
+"你可以通过 ``optuna create-study`` 来创建 study.或者在 Python 脚本中通过 "
+":func:`optuna.create_study` 也行。"
 
-#: ../../source/tutorial/10_key_features/004_distributed.rst:48
+#: ../../source/tutorial/10_key_features/004_distributed.rst:57
 msgid ""
 "Then, write an optimization script. Let's assume that ``foo.py`` contains"
 " the following code."
 msgstr "然后写一个优化脚本。假设 ``foo.py`` 包含了以下代码。 "
 
-#: ../../source/tutorial/10_key_features/004_distributed.rst:68
+#: ../../source/tutorial/10_key_features/004_distributed.rst:77
 msgid "Share the Study among Multiple Nodes and Processes"
 msgstr "在多个节点和进程之间分享该 study"
 
-#: ../../source/tutorial/10_key_features/004_distributed.rst:70
+#: ../../source/tutorial/10_key_features/004_distributed.rst:79
 msgid ""
 "Finally, run the shared study from multiple processes. For example, run "
 "``Process 1`` in a terminal, and do ``Process 2`` in another one. They "
 "get parameter suggestions based on shared trials' history."
-msgstr "最后，在多个进程中运行这个共享的 study. 比如，在一个终端中运行 ``Process 1`` "
-"而在另一个终端中运行 ``Process 2``. 它们基于共享参数的历史记录来获取参数 suggestion."
+msgstr ""
+"最后，在多个进程中运行这个共享的 study. 比如，在一个终端中运行 ``Process 1`` 而在另一个终端中运行 ``Process "
+"2``. 它们基于共享参数的历史记录来获取参数 suggestion."
 
-#: ../../source/tutorial/10_key_features/004_distributed.rst:74
+#: ../../source/tutorial/10_key_features/004_distributed.rst:83
 msgid "Process 1:"
 msgstr ""
 
-#: ../../source/tutorial/10_key_features/004_distributed.rst:83
+#: ../../source/tutorial/10_key_features/004_distributed.rst:92
 msgid "Process 2 (the same command as process 1):"
 msgstr ""
 
-#: ../../source/tutorial/10_key_features/004_distributed.rst:93
+#: ../../source/tutorial/10_key_features/004_distributed.rst:102
 msgid ""
 "We do not recommend SQLite for distributed optimizations at scale because"
 " it may cause deadlocks and serious performance issues. Please consider "
 "to use another database engine like PostgreSQL or MySQL."
-msgstr "我们不建议在大规模的分布式优化中采用 SQLite 因为其可能造成死锁和烟zhngde性能问题。"
-"请考虑其他数据库引擎，比如 PostgreSQL 或者 MySQL."
+msgstr ""
+"我们不建议在大规模的分布式优化中采用 SQLite 因为其可能造成死锁和烟zhngde性能问题。请考虑其他数据库引擎，比如 PostgreSQL "
+"或者 MySQL."
 
-#: ../../source/tutorial/10_key_features/004_distributed.rst:96
+#: ../../source/tutorial/10_key_features/004_distributed.rst:105
 msgid ""
 "Please avoid putting the SQLite database on NFS when running distributed "
 "optimizations. See also: https://www.sqlite.org/faq.html#q5"
 msgstr "在分布式优化里，请不要将 SQLite 数据库放在网络文件系统上。参见 https://www.sqlite.org/faq.html#q5"
 
-#: ../../source/tutorial/10_key_features/004_distributed.rst:101
+#: ../../source/tutorial/10_key_features/004_distributed.rst:110
 msgid "**Total running time of the script:** ( 0 minutes  0.000 seconds)"
 msgstr ""
 
-#: ../../source/tutorial/10_key_features/004_distributed.rst:116
+#: ../../source/tutorial/10_key_features/004_distributed.rst:125
 msgid ""
 ":download:`Download Python source code: 004_distributed.py "
 "<004_distributed.py>`"
 msgstr ""
 
-#: ../../source/tutorial/10_key_features/004_distributed.rst:122
+#: ../../source/tutorial/10_key_features/004_distributed.rst:131
 msgid ""
 ":download:`Download Jupyter notebook: 004_distributed.ipynb "
 "<004_distributed.ipynb>`"
 msgstr ""
 
-#: ../../source/tutorial/10_key_features/004_distributed.rst:129
+#: ../../source/tutorial/10_key_features/004_distributed.rst:138
 msgid "`Gallery generated by Sphinx-Gallery <https://sphinx-gallery.github.io>`_"
 msgstr ""
-

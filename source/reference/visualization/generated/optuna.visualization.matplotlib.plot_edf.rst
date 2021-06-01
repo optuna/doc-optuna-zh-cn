@@ -1,4 +1,4 @@
-optuna.visualization.matplotlib.plot\_edf
+﻿optuna.visualization.matplotlib.plot\_edf
 =========================================
 
 .. currentmodule:: optuna.visualization.matplotlib

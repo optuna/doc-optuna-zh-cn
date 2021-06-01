@@ -1,4 +1,4 @@
-optuna.integration.lightgbm.LightGBMTunerCV
+﻿optuna.integration.lightgbm.LightGBMTunerCV
 ===========================================
 
 .. currentmodule:: optuna.integration.lightgbm

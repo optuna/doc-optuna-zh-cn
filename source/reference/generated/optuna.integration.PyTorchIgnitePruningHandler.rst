@@ -1,4 +1,4 @@
-optuna.integration.PyTorchIgnitePruningHandler
+﻿optuna.integration.PyTorchIgnitePruningHandler
 ==============================================
 
 .. currentmodule:: optuna.integration

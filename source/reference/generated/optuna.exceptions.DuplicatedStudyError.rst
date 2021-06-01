@@ -1,4 +1,4 @@
-optuna.exceptions.DuplicatedStudyError
+﻿optuna.exceptions.DuplicatedStudyError
 ======================================
 
 .. currentmodule:: optuna.exceptions

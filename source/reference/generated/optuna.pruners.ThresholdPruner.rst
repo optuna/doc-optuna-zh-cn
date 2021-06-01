@@ -1,4 +1,4 @@
-optuna.pruners.ThresholdPruner
+﻿optuna.pruners.ThresholdPruner
 ==============================
 
 .. currentmodule:: optuna.pruners

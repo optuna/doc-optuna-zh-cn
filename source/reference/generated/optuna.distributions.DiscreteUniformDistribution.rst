@@ -1,4 +1,4 @@
-optuna.distributions.DiscreteUniformDistribution
+﻿optuna.distributions.DiscreteUniformDistribution
 ================================================
 
 .. currentmodule:: optuna.distributions

@@ -1,4 +1,4 @@
-optuna.load\_study
+﻿optuna.load\_study
 ==================
 
 .. currentmodule:: optuna

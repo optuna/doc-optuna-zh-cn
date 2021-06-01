@@ -1,4 +1,4 @@
-optuna.visualization.matplotlib.plot\_intermediate\_values
+﻿optuna.visualization.matplotlib.plot\_intermediate\_values
 ==========================================================
 
 .. currentmodule:: optuna.visualization.matplotlib

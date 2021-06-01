@@ -1,4 +1,4 @@
-optuna.visualization.plot\_edf
+﻿optuna.visualization.plot\_edf
 ==============================
 
 .. currentmodule:: optuna.visualization

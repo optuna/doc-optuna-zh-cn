@@ -128,7 +128,6 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-
 .vscode/
 
 build*
@@ -137,10 +136,10 @@ build*
 # source/reference/visualization/generated/
 source/tutorial/
 
-
 .DS_Store
 
 example*
 *.db
 
 MNIST
+FashionMNIST

@@ -1,4 +1,4 @@
-optuna.integration.ChainerPruningExtension
+﻿optuna.integration.ChainerPruningExtension
 ==========================================
 
 .. currentmodule:: optuna.integration

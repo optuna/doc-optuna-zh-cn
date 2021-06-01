@@ -1,4 +1,4 @@
-optuna.TrialPruned
+﻿optuna.TrialPruned
 ==================
 
 .. currentmodule:: optuna

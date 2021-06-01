@@ -1,4 +1,4 @@
-optuna.distributions.CategoricalDistribution
+﻿optuna.distributions.CategoricalDistribution
 ============================================
 
 .. currentmodule:: optuna.distributions

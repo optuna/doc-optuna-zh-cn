@@ -1,4 +1,4 @@
-optuna.multi\_objective.samplers.NSGAIIMultiObjectiveSampler
+﻿optuna.multi\_objective.samplers.NSGAIIMultiObjectiveSampler
 ============================================================
 
 .. currentmodule:: optuna.multi_objective.samplers

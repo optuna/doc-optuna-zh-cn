@@ -1,4 +1,4 @@
-optuna.trial.FrozenTrial
+﻿optuna.trial.FrozenTrial
 ========================
 
 .. currentmodule:: optuna.trial

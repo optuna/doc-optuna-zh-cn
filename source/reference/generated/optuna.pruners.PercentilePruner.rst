@@ -1,4 +1,4 @@
-optuna.pruners.PercentilePruner
+﻿optuna.pruners.PercentilePruner
 ===============================
 
 .. currentmodule:: optuna.pruners

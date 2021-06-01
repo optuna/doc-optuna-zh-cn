@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 1.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-20 13:35-0400\n"
+"POT-Creation-Date: 2021-05-06 18:29-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -334,111 +334,124 @@ msgstr "用于向后兼容的 PyCmaSampler wrapper 类。"
 msgid "PyTorch"
 msgstr ""
 
-#: ../../source/reference/integration.rst:127:<autosummary>:1
+#: ../../source/reference/integration.rst:128:<autosummary>:1
 msgid ""
 ":obj:`optuna.integration.PyTorchIgnitePruningHandler "
 "<optuna.integration.PyTorchIgnitePruningHandler>`"
 msgstr ""
 
-#: ../../source/reference/integration.rst:127:<autosummary>:1
+#: ../../source/reference/integration.rst:128:<autosummary>:1
 msgid "PyTorch Ignite handler to prune unpromising trials."
 msgstr "用于清除无望 trial 的 PyTorch Ignite handler。"
 
-#: ../../source/reference/integration.rst:127:<autosummary>:1
+#: ../../source/reference/integration.rst:128:<autosummary>:1
 msgid ""
 ":obj:`optuna.integration.PyTorchLightningPruningCallback "
 "<optuna.integration.PyTorchLightningPruningCallback>`"
 msgstr ""
 
-#: ../../source/reference/integration.rst:127:<autosummary>:1
+#: ../../source/reference/integration.rst:128:<autosummary>:1
 msgid "PyTorch Lightning callback to prune unpromising trials."
 msgstr "用于清除无望 trial 的 PyTorch Lighting 回调函数。"
 
-#: ../../source/reference/integration.rst:129
+#: ../../source/reference/integration.rst:128:<autosummary>:1
+msgid ""
+":obj:`optuna.integration.TorchDistributedTrial "
+"<optuna.integration.TorchDistributedTrial>`"
+msgstr ""
+
+#: ../../source/reference/integration.rst:128:<autosummary>:1
+#, fuzzy
+msgid ""
+"A wrapper of :class:`~optuna.trial.Trial` to incorporate Optuna with "
+"PyTorch distributed."
+msgstr "一个将 Optuna 并入 ChainerMN 的 :class:`~optuna.study.Study` wrapper."
+
+#: ../../source/reference/integration.rst:130
 msgid "scikit-learn"
 msgstr ""
 
-#: ../../source/reference/integration.rst:136:<autosummary>:1
+#: ../../source/reference/integration.rst:137:<autosummary>:1
 msgid ""
 ":obj:`optuna.integration.OptunaSearchCV "
 "<optuna.integration.OptunaSearchCV>`"
 msgstr ""
 
-#: ../../source/reference/integration.rst:136:<autosummary>:1
+#: ../../source/reference/integration.rst:137:<autosummary>:1
 msgid "Hyperparameter search with cross-validation."
 msgstr "带有交叉验证的超参数搜索。"
 
-#: ../../source/reference/integration.rst:138
+#: ../../source/reference/integration.rst:139
 msgid "scikit-optimize"
 msgstr ""
 
-#: ../../source/reference/integration.rst:145:<autosummary>:1
+#: ../../source/reference/integration.rst:146:<autosummary>:1
 msgid ":obj:`optuna.integration.SkoptSampler <optuna.integration.SkoptSampler>`"
 msgstr ""
 
-#: ../../source/reference/integration.rst:145:<autosummary>:1
+#: ../../source/reference/integration.rst:146:<autosummary>:1
 msgid "Sampler using Scikit-Optimize as the backend."
 msgstr "以  Scikit-Optimize 为后端的 sampler。"
 
-#: ../../source/reference/integration.rst:147
+#: ../../source/reference/integration.rst:148
 msgid "skorch"
 msgstr ""
 
-#: ../../source/reference/integration.rst:154:<autosummary>:1
+#: ../../source/reference/integration.rst:155:<autosummary>:1
 msgid ""
 ":obj:`optuna.integration.SkorchPruningCallback "
 "<optuna.integration.SkorchPruningCallback>`"
 msgstr ""
 
-#: ../../source/reference/integration.rst:154:<autosummary>:1
+#: ../../source/reference/integration.rst:155:<autosummary>:1
 msgid "Skorch callback to prune unpromising trials."
 msgstr "用于清除无望 trial 的 Skorch 回调函数。"
 
-#: ../../source/reference/integration.rst:156
+#: ../../source/reference/integration.rst:157
 msgid "TensorFlow"
 msgstr ""
 
-#: ../../source/reference/integration.rst:165:<autosummary>:1
+#: ../../source/reference/integration.rst:166:<autosummary>:1
 msgid ""
 ":obj:`optuna.integration.TensorBoardCallback "
 "<optuna.integration.TensorBoardCallback>`"
 msgstr ""
 
-#: ../../source/reference/integration.rst:165:<autosummary>:1
+#: ../../source/reference/integration.rst:166:<autosummary>:1
 msgid "Callback to track Optuna trials with TensorBoard."
 msgstr "使用 TensorBoard 追踪 Optuna trial 的回调函数。"
 
-#: ../../source/reference/integration.rst:165:<autosummary>:1
+#: ../../source/reference/integration.rst:166:<autosummary>:1
 msgid ""
 ":obj:`optuna.integration.TensorFlowPruningHook "
 "<optuna.integration.TensorFlowPruningHook>`"
 msgstr ""
 
-#: ../../source/reference/integration.rst:165:<autosummary>:1
+#: ../../source/reference/integration.rst:166:<autosummary>:1
 msgid "TensorFlow SessionRunHook to prune unpromising trials."
 msgstr "用于清除无望 trial 的 TensorFlow SessionRunHook 钩子函数。"
 
-#: ../../source/reference/integration.rst:165:<autosummary>:1
+#: ../../source/reference/integration.rst:166:<autosummary>:1
 msgid ""
 ":obj:`optuna.integration.TFKerasPruningCallback "
 "<optuna.integration.TFKerasPruningCallback>`"
 msgstr ""
 
-#: ../../source/reference/integration.rst:165:<autosummary>:1
+#: ../../source/reference/integration.rst:166:<autosummary>:1
 msgid "tf.keras callback to prune unpromising trials."
 msgstr "用于清除无望 trial 的 tf.keras 回调函数。"
 
-#: ../../source/reference/integration.rst:167
+#: ../../source/reference/integration.rst:168
 msgid "XGBoost"
 msgstr ""
 
-#: ../../source/reference/integration.rst:173:<autosummary>:1
+#: ../../source/reference/integration.rst:174:<autosummary>:1
 msgid ""
 ":obj:`optuna.integration.XGBoostPruningCallback "
 "<optuna.integration.XGBoostPruningCallback>`"
 msgstr ""
 
-#: ../../source/reference/integration.rst:173:<autosummary>:1
+#: ../../source/reference/integration.rst:174:<autosummary>:1
 msgid "Callback for XGBoost to prune unpromising trials."
 msgstr "用于清除无望 trial 的 XGBoost 回调函数。"
 

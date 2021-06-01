@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 2.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-20 13:35-0400\n"
+"POT-Creation-Date: 2021-05-06 18:29-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,44 +17,44 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.8.0\n"
 
-#: ../../source/tutorial/10_key_features/005_visualization.rst:6
+#: ../../source/tutorial/10_key_features/005_visualization.rst:13
 msgid ""
 "Click :ref:`here "
-"<sphx_glr_download_tutorial_10_key_features_005_visualization.py>`     to"
-" download the full example code"
+"<sphx_glr_download_tutorial_10_key_features_005_visualization.py>` to "
+"download the full example code"
 msgstr ""
 
-#: ../../source/tutorial/10_key_features/005_visualization.rst:15
+#: ../../source/tutorial/10_key_features/005_visualization.rst:24
 msgid "Quick Visualization for Hyperparameter Optimization Analysis"
 msgstr "用于超参数优化分析的快速可视化"
 
-#: ../../source/tutorial/10_key_features/005_visualization.rst:17
+#: ../../source/tutorial/10_key_features/005_visualization.rst:26
 msgid ""
 "Optuna provides various visualization features in "
 ":mod:`optuna.visualization` to analyze optimization results visually."
 msgstr "Optuna 在 :mod:`optuna.visualization` 里提供了各种可视化特性用于分析优化结果。"
 
-#: ../../source/tutorial/10_key_features/005_visualization.rst:19
+#: ../../source/tutorial/10_key_features/005_visualization.rst:28
 msgid ""
 "This tutorial walks you through this module by visualizing the history of"
 " lightgbm model for breast cancer dataset."
 msgstr "通过可视化乳腺癌数据集 上的 lightgbm 历史记录，本教程将带你体验此模块。"
 
-#: ../../source/tutorial/10_key_features/005_visualization.rst:51
+#: ../../source/tutorial/10_key_features/005_visualization.rst:63
 msgid "Define the objective function."
 msgstr "定义目标函数"
 
-#: ../../source/tutorial/10_key_features/005_visualization.rst:109
+#: ../../source/tutorial/10_key_features/005_visualization.rst:125
 msgid "Plot functions"
 msgstr "绘图函数"
 
-#: ../../source/tutorial/10_key_features/005_visualization.rst:110
+#: ../../source/tutorial/10_key_features/005_visualization.rst:126
 msgid ""
 "Visualize the optimization history. See "
 ":func:`~optuna.visualization.plot_optimization_history` for the details."
 msgstr "对优化历史进行可视化。细节见 :func:`~optuna.visualization.plot_optimization_history`."
 
-#: ../../source/tutorial/10_key_features/005_visualization.rst:129
+#: ../../source/tutorial/10_key_features/005_visualization.rst:150
 msgid ""
 "Visualize the learning curves of the trials. See "
 ":func:`~optuna.visualization.plot_intermediate_values` for the details."
@@ -62,62 +62,58 @@ msgstr ""
 "绘制各 trial 的学习曲线。细节见 "
 ":func:`~optuna.visualization.plot_intermediate_values`."
 
-#: ../../source/tutorial/10_key_features/005_visualization.rst:148
+#: ../../source/tutorial/10_key_features/005_visualization.rst:174
 msgid ""
 "Visualize high-dimensional parameter relationships. See "
 ":func:`~optuna.visualization.plot_parallel_coordinate` for the details."
 msgstr "绘制高维参数关系。细节见 :func:`~optuna.visualization.plot_parallel_coordinate`."
 
-#: ../../source/tutorial/10_key_features/005_visualization.rst:167
-#: ../../source/tutorial/10_key_features/005_visualization.rst:205
-#: ../../source/tutorial/10_key_features/005_visualization.rst:243
+#: ../../source/tutorial/10_key_features/005_visualization.rst:198
+#: ../../source/tutorial/10_key_features/005_visualization.rst:246
+#: ../../source/tutorial/10_key_features/005_visualization.rst:294
 msgid "Select parameters to visualize."
 msgstr "选择要绘制的参数"
 
-#: ../../source/tutorial/10_key_features/005_visualization.rst:186
+#: ../../source/tutorial/10_key_features/005_visualization.rst:222
 msgid ""
 "Visualize hyperparameter relationships. See "
 ":func:`~optuna.visualization.plot_contour` for the details."
 msgstr "绘制超参数关系。细节见 :func:`~optuna.visualization.plot_contour`."
 
-#: ../../source/tutorial/10_key_features/005_visualization.rst:224
+#: ../../source/tutorial/10_key_features/005_visualization.rst:270
 msgid ""
 "Visualize individual hyperparameters as slice plot. See "
 ":func:`~optuna.visualization.plot_slice` for the details."
 msgstr "绘制各超参数的切片图。细节见 :func:`~optuna.visualization.plot_slice`."
 
-#: ../../source/tutorial/10_key_features/005_visualization.rst:262
+#: ../../source/tutorial/10_key_features/005_visualization.rst:318
 msgid ""
 "Visualize parameter importances. See "
 ":func:`~optuna.visualization.plot_param_importances` for the details."
 msgstr "绘制超参数重要性。细节见 :func:`~optuna.visualization.plot_param_importances`."
 
-#: ../../source/tutorial/10_key_features/005_visualization.rst:281
+#: ../../source/tutorial/10_key_features/005_visualization.rst:342
 msgid ""
 "Visualize empirical distribution function. See "
 ":func:`~optuna.visualization.plot_edf` for the details."
 msgstr "绘制经验分布函数。 :func:`~optuna.visualization.plot_edf`."
 
-#: ../../source/tutorial/10_key_features/005_visualization.rst:302
-msgid "**Total running time of the script:** ( 0 minutes  4.418 seconds)"
+#: ../../source/tutorial/10_key_features/005_visualization.rst:366
+msgid "**Total running time of the script:** ( 0 minutes  5.513 seconds)"
 msgstr ""
 
-#: ../../source/tutorial/10_key_features/005_visualization.rst:317
+#: ../../source/tutorial/10_key_features/005_visualization.rst:381
 msgid ""
 ":download:`Download Python source code: 005_visualization.py "
 "<005_visualization.py>`"
 msgstr ""
 
-#: ../../source/tutorial/10_key_features/005_visualization.rst:323
+#: ../../source/tutorial/10_key_features/005_visualization.rst:387
 msgid ""
 ":download:`Download Jupyter notebook: 005_visualization.ipynb "
 "<005_visualization.ipynb>`"
 msgstr ""
 
-#: ../../source/tutorial/10_key_features/005_visualization.rst:330
+#: ../../source/tutorial/10_key_features/005_visualization.rst:394
 msgid "`Gallery generated by Sphinx-Gallery <https://sphinx-gallery.github.io>`_"
 msgstr ""
-
-#~ msgid "**Total running time of the script:** ( 0 minutes  4.891 seconds)"
-#~ msgstr ""
-

@@ -1,4 +1,4 @@
-optuna.integration.KerasPruningCallback
+﻿optuna.integration.KerasPruningCallback
 =======================================
 
 .. currentmodule:: optuna.integration

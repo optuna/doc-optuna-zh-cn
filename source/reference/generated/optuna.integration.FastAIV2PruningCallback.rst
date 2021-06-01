@@ -1,4 +1,4 @@
-optuna.integration.FastAIV2PruningCallback
+﻿optuna.integration.FastAIV2PruningCallback
 ==========================================
 
 .. currentmodule:: optuna.integration

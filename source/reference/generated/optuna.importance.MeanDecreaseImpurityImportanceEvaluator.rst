@@ -1,4 +1,4 @@
-optuna.importance.MeanDecreaseImpurityImportanceEvaluator
+﻿optuna.importance.MeanDecreaseImpurityImportanceEvaluator
 =========================================================
 
 .. currentmodule:: optuna.importance

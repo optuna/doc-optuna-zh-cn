@@ -1,4 +1,4 @@
-optuna.visualization.plot\_param\_importances
+﻿optuna.visualization.plot\_param\_importances
 =============================================
 
 .. currentmodule:: optuna.visualization

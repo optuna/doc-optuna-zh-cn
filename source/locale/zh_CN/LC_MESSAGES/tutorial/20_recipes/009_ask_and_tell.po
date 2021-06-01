@@ -1,0 +1,199 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018, Optuna Contributors.
+# This file is distributed under the same license as the Optuna package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Optuna 2.7.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-05-06 18:29-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../source/tutorial/20_recipes/009_ask_and_tell.rst:6
+msgid ""
+"Click :ref:`here "
+"<sphx_glr_download_tutorial_20_recipes_009_ask_and_tell.py>`     to "
+"download the full example code"
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/009_ask_and_tell.rst:15
+msgid "Ask-and-Tell Interface"
+msgstr "Ask-and-Tell 接口"
+
+#: ../../source/tutorial/20_recipes/009_ask_and_tell.rst:17
+msgid ""
+"Optuna has an `Ask-and-Tell` interface, which provides a more flexible "
+"interface for hyperparameter optimization. This tutorial explains three "
+"use-cases when the ask-and-tell interface is beneficial:"
+msgstr "Optuna 带有 `Ask-and-Tell` 接口, 它为超参数优化提供了一个更灵活的接口."
+"本教程将展示三种可以用到ask-and-tell接口的情况."
+
+#: ../../source/tutorial/20_recipes/009_ask_and_tell.rst:20
+msgid ""
+":ref:`Apply-optuna-to-an-existing-optimization-problem-with-minimum-"
+"modifications`"
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/009_ask_and_tell.rst:21
+msgid ":ref:`Define-and-Run`"
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/009_ask_and_tell.rst:22
+msgid ":ref:`Batch-Optimization`"
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/009_ask_and_tell.rst:28
+msgid ""
+"Apply Optuna to an existing optimization problem with minimum "
+"modifications"
+msgstr "只进行最小改动, 就可将 Optuna 应用到一个现存的优化问题上"
+
+#: ../../source/tutorial/20_recipes/009_ask_and_tell.rst:30
+msgid ""
+"Let's consider the traditional supervised classification problem; you aim"
+" to maximize the validation accuracy. To do so, you train "
+"`LogisticRegression` as a simple model."
+msgstr "考虑一个传统的有监督分类问题; 你想最大化验证准确率. 所以, 你训练了一个 `LogisticRegression` 作为简单模型."
+
+#: ../../source/tutorial/20_recipes/009_ask_and_tell.rst:59
+msgid ""
+"Then you try to optimize hyperparameters ``C`` and ``solver`` of the "
+"classifier by using optuna. When you introduce optuna naively, you define"
+" an ``objective`` function such that it takes ``trial`` and calls "
+"``suggest_*`` methods of ``trial`` to sample the hyperparameters:"
+msgstr "然后你试图通过 Optuna 来优化超参数 ``C`` 和 ``solver``."
+"当你简单地引入 Optuna 后, 你定义了一个 ``objective`` 函数, 它接受 ``trial`` "
+"并且调用 ``trial`` 的 ``suggest_*`` 方法 来采样超参数:"
+
+#: ../../source/tutorial/20_recipes/009_ask_and_tell.rst:91
+#: ../../source/tutorial/20_recipes/009_ask_and_tell.rst:260
+msgid "Out:"
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/009_ask_and_tell.rst:107
+msgid ""
+"This interface is not flexible enough. For example, if ``objective`` "
+"requires additional arguments other than ``trial``, you need to define a "
+"class as in `How to define objective functions that have own arguments? "
+"<../../faq.html#how-to-define-objective-functions-that-have-own-"
+"arguments>`_. The ask-and-tell interface provides a more flexible syntax "
+"to optimize hyperparameters. The following example is equivalent to the "
+"previous code block."
+msgstr "这个接口并不灵活. 比如, 如果 ``objective`` "
+"需要不同于 ``trial`` 的额外参数, 你就需要顶一个类, 就像 `How to define objective functions that have own arguments? "
+"<../../faq.html#how-to-define-objective-functions-that-have-own-"
+"arguments>`_ 里做的那样. 而 ask-and-tell 接口提供了更加灵活的语法来优化超参数. 下面的例子等同于上面的代码块."
+
+#: ../../source/tutorial/20_recipes/009_ask_and_tell.rst:140
+msgid ""
+"The main difference is to use two methods: :func:`optuna.study.Study.ask`"
+" and :func:`optuna.study.Study.tell`. :func:`optuna.study.Study.ask` "
+"creates a trial that can sample hyperparameters, and "
+":func:`optuna.study.Study.tell` finishes the trial by passing ``trial`` "
+"and an objective value. You can apply Optuna's hyperparameter "
+"optimization to your original code without an ``objective`` function."
+
+msgstr "主要区别是这里用了两个方法 :func:`optuna.study.Study.ask` 和 :func:`optuna.study.Study.tell`. "
+":func:`optuna.study.Study.ask` 创建了一个 trial, 它可以采样超参数, 而 "
+":func:`optuna.study.Study.tell` 通过传递 ``trial`` 和一个目标函数值完成这个 trial. "
+"你可以在没有 ``objective`` 函数的情况下对你的原始代码应用 Optuna 的超参数优化."
+
+#: ../../source/tutorial/20_recipes/009_ask_and_tell.rst:147
+msgid ""
+"If you want to make your optimization faster with a pruner, you need to "
+"explicitly pass the state of trial to the argument of "
+":func:`optuna.study.Study.tell` method as follows:"
+msgstr "如果你想用 pruner 让你的优化变得更快, 你需要显式地将 trial 的状态传入到 "
+":func:`optuna.study.Study.tell` 的参数中, 就像下面这样: "
+
+#: ../../source/tutorial/20_recipes/009_ask_and_tell.rst:199
+msgid ""
+":func:`optuna.study.Study.tell` method can take a trial number rather "
+"than the trial object. ``study.tell(trial.number, y)`` is equivalent to "
+"``study.tell(trial, y)``."
+msgstr ":func:`optuna.study.Study.tell` 可以接受一个 trial number 而不是 trial 对象本身. "
+"``study.tell(trial.number, y)`` 等价于 ``study.tell(trial, y)``."
+
+#: ../../source/tutorial/20_recipes/009_ask_and_tell.rst:206
+msgid "Define-and-Run"
+msgstr "定义-运行 (Define-and-Run)"
+
+#: ../../source/tutorial/20_recipes/009_ask_and_tell.rst:207
+msgid ""
+"The ask-and-tell interface supports both `define-by-run` and `define-and-"
+"run` APIs. This section shows the example of the `define-and-run` API in "
+"addition to the define-by-run example above."
+msgstr "ask-and-tell 接口同时支持 `define-by-run`  和 `define-and-"
+"run` API. 在上面 define-by-run的例子之外, 本部分展示 `define-and-run` 的 API."
+
+#: ../../source/tutorial/20_recipes/009_ask_and_tell.rst:211
+msgid ""
+"Define distributions for the hyperparameters before calling the "
+":func:`optuna.study.Study.ask` method for define-and-run API. For "
+"example,"
+msgstr "在调用 :func:`optuna.study.Study.ask`  方法之前为 define-and-run API "
+"定义超参数分布. 例如, "
+
+#: ../../source/tutorial/20_recipes/009_ask_and_tell.rst:231
+msgid ""
+"Pass ``distributions`` to :func:`optuna.study.Study.ask` method at each "
+"call. The retuned ``trial`` contains the suggested hyperparameters."
+msgstr "在每次调用时, 将 ``distributions`` 传递给 :func:`optuna.study.Study.ask` 方法."
+"返回的 ``trial`` 里将包含建议的超参数."
+
+#: ../../source/tutorial/20_recipes/009_ask_and_tell.rst:276
+msgid "Batch Optimization"
+msgstr "批优化"
+
+#: ../../source/tutorial/20_recipes/009_ask_and_tell.rst:277
+msgid ""
+"The ask-and-tell interface enables us to optimize a batched objective for"
+" faster optimization. For example, parallelizable evaluation, operation "
+"over vectors, etc."
+msgstr "为了更快地完成优化, ask-and-tell 接口使我们可以优化一个批目标函数. 比如, 并行求值, 向量操作等."
+
+#: ../../source/tutorial/20_recipes/009_ask_and_tell.rst:280
+msgid ""
+"The following objective takes batched hyperparameters ``xs`` instead of a"
+" single hyperparameter and calculates the objective over the full vector."
+msgstr "下面这个目标函数接受批超参数 ``xs`` 而不是一个单独的超参数, 并对整个向量计算目标函数."
+
+#: ../../source/tutorial/20_recipes/009_ask_and_tell.rst:299
+msgid ""
+"In the following example, the number of hyperparameters in a batch is "
+":math:`10`, and ``batched_objective`` is evaluated three times. Thus, the"
+" number of trials is :math:`30`. Note that you need to store either "
+"``trial_ids`` or ``trial`` to call :func:`optuna.study.Study.tell` method"
+" after the batched evaluations."
+msgstr "在下面的例子中, 一批中包含的超参数个数是 :math:`10`, 而 ``batched_objective`` 进行了三次求值."
+"因此, trial的个数是 :math:`30`. 注意, 在 批求值以后, 你需要存储 ``trial_ids`` 或者 ``trial`` "
+"才能调用 :func:`optuna.study.Study.tell` 方法"
+
+#: ../../source/tutorial/20_recipes/009_ask_and_tell.rst:340
+msgid "**Total running time of the script:** ( 0 minutes  0.155 seconds)"
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/009_ask_and_tell.rst:355
+msgid ""
+":download:`Download Python source code: 009_ask_and_tell.py "
+"<009_ask_and_tell.py>`"
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/009_ask_and_tell.rst:361
+msgid ""
+":download:`Download Jupyter notebook: 009_ask_and_tell.ipynb "
+"<009_ask_and_tell.ipynb>`"
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/009_ask_and_tell.rst:368
+msgid "`Gallery generated by Sphinx-Gallery <https://sphinx-gallery.github.io>`_"
+msgstr ""
+

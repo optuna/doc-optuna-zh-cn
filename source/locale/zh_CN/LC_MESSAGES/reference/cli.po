@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 1.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-26 12:27-0400\n"
+"POT-Creation-Date: 2021-05-06 18:29-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -26,7 +26,8 @@ msgid ""
 "The :mod:`~optuna.cli` module implements Optuna's command-line "
 "functionality using the `cliff framework "
 "<https://docs.openstack.org/cliff/latest/index.html>`_."
-msgstr ":mod:`~optuna.cli` 模块使用 `cliff framework "
+msgstr ""
+":mod:`~optuna.cli` 模块使用 `cliff framework "
 "<https://docs.openstack.org/cliff/latest/index.html>`_ 框架实现了Optuna的命令行功能。"
 
 #: ../../<_OptunaApp>:1
@@ -88,6 +89,12 @@ msgstr ""
 #: ../../<_Dashboard>:1
 msgid "Launch web dashboard (beta)."
 msgstr "启动 web dashboard (beta)."
+
+#: ../../<_Dashboard>:1
+msgid ""
+"This feature is deprecated since version 2.7.0. Please use `optuna-"
+"dashboard <https://github.com/optuna/optuna-dashboard>`_ instead."
+msgstr ""
 
 #: ../../<_Dashboard>:1 ../../<_StudyOptimize>:1
 #: ../../<_StudySetUserAttribute>:1

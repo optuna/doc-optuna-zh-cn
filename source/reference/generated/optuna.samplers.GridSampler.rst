@@ -1,4 +1,4 @@
-optuna.samplers.GridSampler
+﻿optuna.samplers.GridSampler
 ===========================
 
 .. currentmodule:: optuna.samplers

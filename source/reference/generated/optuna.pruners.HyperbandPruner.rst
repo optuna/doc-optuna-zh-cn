@@ -1,4 +1,4 @@
-optuna.pruners.HyperbandPruner
+﻿optuna.pruners.HyperbandPruner
 ==============================
 
 .. currentmodule:: optuna.pruners

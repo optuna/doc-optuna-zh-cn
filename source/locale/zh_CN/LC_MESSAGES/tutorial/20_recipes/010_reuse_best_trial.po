@@ -1,0 +1,136 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018, Optuna Contributors.
+# This file is distributed under the same license as the Optuna package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Optuna 2.7.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-05-06 18:29-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../source/tutorial/20_recipes/010_reuse_best_trial.rst:6
+msgid ""
+"Click :ref:`here "
+"<sphx_glr_download_tutorial_20_recipes_010_reuse_best_trial.py>`     to "
+"download the full example code"
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/010_reuse_best_trial.rst:15
+msgid "Re-use the best values"
+msgstr "重新使用最佳值"
+
+#: ../../source/tutorial/20_recipes/010_reuse_best_trial.rst:17
+msgid ""
+"In some cases, you may want to re-evaluate the objective function with "
+"the best hyperparameters again after the hyperparameter optimization."
+msgstr "有时候, 在完成超参数优化以后, 你可能要用最佳的超参数对目标函数重新求值."
+
+#: ../../source/tutorial/20_recipes/010_reuse_best_trial.rst:20
+msgid "For example,"
+msgstr "比如,"
+
+#: ../../source/tutorial/20_recipes/010_reuse_best_trial.rst:22
+msgid ""
+"You have found good hyperparameters with Optuna and want to run a similar"
+" `objective` function using the best hyperparameters found so far to "
+"further analyze the results, or"
+msgstr "你已经用 Optuna 发现了好的超参数, 并且想用已经发现的最佳超参数来运行一个类似的 `objective` 函数以"
+"进一步分析结果, 或者"
+
+#: ../../source/tutorial/20_recipes/010_reuse_best_trial.rst:23
+msgid ""
+"You have optimized with Optuna using a partial dataset to reduce training"
+" time. After the hyperparameter tuning, you want to train the model using"
+" the whole dataset with the best hyperparameter values found."
+msgstr "为节省时间, 你已经用 Optuna 来优化了一个部分数据集. 在超参数调整以后, 你想在整个数据集上"
+"用你找到的最佳超参数来训练模型."
+
+#: ../../source/tutorial/20_recipes/010_reuse_best_trial.rst:25
+msgid ""
+":class:`~optuna.study.Study.best_trial` provides an interface to re-"
+"evaluate the objective function with the current best hyperparameter "
+"values."
+msgstr ":class:`~optuna.study.Study.best_trial` 提供了一个接口, 用当前的最佳超参数值对目标函数进行重新求值."
+
+#: ../../source/tutorial/20_recipes/010_reuse_best_trial.rst:27
+msgid ""
+"This tutorial shows an example of how to re-run a different `objective` "
+"function with the current best values, like the first example above."
+msgstr "像上面的第一个例子一样, 本教程展示了利用当前最佳值来重新运行一个不同的 `objective` 函数的例子."
+
+#: ../../source/tutorial/20_recipes/010_reuse_best_trial.rst:31
+msgid "Investigating the best model further"
+msgstr "进一步研究最佳模型"
+
+#: ../../source/tutorial/20_recipes/010_reuse_best_trial.rst:33
+msgid ""
+"Let's consider a classical supervised classification problem with Optuna "
+"as follows:"
+msgstr "考虑一个如下的采用了 Optuna 的经典有监督分类问题"
+
+#: ../../source/tutorial/20_recipes/010_reuse_best_trial.rst:71
+#: ../../source/tutorial/20_recipes/010_reuse_best_trial.rst:132
+msgid "Out:"
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/010_reuse_best_trial.rst:80
+msgid ""
+"Suppose after the hyperparameter optimization, you want to calculate "
+"other evaluation metrics such as recall, precision, and f1-score on the "
+"same dataset. You can define another objective function that shares most "
+"of the ``objective`` function to reproduce the model with the best "
+"hyperparameters."
+msgstr "假设在超参数优化之后, 你想计算出同一个数据集上的其他的测度, 比如召回率, 精确度和 f1-score. "
+"你可以定义另一个目标函数, 令其和 ``objective`` 高度相似, 以用最佳超参数来重现模型."
+
+#: ../../source/tutorial/20_recipes/010_reuse_best_trial.rst:118
+msgid "Pass ``study.best_trial`` as the argument of ``detailed_objective``."
+msgstr "将 ``study.best_trial`` 传递给 ``detailed_objective`` 做参数."
+
+#: ../../source/tutorial/20_recipes/010_reuse_best_trial.rst:142
+msgid ""
+"The difference between :class:`~optuna.study.Study.best_trial` and "
+"ordinal trials"
+msgstr ":class:`~optuna.study.Study.best_trial` 和普通的 trials 的不同之处"
+
+#: ../../source/tutorial/20_recipes/010_reuse_best_trial.rst:144
+msgid ""
+"This uses :class:`~optuna.study.Study.best_trial`, which returns the "
+"`best_trial` as a :class:`~optuna.trial.FrozenTrial`. The "
+":class:`~optuna.trial.FrozenTrial` is different from an active trial and "
+"behaves differently from :class:`~optuna.trial.Trial` in some situations."
+" For example, pruning does not work because "
+":class:`~optuna.trial.FrozenTrial.should_prune` always returns ``False``."
+msgstr "这里使用了 :class:`~optuna.study.Study.best_trial`, 它返回一个 `best_trial`, 属于 :class:`~optuna.trial.FrozenTrial` 类型. "
+":class:`~optuna.trial.FrozenTrial` 与活跃的 trial 不同, 而且在某些情况下它的行为和 :class:`~optuna.trial.Trial` 也不一样. "
+"比如, 剪枝没法使用, 因为 :class:`~optuna.trial.FrozenTrial.should_prune` 总是返回 ``False``. "
+
+#: ../../source/tutorial/20_recipes/010_reuse_best_trial.rst:154
+msgid "**Total running time of the script:** ( 0 minutes  0.072 seconds)"
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/010_reuse_best_trial.rst:169
+msgid ""
+":download:`Download Python source code: 010_reuse_best_trial.py "
+"<010_reuse_best_trial.py>`"
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/010_reuse_best_trial.rst:175
+msgid ""
+":download:`Download Jupyter notebook: 010_reuse_best_trial.ipynb "
+"<010_reuse_best_trial.ipynb>`"
+msgstr ""
+
+#: ../../source/tutorial/20_recipes/010_reuse_best_trial.rst:182
+msgid "`Gallery generated by Sphinx-Gallery <https://sphinx-gallery.github.io>`_"
+msgstr ""
+

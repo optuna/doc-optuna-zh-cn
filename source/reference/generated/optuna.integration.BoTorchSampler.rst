@@ -1,4 +1,4 @@
-optuna.integration.BoTorchSampler
+﻿optuna.integration.BoTorchSampler
 =================================
 
 .. currentmodule:: optuna.integration

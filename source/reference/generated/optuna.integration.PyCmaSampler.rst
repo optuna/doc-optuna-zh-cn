@@ -1,4 +1,4 @@
-optuna.integration.PyCmaSampler
+﻿optuna.integration.PyCmaSampler
 ===============================
 
 .. currentmodule:: optuna.integration

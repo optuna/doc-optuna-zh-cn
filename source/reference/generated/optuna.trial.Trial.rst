@@ -1,4 +1,4 @@
-optuna.trial.Trial
+﻿optuna.trial.Trial
 ==================
 
 .. currentmodule:: optuna.trial

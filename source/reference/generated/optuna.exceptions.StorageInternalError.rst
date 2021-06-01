@@ -1,4 +1,4 @@
-optuna.exceptions.StorageInternalError
+﻿optuna.exceptions.StorageInternalError
 ======================================
 
 .. currentmodule:: optuna.exceptions

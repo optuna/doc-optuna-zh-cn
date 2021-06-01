@@ -1,4 +1,4 @@
-optuna.visualization.plot\_optimization\_history
+﻿optuna.visualization.plot\_optimization\_history
 ================================================
 
 .. currentmodule:: optuna.visualization
