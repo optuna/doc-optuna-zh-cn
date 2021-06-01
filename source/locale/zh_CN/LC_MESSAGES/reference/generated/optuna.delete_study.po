@@ -41,7 +41,7 @@ msgstr ""
 msgid ""
 "Database URL such as ``sqlite:///example.db``. Please see also the "
 "documentation of :func:`~optuna.study.create_study` for further details."
-msgstr ""
+msgstr "数据库 URL, 比如 ``sqlite:///example.db``. 更多细节参见文档 :func:`~optuna.study.create_study`."
 
 #: of optuna.study.delete_study
 msgid "返回类型"
@@ -51,5 +51,5 @@ msgstr ""
 msgid ""
 ":func:`optuna.delete_study` is an alias of "
 ":func:`optuna.study.delete_study`."
-msgstr ""
+msgstr ":func:`optuna.delete_study` 是 :func:`optuna.study.delete_study` 的别名."
 

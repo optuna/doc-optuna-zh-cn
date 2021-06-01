@@ -23,7 +23,7 @@ msgstr ""
 
 #: of optuna.study.create_study:1
 msgid "Create a new :class:`~optuna.study.Study`."
-msgstr ""
+msgstr "创建一个新的 :class:`~optuna.study.Study`."
 
 #: of optuna.study.create_study:4
 msgid "示例"
@@ -49,11 +49,13 @@ msgid ""
 "https://docs.sqlalchemy.org/en/latest/core/engines.html"
 msgstr ""
 
+
 #: of optuna.study.create_study:18
 msgid ""
 "Database URL. If this argument is set to None, in-memory storage is used,"
 " and the :class:`~optuna.study.Study` will not be persistent."
-msgstr ""
+msgstr "数据库URL. 如果该参数被设置为 None, 我们将采用内存存储, 而"
+" :class:`~optuna.study.Study` 将不可被持久化."
 
 #: of optuna.study.create_study:22
 msgid ""
@@ -63,7 +65,10 @@ msgid ""
 "Engine`_, you can instantiate :class:`~optuna.storages.RDBStorage` with "
 "your desired options and pass it to the ``storage`` argument instead of a"
 " URL."
-msgstr ""
+msgstr "当传入一个数据库 URL 后, Optuna 将在内部使用 `SQLAlchemy`_ 来连接"
+"数据库. 更多细节请参考 `SQLAlchemy's document`_. 如果想给 `SQLAlchemy "
+"Engine`_ 设定非默认选项, 你可以用你想要的选项来实例化 :class:`~optuna.storages.RDBStorage` "
+"并将其, 而不是一个URL, 传入 ``storage`` 参数."
 
 #: of optuna.study.create_study:32
 msgid ""
@@ -72,20 +77,24 @@ msgid ""
 ":class:`~optuna.samplers.TPESampler` is used during single-objective "
 "optimization and :class:`~optuna.samplers.NSGAIISampler` during multi-"
 "objective optimization. See also :class:`~optuna.samplers`."
-msgstr ""
+msgstr "一个实现了值 suggestion 背景算法的 Sampler 对象. "
+"如果设为 :obj:`None` 的话, :class:`~optuna.samplers.TPESampler` 将在单目标优化时被采用, 而"
+" :class:`~optuna.samplers.NSGAIISampler` 会在多目标优化时被采用. 参看 :class:`~optuna.samplers`."
+
 
 #: of optuna.study.create_study:36
 msgid ""
 "A pruner object that decides early stopping of unpromising trials. If "
 ":obj:`None` is specified, :class:`~optuna.pruners.MedianPruner` is used "
 "as the default. See also :class:`~optuna.pruners`."
-msgstr ""
+msgstr "一个用于提前终止无望 trial 的 pruner 对象. 如果设置为 :obj:`None` 的话, "
+":class:`~optuna.pruners.MedianPruner` 将会被采用. 参见 :class:`~optuna.pruners`."
 
 #: of optuna.study.create_study:39
 msgid ""
 "Study's name. If this argument is set to None, a unique name is generated"
 " automatically."
-msgstr ""
+msgstr "Study 的名字. 如果该参数被设置为 None 的话, Optuna 将会采用一个自动生成的名字."
 
 #: of optuna.study.create_study:41
 msgid ""
@@ -101,13 +110,14 @@ msgid ""
 "Direction of optimization. Set ``minimize`` for minimization and "
 "``maximize`` for maximization. You can also pass the corresponding "
 ":class:`~optuna.study.StudyDirection` object."
-msgstr ""
+msgstr "优化的方向. 最小化时设置为 ``minimize`` , 最大化时设置为 ``maximize``. "
+"你也可以传入一个对应的 :class:`~optuna.study.StudyDirection` 对象."
 
 #: of optuna.study.create_study:46
 msgid ""
 "If none of `direction` and `directions` are specified, the direction of "
 "the study is set to \"minimize\"."
-msgstr ""
+msgstr "如果  `direction` 和 `directions` 都没有设置的话, study 的方向将被设置为 \"minimize\"."
 
 #: of optuna.study.create_study:48
 msgid ""
@@ -116,11 +126,13 @@ msgid ""
 "``storage``, a :class:`~optuna.exceptions.DuplicatedStudyError` is raised"
 " if ``load_if_exists`` is set to :obj:`False`. Otherwise, the creation of"
 " the study is skipped, and the existing one is returned."
-msgstr ""
+msgstr "用于处理在 study 名字冲突情况下的行为选项. 在已经有一个名为  ``study_name`` 的 sudy 于 ``storage`` 中存在时, "
+"如果 ``load_if_exists`` 被设置为 :obj:`False`, Optuna 将抛出 :class:`~optuna.exceptions.DuplicatedStudyError` 错误. "
+"否则, study 的创建过程将被略过而返回已有的那个 study. "
 
 #: of optuna.study.create_study:53
 msgid "A sequence of directions during multi-objective optimization."
-msgstr ""
+msgstr "在多目标优化中的一系列的方向."
 
 #: of optuna.study.create_study
 msgid "返回"
@@ -140,8 +152,9 @@ msgid ""
 "neither 'minimize' nor 'maximize' when it is a string.     Or, if the "
 "element of ``directions`` is neither `minimize` nor `maximize`.     Or, "
 "if both ``direction`` and ``directions`` are specified."
-msgstr ""
-
+msgstr "如果 ``directions`` 的长度是0.     或者, 如果 ``direction`` 既不是 "
+"'minimize' 也不是 `maximize`.     或者, "
+"如果 ``direction`` 和 ``directions`` 被同时设定的话."
 #: of optuna.study.create_study
 msgid "返回类型"
 msgstr ""
@@ -151,19 +164,4 @@ msgid ""
 ":func:`optuna.create_study` is an alias of "
 ":func:`optuna.study.create_study`."
 msgstr ""
-
-#~ msgid ""
-#~ "Direction of optimization. Set ``minimize``"
-#~ " for minimization and ``maximize`` for "
-#~ "maximization.  .. note::     If none of"
-#~ " `direction` and `directions` are "
-#~ "specified, the direction of the study"
-#~ "     is set to \"minimize\"."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Direction of optimization. Set ``minimize``"
-#~ " for minimization and ``maximize`` for "
-#~ "maximization."
-#~ msgstr ""
 

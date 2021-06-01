@@ -23,26 +23,28 @@ msgstr ""
 
 #: of optuna.distributions.LogUniformDistribution:1
 msgid "A uniform distribution in the log domain."
-msgstr ""
+msgstr "对数域的均匀分布."
 
 #: of optuna.distributions.LogUniformDistribution:3
 msgid ""
 "This object is instantiated by :func:`~optuna.trial.Trial.suggest_float` "
 "with ``log=True`` and :func:`~optuna.trial.Trial.suggest_loguniform`, and"
 " passed to :mod:`~optuna.samplers` in general."
-msgstr ""
+msgstr "一般情况下, 该对象在 ``log=True`` 和 :func:`~optuna.trial.Trial.suggest_loguniform` 时由 :func:`~optuna.trial.Trial.suggest_float` "
+"进行实例化, 然后被传递到 :mod:`~optuna.samplers`."
+
 
 #: of optuna.distributions.LogUniformDistribution:9
 msgid ""
 "Lower endpoint of the range of the distribution. ``low`` is included in "
 "the range."
-msgstr ""
+msgstr "该分布的取值范围下界。其中 ``low`` 值是包含在取值范围内的。"
 
 #: of optuna.distributions.LogUniformDistribution:13
 msgid ""
 "Upper endpoint of the range of the distribution. ``high`` is included "
 "from the range."
-msgstr ""
+msgstr "该分布的取值范围上界。其中 ``high`` 值是不包含在取值范围内的。"
 
 #: of optuna.distributions.LogUniformDistribution
 msgid "引发"
@@ -67,7 +69,7 @@ msgstr ""
 #: of optuna.distributions.LogUniformDistribution.single:1
 #: optuna.distributions.LogUniformDistribution.single:1:<autosummary>:1
 msgid "Test whether the range of this distribution contains just a single value."
-msgstr ""
+msgstr "测试该分布是否仅包含单一值."
 
 #: of optuna.distributions.LogUniformDistribution.single:1:<autosummary>:1
 msgid ""
@@ -81,7 +83,7 @@ msgstr ""
 msgid ""
 "Convert internal representation of a parameter value into external "
 "representation."
-msgstr ""
+msgstr "将参数的内部表示转化为外部表示."
 
 #: of optuna.distributions.LogUniformDistribution.single:1:<autosummary>:1
 msgid ""
@@ -95,7 +97,7 @@ msgstr ""
 msgid ""
 "Convert external representation of a parameter value into internal "
 "representation."
-msgstr ""
+msgstr "将参数的外部表示转化为内部表示."
 
 #: of optuna.distributions.BaseDistribution.to_external_repr
 #: optuna.distributions.BaseDistribution.to_internal_repr
@@ -107,7 +109,7 @@ msgstr ""
 msgid ""
 ":obj:`True` if the range of this distribution contains just a single "
 "value, otherwise :obj:`False`."
-msgstr ""
+msgstr "如果该分布仅包含一个值的话为 :obj:`True`, 否则为 :obj:`False`."
 
 #: of optuna.distributions.BaseDistribution.to_external_repr
 #: optuna.distributions.BaseDistribution.to_internal_repr
@@ -123,22 +125,10 @@ msgstr ""
 #: of optuna.distributions.BaseDistribution.to_external_repr:3
 #: optuna.distributions.BaseDistribution.to_internal_repr:5
 msgid "Optuna's internal representation of a parameter value."
-msgstr ""
+msgstr "Optuna 对参数值的内部表示"
 
 #: of optuna.distributions.BaseDistribution.to_external_repr:5
 #: optuna.distributions.BaseDistribution.to_internal_repr:3
 msgid "Optuna's external representation of a parameter value."
-msgstr ""
-
-#~ msgid ""
-#~ "This object is instantiated by "
-#~ ":func:`~optuna.trial.Trial.suggest_loguniform`, and passed"
-#~ " to :mod:`~optuna.samplers` in general."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Upper endpoint of the range of the"
-#~ " distribution. ``high`` is excluded from"
-#~ " the range."
-#~ msgstr ""
+msgstr "Optuna 对参数值的外部表示"
 

@@ -23,11 +23,11 @@ msgstr ""
 
 #: of optuna.distributions.check_distribution_compatibility:1
 msgid "A function to check compatibility of two distributions."
-msgstr ""
+msgstr "检查两分布的兼容性的函数."
 
 #: of optuna.distributions.check_distribution_compatibility:3
 msgid "Note that this method is not supposed to be called by library users."
-msgstr ""
+msgstr "注意，该方法不应由 optuna 用户来调用"
 
 #: of optuna.distributions.check_distribution_compatibility
 msgid "参数"
@@ -35,11 +35,11 @@ msgstr ""
 
 #: of optuna.distributions.check_distribution_compatibility:5
 msgid "A distribution previously recorded in storage."
-msgstr ""
+msgstr "从存储内容中恢复的分布"
 
 #: of optuna.distributions.check_distribution_compatibility:6
 msgid "A distribution newly added to storage."
-msgstr ""
+msgstr "新添加到存储内容的分布"
 
 #: of optuna.distributions.check_distribution_compatibility
 msgid "返回"
@@ -47,7 +47,7 @@ msgstr ""
 
 #: of optuna.distributions.check_distribution_compatibility:8
 msgid "True denotes given distributions are compatible. Otherwise, they are not."
-msgstr ""
+msgstr "如果是 True 的话，表明这些分布是兼容的，否则不兼容。"
 
 #: of optuna.distributions.check_distribution_compatibility
 msgid "引发"
@@ -58,7 +58,8 @@ msgid ""
 "If different distribution kinds are set to ``dist_old`` and ``dist_new``,"
 "     or ``dist_old.choices`` doesn't match ``dist_new.choices``     for "
 ":class:`~optuna.distributions.CategoricalDistribution`."
-msgstr ""
+msgstr "如果 ``dist_old`` 和 ``dist_new`` 属于不同类的分布或者 "
+"``dist_old.choices`` 不匹配 :class:`~optuna.distributions.CategoricalDistribution`  的 ``dist_new.choices``."
 
 #: of optuna.distributions.check_distribution_compatibility
 msgid "返回类型"
