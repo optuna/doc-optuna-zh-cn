@@ -23,11 +23,11 @@ msgstr ""
 
 #: of optuna.exceptions.DuplicatedStudyError:1
 msgid "Exception for a duplicated study name."
-msgstr ""
+msgstr "重复 study 名的异常"
 
 #: of optuna.exceptions.DuplicatedStudyError:3
 msgid ""
 "This error is raised when a specified study name already exists in the "
 "storage."
-msgstr ""
+msgstr "当存储中已有一个和指定 study 同名的 study 时, 该错误将会被触发."
 

@@ -23,9 +23,9 @@ msgstr ""
 
 #: of optuna.exceptions.StorageInternalError:1
 msgid "Exception for storage operation."
-msgstr ""
+msgstr "存储操作的异常."
 
 #: of optuna.exceptions.StorageInternalError:3
 msgid "This error is raised when an operation failed in backend DB of storage."
-msgstr ""
+msgstr "当 后端存储数据库操作失败时, 该错误将会被触发."
 
