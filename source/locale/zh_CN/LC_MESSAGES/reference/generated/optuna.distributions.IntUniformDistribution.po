@@ -48,13 +48,13 @@ msgstr ""
 msgid ""
 "Lower endpoint of the range of the distribution. ``low`` is included in "
 "the range."
-msgstr "该分布的取值范围下界。其中 ``low`` 值是包含在取值范围内的。"
+msgstr "该分布的取值范围下界. 其中 ``low`` 值是包含在取值范围内的."
 
 #: of optuna.distributions.IntUniformDistribution:18
 msgid ""
 "Upper endpoint of the range of the distribution. ``high`` is included in "
 "the range."
-msgstr "该分布的取值范围上界。其中 ``high`` 值是包含在取值范围内的。"
+msgstr "该分布的取值范围上界。其中 ``high`` 值是包含在取值范围内的."
 
 #: of optuna.distributions.IntUniformDistribution:22
 msgid "A step for spacing between values."

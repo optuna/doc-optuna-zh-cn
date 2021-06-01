@@ -38,13 +38,13 @@ msgstr "一般情况下, 该对象在 ``log=True`` 和 :func:`~optuna.trial.Tria
 msgid ""
 "Lower endpoint of the range of the distribution. ``low`` is included in "
 "the range."
-msgstr "该分布的取值范围下界。其中 ``low`` 值是包含在取值范围内的。"
+msgstr "该分布的取值范围下界. 其中 ``low`` 值是包含在取值范围内的."
 
 #: of optuna.distributions.LogUniformDistribution:13
 msgid ""
 "Upper endpoint of the range of the distribution. ``high`` is included "
 "from the range."
-msgstr "该分布的取值范围上界。其中 ``high`` 值是不包含在取值范围内的。"
+msgstr "该分布的取值范围上界. 其中 ``high`` 值是包含在取值范围内的."
 
 #: of optuna.distributions.LogUniformDistribution
 msgid "引发"
@@ -54,7 +54,7 @@ msgstr ""
 msgid ""
 "If ``low`` value is larger than ``high`` value, or ``low`` value is "
 "smaller than or     equal to 0."
-msgstr ""
+msgstr "如果 ``low`` 的值比 ``high`` 大, 或者 ``low`` 小于等于 0 的话."
 
 #: ../../source/reference/generated/optuna.distributions.LogUniformDistribution.rst:12
 msgid "Methods"

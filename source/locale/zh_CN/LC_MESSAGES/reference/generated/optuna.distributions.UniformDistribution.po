@@ -37,13 +37,13 @@ msgstr "一般情况下, 该对象由 :func:`~optuna.trial.Trial.suggest_uniform
 msgid ""
 "Lower endpoint of the range of the distribution. ``low`` is included in "
 "the range."
-msgstr "该分布的取值范围下界。其中 ``low`` 值是包含在取值范围内的。"
+msgstr "该分布的取值范围下界. 其中 ``low`` 值是包含在取值范围内的."
 
 #: of optuna.distributions.UniformDistribution:12
 msgid ""
 "Upper endpoint of the range of the distribution. ``high`` is included "
 "from the range."
-msgstr "该分布的取值范围上界。其中 ``high`` 值是包含在取值范围内的。"
+msgstr "该分布的取值范围上界。其中 ``high`` 值是包含在取值范围内的."
 
 #: of optuna.distributions.UniformDistribution
 msgid "引发"
