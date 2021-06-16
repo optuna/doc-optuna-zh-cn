@@ -63,7 +63,7 @@ msgid ""
 "samplers may continue to use other values besides 1 during the "
 "deprecation."
 msgstr "Optuna 中的 sampler 和其他依赖这个分布的组件将会忽略这个值并假定 ``step`` 永远为1. "
-"在被废弃之前, 用户定义的 sampler 可能包含 1 之外的其他值."
+"在被废弃之前, 用户定义的 sampler 可使用 1 之外的其他值."
 
 #: of optuna.distributions.IntLogUniformDistribution
 msgid "引发"

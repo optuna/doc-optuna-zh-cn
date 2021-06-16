@@ -33,8 +33,7 @@ msgid ""
 "example."
 msgstr ""
 "该错误表明当前 :class:`~optuna.trial.Trial` "
-"已被剪枝. 它一般会在 "
-":func:`optuna.trial.Trial.should_prune` 之后被抛出, 就像下面例子中那样."
+"已被剪枝. 像下面例子中那样, 一般 :func:`optuna.trial.Trial.should_prune` 出现后会抛出该异常."
 
 
 #: of optuna.exceptions.TrialPruned:7

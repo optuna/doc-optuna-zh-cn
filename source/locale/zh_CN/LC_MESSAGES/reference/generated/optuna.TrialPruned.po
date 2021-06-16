@@ -31,8 +31,8 @@ msgid ""
 "was pruned. It is supposed to be raised after "
 ":func:`optuna.trial.Trial.should_prune` as shown in the following "
 "example."
-msgstr "该错误告诉用户 当前 :class:`~optuna.trial.Trial` 已经被剪枝. 它被设定在"
-" :func:`optuna.trial.Trial.should_prune` 之后被触发, 就像下面的例子里展示的那样."
+msgstr "该错误告诉用户 当前 :class:`~optuna.trial.Trial` 已经被剪枝. 就像下面的例子里展示的那样, 它被设定在"
+" :func:`optuna.trial.Trial.should_prune` 之后被触发."
 
 #: of optuna.TrialPruned:7
 msgid ""

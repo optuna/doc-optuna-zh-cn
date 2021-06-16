@@ -27,5 +27,5 @@ msgstr "命令行界面异常."
 
 #: of optuna.exceptions.CLIUsageError:3
 msgid "CLI raises this exception when it receives invalid configuration."
-msgstr "命令行界面异常在收到无效配置时会被触发."
+msgstr "命令行界面将在收到无效配置时抛出异常."
 

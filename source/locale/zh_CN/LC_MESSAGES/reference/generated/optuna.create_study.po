@@ -55,7 +55,7 @@ msgid ""
 "Database URL. If this argument is set to None, in-memory storage is used,"
 " and the :class:`~optuna.study.Study` will not be persistent."
 msgstr "数据库URL. 如果该参数被设置为 None, 我们将采用内存存储, 而"
-" :class:`~optuna.study.Study` 将不可被持久化."
+" :class:`~optuna.study.Study` 将不会被持久化."
 
 #: of optuna.study.create_study:22
 msgid ""
@@ -66,8 +66,8 @@ msgid ""
 "your desired options and pass it to the ``storage`` argument instead of a"
 " URL."
 msgstr "当传入一个数据库 URL 后, Optuna 将在内部使用 `SQLAlchemy`_ 来连接"
-"数据库. 更多细节请参考 `SQLAlchemy's document`_. 如果想给 `SQLAlchemy "
-"Engine`_ 设定非默认选项, 你可以用你想要的选项来实例化 :class:`~optuna.storages.RDBStorage` "
+"数据库. 更多细节请参考 `SQLAlchemy's document`_. 如果想更改 `SQLAlchemy "
+"Engine`_ 的默认选项, 你可以用你想要的选项来实例化 :class:`~optuna.storages.RDBStorage` "
 "并将其, 而不是一个URL, 传入 ``storage`` 参数."
 
 #: of optuna.study.create_study:32
