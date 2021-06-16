@@ -23,7 +23,7 @@ msgstr ""
 
 #: of optuna.logging.get_verbosity:1
 msgid "Return the current level for the Optuna's root logger."
-msgstr ""
+msgstr "返回 Optuna 当前的根 logger 的日志水平."
 
 #: of optuna.logging.get_verbosity
 msgid "返回"
@@ -31,7 +31,7 @@ msgstr ""
 
 #: of optuna.logging.get_verbosity:3
 msgid "Logging level, e.g., ``optuna.logging.DEBUG`` and ``optuna.logging.INFO``."
-msgstr ""
+msgstr "日志水平, 比如 ``optuna.logging.DEBUG`` 和 ``optuna.logging.INFO``."
 
 #: of optuna.logging.get_verbosity
 msgid "返回类型"

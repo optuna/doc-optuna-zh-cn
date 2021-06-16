@@ -23,11 +23,11 @@ msgstr ""
 
 #: of optuna.logging.disable_propagation:1
 msgid "Disable propagation of the library log outputs."
-msgstr ""
+msgstr "禁用库日志输出的传播."
 
 #: of optuna.logging.disable_propagation:3
 msgid "Note that log propagation is disabled by default."
-msgstr ""
+msgstr "注意, 日志传播默认情况下是禁用的."
 
 #: of optuna.logging.disable_propagation
 msgid "返回类型"

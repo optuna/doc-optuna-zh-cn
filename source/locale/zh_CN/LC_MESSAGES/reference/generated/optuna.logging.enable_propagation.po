@@ -23,13 +23,13 @@ msgstr ""
 
 #: of optuna.logging.enable_propagation:1
 msgid "Enable propagation of the library log outputs."
-msgstr ""
+msgstr "启用库日志输出的传播."
 
 #: of optuna.logging.enable_propagation:3
 msgid ""
 "Please disable the Optuna's default handler to prevent double logging if "
 "the root logger has been configured."
-msgstr ""
+msgstr "如果根 logger 已经配置好了的话, 请禁用 Optuna 的默认句柄以防止重复日志输出."
 
 #: of optuna.logging.enable_propagation:7
 msgid "示例"
@@ -39,7 +39,7 @@ msgstr ""
 msgid ""
 "Propagate all log output to the root logger in order to save them to the "
 "file."
-msgstr ""
+msgstr "将所有的日志输出传播到根 logger 以将其存入文件中."
 
 #: of optuna.logging.enable_propagation
 msgid "返回类型"

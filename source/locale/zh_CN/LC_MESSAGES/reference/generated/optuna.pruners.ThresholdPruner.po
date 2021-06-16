@@ -23,13 +23,13 @@ msgstr ""
 
 #: of optuna.pruners._threshold.ThresholdPruner:1
 msgid "Pruner to detect outlying metrics of the trials."
-msgstr ""
+msgstr "检测具有离群指标的 trial 的 pruner."
 
 #: of optuna.pruners._threshold.ThresholdPruner:3
 msgid ""
 "Prune if a metric exceeds upper threshold, falls behind lower threshold "
 "or reaches ``nan``."
-msgstr ""
+msgstr "如果某一个指标超出了阈值上限或者低于阈值下限或者变成了 ``nan``, 则进行剪枝."
 
 #: of optuna.pruners._threshold.ThresholdPruner:7
 msgid "示例"
@@ -47,7 +47,7 @@ msgstr ""
 msgid ""
 "A minimum value which determines whether pruner prunes or not. If an "
 "intermediate value is smaller than lower, it prunes."
-msgstr ""
+msgstr "用于确定 pruner 是否需要剪枝的最小值, 如果某一个中间值比 lower 更小, 则进行剪枝."
 
 #: of optuna.pruners._threshold.ThresholdPruner:47
 msgid "upper:"
@@ -57,7 +57,7 @@ msgstr ""
 msgid ""
 "A maximum value which determines whether pruner prunes or not. If an "
 "intermediate value is larger than upper, it prunes."
-msgstr ""
+msgstr "用于确定 pruner 是否需要剪枝的最大值, 如果某一个中间值比 upper 更大, 则进行剪枝."
 
 #: of optuna.pruners._threshold.ThresholdPruner:49
 msgid "n_warmup_steps:"
@@ -67,7 +67,7 @@ msgstr ""
 msgid ""
 "Pruning is disabled if the step is less than the given number of warmup "
 "steps."
-msgstr ""
+msgstr "在步骤数比给定的热身步骤更小时, 剪枝是被禁用的."
 
 #: of optuna.pruners._threshold.ThresholdPruner:55
 msgid "interval_steps:"
@@ -79,7 +79,8 @@ msgid ""
 "warmup steps. If no value has been reported at the time of a pruning "
 "check, that particular check will be postponed until a value is reported."
 " Value must be at least 1."
-msgstr ""
+msgstr "在剪枝检查中步数的间隔, 不包含热身步骤. 如果剪枝检查时没有报告的中间值, "
+"此次剪枝检查会被推迟到有中间值报告为止. 该值最小为 1."
 
 #: ../../source/reference/generated/optuna.pruners.ThresholdPruner.rst:12
 msgid "Methods"
@@ -92,7 +93,7 @@ msgstr ""
 #: of optuna.pruners._threshold.ThresholdPruner.prune:1
 #: optuna.pruners._threshold.ThresholdPruner.prune:1:<autosummary>:1
 msgid "Judge whether the trial should be pruned based on the reported values."
-msgstr ""
+msgstr "根据报告的值判断该 trial 是否需要被剪枝."
 
 #: of optuna.pruners._threshold.ThresholdPruner.prune:3
 msgid ""
@@ -100,7 +101,9 @@ msgid ""
 "Instead, :func:`optuna.trial.Trial.report` and "
 ":func:`optuna.trial.Trial.should_prune` provide user interfaces to "
 "implement pruning mechanism in an objective function."
-msgstr ""
+msgstr "注意, 库用户不应调用此方法. "
+"相反地, :func:`optuna.trial.Trial.report` 和 :func:`optuna.trial.Trial.should_prune` "
+"为用户提供了在目标函数内部实现剪枝算法的接口."
 
 #: of optuna.pruners._threshold.ThresholdPruner.prune
 msgid "参数"
@@ -108,13 +111,13 @@ msgstr ""
 
 #: of optuna.pruners._threshold.ThresholdPruner.prune:7
 msgid "Study object of the target study."
-msgstr ""
+msgstr "目标 study 的 study 对象."
 
 #: of optuna.pruners._threshold.ThresholdPruner.prune:8
 msgid ""
 "FrozenTrial object of the target trial. Take a copy before modifying this"
 " object."
-msgstr ""
+msgstr "目标 trial 的 FrozenTrial 对象. 在修改此对象之前需拷贝一份副本."
 
 #: of optuna.pruners._threshold.ThresholdPruner.prune
 msgid "返回"
@@ -122,7 +125,7 @@ msgstr ""
 
 #: of optuna.pruners._threshold.ThresholdPruner.prune:11
 msgid "A boolean value representing whether the trial should be pruned."
-msgstr ""
+msgstr "代表该 trial 是否需要被剪枝的布尔值."
 
 #: of optuna.pruners._threshold.ThresholdPruner.prune
 msgid "返回类型"
