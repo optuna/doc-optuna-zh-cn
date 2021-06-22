@@ -23,7 +23,7 @@ msgstr ""
 
 #: of optuna.distributions.distribution_to_json:1
 msgid "Serialize a distribution to JSON format."
-msgstr ""
+msgstr "将一个分布序列化成 JSON 格式"
 
 #: of optuna.distributions.distribution_to_json
 msgid "参数"
@@ -31,7 +31,7 @@ msgstr ""
 
 #: of optuna.distributions.distribution_to_json:3
 msgid "A distribution to be serialized."
-msgstr ""
+msgstr "待序列化的分布."
 
 #: of optuna.distributions.distribution_to_json
 msgid "返回"
@@ -39,7 +39,7 @@ msgstr ""
 
 #: of optuna.distributions.distribution_to_json:5
 msgid "A JSON string of a given distribution."
-msgstr ""
+msgstr "给定分布的 JSON 字符串."
 
 #: of optuna.distributions.distribution_to_json
 msgid "返回类型"

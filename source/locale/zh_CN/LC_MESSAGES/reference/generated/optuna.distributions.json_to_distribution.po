@@ -23,7 +23,7 @@ msgstr ""
 
 #: of optuna.distributions.json_to_distribution:1
 msgid "Deserialize a distribution in JSON format."
-msgstr ""
+msgstr "对 JSON 格式的分布进行反序列化."
 
 #: of optuna.distributions.json_to_distribution
 msgid "参数"
@@ -31,7 +31,7 @@ msgstr ""
 
 #: of optuna.distributions.json_to_distribution:3
 msgid "A JSON-serialized distribution."
-msgstr ""
+msgstr "已被 JSON 序列化的分布."
 
 #: of optuna.distributions.json_to_distribution
 msgid "返回"
@@ -39,7 +39,7 @@ msgstr ""
 
 #: of optuna.distributions.json_to_distribution:5
 msgid "A deserialized distribution."
-msgstr ""
+msgstr "反序列化后的分布."
 
 #: of optuna.distributions.json_to_distribution
 msgid "引发"
@@ -47,7 +47,7 @@ msgstr ""
 
 #: of optuna.distributions.json_to_distribution:7
 msgid "If the unknown class is specified."
-msgstr ""
+msgstr "如果被指定为未知类的话."
 
 #: of optuna.distributions.json_to_distribution
 msgid "返回类型"

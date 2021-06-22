@@ -23,7 +23,7 @@ msgstr ""
 
 #: of optuna.study.get_all_study_summaries:1
 msgid "Get all history of studies stored in a specified storage."
-msgstr ""
+msgstr "返回指定存储中的所有 study 的历史记录."
 
 #: of optuna.study.get_all_study_summaries:4
 msgid "示例"
@@ -37,7 +37,7 @@ msgstr ""
 msgid ""
 "Database URL such as ``sqlite:///example.db``. Please see also the "
 "documentation of :func:`~optuna.study.create_study` for further details."
-msgstr ""
+msgstr "数据库 URL, 比如 ``sqlite:///example.db``. 更多细节参见文档 :func:`~optuna.study.create_study`."
 
 #: of optuna.study.get_all_study_summaries
 msgid "返回"
@@ -47,7 +47,7 @@ msgstr ""
 msgid ""
 "List of study history summarized as :class:`~optuna.study.StudySummary` "
 "objects."
-msgstr ""
+msgstr "由 :class:`~optuna.study.StudySummary` 对象构成的 study 历史记录列表."
 
 #: of optuna.study.get_all_study_summaries
 msgid "返回类型"
@@ -57,5 +57,5 @@ msgstr ""
 msgid ""
 ":func:`optuna.get_all_study_summaries` is an alias of "
 ":func:`optuna.study.get_all_study_summaries`."
-msgstr ""
+msgstr ":func:`optuna.get_all_study_summaries` 是 :func:`optuna.study.get_all_study_summaries` 的别名."
 

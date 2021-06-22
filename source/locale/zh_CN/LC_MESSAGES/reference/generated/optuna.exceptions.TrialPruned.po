@@ -23,7 +23,7 @@ msgstr ""
 
 #: of optuna.exceptions.TrialPruned:1
 msgid "Exception for pruned trials."
-msgstr ""
+msgstr "被剪枝 trial 的异常"
 
 #: of optuna.exceptions.TrialPruned:3
 msgid ""
@@ -32,12 +32,17 @@ msgid ""
 ":func:`optuna.trial.Trial.should_prune` as shown in the following "
 "example."
 msgstr ""
+"该错误表明当前 :class:`~optuna.trial.Trial` "
+"已被剪枝. 像下面例子中那样, 一般 :func:`optuna.trial.Trial.should_prune` 出现后会抛出该异常."
+
 
 #: of optuna.exceptions.TrialPruned:7
 msgid ""
 ":class:`optuna.TrialPruned` is an alias of "
 ":class:`optuna.exceptions.TrialPruned`."
 msgstr ""
+":class:`optuna.TrialPruned` 是 "
+":class:`optuna.exceptions.TrialPruned` 的一个别名."
 
 #: of optuna.exceptions.TrialPruned:10
 msgid "示例"

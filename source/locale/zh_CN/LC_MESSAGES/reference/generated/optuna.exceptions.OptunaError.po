@@ -23,5 +23,5 @@ msgstr ""
 
 #: of optuna.exceptions.OptunaError:1
 msgid "Base class for Optuna specific errors."
-msgstr ""
+msgstr "Optuna 错误的基类. "
 

@@ -23,7 +23,7 @@ msgstr ""
 
 #: of optuna.distributions.DiscreteUniformDistribution:1
 msgid "A discretized uniform distribution in the linear domain."
-msgstr ""
+msgstr "线性域的离散均匀分布."
 
 #: of optuna.distributions.DiscreteUniformDistribution:3
 msgid ""
@@ -31,7 +31,8 @@ msgid ""
 ":func:`~optuna.trial.Trial.suggest_uniform` with ``step`` argument and "
 ":func:`~optuna.trial.Trial.suggest_discrete_uniform`, and passed to "
 ":mod:`~optuna.samplers` in general."
-msgstr ""
+msgstr "一般情况下, 该对象在有 ``step`` 参数 和 :func:`~optuna.trial.Trial.suggest_discrete_uniform` 时由 :func:`~optuna.trial.Trial.suggest_uniform` "
+"进行实例化, 然后被传递到 :mod:`~optuna.samplers`."
 
 #: of optuna.distributions.DiscreteUniformDistribution:8
 msgid ""
@@ -40,22 +41,26 @@ msgid ""
 ":math:`k q + \\mathsf{low} < \\mathsf{high}`, where :math:`k` is an "
 "integer."
 msgstr ""
+"如果区间 :math:`[\\mathsf{low}, \\mathsf{high}]` 不能被步数"
+" :math:`q` 整除的话， 值 :math:`\\mathsf{high}` "
+"会被替代成 :math:`k q + \\mathsf{low} \\lt"
+" \\mathsf{high}` 的最大值，其中 :math:`k` 是整数. "
 
 #: of optuna.distributions.DiscreteUniformDistribution:14
 msgid ""
 "Lower endpoint of the range of the distribution. ``low`` is included in "
 "the range."
-msgstr ""
+msgstr "该分布的取值范围下界. 其中 ``low`` 值是包含在取值范围内的. "
 
 #: of optuna.distributions.DiscreteUniformDistribution:18
 msgid ""
 "Upper endpoint of the range of the distribution. ``high`` is included in "
 "the range."
-msgstr ""
+msgstr "该分布的取值范围上界. 其中 ``high`` 值是包含在取值范围内的. "
 
 #: of optuna.distributions.DiscreteUniformDistribution:22
 msgid "A discretization step."
-msgstr ""
+msgstr "离散化步长"
 
 #: of optuna.distributions.DiscreteUniformDistribution
 msgid "引发"
@@ -63,7 +68,7 @@ msgstr ""
 
 #: of optuna.distributions.DiscreteUniformDistribution:24
 msgid "If ``low`` value is larger than ``high`` value."
-msgstr ""
+msgstr "如果 ``low`` 的值比 ``high`` 大的话."
 
 #: ../../source/reference/generated/optuna.distributions.DiscreteUniformDistribution.rst:12
 msgid "Methods"
@@ -78,7 +83,7 @@ msgstr ""
 #: of optuna.distributions.DiscreteUniformDistribution.single:1
 #: optuna.distributions.DiscreteUniformDistribution.single:1:<autosummary>:1
 msgid "Test whether the range of this distribution contains just a single value."
-msgstr ""
+msgstr "测试该分布是否仅包含单一值."
 
 #: of optuna.distributions.DiscreteUniformDistribution.single:1:<autosummary>:1
 msgid ""
@@ -92,7 +97,7 @@ msgstr ""
 msgid ""
 "Convert internal representation of a parameter value into external "
 "representation."
-msgstr ""
+msgstr "将参数的内部表示转化为外部表示."
 
 #: of optuna.distributions.DiscreteUniformDistribution.single:1:<autosummary>:1
 msgid ""
@@ -106,7 +111,7 @@ msgstr ""
 msgid ""
 "Convert external representation of a parameter value into internal "
 "representation."
-msgstr ""
+msgstr "将参数的外部表示转化为内部表示."
 
 #: of optuna.distributions.BaseDistribution.to_external_repr
 #: optuna.distributions.BaseDistribution.to_internal_repr
@@ -118,7 +123,7 @@ msgstr ""
 msgid ""
 ":obj:`True` if the range of this distribution contains just a single "
 "value, otherwise :obj:`False`."
-msgstr ""
+msgstr "如果该分布仅包含一个值的话为 :obj:`True`, 否则为 :obj:`False`."
 
 #: of optuna.distributions.BaseDistribution.to_external_repr
 #: optuna.distributions.BaseDistribution.to_internal_repr
@@ -134,16 +139,9 @@ msgstr ""
 #: of optuna.distributions.BaseDistribution.to_external_repr:3
 #: optuna.distributions.BaseDistribution.to_internal_repr:5
 msgid "Optuna's internal representation of a parameter value."
-msgstr ""
+msgstr "Optuna 对参数值的内部表示"
 
 #: of optuna.distributions.BaseDistribution.to_external_repr:5
 #: optuna.distributions.BaseDistribution.to_internal_repr:3
 msgid "Optuna's external representation of a parameter value."
-msgstr ""
-
-#~ msgid ""
-#~ "This object is instantiated by "
-#~ ":func:`~optuna.trial.Trial.suggest_discrete_uniform`, and "
-#~ "passed to :mod:`~optuna.samplers` in general."
-#~ msgstr ""
-
+msgstr "Optuna 对参数值的外部表示"
