@@ -25,7 +25,7 @@ msgstr ""
 msgid ""
 "Evaluate parameter importances based on completed trials in the given "
 "study."
-msgstr ""
+msgstr "基于给定的 study 中已完成的 trial 求解参数重要性."
 
 #: of optuna.importance.get_param_importances:3
 msgid ""

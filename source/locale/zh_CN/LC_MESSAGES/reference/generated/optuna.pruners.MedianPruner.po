@@ -29,7 +29,7 @@ msgstr "使用中位数终止规则的 pruner."
 msgid ""
 "Prune if the trial's best intermediate result is worse than median of "
 "intermediate results of previous trials at the same step."
-msgstr "如果该 trial 的最佳中间值比之前所有 trial 在同一步骤时的最差中间值还差, 则剪枝."
+msgstr "如果该 trial 的最佳中间值比之前 trial 在同一步骤时所有中间值的中位数还差, 则剪枝."
 
 #: of optuna.pruners._median.MedianPruner:7
 msgid "示例"

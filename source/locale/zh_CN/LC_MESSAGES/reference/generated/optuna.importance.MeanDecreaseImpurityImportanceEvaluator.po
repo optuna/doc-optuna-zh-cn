@@ -129,7 +129,7 @@ msgid ""
 ":obj:`None` and ``study`` is being used for single-objective "
 "optimization, the objective values are used."
 msgstr "一个用于指定求解重要性的值的函数. 如果将其设置为 :obj:`None` 并且"
-"``study`` 是一个单目标优化的话, 这个值将会采用目标函数."
+"``study`` 是一个单目标优化的话, 这个值则将使用目标函数值."
 
 #: of
 #: optuna.importance._mean_decrease_impurity.MeanDecreaseImpurityImportanceEvaluator.evaluate:21

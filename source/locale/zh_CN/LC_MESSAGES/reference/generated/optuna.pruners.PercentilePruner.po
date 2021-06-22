@@ -29,7 +29,7 @@ msgstr "保持特定百分比的 trial 的 pruner."
 msgid ""
 "Prune if the best intermediate value is in the bottom percentile among "
 "trials at the same step."
-msgstr "如果报告的最佳中间值位于所有处于相同步骤的 trial 的中间值分布的百分位底部."
+msgstr "如果报告的最佳中间值位于所有处于相同步骤的 trial 的中间值分布的特定倒数百分之几."
 
 #: of optuna.pruners._percentile.PercentilePruner:6
 msgid "示例"

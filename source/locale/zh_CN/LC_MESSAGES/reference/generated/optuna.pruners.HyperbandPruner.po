@@ -35,7 +35,7 @@ msgid ""
 "<http://www.jmlr.org/papers/volume18/16-558/16-558.pdf>`_ attacks this "
 "trade-off by trying different :math:`n` values for a fixed budget."
 msgstr "由于 SuccessiveHalving (SHA) 需要参数配置的个数作为其超参数. 对于一个给定的有限预算 :math:`B`, "
-"所有的配置平均下来有 :math:`B \\over n` 的资源. 所以, 这里存在一个 :math:`B` 和"
+"所有的配置平均下来有 :math:`B \\over n` 的资源. 所以, 这里存在一个 :math:`B` 和 "
 ":math:`B \\over n` 的权衡取舍. `Hyperband "
 "<http://www.jmlr.org/papers/volume18/16-558/16-558.pdf>`_ 通过为固定的预算设置不同的 :math:`n` 来解决这个权衡问题."
 
@@ -56,8 +56,7 @@ msgid ""
 "shows that :class:`optuna.pruners.HyperbandPruner` supports both "
 "samplers."
 msgstr "`基准测试 <https://github.com/optuna/optuna/pull/828#issuecomment-575457360>`_ "
-"表明 :class:`optuna.pruners.HyperbandPruner` 支持两种 sampler."
-
+"表明 :class:`optuna.pruners.HyperbandPruner` 对这两种 sampler 都支持."
 
 #: of optuna.pruners._hyperband.HyperbandPruner:19
 msgid ""
@@ -70,7 +69,6 @@ msgid ""
 msgstr "如果你在 :class:`~optuna.samplers.TPESampler` 中使用 ``HyperbandPruner``, "
 "我们推荐设置大一些的 ``n_trials`` 或者 ``timeout`` 以完整地利用 :class:`~optuna.samplers.TPESampler`, 因为 "
 ":class:`~optuna.samplers.TPESampler` 在开始时使用了某些 :class:`~optuna.trial.Trial`\\ (默认情况下为 :math:`10`)."
-
 
 #: of optuna.pruners._hyperband.HyperbandPruner:25
 msgid ""
@@ -88,7 +86,7 @@ msgstr "由于 Hyperband 运行多个 :class:`~optuna.pruners.SuccessiveHalvingP
 msgid ""
 "Thus, for example, if ``HyperbandPruner`` has :math:`4` pruners in it, at"
 " least :math:`4 \\times 10` trials are consumed for startup."
-msgstr "因此, 如果 ``HyperbandPruner`` 有 :math:`4` 个 pruner 的话, 它的启动阶段至少需要 :math:`4 \\times 10` "
+msgstr "因此, 如果 ``HyperbandPruner`` 有 :math:`4` 个 pruner 的话, 它的启动阶段至少需要用去 :math:`4 \\times 10` "
 "个 trial."
 
 #: of optuna.pruners._hyperband.HyperbandPruner:34
@@ -106,7 +104,7 @@ msgid ""
 "detail."
 msgstr "Hyperband 有多个 :class:`~optuna.pruners.SuccessiveHalvingPruner`. "
 "在原文中, 每一个 :class:`~optuna.pruners.SuccessiveHalvingPruner` 被称作 \"bracket\"."
-"bracket 的个数是控制 Hyperband 的提前终止行为的重要参数. 它由 ``max_resource`` 和 "
+"bracket 的个数是控制 Hyperband 的提前终止行为的重要参数. 它由 ``min_resource``, ``max_resource`` 和 "
 "``reduction_factor`` 共同确定, 因为 `The number of brackets = "
 "floor(log_{reduction_factor}(max_resource / min_resource)) + 1`. "
 "请设置 ``reduction_factor``  使得 bracket 的个数不至于太大 (大多数情况下为 4~6). 具体细节请参考 `原文 "
@@ -136,7 +134,7 @@ msgid ""
 "faster, but a larger :math:`r` will give a better guarantee of successful"
 " judging between configurations. See the details for "
 ":class:`~optuna.pruners.SuccessiveHalvingPruner`."
-msgstr "一个用于指定分配给 trial 的最小资源的参数（在文该参数被称为 :math:`r`). "
+msgstr "一个用于指定分配给 trial 的最小资源的参数（在原文中该参数被称为 :math:`r`). "
 "更小的 :math:`r` 给出结果会更快, 但是更大的 :math:`r` 将会更好地在不同的配置间做出成功的判断. "
 "具体细节见 "
 ":class:`~optuna.pruners.SuccessiveHalvingPruner`."
@@ -202,7 +200,7 @@ msgid ""
 "trial can be promoted. Incompatible with ``max_resouce`` is ``\"auto\"``."
 " See the details for :class:`~optuna.pruners.SuccessiveHalvingPruner`."
 msgstr "指定在任何 trial 能被弹出前所需要运行的 trial 个数的参数. "
-"与 ``max_resouce`` 不兼容的是 ``\"auto\"``. "
+"与 ``max_resouce`` 是 ``\"auto\"`` 不兼容. "
 "细节参见 :class:`~optuna.pruners.SuccessiveHalvingPruner`."
 
 #: ../../source/reference/generated/optuna.pruners.HyperbandPruner.rst:12
