@@ -23,7 +23,7 @@ msgstr ""
 
 #: of optuna.pruners._hyperband.HyperbandPruner:1
 msgid "Pruner using Hyperband."
-msgstr ""
+msgstr "使用 Hyperband 的 pruner."
 
 #: of optuna.pruners._hyperband.HyperbandPruner:3
 msgid ""
@@ -34,17 +34,20 @@ msgid ""
 ":math:`B \\over n`. `Hyperband "
 "<http://www.jmlr.org/papers/volume18/16-558/16-558.pdf>`_ attacks this "
 "trade-off by trying different :math:`n` values for a fixed budget."
-msgstr ""
+msgstr "由于 SuccessiveHalving (SHA) 需要参数配置的个数作为其超参数. 对于一个给定的有限预算 :math:`B`, "
+"所有的配置平均下来有 :math:`B \\over n` 的资源. 所以, 这里存在一个 :math:`B` 和 "
+":math:`B \\over n` 的权衡取舍. `Hyperband "
+"<http://www.jmlr.org/papers/volume18/16-558/16-558.pdf>`_ 通过为固定的预算设置不同的 :math:`n` 来解决这个权衡问题."
 
 #: of optuna.pruners._hyperband.HyperbandPruner:11
 msgid ""
 "In the Hyperband paper, the counterpart of "
 ":class:`~optuna.samplers.RandomSampler` is used."
-msgstr ""
+msgstr "在 Hyperband 论文中采用的是 :class:`~optuna.samplers.RandomSampler` 的对应物."
 
 #: of optuna.pruners._hyperband.HyperbandPruner:13
 msgid "Optuna uses :class:`~optuna.samplers.TPESampler` by default."
-msgstr ""
+msgstr "默认情况下 Opuna 使用 :class:`~optuna.samplers.TPESampler`."
 
 #: of optuna.pruners._hyperband.HyperbandPruner:14
 msgid ""
@@ -52,7 +55,8 @@ msgid ""
 "<https://github.com/optuna/optuna/pull/828#issuecomment-575457360>`_ "
 "shows that :class:`optuna.pruners.HyperbandPruner` supports both "
 "samplers."
-msgstr ""
+msgstr "`基准测试 <https://github.com/optuna/optuna/pull/828#issuecomment-575457360>`_ "
+"表明 :class:`optuna.pruners.HyperbandPruner` 对这两种 sampler 都支持."
 
 #: of optuna.pruners._hyperband.HyperbandPruner:19
 msgid ""
@@ -62,7 +66,9 @@ msgid ""
 ":class:`~optuna.samplers.TPESampler` because "
 ":class:`~optuna.samplers.TPESampler` uses some (by default, :math:`10`) "
 ":class:`~optuna.trial.Trial`\\ s for its startup."
-msgstr ""
+msgstr "如果你在 :class:`~optuna.samplers.TPESampler` 中使用 ``HyperbandPruner``, "
+"我们推荐设置大一些的 ``n_trials`` 或者 ``timeout`` 以完整地利用 :class:`~optuna.samplers.TPESampler`, 因为 "
+":class:`~optuna.samplers.TPESampler` 在开始时使用了某些 :class:`~optuna.trial.Trial`\\ (默认情况下为 :math:`10`)."
 
 #: of optuna.pruners._hyperband.HyperbandPruner:25
 msgid ""
@@ -72,13 +78,16 @@ msgid ""
 "bracket needs to observe more than :math:`10` "
 ":class:`~optuna.trial.Trial`\\ s for :class:`~optuna.samplers.TPESampler`"
 " to adapt its search space."
-msgstr ""
+msgstr "由于 Hyperband 运行多个 :class:`~optuna.pruners.SuccessiveHalvingPruner` 并且基于当前 "
+":class:`~optuna.trial.Trial`\\ 的 bracket ID 收集 trial, 每一个 bracket 需要观察多于 :math:`10` 个 "
+":class:`~optuna.trial.Trial`\\ 以让 :class:`~optuna.samplers.TPESampler` 适应起搜索空间."
 
 #: of optuna.pruners._hyperband.HyperbandPruner:30
 msgid ""
 "Thus, for example, if ``HyperbandPruner`` has :math:`4` pruners in it, at"
 " least :math:`4 \\times 10` trials are consumed for startup."
-msgstr ""
+msgstr "因此, 如果 ``HyperbandPruner`` 有 :math:`4` 个 pruner 的话, 它的启动阶段至少需要用去 :math:`4 \\times 10` "
+"个 trial."
 
 #: of optuna.pruners._hyperband.HyperbandPruner:34
 msgid ""
@@ -93,11 +102,17 @@ msgid ""
 "(about 4 ~ 6 in most use cases). Please see Section 3.6 of the `original "
 "paper <http://www.jmlr.org/papers/volume18/16-558/16-558.pdf>`_ for the "
 "detail."
-msgstr ""
+msgstr "Hyperband 有多个 :class:`~optuna.pruners.SuccessiveHalvingPruner`. "
+"在原文中, 每一个 :class:`~optuna.pruners.SuccessiveHalvingPruner` 被称作 \"bracket\"."
+"bracket 的个数是控制 Hyperband 的提前终止行为的重要参数. 它由 ``min_resource``, ``max_resource`` 和 "
+"``reduction_factor`` 共同确定, 因为 `The number of brackets = "
+"floor(log_{reduction_factor}(max_resource / min_resource)) + 1`. "
+"请设置 ``reduction_factor``  使得 bracket 的个数不至于太大 (大多数情况下为 4~6). 具体细节请参考 `原文 "
+" <http://www.jmlr.org/papers/volume18/16-558/16-558.pdf>`_ 的  Section 3.6."
 
 #: of optuna.pruners._hyperband.HyperbandPruner:45
 msgid "Please refer to :meth:`~optuna.trial.Trial.report`."
-msgstr ""
+msgstr "请参考 :meth:`~optuna.trial.Trial.report`."
 
 #: of optuna.pruners._hyperband.HyperbandPruner:48
 msgid "示例"
@@ -105,7 +120,7 @@ msgstr ""
 
 #: of optuna.pruners._hyperband.HyperbandPruner:49
 msgid "We minimize an objective function with Hyperband pruning algorithm."
-msgstr ""
+msgstr "我们使用 Hyperband 剪枝算法来最小化目标函数."
 
 #: of optuna.pruners._hyperband.HyperbandPruner
 #: optuna.pruners._hyperband.HyperbandPruner.prune
@@ -119,7 +134,10 @@ msgid ""
 "faster, but a larger :math:`r` will give a better guarantee of successful"
 " judging between configurations. See the details for "
 ":class:`~optuna.pruners.SuccessiveHalvingPruner`."
-msgstr ""
+msgstr "一个用于指定分配给 trial 的最小资源的参数（在原文中该参数被称为 :math:`r`). "
+"更小的 :math:`r` 给出结果会更快, 但是更大的 :math:`r` 将会更好地在不同的配置间做出成功的判断. "
+"具体细节见 "
+":class:`~optuna.pruners.SuccessiveHalvingPruner`."
 
 #: of optuna.pruners._hyperband.HyperbandPruner:94
 msgid ""
@@ -145,7 +163,11 @@ msgid ""
 " the number of epochs for neural networks). When this argument is "
 "\"auto\", the maximum resource is estimated according to the completed "
 "trials. The default value of this argument is \"auto\"."
-msgstr ""
+msgstr "一个用于指定分配给 trial 的最大资源的参数."
+"文中的 :math:`R` 等于 ``max_resource / min_resource``. "
+"该值代表了并且应该和最大的迭代步数相匹配 (比如神经网络的 epoch 数). "
+"当这个参数为 \"auto\" 时, 最大资源将通过已完成的 trial 来估计. "
+"该参数的默认值为 \"auto\"."
 
 #: of optuna.pruners._hyperband.HyperbandPruner:101
 msgid ""
@@ -153,27 +175,33 @@ msgid ""
 ":meth:`~optuna.trial.Trial.report` in the first, or one of the first if "
 "trained in parallel, completed trial. No trials will be pruned until the "
 "maximum resource is determined."
-msgstr ""
+msgstr "在设定为 \"auto\" 时, 最大资源将会是由第一个 trial 或者首先完成训练的头几个 trial 中的某一个 "
+"的 :meth:`~optuna.trial.Trial.report`  返回的最大步数. "
+"在指定最大资源之前, 不会有trial 被剪枝."
 
 #: of optuna.pruners._hyperband.HyperbandPruner:107
 msgid ""
 "If the step of the last intermediate value may change with each trial, "
 "please manually specify the maximum possible step to ``max_resource``."
-msgstr ""
+msgstr "如果每个 trial 的最后中间值的步骤不同的话，请手动设定最大的可能步骤 ``max_resource``."
 
 #: of optuna.pruners._hyperband.HyperbandPruner:109
 msgid ""
 "A parameter for specifying reduction factor of promotable trials noted as"
 " :math:`\\eta` in the paper. See the details for "
 ":class:`~optuna.pruners.SuccessiveHalvingPruner`."
-msgstr ""
+msgstr "一个用于指定 promotable trial 的 reduction 因子的参数, "
+"在文中记为 :math:`\\eta`. 具体细节参见 "
+":class:`~optuna.pruners.SuccessiveHalvingPruner`."
 
 #: of optuna.pruners._hyperband.HyperbandPruner:112
 msgid ""
 "Parameter specifying the number of trials required in a rung before any "
 "trial can be promoted. Incompatible with ``max_resouce`` is ``\"auto\"``."
 " See the details for :class:`~optuna.pruners.SuccessiveHalvingPruner`."
-msgstr ""
+msgstr "指定在任何 trial 能被弹出前所需要运行的 trial 个数的参数. "
+"与 ``max_resouce`` 是 ``\"auto\"`` 不兼容. "
+"细节参见 :class:`~optuna.pruners.SuccessiveHalvingPruner`."
 
 #: ../../source/reference/generated/optuna.pruners.HyperbandPruner.rst:12
 msgid "Methods"
@@ -186,7 +214,7 @@ msgstr ""
 #: of optuna.pruners._hyperband.HyperbandPruner.prune:1
 #: optuna.pruners._hyperband.HyperbandPruner.prune:1:<autosummary>:1
 msgid "Judge whether the trial should be pruned based on the reported values."
-msgstr ""
+msgstr "根据报告的值判断该 trial 是否需要被剪枝."
 
 #: of optuna.pruners._hyperband.HyperbandPruner.prune:3
 msgid ""
@@ -194,17 +222,19 @@ msgid ""
 "Instead, :func:`optuna.trial.Trial.report` and "
 ":func:`optuna.trial.Trial.should_prune` provide user interfaces to "
 "implement pruning mechanism in an objective function."
-msgstr ""
+msgstr "注意, 库用户不应调用此方法. "
+"相反地, :func:`optuna.trial.Trial.report` 和 :func:`optuna.trial.Trial.should_prune` "
+"为用户提供了在目标函数内部实现剪枝算法的接口."
 
 #: of optuna.pruners._hyperband.HyperbandPruner.prune:7
 msgid "Study object of the target study."
-msgstr ""
+msgstr "目标 study 的 study 对象."
 
 #: of optuna.pruners._hyperband.HyperbandPruner.prune:8
 msgid ""
 "FrozenTrial object of the target trial. Take a copy before modifying this"
 " object."
-msgstr ""
+msgstr "目标 trial 的 FrozenTrial 对象. 在修改此对象之前需拷贝一份副本."
 
 #: of optuna.pruners._hyperband.HyperbandPruner.prune
 msgid "返回"
@@ -212,7 +242,7 @@ msgstr ""
 
 #: of optuna.pruners._hyperband.HyperbandPruner.prune:11
 msgid "A boolean value representing whether the trial should be pruned."
-msgstr ""
+msgstr "代表该 trial 是否需要被剪枝的布尔值."
 
 #: of optuna.pruners._hyperband.HyperbandPruner.prune
 msgid "返回类型"

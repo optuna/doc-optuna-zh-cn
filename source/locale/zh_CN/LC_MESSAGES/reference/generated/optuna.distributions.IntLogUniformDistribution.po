@@ -23,7 +23,7 @@ msgstr ""
 
 #: of optuna.distributions.IntLogUniformDistribution:1
 msgid "A uniform distribution on integers in the log domain."
-msgstr "对数域上的均匀整数分布."
+msgstr ""
 
 #: of optuna.distributions.IntLogUniformDistribution:3
 msgid ""

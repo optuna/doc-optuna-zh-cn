@@ -23,7 +23,7 @@ msgstr ""
 
 #: of optuna.distributions.DiscreteUniformDistribution:1
 msgid "A discretized uniform distribution in the linear domain."
-msgstr "线性域的离散均匀分布."
+msgstr ""
 
 #: of optuna.distributions.DiscreteUniformDistribution:3
 msgid ""

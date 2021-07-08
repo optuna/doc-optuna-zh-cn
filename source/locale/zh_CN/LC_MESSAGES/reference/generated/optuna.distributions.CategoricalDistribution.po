@@ -51,7 +51,7 @@ msgid ""
 "recommended to restrict the types of the choices to :obj:`None`, "
 ":class:`bool`, :class:`int`, :class:`float` and :class:`str`."
 msgstr ""
-"不是所有类型的参数都一定能和optuna的存储引擎兼容，请尽量使用 :obj:`None`, "
+"不是所有类型的参数都一定能和所有 optuna 的存储引擎兼容，请尽量使用 :obj:`None`, "
 ":class:`bool`, :class:`int`, :class:`float` 或者 "
 ":class:`str`."
 

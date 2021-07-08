@@ -23,13 +23,13 @@ msgstr ""
 
 #: of optuna.pruners._median.MedianPruner:1
 msgid "Pruner using the median stopping rule."
-msgstr ""
+msgstr "使用中位数终止规则的 pruner."
 
 #: of optuna.pruners._median.MedianPruner:3
 msgid ""
 "Prune if the trial's best intermediate result is worse than median of "
 "intermediate results of previous trials at the same step."
-msgstr ""
+msgstr "如果该 trial 的最佳中间值比之前 trial 在同一步骤时所有中间值的中位数还差, 则剪枝."
 
 #: of optuna.pruners._median.MedianPruner:7
 msgid "示例"
@@ -37,7 +37,7 @@ msgstr ""
 
 #: of optuna.pruners._median.MedianPruner:8
 msgid "We minimize an objective function with the median stopping rule."
-msgstr ""
+msgstr "我们使用中位数终止规则来最小化目标函数."
 
 #: of optuna.pruners._median.MedianPruner
 #: optuna.pruners._percentile.PercentilePruner.prune
@@ -48,20 +48,21 @@ msgstr ""
 msgid ""
 "Pruning is disabled until the given number of trials finish in the same "
 "study."
-msgstr ""
+msgstr "只有在同一个 study 中完成给定数目的 trial 之后, 剪枝才会开启."
 
 #: of optuna.pruners._median.MedianPruner:50
 msgid ""
 "Pruning is disabled until the trial exceeds the given number of step. "
 "Note that this feature assumes that ``step`` starts at zero."
-msgstr ""
+msgstr "在trial 完成给定的步数之前剪枝是被禁用的. 注意该特性假设 ``step`` 从 0 开始."
 
 #: of optuna.pruners._median.MedianPruner:52
 msgid ""
 "Interval in number of steps between the pruning checks, offset by the "
 "warmup steps. If no value has been reported at the time of a pruning "
 "check, that particular check will be postponed until a value is reported."
-msgstr ""
+msgstr "在剪枝检查中步数的间隔, 不包含热身步骤. 如果剪枝检查时没有报告的中间值, "
+"此次剪枝检查会被推迟到有中间值报告为止."
 
 #: ../../source/reference/generated/optuna.pruners.MedianPruner.rst:12
 msgid "Methods"
@@ -74,7 +75,7 @@ msgstr ""
 #: of optuna.pruners._percentile.PercentilePruner.prune:1
 #: optuna.pruners._percentile.PercentilePruner.prune:1:<autosummary>:1
 msgid "Judge whether the trial should be pruned based on the reported values."
-msgstr ""
+msgstr "根据报告的值判断该 trial 是否需要被剪枝."
 
 #: of optuna.pruners._percentile.PercentilePruner.prune:3
 msgid ""
@@ -82,17 +83,19 @@ msgid ""
 "Instead, :func:`optuna.trial.Trial.report` and "
 ":func:`optuna.trial.Trial.should_prune` provide user interfaces to "
 "implement pruning mechanism in an objective function."
-msgstr ""
+msgstr "注意, 库用户不应调用此方法. "
+"相反地, :func:`optuna.trial.Trial.report` 和 :func:`optuna.trial.Trial.should_prune` "
+"为用户提供了在目标函数内部实现剪枝算法的接口."
 
 #: of optuna.pruners._percentile.PercentilePruner.prune:7
 msgid "Study object of the target study."
-msgstr ""
+msgstr "目标 study 的 study 对象."
 
 #: of optuna.pruners._percentile.PercentilePruner.prune:8
 msgid ""
 "FrozenTrial object of the target trial. Take a copy before modifying this"
 " object."
-msgstr ""
+msgstr "目标 trial 的 FrozenTrial 对象. 在修改此对象之前需拷贝一份副本."
 
 #: of optuna.pruners._percentile.PercentilePruner.prune
 msgid "返回"
@@ -100,7 +103,7 @@ msgstr ""
 
 #: of optuna.pruners._percentile.PercentilePruner.prune:11
 msgid "A boolean value representing whether the trial should be pruned."
-msgstr ""
+msgstr "代表该 trial 是否需要被剪枝的布尔值."
 
 #: of optuna.pruners._percentile.PercentilePruner.prune
 msgid "返回类型"

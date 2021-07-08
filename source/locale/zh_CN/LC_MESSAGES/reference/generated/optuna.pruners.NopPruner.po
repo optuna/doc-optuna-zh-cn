@@ -23,7 +23,7 @@ msgstr ""
 
 #: of optuna.pruners._nop.NopPruner:1
 msgid "Pruner which never prunes trials."
-msgstr ""
+msgstr "永不进行剪枝的 pruner."
 
 #: of optuna.pruners._nop.NopPruner:4
 msgid "示例"
@@ -40,7 +40,7 @@ msgstr ""
 #: of optuna.pruners._nop.NopPruner.prune:1
 #: optuna.pruners._nop.NopPruner.prune:1:<autosummary>:1
 msgid "Judge whether the trial should be pruned based on the reported values."
-msgstr ""
+msgstr "根据报告的值判断该 trial 是否需要被剪枝."
 
 #: of optuna.pruners._nop.NopPruner.prune:3
 msgid ""
@@ -48,7 +48,9 @@ msgid ""
 "Instead, :func:`optuna.trial.Trial.report` and "
 ":func:`optuna.trial.Trial.should_prune` provide user interfaces to "
 "implement pruning mechanism in an objective function."
-msgstr ""
+msgstr "注意, 库用户不应调用此方法. "
+"相反地, :func:`optuna.trial.Trial.report` 和 :func:`optuna.trial.Trial.should_prune` "
+"为用户提供了在目标函数内部实现剪枝算法的接口."
 
 #: of optuna.pruners._nop.NopPruner.prune
 msgid "参数"
@@ -56,13 +58,13 @@ msgstr ""
 
 #: of optuna.pruners._nop.NopPruner.prune:7
 msgid "Study object of the target study."
-msgstr ""
+msgstr "目标 study 的 study 对象."
 
 #: of optuna.pruners._nop.NopPruner.prune:8
 msgid ""
 "FrozenTrial object of the target trial. Take a copy before modifying this"
 " object."
-msgstr ""
+msgstr "目标 trial 的 FrozenTrial 对象. 在修改此对象之前需拷贝一份副本."
 
 #: of optuna.pruners._nop.NopPruner.prune
 msgid "返回"
@@ -70,7 +72,7 @@ msgstr ""
 
 #: of optuna.pruners._nop.NopPruner.prune:11
 msgid "A boolean value representing whether the trial should be pruned."
-msgstr ""
+msgstr "代表该 trial 是否需要被剪枝的布尔值."
 
 #: of optuna.pruners._nop.NopPruner.prune
 msgid "返回类型"

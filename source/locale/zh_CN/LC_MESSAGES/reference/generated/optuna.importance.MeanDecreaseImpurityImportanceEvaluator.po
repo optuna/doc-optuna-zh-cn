@@ -24,7 +24,7 @@ msgstr ""
 #: of
 #: optuna.importance._mean_decrease_impurity.MeanDecreaseImpurityImportanceEvaluator:1
 msgid "Mean Decrease Impurity (MDI) parameter importance evaluator."
-msgstr ""
+msgstr "Mean Decrease Impurity (MDI) 参数重要性求解器."
 
 #: of
 #: optuna.importance._mean_decrease_impurity.MeanDecreaseImpurityImportanceEvaluator:3
@@ -32,7 +32,8 @@ msgid ""
 "This evaluator fits a random forest that predicts objective values given "
 "hyperparameter configurations. Feature importances are then computed "
 "using MDI."
-msgstr ""
+msgstr "给定一个超参数配置, 该求解器拟合一个随机森林模型以预测目标函数值, "
+"然后使用 MDI 来计算特征重要性."
 
 #: of
 #: optuna.importance._mean_decrease_impurity.MeanDecreaseImpurityImportanceEvaluator:8
@@ -42,7 +43,10 @@ msgid ""
 "`sklearn.ensemble.RandomForestClassifier.feature_importances_ <https"
 "://scikit-"
 "learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html#sklearn.ensemble.RandomForestClassifier.feature_importances_>`_."
-msgstr ""
+msgstr "该求解器依赖 `sklean <https://scikit-learn.org/stable/>`_ Python 包, 它是基于 "
+"`sklearn.ensemble.RandomForestClassifier.feature_importances_ <https"
+"://scikit-"
+"learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html#sklearn.ensemble.RandomForestClassifier.feature_importances_>`_ 的."
 
 #: of
 #: optuna.importance._mean_decrease_impurity.MeanDecreaseImpurityImportanceEvaluator
@@ -53,17 +57,17 @@ msgstr ""
 #: of
 #: optuna.importance._mean_decrease_impurity.MeanDecreaseImpurityImportanceEvaluator:12
 msgid "Number of trees in the random forest."
-msgstr ""
+msgstr "随机森林中树的个数."
 
 #: of
 #: optuna.importance._mean_decrease_impurity.MeanDecreaseImpurityImportanceEvaluator:13
 msgid "The maximum depth of each tree in the random forest."
-msgstr ""
+msgstr "森林中树的最大深度."
 
 #: of
 #: optuna.importance._mean_decrease_impurity.MeanDecreaseImpurityImportanceEvaluator:14
 msgid "Seed for the random forest."
-msgstr ""
+msgstr "随机森林的随机数种子"
 
 #: ../../source/reference/generated/optuna.importance.MeanDecreaseImpurityImportanceEvaluator.rst:12
 msgid "Methods"
@@ -83,31 +87,31 @@ msgstr ""
 msgid ""
 "Evaluate parameter importances based on completed trials in the given "
 "study."
-msgstr ""
+msgstr "在给定的 study 中基于已完成的 trial 求解参数重要性."
 
 #: of
 #: optuna.importance._mean_decrease_impurity.MeanDecreaseImpurityImportanceEvaluator.evaluate:5
 msgid "This method is not meant to be called by library users."
-msgstr ""
+msgstr "库用户不应调用此方法."
 
 #: of
 #: optuna.importance._mean_decrease_impurity.MeanDecreaseImpurityImportanceEvaluator.evaluate:9
 msgid ""
 "Please refer to :func:`~optuna.importance.get_param_importances` for how "
 "a concrete evaluator should implement this method."
-msgstr ""
+msgstr "关于求解器应该如何实现该方法请参考 :func:`~optuna.importance.get_param_importances`."
 
 #: of
 #: optuna.importance._mean_decrease_impurity.MeanDecreaseImpurityImportanceEvaluator.evaluate:12
 msgid "An optimized study."
-msgstr ""
+msgstr "优化过的 study."
 
 #: of
 #: optuna.importance._mean_decrease_impurity.MeanDecreaseImpurityImportanceEvaluator.evaluate:13
 msgid ""
 "A list of names of parameters to assess. If :obj:`None`, all parameters "
 "that are present in all of the completed trials are assessed."
-msgstr ""
+msgstr "需要评估的参数名列表. 当设定为 :obj:`None` 时, 所有完成的 trial 中的参数都会被评估."
 
 #: of
 #: optuna.importance._mean_decrease_impurity.MeanDecreaseImpurityImportanceEvaluator.evaluate:16
@@ -124,14 +128,15 @@ msgid ""
 "A function to specify the value to evaluate importances. If it is "
 ":obj:`None` and ``study`` is being used for single-objective "
 "optimization, the objective values are used."
-msgstr ""
+msgstr "一个用于指定求解重要性的值的函数. 如果将其设置为 :obj:`None` 并且"
+"``study`` 是一个单目标优化的话, 这个值则将使用目标函数值."
 
 #: of
 #: optuna.importance._mean_decrease_impurity.MeanDecreaseImpurityImportanceEvaluator.evaluate:21
 msgid ""
 "Specify this argument if ``study`` is being used for multi-objective "
 "optimization."
-msgstr ""
+msgstr "如果 ``study`` 是多目标优化的话, 就要指定这个参数."
 
 #: of
 #: optuna.importance._mean_decrease_impurity.MeanDecreaseImpurityImportanceEvaluator.evaluate
@@ -143,7 +148,7 @@ msgstr ""
 msgid ""
 "An :class:`collections.OrderedDict` where the keys are parameter names "
 "and the values are assessed importances."
-msgstr ""
+msgstr "一个键为参数名值为参数重要性值的 :class:`collections.OrderedDict`."
 
 #: of
 #: optuna.importance._mean_decrease_impurity.MeanDecreaseImpurityImportanceEvaluator.evaluate
@@ -155,7 +160,7 @@ msgstr ""
 msgid ""
 "If ``target`` is :obj:`None` and ``study`` is being used for multi-"
 "objective     optimization."
-msgstr ""
+msgstr "如果 ``target`` 是 :obj:`None` 且 ``study`` 为多目标优化的话."
 
 #: of
 #: optuna.importance._mean_decrease_impurity.MeanDecreaseImpurityImportanceEvaluator.evaluate

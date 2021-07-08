@@ -23,7 +23,7 @@ msgstr ""
 
 #: of optuna.logging.disable_default_handler:1
 msgid "Disable the default handler of the Optuna's root logger."
-msgstr ""
+msgstr "禁用 Optuna 的根 logger 的默认句柄."
 
 #: of optuna.logging.disable_default_handler:4
 msgid "示例"
@@ -31,7 +31,7 @@ msgstr ""
 
 #: of optuna.logging.disable_default_handler:5
 msgid "Stop and then resume logging to :obj:`sys.stderr`."
-msgstr ""
+msgstr "停止和恢复输出日志到 :obj:`sys.stderr`."
 
 #: of optuna.logging.disable_default_handler
 msgid "返回类型"

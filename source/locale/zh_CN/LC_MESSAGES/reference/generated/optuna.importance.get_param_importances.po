@@ -25,7 +25,7 @@ msgstr ""
 msgid ""
 "Evaluate parameter importances based on completed trials in the given "
 "study."
-msgstr ""
+msgstr "基于给定的 study 中已完成的 trial 求解参数重要性."
 
 #: of optuna.importance.get_param_importances:3
 msgid ""
@@ -35,7 +35,9 @@ msgid ""
 " dictionary. The higher the value, the more important. The returned "
 "dictionary is of type :class:`collections.OrderedDict` and is ordered by "
 "its values in a descending order."
-msgstr ""
+msgstr "参数重要性以字典的形式返回, 其中包含由参数名和他们的重要性值构成的键值对."
+"这些重要性值由浮点数构成, 字典中所有的重要性值之和为 1.0. 此值越高, 对应的参数越重要."
+"返回的字典属于类型 :class:`collections.OrderedDict`, 并且以参数值降序排列."
 
 #: of optuna.importance.get_param_importances:11
 msgid ""
@@ -46,25 +48,28 @@ msgid ""
 "can be specified via ``params``. If specified, only completed trials that"
 " contain all of the parameters will be considered. If no such trials are "
 "found, an error will be raised."
-msgstr ""
+msgstr "如果  ``params`` 是 :obj:`None` 的话, 所有完成的 trial 中的参数都会被评估."
+"要根据条件获取参数的话, 可以通过 ``params`` 参数传入一个参数名构成的 :obj:`list`. "
+"指定该列表以后, 将只有包含列表中所有参数的已完成的trial 会被利用. "
+"如果没有这样的 trial 的话, 就会抛出一个错误."
 
 #: of optuna.importance.get_param_importances:19
 msgid ""
 "If the given study does not contain completed trials, an error will be "
 "raised."
-msgstr ""
+msgstr "如果给定的 study 中没有已完成的 trials 的话, 就会抛出错误."
 
 #: of optuna.importance.get_param_importances:23
 msgid ""
 "If ``params`` is specified as an empty list, an empty dictionary is "
 "returned."
-msgstr ""
+msgstr "如果 ``params`` 被设定为空列表, 将会返回一个空字典."
 
 #: of optuna.importance.get_param_importances:27
 msgid ""
 "See :func:`~optuna.visualization.plot_param_importances` to plot "
 "importances."
-msgstr ""
+msgstr "绘制重要性值参见 :func:`~optuna.visualization.plot_param_importances`."
 
 #: of optuna.importance.get_param_importances
 msgid "参数"
@@ -72,20 +77,22 @@ msgstr ""
 
 #: of optuna.importance.get_param_importances:29
 msgid "An optimized study."
-msgstr ""
+msgstr "优化过的 study. "
 
 #: of optuna.importance.get_param_importances:30
 msgid ""
 "An importance evaluator object that specifies which algorithm to base the"
 " importance assessment on. Defaults to "
 ":class:`~optuna.importance.FanovaImportanceEvaluator`."
-msgstr ""
+msgstr "参数重要性求解器对象, 用于指定重要性评估的算法. 默认情况下为 "
+":class:`~optuna.importance.FanovaImportanceEvaluator`."
+
 
 #: of optuna.importance.get_param_importances:34
 msgid ""
 "A list of names of parameters to assess. If :obj:`None`, all parameters "
 "that are present in all of the completed trials are assessed."
-msgstr ""
+msgstr "需要评估的参数名列表. 当设定为 :obj:`None` 时, 所有完成的 trial 中的参数都会被评估"
 
 #: of optuna.importance.get_param_importances:37
 msgid ""
@@ -100,13 +107,14 @@ msgid ""
 "A function to specify the value to evaluate importances. If it is "
 ":obj:`None` and ``study`` is being used for single-objective "
 "optimization, the objective values are used."
-msgstr ""
+msgstr "一个用于指定求解重要性的值的函数. 如果将其设置为 :obj:`None` 并且"
+"``study`` 是一个单目标优化的话, 这个值将会采用目标函数."
 
 #: of optuna.importance.get_param_importances:42
 msgid ""
 "Specify this argument if ``study`` is being used for multi-objective "
 "optimization."
-msgstr ""
+msgstr "如果 ``study`` 是多目标优化的话, 就要指定这个参数."
 
 #: of optuna.importance.get_param_importances
 msgid "返回"
@@ -116,7 +124,7 @@ msgstr ""
 msgid ""
 "An :class:`collections.OrderedDict` where the keys are parameter names "
 "and the values are assessed importances."
-msgstr ""
+msgstr "一个键为参数名值为参数重要性值的 :class:`collections.OrderedDict`."
 
 #: of optuna.importance.get_param_importances
 msgid "引发"
@@ -126,7 +134,7 @@ msgstr ""
 msgid ""
 "If ``target`` is :obj:`None` and ``study`` is being used for multi-"
 "objective     optimization."
-msgstr ""
+msgstr "如果 ``target`` 是 :obj:`None` 且 ``study`` 为多目标优化的话."
 
 #: of optuna.importance.get_param_importances
 msgid "返回类型"

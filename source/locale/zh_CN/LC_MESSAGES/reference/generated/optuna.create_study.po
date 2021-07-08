@@ -23,7 +23,7 @@ msgstr ""
 
 #: of optuna.study.create_study:1
 msgid "Create a new :class:`~optuna.study.Study`."
-msgstr "创建一个新的 :class:`~optuna.study.Study`."
+msgstr ""
 
 #: of optuna.study.create_study:4
 msgid "示例"

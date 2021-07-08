@@ -23,13 +23,14 @@ msgstr ""
 
 #: of optuna.logging.enable_default_handler:1
 msgid "Enable the default handler of the Optuna's root logger."
-msgstr ""
+msgstr "启用 Optuna 的根 logger 的默认句柄."
 
 #: of optuna.logging.enable_default_handler:3
 msgid ""
 "Please refer to the example shown in "
 ":func:`~optuna.logging.disable_default_handler()`."
-msgstr ""
+msgstr "请参考 "
+":func:`~optuna.logging.disable_default_handler()` 中的例子."
 
 #: of optuna.logging.enable_default_handler
 msgid "返回类型"
