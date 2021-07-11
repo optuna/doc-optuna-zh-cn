@@ -23,7 +23,7 @@ msgstr ""
 
 #: of optuna.trial._frozen.create_trial:1
 msgid "Create a new :class:`~optuna.trial.FrozenTrial`."
-msgstr ""
+msgstr "创建一个新的 :class:`~optuna.trial.FrozenTrial`."
 
 #: of optuna.trial._frozen.create_trial:4
 msgid "示例"
@@ -33,20 +33,21 @@ msgstr ""
 msgid ""
 "See :func:`~optuna.study.Study.add_trial` for how this function can be "
 "used to create a study from existing trials."
-msgstr ""
+msgstr "关于该函数如何从已有的 trial 中创建 study, 请参考 :func:`~optuna.study.Study.add_trial`"
 
 #: of optuna.trial._frozen.create_trial:31
 msgid ""
 "Please note that this is a low-level API. In general, trials that are "
 "passed to objective functions are created inside "
 ":func:`~optuna.study.Study.optimize`."
-msgstr ""
+msgstr "注意, 这是一个低级 API, 那些传递给目标函数的 trial 是在 :func:`~optuna.study.Study.optimize` 中被创建的."
 
 #: of optuna.trial._frozen.create_trial:35
 msgid ""
 "When ``state`` is ``TrialState.COMPLETE``, the following parameters are "
 "required: * ``params`` * ``distributions`` * ``value`` or ``values``"
-msgstr ""
+msgstr "当 ``state`` 为 ``TrialState.COMPLETE``, 下列参数是必须的: "
+"* ``params`` * ``distributions`` * ``value`` 或者 ``values``"
 
 #: of optuna.trial._frozen.create_trial
 msgid "参数"
@@ -60,36 +61,38 @@ msgstr ""
 msgid ""
 "Trial objective value. Must be specified if ``state`` is ``None`` or "
 ":class:`TrialState.COMPLETE`."
-msgstr ""
+msgstr "Trial 的目标值. 如果 ``state`` 是 ``None`` 或者 "
+":class:`TrialState.COMPLETE`, 目标值不可为空."
 
 #: of optuna.trial._frozen.create_trial:44
 msgid ""
 "Sequence of the trial objective values. The length is greater than 1 if "
 "the problem is multi-objective optimization. Must be specified if "
 "``state`` is ``None`` or :class:`TrialState.COMPLETE`."
-msgstr ""
+msgstr "Trial 目标函数值的序列. 如果该问题为多目标优化, 则其长度大于1. 如果 ``state`` 是 ``None`` 或者 "
+":class:`TrialState.COMPLETE`, 目标值不可为空."
 
 #: of optuna.trial._frozen.create_trial:47
 msgid "Dictionary with suggested parameters of the trial."
-msgstr ""
+msgstr "包含参数 suggestion 的字典."
 
 #: of optuna.trial._frozen.create_trial:48
 msgid "Dictionary with parameter distributions of the trial."
-msgstr ""
+msgstr "Trial 参数分布的字典."
 
 #: of optuna.trial._frozen.create_trial:49
 msgid "Dictionary with user attributes."
-msgstr ""
+msgstr "用户属性字典."
 
 #: of optuna.trial._frozen.create_trial:50
 msgid ""
 "Dictionary with system attributes. Should not have to be used for most "
 "users."
-msgstr ""
+msgstr "系统属性字典. 大多数用户应该不会使用它."
 
 #: of optuna.trial._frozen.create_trial:51
 msgid "Dictionary with intermediate objective values of the trial."
-msgstr ""
+msgstr "带有 trial 的中间目标函数值的字典."
 
 #: of optuna.trial._frozen.create_trial
 msgid "返回"
@@ -97,7 +100,7 @@ msgstr ""
 
 #: of optuna.trial._frozen.create_trial:53
 msgid "Created trial."
-msgstr ""
+msgstr "创建 trial"
 
 #: of optuna.trial._frozen.create_trial
 msgid "引发"
@@ -105,7 +108,7 @@ msgstr ""
 
 #: of optuna.trial._frozen.create_trial:55
 msgid "If both ``value`` and ``values`` are specified."
-msgstr ""
+msgstr "如果同时指定了 ``value`` 和 ``values``."
 
 #: of optuna.trial._frozen.create_trial
 msgid "返回类型"
@@ -116,7 +119,8 @@ msgid ""
 "Added in v2.0.0 as an experimental feature. The interface may change in "
 "newer versions without prior notice. See "
 "https://github.com/optuna/optuna/releases/tag/v2.0.0."
-msgstr ""
+msgstr "在 v2.0.0 中作为试验性特性引入. 该接口可能在未来在没有提前告知的情况下改变, 参考 "
+"https://github.com/optuna/optuna/releases/tag/v2.0.0."
 
 #~ msgid ""
 #~ "Trial objective value. Must be specified"
