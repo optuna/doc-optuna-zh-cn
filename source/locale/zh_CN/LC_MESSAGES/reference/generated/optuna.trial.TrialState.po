@@ -27,21 +27,21 @@ msgstr ""
 
 #: of optuna.trial.TrialState:5
 msgid "The :class:`~optuna.trial.Trial` is running."
-msgstr ""
+msgstr ":class:`~optuna.trial.Trial` 正在运行中."
 
 #: of optuna.trial.TrialState:9
 msgid "The :class:`~optuna.trial.Trial` has been finished without any error."
-msgstr ""
+msgstr ":class:`~optuna.trial.Trial` 在无错误的情况下结束了."
 
 #: of optuna.trial.TrialState:13
 msgid ""
 "The :class:`~optuna.trial.Trial` has been pruned with "
 ":class:`~optuna.exceptions.TrialPruned`."
-msgstr ""
+msgstr ":class:`~optuna.trial.Trial` 被 :class:`~optuna.exceptions.TrialPruned` 剪枝了."
 
 #: of optuna.trial.TrialState:18
 msgid "The :class:`~optuna.trial.Trial` has failed due to an uncaught error."
-msgstr ""
+msgstr "由于没有被捕获的错误 :class:`~optuna.trial.Trial` 失败了."
 
 #: ../../source/reference/generated/optuna.trial.TrialState.rst:17
 msgid "Attributes"
