@@ -23,7 +23,7 @@ msgstr ""
 
 #: of optuna.study.StudySummary:1
 msgid "Basic attributes and aggregated results of a :class:`~optuna.study.Study`."
-msgstr ""
+msgstr "一个 :class:`~optuna.study.Study` 的基本属性和总汇结果."
 
 #: of optuna.study.StudySummary:3
 msgid "See also :func:`optuna.study.get_all_study_summaries`."
@@ -31,25 +31,25 @@ msgstr ""
 
 #: of optuna.study.StudySummary:7
 msgid "Name of the :class:`~optuna.study.Study`."
-msgstr ""
+msgstr ":class:`~optuna.study.Study` 名."
 
 #: of optuna.study.StudySummary:11
 msgid ":class:`~optuna.study.StudyDirection` of the :class:`~optuna.study.Study`."
-msgstr ""
+msgstr ":class:`~optuna.study.Study` 的 :class:`~optuna.study.StudyDirection`."
 
 #: of optuna.study.StudySummary:14
 msgid "This attribute is only available during single-objective optimization."
-msgstr ""
+msgstr "该属性只在单目标优化中可用."
 
 #: of optuna.study.StudySummary:18
 msgid "A sequence of :class:`~optuna.study.StudyDirection` objects."
-msgstr ""
+msgstr ":class:`~optuna.study.StudyDirection` 对象序列."
 
 #: of optuna.study.StudySummary:22
 msgid ""
 ":class:`FrozenTrial` with best objective value in the "
 ":class:`~optuna.study.Study`."
-msgstr ""
+msgstr ":class:`~optuna.study.Study` 中带有最佳目标函数值的 :class:`FrozenTrial`."
 
 #: of optuna.study.StudySummary:26
 msgid ""
@@ -57,20 +57,22 @@ msgid ""
 ":class:`~optuna.study.Study` set with "
 ":func:`optuna.study.Study.set_user_attr`."
 msgstr ""
+"通过 :func:`optuna.study.Study.set_user_attr` 来设置的, 包含 "
+":class:`~optuna.study.Study` 中属性的字典. "
 
 #: of optuna.study.StudySummary:31
 msgid ""
 "Dictionary that contains the attributes of the "
 ":class:`~optuna.study.Study` internally set by Optuna."
-msgstr ""
+msgstr "由 Optuna 设定的, 包含 :class:`~optuna.study.Study` 中属性的字典. "
 
 #: of optuna.study.StudySummary:36
 msgid "The number of trials ran in the :class:`~optuna.study.Study`."
-msgstr ""
+msgstr ":class:`~optuna.study.Study` 运行过的 trial 数目. "
 
 #: of optuna.study.StudySummary:40
 msgid "Datetime where the :class:`~optuna.study.Study` started."
-msgstr ""
+msgstr ":class:`~optuna.study.Study` 开始的日期. "
 
 #: ../../source/reference/generated/optuna.study.StudySummary.rst:17
 msgid "Attributes"

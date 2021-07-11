@@ -25,7 +25,7 @@ msgstr ""
 msgid ""
 "Load the existing :class:`~optuna.study.Study` that has the specified "
 "name."
-msgstr ""
+msgstr "加载一个指定名字的已经存在的 :class:`~optuna.study.Study`."
 
 #: of optuna.study.load_study:4
 msgid "示例"
@@ -37,13 +37,15 @@ msgstr ""
 
 #: of optuna.study.load_study:32
 msgid "Study's name. Each study has a unique name as an identifier."
-msgstr ""
+msgstr "Study 名, 每个 study 都有一个唯一的作为标识符的名字. "
 
 #: of optuna.study.load_study:33
 msgid ""
 "Database URL such as ``sqlite:///example.db``. Please see also the "
 "documentation of :func:`~optuna.study.create_study` for further details."
 msgstr ""
+"诸如 ``sqlite:///example.db`` 这样的数据库 URL. 更多细节见"
+" :func:`~optuna.study.create_study` 的文档. "
 
 #: of optuna.study.load_study:35
 msgid ""
@@ -52,13 +54,16 @@ msgid ""
 ":class:`~optuna.samplers.TPESampler` is used as the default. See also "
 ":class:`~optuna.samplers`."
 msgstr ""
+"一个实现了用于参数 suggestion 的 sampler 对象. 如果设置成 "
+":obj:`None` 的话, 默认会启用 :class:`~optuna.samplers.TPESampler`."
+" 参见 :class:`~optuna.samplers`."
 
 #: of optuna.study.load_study:38
 msgid ""
 "A pruner object that decides early stopping of unpromising trials. If "
 ":obj:`None` is specified, :class:`~optuna.pruners.MedianPruner` is used "
 "as the default. See also :class:`~optuna.pruners`."
-msgstr ""
+msgstr "一个用于确定提前终止无望 trial 的 pruner 对象. 参见 :class:`~optuna.pruners`."
 
 #: of optuna.study.load_study
 msgid "返回类型"
@@ -66,5 +71,4 @@ msgstr ""
 
 #: of optuna.study.load_study:42
 msgid ":func:`optuna.load_study` is an alias of :func:`optuna.study.load_study`."
-msgstr ""
-
+msgstr ":func:`optuna.load_study` 是 :func:`optuna.study.load_study` 的别名."
