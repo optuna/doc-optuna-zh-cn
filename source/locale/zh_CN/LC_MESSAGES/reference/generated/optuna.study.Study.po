@@ -433,7 +433,7 @@ msgstr "在 v1.2.0 中作为试验性特性引入. 在未来该接口可能在�
 
 #: of optuna.study.BaseStudy.get_trials:3 optuna.study.Study.trials:3
 msgid "The returned trials are ordered by trial number."
-msgstr "返回的 trial 按照 trial 数排序."
+msgstr "返回的 trial 按照 trial 号排序."
 
 #: of optuna.study.BaseStudy.get_trials:23
 msgid ""
@@ -639,7 +639,7 @@ msgstr "一个包含所有系统属性的字典."
 
 #: of optuna.study.Study.tell:50
 msgid "A :class:`~optuna.trial.Trial` object or a trial number."
-msgstr ":class:`~optuna.trial.Trial` 对象或者 trial 数."
+msgstr ":class:`~optuna.trial.Trial` 对象或者 trial 号."
 
 #: of optuna.study.Study.tell:51
 msgid ""
@@ -682,14 +682,14 @@ msgid ""
 msgstr "如果发生下列情况. ``values`` 是一个序列但是其长度和目标函数的个数不匹配. "
 "``state`` 是 :class:`~optuna.trial.TrialState.COMPLETE` 但是 ``values`` 是 :obj:`None`. "
 "``state`` 是 :class:`~optuna.trial.TrialState.FAIL` 或者 :class:`~optuna.trial.TrialState.PRUNED` "
-"``values`` 不是 :obj:`None`. ``state`` is not     "
+"``values`` 不是 :obj:`None`. ``state`` 不是     "
 ":class:`~optuna.trial.TrialState.COMPLETE`,     "
 ":class:`~optuna.trial.TrialState.FAIL` 或者     "
-":class:`~optuna.trial.TrialState.PRUNED`. ``trial`` 是一个 trial 数但是没有 trial 的数是此值."
+":class:`~optuna.trial.TrialState.PRUNED`. ``trial`` 是一个 trial 号但是没有 trial 对应的号是此值."
 
 #: of optuna.study.Study.trials:5
 msgid "This is a short form of ``self.get_trials(deepcopy=True, states=None)``."
-msgstr ""
+msgstr "这是 ``self.get_trials(deepcopy=True, states=None)`` 的简写形式."
 
 #: of optuna.study.Study.trials_dataframe:3
 msgid ""

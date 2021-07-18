@@ -69,7 +69,7 @@ msgstr "当传入一个数据库URL之后, 在内部, Optuna 将会使用 "
 "`SQLAlchemy`_ 来处理数据库. 更多细节请参考 `SQLAlchemy's "
 "document`_. 如果你想改变默认的 `SQLAlchemy Engine`_ "
 "的话, 你可以用你想要用的引擎实例化一个 :class:`~optuna.storages.RDBStorage`, "
-"并将其而不是一个 URL 传入 ``storage`` 参数.    .. "
+"并将其而不是一个 URL 传入 ``storage`` 参数."
 
 
 #: of optuna.study.create_study:32

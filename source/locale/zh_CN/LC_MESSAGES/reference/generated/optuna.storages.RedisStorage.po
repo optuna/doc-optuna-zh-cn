@@ -29,7 +29,7 @@ msgstr "用于 Redis 后端的存储类"
 msgid ""
 "Note that library users can instantiate this class, but the attributes "
 "provided by this class are not supposed to be directly accessed by them."
-msgstr "注意, 库用户可以实例化该类, 但是该类提供的属性不应该让他们直接获取."
+msgstr "注意, 库用户可以实例化该类, 但是用户不应该直接访问该类的属性."
 
 #: of optuna.storages._redis.RedisStorage:7
 msgid "示例"
@@ -39,7 +39,7 @@ msgstr ""
 msgid ""
 "We create an :class:`~optuna.storages.RedisStorage` instance using the "
 "given redis database URL."
-msgstr "我们使用给定的 数据库 URL创建一个 :class:`~optuna.storages.RedisStorage` 实例."
+msgstr "我们使用给定的数据库 URL 创建一个 :class:`~optuna.storages.RedisStorage` 实例."
 
 #: of optuna.storages._base.BaseStorage.check_trial_is_updatable
 #: optuna.storages._base.BaseStorage.fail_stale_trials
@@ -141,7 +141,7 @@ msgstr ""
 #: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
 #: optuna.storages._redis.RedisStorage.create_new_trial:1
 msgid "Create and add a new trial to a study."
-msgstr "创建并且将一个 trial 添加到 study 中."
+msgstr "创建一个 trial 并将其添加到 study 中."
 
 #: of
 #: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
@@ -219,7 +219,7 @@ msgstr ""
 #: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
 #: optuna.storages._base.BaseStorage.get_failed_trial_callback:1
 msgid "Get the failed trial callback function."
-msgstr "返回失败 trial 回调函数."
+msgstr "返回失败 trial 的回调函数."
 
 #: of
 #: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
@@ -258,7 +258,7 @@ msgstr ""
 #: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
 #: optuna.storages._redis.RedisStorage.get_study_directions:1
 msgid "Read whether a study maximizes or minimizes an objective."
-msgstr "读取一个 study 是在最大化或者最小化一个目标函数."
+msgstr "读取一个 study 是在最大化还是最小化一个目标函数."
 
 #: of
 #: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
@@ -352,7 +352,7 @@ msgstr ""
 #: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
 #: optuna.storages._redis.RedisStorage.get_trial_id_from_study_id_trial_number:1
 msgid "Read the trial id of a trial."
-msgstr "读取一个 trial 的 id."
+msgstr "读取一个 trial 的 ID."
 
 #: of
 #: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
@@ -691,7 +691,7 @@ msgstr ""
 msgid ""
 "If no name is specified, the storage class generates a name. The returned"
 " study ID is unique among all current and deleted studies."
-msgstr "如果没有指定名称, 存储类会生成一个名称. 返回的 study ID在所有当前和删除的 study 中是唯一的."
+msgstr "如果没有指定名称, 存储类会生成一个名称. 返回的 study ID 与所有当前和已删除的 study ID 都不重复."
 
 #: of optuna.storages._redis.RedisStorage.create_new_study:6
 msgid "Name of the new study to create."
@@ -837,7 +837,7 @@ msgstr "如果没有 trial 已经完成."
 
 #: of optuna.storages._base.BaseStorage.get_failed_trial_callback:3
 msgid "The failed trial callback function if it is set, otherwise :obj:`None`."
-msgstr "如果设置的话, 这是失败 trial 的返回函数, 否则为 :obj:`None`."
+msgstr "如有设置，返回失败 trial 的回调函数, 否则为 :obj:`None`."
 
 #: of optuna.storages._base.BaseStorage.get_heartbeat_interval:3
 msgid "The heartbeat interval if it is set, otherwise :obj:`None`."
@@ -913,7 +913,7 @@ msgstr "带有匹配的 trial ID 的 trial."
 #: optuna.storages._redis.RedisStorage.get_trial_id_from_study_id_trial_number:4
 #: optuna.storages._redis.RedisStorage.get_trial_number_from_id:9
 msgid "Number of the trial."
-msgstr "trial 数目."
+msgstr "trial 号."
 
 #: of
 #: optuna.storages._redis.RedisStorage.get_trial_id_from_study_id_trial_number:8
@@ -922,7 +922,7 @@ msgstr "如果没有匹配 ``study_id`` 和 ``trial_number`` 的 trial 存在."
 
 #: of optuna.storages._redis.RedisStorage.get_trial_number_from_id:5
 msgid "The trial number is only unique within a study, and is sequential."
-msgstr "trial 数只在 study 内是独特的, 而且是递增的."
+msgstr "trial 号只在 study 内是独特的, 而且是线性递增的."
 
 #: of optuna.storages._redis.RedisStorage.get_trial_param:4
 #: optuna.storages._redis.RedisStorage.set_trial_param:4

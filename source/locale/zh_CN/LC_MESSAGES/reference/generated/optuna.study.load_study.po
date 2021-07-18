@@ -63,7 +63,8 @@ msgid ""
 "A pruner object that decides early stopping of unpromising trials. If "
 ":obj:`None` is specified, :class:`~optuna.pruners.MedianPruner` is used "
 "as the default. See also :class:`~optuna.pruners`."
-msgstr "一个用于确定提前终止无望 trial 的 pruner 对象. 参见 :class:`~optuna.pruners`."
+msgstr "一个用于确定提前终止无望 trial 的 pruner 对象. 如果设置为 :obj:`None` 的话, 默认采用 :class:`~optuna.pruners.MedianPruner`. "
+"参见 :class:`~optuna.pruners`."
 
 #: of optuna.study.load_study
 msgid "返回类型"
