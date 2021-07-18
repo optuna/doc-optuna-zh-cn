@@ -23,19 +23,19 @@ msgstr ""
 
 #: of optuna.study.StudyDirection:1
 msgid "Direction of a :class:`~optuna.study.Study`."
-msgstr ""
+msgstr ":class:`~optuna.study.Study` 的方向."
 
 #: of optuna.study.StudyDirection:5
 msgid "Direction has not been set."
-msgstr ""
+msgstr "方向未设定."
 
 #: of optuna.study.StudyDirection:9
 msgid ":class:`~optuna.study.Study` minimizes the objective function."
-msgstr ""
+msgstr ":class:`~optuna.study.Study` 最小化目标函数."
 
 #: of optuna.study.StudyDirection:13
 msgid ":class:`~optuna.study.Study` maximizes the objective function."
-msgstr ""
+msgstr ":class:`~optuna.study.Study` 最大化目标函数."
 
 #: ../../source/reference/generated/optuna.study.StudyDirection.rst:17
 msgid "Attributes"

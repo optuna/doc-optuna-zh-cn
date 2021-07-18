@@ -23,13 +23,13 @@ msgstr ""
 
 #: of optuna.storages._rdb.storage.RDBStorage:1
 msgid "Storage class for RDB backend."
-msgstr ""
+msgstr "用于RDB后端的存储类"
 
 #: of optuna.storages._rdb.storage.RDBStorage:3
 msgid ""
 "Note that library users can instantiate this class, but the attributes "
 "provided by this class are not supposed to be directly accessed by them."
-msgstr ""
+msgstr "注意, 库用户可以实例化该类, 但是用户不应该直接访问该类的属性."
 
 #: of optuna.storages._rdb.storage.RDBStorage:7
 msgid "示例"
@@ -39,7 +39,7 @@ msgstr ""
 msgid ""
 "Create an :class:`~optuna.storages.RDBStorage` instance with customized "
 "``pool_size`` and ``timeout`` settings."
-msgstr ""
+msgstr "利用定制的 ``pool_size`` 和 ``timeout`` 创建一个 :class:`~optuna.storages.RDBStorage`."
 
 #: of optuna.storages._base.BaseStorage.check_trial_is_updatable
 #: optuna.storages._base.BaseStorage.get_n_trials
@@ -79,29 +79,29 @@ msgstr ""
 
 #: of optuna.storages._rdb.storage.RDBStorage:29
 msgid "URL of the storage."
-msgstr ""
+msgstr "存储 URL."
 
 #: of optuna.storages._rdb.storage.RDBStorage:30
 msgid ""
 "A dictionary of keyword arguments that is passed to "
 "`sqlalchemy.engine.create_engine`_ function."
-msgstr ""
+msgstr "传递给 `sqlalchemy.engine.create_engine`_ 的字典关键词参数."
 
 #: of optuna.storages._rdb.storage.RDBStorage:32
 msgid "Flag to skip schema compatibility check if set to True."
-msgstr ""
+msgstr "该选项如果设定为 True 的话将跳过 shema 兼容性检查."
 
 #: of optuna.storages._rdb.storage.RDBStorage:33
 msgid ""
 "Interval to record the heartbeat. It is recorded every ``interval`` "
 "seconds."
-msgstr ""
+msgstr "设定心跳信号间隔, 每隔 ``interval`` 记录一次."
 
 #: of optuna.storages._rdb.storage.RDBStorage:34
 msgid ""
 "Grace period before a running trial is failed from the last heartbeat. If"
 " it is :obj:`None`, the grace period will be `2 * heartbeat_interval`."
-msgstr ""
+msgstr "从最后一次心跳开始, 运行 trial 失败前的宽限期. 如果设置为 :obj:`None` 的话, 宽限期将会是 `2 * heartbeat_interval`."
 
 #: of optuna.storages._rdb.storage.RDBStorage:36
 msgid ""
@@ -117,13 +117,14 @@ msgid ""
 "A callback function that is invoked after failing each stale trial. The "
 "function must accept two parameters with the following types in this "
 "order: :class:`~optuna.study.Study` and :class:`~optuna.FrozenTrial`."
-msgstr ""
+msgstr "在每一个旧 trial 失败后被调用的回调函数. 该函数必须按照顺序接受两个下列类型的参数: "
+":class:`~optuna.study.Study` 和 :class:`~optuna.FrozenTrial`."
 
 #: of optuna.storages._rdb.storage.RDBStorage:41
 msgid ""
 "The procedure to fail existing stale trials is called just before asking "
 "the study for a new trial."
-msgstr ""
+msgstr "处理一个旧 trial 的步骤是在向 study 调取一个 新 trial 之前发生的."
 
 #: of optuna.storages._rdb.storage.RDBStorage:48
 msgid ""
@@ -132,7 +133,9 @@ msgid ""
 "``engine_kwargs['pool_pre_ping']=False``, but it is recommended to keep "
 "the setting if execution time of your objective function is longer than "
 "the `wait_timeout` of your MySQL configuration."
-msgstr ""
+msgstr "如果你使用 MySQL, `pool_pre_ping`_ 默认情况下将会被设置为 :obj:`True` 以防止连接超时. "
+"你可以通过设置 ``engine_kwargs['pool_pre_ping']=False`` 来关闭它. 但是如果"
+"如果你的目标函数的执行时间超过你的 MySQL 配置的 `wait_timeout`, 我们推荐保持这个设置."
 
 #: of optuna.storages._base.BaseStorage.check_trial_is_updatable
 #: optuna.storages._base.BaseStorage.get_n_trials
@@ -172,11 +175,11 @@ msgstr ""
 msgid ""
 "If the given `heartbeat_interval` or `grace_period` is not a positive "
 "integer."
-msgstr ""
+msgstr "如果给定的 `heartbeat_interval` 或者 `grace_period` 不是一个正整数."
 
 #: of optuna.storages._rdb.storage.RDBStorage:58
 msgid "If the a process that was failed by heartbeat but was actually running."
-msgstr ""
+msgstr "如果一个由心跳信号终止的进程实际上在运行"
 
 #: ../../source/reference/generated/optuna.storages.RDBStorage.rst:12
 msgid "Methods"
@@ -193,7 +196,7 @@ msgstr ""
 #: of optuna.storages._base.BaseStorage.check_trial_is_updatable:1
 #: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
 msgid "Check whether a trial state is updatable."
-msgstr ""
+msgstr "检查一个 trial 状态是否是可更新的."
 
 #: of
 #: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
@@ -206,7 +209,7 @@ msgstr ""
 #: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
 #: optuna.storages._rdb.storage.RDBStorage.create_new_study:1
 msgid "Create a new study from a name."
-msgstr ""
+msgstr "从给定的名字创建新 study."
 
 #: of
 #: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
@@ -219,7 +222,7 @@ msgstr ""
 #: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
 #: optuna.storages._rdb.storage.RDBStorage.create_new_trial:1
 msgid "Create and add a new trial to a study."
-msgstr ""
+msgstr "创建一个 trial 并将其添加到 study 中."
 
 #: of
 #: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
@@ -232,7 +235,7 @@ msgstr ""
 #: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
 #: optuna.storages._rdb.storage.RDBStorage.delete_study:1
 msgid "Delete a study."
-msgstr ""
+msgstr "删除一个 study."
 
 #: of
 #: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
@@ -245,7 +248,7 @@ msgstr ""
 #: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
 #: optuna.storages._rdb.storage.RDBStorage.fail_stale_trials:1
 msgid "Fail stale trials."
-msgstr ""
+msgstr "终止旧 trial."
 
 #: of
 #: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
@@ -258,7 +261,7 @@ msgstr ""
 #: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
 #: optuna.storages._rdb.storage.RDBStorage.get_all_study_summaries:1
 msgid "Read a list of :class:`~optuna.study.StudySummary` objects."
-msgstr ""
+msgstr "读取一个 :class:`~optuna.study.StudySummary` 对象构成的列表. "
 
 #: of
 #: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
@@ -271,7 +274,7 @@ msgstr ""
 #: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
 #: optuna.storages._rdb.storage.RDBStorage.get_all_trials:1
 msgid "Read all trials in a study."
-msgstr ""
+msgstr "读取一个 study 中所有的 trial."
 
 #: of
 #: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
@@ -284,7 +287,7 @@ msgstr ""
 #: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
 #: optuna.storages._rdb.storage.RDBStorage.get_all_versions:1
 msgid "Return the schema version list."
-msgstr ""
+msgstr "返回 schema 版本列表."
 
 #: of
 #: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
@@ -297,7 +300,7 @@ msgstr ""
 #: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
 #: optuna.storages._rdb.storage.RDBStorage.get_best_trial:1
 msgid "Return the trial with the best value in a study."
-msgstr ""
+msgstr "返回一个 study 中带有最佳值的 trial."
 
 #: of
 #: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
@@ -310,7 +313,7 @@ msgstr ""
 #: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
 #: optuna.storages._rdb.storage.RDBStorage.get_current_version:1
 msgid "Return the schema version currently used by this storage."
-msgstr ""
+msgstr "返回当前存储所使用的 schema 版本."
 
 #: of
 #: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
@@ -323,7 +326,7 @@ msgstr ""
 #: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
 #: optuna.storages._rdb.storage.RDBStorage.get_failed_trial_callback:1
 msgid "Get the failed trial callback function."
-msgstr ""
+msgstr "返回失败 trial 的回调函数."
 
 #: of
 #: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
@@ -336,7 +339,7 @@ msgstr ""
 #: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
 #: optuna.storages._rdb.storage.RDBStorage.get_head_version:1
 msgid "Return the latest schema version."
-msgstr ""
+msgstr "返回最新的 schema 版本."
 
 #: of
 #: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
@@ -349,7 +352,7 @@ msgstr ""
 #: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
 #: optuna.storages._rdb.storage.RDBStorage.get_heartbeat_interval:1
 msgid "Get the heartbeat interval if it is set."
-msgstr ""
+msgstr "如果设置了的话, 返回心跳信号区间."
 
 #: of
 #: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
@@ -362,7 +365,7 @@ msgstr ""
 #: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
 #: optuna.storages._base.BaseStorage.get_n_trials:1
 msgid "Count the number of trials in a study."
-msgstr ""
+msgstr "返回一个 study 中的 trial 数目."
 
 #: of
 #: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
@@ -375,7 +378,7 @@ msgstr ""
 #: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
 #: optuna.storages._rdb.storage.RDBStorage.get_study_directions:1
 msgid "Read whether a study maximizes or minimizes an objective."
-msgstr ""
+msgstr "读取一个 study 是在最大化还是最小化一个目标函数."
 
 #: of
 #: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
@@ -388,7 +391,7 @@ msgstr ""
 #: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
 #: optuna.storages._rdb.storage.RDBStorage.get_study_id_from_name:1
 msgid "Read the ID of a study."
-msgstr ""
+msgstr "读取一个 study 的 ID."
 
 #: of
 #: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
@@ -402,7 +405,7 @@ msgstr ""
 #: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
 #: optuna.storages._rdb.storage.RDBStorage.get_study_id_from_trial_id:1
 msgid "Read the ID of a study to which a trial belongs."
-msgstr ""
+msgstr "读取一个 trial 对应的 study 的 ID."
 
 #: of
 #: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
@@ -415,7 +418,7 @@ msgstr ""
 #: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
 #: optuna.storages._rdb.storage.RDBStorage.get_study_name_from_id:1
 msgid "Read the study name of a study."
-msgstr ""
+msgstr "返回一个 study 的名字."
 
 #: of
 #: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
@@ -428,7 +431,7 @@ msgstr ""
 #: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
 #: optuna.storages._rdb.storage.RDBStorage.get_study_system_attrs:1
 msgid "Read the optuna-internal attributes of a study."
-msgstr ""
+msgstr "读取一个 study 的 optuna 内部属性."
 
 #: of
 #: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
@@ -441,7 +444,7 @@ msgstr ""
 #: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
 #: optuna.storages._rdb.storage.RDBStorage.get_study_user_attrs:1
 msgid "Read the user-defined attributes of a study."
-msgstr ""
+msgstr "读取一个 study 中用户定义的属性."
 
 #: of
 #: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
@@ -452,7 +455,7 @@ msgstr ""
 #: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
 #: optuna.storages._rdb.storage.RDBStorage.get_trial:1
 msgid "Read a trial."
-msgstr ""
+msgstr "读取一个 trial."
 
 #: of
 #: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
@@ -466,7 +469,7 @@ msgstr ""
 #: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
 #: optuna.storages._rdb.storage.RDBStorage.get_trial_id_from_study_id_trial_number:1
 msgid "Read the trial id of a trial."
-msgstr ""
+msgstr "读取一个 trial 的 ID."
 
 #: of
 #: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
@@ -479,7 +482,7 @@ msgstr ""
 #: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
 #: optuna.storages._rdb.storage.RDBStorage.get_trial_number_from_id:1
 msgid "Read the trial number of a trial."
-msgstr ""
+msgstr "读取一个 trial 的数目."
 
 #: of
 #: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
@@ -492,7 +495,7 @@ msgstr ""
 #: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
 #: optuna.storages._rdb.storage.RDBStorage.get_trial_param:1
 msgid "Read the parameter of a trial."
-msgstr ""
+msgstr "读取一个 trial 的参数."
 
 #: of
 #: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
@@ -505,7 +508,7 @@ msgstr ""
 #: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
 #: optuna.storages._base.BaseStorage.get_trial_params:1
 msgid "Read the parameter dictionary of a trial."
-msgstr ""
+msgstr "读取一个 trial 的参数字典."
 
 #: of
 #: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
@@ -518,7 +521,7 @@ msgstr ""
 #: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
 #: optuna.storages._rdb.storage.RDBStorage.get_trial_system_attrs:1
 msgid "Read the optuna-internal attributes of a trial."
-msgstr ""
+msgstr "读取一个 study 的 optuna 内部属性."
 
 #: of
 #: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
@@ -531,7 +534,7 @@ msgstr ""
 #: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
 #: optuna.storages._rdb.storage.RDBStorage.get_trial_user_attrs:1
 msgid "Read the user-defined attributes of a trial."
-msgstr ""
+msgstr "读取一个 study 中用户定义的属性."
 
 #: of
 #: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
@@ -544,7 +547,7 @@ msgstr ""
 #: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
 #: optuna.storages._base.BaseStorage.is_heartbeat_enabled:1
 msgid "Check whether the storage enables the heartbeat."
-msgstr ""
+msgstr "检查存储是否开启了心跳信号."
 
 #: of
 #: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
@@ -558,7 +561,7 @@ msgstr ""
 #: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
 #: optuna.storages._rdb.storage.RDBStorage.read_trials_from_remote_storage:1
 msgid "Make an internal cache of trials up-to-date."
-msgstr ""
+msgstr "保持内部 trial 缓存最新."
 
 #: of
 #: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
@@ -571,7 +574,7 @@ msgstr ""
 #: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
 #: optuna.storages._rdb.storage.RDBStorage.record_heartbeat:1
 msgid "Record the heartbeat of the trial."
-msgstr ""
+msgstr "记录 trial 的心跳信号."
 
 #: of
 #: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
@@ -582,7 +585,7 @@ msgstr ""
 #: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
 #: optuna.storages._rdb.storage.RDBStorage.remove_session:1
 msgid "Removes the current session."
-msgstr ""
+msgstr "移除当前会话."
 
 #: of
 #: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
@@ -596,7 +599,7 @@ msgstr ""
 #: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
 #: optuna.storages._rdb.storage.RDBStorage.set_study_directions:1
 msgid "Register optimization problem directions to a study."
-msgstr ""
+msgstr "给一个 study 注册优化问题的方向."
 
 #: of
 #: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
@@ -610,7 +613,7 @@ msgstr ""
 #: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
 #: optuna.storages._rdb.storage.RDBStorage.set_study_system_attr:1
 msgid "Register an optuna-internal attribute to a study."
-msgstr ""
+msgstr "注册一个 study 的 optuna 内部属性"
 
 #: of
 #: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
@@ -624,7 +627,7 @@ msgstr ""
 #: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
 #: optuna.storages._rdb.storage.RDBStorage.set_study_user_attr:1
 msgid "Register a user-defined attribute to a study."
-msgstr ""
+msgstr "注册一个 study 的用户定义属性."
 
 #: of
 #: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
@@ -638,7 +641,7 @@ msgstr ""
 #: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
 #: optuna.storages._rdb.storage.RDBStorage.set_trial_intermediate_value:1
 msgid "Report an intermediate value of an objective function."
-msgstr ""
+msgstr "报告目标函数的中间值."
 
 #: of
 #: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
@@ -651,7 +654,7 @@ msgstr ""
 #: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
 #: optuna.storages._rdb.storage.RDBStorage.set_trial_param:1
 msgid "Set a parameter to a trial."
-msgstr ""
+msgstr "设置 trial 的参数."
 
 #: of
 #: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
@@ -664,7 +667,7 @@ msgstr ""
 #: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
 #: optuna.storages._rdb.storage.RDBStorage.set_trial_state:1
 msgid "Update the state of a trial."
-msgstr ""
+msgstr "更新一个 trial 的状态."
 
 #: of
 #: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
@@ -678,7 +681,7 @@ msgstr ""
 #: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
 #: optuna.storages._rdb.storage.RDBStorage.set_trial_system_attr:1
 msgid "Set an optuna-internal attribute to a trial."
-msgstr ""
+msgstr "设置 trial 的 optuna 内部属性."
 
 #: of
 #: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
@@ -692,7 +695,7 @@ msgstr ""
 #: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
 #: optuna.storages._rdb.storage.RDBStorage.set_trial_user_attr:1
 msgid "Set a user-defined attribute to a trial."
-msgstr ""
+msgstr "设置 trial 的用户定义属性."
 
 #: of
 #: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
@@ -705,7 +708,7 @@ msgstr ""
 #: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
 #: optuna.storages._rdb.storage.RDBStorage.set_trial_values:1
 msgid "Set return values of an objective function."
-msgstr ""
+msgstr "设置目标函数的返回值."
 
 #: of
 #: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
@@ -716,15 +719,15 @@ msgstr ""
 #: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
 #: optuna.storages._rdb.storage.RDBStorage.upgrade:1
 msgid "Upgrade the storage schema."
-msgstr ""
+msgstr "升级存储 schema."
 
 #: of optuna.storages._base.BaseStorage.check_trial_is_updatable:3
 msgid "ID of the trial. Only used for an error message."
-msgstr ""
+msgstr "trial ID. 只在错误信息中使用."
 
 #: of optuna.storages._base.BaseStorage.check_trial_is_updatable:5
 msgid "Trial state to check."
-msgstr ""
+msgstr "待检查的状态."
 
 #: of optuna.storages._base.BaseStorage.check_trial_is_updatable:7
 #: optuna.storages._rdb.storage.RDBStorage.set_trial_intermediate_value:10
@@ -734,7 +737,7 @@ msgstr ""
 #: optuna.storages._rdb.storage.RDBStorage.set_trial_user_attr:10
 #: optuna.storages._rdb.storage.RDBStorage.set_trial_values:9
 msgid "If the trial is already finished."
-msgstr ""
+msgstr "如果 trial 已经结束了."
 
 #: of optuna.storages._base.BaseStorage.check_trial_is_updatable
 #: optuna.storages._base.BaseStorage.get_n_trials
@@ -784,11 +787,11 @@ msgstr ""
 msgid ""
 "If no name is specified, the storage class generates a name. The returned"
 " study ID is unique among all current and deleted studies."
-msgstr ""
+msgstr "如果没有指定名称, 存储类会生成一个名称. 返回的 study ID 与所有当前和已删除的 study ID 都不重复."
 
 #: of optuna.storages._rdb.storage.RDBStorage.create_new_study:6
 msgid "Name of the new study to create."
-msgstr ""
+msgstr "要创建的新 study 的名字."
 
 #: of optuna.storages._base.BaseStorage.get_n_trials
 #: optuna.storages._base.BaseStorage.get_trial_params
@@ -819,15 +822,15 @@ msgstr ""
 
 #: of optuna.storages._rdb.storage.RDBStorage.create_new_study:8
 msgid "ID of the created study."
-msgstr ""
+msgstr "已创建的 study 的 ID."
 
 #: of optuna.storages._rdb.storage.RDBStorage.create_new_study:10
 msgid "If a study with the same ``study_name`` already exists."
-msgstr ""
+msgstr "如果具有相同 ``study_name`` 的study 已经存在的话."
 
 #: of optuna.storages._rdb.storage.RDBStorage.create_new_trial:3
 msgid "The returned trial ID is unique among all current and deleted trials."
-msgstr ""
+msgstr "返回的 trial ID 在所有现存和已经删除的 trial 中是唯一的."
 
 #: of optuna.storages._base.BaseStorage.get_n_trials:3
 #: optuna.storages._rdb.storage.RDBStorage.create_new_trial:5
@@ -851,11 +854,11 @@ msgstr ""
 msgid ""
 "Template :class:`~optuna.trial.FronzenTrial` with default user-"
 "attributes, system-attributes, intermediate-values, and a state."
-msgstr ""
+msgstr "带有默认用户属性, 系统属性, 中间值和状态的 :class:`~optuna.trial.FronzenTrial` 模板."
 
 #: of optuna.storages._rdb.storage.RDBStorage.create_new_trial:9
 msgid "ID of the created trial."
-msgstr ""
+msgstr "创建的 trial 的ID."
 
 #: of optuna.storages._base.BaseStorage.get_n_trials:8
 #: optuna.storages._rdb.storage.RDBStorage.create_new_trial:11
@@ -871,7 +874,7 @@ msgstr ""
 #: optuna.storages._rdb.storage.RDBStorage.set_study_system_attr:9
 #: optuna.storages._rdb.storage.RDBStorage.set_study_user_attr:9
 msgid "If no study with the matching ``study_id`` exists."
-msgstr ""
+msgstr "如果没有带有相同 ``study_id`` 的 study 存在的话."
 
 #: of optuna.storages._rdb.storage.RDBStorage.fail_stale_trials:3
 msgid ""
@@ -879,81 +882,83 @@ msgid ""
 "will be failed, that is, those states will be changed to "
 ":obj:`~optuna.trial.TrialState.FAIL`. The grace period is ``2 * "
 "heartbeat_interval``."
-msgstr ""
+msgstr "正在运行的 trial, 如果其心跳信号长时间没有更新的话将会被终止, 也就是说其状态会被设置为 :obj:`~optuna.trial.TrialState.FAIL`."
+"这个宽限期为 ``2 * "
+"heartbeat_interval``."
 
 #: of optuna.storages._rdb.storage.RDBStorage.fail_stale_trials:7
 msgid "ID of the related study."
-msgstr ""
+msgstr "相关 study 的 ID."
 
 #: of optuna.storages._rdb.storage.RDBStorage.fail_stale_trials:9
 msgid "List of trial IDs of the failed trials."
-msgstr ""
+msgstr "失败 trial 的 trial ID 列表."
 
 #: of optuna.storages._rdb.storage.RDBStorage.get_all_study_summaries:3
 msgid "A list of :class:`~optuna.study.StudySummary` objects."
-msgstr ""
+msgstr ":class:`~optuna.study.StudySummary` 对象列表."
 
 #: of optuna.storages._rdb.storage.RDBStorage.get_all_trials:4
 msgid ""
 "Whether to copy the list of trials before returning. Set to :obj:`True` "
 "if you intend to update the list or elements of the list."
-msgstr ""
+msgstr "是否要在返回前复制 trial 列表. 如果你想要更新列表或者列表中的元素的话, 请设置为 :obj:`True`."
 
 #: of optuna.storages._base.BaseStorage.get_n_trials:4
 #: optuna.storages._rdb.storage.RDBStorage.get_all_trials:6
 msgid "Trial states to filter on. If :obj:`None`, include all states."
-msgstr ""
+msgstr "用于过滤的 trial 状态. 如果设置为 :obj:`None` 将包含所有状态."
 
 #: of optuna.storages._rdb.storage.RDBStorage.get_all_trials:8
 msgid "List of trials in the study."
-msgstr ""
+msgstr "study 中的 trial 列表."
 
 #: of optuna.storages._rdb.storage.RDBStorage.get_best_trial:3
 msgid "This method is valid only during single-objective optimization."
-msgstr ""
+msgstr "只有在单目标优化中该方法有效."
 
 #: of optuna.storages._rdb.storage.RDBStorage.get_best_trial:7
 msgid ""
 "The trial with the best objective value among all finished trials in the "
 "study."
-msgstr ""
+msgstr "study 中所有 trial 里带有最佳目标值的 trial."
 
 #: of optuna.storages._rdb.storage.RDBStorage.get_best_trial:10
 msgid "If the study has more than one direction."
-msgstr ""
+msgstr "如果 study 有不止一个方向."
 
 #: of optuna.storages._rdb.storage.RDBStorage.get_best_trial:11
 msgid "If no trials have been completed."
-msgstr ""
+msgstr "如果没有 trial 已经完成."
 
 #: of optuna.storages._rdb.storage.RDBStorage.get_failed_trial_callback:3
 msgid "The failed trial callback function if it is set, otherwise :obj:`None`."
-msgstr ""
+msgstr "如有设置，返回失败 trial 的回调函数, 否则为 :obj:`None`."
 
 #: of optuna.storages._rdb.storage.RDBStorage.get_heartbeat_interval:3
 msgid "The heartbeat interval if it is set, otherwise :obj:`None`."
-msgstr ""
+msgstr "如果设置了的话是心跳区间, 否则为  :obj:`None`."
 
 #: of optuna.storages._base.BaseStorage.get_n_trials:6
 msgid "Number of trials in the study."
-msgstr ""
+msgstr "trial 中的 trial 数目."
 
 #: of optuna.storages._rdb.storage.RDBStorage.get_study_directions:3
 msgid "ID of a study."
-msgstr ""
+msgstr "study 的 ID."
 
 #: of optuna.storages._rdb.storage.RDBStorage.get_study_directions:5
 msgid "Optimization directions list of the study."
-msgstr ""
+msgstr "study 的优化方向列表."
 
 #: of optuna.storages._rdb.storage.RDBStorage.get_study_id_from_name:3
 #: optuna.storages._rdb.storage.RDBStorage.get_study_name_from_id:5
 msgid "Name of the study."
-msgstr ""
+msgstr "study 的名字."
 
 #: of optuna.storages._rdb.storage.RDBStorage.get_study_id_from_name:7
 msgid "If no study with the matching ``study_name`` exists."
-msgstr ""
+msgstr "如果没有带有相同 ``study_name`` 的 study 存在的话."
 
 #: of optuna.storages._base.BaseStorage.get_trial_params:3
 #: optuna.storages._rdb.storage.RDBStorage.get_study_id_from_trial_id:3
@@ -971,7 +976,7 @@ msgstr ""
 #: optuna.storages._rdb.storage.RDBStorage.set_trial_user_attr:5
 #: optuna.storages._rdb.storage.RDBStorage.set_trial_values:5
 msgid "ID of the trial."
-msgstr ""
+msgstr "Trial ID"
 
 #: of optuna.storages._base.BaseStorage.get_trial_params:8
 #: optuna.storages._rdb.storage.RDBStorage.get_study_id_from_trial_id:7
@@ -986,70 +991,70 @@ msgstr ""
 #: optuna.storages._rdb.storage.RDBStorage.set_trial_user_attr:9
 #: optuna.storages._rdb.storage.RDBStorage.set_trial_values:8
 msgid "If no trial with the matching ``trial_id`` exists."
-msgstr ""
+msgstr "如果没有匹配 ``trial_id`` 的 trial 存在的话."
 
 #: of optuna.storages._rdb.storage.RDBStorage.get_study_system_attrs:5
 msgid "Dictionary with the optuna-internal attributes of the study."
-msgstr ""
+msgstr "study 中的 optuna 内部属性的字典."
 
 #: of optuna.storages._rdb.storage.RDBStorage.get_study_user_attrs:5
 msgid "Dictionary with the user attributes of the study."
-msgstr ""
+msgstr "study 中的用户属性词典."
 
 #: of optuna.storages._rdb.storage.RDBStorage.get_trial:5
 msgid "Trial with a matching trial ID."
-msgstr ""
+msgstr "带有匹配的 trial ID 的 trial."
 
 #: of
 #: optuna.storages._rdb.storage.RDBStorage.get_trial_id_from_study_id_trial_number:4
 #: optuna.storages._rdb.storage.RDBStorage.get_trial_number_from_id:9
 msgid "Number of the trial."
-msgstr ""
+msgstr "trial 号."
 
 #: of
 #: optuna.storages._rdb.storage.RDBStorage.get_trial_id_from_study_id_trial_number:8
 msgid "If no trial with the matching ``study_id`` and ``trial_number`` exists."
-msgstr ""
+msgstr "如果没有匹配 ``study_id`` 和 ``trial_number`` 的 trial 存在."
 
 #: of optuna.storages._rdb.storage.RDBStorage.get_trial_number_from_id:5
 msgid "The trial number is only unique within a study, and is sequential."
-msgstr ""
+msgstr "trial 号只在 study 内是独特的, 而且是线性递增的."
 
 #: of optuna.storages._rdb.storage.RDBStorage.get_trial_param:4
 #: optuna.storages._rdb.storage.RDBStorage.set_trial_param:4
 msgid "Name of the parameter."
-msgstr ""
+msgstr "参数名."
 
 #: of optuna.storages._rdb.storage.RDBStorage.get_trial_param:6
 msgid "Internal representation of the parameter."
-msgstr ""
+msgstr "参数的内部表示."
 
 #: of optuna.storages._rdb.storage.RDBStorage.get_trial_param:8
 msgid ""
 "If no trial with the matching ``trial_id`` exists.     If no such "
 "parameter exists."
-msgstr ""
+msgstr "如果没有匹配 ``trial_id`` 的 trial 存在的话. 如果没有此类参数."
 
 #: of optuna.storages._base.BaseStorage.get_trial_params:5
 msgid ""
 "Dictionary of a parameters. Keys are parameter names and values are "
 "internal representations of the parameter values."
-msgstr ""
+msgstr "参数字典. 键为参数名, 值为参数值的内部表示."
 
 #: of optuna.storages._rdb.storage.RDBStorage.get_trial_system_attrs:5
 msgid "Dictionary with the optuna-internal attributes of the trial."
-msgstr ""
+msgstr "给定 trial 的 optuna 内部属性字典."
 
 #: of optuna.storages._rdb.storage.RDBStorage.get_trial_user_attrs:5
 msgid "Dictionary with the user-defined attributes of the trial."
-msgstr ""
+msgstr "给定 trial 的用户属性字典."
 
 #: of optuna.storages._base.BaseStorage.is_heartbeat_enabled:3
 msgid ""
 ":obj:`True` if the storage supports the heartbeat and the return value of"
 " :meth:`~optuna.storages.BaseStorage.get_heartbeat_interval` is an "
 "integer, otherwise :obj:`False`."
-msgstr ""
+msgstr "如果存储支持心跳信号而且 :meth:`~optuna.storages.BaseStorage.get_heartbeat_interval` 返回值为整数的话, 为 :obj:`True`. 否则为 :obj:`False`."
 
 #: of optuna.storages._rdb.storage.RDBStorage.remove_session:3
 msgid ""
@@ -1062,68 +1067,74 @@ msgid ""
 " to touch a SQLite connection from threads other than the thread that "
 "created the connection. Therefore, we need to explicitly close the "
 "connection from each thread."
-msgstr ""
+msgstr "在 SQLAlchemy 的 ThreadLocalRegistry 中为每个线程存储一个会话. "
+"该方法关闭并删除与当前线程相关的会话. 特别是在多线程使用情况下, 从 *每个线程* 调用这个方法是很重要的. "
+"否则, 所有的会话和它们相关的DB连接都会被偶尔调用垃圾收集器的线程所破坏. "
+"默认情况下, 不允许从创建连接的线程以外的线程接触 SQLite 连接. "
+"因此, 我们需要明确地从每个线程关闭连接."
 
 #: of optuna.storages._rdb.storage.RDBStorage.set_study_directions:4
 msgid ""
 "A sequence of direction whose element is either "
 ":obj:`~optuna.study.StudyDirection.MAXIMIZE` or "
 ":obj:`~optuna.study.StudyDirection.MINIMIZE`."
-msgstr ""
+msgstr "方向列表, 其元素为 "
+":obj:`~optuna.study.StudyDirection.MAXIMIZE` 或者 "
+":obj:`~optuna.study.StudyDirection.MINIMIZE`."
 
 #: of optuna.storages._rdb.storage.RDBStorage.set_study_directions:9
 msgid ""
 "If the directions are already set and the each coordinate of passed "
 "``directions``     is the opposite direction or "
 ":obj:`~optuna.study.StudyDirection.NOT_SET`."
-msgstr ""
+msgstr "如果方向已经设定, 而且每一个传递给 ``directions`` 的座标是相反的或者 :obj:`~optuna.study.StudyDirection.NOT_SET`."
 
 #: of optuna.storages._rdb.storage.RDBStorage.set_study_system_attr:3
 #: optuna.storages._rdb.storage.RDBStorage.set_study_user_attr:3
 #: optuna.storages._rdb.storage.RDBStorage.set_trial_system_attr:3
 #: optuna.storages._rdb.storage.RDBStorage.set_trial_user_attr:3
 msgid "This method overwrites any existing attribute."
-msgstr ""
+msgstr "该方法覆盖任何现存的属性."
 
 #: of optuna.storages._rdb.storage.RDBStorage.set_study_system_attr:6
 #: optuna.storages._rdb.storage.RDBStorage.set_study_user_attr:6
 #: optuna.storages._rdb.storage.RDBStorage.set_trial_system_attr:6
 #: optuna.storages._rdb.storage.RDBStorage.set_trial_user_attr:6
 msgid "Attribute key."
-msgstr ""
+msgstr "属性键."
 
 #: of optuna.storages._rdb.storage.RDBStorage.set_study_system_attr:7
 #: optuna.storages._rdb.storage.RDBStorage.set_study_user_attr:7
 #: optuna.storages._rdb.storage.RDBStorage.set_trial_system_attr:7
 #: optuna.storages._rdb.storage.RDBStorage.set_trial_user_attr:7
 msgid "Attribute value. It should be JSON serializable."
-msgstr ""
+msgstr "属性值. 它应该是可 JSON 序列化的."
 
 #: of optuna.storages._rdb.storage.RDBStorage.set_trial_intermediate_value:3
 msgid ""
 "This method overwrites any existing intermediate value associated with "
 "the given step."
-msgstr ""
+msgstr "该方法覆盖任何和给定的步骤关联的中间值."
 
 #: of optuna.storages._rdb.storage.RDBStorage.set_trial_intermediate_value:6
 msgid "Step of the trial (e.g., the epoch when training a neural network)."
-msgstr ""
+msgstr "trial 步骤 (比如开始训练一个网络的 epoch)."
 
 #: of optuna.storages._rdb.storage.RDBStorage.set_trial_intermediate_value:7
 msgid "Intermediate value corresponding to the step."
-msgstr ""
+msgstr "给定步骤的中间值."
 
 #: of optuna.storages._rdb.storage.RDBStorage.set_trial_param:5
 msgid "Internal representation of the parameter value."
-msgstr ""
+msgstr "参数值的内部表示"
 
 #: of optuna.storages._rdb.storage.RDBStorage.set_trial_param:6
 msgid "Sampled distribution of the parameter."
-msgstr ""
+msgstr "参数的采样分布."
 
 #: of optuna.storages._rdb.storage.RDBStorage.set_trial_state:4
 msgid "New state of the trial."
-msgstr ""
+msgstr "trial 的新状态."
 
 #: of optuna.storages._rdb.storage.RDBStorage.set_trial_state:6
 msgid ""
@@ -1131,13 +1142,14 @@ msgid ""
 "state is kept the same. The latter happens when this method tries to "
 "update the state of :obj:`~optuna.trial.TrialState.RUNNING` trial to "
 ":obj:`~optuna.trial.TrialState.RUNNING`."
-msgstr ""
+msgstr "如果状态被成功地改变了则为 :obj:`True`. 如果状态保持不变则为 :obj:`False`. "
+"如果该方法试图更新一个 :obj:`~optuna.trial.TrialState.RUNNING` trial 为 :obj:`~optuna.trial.TrialState.RUNNING` 的话, 后者将会发生."
 
 #: of optuna.storages._rdb.storage.RDBStorage.set_trial_values:3
 msgid "This method overwrites any existing trial values."
-msgstr ""
+msgstr "该方法将覆盖任何现存的 trial 值."
 
 #: of optuna.storages._rdb.storage.RDBStorage.set_trial_values:6
 msgid "Values of the objective function."
-msgstr ""
+msgstr "目标函数的值."
 
