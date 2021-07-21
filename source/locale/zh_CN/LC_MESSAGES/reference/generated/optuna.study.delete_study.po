@@ -23,7 +23,7 @@ msgstr ""
 
 #: of optuna.study.delete_study:1
 msgid "Delete a :class:`~optuna.study.Study` object."
-msgstr ""
+msgstr "删除一个 :class:`~optuna.study.Study` 对象."
 
 #: of optuna.study.delete_study:4
 msgid "示例"
@@ -42,6 +42,8 @@ msgid ""
 "Database URL such as ``sqlite:///example.db``. Please see also the "
 "documentation of :func:`~optuna.study.create_study` for further details."
 msgstr ""
+"诸如 ``sqlite:///example.db`` 这样的数据库 URL. 更多细节见"
+" :func:`~optuna.study.create_study` 的文档. "
 
 #: of optuna.study.delete_study
 msgid "返回类型"
@@ -51,5 +53,5 @@ msgstr ""
 msgid ""
 ":func:`optuna.delete_study` is an alias of "
 ":func:`optuna.study.delete_study`."
-msgstr ""
+msgstr ":func:`optuna.delete_study` 是 :func:`optuna.study.delete_study` 的别名."
 

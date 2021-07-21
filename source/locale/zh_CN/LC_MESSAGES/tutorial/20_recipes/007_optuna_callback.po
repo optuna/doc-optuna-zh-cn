@@ -60,7 +60,7 @@ msgid ""
 "if a certain number of trials are pruned in a row. The number of trials "
 "pruned in a row is specified by ``threshold``."
 msgstr ""
-"本例实现了一个有状态的回调函数. 如果特定数目的 trial 被剪枝了, 它将终止优化. 被剪枝的 trial 数是通过 "
+"本例实现了一个有状态的回调函数. 如果特定数目的 trial 被剪枝了, 它将终止优化. 被剪枝的 trial 数目是通过 "
 "``threshold`` 来指定的."
 
 #: ../../source/tutorial/20_recipes/007_optuna_callback.rst:75
