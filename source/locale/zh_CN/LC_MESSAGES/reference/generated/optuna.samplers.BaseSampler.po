@@ -29,7 +29,7 @@ msgstr ""
 msgid ""
 "Optuna combines two types of sampling strategies, which are called "
 "*relative sampling* and *independent sampling*."
-msgstr ""
+msgstr "Optuna结合了两种类型的 sampling 策略, 称为 *相对 sampling* 和 *独立 sampling*."
 
 #: of optuna.samplers._base.BaseSampler:6
 msgid ""
@@ -39,6 +39,10 @@ msgid ""
 "sampling are described in a relative search space, which is determined by"
 " :func:`~optuna.samplers.BaseSampler.infer_relative_search_space`."
 msgstr ""
+"*相对 sampling* 同时确定多个参数的值, 以便 sampling "
+"算法可以使用参数之间的关系（例如, 相关性）. 相对 sampling 的目标参数是在一个相对搜索空间中描述的. 该空间由"
+" :func:`~optuna.samplers.BaseSampler.infer_relative_search_space`"
+" 决定. "
 
 #: of optuna.samplers._base.BaseSampler:11
 msgid ""
@@ -46,7 +50,7 @@ msgid ""
 "without considering any relationship between parameters. Target "
 "parameters of the independent sampling are the parameters not described "
 "in the relative search space."
-msgstr ""
+msgstr "*独立 sampling* 确定一个单独的参数, 并且不考虑不同参数之间的关系. 独立 sampling的目标参数不由相对搜索空间描述. "
 
 #: of optuna.samplers._base.BaseSampler:15
 msgid ""
@@ -60,12 +64,19 @@ msgid ""
 ":meth:`~optuna.samplers.BaseSampler.sample_independent` is used to sample"
 " parameters that don't belong to the relative search space."
 msgstr ""
+"进一步来说, 参数是按照以下步骤来采样得出的. 在一个 trial "
+"刚开始时, :meth:`~optuna.samplers.BaseSampler.infer_relative_search_space`"
+" 会被调用以确定该 trial "
+"的相对搜索空间. 然后, :meth:`~optuna.samplers.BaseSampler.sample_relative`  "
+"方法会被触发, 用于从该搜索空间中对参数进行采样. 在目标函数的执行过程中, :meth:`~optuna.samplers.BaseSampler.sample_independent`"
+" 被用于对那些不属于相对搜索空间的参数进行采样. "
+
 
 #: of optuna.samplers._base.BaseSampler:23
 msgid ""
 "The following figure depicts the lifetime of a trial and how the above "
 "three methods are called in the trial."
-msgstr ""
+msgstr "下图描述了一个 trial 的生命周期和上述方法是如何在一个 trial 内被触发的. "
 
 #: ../../source/reference/generated/optuna.samplers.BaseSampler.rst:12
 msgid "Methods"
@@ -94,7 +105,7 @@ msgstr ""
 msgid ""
 "Infer the search space that will be used by relative sampling in the "
 "target trial."
-msgstr ""
+msgstr "推断会用于目标 trial 的相对 sampling 的搜索空间. "
 
 #: of optuna.samplers._base.BaseSampler.after_trial:1:<autosummary>:1
 msgid ":obj:`reseed_rng <optuna.samplers.BaseSampler.reseed_rng>`\\ \\(\\)"
@@ -103,7 +114,7 @@ msgstr ""
 #: of optuna.samplers._base.BaseSampler.after_trial:1:<autosummary>:1
 #: optuna.samplers._base.BaseSampler.reseed_rng:1
 msgid "Reseed sampler's random number generator."
-msgstr ""
+msgstr "重设 sampler 的随机数种子. "
 
 #: of optuna.samplers._base.BaseSampler.after_trial:1:<autosummary>:1
 msgid ""
@@ -115,7 +126,7 @@ msgstr ""
 #: of optuna.samplers._base.BaseSampler.after_trial:1:<autosummary>:1
 #: optuna.samplers._base.BaseSampler.sample_independent:1
 msgid "Sample a parameter for a given distribution."
-msgstr ""
+msgstr "从给定的分布中采样. "
 
 #: of optuna.samplers._base.BaseSampler.after_trial:1:<autosummary>:1
 msgid ""
@@ -126,20 +137,21 @@ msgstr ""
 #: of optuna.samplers._base.BaseSampler.after_trial:1:<autosummary>:1
 #: optuna.samplers._base.BaseSampler.sample_relative:1
 msgid "Sample parameters in a given search space."
-msgstr ""
+msgstr "从给定搜索空间中的 sample 参数. "
 
 #: of optuna.samplers._base.BaseSampler.after_trial:3
 msgid ""
 "This method is called after the objective function returns and right "
 "before the trials is finished and its state is stored."
-msgstr ""
+msgstr "该方法在目标函数返回之后, trial 结束且其状态即将被存储时执行."
 
 #: of optuna.samplers._base.BaseSampler.after_trial:7
 msgid ""
 "Added in v2.4.0 as an experimental feature. The interface may change in "
 "newer versions without prior notice. See "
 "https://github.com/optuna/optuna/releases/tag/v2.4.0."
-msgstr ""
+msgstr "在 v2.4.0 中作为试验性特性引入, 该接口可能在更新的版本中在没有提前告知的情况下改变, 参见 "
+"https://github.com/optuna/optuna/releases/tag/v2.4.0."
 
 #: of optuna.samplers._base.BaseSampler.after_trial
 #: optuna.samplers._base.BaseSampler.infer_relative_search_space
@@ -153,24 +165,24 @@ msgstr ""
 #: optuna.samplers._base.BaseSampler.sample_independent:13
 #: optuna.samplers._base.BaseSampler.sample_relative:12
 msgid "Target study object."
-msgstr ""
+msgstr "目标 study 对象"
 
 #: of optuna.samplers._base.BaseSampler.after_trial:11
 #: optuna.samplers._base.BaseSampler.infer_relative_search_space:9
 #: optuna.samplers._base.BaseSampler.sample_independent:14
 #: optuna.samplers._base.BaseSampler.sample_relative:13
 msgid "Target trial object. Take a copy before modifying this object."
-msgstr ""
+msgstr "目标 trial 对象. 在修改该对象前需制作一个副本."
 
 #: of optuna.samplers._base.BaseSampler.after_trial:13
 msgid "Resulting trial state."
-msgstr ""
+msgstr "导致的 trial state."
 
 #: of optuna.samplers._base.BaseSampler.after_trial:14
 msgid ""
 "Resulting trial values. Guaranteed to not be :obj:`None` if trial "
 "succeeded."
-msgstr ""
+msgstr "导致的 trial 值列表. 如果 trial 成功的话, 该值就一定不会为 :obj:`None`."
 
 #: of optuna.samplers._base.BaseSampler.after_trial
 #: optuna.samplers._base.BaseSampler.infer_relative_search_space
@@ -188,6 +200,10 @@ msgid ""
 "contained in the search space will be sampled by using "
 ":func:`~optuna.samplers.BaseSampler.sample_independent` method."
 msgstr ""
+"该方法会恰好在 :func:`~optuna.samplers.BaseSampler.sample_relative` "
+"之前被调用, 而由该方法返回的搜索空间会被传入它. 那些不包含在这个搜索空间中的参数将用 "
+":func:`~optuna.samplers.BaseSampler.sample_independent` 来进行采样. "
+
 
 #: of optuna.samplers._base.BaseSampler.infer_relative_search_space
 #: optuna.samplers._base.BaseSampler.sample_independent
@@ -197,7 +213,7 @@ msgstr ""
 
 #: of optuna.samplers._base.BaseSampler.infer_relative_search_space:12
 msgid "A dictionary containing the parameter names and parameter's distributions."
-msgstr ""
+msgstr "一个包含了参数名和参数分布的字典. "
 
 #: of optuna.samplers._base.BaseSampler.infer_relative_search_space:15
 msgid ""
@@ -205,6 +221,10 @@ msgid ""
 "implementation of "
 ":func:`~optuna.samplers.BaseSampler.infer_relative_search_space`."
 msgstr ""
+"作为以一个 "
+":func:`~optuna.samplers.BaseSampler.infer_relative_search_space` "
+"的实现, 请参考 :func:`~optuna.samplers.intersection_search_space`. "
+
 
 #: of optuna.samplers._base.BaseSampler.reseed_rng:3
 msgid ""
@@ -215,6 +235,11 @@ msgid ""
 " this issue, this method assigns a different seed to each random number "
 "generator."
 msgstr ""
+"该方法由 :class:`~optuna.study.Study 的实例来调用. 而且, 如果选项 "
+"``n_jobs>1`` 的话, 它会被并行执行. 在那种情况下, 这个 sampler "
+"实例会被复制, 其中就报错了随机数生成器的状态, 因此它们可能会产生同样的 suggestion "
+"值. 为了防止出现这个问题, 该方法给每一个随机数生成器赋予一个不同的种子. "
+
 
 #: of optuna.samplers._base.BaseSampler.sample_independent:3
 msgid ""
@@ -223,6 +248,9 @@ msgid ""
 "method. This method is suitable for sampling algorithms that do not use "
 "relationship between parameters such as random sampling and TPE."
 msgstr ""
+"只有当参数不属于 :func:`~optuna.samplers.BaseSampler.sample_relative`"
+"  时, 该方法会被调用. 该方法适用于那些不依赖参数关系的 sampling 算法, 比如 随机"
+" sampling 和TPE."
 
 #: of optuna.samplers._base.BaseSampler.sample_independent:9
 #: optuna.samplers._base.BaseSampler.sample_relative:8
@@ -231,6 +259,10 @@ msgid ""
 "new parameters. Thus, failed trials are regarded as deleted in the "
 "samplers' perspective."
 msgstr ""
+"当 sampler 采样新参数时, 那些失败的 trial 会被内置的 "
+"sampler 忽略. 因此, 失败的 trial 对于 sampler 来说等价于"
+" 删除掉的trial."
+
 
 #: of optuna.samplers._base.BaseSampler.sample_independent:16
 msgid "Name of the sampled parameter."
@@ -240,7 +272,7 @@ msgstr ""
 msgid ""
 "Distribution object that specifies a prior and/or scale of the sampling "
 "algorithm."
-msgstr ""
+msgstr "确定了 sampling 算法的先验和/或者 尺度的分布对象. "
 
 #: of optuna.samplers._base.BaseSampler.sample_independent:19
 msgid "A parameter value."
@@ -253,16 +285,22 @@ msgid ""
 "for sampling algorithms that use relationship between parameters such as "
 "Gaussian Process and CMA-ES."
 msgstr ""
+"该方法会在每个 trial "
+"刚开始时被调用一次, 也就是在目标函数执行之前被调用一次. 该方法适用于对那些依赖于不同参数之间关系的算法, 比如 Gaussian"
+" Process and CMA-ES."
 
 #: of optuna.samplers._base.BaseSampler.sample_relative:15
 msgid ""
 "The search space returned by "
 ":func:`~optuna.samplers.BaseSampler.infer_relative_search_space`."
 msgstr ""
+"由 "
+":func:`~optuna.samplers.BaseSampler.infer_relative_search_space` "
+"返回的 搜索空间. "
 
 #: of optuna.samplers._base.BaseSampler.sample_relative:18
 msgid "A dictionary containing the parameter names and the values."
-msgstr ""
+msgstr "一个包含了参数名和参数分布的字典. "
 
 #~ msgid ""
 #~ "This method is called right before "
