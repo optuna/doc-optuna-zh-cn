@@ -26,14 +26,14 @@ msgstr ""
 msgid ""
 "Plot the high-dimensional parameter relationships in a study with "
 "Matplotlib."
-msgstr ""
+msgstr "用 Matplotlib 绘制 study 中高维参数关系."
 
 #: of
 #: optuna.visualization.matplotlib._parallel_coordinate.plot_parallel_coordinate:4
 msgid ""
 "Please refer to :func:`optuna.visualization.plot_parallel_coordinate` for"
 " an example."
-msgstr ""
+msgstr "例子请参考 :func:`optuna.visualization.plot_parallel_coordinate`."
 
 #: of
 #: optuna.visualization.matplotlib._parallel_coordinate.plot_parallel_coordinate:7
@@ -45,7 +45,7 @@ msgstr ""
 msgid ""
 "The following code snippet shows how to plot the high-dimensional "
 "parameter relationships."
-msgstr ""
+msgstr "下面的代码片段展示了如何绘制高维参数关系图. "
 
 #: of
 #: optuna.visualization.matplotlib._parallel_coordinate.plot_parallel_coordinate
@@ -57,12 +57,12 @@ msgstr ""
 msgid ""
 "A :class:`~optuna.study.Study` object whose trials are plotted for their "
 "target values."
-msgstr ""
+msgstr "其 trial 的目标值被绘制的 :class:`~optuna.study.Study` 对象."
 
 #: of
 #: optuna.visualization.matplotlib._parallel_coordinate.plot_parallel_coordinate:27
 msgid "Parameter list to visualize. The default is all parameters."
-msgstr ""
+msgstr "需要可视化的参数列表. 默认情况下包含所有参数."
 
 #: of
 #: optuna.visualization.matplotlib._parallel_coordinate.plot_parallel_coordinate:28
@@ -79,19 +79,20 @@ msgid ""
 "A function to specify the value to display. If it is :obj:`None` and "
 "``study`` is being used for single-objective optimization, the objective "
 "values are plotted."
-msgstr ""
+msgstr  "用于指定绘制的值的函数. 如果其为 :obj:`None` 且 ``study`` 是单目标优化 study, "
+"则将绘制目标函数值."
 
 #: of
 #: optuna.visualization.matplotlib._parallel_coordinate.plot_parallel_coordinate:32
 msgid ""
 "Specify this argument if ``study`` is being used for multi-objective "
 "optimization."
-msgstr ""
+msgstr "如果 ``study`` 是多目标优化的话, 则需要指定该参数."
 
 #: of
 #: optuna.visualization.matplotlib._parallel_coordinate.plot_parallel_coordinate:33
 msgid "Target's name to display on the axis label and the legend."
-msgstr ""
+msgstr "在坐标轴和标签上展示的目标名称."
 
 #: of
 #: optuna.visualization.matplotlib._parallel_coordinate.plot_parallel_coordinate
@@ -113,7 +114,7 @@ msgstr ""
 msgid ""
 "If ``target`` is :obj:`None` and ``study`` is being used for multi-"
 "objective     optimization."
-msgstr ""
+msgstr "如果 ``target`` 为 :obj:`None` 且 ``study`` 是多目标优化."
 
 #: of
 #: optuna.visualization.matplotlib._parallel_coordinate.plot_parallel_coordinate
@@ -126,7 +127,10 @@ msgid ""
 "Added in v2.2.0 as an experimental feature. The interface may change in "
 "newer versions without prior notice. See "
 "https://github.com/optuna/optuna/releases/tag/v2.2.0."
-msgstr ""
+msgstr "在 2.2.0 版本中作为试验性特征引入, 之后该接口可能在没有提前预告的情况下改变. 参考 "
+"https://github.com/optuna/optuna/releases/tag/v2.2.0."
+
+
 
 #~ msgid ""
 #~ "Plot the high-dimentional parameter "

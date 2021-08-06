@@ -23,7 +23,7 @@ msgstr ""
 
 #: of optuna.visualization._intermediate_values.plot_intermediate_values:1
 msgid "Plot intermediate values of all trials in a study."
-msgstr ""
+msgstr "绘制 study 中的全部 trial 的中间值. "
 
 #: of optuna.visualization._intermediate_values.plot_intermediate_values:4
 msgid "示例"
@@ -31,7 +31,7 @@ msgstr ""
 
 #: of optuna.visualization._intermediate_values.plot_intermediate_values:5
 msgid "The following code snippet shows how to plot intermediate values."
-msgstr ""
+msgstr "下面的代码片段展示了如何绘制中间值. "
 
 #: of optuna.visualization._intermediate_values.plot_intermediate_values
 msgid "参数"
@@ -41,7 +41,7 @@ msgstr ""
 msgid ""
 "A :class:`~optuna.study.Study` object whose trials are plotted for their "
 "intermediate values."
-msgstr ""
+msgstr ":class:`~optuna.study.Study` 类, 其包含的 trials 的目标函数中间值将参与绘图. "
 
 #: of optuna.visualization._intermediate_values.plot_intermediate_values
 msgid "返回"

@@ -24,7 +24,7 @@ msgstr ""
 #: of
 #: optuna.visualization.matplotlib._intermediate_values.plot_intermediate_values:1
 msgid "Plot intermediate values of all trials in a study with Matplotlib."
-msgstr ""
+msgstr "用 Matplotlib 绘制 study 中的全部 trial 的中间值. "
 
 #: of
 #: optuna.visualization.matplotlib._intermediate_values.plot_intermediate_values:4
@@ -34,14 +34,14 @@ msgstr ""
 #: of
 #: optuna.visualization.matplotlib._intermediate_values.plot_intermediate_values:5
 msgid "The following code snippet shows how to plot intermediate values."
-msgstr ""
+msgstr "下面的代码片段展示了如何绘制中间值. "
 
 #: of
 #: optuna.visualization.matplotlib._intermediate_values.plot_intermediate_values:44
 msgid ""
 "Please refer to :func:`optuna.visualization.plot_intermediate_values` for"
 " an example."
-msgstr ""
+msgstr "例子参见 :func:`optuna.visualization.plot_intermediate_values`."
 
 #: of
 #: optuna.visualization.matplotlib._intermediate_values.plot_intermediate_values
@@ -53,7 +53,7 @@ msgstr ""
 msgid ""
 "A :class:`~optuna.study.Study` object whose trials are plotted for their "
 "intermediate values."
-msgstr ""
+msgstr ":class:`~optuna.study.Study` 类, 其包含的 trials 的目标函数中间值将参与绘图. "
 
 #: of
 #: optuna.visualization.matplotlib._intermediate_values.plot_intermediate_values
@@ -76,5 +76,8 @@ msgid ""
 "Added in v2.2.0 as an experimental feature. The interface may change in "
 "newer versions without prior notice. See "
 "https://github.com/optuna/optuna/releases/tag/v2.2.0."
-msgstr ""
+msgstr "在 2.2.0 版本中作为试验性特征引入, 之后该接口可能在没有提前预告的情况下改变. 参考 "
+"https://github.com/optuna/optuna/releases/tag/v2.2.0."
+
+
 

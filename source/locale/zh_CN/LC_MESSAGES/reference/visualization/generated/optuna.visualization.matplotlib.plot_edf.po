@@ -25,13 +25,13 @@ msgstr ""
 msgid ""
 "Plot the objective value EDF (empirical distribution function) of a study"
 " with Matplotlib."
-msgstr ""
+msgstr "用 Matplotlib 绘制 study 的 目标函数 EDF (empirical distribution function)."
 
 #: of optuna.visualization.matplotlib._edf.plot_edf:4
 msgid ""
 "Please refer to :func:`optuna.visualization.plot_edf` for an example, "
 "where this function can be replaced with it."
-msgstr ""
+msgstr "例子参考 :func:`optuna.visualization.plot_edf` , 其可以替代该函数."
 
 #: of optuna.visualization.matplotlib._edf.plot_edf:8
 msgid "示例"
@@ -39,7 +39,7 @@ msgstr ""
 
 #: of optuna.visualization.matplotlib._edf.plot_edf:9
 msgid "The following code snippet shows how to plot EDF."
-msgstr ""
+msgstr "下面的代码片段展示了如何绘制 EDF."
 
 #: of optuna.visualization.matplotlib._edf.plot_edf
 msgid "参数"
@@ -49,7 +49,7 @@ msgstr ""
 msgid ""
 "A target :class:`~optuna.study.Study` object. You can pass multiple "
 "studies if you want to compare those EDFs."
-msgstr ""
+msgstr "一个 :class:`~optuna.study.Study` 目标对象. 如果你想比较这些 EDF 的话, 可以传递进多个 study."
 
 #: of optuna.visualization.matplotlib._edf.plot_edf:48
 msgid ""
@@ -64,13 +64,14 @@ msgid ""
 "A function to specify the value to display. If it is :obj:`None` and "
 "``study`` is being used for single-objective optimization, the objective "
 "values are plotted."
-msgstr ""
+msgstr "用于指定绘制的值的函数. 如果其为 :obj:`None` 且 ``study`` 是单目标优化 study, "
+"则将绘制目标函数值."
 
 #: of optuna.visualization.matplotlib._edf.plot_edf:52
 msgid ""
 "Specify this argument if ``study`` is being used for multi-objective "
 "optimization."
-msgstr ""
+msgstr "如果 ``study`` 是多目标优化的话, 则需要指定该参数."
 
 #: of optuna.visualization.matplotlib._edf.plot_edf:53
 msgid "Target's name to display on the axis label."
@@ -92,7 +93,7 @@ msgstr ""
 msgid ""
 "If ``target`` is :obj:`None` and ``study`` is being used for multi-"
 "objective     optimization."
-msgstr ""
+msgstr "如果 ``target`` 为 :obj:`None` 且 ``study`` 是多目标优化."
 
 #: of optuna.visualization.matplotlib._edf.plot_edf
 msgid "返回类型"
@@ -103,5 +104,7 @@ msgid ""
 "Added in v2.2.0 as an experimental feature. The interface may change in "
 "newer versions without prior notice. See "
 "https://github.com/optuna/optuna/releases/tag/v2.2.0."
-msgstr ""
+msgstr "在 2.2.0 版本中作为试验性特征引入, 之后该接口可能在没有提前预告的情况下改变. 参考 "
+"https://github.com/optuna/optuna/releases/tag/v2.2.0."
+
 

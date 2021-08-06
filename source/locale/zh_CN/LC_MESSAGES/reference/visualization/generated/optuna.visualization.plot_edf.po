@@ -23,24 +23,25 @@ msgstr ""
 
 #: of optuna.visualization._edf.plot_edf:1
 msgid "Plot the objective value EDF (empirical distribution function) of a study."
-msgstr ""
+msgstr "绘制 study 的 目标函数 EDF (empirical distribution function)."
 
 #: of optuna.visualization._edf.plot_edf:3
 msgid "Note that only the complete trials are considered when plotting the EDF."
-msgstr ""
+msgstr "注意, 在绘制 EDF 时只有已完成的 trial 会被考虑"
 
 #: of optuna.visualization._edf.plot_edf:7
 msgid ""
 "EDF is useful to analyze and improve search spaces. For instance, you can"
 " see a practical use case of EDF in the paper `Designing Network Design "
 "Spaces <https://arxiv.org/abs/2003.13678>`_."
-msgstr ""
+msgstr "EDF 对分析和提升搜索空间很有用. 比如, 你可以在 `Designing Network Design "
+"Spaces <https://arxiv.org/abs/2003.13678>`_ 中看到 EDF 实际应用的例子."
 
 #: of optuna.visualization._edf.plot_edf:13
 msgid ""
 "The plotted EDF assumes that the value of the objective function is in "
 "accordance with the uniform distribution over the objective space."
-msgstr ""
+msgstr "绘制的 EDF 假设ubiaohanshu在目标函数空间中是均匀分布的."
 
 #: of optuna.visualization._edf.plot_edf:17
 msgid "示例"
@@ -48,7 +49,7 @@ msgstr ""
 
 #: of optuna.visualization._edf.plot_edf:18
 msgid "The following code snippet shows how to plot EDF."
-msgstr ""
+msgstr "下面的代码片段展示了如何绘制 EDF."
 
 #: of optuna.visualization._edf.plot_edf
 msgid "参数"
@@ -58,7 +59,7 @@ msgstr ""
 msgid ""
 "A target :class:`~optuna.study.Study` object. You can pass multiple "
 "studies if you want to compare those EDFs."
-msgstr ""
+msgstr "一个 :class:`~optuna.study.Study` 目标对象. 如果你想比较这些 EDF 的话, 可以传递进多个 study."
 
 #: of optuna.visualization._edf.plot_edf:58
 msgid ""
@@ -73,17 +74,18 @@ msgid ""
 "A function to specify the value to display. If it is :obj:`None` and "
 "``study`` is being used for single-objective optimization, the objective "
 "values are plotted."
-msgstr ""
+msgstr "用于指定绘制的值的函数. 如果其为 :obj:`None` 且 ``study`` 是单目标优化 study, "
+"则将绘制目标函数值."
 
 #: of optuna.visualization._edf.plot_edf:62
 msgid ""
 "Specify this argument if ``study`` is being used for multi-objective "
 "optimization."
-msgstr ""
+msgstr "如果 ``study`` 是多目标优化的话, 则需要指定该参数."
 
 #: of optuna.visualization._edf.plot_edf:63
 msgid "Target's name to display on the axis label."
-msgstr ""
+msgstr "在座标轴上要展示的目标名."
 
 #: of optuna.visualization._edf.plot_edf
 msgid "返回"
@@ -101,7 +103,7 @@ msgstr ""
 msgid ""
 "If ``target`` is :obj:`None` and ``study`` is being used for multi-"
 "objective     optimization."
-msgstr ""
+msgstr "如果 ``target`` 为 :obj:`None` 且 ``study`` 是多目标优化."
 
 #: of optuna.visualization._edf.plot_edf
 msgid "返回类型"
