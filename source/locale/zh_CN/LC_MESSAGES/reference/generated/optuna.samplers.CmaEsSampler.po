@@ -35,7 +35,7 @@ msgstr ""
 msgid ""
 "Optimize a simple quadratic function by using "
 ":class:`~optuna.samplers.CmaEsSampler`."
-msgstr "用 :class:`~optuna.samplers.CmaEsSampler` 来优化一个简单的二次函数。"
+msgstr "用 :class:`~optuna.samplers.CmaEsSampler` 来优化一个简单的二次函数. "
 
 #: of optuna.samplers._cmaes.CmaEsSampler:22
 msgid ""
@@ -46,17 +46,17 @@ msgid ""
 " sampler cannot use some trials for updating the parameters of "
 "multivariate normal distribution."
 msgstr ""
-"请注意，此 sampler 不支持 "
-"CategoricalDistribution。如果您的搜索空间包含分类参数，作为代替，建议您使用 "
-":class:`~optuna.samplers.TPESampler`. 此外，并行优化设置中还有性能改进空间。 "
-"这个 sampler 无法使用一些 trial 来更新多元正态分布的参数。"
+"请注意, 此 sampler 不支持 "
+"CategoricalDistribution. 如果您的搜索空间包含分类参数, 作为代替, 建议您使用 "
+":class:`~optuna.samplers.TPESampler`. 此外, 并行优化设置中还有性能改进空间.  "
+"这个 sampler 无法使用一些 trial 来更新多元正态分布的参数. "
 
 
 #: of optuna.samplers._cmaes.CmaEsSampler:29
 msgid ""
 "For further information about CMA-ES algorithm, please refer to the "
 "following papers:"
-msgstr "要查看 TPE 算法的细节的话，请参考下面的论文: "
+msgstr "要查看 TPE 算法的细节的话, 请参考下面的论文: "
 
 #: of optuna.samplers._cmaes.CmaEsSampler:31
 msgid ""
@@ -107,7 +107,8 @@ msgid ""
 "mean of ``low`` and ``high`` for each distribution is used. Note that "
 "``x0`` is sampled uniformly within the search space domain for each "
 "restart if you specify ``restart_strategy`` argument."
-msgstr "一个包含了 CMA-ES 的初始参数的字典。在默认情况下，每个分布的 ``low`` and ``high`` 的平均数是被采用的。"
+msgstr "一个包含了 CMA-ES 的初始参数的字典. 在默认情况下, 每个分布的 ``low`` and ``high`` 的平均数是被采用的. "
+"注意, 如果你指定了 ``restart_strategy`` 参数的话, 在每次重启后, ``x0`` 都是在搜索空间内被均匀地采样的."
 
 #: of optuna.samplers._cmaes.CmaEsSampler:53
 msgid ""
@@ -115,9 +116,9 @@ msgid ""
 "``min_range / 6``, where ``min_range`` denotes the minimum range of the "
 "distributions in the search space."
 msgstr ""
-"CMA-ES 的初始标准差。默认情况下， ``sigma0`` 会被设置成 "
+"CMA-ES 的初始标准差. 默认情况下,  ``sigma0`` 会被设置成 "
 "``min_range / 6``, 而 ``min_range`` "
-"代表着搜索空间中最小的分布范围。"
+"代表着搜索空间中最小的分布范围. "
 
 #: of optuna.samplers._cmaes.CmaEsSampler:56
 msgid "A random seed for CMA-ES."
@@ -127,7 +128,7 @@ msgstr ""
 msgid ""
 "The independent sampling is used instead of the CMA-ES algorithm until "
 "the given number of trials finish in the same study."
-msgstr "除非同一个 study 中指定个数的 trial 已经完成，否则将会采用独立 sampling 而不是 CMA-ES 算法。"
+msgstr "除非同一个 study 中指定个数的 trial 已经完成, 否则将会采用独立 sampling 而不是 CMA-ES 算法. "
 
 #: of optuna.samplers._cmaes.CmaEsSampler:59
 msgid ""
@@ -142,12 +143,12 @@ msgid ""
 ":class:`~optuna.samplers.RandomSampler` and     "
 ":class:`~optuna.samplers.TPESampler`."
 msgstr ""
-"一个 :class:`~optuna.samplers.BaseSampler`  实例，它用于独立 "
-"sampling.那些并不包含在相对搜索空间中的参数是通过这个 sampler "
-"来采样的。:class:`~optuna.samplers.CmaEsSampler` 的搜索空间 是通过 "
-":func:`~optuna.samplers.intersection_search_space()` 来确定的。如果设置成"
-" :obj:`None` 的话，:class:`~optuna.samplers.RandomSampler` "
-"会作为默认 sampler 被使用。.. seealso::     "
+"一个 :class:`~optuna.samplers.BaseSampler`  实例, 它用于独立"
+"采样. 那些并不包含在相对搜索空间中的参数是通过这个 sampler "
+"来采样的. :class:`~optuna.samplers.CmaEsSampler` 的搜索空间 是通过 "
+":func:`~optuna.samplers.intersection_search_space()` 来确定的. 如果设置成"
+" :obj:`None` 的话, :class:`~optuna.samplers.RandomSampler` "
+"会作为默认 sampler 被使用. .. seealso::     "
 ":class:`optuna.samplers` 模块提供了内置的独立 sampler, 比如 "
 ":class:`~optuna.samplers.RandomSampler` 和     "
 ":class:`~optuna.samplers.TPESampler`."
@@ -160,10 +161,10 @@ msgid ""
 ":class:`~optuna.samplers.CmaEsSampler` is determined by "
 ":func:`~optuna.samplers.intersection_search_space()`."
 msgstr ""
-"一个 :class:`~optuna.samplers.BaseSampler`  实例，它用于独立 "
-"sampling.那些并不包含在相对搜索空间中的参数是通过这个 sampler "
-"来采样的。:class:`~optuna.samplers.CmaEsSampler` 的搜索空间 是通过 "
-":func:`~optuna.samplers.intersection_search_space()` 来确定的。"
+"一个 :class:`~optuna.samplers.BaseSampler`  实例, 它用于独立"
+"采样. 那些并不包含在相对搜索空间中的参数是通过这个 sampler "
+"来采样的. :class:`~optuna.samplers.CmaEsSampler` 的搜索空间 是通过 "
+":func:`~optuna.samplers.intersection_search_space()` 来确定的. "
 
 
 #: of optuna.samplers._cmaes.CmaEsSampler:65
@@ -172,8 +173,8 @@ msgid ""
 "used as the default."
 msgstr ""
 "如果设置成 :obj:`None` "
-"的话，:class:`~optuna.samplers.RandomSampler` 会作为默认 sampler"
-" 被使用。"
+"的话, :class:`~optuna.samplers.RandomSampler` 会作为默认 sampler"
+" 被使用. "
 
 
 #: of optuna.samplers._cmaes.CmaEsSampler:69
@@ -198,16 +199,16 @@ msgstr ""
 msgid ""
 "If this is :obj:`True`, a warning message is emitted when the value of a "
 "parameter is sampled by using an independent sampler."
-msgstr "如果这是 :obj:`True`, 那么当一个参数的值是通过独立 sampler 来采样时，它会触发一个 warning 信息。"
+msgstr "如果这是 :obj:`True`, 那么当一个参数的值是通过独立 sampler 来采样时, 它会触发一个 warning 信息. "
 
 #: of optuna.samplers._cmaes.CmaEsSampler:75
 msgid ""
 "Note that the parameters of the first trial in a study are always sampled"
 " via an independent sampler, so no warning messages are emitted in this "
 "case."
-msgstr "注意，由于一个 study 中的第一个 "
-"trial 的参数总要通过独立 sampler 来采样，因此这种情况下 warning"
-" 信息不会被触发。"
+msgstr "注意, 由于一个 study 中的第一个 "
+"trial 的参数总要通过独立 sampler 来采样, 因此这种情况下 warning"
+" 信息不会被触发. "
 
 #: of optuna.samplers._cmaes.CmaEsSampler:77
 msgid ""
@@ -463,8 +464,8 @@ msgid ""
 ":func:`~optuna.samplers.BaseSampler.sample_independent` method."
 msgstr ""
 "该方法会恰好在 :func:`~optuna.samplers.BaseSampler.sample_relative` "
-"之前被调用，而由该方法返回的搜索空间会被传入它。那些不包含在这个搜索空间中的参数将用 "
-":func:`~optuna.samplers.BaseSampler.sample_independent` 来进行采样。"
+"之前被调用, 而由该方法返回的搜索空间会被传入它. 那些不包含在这个搜索空间中的参数将用 "
+":func:`~optuna.samplers.BaseSampler.sample_independent` 来进行采样. "
 
 
 #: of optuna.samplers._cmaes.CmaEsSampler.infer_relative_search_space
@@ -494,10 +495,10 @@ msgid ""
 " this issue, this method assigns a different seed to each random number "
 "generator."
 msgstr ""
-"该方法由 :class:`~optuna.study.Study 的实例来调用。而且，如果选项 "
-"``n_jobs>1`` 的话，它会被并行执行。在那种情况下，这个 sampler "
-"实例会被复制，其中就报错了随机数生成器的状态，因此它们可能会产生同样的 suggestion "
-"值。为了防止出现这个问题，该方法给每一个随机数生成器赋予一个不同的种子。"
+"该方法由 :class:`~optuna.study.Study 的实例来调用. 而且, 如果选项 "
+"``n_jobs>1`` 的话, 它会被并行执行. 在那种情况下, 这个 sampler "
+"实例会被复制, 其中就包括了随机数生成器的状态, 因此它们可能会产生同样的 suggestion "
+"值. 为了防止出现这个问题, 该方法给每一个随机数生成器赋予一个不同的种子. "
 
 
 #: of optuna.samplers._cmaes.CmaEsSampler.sample_independent:3
@@ -507,8 +508,8 @@ msgid ""
 "method. This method is suitable for sampling algorithms that do not use "
 "relationship between parameters such as random sampling and TPE."
 msgstr ""
-"只有当参数不属于 :func:`~optuna.samplers.BaseSampler.sample_relative`"
-"  时，该方法会被调用。该方法适用于那些不依赖参数关系的 sampling 算法，比如 随机"
+"该方法只在参数不属于 :func:`~optuna.samplers.BaseSampler.sample_relative`"
+"  时会被调用. 该方法适用于那些不依赖参数关系的 sampling 算法, 比如 随机"
 " sampling 和TPE."
 
 #: of optuna.samplers._cmaes.CmaEsSampler.sample_independent:9
@@ -518,8 +519,8 @@ msgid ""
 "new parameters. Thus, failed trials are regarded as deleted in the "
 "samplers' perspective."
 msgstr ""
-"当 sampler 采样新参数时，那些失败的 trial 会被内置的 "
-"sampler 忽略。因此，失败的 trial 对于 sampler 来说等价于"
+"当 sampler 采样新参数时, 那些失败的 trial 会被内置的 "
+"sampler 忽略. 因此, 失败的 trial 对于 sampler 来说等价于"
 " 删除掉的trial."
 
 #: of optuna.samplers._cmaes.CmaEsSampler.sample_independent:16
@@ -530,7 +531,7 @@ msgstr ""
 msgid ""
 "Distribution object that specifies a prior and/or scale of the sampling "
 "algorithm."
-msgstr "确定了 sampling 算法的先验和/或者 尺度的分布对象。"
+msgstr "确定了 sampling 算法的先验和/或者 尺度的分布对象. "
 
 
 #: of optuna.samplers._cmaes.CmaEsSampler.sample_independent:19
@@ -545,7 +546,7 @@ msgid ""
 "Gaussian Process and CMA-ES."
 msgstr ""
 "该方法会在每个 trial "
-"刚开始时被调用一次，也就是在目标函数执行之前被调用一次。该方法适用于对那些依赖于不同参数之间关系的算法，比如 Gaussian"
+"刚开始时被调用一次, 也就是在目标函数执行之前被调用一次. 该方法适用于对那些依赖于不同参数之间关系的算法, 比如 Gaussian"
 " Process and CMA-ES."
 
 #: of optuna.samplers._cmaes.CmaEsSampler.sample_relative:15
@@ -555,11 +556,11 @@ msgid ""
 msgstr ""
 "由 "
 ":func:`~optuna.samplers.BaseSampler.infer_relative_search_space` "
-"返回的 搜索空间。"
+"返回的 搜索空间. "
 
 #: of optuna.samplers._cmaes.CmaEsSampler.sample_relative:18
 msgid "A dictionary containing the parameter names and the values."
-msgstr "一个包含了参数名和参数分布的字典。"
+msgstr "一个包含了参数名和参数分布的字典. "
 
 #~ msgid "A Sampler using CMA-ES algorithm."
 #~ msgstr ""

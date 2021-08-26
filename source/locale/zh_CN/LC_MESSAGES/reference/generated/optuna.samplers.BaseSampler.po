@@ -221,9 +221,9 @@ msgid ""
 "implementation of "
 ":func:`~optuna.samplers.BaseSampler.infer_relative_search_space`."
 msgstr ""
-"作为以一个 "
+"请参考 :func:`~optuna.samplers.intersection_search_space`, 因为它是 "
 ":func:`~optuna.samplers.BaseSampler.infer_relative_search_space` "
-"的实现, 请参考 :func:`~optuna.samplers.intersection_search_space`. "
+"的一个实现."
 
 
 #: of optuna.samplers._base.BaseSampler.reseed_rng:3
@@ -237,7 +237,7 @@ msgid ""
 msgstr ""
 "该方法由 :class:`~optuna.study.Study 的实例来调用. 而且, 如果选项 "
 "``n_jobs>1`` 的话, 它会被并行执行. 在那种情况下, 这个 sampler "
-"实例会被复制, 其中就报错了随机数生成器的状态, 因此它们可能会产生同样的 suggestion "
+"实例会被复制, 其中就包括了随机数生成器的状态, 因此它们可能会产生同样的 suggestion "
 "值. 为了防止出现这个问题, 该方法给每一个随机数生成器赋予一个不同的种子. "
 
 
@@ -248,9 +248,8 @@ msgid ""
 "method. This method is suitable for sampling algorithms that do not use "
 "relationship between parameters such as random sampling and TPE."
 msgstr ""
-"只有当参数不属于 :func:`~optuna.samplers.BaseSampler.sample_relative`"
-"  时, 该方法会被调用. 该方法适用于那些不依赖参数关系的 sampling 算法, 比如 随机"
-" sampling 和TPE."
+"该方法仅用于采样那些不属于 :func:`~optuna.samplers.BaseSampler.sample_relative` 的参数."
+"该方法适用于那些不依赖参数关系的 sampling 算法, 比如 随机 sampling 和TPE."
 
 #: of optuna.samplers._base.BaseSampler.sample_independent:9
 #: optuna.samplers._base.BaseSampler.sample_relative:8
@@ -266,7 +265,7 @@ msgstr ""
 
 #: of optuna.samplers._base.BaseSampler.sample_independent:16
 msgid "Name of the sampled parameter."
-msgstr ""
+msgstr "采样的参数名."
 
 #: of optuna.samplers._base.BaseSampler.sample_independent:17
 msgid ""

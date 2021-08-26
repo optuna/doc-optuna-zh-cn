@@ -54,7 +54,7 @@ msgid ""
 ":class:`~optuna.importance.FanovaImportanceEvaluator`."
 msgstr ""
 "参数重要性求解器. 它指定评估重要性的算法. 默认情况下它会被设定成 "
-":class:`~optuna.importance._mean_decrease_impurity.MeanDecreaseImpurityImportanceEvaluator`."
+":class:`~optuna.importance.importance.FanovaImportanceEvaluator`."
 
 
 #: of optuna.visualization._param_importances.plot_param_importances:35

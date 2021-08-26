@@ -41,7 +41,7 @@ msgstr "EDF 对分析和提升搜索空间很有用. 比如, 你可以在 `Desig
 msgid ""
 "The plotted EDF assumes that the value of the objective function is in "
 "accordance with the uniform distribution over the objective space."
-msgstr "绘制的 EDF 假设ubiaohanshu在目标函数空间中是均匀分布的."
+msgstr "绘制 EDF 时假设目标函数在目标函数空间中是均匀分布的."
 
 #: of optuna.visualization._edf.plot_edf:17
 msgid "示例"

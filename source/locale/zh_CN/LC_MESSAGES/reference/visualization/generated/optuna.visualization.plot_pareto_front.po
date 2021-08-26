@@ -51,7 +51,7 @@ msgstr "目标函数指的列表将作为坐标轴的标题. 如果设置为 :ob
 
 #: of optuna.visualization._pareto_front.plot_pareto_front:31
 msgid "A flag to include all dominated trial's objective values."
-msgstr "一个用于包含所有主要 trial 的目标函数值的选项."
+msgstr "设置该选项来包含所有主要 trial 的目标函数值."
 
 #: of optuna.visualization._pareto_front.plot_pareto_front:32
 msgid ""
