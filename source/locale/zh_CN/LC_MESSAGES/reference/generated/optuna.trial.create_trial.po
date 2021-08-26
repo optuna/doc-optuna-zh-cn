@@ -70,7 +70,7 @@ msgid ""
 "the problem is multi-objective optimization. Must be specified if "
 "``state`` is ``None`` or :class:`TrialState.COMPLETE`."
 msgstr "Trial 目标函数值的序列. 如果该问题为多目标优化, 则其长度大于1. 如果 ``state`` 是 ``None`` 或者 "
-":class:`TrialState.COMPLETE`, 目标值不可为空."
+":class:`TrialState.COMPLETE`, 该值不可为空."
 
 #: of optuna.trial._frozen.create_trial:47
 msgid "Dictionary with suggested parameters of the trial."

@@ -23,7 +23,7 @@ msgstr ""
 
 #: of optuna.trial.FixedTrial:1
 msgid "A trial class which suggests a fixed value for each parameter."
-msgstr "为每一个参数提供固定值 suggestion 的 trial 类."
+msgstr "为每个参数都提供固定值的 trial 类."
 
 #: of optuna.trial.FixedTrial:3
 msgid ""
@@ -37,7 +37,7 @@ msgid ""
 msgstr ""
 "该对象有和 :class:`~optuna.trial.Trial` 一样的方法, 而且其提供预先定义好的参数值. 这些参数值可以"
 "在 :class:`~optuna.trial.FixedTrial` 的创建阶段指定. 和 :class:`~optuna.trial.Trial` 不同, "
-":class:`~optuna.trial.FixedTrial` 不依赖于 :class:`~optuna.study.Study`, 所以他对于部署优化结果是有用的."
+":class:`~optuna.trial.FixedTrial` 不依赖于 :class:`~optuna.study.Study`, 所以能被用于部署优化结果."
 
 #: of optuna.trial.FixedTrial:10
 msgid "示例"
@@ -51,7 +51,7 @@ msgstr "对用户提供的参数值进行目标函数求解."
 msgid ""
 "Please refer to :class:`~optuna.trial.Trial` for details of methods and "
 "properties."
-msgstr "细节和属性请参考 :class:`~optuna.trial.Trial`."
+msgstr "方法和属性的细节请参考 :class:`~optuna.trial.Trial`."
 
 #: of optuna.trial.FixedTrial
 msgid "参数"

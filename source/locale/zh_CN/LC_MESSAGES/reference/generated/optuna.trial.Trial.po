@@ -275,7 +275,7 @@ msgid ""
 "``numpy.float32``). If the conversion fails, a ``TypeError`` is raised."
 msgstr ""
 "报告值在内部被 ``float()`` 函数转换成 ``float`` "
-"类型. 因此, 它接受所有类似float的类型（例如 ``numpy.float32'' ）.  "
+"类型. 因此, 它接受所有类似float的类型 (例如 ``numpy.float32'' ).  "
 "如果转换失败, 则会引发 ``TypeError``."
 
 #: of optuna.trial._trial.Trial.report:15
@@ -310,7 +310,7 @@ msgid ""
 "pruners assume that ``step`` starts at zero. For example, "
 ":class:`~optuna.pruners.MedianPruner` simply checks if ``step`` is less "
 "than ``n_warmup_steps`` as the warmup mechanism."
-msgstr "Trial 步骤（例如, 神经网络训练的 epoch）. "
+msgstr "Trial 步骤 (例如, 神经网络训练的 epoch). "
 "注意 pruner 假设 ``step`` 从零计数. 比如, :class:`~optuna.pruners.MedianPruner` 仅"
 "将检查 ``step``  是否比 ``n_warmup_steps`` 小作为热身机制."
 
@@ -343,7 +343,7 @@ msgid ""
 "Note that Optuna internally uses this method to save system messages such"
 " as failure reason of trials. Please use "
 ":func:`~optuna.trial.Trial.set_user_attr` to set users' attributes."
-msgstr "注意, optuna 在内部使用该方法来保存如 trial 失败之类的系统信息. 请使用"
+msgstr "注意, optuna 在内部使用该方法来保存如 trial 失败原因之类的系统信息. 请使用"
 " :func:`~optuna.trial.Trial.set_user_attr` 来设置用户属性."
 
 #: of optuna.trial._trial.Trial.set_system_attr:7
@@ -360,7 +360,7 @@ msgstr "属性的值.  该值应为JSON可序列化的. "
 msgid ""
 "The user attributes in the trial can be access via "
 ":func:`optuna.trial.Trial.user_attrs`."
-msgstr "可以通过 :func:`optuna.trial.Trial.user_attrs` 访问试 trial 中的用户属性. "
+msgstr "可以通过 :func:`optuna.trial.Trial.user_attrs` 访问 trial 中的用户属性. "
 
 #: of optuna.trial._trial.Trial.set_user_attr:7
 msgid "Save fixed hyperparameters of neural network training."
@@ -398,7 +398,7 @@ msgstr "一个布尔值. 如果为 :obj:`True`, 则应根据配置的 pruning �
 
 #: of optuna.trial._trial.Trial.suggest_categorical:3
 msgid "The value is sampled from ``choices``."
-msgstr ""
+msgstr "该值从 ``choices`` 中取样."
 
 #: of optuna.trial._trial.Trial.suggest_categorical:7
 msgid ""
@@ -428,7 +428,7 @@ msgstr ""
 
 #: of optuna.trial._trial.Trial.suggest_categorical:39
 msgid "A suggested value."
-msgstr "suggesttion 值."
+msgstr "Suggesttion."
 
 #: of optuna.trial._trial.Trial.suggest_discrete_uniform:3
 msgid ""
@@ -493,7 +493,10 @@ msgid ""
 ":func:`~optuna.trial.Trial.suggest_uniform`, "
 ":func:`~optuna.trial.Trial.suggest_loguniform` and "
 ":func:`~optuna.trial.Trial.suggest_discrete_uniform`."
-msgstr ""
+msgstr "注意, 这是一个 "
+":func:`~optuna.trial.Trial.suggest_uniform`, "
+":func:`~optuna.trial.Trial.suggest_loguniform` 和 "
+":func:`~optuna.trial.Trial.suggest_discrete_uniform` 的 wrapper 函数."
 
 #: of optuna.trial._trial.Trial.suggest_float:10
 msgid ""
@@ -502,14 +505,14 @@ msgid ""
 ":func:`~optuna.trial.Trial.suggest_discrete_uniform`."
 msgstr ""
 "参见 :func:`~optuna.trial.Trial.suggest_uniform`, "
-":func:`~optuna.trial.Trial.suggest_loguniform` and "
+":func:`~optuna.trial.Trial.suggest_loguniform` 和 "
 ":func:`~optuna.trial.Trial.suggest_discrete_uniform`."
 
 #: of optuna.trial._trial.Trial.suggest_float:16
 msgid ""
 "Suggest a momentum, learning rate and scaling factor of learning rate for"
 " neural network training."
-msgstr "为神经网络训练提供 momentum, learning rate 和 learning rate 的比例因子的suggestion 值. "
+msgstr "为神经网络训练提供 momentum, learning rate 和 learning rate 的比例因子的 suggestion 值. "
 
 #: of optuna.trial._trial.Trial.suggest_float:56
 msgid ""
@@ -585,7 +588,7 @@ msgstr ""
 
 #: of optuna.trial._trial.Trial.suggest_float:76
 msgid "If ``step is not None`` and ``log = True`` are specified."
-msgstr "如果 ``step is not None`` 并且制定了 ``log = True``."
+msgstr "如果 ``step is not None`` 并且指定了 ``log = True``."
 
 #: of optuna.trial._trial.Trial.suggest_int:3
 msgid ""
@@ -690,7 +693,7 @@ msgid ""
 "The ``step != 1`` and ``log`` arguments cannot be used at the same time. "
 "To set the ``log`` argument to ``True``, set the ``step`` argument to 1."
 msgstr ""
-"``step != 1`` 和 ``log`` 参数不能同时使用要把 "
+"``step != 1`` 和 ``log`` 参数不能同时使用. 要把 "
 "``log`` 设置成 ``True`` 的话, 请先把 ``step`` 设置成"
 " 1."
 

@@ -35,7 +35,7 @@ msgid ""
 msgstr ""
 "该对象有和 :class:`~optuna.trial.Trial` 一样的方法, 而且其提供预先定义好的参数值. 这些参数值可以"
 "在 :class:`~optuna.trial.FixedTrial` 的创建阶段指定. 和 :class:`~optuna.trial.Trial` 不同, "
-":class:`~optuna.trial.FrozenTrial` 不依赖于 :class:`~optuna.study.Study`, 所以他对于部署优化结果是有用的."
+":class:`~optuna.trial.FrozenTrial` 不依赖于 :class:`~optuna.study.Study`, 所以能被用于部署优化结果."
 
 #: of optuna.trial._frozen.FrozenTrial:9
 msgid "示例"
@@ -66,14 +66,14 @@ msgstr "覆盖属性."
 msgid ""
 "Please refer to :class:`~optuna.trial.Trial` for details of methods and "
 "properties."
-msgstr "细节和属性请参考 :class:`~optuna.trial.Trial`."
+msgstr "方法的细节和属性请参考 :class:`~optuna.trial.Trial`."
 
 #: of optuna.trial._frozen.FrozenTrial:73
 msgid ""
 "Unique and consecutive number of :class:`~optuna.trial.Trial` for each "
 ":class:`~optuna.study.Study`. Note that this field uses zero-based "
 "numbering."
-msgstr "每一个 :class:`~optuna.study.Study` 所有的独特和连续的 :class:`~optuna.trial.Trial` 数字. "
+msgstr "每一个 :class:`~optuna.study.Study` 所有的独特和连续的 :class:`~optuna.trial.Trial` 号. "
 "注意, 这个域采用从零开始的计数."
 
 #: of optuna.trial._frozen.FrozenTrial:78
@@ -88,8 +88,7 @@ msgstr ":class:`~optuna.trial.Trial` 的目标函数值."
 msgid ""
 "Sequence of objective values of the :class:`~optuna.trial.Trial`. The "
 "length is greater than 1 if the problem is multi-objective optimization."
-msgstr "Trial 目标函数值的序列. 如果该问题为多目标优化, 则其长度大于1. 如果 ``state`` 是 ``None`` 或者 "
-":class:`TrialState.COMPLETE`, 目标值不可为空."
+msgstr "Trial 目标函数值的序列. 如果该问题为多目标优化, 则其长度大于1."
 
 #: of optuna.trial._frozen.FrozenTrial:91
 msgid "Datetime where the :class:`~optuna.trial.Trial` started."
@@ -291,7 +290,7 @@ msgid ""
 "pruners assume that ``step`` starts at zero. For example, "
 ":class:`~optuna.pruners.MedianPruner` simply checks if ``step`` is less "
 "than ``n_warmup_steps`` as the warmup mechanism."
-msgstr "Trial 步骤（例如, 神经网络训练的 epoch. "
+msgstr "Trial 步骤（例如, 神经网络训练的 epoch). "
 "注意 pruner 假设 ``step`` 从零计数. 比如, :class:`~optuna.pruners.MedianPruner` 仅"
 "将检查 ``step``  是否比 ``n_warmup_steps`` 小作为热身机制."
 
