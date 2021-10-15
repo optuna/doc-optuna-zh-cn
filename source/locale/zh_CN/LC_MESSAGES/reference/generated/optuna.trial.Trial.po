@@ -23,7 +23,7 @@ msgstr ""
 
 #: of optuna.trial._trial.Trial:1
 msgid "A trial is a process of evaluating an objective function."
-msgstr ""
+msgstr "一个 trial 是一个评估目标函数的过程. "
 
 #: of optuna.trial._trial.Trial:3
 msgid ""
@@ -31,6 +31,8 @@ msgid ""
 " get parameter suggestion, manage the trial's state, and set/get user-"
 "defined attributes of the trial."
 msgstr ""
+"该对象被传递给目标函数, 并提供接口以获取 parameter suggestion, 管理 "
+"trial 状态以及设置/获取 trial 的用户定义属性. "
 
 #: of optuna.trial._trial.Trial:6
 msgid ""
@@ -39,6 +41,9 @@ msgid ""
 "behind the :func:`optuna.study.Study.optimize()` method; hence library "
 "users do not care about instantiation of this object."
 msgstr ""
+"请注意, 我们不建议直接使用此构造函数.  该对象被无缝实例化, 并传递给 "
+":func:`optuna.study.Study.optimize()` 方法后面的目标函数； "
+"因此, 库用户并不关心该对象的实例化. "
 
 #: of optuna.trial._trial.Trial optuna.trial._trial.Trial.report
 #: optuna.trial._trial.Trial.set_system_attr
@@ -58,7 +63,7 @@ msgstr ""
 
 #: of optuna.trial._trial.Trial:12
 msgid "A trial ID that is automatically generated."
-msgstr ""
+msgstr "自动生成的 trial ID."
 
 #: ../../source/reference/generated/optuna.trial.Trial.rst:12
 msgid "Methods"
@@ -71,7 +76,7 @@ msgstr ""
 #: ../../source/reference/generated/optuna.trial.Trial.rst:30:<autosummary>:1
 #: of optuna.trial._trial.Trial.report:1
 msgid "Report an objective function value for a given step."
-msgstr ""
+msgstr "报告给定的步骤下目标函数值. "
 
 #: ../../source/reference/generated/optuna.trial.Trial.rst:30:<autosummary>:1
 msgid ""
@@ -82,7 +87,7 @@ msgstr ""
 #: ../../source/reference/generated/optuna.trial.Trial.rst:30:<autosummary>:1
 #: of optuna.trial._trial.Trial.set_system_attr:1
 msgid "Set system attributes to the trial."
-msgstr ""
+msgstr "给 trial 设置系统属性."
 
 #: ../../source/reference/generated/optuna.trial.Trial.rst:30:<autosummary>:1
 msgid ""
@@ -93,7 +98,7 @@ msgstr ""
 #: ../../source/reference/generated/optuna.trial.Trial.rst:30:<autosummary>:1
 #: of optuna.trial._trial.Trial.set_user_attr:1
 msgid "Set user attributes to the trial."
-msgstr ""
+msgstr "给 trial 设置用户属性."
 
 #: ../../source/reference/generated/optuna.trial.Trial.rst:30:<autosummary>:1
 msgid ":obj:`should_prune <optuna.trial.Trial.should_prune>`\\ \\(\\)"
@@ -102,7 +107,7 @@ msgstr ""
 #: ../../source/reference/generated/optuna.trial.Trial.rst:30:<autosummary>:1
 #: of optuna.trial._trial.Trial.should_prune:1
 msgid "Suggest whether the trial should be pruned or not."
-msgstr ""
+msgstr "建议是否应该对该trial进行剪枝. "
 
 #: ../../source/reference/generated/optuna.trial.Trial.rst:30:<autosummary>:1
 msgid ""
@@ -113,7 +118,7 @@ msgstr ""
 #: ../../source/reference/generated/optuna.trial.Trial.rst:30:<autosummary>:1
 #: of optuna.trial._trial.Trial.suggest_categorical:1
 msgid "Suggest a value for the categorical parameter."
-msgstr ""
+msgstr "为分类参数提供一个 suggestion."
 
 #: ../../source/reference/generated/optuna.trial.Trial.rst:30:<autosummary>:1
 msgid ""
@@ -125,7 +130,7 @@ msgstr ""
 #: ../../source/reference/generated/optuna.trial.Trial.rst:30:<autosummary>:1
 #: of optuna.trial._trial.Trial.suggest_discrete_uniform:1
 msgid "Suggest a value for the discrete parameter."
-msgstr ""
+msgstr "提供离散参数的 suggestion."
 
 #: ../../source/reference/generated/optuna.trial.Trial.rst:30:<autosummary>:1
 msgid ""
@@ -136,7 +141,7 @@ msgstr ""
 #: ../../source/reference/generated/optuna.trial.Trial.rst:30:<autosummary>:1
 #: of optuna.trial._trial.Trial.suggest_float:1
 msgid "Suggest a value for the floating point parameter."
-msgstr ""
+msgstr "提供一个浮点数的 suggestion."
 
 #: ../../source/reference/generated/optuna.trial.Trial.rst:30:<autosummary>:1
 msgid ""
@@ -147,7 +152,7 @@ msgstr ""
 #: ../../source/reference/generated/optuna.trial.Trial.rst:30:<autosummary>:1
 #: of optuna.trial._trial.Trial.suggest_int:1
 msgid "Suggest a value for the integer parameter."
-msgstr ""
+msgstr "提供一个整形参数的 suggestion."
 
 #: ../../source/reference/generated/optuna.trial.Trial.rst:30:<autosummary>:1
 msgid ""
@@ -159,7 +164,7 @@ msgstr ""
 #: of optuna.trial._trial.Trial.suggest_loguniform:1
 #: optuna.trial._trial.Trial.suggest_uniform:1
 msgid "Suggest a value for the continuous parameter."
-msgstr ""
+msgstr "提供一个连续参数的 suggestion."
 
 #: ../../source/reference/generated/optuna.trial.Trial.rst:30:<autosummary>:1
 msgid ""
@@ -178,7 +183,7 @@ msgstr ""
 #: of optuna.trial.Trial.datetime_start:1
 #: optuna.trial.Trial.datetime_start:1:<autosummary>:1
 msgid "Return start datetime."
-msgstr ""
+msgstr "返回开始日期时间."
 
 #: of optuna.trial.Trial.datetime_start:1:<autosummary>:1
 msgid ":obj:`distributions <optuna.trial.Trial.distributions>`\\"
@@ -187,7 +192,7 @@ msgstr ""
 #: of optuna.trial.Trial.datetime_start:1:<autosummary>:1
 #: optuna.trial.Trial.distributions:1
 msgid "Return distributions of parameters to be optimized."
-msgstr ""
+msgstr "返回待优化参数的分布. "
 
 #: of optuna.trial.Trial.datetime_start:1:<autosummary>:1
 msgid ":obj:`number <optuna.trial.Trial.number>`\\"
@@ -196,7 +201,7 @@ msgstr ""
 #: of optuna.trial.Trial.datetime_start:1:<autosummary>:1
 #: optuna.trial.Trial.number:1
 msgid "Return trial's number which is consecutive and unique in a study."
-msgstr ""
+msgstr "返回 trial 的连续且唯一的编号. "
 
 #: of optuna.trial.Trial.datetime_start:1:<autosummary>:1
 msgid ":obj:`params <optuna.trial.Trial.params>`\\"
@@ -205,7 +210,7 @@ msgstr ""
 #: of optuna.trial.Trial.datetime_start:1:<autosummary>:1
 #: optuna.trial.Trial.params:1
 msgid "Return parameters to be optimized."
-msgstr ""
+msgstr "返回待优化参数."
 
 #: of optuna.trial.Trial.datetime_start:1:<autosummary>:1
 msgid ":obj:`system_attrs <optuna.trial.Trial.system_attrs>`\\"
@@ -214,7 +219,7 @@ msgstr ""
 #: of optuna.trial.Trial.datetime_start:1:<autosummary>:1
 #: optuna.trial.Trial.system_attrs:1
 msgid "Return system attributes."
-msgstr ""
+msgstr "返回系统属性."
 
 #: of optuna.trial.Trial.datetime_start:1:<autosummary>:1
 msgid ":obj:`user_attrs <optuna.trial.Trial.user_attrs>`\\"
@@ -223,7 +228,7 @@ msgstr ""
 #: of optuna.trial.Trial.datetime_start:1:<autosummary>:1
 #: optuna.trial.Trial.user_attrs:1
 msgid "Return user attributes."
-msgstr ""
+msgstr "返回用户属性."
 
 #: of optuna.trial.Trial.datetime_start optuna.trial.Trial.distributions
 #: optuna.trial.Trial.number optuna.trial.Trial.params
@@ -239,11 +244,11 @@ msgstr ""
 
 #: of optuna.trial.Trial.datetime_start:3
 msgid "Datetime where the :class:`~optuna.trial.Trial` started."
-msgstr ""
+msgstr ":class:`~optuna.trial.Trial` 开始日期."
 
 #: of optuna.trial.Trial.distributions:3
 msgid "A dictionary containing all distributions."
-msgstr ""
+msgstr "包含所有分布的字典."
 
 #: of optuna.trial.Trial.number:3
 msgid "A trial number."
@@ -251,17 +256,17 @@ msgstr ""
 
 #: of optuna.trial.Trial.params:3
 msgid "A dictionary containing all parameters."
-msgstr ""
+msgstr "包含所有参数的字典."
 
 #: of optuna.trial._trial.Trial.report:3
 msgid ""
 "The reported values are used by the pruners to determine whether this "
 "trial should be pruned."
-msgstr ""
+msgstr "Pruner 使用报告的值来确定是否应对该 trial 剪枝. "
 
 #: of optuna.trial._trial.Trial.report:7
 msgid "Please refer to :class:`~optuna.pruners.BasePruner`."
-msgstr ""
+msgstr "请参考 :class:`~optuna.pruners.BasePruner`."
 
 #: of optuna.trial._trial.Trial.report:10
 msgid ""
@@ -269,6 +274,9 @@ msgid ""
 " function internally. Thus, it accepts all float-like types (e.g., "
 "``numpy.float32``). If the conversion fails, a ``TypeError`` is raised."
 msgstr ""
+"报告值在内部被 ``float()`` 函数转换成 ``float`` "
+"类型. 因此, 它接受所有类似float的类型 (例如 ``numpy.float32'' ).  "
+"如果转换失败, 则会引发 ``TypeError``."
 
 #: of optuna.trial._trial.Trial.report:15
 #: optuna.trial._trial.Trial.set_user_attr:6
@@ -287,6 +295,10 @@ msgid ""
 "learn.org/stable/modules/ "
 "generated/sklearn.linear_model.SGDClassifier.html>`_ training."
 msgstr ""
+"报告 `SGDClassifier <https://scikit-"
+"learn.org/stable/modules/ "
+"generated/sklearn.linear_model.SGDClassifier.html>`_"
+" 在训练中的中间值. "
 
 #: of optuna.trial._trial.Trial.report:47
 msgid "A value returned from the objective function."
@@ -298,7 +310,9 @@ msgid ""
 "pruners assume that ``step`` starts at zero. For example, "
 ":class:`~optuna.pruners.MedianPruner` simply checks if ``step`` is less "
 "than ``n_warmup_steps`` as the warmup mechanism."
-msgstr ""
+msgstr "Trial 步骤 (例如, 神经网络训练的 epoch). "
+"注意 pruner 假设 ``step`` 从零计数. 比如, :class:`~optuna.pruners.MedianPruner` 仅"
+"将检查 ``step``  是否比 ``n_warmup_steps`` 小作为热身机制."
 
 #: of optuna.trial._trial.Trial.report optuna.trial._trial.Trial.should_prune
 #: optuna.trial._trial.Trial.suggest_float
@@ -309,7 +323,7 @@ msgstr ""
 #: of optuna.trial._trial.Trial.report:53
 #: optuna.trial._trial.Trial.should_prune:18
 msgid "If trial is being used for multi-objective optimization."
-msgstr ""
+msgstr "Trial 是否被用于多目标优化."
 
 #: of optuna.trial._trial.Trial.report
 #: optuna.trial._trial.Trial.set_system_attr
@@ -329,27 +343,28 @@ msgid ""
 "Note that Optuna internally uses this method to save system messages such"
 " as failure reason of trials. Please use "
 ":func:`~optuna.trial.Trial.set_user_attr` to set users' attributes."
-msgstr ""
+msgstr "注意, optuna 在内部使用该方法来保存如 trial 失败原因之类的系统信息. 请使用"
+" :func:`~optuna.trial.Trial.set_user_attr` 来设置用户属性."
 
 #: of optuna.trial._trial.Trial.set_system_attr:7
 #: optuna.trial._trial.Trial.set_user_attr:42
 msgid "A key string of the attribute."
-msgstr ""
+msgstr "属性的键字符串."
 
 #: of optuna.trial._trial.Trial.set_system_attr:8
 #: optuna.trial._trial.Trial.set_user_attr:43
 msgid "A value of the attribute. The value should be JSON serializable."
-msgstr ""
+msgstr "属性的值.  该值应为JSON可序列化的. "
 
 #: of optuna.trial._trial.Trial.set_user_attr:3
 msgid ""
 "The user attributes in the trial can be access via "
 ":func:`optuna.trial.Trial.user_attrs`."
-msgstr ""
+msgstr "可以通过 :func:`optuna.trial.Trial.user_attrs` 访问 trial 中的用户属性. "
 
 #: of optuna.trial._trial.Trial.set_user_attr:7
 msgid "Save fixed hyperparameters of neural network training."
-msgstr ""
+msgstr "保存神经网络训练的固定超参数. "
 
 #: of optuna.trial._trial.Trial.should_prune:3
 msgid ""
@@ -357,6 +372,9 @@ msgid ""
 "and is based on previously reported values. The algorithm can be "
 "specified when constructing a :class:`~optuna.study.Study`."
 msgstr ""
+"该 suggestion 是基于先前报告的值并通过与trial相关的剪枝算法提出的. "
+" 可以在构造一个 :class:`~optuna.study.Study` 时指定该算法. "
+
 
 #: of optuna.trial._trial.Trial.should_prune:8
 msgid ""
@@ -364,26 +382,32 @@ msgid ""
 "suggestions. Similarly, if this method is called multiple times with the "
 "exact same set of reported values, the suggestions will be the same."
 msgstr ""
+"如果未报告任何值, 则该算法无法提出有意义的 suggestion.  "
+"同样, 如果使用完全相同的一组报告值多次调用此方法, 则 suggestion 也将相同. "
+
 
 #: of optuna.trial._trial.Trial.should_prune:13
 msgid "Please refer to the example code in :func:`optuna.trial.Trial.report`."
-msgstr ""
+msgstr "请参考 :func:`optuna.trial.Trial.report` 的示例代码. "
 
 #: of optuna.trial._trial.Trial.should_prune:15
 msgid ""
 "A boolean value. If :obj:`True`, the trial should be pruned according to "
 "the configured pruning algorithm. Otherwise, the trial should continue."
-msgstr ""
+msgstr "一个布尔值. 如果为 :obj:`True`, 则应根据配置的 pruning 算法对 trial 进行剪枝. 否则,  trial 应继续进行. "
 
 #: of optuna.trial._trial.Trial.suggest_categorical:3
 msgid "The value is sampled from ``choices``."
-msgstr ""
+msgstr "该值从 ``choices`` 中取样."
 
 #: of optuna.trial._trial.Trial.suggest_categorical:7
 msgid ""
 "Suggest a kernel function of `SVC <https://scikit-"
 "learn.org/stable/modules/generated/ sklearn.svm.SVC.html>`_."
 msgstr ""
+"为 `SVC <https://scikit-"
+"learn.org/stable/modules/generated/ sklearn.svm.SVC.html>`_ "
+"提供一个核函数 suggestion."
 
 #: of optuna.trial._trial.Trial.suggest_categorical:33
 #: optuna.trial._trial.Trial.suggest_discrete_uniform:41
@@ -392,11 +416,11 @@ msgstr ""
 #: optuna.trial._trial.Trial.suggest_loguniform:35
 #: optuna.trial._trial.Trial.suggest_uniform:40
 msgid "A parameter name."
-msgstr ""
+msgstr "参数名."
 
 #: of optuna.trial._trial.Trial.suggest_categorical:34
 msgid "Parameter value candidates."
-msgstr ""
+msgstr "参数值候选."
 
 #: of optuna.trial._trial.Trial.suggest_categorical:37
 msgid ":class:`~optuna.distributions.CategoricalDistribution`."
@@ -404,7 +428,7 @@ msgstr ""
 
 #: of optuna.trial._trial.Trial.suggest_categorical:39
 msgid "A suggested value."
-msgstr ""
+msgstr "Suggesttion."
 
 #: of optuna.trial._trial.Trial.suggest_discrete_uniform:3
 msgid ""
@@ -417,6 +441,11 @@ msgid ""
 " :math:`q` is not an integer. Please check warning messages to find the "
 "changed values."
 msgstr ""
+"该值从区间 :math:`[\\mathsf{low}, "
+"\\mathsf{high}]` 中采样, 其离散化的步长为 :math:`q`. 具体来说, 该方法返回 "
+":math:`\\mathsf{low}, \\mathsf{low} + q, \\mathsf{low} + 2 q, \\dots, "
+"\\mathsf{low} + k q \\le \\mathsf{high} ` 序列中的一个值, 其中 :math:`k` 代表一个整数. 注意, "
+"如果 :math:`q`  不是一个整数的话, :math:`high` 可能会由于取整错误而改变. 请检查警告信息以找到修改过的值."
 
 #: of optuna.trial._trial.Trial.suggest_discrete_uniform:14
 msgid ""
@@ -424,7 +453,9 @@ msgid ""
 " `GradientBoostingClassifier <https://scikit-"
 "learn.org/stable/modules/generated/ "
 "sklearn.ensemble.GradientBoostingClassifier.html>`_."
-msgstr ""
+msgstr "为拟合 `GradientBoostingClassifier <https://scikit-"
+"learn.org/stable/modules/generated/ "
+"sklearn.ensemble.GradientBoostingClassifier.html>`_ 中的各个 learner 提供部分采样 suggestion."
 
 #: of optuna.trial._trial.Trial.suggest_discrete_uniform:42
 #: optuna.trial._trial.Trial.suggest_float:55
@@ -434,27 +465,27 @@ msgstr ""
 msgid ""
 "Lower endpoint of the range of suggested values. ``low`` is included in "
 "the range."
-msgstr ""
+msgstr "该分布的取值范围下界. 其中 ``low`` 值是包含在取值范围内的. "
 
 #: of optuna.trial._trial.Trial.suggest_discrete_uniform:43
 #: optuna.trial._trial.Trial.suggest_int:35
 msgid ""
 "Upper endpoint of the range of suggested values. ``high`` is included in "
 "the range."
-msgstr ""
+msgstr "该分布的取值范围上界. 其中 ``high`` 值是包含在取值范围内的. "
 
 #: of optuna.trial._trial.Trial.suggest_discrete_uniform:44
 #: optuna.trial._trial.Trial.suggest_float:62
 #: optuna.trial._trial.Trial.suggest_int:36
 msgid "A step of discretization."
-msgstr ""
+msgstr "离散化步长"
 
 #: of optuna.trial._trial.Trial.suggest_discrete_uniform:46
 #: optuna.trial._trial.Trial.suggest_float:78
 #: optuna.trial._trial.Trial.suggest_loguniform:40
 #: optuna.trial._trial.Trial.suggest_uniform:45
 msgid "A suggested float value."
-msgstr ""
+msgstr "浮点数 suggestion."
 
 #: of optuna.trial._trial.Trial.suggest_float:3
 msgid ""
@@ -462,7 +493,10 @@ msgid ""
 ":func:`~optuna.trial.Trial.suggest_uniform`, "
 ":func:`~optuna.trial.Trial.suggest_loguniform` and "
 ":func:`~optuna.trial.Trial.suggest_discrete_uniform`."
-msgstr ""
+msgstr "注意, 这是一个 "
+":func:`~optuna.trial.Trial.suggest_uniform`, "
+":func:`~optuna.trial.Trial.suggest_loguniform` 和 "
+":func:`~optuna.trial.Trial.suggest_discrete_uniform` 的 wrapper 函数."
 
 #: of optuna.trial._trial.Trial.suggest_float:10
 msgid ""
@@ -470,12 +504,15 @@ msgid ""
 ":func:`~optuna.trial.Trial.suggest_loguniform` and "
 ":func:`~optuna.trial.Trial.suggest_discrete_uniform`."
 msgstr ""
+"参见 :func:`~optuna.trial.Trial.suggest_uniform`, "
+":func:`~optuna.trial.Trial.suggest_loguniform` 和 "
+":func:`~optuna.trial.Trial.suggest_discrete_uniform`."
 
 #: of optuna.trial._trial.Trial.suggest_float:16
 msgid ""
 "Suggest a momentum, learning rate and scaling factor of learning rate for"
 " neural network training."
-msgstr ""
+msgstr "为神经网络训练提供 momentum, learning rate 和 learning rate 的比例因子的 suggestion 值. "
 
 #: of optuna.trial._trial.Trial.suggest_float:56
 msgid ""
@@ -492,13 +529,15 @@ msgid ""
 "Upper endpoint of the range of suggested values. ``high`` is excluded "
 "from the range."
 msgstr ""
+"该分布的取值范围上界. 其中 ``high`` 值是不包含在取值范围内的. "
 
 #: of optuna.trial._trial.Trial.suggest_float:60
 msgid ""
 "If ``step`` is specified, ``high`` is included as well as ``low`` because"
 " this method falls back to "
 ":func:`~optuna.trial.Trial.suggest_discrete_uniform`."
-msgstr ""
+msgstr "如果指定了 ``step``,  ``high`` 和 ``low`` 就都包含在其中, 因为该方法实际调用 "
+":func:`~optuna.trial.Trial.suggest_discrete_uniform`."
 
 #: of optuna.trial._trial.Trial.suggest_float:62
 msgid ""
@@ -512,7 +551,8 @@ msgid ""
 "The ``step`` and ``log`` arguments cannot be used at the same time. To "
 "set the ``step`` argument to a float number, set the ``log`` argument to "
 "``False``."
-msgstr ""
+msgstr "``step`` 和 ``log`` 不能同时设定. 要设定 ``step`` 为一个浮点数, 就要将 ``log`` 设置为 "
+"``False``."
 
 #: of optuna.trial._trial.Trial.suggest_float:67
 msgid ""
@@ -532,6 +572,9 @@ msgid ""
 "the value is sampled from the range in the linear domain. See also "
 ":func:`suggest_uniform` and :func:`suggest_loguniform`."
 msgstr ""
+"是否从对数域采样值的设置选项. 如果 ``log`` 是 "
+"true, 则从对数域中的范围采样该值, 否则将从线性域中的范围采样. 参见 :func:`suggest_uniform` "
+"和 :func:`suggest_loguniform`."
 
 #: of optuna.trial._trial.Trial.suggest_float:73
 msgid ""
@@ -539,16 +582,20 @@ msgid ""
 "set the ``log`` argument to ``True``, set the ``step`` argument to "
 "``None``."
 msgstr ""
+"``step`` 和 ``log`` 参数不能同时使用. 要把 ``step`` "
+"设置成浮点数的话, 请先把 ``log`` 参数设置成 ``False``."
+
 
 #: of optuna.trial._trial.Trial.suggest_float:76
 msgid "If ``step is not None`` and ``log = True`` are specified."
-msgstr ""
+msgstr "如果 ``step is not None`` 并且指定了 ``log = True``."
 
 #: of optuna.trial._trial.Trial.suggest_int:3
 msgid ""
 "The value is sampled from the integers in :math:`[\\mathsf{low}, "
 "\\mathsf{high}]`."
-msgstr ""
+msgstr "该值从 :math:`[\\mathsf{low}, "
+"\\mathsf{high}]` 中采样整数."
 
 #: of optuna.trial._trial.Trial.suggest_int:7
 msgid ""
@@ -556,6 +603,11 @@ msgid ""
 "learn.org/ "
 "stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html>`_."
 msgstr ""
+"为 `RandomForestClassifier <https://scikit-"
+"learn.org/ "
+"stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html>`_."
+" 提供一个关于树个数的 suggestion."
+
 
 #: of optuna.trial._trial.Trial.suggest_int:36
 msgid ""
@@ -576,7 +628,10 @@ msgid ""
 "Note that :math:`\\mathsf{high}` is modified if the range is not "
 "divisible by :math:`\\mathsf{step}`. Please check the warning messages to"
 " find the changed values."
-msgstr ""
+msgstr "注意,  "
+":math:`\\mathsf{high}` 会被改变, 如果该范围无法被 "
+":math:`\\mathsf{step}` 整除的话.  请通过检查 warning "
+"信息来找出改变了的值."
 
 #: of optuna.trial._trial.Trial.suggest_int:44
 msgid ""
@@ -584,7 +639,9 @@ msgid ""
 ":math:`\\mathsf{low}, \\mathsf{low} + \\mathsf{step}, \\mathsf{low} + 2 *"
 " \\mathsf{step}, \\dots, \\mathsf{low} + k * \\mathsf{step} \\le "
 "\\mathsf{high}`, where :math:`k` denotes an integer."
-msgstr ""
+msgstr "该方法返回 :math:`\\mathsf{low}, \\mathsf{low} + \\mathsf{step}, \\mathsf{low} + 2 *"
+" \\mathsf{step}, \\dots, \\mathsf{low} + k * \\mathsf{step} \\le "
+"\\mathsf{high}` 中的一个值, 其中 :math:`k` 代表一个整数."
 
 #: of optuna.trial._trial.Trial.suggest_int:50
 msgid ""
@@ -611,7 +668,7 @@ msgstr ""
 
 #: of optuna.trial._trial.Trial.suggest_int:53
 msgid "A flag to sample the value from the log domain or not."
-msgstr ""
+msgstr "指定是否从对数域上采样的选项."
 
 #: of optuna.trial._trial.Trial.suggest_int:56
 msgid ""
@@ -623,47 +680,61 @@ msgid ""
 "determined. For example, if `low = 2` and `high = 8`, then the range of "
 "suggested values is `[2, 3, 4, 5, 6, 7, 8]` and lower values tend to be "
 "more sampled than higher values."
-msgstr ""
+msgstr "如果``log`` 是 "
+"true, 则在一开始的时候,  suggestion 值的范围会被分成宽度为 1 "
+"的网格点. 然后 suggestion "
+"值会被转化到对数域, 并在该域上进行采样. 这些均匀采样的值会被重新转换到原来的线性域上, 并且被舍入到最近的网格点中. 这就是确定采样值的过程. 比如, 如果"
+" `low = 2` 且 `high = 8` "
+"的话,  suggestion 值的范围就是 `[2, 3, 4, "
+"5, 6, 7, 8]` 而且较小的值有更大的概率被采样到. "
 
 #: of optuna.trial._trial.Trial.suggest_int:66
 msgid ""
 "The ``step != 1`` and ``log`` arguments cannot be used at the same time. "
 "To set the ``log`` argument to ``True``, set the ``step`` argument to 1."
 msgstr ""
+"``step != 1`` 和 ``log`` 参数不能同时使用. 要把 "
+"``log`` 设置成 ``True`` 的话, 请先把 ``step`` 设置成"
+" 1."
 
 #: of optuna.trial._trial.Trial.suggest_int:69
 msgid "If ``step != 1`` and ``log = True`` are specified."
-msgstr ""
+msgstr "如果指定了 ``step != 1`` 且 ``log = True``"
 
 #: of optuna.trial._trial.Trial.suggest_loguniform:3
 msgid ""
 "The value is sampled from the range :math:`[\\mathsf{low}, "
 "\\mathsf{high})` in the log domain. When :math:`\\mathsf{low} = "
 "\\mathsf{high}`, the value of :math:`\\mathsf{low}` will be returned."
-msgstr ""
+msgstr "该值从 :math:`[\\mathsf{low}, "
+"\\mathsf{high})` 的对数域上采样 当 :math:`\\mathsf{low} = "
+"\\mathsf{high}`, 将返回 :math:`\\mathsf{low}`. "
 
 #: of optuna.trial._trial.Trial.suggest_loguniform:9
 msgid ""
 "Suggest penalty parameter ``C`` of `SVC <https://scikit-"
 "learn.org/stable/modules/ generated/sklearn.svm.SVC.html>`_."
-msgstr ""
+msgstr "提供 `SVC <https://scikit-"
+"learn.org/stable/modules/ generated/sklearn.svm.SVC.html>`_ 中罚参数 ``C`` 的建议值."
 
 #: of optuna.trial._trial.Trial.suggest_uniform:3
 msgid ""
 "The value is sampled from the range :math:`[\\mathsf{low}, "
 "\\mathsf{high})` in the linear domain. When :math:`\\mathsf{low} = "
 "\\mathsf{high}`, the value of :math:`\\mathsf{low}` will be returned."
-msgstr ""
+msgstr "该值从 :math:`[\\mathsf{low}, "
+"\\mathsf{high})` 的线性域上采样 当 :math:`\\mathsf{low} = "
+"\\mathsf{high}`, 将返回 :math:`\\mathsf{low}`. "
 
 #: of optuna.trial._trial.Trial.suggest_uniform:9
 msgid "Suggest a momentum for neural network training."
-msgstr ""
+msgstr "为神经网络训练提供动量 suggestion."
 
 #: of optuna.trial.Trial.system_attrs:3
 msgid "A dictionary containing all system attributes."
-msgstr ""
+msgstr "包含全部系统属性的字典."
 
 #: of optuna.trial.Trial.user_attrs:3
 msgid "A dictionary containing all user attributes."
-msgstr ""
+msgstr "包含所有用户属性的字典."
 
