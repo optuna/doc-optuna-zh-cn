@@ -23,7 +23,7 @@ msgstr ""
 
 #: of optuna.visualization.matplotlib._utils.is_available:1
 msgid "Returns whether visualization with Matplotlib is available or not."
-msgstr ""
+msgstr "返回 Matplotlib 可视化是否可用."
 
 #: of optuna.visualization.matplotlib._utils.is_available:5
 msgid ""
@@ -32,7 +32,9 @@ msgid ""
 "installed in your environment, this function will return :obj:`False`. In"
 " such a case, please execute ``$ pip install -U matplotlib>=3.0.0`` to "
 "install Matplotlib."
-msgstr ""
+msgstr ":mod:`~optuna.visualization.matplotlib` 模块依赖 3.0.0 或者更高版本的 Matplotlib. "
+"如果你的环境中没有 Matplotlib, 该函数将返回 :obj:`False`. 此时, 请执行 ``$ pip install -U matplotlib>=3.0.0`` 来"
+"安装 Matplotlib."
 
 #: of optuna.visualization.matplotlib._utils.is_available
 msgid "返回"
@@ -42,7 +44,7 @@ msgstr ""
 msgid ""
 ":obj:`True` if visualization with Matplotlib is available, :obj:`False` "
 "otherwise."
-msgstr ""
+msgstr "如果 Matplotlib 可视化可用, 则 为 :obj:`True`, 反之则为 :obj:`False`."
 
 #: of optuna.visualization.matplotlib._utils.is_available
 msgid "返回类型"
@@ -53,5 +55,6 @@ msgid ""
 "Added in v2.2.0 as an experimental feature. The interface may change in "
 "newer versions without prior notice. See "
 "https://github.com/optuna/optuna/releases/tag/v2.2.0."
-msgstr ""
+msgstr "在 2.2.0 版本中作为试验性特征引入, 之后该接口可能在没有提前预告的情况下改变. 参考 "
+"https://github.com/optuna/optuna/releases/tag/v2.2.0."
 

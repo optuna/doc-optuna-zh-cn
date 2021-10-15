@@ -23,7 +23,7 @@ msgstr ""
 
 #: of optuna.visualization._pareto_front.plot_pareto_front:1
 msgid "Plot the Pareto front of a study."
-msgstr ""
+msgstr "绘制 study 的帕累托前沿面."
 
 #: of optuna.visualization._pareto_front.plot_pareto_front:4
 msgid "示例"
@@ -31,7 +31,7 @@ msgstr ""
 
 #: of optuna.visualization._pareto_front.plot_pareto_front:5
 msgid "The following code snippet shows how to plot the Pareto front of a study."
-msgstr ""
+msgstr "下面的代码片段展示了如何绘制 study 的帕累托前沿面."
 
 #: of optuna.visualization._pareto_front.plot_pareto_front
 msgid "参数"
@@ -41,23 +41,23 @@ msgstr ""
 msgid ""
 "A :class:`~optuna.study.Study` object whose trials are plotted for their "
 "objective values."
-msgstr ""
+msgstr ":class:`~optuna.study.Study` 类, 其包含的 trials 的目标函数值将参与绘图. "
 
 #: of optuna.visualization._pareto_front.plot_pareto_front:29
 msgid ""
 "Objective name list used as the axis titles. If :obj:`None` is specified,"
 " \"Objective {objective_index}\" is used instead."
-msgstr ""
+msgstr "目标函数指的列表将作为坐标轴的标题. 如果设置为 :obj:`None`, 就采用 \"Objective {objective_index}\"."
 
 #: of optuna.visualization._pareto_front.plot_pareto_front:31
 msgid "A flag to include all dominated trial's objective values."
-msgstr ""
+msgstr "设置该选项来包含所有主要 trial 的目标函数值."
 
 #: of optuna.visualization._pareto_front.plot_pareto_front:32
 msgid ""
 "A list of indices indicating the axis order. If :obj:`None` is specified,"
 " default order is used."
-msgstr ""
+msgstr "指定座标轴顺序的索引列表, 如果设置为 :obj:`None`, 则采用默认顺序."
 
 #: of optuna.visualization._pareto_front.plot_pareto_front
 msgid "返回"

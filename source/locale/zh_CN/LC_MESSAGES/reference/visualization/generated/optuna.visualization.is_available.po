@@ -23,7 +23,7 @@ msgstr ""
 
 #: of optuna.visualization._utils.is_available:1
 msgid "Returns whether visualization with plotly is available or not."
-msgstr ""
+msgstr "返回可视化是否可用."
 
 #: of optuna.visualization._utils.is_available:5
 msgid ""
@@ -32,6 +32,10 @@ msgid ""
 "environment, this function will return :obj:`False`. In such case, please"
 " execute ``$ pip install -U plotly>=4.0.0`` to install plotly."
 msgstr ""
+":mod:`~optuna.visualization` 模块依赖 4.0.0 或者更高版本的 "
+"plotly. 如果在你的环境中对应版本的 ploty没有安装的话, 该函数将返回 "
+":obj:`False`. 此时, 请执行 ``$ pip install -U"
+" plotly>=4.0.0`` 来安装 plotly."
 
 #: of optuna.visualization._utils.is_available
 msgid "返回"
@@ -41,7 +45,7 @@ msgstr ""
 msgid ""
 ":obj:`True` if visualization with plotly is available, :obj:`False` "
 "otherwise."
-msgstr ""
+msgstr "如果可视化可用的话, 返回 :obj:`True`, 否则返回 :obj:`False`. "
 
 #: of optuna.visualization._utils.is_available
 msgid "返回类型"

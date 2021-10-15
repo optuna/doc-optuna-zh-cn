@@ -316,7 +316,7 @@ msgstr "返回 :class:`~optuna.study.BaseStudy` 的搜索空间交集。"
 #~ msgstr ""
 #~ "该方法由 :class:`~optuna.study.Study 的实例来调用。而且，如果选项 "
 #~ "``n_jobs>1`` 的话，它会被并行执行。在那种情况下，这个 sampler "
-#~ "实例会被复制，其中就报错了随机数生成器的状态，因此它们可能会产生同样的 suggestion "
+#~ "实例会被复制，其中就包括了随机数生成器的状态，因此它们可能会产生同样的 suggestion "
 #~ "值。为了防止出现这个问题，该方法给每一个随机数生成器赋予一个不同的种子。"
 
 #~ msgid "Sample a parameter for a given distribution."

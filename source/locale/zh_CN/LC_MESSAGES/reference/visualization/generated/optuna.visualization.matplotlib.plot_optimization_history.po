@@ -24,14 +24,14 @@ msgstr ""
 #: of
 #: optuna.visualization.matplotlib._optimization_history.plot_optimization_history:1
 msgid "Plot optimization history of all trials in a study with Matplotlib."
-msgstr ""
+msgstr "用 Matplotlib 画出一个 study 中所有 trial 的优化历史记录. "
 
 #: of
 #: optuna.visualization.matplotlib._optimization_history.plot_optimization_history:4
 msgid ""
 "Please refer to :func:`optuna.visualization.plot_optimization_history` "
 "for an example."
-msgstr ""
+msgstr "例子参考 :func:`optuna.visualization.plot_optimization_history`."
 
 #: of
 #: optuna.visualization.matplotlib._optimization_history.plot_optimization_history:7
@@ -41,7 +41,7 @@ msgstr ""
 #: of
 #: optuna.visualization.matplotlib._optimization_history.plot_optimization_history:8
 msgid "The following code snippet shows how to plot optimization history."
-msgstr ""
+msgstr "下面的代码片段展示了如何绘制优化历史记录. "
 
 #: of
 #: optuna.visualization.matplotlib._optimization_history.plot_optimization_history
@@ -53,7 +53,7 @@ msgstr ""
 msgid ""
 "A :class:`~optuna.study.Study` object whose trials are plotted for their "
 "target values."
-msgstr ""
+msgstr "其 trial 的目标值被绘制的 :class:`~optuna.study.Study` 对象."
 
 #: of
 #: optuna.visualization.matplotlib._optimization_history.plot_optimization_history:27
@@ -70,19 +70,20 @@ msgid ""
 "A function to specify the value to display. If it is :obj:`None` and "
 "``study`` is being used for single-objective optimization, the objective "
 "values are plotted."
-msgstr ""
+msgstr "用于指定绘制的值的函数. 如果其为 :obj:`None` 且 ``study`` 是单目标优化 study, "
+"则将绘制目标函数值."
 
 #: of
 #: optuna.visualization.matplotlib._optimization_history.plot_optimization_history:31
 msgid ""
 "Specify this argument if ``study`` is being used for multi-objective "
 "optimization."
-msgstr ""
+msgstr "如果 ``study`` 是多目标优化的话, 则需要指定该参数."
 
 #: of
 #: optuna.visualization.matplotlib._optimization_history.plot_optimization_history:32
 msgid "Target's name to display on the axis label and the legend."
-msgstr ""
+msgstr "在坐标轴和标签上展示的目标名称."
 
 #: of
 #: optuna.visualization.matplotlib._optimization_history.plot_optimization_history
@@ -104,7 +105,7 @@ msgstr ""
 msgid ""
 "If ``target`` is :obj:`None` and ``study`` is being used for multi-"
 "objective     optimization."
-msgstr ""
+msgstr "如果 ``target`` 为 :obj:`None` 且 ``study`` 是多目标优化."
 
 #: of
 #: optuna.visualization.matplotlib._optimization_history.plot_optimization_history
@@ -117,5 +118,6 @@ msgid ""
 "Added in v2.2.0 as an experimental feature. The interface may change in "
 "newer versions without prior notice. See "
 "https://github.com/optuna/optuna/releases/tag/v2.2.0."
-msgstr ""
+msgstr "在 2.2.0 版本中作为试验性特征引入, 之后该接口可能在没有提前预告的情况下改变. 参考 "
+"https://github.com/optuna/optuna/releases/tag/v2.2.0."
 
