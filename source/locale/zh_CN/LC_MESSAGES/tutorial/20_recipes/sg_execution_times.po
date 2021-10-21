@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 2.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-06 18:29-0400\n"
+"POT-Creation-Date: 2021-10-22 04:31+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,7 +22,7 @@ msgid "Computation times"
 msgstr "计算耗时"
 
 #: ../../source/tutorial/20_recipes/sg_execution_times.rst:8
-msgid "**02:08.461** total execution time for **tutorial_20_recipes** files:"
+msgid "**01:35.022** total execution time for **tutorial_20_recipes** files:"
 msgstr ""
 
 #: ../../source/tutorial/20_recipes/sg_execution_times.rst:11
@@ -32,7 +32,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/tutorial/20_recipes/sg_execution_times.rst:11
-msgid "02:07.469"
+msgid "01:33.997"
 msgstr ""
 
 #: ../../source/tutorial/20_recipes/sg_execution_times.rst:11
@@ -55,7 +55,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/tutorial/20_recipes/sg_execution_times.rst:13
-msgid "00:00.764"
+msgid "00:00.814"
 msgstr ""
 
 #: ../../source/tutorial/20_recipes/sg_execution_times.rst:15
@@ -65,7 +65,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/tutorial/20_recipes/sg_execution_times.rst:15
-msgid "00:00.155"
+msgid "00:00.158"
 msgstr ""
 
 #: ../../source/tutorial/20_recipes/sg_execution_times.rst:17
@@ -75,7 +75,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/tutorial/20_recipes/sg_execution_times.rst:17
-msgid "00:00.072"
+msgid "00:00.052"
 msgstr ""
 
 #: ../../source/tutorial/20_recipes/sg_execution_times.rst:19
@@ -144,5 +144,20 @@ msgstr ""
 #~ msgstr ""
 
 #~ msgid "00:00.007"
+#~ msgstr ""
+
+#~ msgid "**02:08.461** total execution time for **tutorial_20_recipes** files:"
+#~ msgstr ""
+
+#~ msgid "02:07.469"
+#~ msgstr ""
+
+#~ msgid "00:00.764"
+#~ msgstr ""
+
+#~ msgid "00:00.155"
+#~ msgstr ""
+
+#~ msgid "00:00.072"
 #~ msgstr ""
 

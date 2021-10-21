@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 2.7.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-06 18:29-0400\n"
+"POT-Creation-Date: 2021-10-15 09:48+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -36,10 +36,10 @@ msgstr ""
 
 #: of optuna.integration.pytorch_distributed.TorchDistributedTrial:8
 msgid ""
-"See `the example <https://github.com/optuna/optuna/blob/master/ "
-"examples/pytorch/pytorch_distributed_simple.py>`__ if you want to "
-"optimize an objective function that trains neural network written with "
-"PyTorch distributed data parallel."
+"See `the example <https://github.com/optuna/optuna-examples/blob/main/ "
+"pytorch/pytorch_distributed_simple.py>`__ if you want to optimize an "
+"objective function that trains neural network written with PyTorch "
+"distributed data parallel."
 msgstr ""
 
 #: of optuna.integration.pytorch_distributed.TorchDistributedTrial
@@ -178,4 +178,14 @@ msgstr ""
 #: ../../source/reference/generated/optuna.integration.TorchDistributedTrial.rst:40:<autosummary>:1
 msgid ":obj:`user_attrs <optuna.integration.TorchDistributedTrial.user_attrs>`\\"
 msgstr ""
+
+#~ msgid ""
+#~ "See `the example "
+#~ "<https://github.com/optuna/optuna/blob/master/ "
+#~ "examples/pytorch/pytorch_distributed_simple.py>`__ if you"
+#~ " want to optimize an objective "
+#~ "function that trains neural network "
+#~ "written with PyTorch distributed data "
+#~ "parallel."
+#~ msgstr ""
 

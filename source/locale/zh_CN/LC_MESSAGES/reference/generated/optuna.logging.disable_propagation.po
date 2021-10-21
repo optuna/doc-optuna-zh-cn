@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 2.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-20 13:35-0400\n"
+"POT-Creation-Date: 2021-10-15 09:48+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -26,10 +26,24 @@ msgid "Disable propagation of the library log outputs."
 msgstr "禁用库日志输出的传播."
 
 #: of optuna.logging.disable_propagation:3
-msgid "Note that log propagation is disabled by default."
-msgstr "注意, 日志传播默认情况下是禁用的."
+msgid ""
+"Note that log propagation is disabled by default. You only need to use "
+"this function to stop log propagation when you use "
+":func:`~optuna.logging.enable_propogation()`."
+msgstr ""
+
+#: of optuna.logging.disable_propagation:7
+msgid "示例"
+msgstr ""
+
+#: of optuna.logging.disable_propagation:8
+msgid "Stop propagating logs to the root logger on the second optimize call."
+msgstr ""
 
 #: of optuna.logging.disable_propagation
 msgid "返回类型"
 msgstr ""
+
+#~ msgid "Note that log propagation is disabled by default."
+#~ msgstr "注意, 日志传播默认情况下是禁用的."
 

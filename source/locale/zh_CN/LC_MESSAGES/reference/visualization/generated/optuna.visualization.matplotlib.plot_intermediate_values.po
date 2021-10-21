@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 2.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-20 13:35-0400\n"
+"POT-Creation-Date: 2021-10-15 09:48+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -28,16 +28,24 @@ msgstr "用 Matplotlib 绘制 study 中的全部 trial 的中间值. "
 
 #: of
 #: optuna.visualization.matplotlib._intermediate_values.plot_intermediate_values:4
+msgid ""
+"Please refer to `matplotlib.pyplot.legend "
+"<https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.legend.html>`_"
+" to adjust the style of the generated legend."
+msgstr ""
+
+#: of
+#: optuna.visualization.matplotlib._intermediate_values.plot_intermediate_values:9
 msgid "示例"
 msgstr ""
 
 #: of
-#: optuna.visualization.matplotlib._intermediate_values.plot_intermediate_values:5
+#: optuna.visualization.matplotlib._intermediate_values.plot_intermediate_values:10
 msgid "The following code snippet shows how to plot intermediate values."
 msgstr "下面的代码片段展示了如何绘制中间值. "
 
 #: of
-#: optuna.visualization.matplotlib._intermediate_values.plot_intermediate_values:44
+#: optuna.visualization.matplotlib._intermediate_values.plot_intermediate_values:49
 msgid ""
 "Please refer to :func:`optuna.visualization.plot_intermediate_values` for"
 " an example."
@@ -49,7 +57,7 @@ msgid "参数"
 msgstr ""
 
 #: of
-#: optuna.visualization.matplotlib._intermediate_values.plot_intermediate_values:46
+#: optuna.visualization.matplotlib._intermediate_values.plot_intermediate_values:51
 msgid ""
 "A :class:`~optuna.study.Study` object whose trials are plotted for their "
 "intermediate values."
@@ -61,7 +69,7 @@ msgid "返回"
 msgstr ""
 
 #: of
-#: optuna.visualization.matplotlib._intermediate_values.plot_intermediate_values:49
+#: optuna.visualization.matplotlib._intermediate_values.plot_intermediate_values:54
 msgid "A :class:`matplotlib.axes.Axes` object."
 msgstr ""
 
@@ -71,13 +79,12 @@ msgid "返回类型"
 msgstr ""
 
 #: of
-#: optuna.visualization.matplotlib._intermediate_values.plot_intermediate_values:52
+#: optuna.visualization.matplotlib._intermediate_values.plot_intermediate_values:57
 msgid ""
 "Added in v2.2.0 as an experimental feature. The interface may change in "
 "newer versions without prior notice. See "
 "https://github.com/optuna/optuna/releases/tag/v2.2.0."
-msgstr "在 2.2.0 版本中作为试验性特征引入, 之后该接口可能在没有提前预告的情况下改变. 参考 "
+msgstr ""
+"在 2.2.0 版本中作为试验性特征引入, 之后该接口可能在没有提前预告的情况下改变. 参考 "
 "https://github.com/optuna/optuna/releases/tag/v2.2.0."
-
-
 

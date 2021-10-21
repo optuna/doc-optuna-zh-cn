@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 2.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-06 18:29-0400\n"
+"POT-Creation-Date: 2021-10-15 09:48+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -40,36 +40,57 @@ msgid ""
 "Please note that this is a low-level API. In general, trials that are "
 "passed to objective functions are created inside "
 ":func:`~optuna.study.Study.optimize`."
-msgstr "注意, 这是一个低级 API, 那些传递给目标函数的 trial 是在 :func:`~optuna.study.Study.optimize` 中被创建的."
+msgstr ""
+"注意, 这是一个低级 API, 那些传递给目标函数的 trial 是在 :func:`~optuna.study.Study.optimize` "
+"中被创建的."
 
 #: of optuna.trial._frozen.create_trial:35
+#, fuzzy
 msgid ""
-"When ``state`` is ``TrialState.COMPLETE``, the following parameters are "
-"required: * ``params`` * ``distributions`` * ``value`` or ``values``"
-msgstr "当 ``state`` 为 ``TrialState.COMPLETE``, 下列参数是必须的: "
-"* ``params`` * ``distributions`` * ``value`` 或者 ``values``"
+"When ``state`` is :class:`TrialState.COMPLETE`, the following parameters "
+"are required:"
+msgstr ""
+"当 ``state`` 为 ``TrialState.COMPLETE``, 下列参数是必须的: * ``params`` * "
+"``distributions`` * ``value`` 或者 ``values``"
+
+#: of optuna.trial._frozen.create_trial:38
+msgid "``params``"
+msgstr ""
+
+#: of optuna.trial._frozen.create_trial:39
+msgid "``distributions``"
+msgstr ""
+
+#: of optuna.trial._frozen.create_trial:40
+#, fuzzy
+msgid "``value`` or ``values``"
+msgstr "如果同时指定了 ``value`` 和 ``values``."
 
 #: of optuna.trial._frozen.create_trial
 msgid "参数"
 msgstr ""
 
-#: of optuna.trial._frozen.create_trial:41
+#: of optuna.trial._frozen.create_trial:42
 msgid "Trial state."
 msgstr ""
 
-#: of optuna.trial._frozen.create_trial:42
+#: of optuna.trial._frozen.create_trial:43
+#, fuzzy
 msgid ""
-"Trial objective value. Must be specified if ``state`` is ``None`` or "
+"Trial objective value. Must be specified if ``state`` is "
 ":class:`TrialState.COMPLETE`."
-msgstr "Trial 的目标值. 如果 ``state`` 是 ``None`` 或者 "
-":class:`TrialState.COMPLETE`, 目标值不可为空."
+msgstr ""
+"Trial 的目标值. 如果 ``state`` 是 ``None`` 或者 :class:`TrialState.COMPLETE`, "
+"目标值不可为空."
 
 #: of optuna.trial._frozen.create_trial:44
+#, fuzzy
 msgid ""
 "Sequence of the trial objective values. The length is greater than 1 if "
 "the problem is multi-objective optimization. Must be specified if "
-"``state`` is ``None`` or :class:`TrialState.COMPLETE`."
-msgstr "Trial 目标函数值的序列. 如果该问题为多目标优化, 则其长度大于1. 如果 ``state`` 是 ``None`` 或者 "
+"``state`` is :class:`TrialState.COMPLETE`."
+msgstr ""
+"Trial 目标函数值的序列. 如果该问题为多目标优化, 则其长度大于1. 如果 ``state`` 是 ``None`` 或者 "
 ":class:`TrialState.COMPLETE`, 该值不可为空."
 
 #: of optuna.trial._frozen.create_trial:47
@@ -119,7 +140,8 @@ msgid ""
 "Added in v2.0.0 as an experimental feature. The interface may change in "
 "newer versions without prior notice. See "
 "https://github.com/optuna/optuna/releases/tag/v2.0.0."
-msgstr "在 v2.0.0 中作为试验性特性引入. 该接口可能在未来在没有提前告知的情况下改变, 参考 "
+msgstr ""
+"在 v2.0.0 中作为试验性特性引入. 该接口可能在未来在没有提前告知的情况下改变, 参考 "
 "https://github.com/optuna/optuna/releases/tag/v2.0.0."
 
 #~ msgid ""

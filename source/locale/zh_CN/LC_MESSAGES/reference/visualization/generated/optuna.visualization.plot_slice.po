@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 2.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-20 13:35-0400\n"
+"POT-Creation-Date: 2021-10-15 09:48+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -26,8 +26,9 @@ msgid "Plot the parameter relationship as slice plot in a study."
 msgstr "绘制 study 中的参数关系切片图. "
 
 #: of optuna.visualization._slice.plot_slice:3
+#, fuzzy
 msgid ""
-"Note that, If a parameter contains missing values, a trial with missing "
+"Note that, if a parameter contains missing values, a trial with missing "
 "values is not plotted."
 msgstr "注意, 如果某个参数包含了缺失值, 那么包含该参数的 trial 将不会被绘制. "
 
@@ -68,8 +69,7 @@ msgid ""
 "A function to specify the value to display. If it is :obj:`None` and "
 "``study`` is being used for single-objective optimization, the objective "
 "values are plotted."
-msgstr "用于指定绘制的值的函数. 如果其为 :obj:`None` 且 ``study`` 是单目标优化 study, "
-"则将绘制目标函数值."
+msgstr "用于指定绘制的值的函数. 如果其为 :obj:`None` 且 ``study`` 是单目标优化 study, 则将绘制目标函数值."
 
 #: of optuna.visualization._slice.plot_slice:33
 msgid ""

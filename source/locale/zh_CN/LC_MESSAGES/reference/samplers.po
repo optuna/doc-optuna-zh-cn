@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 1.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-06 18:29-0400\n"
+"POT-Creation-Date: 2021-10-15 09:48+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -72,8 +72,8 @@ msgstr ""
 
 #: ../../source/reference/samplers.rst:21:<autosummary>:1
 msgid ""
-"A sampler using `cmaes <https://github.com/CyberAgent/cmaes>`_ as the "
-"backend."
+"A sampler using `cmaes <https://github.com/CyberAgentAILab/cmaes>`_ as "
+"the backend."
 msgstr ""
 
 #: ../../source/reference/samplers.rst:21:<autosummary>:1
@@ -792,6 +792,12 @@ msgstr "返回 :class:`~optuna.study.BaseStudy` 的搜索空间交集。"
 
 #~ msgid ""
 #~ "A Sampler using `cmaes "
+#~ "<https://github.com/CyberAgent/cmaes>`_ as the "
+#~ "backend."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "A sampler using `cmaes "
 #~ "<https://github.com/CyberAgent/cmaes>`_ as the "
 #~ "backend."
 #~ msgstr ""

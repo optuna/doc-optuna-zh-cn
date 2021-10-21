@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 1.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-06 18:29-0400\n"
+"POT-Creation-Date: 2021-10-15 09:48+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -54,6 +54,81 @@ msgstr "显示异常处理和堆栈跟踪信息。"
 msgid "DB URL. (e.g. sqlite:///example.db)"
 msgstr "数据库 URL. (比如 ``sqlite:///example.db`` )"
 
+msgid "ask"
+msgstr ""
+
+#: ../../<_Ask>:1
+msgid "Create a new trial and suggest parameters."
+msgstr ""
+
+#: ../../<_Ask>:1 ../../<_Tell>:1
+msgid "Name of study."
+msgstr "Study 名."
+
+#: ../../<_Ask>:1
+msgid "Direction of optimization."
+msgstr "优化的方向."
+
+#: ../../<_Ask>:1
+msgid "Directions of optimization, if there are multiple objectives."
+msgstr "如果有多个目标函数的话, 这里为所有优化的方向."
+
+#: ../../<_Ask>:1
+msgid "Class name of sampler object to create."
+msgstr "待创建的 sampler 的类名."
+
+#: ../../<_Ask>:1
+msgid "Sampler object initialization keyword arguments as JSON."
+msgstr "Sampler 对象的初始化关键词参数的 JSON 表示."
+
+#: ../../<_Ask>:1
+msgid ""
+"Search space as JSON. Keys are names and values are outputs from "
+":func:`~optuna.distributions.distribution_to_json`."
+msgstr "JSON 格式的搜索空间. 键为名, 值为 :func:`~optuna.distributions.distribution_to_json` 的输出."
+
+#: ../../<_Ask>:1 ../../<_BestTrial>:1 ../../<_BestTrials>:1 ../../<_Studies>:1
+#: ../../<_Trials>:1
+msgid "Output format."
+msgstr "输出格式."
+
+#: ../../<_Ask>:1
+msgid "Flatten nested columns such as params."
+msgstr "将多层的列展, 例如参数, 进行展平."
+
+#: ../../<_Ask>:1 ../../<_BestTrial>:1 ../../<_BestTrials>:1
+#: ../../<_CreateStudy>:1 ../../<_Dashboard>:1 ../../<_DeleteStudy>:1
+#: ../../<_StorageUpgrade>:1 ../../<_Studies>:1 ../../<_StudyOptimize>:1
+#: ../../<_StudySetUserAttribute>:1 ../../<_Tell>:1 ../../<_Trials>:1
+msgid "This command is provided by the optuna plugin."
+msgstr "该命令由 optuna 插件提供。"
+
+msgid "best-trial"
+msgstr ""
+
+#: ../../<_BestTrial>:1
+msgid "Show the best trial."
+msgstr "展示最佳 trial."
+
+#: ../../<_BestTrial>:1
+msgid "The name of the study to get the best trial."
+msgstr "用于获取最佳 trial 的 study 名."
+
+#: ../../<_BestTrial>:1 ../../<_BestTrials>:1 ../../<_Trials>:1
+msgid "Flatten nested columns such as params and user_attrs."
+msgstr "将多层的列, 例如参数和 user_attrs 展平."
+
+msgid "best-trials"
+msgstr ""
+
+#: ../../<_BestTrials>:1
+msgid "Show a list of trials located at the Pareto front."
+msgstr "展示位于帕累托前沿的 trial 列表."
+
+#: ../../<_BestTrials>:1
+msgid "The name of the study to get the best trials (trials at the Pareto front)."
+msgstr "用于提取最佳 trial (那些位于帕累托前沿上的 trial) 的 study 名 "
+
 msgid "create-study"
 msgstr ""
 
@@ -77,11 +152,11 @@ msgid ""
 " the study name is duplicated."
 msgstr "如果开启该选项， 当存在一个同名的 study 时，optuna 在优化开始时将跳过创建 study 的过程，并且不报错。"
 
-#: ../../<_CreateStudy>:1 ../../<_Dashboard>:1 ../../<_DeleteStudy>:1
-#: ../../<_StorageUpgrade>:1 ../../<_Studies>:1 ../../<_StudyOptimize>:1
-#: ../../<_StudySetUserAttribute>:1
-msgid "This command is provided by the optuna plugin."
-msgstr "该命令由 optuna 插件提供。"
+#: ../../<_CreateStudy>:1
+msgid ""
+"Set directions of optimization to a new study. Put whitespace between "
+"directions. Each direction should be either \"minimize\" or \"maximize\"."
+msgstr "对新 study 设置优化的方向. 在不同的方向之间留出空格, 每个方向只能是 \"minimize\" 或 \"maximize\"."
 
 msgid "dashboard"
 msgstr ""
@@ -149,48 +224,8 @@ msgid "Show a list of studies."
 msgstr "显示 study 列表。"
 
 #: ../../<_Studies>:1
-msgid "the output format, defaults to table"
-msgstr "输出格式，默认情况下是表格。"
-
-#: ../../<_Studies>:1
-msgid "specify the column(s) to include, can be repeated to show multiple columns"
-msgstr "用于设定要展示的（表格）列。可设置多个 column 参数以同时显示多个column."
-
-#: ../../<_Studies>:1
-msgid "when to include quotes, defaults to nonnumeric"
+msgid "Flatten nested columns such as directions."
 msgstr ""
-
-# TODO
-#: ../../<_Studies>:1
-msgid "whether to disable indenting the JSON"
-msgstr "设定是否在 json输出格式中禁用缩进。"
-
-#: ../../<_Studies>:1
-msgid ""
-"Maximum display width, <1 to disable. You can also use the "
-"CLIFF_MAX_TERM_WIDTH environment variable, but the parameter takes "
-"precedence."
-msgstr ""
-"最大展示宽度。如果设置成小于 1 的数值，就代表禁用最大宽度限制。你也可以通过设置 ``CLIFF_MAX_TERM_WIDTH `` "
-"环境变量来限制最大宽度，但是 ``--max-width`` 参数的优先级比环境变量高。"
-
-#: ../../<_Studies>:1
-msgid ""
-"Fit the table to the display width. Implied if --max-width greater than "
-"0. Set the environment variable CLIFF_FIT_WIDTH=1 to always enable"
-msgstr ""
-"将输出表格设置成与显示屏同宽。如果 ``-max-width`` > 1 的话，该选项会自动启用。设定是否在 json 中禁用缩进。也可以通过设置"
-" ``CLIFF_FIT_WIDTH`` 环境变量的值为 1 来启用该选项。"
-
-#: ../../<_Studies>:1
-msgid "Print empty table if there is no data to show."
-msgstr "在无数据的情况下也输出空表格"
-
-#: ../../<_Studies>:1
-msgid ""
-"specify the column(s) to sort the data (columns specified first have a "
-"priority, non-existing columns are ignored), can be repeated"
-msgstr "按照指定列来对表格的行进行排序。越靠前指定的列在排序中的优先级越高。没有被指定的列不参与排序。"
 
 msgid "study optimize"
 msgstr ""
@@ -248,6 +283,81 @@ msgstr "设定用户属性中的键 (key)."
 msgid "Value to be set."
 msgstr "设定用户属性中的值 (value)."
 
+msgid "tell"
+msgstr ""
+
+#: ../../<_Tell>:1
+msgid "Finish a trial created with the ask command."
+msgstr "使用 ask 命令来结束一个 trial."
+
+#: ../../<_Tell>:1
+msgid "Trial number."
+msgstr "Trial 数."
+
+#: ../../<_Tell>:1
+msgid "Objective values."
+msgstr "目标函数值."
+
+#: ../../<_Tell>:1
+msgid "Trial state."
+msgstr "Trial 状态"
+
+msgid "trials"
+msgstr ""
+
+#: ../../<_Trials>:1
+msgid "Show a list of trials."
+msgstr "显示 study 列表."
+
+#: ../../<_Trials>:1
+msgid "The name of the study which includes trials."
+msgstr "包含 trial 的 study 名."
+
 #~ msgid "Command Line Interface"
 #~ msgstr ""
+
+#~ msgid "the output format, defaults to table"
+#~ msgstr "输出格式，默认情况下是表格。"
+
+#~ msgid ""
+#~ "specify the column(s) to include, can"
+#~ " be repeated to show multiple columns"
+#~ msgstr "用于设定要展示的（表格）列。可设置多个 column 参数以同时显示多个column."
+
+#~ msgid "when to include quotes, defaults to nonnumeric"
+#~ msgstr ""
+
+# TODO
+#~ msgid "whether to disable indenting the JSON"
+#~ msgstr "设定是否在 json输出格式中禁用缩进。"
+
+#~ msgid ""
+#~ "Maximum display width, <1 to disable."
+#~ " You can also use the "
+#~ "CLIFF_MAX_TERM_WIDTH environment variable, but "
+#~ "the parameter takes precedence."
+#~ msgstr ""
+#~ "最大展示宽度。如果设置成小于 1 的数值，就代表禁用最大宽度限制。你也可以通过设置 "
+#~ "``CLIFF_MAX_TERM_WIDTH `` 环境变量来限制最大宽度，但是 ``--max-"
+#~ "width`` 参数的优先级比环境变量高。"
+
+#~ msgid ""
+#~ "Fit the table to the display "
+#~ "width. Implied if --max-width greater"
+#~ " than 0. Set the environment variable"
+#~ " CLIFF_FIT_WIDTH=1 to always enable"
+#~ msgstr ""
+#~ "将输出表格设置成与显示屏同宽。如果 ``-max-width`` > 1 "
+#~ "的话，该选项会自动启用。设定是否在 json 中禁用缩进。也可以通过设置 "
+#~ "``CLIFF_FIT_WIDTH`` 环境变量的值为 1 来启用该选项。"
+
+#~ msgid "Print empty table if there is no data to show."
+#~ msgstr "在无数据的情况下也输出空表格"
+
+#~ msgid ""
+#~ "specify the column(s) to sort the "
+#~ "data (columns specified first have a "
+#~ "priority, non-existing columns are "
+#~ "ignored), can be repeated"
+#~ msgstr "按照指定列来对表格的行进行排序。越靠前指定的列在排序中的优先级越高。没有被指定的列不参与排序。"
 

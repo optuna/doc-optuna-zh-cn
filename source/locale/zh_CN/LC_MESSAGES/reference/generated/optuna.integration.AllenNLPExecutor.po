@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 2.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-20 13:35-0400\n"
+"POT-Creation-Date: 2021-10-15 09:48+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,40 +21,39 @@ msgstr ""
 msgid "optuna.integration.AllenNLPExecutor"
 msgstr ""
 
-#: of optuna.integration.allennlp.AllenNLPExecutor:1
+#: of optuna.integration.allennlp._executor.AllenNLPExecutor:1
 msgid "AllenNLP extension to use optuna with Jsonnet config file."
 msgstr ""
 
-#: of optuna.integration.allennlp.AllenNLPExecutor:3
+#: of optuna.integration.allennlp._executor.AllenNLPExecutor:3
 msgid ""
 "This feature is experimental since AllenNLP major release will come soon."
 " The interface may change without prior notice to correspond to the "
 "update."
 msgstr ""
 
-#: of optuna.integration.allennlp.AllenNLPExecutor:6
+#: of optuna.integration.allennlp._executor.AllenNLPExecutor:6
 msgid ""
-"See the examples of `objective function "
-"<https://github.com/optuna/optuna/blob/ "
-"master/examples/allennlp/allennlp_jsonnet.py>`_."
+"See the examples of `objective function <https://github.com/optuna"
+"/optuna-examples/tree/ main/allennlp/allennlp_jsonnet.py>`_."
 msgstr ""
 
-#: of optuna.integration.allennlp.AllenNLPExecutor:9
+#: of optuna.integration.allennlp._executor.AllenNLPExecutor:9
 msgid ""
 "You can also see the tutorial of our AllenNLP integration on `AllenNLP "
 "Guide <https://guide.allennlp.org/hyperparameter-optimization>`_."
 msgstr ""
 
-#: of optuna.integration.allennlp.AllenNLPExecutor:13
+#: of optuna.integration.allennlp._executor.AllenNLPExecutor:13
 msgid ""
 "From Optuna v2.1.0, users have to cast their parameters by using methods "
 "in Jsonnet. Call ``std.parseInt`` for integer, or ``std.parseJson`` for "
 "floating point. Please see the `example configuration "
-"<https://github.com/optuna/optuna/blob/master/ "
-"examples/allennlp/classifier.jsonnet>`_."
+"<https://github.com/optuna/optuna-examples/tree/main/ "
+"allennlp/classifier.jsonnet>`_."
 msgstr ""
 
-#: of optuna.integration.allennlp.AllenNLPExecutor:19
+#: of optuna.integration.allennlp._executor.AllenNLPExecutor:19
 msgid ""
 "In :class:`~optuna.integration.AllenNLPExecutor`, you can pass parameters"
 " to AllenNLP by either defining a search space using Optuna suggest "
@@ -64,17 +63,17 @@ msgid ""
 "in Optuna."
 msgstr ""
 
-#: of optuna.integration.allennlp.AllenNLPExecutor
+#: of optuna.integration.allennlp._executor.AllenNLPExecutor
 msgid "参数"
 msgstr ""
 
-#: of optuna.integration.allennlp.AllenNLPExecutor:25
+#: of optuna.integration.allennlp._executor.AllenNLPExecutor:25
 msgid ""
 "A :class:`~optuna.trial.Trial` corresponding to the current evaluation of"
 " the objective function."
 msgstr ""
 
-#: of optuna.integration.allennlp.AllenNLPExecutor:27
+#: of optuna.integration.allennlp._executor.AllenNLPExecutor:27
 msgid ""
 "Config file for AllenNLP. Hyperparameters should be masked with "
 "``std.extVar``. Please refer to `the config example "
@@ -82,32 +81,32 @@ msgid ""
 "master/examples/classifier.jsonnet>`_."
 msgstr ""
 
-#: of optuna.integration.allennlp.AllenNLPExecutor:31
+#: of optuna.integration.allennlp._executor.AllenNLPExecutor:31
 msgid "A path which model weights and logs are saved."
 msgstr ""
 
-#: of optuna.integration.allennlp.AllenNLPExecutor:32
+#: of optuna.integration.allennlp._executor.AllenNLPExecutor:32
 msgid "An evaluation metric for the result of ``objective``."
 msgstr ""
 
-#: of optuna.integration.allennlp.AllenNLPExecutor:33
+#: of optuna.integration.allennlp._executor.AllenNLPExecutor:33
 msgid "If :obj:`True`, an executor overwrites the output directory if it exists."
 msgstr ""
 
-#: of optuna.integration.allennlp.AllenNLPExecutor:34
+#: of optuna.integration.allennlp._executor.AllenNLPExecutor:34
 msgid ""
 "If :obj:`True`, tqdm status is printed on separate lines and slows tqdm "
 "refresh rate."
 msgstr ""
 
-#: of optuna.integration.allennlp.AllenNLPExecutor:35
+#: of optuna.integration.allennlp._executor.AllenNLPExecutor:35
 msgid ""
 "Additional packages to include. For more information, please see "
 "`AllenNLP documentation "
 "<https://docs.allennlp.org/master/api/commands/train/>`_."
 msgstr ""
 
-#: of optuna.integration.allennlp.AllenNLPExecutor:40
+#: of optuna.integration.allennlp._executor.AllenNLPExecutor:40
 msgid ""
 "Added in v1.4.0 as an experimental feature. The interface may change in "
 "newer versions without prior notice. See "
@@ -118,16 +117,33 @@ msgstr ""
 msgid "Methods"
 msgstr ""
 
-#: of optuna.integration.allennlp.AllenNLPExecutor.run:1:<autosummary>:1
+#: of
+#: optuna.integration.allennlp._executor.AllenNLPExecutor.run:1:<autosummary>:1
 msgid ":obj:`run <optuna.integration.AllenNLPExecutor.run>`\\ \\(\\)"
 msgstr ""
 
-#: of optuna.integration.allennlp.AllenNLPExecutor.run:1
-#: optuna.integration.allennlp.AllenNLPExecutor.run:1:<autosummary>:1
+#: of optuna.integration.allennlp._executor.AllenNLPExecutor.run:1
+#: optuna.integration.allennlp._executor.AllenNLPExecutor.run:1:<autosummary>:1
 msgid "Train a model using AllenNLP."
 msgstr ""
 
-#: of optuna.integration.allennlp.AllenNLPExecutor.run
+#: of optuna.integration.allennlp._executor.AllenNLPExecutor.run
 msgid "返回类型"
 msgstr ""
+
+#~ msgid ""
+#~ "See the examples of `objective function"
+#~ " <https://github.com/optuna/optuna/blob/ "
+#~ "master/examples/allennlp/allennlp_jsonnet.py>`_."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "From Optuna v2.1.0, users have to "
+#~ "cast their parameters by using methods"
+#~ " in Jsonnet. Call ``std.parseInt`` for "
+#~ "integer, or ``std.parseJson`` for floating "
+#~ "point. Please see the `example "
+#~ "configuration <https://github.com/optuna/optuna/blob/master/ "
+#~ "examples/allennlp/classifier.jsonnet>`_."
+#~ msgstr ""
 

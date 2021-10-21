@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 2.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-20 13:35-0400\n"
+"POT-Creation-Date: 2021-10-15 09:48+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -42,12 +42,97 @@ msgid ""
 msgstr "我们使用给定的数据库 URL 创建一个 :class:`~optuna.storages.RedisStorage` 实例."
 
 #: of optuna.storages._base.BaseStorage.check_trial_is_updatable
-#: optuna.storages._base.BaseStorage.fail_stale_trials
 #: optuna.storages._base.BaseStorage.get_n_trials
 #: optuna.storages._base.BaseStorage.get_trial_params
 #: optuna.storages._base.BaseStorage.get_trial_system_attrs
 #: optuna.storages._base.BaseStorage.get_trial_user_attrs
-#: optuna.storages._base.BaseStorage.record_heartbeat
+#: optuna.storages._redis.RedisStorage
+#: optuna.storages._redis.RedisStorage.create_new_study
+#: optuna.storages._redis.RedisStorage.create_new_trial
+#: optuna.storages._redis.RedisStorage.delete_study
+#: optuna.storages._redis.RedisStorage.fail_stale_trials
+#: optuna.storages._redis.RedisStorage.get_all_trials
+#: optuna.storages._redis.RedisStorage.get_best_trial
+#: optuna.storages._redis.RedisStorage.get_study_directions
+#: optuna.storages._redis.RedisStorage.get_study_id_from_name
+#: optuna.storages._redis.RedisStorage.get_study_id_from_trial_id
+#: optuna.storages._redis.RedisStorage.get_study_name_from_id
+#: optuna.storages._redis.RedisStorage.get_study_system_attrs
+#: optuna.storages._redis.RedisStorage.get_study_user_attrs
+#: optuna.storages._redis.RedisStorage.get_trial
+#: optuna.storages._redis.RedisStorage.get_trial_id_from_study_id_trial_number
+#: optuna.storages._redis.RedisStorage.get_trial_number_from_id
+#: optuna.storages._redis.RedisStorage.get_trial_param
+#: optuna.storages._redis.RedisStorage.read_trials_from_remote_storage
+#: optuna.storages._redis.RedisStorage.record_heartbeat
+#: optuna.storages._redis.RedisStorage.set_study_directions
+#: optuna.storages._redis.RedisStorage.set_study_system_attr
+#: optuna.storages._redis.RedisStorage.set_study_user_attr
+#: optuna.storages._redis.RedisStorage.set_trial_intermediate_value
+#: optuna.storages._redis.RedisStorage.set_trial_param
+#: optuna.storages._redis.RedisStorage.set_trial_state
+#: optuna.storages._redis.RedisStorage.set_trial_system_attr
+#: optuna.storages._redis.RedisStorage.set_trial_user_attr
+#: optuna.storages._redis.RedisStorage.set_trial_values
+msgid "参数"
+msgstr ""
+
+#: of optuna.storages._redis.RedisStorage:27
+msgid ""
+"URL of the redis storage, password and db are optional. (ie: "
+"redis://localhost:6379)"
+msgstr "Redis 存储 URL, password 和 db 是可选的 (比如 redis://localhost:6379)."
+
+#: of optuna.storages._redis.RedisStorage:28
+msgid ""
+"Interval to record the heartbeat. It is recorded every ``interval`` "
+"seconds."
+msgstr ""
+
+#: of optuna.storages._redis.RedisStorage:29
+msgid ""
+"Grace period before a running trial is failed from the last heartbeat. If"
+" it is :obj:`None`, the grace period will be `2 * heartbeat_interval`."
+msgstr ""
+
+#: of optuna.storages._redis.RedisStorage:31
+msgid ""
+"A callback function that is invoked after failing each stale trial. The "
+"function must accept two parameters with the following types in this "
+"order: :class:`~optuna.study.Study` and "
+":class:`~optuna.trial.FrozenTrial`.  .. note::     The procedure to fail "
+"existing stale trials is called just before asking the     study for a "
+"new trial."
+msgstr ""
+
+#: of optuna.storages._redis.RedisStorage:31
+msgid ""
+"A callback function that is invoked after failing each stale trial. The "
+"function must accept two parameters with the following types in this "
+"order: :class:`~optuna.study.Study` and "
+":class:`~optuna.trial.FrozenTrial`."
+msgstr ""
+
+#: of optuna.storages._redis.RedisStorage:36
+msgid ""
+"The procedure to fail existing stale trials is called just before asking "
+"the study for a new trial."
+msgstr ""
+
+#: of optuna.storages._redis.RedisStorage:40
+msgid ""
+"If you use plan to use Redis as a storage mechanism for optuna, make sure"
+" Redis in installed and running. Please execute ``$ pip install -U "
+"redis`` to install redis python library."
+msgstr ""
+"如果你计划使用 Redis 作为 Optuna 的存储机制, 请确保 Redis 已经安装了而且正在运行. 请执行 ``$ pip install"
+" -U redis`` 来安装 Redis 的 Pyhton 库."
+
+#: of optuna.storages._base.BaseStorage.check_trial_is_updatable
+#: optuna.storages._base.BaseStorage.get_n_trials
+#: optuna.storages._base.BaseStorage.get_trial_params
+#: optuna.storages._base.BaseStorage.get_trial_system_attrs
+#: optuna.storages._base.BaseStorage.get_trial_user_attrs
 #: optuna.storages._redis.RedisStorage
 #: optuna.storages._redis.RedisStorage.create_new_study
 #: optuna.storages._redis.RedisStorage.create_new_trial
@@ -74,30 +159,22 @@ msgstr "我们使用给定的数据库 URL 创建一个 :class:`~optuna.storages
 #: optuna.storages._redis.RedisStorage.set_trial_system_attr
 #: optuna.storages._redis.RedisStorage.set_trial_user_attr
 #: optuna.storages._redis.RedisStorage.set_trial_values
-msgid "参数"
+msgid "引发"
 msgstr ""
 
-#: of optuna.storages._redis.RedisStorage:27
+#: of optuna.storages._redis.RedisStorage:44
 msgid ""
-"URL of the redis storage, password and db are optional. (ie: "
-"redis://localhost:6379)"
-msgstr "Redis 存储 URL, password 和 db 是可选的 (比如 redis://localhost:6379)."
+"If the given `heartbeat_interval` or `grace_period` is not a positive "
+"integer."
+msgstr ""
 
-#: of optuna.storages._redis.RedisStorage:30
-msgid ""
-"If you use plan to use Redis as a storage mechanism for optuna, make sure"
-" Redis in installed and running. Please execute ``$ pip install -U "
-"redis`` to install redis python library."
-msgstr "如果你计划使用 Redis 作为 Optuna 的存储机制, 请确保 Redis 已经安装了而且正在运行. "
-"请执行 ``$ pip install -U "
-"redis`` 来安装 Redis 的 Pyhton 库."
-
-#: of optuna.storages._redis.RedisStorage:35
+#: of optuna.storages._redis.RedisStorage:47
 msgid ""
 "Added in v1.4.0 as an experimental feature. The interface may change in "
 "newer versions without prior notice. See "
 "https://github.com/optuna/optuna/releases/tag/v1.4.0."
-msgstr "在 v1.4.0 中作为实验性特征引入. 该接口可能在新版中在没有提醒的情况下改变, 参见 "
+msgstr ""
+"在 v1.4.0 中作为实验性特征引入. 该接口可能在新版中在没有提醒的情况下改变, 参见 "
 "https://github.com/optuna/optuna/releases/tag/v1.4.0."
 
 #: ../../source/reference/generated/optuna.storages.RedisStorage.rst:12
@@ -165,7 +242,7 @@ msgstr ""
 
 #: of
 #: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
-#: optuna.storages._base.BaseStorage.fail_stale_trials:1
+#: optuna.storages._redis.RedisStorage.fail_stale_trials:1
 msgid "Fail stale trials."
 msgstr "终止旧 trial."
 
@@ -217,7 +294,7 @@ msgstr ""
 
 #: of
 #: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
-#: optuna.storages._base.BaseStorage.get_failed_trial_callback:1
+#: optuna.storages._redis.RedisStorage.get_failed_trial_callback:1
 msgid "Get the failed trial callback function."
 msgstr "返回失败 trial 的回调函数."
 
@@ -230,7 +307,7 @@ msgstr ""
 
 #: of
 #: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
-#: optuna.storages._base.BaseStorage.get_heartbeat_interval:1
+#: optuna.storages._redis.RedisStorage.get_heartbeat_interval:1
 msgid "Get the heartbeat interval if it is set."
 msgstr "如果设置了的话, 返回心跳信号区间."
 
@@ -351,7 +428,8 @@ msgstr ""
 #: of
 #: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
 #: optuna.storages._redis.RedisStorage.get_trial_id_from_study_id_trial_number:1
-msgid "Read the trial id of a trial."
+#, fuzzy
+msgid "Read the trial ID of a trial."
 msgstr "读取一个 trial 的 ID."
 
 #: of
@@ -456,7 +534,7 @@ msgstr ""
 
 #: of
 #: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
-#: optuna.storages._base.BaseStorage.record_heartbeat:1
+#: optuna.storages._redis.RedisStorage.record_heartbeat:1
 msgid "Record the heartbeat of the trial."
 msgstr "记录 trial 的心跳信号."
 
@@ -604,39 +682,6 @@ msgstr "trial ID. 只在错误信息中使用."
 msgid "Trial state to check."
 msgstr "待检查的状态."
 
-#: of optuna.storages._base.BaseStorage.check_trial_is_updatable
-#: optuna.storages._base.BaseStorage.get_n_trials
-#: optuna.storages._base.BaseStorage.get_trial_params
-#: optuna.storages._base.BaseStorage.get_trial_system_attrs
-#: optuna.storages._base.BaseStorage.get_trial_user_attrs
-#: optuna.storages._redis.RedisStorage.create_new_study
-#: optuna.storages._redis.RedisStorage.create_new_trial
-#: optuna.storages._redis.RedisStorage.delete_study
-#: optuna.storages._redis.RedisStorage.get_all_trials
-#: optuna.storages._redis.RedisStorage.get_best_trial
-#: optuna.storages._redis.RedisStorage.get_study_directions
-#: optuna.storages._redis.RedisStorage.get_study_id_from_name
-#: optuna.storages._redis.RedisStorage.get_study_id_from_trial_id
-#: optuna.storages._redis.RedisStorage.get_study_name_from_id
-#: optuna.storages._redis.RedisStorage.get_study_system_attrs
-#: optuna.storages._redis.RedisStorage.get_study_user_attrs
-#: optuna.storages._redis.RedisStorage.get_trial
-#: optuna.storages._redis.RedisStorage.get_trial_id_from_study_id_trial_number
-#: optuna.storages._redis.RedisStorage.get_trial_number_from_id
-#: optuna.storages._redis.RedisStorage.get_trial_param
-#: optuna.storages._redis.RedisStorage.read_trials_from_remote_storage
-#: optuna.storages._redis.RedisStorage.set_study_directions
-#: optuna.storages._redis.RedisStorage.set_study_system_attr
-#: optuna.storages._redis.RedisStorage.set_study_user_attr
-#: optuna.storages._redis.RedisStorage.set_trial_intermediate_value
-#: optuna.storages._redis.RedisStorage.set_trial_param
-#: optuna.storages._redis.RedisStorage.set_trial_state
-#: optuna.storages._redis.RedisStorage.set_trial_system_attr
-#: optuna.storages._redis.RedisStorage.set_trial_user_attr
-#: optuna.storages._redis.RedisStorage.set_trial_values
-msgid "引发"
-msgstr ""
-
 #: of optuna.storages._base.BaseStorage.check_trial_is_updatable:7
 #: optuna.storages._redis.RedisStorage.set_trial_intermediate_value:10
 #: optuna.storages._redis.RedisStorage.set_trial_param:9
@@ -648,22 +693,21 @@ msgid "If the trial is already finished."
 msgstr "如果 trial 已经结束了."
 
 #: of optuna.storages._base.BaseStorage.check_trial_is_updatable
-#: optuna.storages._base.BaseStorage.fail_stale_trials
-#: optuna.storages._base.BaseStorage.get_failed_trial_callback
-#: optuna.storages._base.BaseStorage.get_heartbeat_interval
 #: optuna.storages._base.BaseStorage.get_n_trials
 #: optuna.storages._base.BaseStorage.get_trial_params
 #: optuna.storages._base.BaseStorage.get_trial_system_attrs
 #: optuna.storages._base.BaseStorage.get_trial_user_attrs
 #: optuna.storages._base.BaseStorage.is_heartbeat_enabled
-#: optuna.storages._base.BaseStorage.record_heartbeat
 #: optuna.storages._base.BaseStorage.remove_session
 #: optuna.storages._redis.RedisStorage.create_new_study
 #: optuna.storages._redis.RedisStorage.create_new_trial
 #: optuna.storages._redis.RedisStorage.delete_study
+#: optuna.storages._redis.RedisStorage.fail_stale_trials
 #: optuna.storages._redis.RedisStorage.get_all_study_summaries
 #: optuna.storages._redis.RedisStorage.get_all_trials
 #: optuna.storages._redis.RedisStorage.get_best_trial
+#: optuna.storages._redis.RedisStorage.get_failed_trial_callback
+#: optuna.storages._redis.RedisStorage.get_heartbeat_interval
 #: optuna.storages._redis.RedisStorage.get_study_directions
 #: optuna.storages._redis.RedisStorage.get_study_id_from_name
 #: optuna.storages._redis.RedisStorage.get_study_id_from_trial_id
@@ -675,6 +719,7 @@ msgstr "如果 trial 已经结束了."
 #: optuna.storages._redis.RedisStorage.get_trial_number_from_id
 #: optuna.storages._redis.RedisStorage.get_trial_param
 #: optuna.storages._redis.RedisStorage.read_trials_from_remote_storage
+#: optuna.storages._redis.RedisStorage.record_heartbeat
 #: optuna.storages._redis.RedisStorage.set_study_directions
 #: optuna.storages._redis.RedisStorage.set_study_system_attr
 #: optuna.storages._redis.RedisStorage.set_study_user_attr
@@ -697,19 +742,19 @@ msgstr "如果没有指定名称, 存储类会生成一个名称. 返回的 stud
 msgid "Name of the new study to create."
 msgstr "要创建的新 study 的名字."
 
-#: of optuna.storages._base.BaseStorage.fail_stale_trials
-#: optuna.storages._base.BaseStorage.get_failed_trial_callback
-#: optuna.storages._base.BaseStorage.get_heartbeat_interval
-#: optuna.storages._base.BaseStorage.get_n_trials
+#: of optuna.storages._base.BaseStorage.get_n_trials
 #: optuna.storages._base.BaseStorage.get_trial_params
 #: optuna.storages._base.BaseStorage.get_trial_system_attrs
 #: optuna.storages._base.BaseStorage.get_trial_user_attrs
 #: optuna.storages._base.BaseStorage.is_heartbeat_enabled
 #: optuna.storages._redis.RedisStorage.create_new_study
 #: optuna.storages._redis.RedisStorage.create_new_trial
+#: optuna.storages._redis.RedisStorage.fail_stale_trials
 #: optuna.storages._redis.RedisStorage.get_all_study_summaries
 #: optuna.storages._redis.RedisStorage.get_all_trials
 #: optuna.storages._redis.RedisStorage.get_best_trial
+#: optuna.storages._redis.RedisStorage.get_failed_trial_callback
+#: optuna.storages._redis.RedisStorage.get_heartbeat_interval
 #: optuna.storages._redis.RedisStorage.get_study_directions
 #: optuna.storages._redis.RedisStorage.get_study_id_from_name
 #: optuna.storages._redis.RedisStorage.get_study_id_from_trial_id
@@ -780,21 +825,21 @@ msgstr "创建的 trial 的ID."
 msgid "If no study with the matching ``study_id`` exists."
 msgstr "如果没有带有相同 ``study_id`` 的 study 存在的话."
 
-#: of optuna.storages._base.BaseStorage.fail_stale_trials:3
+#: of optuna.storages._redis.RedisStorage.fail_stale_trials:3
 msgid ""
 "The running trials whose heartbeat has not been updated for a long time "
 "will be failed, that is, those states will be changed to "
 ":obj:`~optuna.trial.TrialState.FAIL`. The grace period is ``2 * "
 "heartbeat_interval``."
-msgstr "正在运行的 trial, 如果其心跳信号长时间没有更新的话将会被终止, 也就是说其状态会被设置为 :obj:`~optuna.trial.TrialState.FAIL`."
-"这个宽限期为 ``2 * "
-"heartbeat_interval``."
+msgstr ""
+"正在运行的 trial, 如果其心跳信号长时间没有更新的话将会被终止, 也就是说其状态会被设置为 "
+":obj:`~optuna.trial.TrialState.FAIL`.这个宽限期为 ``2 * heartbeat_interval``."
 
-#: of optuna.storages._base.BaseStorage.fail_stale_trials:7
+#: of optuna.storages._redis.RedisStorage.fail_stale_trials:7
 msgid "ID of the related study."
 msgstr "相关 study 的 ID."
 
-#: of optuna.storages._base.BaseStorage.fail_stale_trials:9
+#: of optuna.storages._redis.RedisStorage.fail_stale_trials:9
 msgid "List of trial IDs of the failed trials."
 msgstr "失败 trial 的 trial ID 列表."
 
@@ -835,11 +880,11 @@ msgstr "如果 study 有不止一个方向."
 msgid "If no trials have been completed."
 msgstr "如果没有 trial 已经完成."
 
-#: of optuna.storages._base.BaseStorage.get_failed_trial_callback:3
+#: of optuna.storages._redis.RedisStorage.get_failed_trial_callback:3
 msgid "The failed trial callback function if it is set, otherwise :obj:`None`."
 msgstr "如有设置，返回失败 trial 的回调函数, 否则为 :obj:`None`."
 
-#: of optuna.storages._base.BaseStorage.get_heartbeat_interval:3
+#: of optuna.storages._redis.RedisStorage.get_heartbeat_interval:3
 msgid "The heartbeat interval if it is set, otherwise :obj:`None`."
 msgstr "如果设置了的话是心跳区间, 否则为  :obj:`None`."
 
@@ -867,12 +912,12 @@ msgstr "如果没有带有相同 ``study_name`` 的 study 存在的话."
 #: of optuna.storages._base.BaseStorage.get_trial_params:3
 #: optuna.storages._base.BaseStorage.get_trial_system_attrs:3
 #: optuna.storages._base.BaseStorage.get_trial_user_attrs:3
-#: optuna.storages._base.BaseStorage.record_heartbeat:3
 #: optuna.storages._redis.RedisStorage.get_study_id_from_trial_id:3
 #: optuna.storages._redis.RedisStorage.get_trial:3
 #: optuna.storages._redis.RedisStorage.get_trial_id_from_study_id_trial_number:6
 #: optuna.storages._redis.RedisStorage.get_trial_number_from_id:7
 #: optuna.storages._redis.RedisStorage.get_trial_param:3
+#: optuna.storages._redis.RedisStorage.record_heartbeat:3
 #: optuna.storages._redis.RedisStorage.set_trial_intermediate_value:5
 #: optuna.storages._redis.RedisStorage.set_trial_param:3
 #: optuna.storages._redis.RedisStorage.set_trial_state:3
@@ -958,15 +1003,17 @@ msgid ""
 ":obj:`True` if the storage supports the heartbeat and the return value of"
 " :meth:`~optuna.storages.BaseStorage.get_heartbeat_interval` is an "
 "integer, otherwise :obj:`False`."
-msgstr "如果存储支持心跳信号而且 :meth:`~optuna.storages.BaseStorage.get_heartbeat_interval` 返回值为整数的话, 为 :obj:`True`. 否则为 :obj:`False`."
+msgstr ""
+"如果存储支持心跳信号而且 :meth:`~optuna.storages.BaseStorage.get_heartbeat_interval` "
+"返回值为整数的话, 为 :obj:`True`. 否则为 :obj:`False`."
 
 #: of optuna.storages._redis.RedisStorage.set_study_directions:4
 msgid ""
 "A sequence of direction whose element is either "
 ":obj:`~optuna.study.StudyDirection.MAXIMIZE` or "
 ":obj:`~optuna.study.StudyDirection.MINIMIZE`."
-msgstr "方向列表, 其元素为 "
-":obj:`~optuna.study.StudyDirection.MAXIMIZE` 或者 "
+msgstr ""
+"方向列表, 其元素为 :obj:`~optuna.study.StudyDirection.MAXIMIZE` 或者 "
 ":obj:`~optuna.study.StudyDirection.MINIMIZE`."
 
 #: of optuna.storages._redis.RedisStorage.set_study_directions:9
@@ -974,7 +1021,9 @@ msgid ""
 "If the directions are already set and the each coordinate of passed "
 "``directions``     is the opposite direction or "
 ":obj:`~optuna.study.StudyDirection.NOT_SET`."
-msgstr "如果方向已经设定, 而且每一个传递给 ``directions`` 的座标是相反的或者 :obj:`~optuna.study.StudyDirection.NOT_SET`."
+msgstr ""
+"如果方向已经设定, 而且每一个传递给 ``directions`` 的座标是相反的或者 "
+":obj:`~optuna.study.StudyDirection.NOT_SET`."
 
 #: of optuna.storages._redis.RedisStorage.set_study_system_attr:3
 #: optuna.storages._redis.RedisStorage.set_study_user_attr:3
@@ -1029,9 +1078,10 @@ msgid ""
 "state is kept the same. The latter happens when this method tries to "
 "update the state of :obj:`~optuna.trial.TrialState.RUNNING` trial to "
 ":obj:`~optuna.trial.TrialState.RUNNING`."
-msgstr "如果状态被成功地改变了则为 :obj:`True`. 如果状态保持不变则为 :obj:`False`. "
-"如果该方法试图更新一个 :obj:`~optuna.trial.TrialState.RUNNING` trial 为 :obj:`~optuna.trial.TrialState.RUNNING` 的话, 后者将会发生."
-
+msgstr ""
+"如果状态被成功地改变了则为 :obj:`True`. 如果状态保持不变则为 :obj:`False`. 如果该方法试图更新一个 "
+":obj:`~optuna.trial.TrialState.RUNNING` trial 为 "
+":obj:`~optuna.trial.TrialState.RUNNING` 的话, 后者将会发生."
 
 #: of optuna.storages._redis.RedisStorage.set_trial_values:3
 msgid "This method overwrites any existing trial values."

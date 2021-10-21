@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 2.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-20 13:35-0400\n"
+"POT-Creation-Date: 2021-10-15 09:48+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -62,7 +62,6 @@ msgstr ""
 "参数重要性求解器. 它指定评估重要性的算法. 默认情况下它会被设定成 "
 ":class:`~optuna.importance.FanovaImportanceEvaluator`."
 
-
 #: of
 #: optuna.visualization.matplotlib._param_importances.plot_param_importances:33
 msgid ""
@@ -76,7 +75,9 @@ msgid ""
 "A function to specify the value to display. If it is :obj:`None` and "
 "``study`` is being used for single-objective optimization, the objective "
 "values are plotted.  .. note::     Specify this argument if ``study`` is "
-"being used for multi-objective optimization."
+"being used for multi-objective     optimization. For example, to get the "
+"hyperparameter importance of the first     objective, use ``target=lambda"
+" t: t.values[0]`` for the target parameter."
 msgstr ""
 
 #: of
@@ -85,18 +86,19 @@ msgid ""
 "A function to specify the value to display. If it is :obj:`None` and "
 "``study`` is being used for single-objective optimization, the objective "
 "values are plotted."
-msgstr "用于指定绘制的值的函数. 如果其为 :obj:`None` 且 ``study`` 是单目标优化 study, "
-"则将绘制目标函数值."
+msgstr "用于指定绘制的值的函数. 如果其为 :obj:`None` 且 ``study`` 是单目标优化 study, 则将绘制目标函数值."
 
 #: of
 #: optuna.visualization.matplotlib._param_importances.plot_param_importances:40
 msgid ""
 "Specify this argument if ``study`` is being used for multi-objective "
-"optimization."
-msgstr "如果 ``study`` 是多目标优化的话, 则需要指定该参数."
+"optimization. For example, to get the hyperparameter importance of the "
+"first objective, use ``target=lambda t: t.values[0]`` for the target "
+"parameter."
+msgstr ""
 
 #: of
-#: optuna.visualization.matplotlib._param_importances.plot_param_importances:41
+#: optuna.visualization.matplotlib._param_importances.plot_param_importances:43
 msgid "Target's name to display on the axis label."
 msgstr "在坐标轴上展示的目标名称."
 
@@ -105,7 +107,7 @@ msgid "返回"
 msgstr ""
 
 #: of
-#: optuna.visualization.matplotlib._param_importances.plot_param_importances:43
+#: optuna.visualization.matplotlib._param_importances.plot_param_importances:45
 msgid "A :class:`matplotlib.axes.Axes` object."
 msgstr ""
 
@@ -114,7 +116,7 @@ msgid "引发"
 msgstr ""
 
 #: of
-#: optuna.visualization.matplotlib._param_importances.plot_param_importances:45
+#: optuna.visualization.matplotlib._param_importances.plot_param_importances:47
 msgid ""
 "If ``target`` is :obj:`None` and ``study`` is being used for multi-"
 "objective     optimization."
@@ -125,11 +127,29 @@ msgid "返回类型"
 msgstr ""
 
 #: of
-#: optuna.visualization.matplotlib._param_importances.plot_param_importances:48
+#: optuna.visualization.matplotlib._param_importances.plot_param_importances:50
 msgid ""
 "Added in v2.2.0 as an experimental feature. The interface may change in "
 "newer versions without prior notice. See "
 "https://github.com/optuna/optuna/releases/tag/v2.2.0."
-msgstr "在 2.2.0 版本中作为试验性特征引入, 之后该接口可能在没有提前预告的情况下改变. 参考 "
+msgstr ""
+"在 2.2.0 版本中作为试验性特征引入, 之后该接口可能在没有提前预告的情况下改变. 参考 "
 "https://github.com/optuna/optuna/releases/tag/v2.2.0."
+
+#~ msgid ""
+#~ "A function to specify the value to"
+#~ " display. If it is :obj:`None` and"
+#~ " ``study`` is being used for "
+#~ "single-objective optimization, the objective "
+#~ "values are plotted.  .. note::     "
+#~ "Specify this argument if ``study`` is"
+#~ " being used for multi-objective "
+#~ "optimization."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Specify this argument if ``study`` is"
+#~ " being used for multi-objective "
+#~ "optimization."
+#~ msgstr "如果 ``study`` 是多目标优化的话, 则需要指定该参数."
 
