@@ -12,8 +12,6 @@
 
    .. autosummary::
    
-      ~MOTPEMultiObjectiveSampler.after_trial
-      ~MOTPEMultiObjectiveSampler.hyperopt_parameters
       ~MOTPEMultiObjectiveSampler.infer_relative_search_space
       ~MOTPEMultiObjectiveSampler.reseed_rng
       ~MOTPEMultiObjectiveSampler.sample_independent

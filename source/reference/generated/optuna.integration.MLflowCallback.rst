@@ -8,6 +8,12 @@
    
    
    
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~MLflowCallback.track_in_mlflow
+   
 
 
 
