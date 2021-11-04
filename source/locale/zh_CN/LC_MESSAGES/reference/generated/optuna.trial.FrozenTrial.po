@@ -88,7 +88,7 @@ msgstr ":class:`~optuna.trial.Trial` 的目标函数值."
 msgid ""
 "Sequence of objective values of the :class:`~optuna.trial.Trial`. The "
 "length is greater than 1 if the problem is multi-objective optimization."
-msgstr "Trial 目标函数值的序列. 如果该问题为多目标优化, 则其长度大于1."
+msgstr ":class:`~optuna.trial.Trial` 目标函数值的序列. 如果该问题为多目标优化, 则其长度大于1."
 
 #: of optuna.trial._frozen.FrozenTrial:90
 msgid "Datetime where the :class:`~optuna.trial.Trial` started."

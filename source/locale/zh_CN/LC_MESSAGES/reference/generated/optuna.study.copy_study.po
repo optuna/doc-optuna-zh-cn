@@ -23,13 +23,13 @@ msgstr ""
 
 #: of optuna.study.study.copy_study:1
 msgid "Copy study from one storage to another."
-msgstr ""
+msgstr "将一个存储中的 study 复制到另一个存储中."
 
 #: of optuna.study.study.copy_study:3
 msgid ""
 "The direction(s) of the objective(s) in the study, trials, user "
 "attributes and system attributes are copied."
-msgstr ""
+msgstr "study 中目标函数的方向, trial, 用户属性以及系统属性都会被复制."
 
 #: of optuna.study.study.copy_study:7
 msgid "示例"

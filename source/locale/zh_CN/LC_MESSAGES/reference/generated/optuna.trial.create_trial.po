@@ -33,7 +33,7 @@ msgstr ""
 msgid ""
 "See :func:`~optuna.study.Study.add_trial` for how this function can be "
 "used to create a study from existing trials."
-msgstr "关于该函数如何从已有的 trial 中创建 study, 请参考 :func:`~optuna.study.Study.add_trial`"
+msgstr "关于该函数如何从已有的 trial 中创建 study, 请参考 :func:`~optuna.study.Study.add_trial`."
 
 #: of optuna.trial._frozen.create_trial:31
 msgid ""
@@ -45,13 +45,11 @@ msgstr ""
 "中被创建的."
 
 #: of optuna.trial._frozen.create_trial:35
-#, fuzzy
 msgid ""
 "When ``state`` is :class:`TrialState.COMPLETE`, the following parameters "
 "are required:"
 msgstr ""
-"当 ``state`` 为 ``TrialState.COMPLETE``, 下列参数是必须的: * ``params`` * "
-"``distributions`` * ``value`` 或者 ``values``"
+"当 ``state`` 为 ``TrialState.COMPLETE``, 下列参数是必须的:"
 
 #: of optuna.trial._frozen.create_trial:38
 msgid "``params``"
@@ -62,9 +60,8 @@ msgid "``distributions``"
 msgstr ""
 
 #: of optuna.trial._frozen.create_trial:40
-#, fuzzy
 msgid "``value`` or ``values``"
-msgstr "如果同时指定了 ``value`` 和 ``values``."
+msgstr "``value`` 或者 ``values``."
 
 #: of optuna.trial._frozen.create_trial
 msgid "参数"
@@ -72,19 +69,18 @@ msgstr ""
 
 #: of optuna.trial._frozen.create_trial:42
 msgid "Trial state."
-msgstr ""
+msgstr "Trial 状态."
 
 #: of optuna.trial._frozen.create_trial:43
-#, fuzzy
+
 msgid ""
 "Trial objective value. Must be specified if ``state`` is "
 ":class:`TrialState.COMPLETE`."
 msgstr ""
 "Trial 的目标值. 如果 ``state`` 是 ``None`` 或者 :class:`TrialState.COMPLETE`, "
-"目标值不可为空."
+"则该值不可为空."
 
 #: of optuna.trial._frozen.create_trial:44
-#, fuzzy
 msgid ""
 "Sequence of the trial objective values. The length is greater than 1 if "
 "the problem is multi-objective optimization. Must be specified if "
@@ -121,7 +117,7 @@ msgstr ""
 
 #: of optuna.trial._frozen.create_trial:53
 msgid "Created trial."
-msgstr "创建 trial"
+msgstr "创建 trial."
 
 #: of optuna.trial._frozen.create_trial
 msgid "引发"

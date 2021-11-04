@@ -65,7 +65,7 @@ msgstr ""
 
 #: ../../source/reference/optuna.rst:17:<autosummary>:1
 msgid "Copy study from one storage to another."
-msgstr "将 study 从一个存储复制到另一个存储."
+msgstr "将一个存储中的 study 复制到另一个存储中."
 
 #: ../../source/reference/optuna.rst:17:<autosummary>:1
 msgid ":obj:`optuna.get_all_study_summaries <optuna.get_all_study_summaries>`"

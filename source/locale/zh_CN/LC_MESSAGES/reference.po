@@ -8843,6 +8843,10 @@ msgid ""
 " depend on :class:`~optuna.study.Study`, and it is useful for deploying "
 "optimization results."
 msgstr ""
+"该对象有和 :class:`~optuna.trial.Trial` 一样的方法, 而且其提供预先定义好的参数值. 这些参数值可以在 "
+":class:`~optuna.trial.FixedTrial` 的创建阶段指定. 和 :class:`~optuna.trial.Trial`"
+" 不同, :class:`~optuna.trial.FrozenTrial` 不依赖于 "
+":class:`~optuna.study.Study`, 所以能被用于部署优化结果."
 
 #: of optuna.trial._frozen.FrozenTrial:10
 msgid "Re-evaluate an objective function with parameter values optimized study."
@@ -9725,6 +9729,7 @@ msgid ""
 "When ``state`` is ``TrialState.COMPLETE``, the following parameters are "
 "required: * ``params`` * ``distributions`` * ``value`` or ``values``"
 msgstr ""
+"当 ``state`` 为 ``TrialState.COMPLETE``, 下列参数是必须的: * ``params`` * ``distributions`` * ``value`` 或者 ``values``."
 
 #: of optuna.trial._frozen.create_trial:41
 msgid "Trial state."

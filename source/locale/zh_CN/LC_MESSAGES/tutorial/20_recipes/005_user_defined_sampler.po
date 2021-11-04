@@ -61,7 +61,6 @@ msgid "Overview of Sampler"
 msgstr "Sampler 概述"
 
 #: ../../source/tutorial/20_recipes/005_user_defined_sampler.rst:38
-#, fuzzy
 msgid ""
 "A sampler has the responsibility to determine the parameter values to be "
 "evaluated in a trial. When a `suggest` API (e.g., "

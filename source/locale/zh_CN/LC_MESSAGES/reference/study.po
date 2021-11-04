@@ -77,7 +77,7 @@ msgstr ""
 
 #: ../../source/reference/study.rst:20:<autosummary>:1
 msgid "Copy study from one storage to another."
-msgstr ""
+msgstr "将一个存储中的 study 复制到另一个存储中."
 
 #: ../../source/reference/study.rst:20:<autosummary>:1
 msgid ""

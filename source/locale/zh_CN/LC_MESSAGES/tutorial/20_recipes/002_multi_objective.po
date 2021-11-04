@@ -29,7 +29,6 @@ msgid "Multi-objective Optimization with Optuna"
 msgstr "用 Optuna 进行多目标优化"
 
 #: ../../source/tutorial/20_recipes/002_multi_objective.rst:17
-#, fuzzy
 msgid ""
 "This tutorial showcases Optuna's multi-objective optimization feature by "
 "optimizing the validation accuracy of Fashion MNIST dataset and the FLOPS"
