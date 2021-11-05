@@ -597,14 +597,13 @@ msgid ":ref:`out-of-memory-gc-collect`"
 msgstr ""
 
 #: of optuna.study.study.Study.optimize:63
-#, fuzzy
 msgid ""
 "Flag to show progress bars or not. To disable progress bar, set this "
 ":obj:`False`. Currently, progress bar is experimental feature and "
 "disabled when ``n_jobs`` :math:`\\ne 1`."
 msgstr ""
 "设置是否显示进度条的选项. 要禁用它的话, 将其设置成 ``False``. 目前这是一个试验性特性, 并且当 ``n_jobs`` "
-":math:`[\\ne 1]` 时会被自动禁用. "
+":math:`[\\ne 1]` 时会被自动禁用."
 
 #: of optuna.study.study.Study.optimize:67
 msgid "If nested invocation of this method occurs."

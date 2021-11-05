@@ -129,7 +129,6 @@ msgstr ""
 
 #: of
 #: optuna.importance._mean_decrease_impurity.MeanDecreaseImpurityImportanceEvaluator.evaluate:16
-#, fuzzy
 msgid ""
 "A function to specify the value to evaluate importances. If it is "
 ":obj:`None` and ``study`` is being used for single-objective "
@@ -137,8 +136,9 @@ msgid ""
 "trial attributes, such as the duration, like ``target=lambda t: "
 "t.duration.total_seconds()``."
 msgstr ""
-"一个用于指定求解重要性的值的函数. 如果将其设置为 :obj:`None` 并且``study`` 是一个单目标优化的话, "
-"这个值则将使用目标函数值."
+"一个用于指定求解重要性的值的函数. 如果将其设置为 :obj:`None` 并且 ``study`` 是一个单目标优化的话, "
+"这个值则将使用目标函数值. 也可以被用于其他 trial 属性, 比如 trial 的持续时间, 像 ``target=lambda t: "
+"t.duration.total_seconds()``."
 
 #: of
 #: optuna.importance._mean_decrease_impurity.MeanDecreaseImpurityImportanceEvaluator.evaluate:22
@@ -147,7 +147,8 @@ msgid ""
 "optimization. For example, to get the hyperparameter importance of the "
 "first objective, use ``target=lambda t: t.values[0]`` for the target "
 "parameter."
-msgstr ""
+msgstr "如果 ``study`` 是用于多目标优化的话, 就需要指定该参数. 例如, 要获得第一个目标函数的超参数重要性的话, "
+"就把目标参数设置为 ``target=lambda t: t.values[0]``."
 
 #: of
 #: optuna.importance._mean_decrease_impurity.MeanDecreaseImpurityImportanceEvaluator.evaluate

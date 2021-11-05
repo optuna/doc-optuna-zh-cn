@@ -428,7 +428,6 @@ msgstr ""
 #: of
 #: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
 #: optuna.storages._redis.RedisStorage.get_trial_id_from_study_id_trial_number:1
-#, fuzzy
 msgid "Read the trial ID of a trial."
 msgstr "读取一个 trial 的 ID."
 

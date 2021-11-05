@@ -30,9 +30,8 @@ msgid "The :class:`~optuna.trial.Trial` is running."
 msgstr ":class:`~optuna.trial.Trial` 正在运行中."
 
 #: of optuna.trial._state.TrialState:9
-#, fuzzy
 msgid "The :class:`~optuna.trial.Trial` is waiting and unfinished."
-msgstr ":class:`~optuna.trial.Trial` 正在运行中."
+msgstr ":class:`~optuna.trial.Trial` 未完成, 正在等待中."
 
 #: of optuna.trial._state.TrialState:13
 msgid "The :class:`~optuna.trial.Trial` has been finished without any error."

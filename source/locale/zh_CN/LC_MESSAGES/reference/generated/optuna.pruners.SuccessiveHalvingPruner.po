@@ -38,7 +38,6 @@ msgstr ""
 "Successive Halving <http://arxiv.org/abs/1810.05934>`_."
 
 #: of optuna.pruners._successive_halving.SuccessiveHalvingPruner:8
-#, fuzzy
 msgid ""
 "Note that, this class does not take care of the parameter for the maximum"
 " resource, referred to as :math:`R` in the paper. The maximum resource "
@@ -50,9 +49,9 @@ msgid ""
 msgstr ""
 "注意, 该类不关心最大资源对应的参数, 这一参数在文中记为 :math:`R`. 分配给单个 trial 的最大资源通常是在目标函数中被指定的 "
 "(比如 `simple_pruning.py "
-"<https://github.com/optuna/optuna/blob/master/examples/simple_pruning.py#L35>`_"
+"<https://github.com/optuna/optuna-examples/blob/main/simple_pruning.py>`_"
 " 中的 ``step`` 和 `chainer_integration.py "
-"<https://github.com/optuna/optuna/blob/master/examples/chainer/chainer_integration.py#L77>`_"
+"<https://github.com/optuna/optuna-examples/tree/main/chainer/chainer_integration.py#L77>`_"
 " 中的 ``EPOCH``)."
 
 #: of optuna.pruners._successive_halving.SuccessiveHalvingPruner:16

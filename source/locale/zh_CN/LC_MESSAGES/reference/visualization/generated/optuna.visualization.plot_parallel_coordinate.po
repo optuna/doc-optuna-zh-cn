@@ -26,7 +26,6 @@ msgid "Plot the high-dimensional parameter relationships in a study."
 msgstr "绘制 study 中高维参数关系."
 
 #: of optuna.visualization._parallel_coordinate.plot_parallel_coordinate:3
-#, fuzzy
 msgid ""
 "Note that, if a parameter contains missing values, a trial with missing "
 "values is not plotted."

@@ -22,7 +22,6 @@ msgid "optuna.visualization"
 msgstr ""
 
 #: ../../source/reference/visualization/index.rst:6
-#, fuzzy
 msgid ""
 "The :mod:`~optuna.visualization` module provides utility functions for "
 "plotting the optimization process using plotly and matplotlib. Plotting "
@@ -30,8 +29,8 @@ msgid ""
 "optional parameters are passed as a list to the ``params`` argument."
 msgstr ""
 ":mod:`~optuna.visualization` "
-"模块提供了使用plotly和matplotlib绘制优化过程的实用函数。绘图函数一般取一个 "
-":class:`~optuna.study.Study` 对象和可选的参数作为一个列表传递给 ``params`` 参数。"
+"模块提供了使用 plotly 和 matplotlib 绘制优化过程的实用函数. 绘图函数一般取一个 "
+":class:`~optuna.study.Study` 对象和可选的参数作为一个列表传递给 ``params`` 参数. "
 
 #: ../../source/reference/visualization/index.rst:9
 msgid ""
@@ -40,8 +39,8 @@ msgid ""
 "default. Please follow this `installation guide`_ to show figures in "
 "`JupyterLab`_."
 msgstr ""
-"在 :mod:`optuna.visualization` 模块中，以下函数使用 plotly 来绘制图像，但 `JupyterLab`_ "
-"默认情况下不能渲染它们。请按照这个 `installation guide`_ 在 `JupyterLab`_ 中显示图像。"
+"在 :mod:`optuna.visualization` 模块中, 以下函数使用 plotly 来绘制图像, 但 `JupyterLab`_ "
+"默认情况下不能渲染它们. 请按照这个 `installation guide`_ 在 `JupyterLab`_ 中显示图像. "
 
 #: ../../source/reference/visualization/index.rst:29:<autosummary>:1
 msgid ""
@@ -51,7 +50,7 @@ msgstr ""
 
 #: ../../source/reference/visualization/index.rst:29:<autosummary>:1
 msgid "Plot the parameter relationship as contour plot in a study."
-msgstr "将 study 中的参数关系绘制成等高线图。"
+msgstr "将 study 中的参数关系绘制成等高线图. "
 
 #: ../../source/reference/visualization/index.rst:29:<autosummary>:1
 msgid ":obj:`optuna.visualization.plot_edf <optuna.visualization.plot_edf>`"
@@ -59,7 +58,7 @@ msgstr ""
 
 #: ../../source/reference/visualization/index.rst:29:<autosummary>:1
 msgid "Plot the objective value EDF (empirical distribution function) of a study."
-msgstr "绘制study的目标值EDF（经验分布函数）。"
+msgstr "绘制study的目标值EDF（经验分布函数）. "
 
 #: ../../source/reference/visualization/index.rst:29:<autosummary>:1
 msgid ""
@@ -69,7 +68,7 @@ msgstr ""
 
 #: ../../source/reference/visualization/index.rst:29:<autosummary>:1
 msgid "Plot intermediate values of all trials in a study."
-msgstr "绘制一个 study 中所有 trial 的中间值。"
+msgstr "绘制一个 study 中所有 trial 的中间值. "
 
 #: ../../source/reference/visualization/index.rst:29:<autosummary>:1
 msgid ""
@@ -79,7 +78,7 @@ msgstr ""
 
 #: ../../source/reference/visualization/index.rst:29:<autosummary>:1
 msgid "Plot optimization history of all trials in a study."
-msgstr "绘制一个 study 中所有 trial 的优化历史记录。"
+msgstr "绘制一个 study 中所有 trial 的优化历史记录. "
 
 #: ../../source/reference/visualization/index.rst:29:<autosummary>:1
 msgid ""
@@ -88,9 +87,8 @@ msgid ""
 msgstr ""
 
 #: ../../source/reference/visualization/index.rst:29:<autosummary>:1
-#, fuzzy
 msgid "Plot the high-dimensional parameter relationships in a study."
-msgstr "绘制一个 study 中的高维度参数关系。"
+msgstr "绘制一个 study 中的高维度参数关系. "
 
 #: ../../source/reference/visualization/index.rst:29:<autosummary>:1
 msgid ""
@@ -100,7 +98,7 @@ msgstr ""
 
 #: ../../source/reference/visualization/index.rst:29:<autosummary>:1
 msgid "Plot hyperparameter importances."
-msgstr "绘制超参数重要性。"
+msgstr "绘制超参数重要性. "
 
 #: ../../source/reference/visualization/index.rst:29:<autosummary>:1
 msgid ""
@@ -110,7 +108,7 @@ msgstr ""
 
 #: ../../source/reference/visualization/index.rst:29:<autosummary>:1
 msgid "Plot the Pareto front of a study."
-msgstr "绘制 study 的帕累托前沿面。"
+msgstr "绘制 study 的帕累托前沿面. "
 
 #: ../../source/reference/visualization/index.rst:29:<autosummary>:1
 msgid ":obj:`optuna.visualization.plot_slice <optuna.visualization.plot_slice>`"
@@ -118,7 +116,7 @@ msgstr ""
 
 #: ../../source/reference/visualization/index.rst:29:<autosummary>:1
 msgid "Plot the parameter relationship as slice plot in a study."
-msgstr "将study中的参数关系绘制成切片图。"
+msgstr "将study中的参数关系绘制成切片图. "
 
 #: ../../source/reference/visualization/index.rst:29:<autosummary>:1
 msgid ""
@@ -128,11 +126,11 @@ msgstr ""
 
 #: ../../source/reference/visualization/index.rst:29:<autosummary>:1
 msgid "Returns whether visualization with plotly is available or not."
-msgstr "返回是否可以使用 plotly 进行可视化。"
+msgstr "返回是否可以使用 plotly 进行可视化. "
 
 #: ../../source/reference/visualization/index.rst:31
 msgid ""
 "The following :mod:`optuna.visualization.matplotlib` module uses "
 "Matplotlib as a backend."
-msgstr ":mod:`optuna.visualization.matplotlib` 模块的后端是 Matplotlib。"
+msgstr ":mod:`optuna.visualization.matplotlib` 模块的后端是 Matplotlib. "
 

@@ -26,7 +26,6 @@ msgid "Plot the parameter relationship as slice plot in a study."
 msgstr "绘制 study 中的参数关系切片图. "
 
 #: of optuna.visualization._slice.plot_slice:3
-#, fuzzy
 msgid ""
 "Note that, if a parameter contains missing values, a trial with missing "
 "values is not plotted."

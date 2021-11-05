@@ -47,7 +47,6 @@ msgid ""
 msgstr ""
 
 #: of optuna.samplers._cmaes.CmaEsSampler:27
-#, fuzzy
 msgid ""
 "If your search space contains categorical parameters, I recommend you to "
 "use :class:`~optuna.samplers.TPESampler` instead. Furthermore, there is "
@@ -55,7 +54,7 @@ msgid ""
 " sampler cannot use some trials for updating the parameters of "
 "multivariate normal distribution."
 msgstr ""
-"请注意, 此 sampler 不支持 CategoricalDistribution. 如果您的搜索空间包含分类参数, 作为代替, 建议您使用 "
+"如果您的搜索空间包含分类参数, 作为代替, 建议您使用 "
 ":class:`~optuna.samplers.TPESampler`. 此外, 并行优化设置中还有性能改进空间.  这个 sampler "
 "无法使用一些 trial 来更新多元正态分布的参数. "
 

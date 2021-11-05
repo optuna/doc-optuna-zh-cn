@@ -26,7 +26,6 @@ msgid "Plot the parameter relationship as contour plot in a study."
 msgstr "将参数关系画成等高线图."
 
 #: of optuna.visualization._contour.plot_contour:3
-#, fuzzy
 msgid ""
 "Note that, if a parameter contains missing values, a trial with missing "
 "values is not plotted."
