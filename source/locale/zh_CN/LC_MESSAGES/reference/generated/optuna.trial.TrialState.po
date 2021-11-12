@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 2.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-14 18:04-0500\n"
+"POT-Creation-Date: 2021-10-15 09:48+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,25 +21,31 @@ msgstr ""
 msgid "optuna.trial.TrialState"
 msgstr ""
 
-#: of optuna.trial.TrialState:1
+#: of optuna.trial._state.TrialState:1
 msgid "State of a :class:`~optuna.trial.Trial`."
 msgstr ""
 
-#: of optuna.trial.TrialState:5
+#: of optuna.trial._state.TrialState:5
 msgid "The :class:`~optuna.trial.Trial` is running."
 msgstr ":class:`~optuna.trial.Trial` 正在运行中."
 
-#: of optuna.trial.TrialState:9
+#: of optuna.trial._state.TrialState:9
+msgid "The :class:`~optuna.trial.Trial` is waiting and unfinished."
+msgstr ":class:`~optuna.trial.Trial` 未完成, 正在等待中."
+
+#: of optuna.trial._state.TrialState:13
 msgid "The :class:`~optuna.trial.Trial` has been finished without any error."
 msgstr ":class:`~optuna.trial.Trial` 在无错误的情况下结束了."
 
-#: of optuna.trial.TrialState:13
+#: of optuna.trial._state.TrialState:17
 msgid ""
 "The :class:`~optuna.trial.Trial` has been pruned with "
 ":class:`~optuna.exceptions.TrialPruned`."
-msgstr ":class:`~optuna.trial.Trial` 被 :class:`~optuna.exceptions.TrialPruned` 剪枝了."
+msgstr ""
+":class:`~optuna.trial.Trial` 被 :class:`~optuna.exceptions.TrialPruned` "
+"剪枝了."
 
-#: of optuna.trial.TrialState:18
+#: of optuna.trial._state.TrialState:22
 msgid "The :class:`~optuna.trial.Trial` has failed due to an uncaught error."
 msgstr "由于没有被捕获的错误 :class:`~optuna.trial.Trial` 失败了."
 

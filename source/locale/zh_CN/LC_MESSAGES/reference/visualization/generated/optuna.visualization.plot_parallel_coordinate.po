@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 2.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-20 13:35-0400\n"
+"POT-Creation-Date: 2021-10-15 09:48+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -27,7 +27,7 @@ msgstr "绘制 study 中高维参数关系."
 
 #: of optuna.visualization._parallel_coordinate.plot_parallel_coordinate:3
 msgid ""
-"Note that, If a parameter contains missing values, a trial with missing "
+"Note that, if a parameter contains missing values, a trial with missing "
 "values is not plotted."
 msgstr "注意, 如果一个参数中包含了缺失值, 则该 trial 不会被绘制."
 
@@ -68,8 +68,7 @@ msgid ""
 "A function to specify the value to display. If it is :obj:`None` and "
 "``study`` is being used for single-objective optimization, the objective "
 "values are plotted."
-msgstr  "用于指定绘制的值的函数. 如果其为 :obj:`None` 且 ``study`` 是单目标优化 study, "
-"则将绘制目标函数值."
+msgstr "用于指定绘制的值的函数. 如果其为 :obj:`None` 且 ``study`` 是单目标优化 study, 则将绘制目标函数值."
 
 #: of optuna.visualization._parallel_coordinate.plot_parallel_coordinate:33
 msgid ""

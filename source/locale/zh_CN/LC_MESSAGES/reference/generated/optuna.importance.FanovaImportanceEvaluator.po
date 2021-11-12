@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 2.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-20 13:35-0400\n"
+"POT-Creation-Date: 2021-10-15 09:48+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -30,10 +30,9 @@ msgid ""
 "Implements the fANOVA hyperparameter importance evaluation algorithm in "
 "`An Efficient Approach for Assessing Hyperparameter Importance "
 "<http://proceedings.mlr.press/v32/hutter14.html>`_."
-msgstr "实现了 "
-"`An Efficient Approach for Assessing Hyperparameter Importance "
-"<http://proceedings.mlr.press/v32/hutter14.html>`_"
-" 中的 fANOVA 超参数重要性求解算法."
+msgstr ""
+"实现了 `An Efficient Approach for Assessing Hyperparameter Importance "
+"<http://proceedings.mlr.press/v32/hutter14.html>`_ 中的 fANOVA 超参数重要性求解算法."
 
 #: of optuna.importance._fanova._evaluator.FanovaImportanceEvaluator:7
 msgid ""
@@ -41,9 +40,7 @@ msgid ""
 " the objective value given a parameter configuration. The more accurate "
 "this model is, the more reliable the importances assessed by this class "
 "are."
-msgstr "给定一个 study, fANOVA 拟合一个随机森林回归模型, 该模型基于给定的参数配置预测"
-"目标函数值. 模型越准确, 由该类评估的重要性越可靠."
-
+msgstr "给定一个 study, fANOVA 拟合一个随机森林回归模型, 该模型基于给定的参数配置预测目标函数值. 模型越准确, 由该类评估的重要性越可靠."
 
 #: of optuna.importance._fanova._evaluator.FanovaImportanceEvaluator:13
 msgid ""
@@ -57,7 +54,8 @@ msgid ""
 "class. They can be computed using "
 ":class:`~optuna.importance._fanova._fanova._Fanova` directly but is not "
 "recommended as interfaces may change without prior notice."
-msgstr "该类不支持成对和高阶重要性. 你可以用 :class:`~optuna.importance._fanova._fanova._Fanova` "
+msgstr ""
+"该类不支持成对和高阶重要性. 你可以用 :class:`~optuna.importance._fanova._fanova._Fanova` "
 "来直接计算它们, 但是我们并不推荐这么做, 因为该接口可能在没有提前提醒的情况下改变."
 
 #: of optuna.importance._fanova._evaluator.FanovaImportanceEvaluator:23
@@ -67,16 +65,15 @@ msgid ""
 "performance, it is necessary to cover a wide range of the hyperparameter "
 "search space. It is recommended to use an exploration-oriented sampler "
 "such as :class:`~optuna.samplers.RandomSampler`."
-msgstr "fANOVA 的性能依赖其采用的随机森林模型的预测性能. 为了达到高的预测性能, "
-"我们有必要覆盖一个较宽的超参数搜索空间. 我们推荐使用基于探索的 sampler, 比如 "
-":class:`~optuna.samplers.RandomSampler`."
+msgstr ""
+"fANOVA 的性能依赖其采用的随机森林模型的预测性能. 为了达到高的预测性能, 我们有必要覆盖一个较宽的超参数搜索空间. 我们推荐使用基于探索的"
+" sampler, 比如 :class:`~optuna.samplers.RandomSampler`."
 
 #: of optuna.importance._fanova._evaluator.FanovaImportanceEvaluator:30
 msgid ""
 "For how to cite the original work, please refer to "
 "https://automl.github.io/fanova/cite.html."
-msgstr "引用原作请参考 "
-"https://automl.github.io/fanova/cite.html."
+msgstr "引用原作请参考 https://automl.github.io/fanova/cite.html."
 
 #: of optuna.importance._fanova._evaluator.FanovaImportanceEvaluator
 #: optuna.importance._fanova._evaluator.FanovaImportanceEvaluator.evaluate
@@ -142,8 +139,12 @@ msgstr "需要评估的参数名列表. 当设定为 :obj:`None` 时, 所有完�
 msgid ""
 "A function to specify the value to evaluate importances. If it is "
 ":obj:`None` and ``study`` is being used for single-objective "
-"optimization, the objective values are used.  .. note::     Specify this "
-"argument if ``study`` is being used for multi-objective     optimization."
+"optimization, the objective values are used. Can also be used for other "
+"trial attributes, such as the duration, like ``target=lambda t: "
+"t.duration.total_seconds()``.  .. note::     Specify this argument if "
+"``study`` is being used for multi-objective     optimization. For "
+"example, to get the hyperparameter importance of the first     objective,"
+" use ``target=lambda t: t.values[0]`` for the target parameter."
 msgstr ""
 
 #: of
@@ -151,23 +152,30 @@ msgstr ""
 msgid ""
 "A function to specify the value to evaluate importances. If it is "
 ":obj:`None` and ``study`` is being used for single-objective "
-"optimization, the objective values are used."
-msgstr "一个用于指定求解重要性的值的函数. 如果将其设置为 :obj:`None` 并且"
-"``study`` 是一个单目标优化的话, 这个值则将使用目标函数值."
+"optimization, the objective values are used. Can also be used for other "
+"trial attributes, such as the duration, like ``target=lambda t: "
+"t.duration.total_seconds()``."
+msgstr ""
+"一个用于指定求解重要性的值的函数. 如果将其设置为 :obj:`None` 并且 ``study`` 是一个单目标优化的话, "
+"这个值则将使用目标函数值. 也可以被用于其他 trial 属性, 比如 trial 的持续时间, 像 ``target=lambda t: "
+"t.duration.total_seconds()``."
 
 #: of
-#: optuna.importance._fanova._evaluator.FanovaImportanceEvaluator.evaluate:21
+#: optuna.importance._fanova._evaluator.FanovaImportanceEvaluator.evaluate:22
 msgid ""
 "Specify this argument if ``study`` is being used for multi-objective "
-"optimization."
-msgstr "如果 ``study`` 是多目标优化的话, 就要指定这个参数."
+"optimization. For example, to get the hyperparameter importance of the "
+"first objective, use ``target=lambda t: t.values[0]`` for the target "
+"parameter."
+msgstr "如果 ``study`` 是用于多目标优化的话, 就需要指定该参数. 例如, 要获得第一个目标函数的超参数重要性的话, "
+"就把目标参数设置为 ``target=lambda t: t.values[0]``."
 
 #: of optuna.importance._fanova._evaluator.FanovaImportanceEvaluator.evaluate
 msgid "返回"
 msgstr ""
 
 #: of
-#: optuna.importance._fanova._evaluator.FanovaImportanceEvaluator.evaluate:24
+#: optuna.importance._fanova._evaluator.FanovaImportanceEvaluator.evaluate:26
 msgid ""
 "An :class:`collections.OrderedDict` where the keys are parameter names "
 "and the values are assessed importances."
@@ -178,7 +186,7 @@ msgid "引发"
 msgstr ""
 
 #: of
-#: optuna.importance._fanova._evaluator.FanovaImportanceEvaluator.evaluate:27
+#: optuna.importance._fanova._evaluator.FanovaImportanceEvaluator.evaluate:29
 msgid ""
 "If ``target`` is :obj:`None` and ``study`` is being used for multi-"
 "objective     optimization."
@@ -187,4 +195,21 @@ msgstr "如果 ``target`` 是 :obj:`None` 且 ``study`` 为多目标优化的话
 #: of optuna.importance._fanova._evaluator.FanovaImportanceEvaluator.evaluate
 msgid "返回类型"
 msgstr ""
+
+#~ msgid ""
+#~ "A function to specify the value to"
+#~ " evaluate importances. If it is "
+#~ ":obj:`None` and ``study`` is being used"
+#~ " for single-objective optimization, the "
+#~ "objective values are used.  .. note::"
+#~ "     Specify this argument if ``study`` "
+#~ "is being used for multi-objective"
+#~ "     optimization."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Specify this argument if ``study`` is"
+#~ " being used for multi-objective "
+#~ "optimization."
+#~ msgstr "如果 ``study`` 是多目标优化的话, 就要指定这个参数."
 

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 1.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-06 18:29-0400\n"
+"POT-Creation-Date: 2021-10-15 09:48+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,7 +22,6 @@ msgid "optuna.storages"
 msgstr ""
 
 #: ../../source/reference/storages.rst:6
-#, fuzzy
 msgid ""
 "The :mod:`~optuna.storages` module defines a "
 ":class:`~optuna.storages.BaseStorage` class which abstracts a backend "
@@ -36,21 +35,41 @@ msgstr ""
 "类，它抽象了一个后端数据库，并提供了库内部的接口来读/写study和trial的历史。库用户如果希望使用除默认内存存储以外的存储方案，应该使用下面文档中的"
 " :class:`~optuna.storages.BaseStorage` 子类之一。"
 
-#: ../../source/reference/storages.rst:13:<autosummary>:1
+#: ../../source/reference/storages.rst:15:<autosummary>:1
 msgid ":obj:`optuna.storages.RDBStorage <optuna.storages.RDBStorage>`"
 msgstr ""
 
-#: ../../source/reference/storages.rst:13:<autosummary>:1
+#: ../../source/reference/storages.rst:15:<autosummary>:1
 msgid "Storage class for RDB backend."
 msgstr "RDB 后端的存储类。"
 
-#: ../../source/reference/storages.rst:13:<autosummary>:1
+#: ../../source/reference/storages.rst:15:<autosummary>:1
 msgid ":obj:`optuna.storages.RedisStorage <optuna.storages.RedisStorage>`"
 msgstr ""
 
-#: ../../source/reference/storages.rst:13:<autosummary>:1
+#: ../../source/reference/storages.rst:15:<autosummary>:1
 msgid "Storage class for Redis backend."
 msgstr "Redis 后端的存储类。"
+
+#: ../../source/reference/storages.rst:15:<autosummary>:1
+msgid ""
+":obj:`optuna.storages.RetryFailedTrialCallback "
+"<optuna.storages.RetryFailedTrialCallback>`"
+msgstr ""
+
+#: ../../source/reference/storages.rst:15:<autosummary>:1
+msgid "Retry a failed trial up to a maximum number of times."
+msgstr ""
+
+#: ../../source/reference/storages.rst:15:<autosummary>:1
+msgid ""
+":obj:`optuna.storages.fail_stale_trials "
+"<optuna.storages.fail_stale_trials>`"
+msgstr ""
+
+#: ../../source/reference/storages.rst:15:<autosummary>:1
+msgid "Fail stale trials and run their failure callbacks."
+msgstr ""
 
 #~ msgid "Example"
 #~ msgstr ""

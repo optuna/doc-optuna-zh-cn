@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 2.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-26 14:44-0400\n"
+"POT-Creation-Date: 2021-10-15 09:48+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -28,48 +28,58 @@ msgid ""
 " (1) from :mod:`optuna.study`, functions regarding the Study lifecycle, "
 "and (2) from :mod:`optuna.exceptions`, the TrialPruned Exception raised "
 "when a trial is pruned."
-msgstr "在 optuna 被用在其他模块中时，:mod:`optuna` 模块主要作为 Optuna 的基础功能的别名来使用。目前"
-"有两个模块有别名：(1) :mod:`optuna.study`，包含和 Study 生命周期有关的函数，(2) :mod:`optuna.exceptions`，是当trial 被剪枝时抛出的TrialPruned异常。"
+msgstr ""
+"在 optuna 被用在其他模块中时，:mod:`optuna` 模块主要作为 Optuna 的基础功能的别名来使用。目前有两个模块有别名：(1)"
+" :mod:`optuna.study`，包含和 Study 生命周期有关的函数，(2) "
+":mod:`optuna.exceptions`，是当trial 被剪枝时抛出的TrialPruned异常。"
 
-#: ../../source/reference/optuna.rst:16:<autosummary>:1
+#: ../../source/reference/optuna.rst:17:<autosummary>:1
 msgid ":obj:`optuna.create_study <optuna.create_study>`"
 msgstr ""
 
-#: ../../source/reference/optuna.rst:16:<autosummary>:1
+#: ../../source/reference/optuna.rst:17:<autosummary>:1
 msgid "Create a new :class:`~optuna.study.Study`."
 msgstr "创建新 :class:`~optuna.study.Study`."
 
-#: ../../source/reference/optuna.rst:16:<autosummary>:1
+#: ../../source/reference/optuna.rst:17:<autosummary>:1
 msgid ":obj:`optuna.load_study <optuna.load_study>`"
 msgstr ""
 
-#: ../../source/reference/optuna.rst:16:<autosummary>:1
+#: ../../source/reference/optuna.rst:17:<autosummary>:1
 msgid ""
 "Load the existing :class:`~optuna.study.Study` that has the specified "
 "name."
 msgstr "加载指定名字的 :class:`~optuna.study.Study`。"
 
-#: ../../source/reference/optuna.rst:16:<autosummary>:1
+#: ../../source/reference/optuna.rst:17:<autosummary>:1
 msgid ":obj:`optuna.delete_study <optuna.delete_study>`"
 msgstr ""
 
-#: ../../source/reference/optuna.rst:16:<autosummary>:1
+#: ../../source/reference/optuna.rst:17:<autosummary>:1
 msgid "Delete a :class:`~optuna.study.Study` object."
 msgstr "删除 :class:`~optuna.study.Study` 对象。"
 
-#: ../../source/reference/optuna.rst:16:<autosummary>:1
+#: ../../source/reference/optuna.rst:17:<autosummary>:1
+msgid ":obj:`optuna.copy_study <optuna.copy_study>`"
+msgstr ""
+
+#: ../../source/reference/optuna.rst:17:<autosummary>:1
+msgid "Copy study from one storage to another."
+msgstr "将一个存储中的 study 复制到另一个存储中."
+
+#: ../../source/reference/optuna.rst:17:<autosummary>:1
 msgid ":obj:`optuna.get_all_study_summaries <optuna.get_all_study_summaries>`"
 msgstr ""
 
-#: ../../source/reference/optuna.rst:16:<autosummary>:1
+#: ../../source/reference/optuna.rst:17:<autosummary>:1
 msgid "Get all history of studies stored in a specified storage."
 msgstr "获取指定存储内所有 study的历史记录。"
 
-#: ../../source/reference/optuna.rst:16:<autosummary>:1
+#: ../../source/reference/optuna.rst:17:<autosummary>:1
 msgid ":obj:`optuna.TrialPruned <optuna.TrialPruned>`"
 msgstr ""
 
-#: ../../source/reference/optuna.rst:16:<autosummary>:1
+#: ../../source/reference/optuna.rst:17:<autosummary>:1
 msgid "Exception for pruned trials."
 msgstr "被剪枝的 trial 异常。"
 

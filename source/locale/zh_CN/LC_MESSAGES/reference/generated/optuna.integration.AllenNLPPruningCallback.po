@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 2.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-20 13:35-0400\n"
+"POT-Creation-Date: 2021-10-15 09:48+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,59 +21,65 @@ msgstr ""
 msgid "optuna.integration.AllenNLPPruningCallback"
 msgstr ""
 
-#: of optuna.integration.allennlp.AllenNLPPruningCallback:1
+#: of optuna.integration.allennlp._pruner.AllenNLPPruningCallback:1
 msgid "AllenNLP callback to prune unpromising trials."
 msgstr ""
 
-#: of optuna.integration.allennlp.AllenNLPPruningCallback:3
+#: of optuna.integration.allennlp._pruner.AllenNLPPruningCallback:3
 msgid ""
-"See `the example <https://github.com/optuna/optuna/blob/master/ "
-"examples/allennlp/allennlp_simple.py>`__ if you want to add a pruning "
-"callback which observes a metric."
+"See `the example <https://github.com/optuna/optuna-examples/tree/main/ "
+"allennlp/allennlp_simple.py>`__ if you want to add a pruning callback "
+"which observes a metric."
 msgstr ""
 
-#: of optuna.integration.allennlp.AllenNLPPruningCallback:7
+#: of optuna.integration.allennlp._pruner.AllenNLPPruningCallback:7
 msgid ""
 "You can also see the tutorial of our AllenNLP integration on `AllenNLP "
 "Guide <https://guide.allennlp.org/hyperparameter-optimization>`_."
 msgstr ""
 
-#: of optuna.integration.allennlp.AllenNLPPruningCallback:11
+#: of optuna.integration.allennlp._pruner.AllenNLPPruningCallback:11
 msgid ""
 "When :class:`~optuna.integration.AllenNLPPruningCallback` is instantiated"
 " in Python script, trial and monitor are mandatory."
 msgstr ""
 
-#: of optuna.integration.allennlp.AllenNLPPruningCallback:14
+#: of optuna.integration.allennlp._pruner.AllenNLPPruningCallback:14
 msgid ""
 "On the other hand, when "
 ":class:`~optuna.integration.AllenNLPPruningCallback` is used with "
 ":class:`~optuna.integration.AllenNLPExecutor`, ``trial`` and ``monitor`` "
-"would be ``None``. :class:`~optuna.integration.AllenNLPExecutor` sets "
+"would be :obj:`None`. :class:`~optuna.integration.AllenNLPExecutor` sets "
 "environment variables for a study name, trial id, monitor, and storage. "
 "Then :class:`~optuna.integration.AllenNLPPruningCallback` loads them to "
 "restore ``trial`` and ``monitor``."
 msgstr ""
 
-#: of optuna.integration.allennlp.AllenNLPPruningCallback
-#: optuna.integration.allennlp.AllenNLPPruningCallback.on_epoch
-#: optuna.integration.allennlp.TrainerCallback.register
+#: of optuna.integration.allennlp._pruner.AllenNLPPruningCallback:22
+msgid ""
+"Currently, build-in pruners are supported except for "
+":class:`~optuna.pruners.PatientPruner`."
+msgstr ""
+
+#: of optuna.integration.allennlp._pruner.AllenNLPPruningCallback
+#: optuna.integration.allennlp._pruner.AllenNLPPruningCallback.on_epoch
+#: optuna.integration.allennlp._pruner.TrainerCallback.register
 msgid "参数"
 msgstr ""
 
-#: of optuna.integration.allennlp.AllenNLPPruningCallback:21
+#: of optuna.integration.allennlp._pruner.AllenNLPPruningCallback:25
 msgid ""
 "A :class:`~optuna.trial.Trial` corresponding to the current evaluation of"
 " the objective function."
 msgstr ""
 
-#: of optuna.integration.allennlp.AllenNLPPruningCallback:23
+#: of optuna.integration.allennlp._pruner.AllenNLPPruningCallback:27
 msgid ""
 "An evaluation metric for pruning, e.g. ``validation_loss`` or "
 "``validation_accuracy``."
 msgstr ""
 
-#: of optuna.integration.allennlp.AllenNLPPruningCallback:27
+#: of optuna.integration.allennlp._pruner.AllenNLPPruningCallback:31
 msgid ""
 "Added in v2.0.0 as an experimental feature. The interface may change in "
 "newer versions without prior notice. See "
@@ -85,52 +91,52 @@ msgid "Methods"
 msgstr ""
 
 #: of
-#: optuna.integration.allennlp.AllenNLPPruningCallback.on_epoch:1:<autosummary>:1
+#: optuna.integration.allennlp._pruner.AllenNLPPruningCallback.on_epoch:1:<autosummary>:1
 msgid ""
 ":obj:`on_epoch <optuna.integration.AllenNLPPruningCallback.on_epoch>`\\ "
 "\\(trainer\\, metrics\\, epoch\\[\\, is\\_primary\\]\\)"
 msgstr ""
 
-#: of optuna.integration.allennlp.AllenNLPPruningCallback.on_epoch:1
-#: optuna.integration.allennlp.AllenNLPPruningCallback.on_epoch:1:<autosummary>:1
+#: of optuna.integration.allennlp._pruner.AllenNLPPruningCallback.on_epoch:1
+#: optuna.integration.allennlp._pruner.AllenNLPPruningCallback.on_epoch:1:<autosummary>:1
 msgid "Check if a training reaches saturation."
 msgstr ""
 
 #: of
-#: optuna.integration.allennlp.AllenNLPPruningCallback.on_epoch:1:<autosummary>:1
+#: optuna.integration.allennlp._pruner.AllenNLPPruningCallback.on_epoch:1:<autosummary>:1
 msgid ""
 ":obj:`register <optuna.integration.AllenNLPPruningCallback.register>`\\ "
 "\\(\\*args\\, \\*\\*kwargs\\)"
 msgstr ""
 
 #: of
-#: optuna.integration.allennlp.AllenNLPPruningCallback.on_epoch:1:<autosummary>:1
-#: optuna.integration.allennlp.TrainerCallback.register:1
+#: optuna.integration.allennlp._pruner.AllenNLPPruningCallback.on_epoch:1:<autosummary>:1
+#: optuna.integration.allennlp._pruner.TrainerCallback.register:1
 msgid "Stub method for `TrainerCallback.register`."
 msgstr ""
 
-#: of optuna.integration.allennlp.AllenNLPPruningCallback.on_epoch:3
+#: of optuna.integration.allennlp._pruner.AllenNLPPruningCallback.on_epoch:3
 msgid "AllenNLP's trainer"
 msgstr ""
 
-#: of optuna.integration.allennlp.AllenNLPPruningCallback.on_epoch:4
+#: of optuna.integration.allennlp._pruner.AllenNLPPruningCallback.on_epoch:4
 msgid "Dictionary of metrics."
 msgstr ""
 
-#: of optuna.integration.allennlp.AllenNLPPruningCallback.on_epoch:5
+#: of optuna.integration.allennlp._pruner.AllenNLPPruningCallback.on_epoch:5
 msgid "Number of current epoch."
 msgstr ""
 
-#: of optuna.integration.allennlp.AllenNLPPruningCallback.on_epoch:6
+#: of optuna.integration.allennlp._pruner.AllenNLPPruningCallback.on_epoch:6
 msgid "A flag for AllenNLP internal."
 msgstr ""
 
-#: of optuna.integration.allennlp.AllenNLPPruningCallback.on_epoch
-#: optuna.integration.allennlp.TrainerCallback.register
+#: of optuna.integration.allennlp._pruner.AllenNLPPruningCallback.on_epoch
+#: optuna.integration.allennlp._pruner.TrainerCallback.register
 msgid "返回类型"
 msgstr ""
 
-#: of optuna.integration.allennlp.TrainerCallback.register:3
+#: of optuna.integration.allennlp._pruner.TrainerCallback.register:3
 msgid ""
 "This method has the same signature as `Registrable.register "
 "<https://docs.allennlp.org/master/ api/common/registrable/#registrable>`_"
@@ -146,5 +152,27 @@ msgstr ""
 #~ msgstr ""
 
 #~ msgid "Stub method for `EpochCallback.register`."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "See `the example "
+#~ "<https://github.com/optuna/optuna/blob/master/ "
+#~ "examples/allennlp/allennlp_simple.py>`__ if you want"
+#~ " to add a pruning callback which "
+#~ "observes a metric."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "On the other hand, when "
+#~ ":class:`~optuna.integration.AllenNLPPruningCallback` is "
+#~ "used with :class:`~optuna.integration.AllenNLPExecutor`,"
+#~ " ``trial`` and ``monitor`` would be "
+#~ "``None``. :class:`~optuna.integration.AllenNLPExecutor` "
+#~ "sets environment variables for a study"
+#~ " name, trial id, monitor, and "
+#~ "storage. Then "
+#~ ":class:`~optuna.integration.AllenNLPPruningCallback` loads "
+#~ "them to restore ``trial`` and "
+#~ "``monitor``."
 #~ msgstr ""
 

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 2.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-14 18:04-0500\n"
+"POT-Creation-Date: 2021-10-15 09:48+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,29 +21,33 @@ msgstr ""
 msgid "optuna.integration.MLflowCallback"
 msgstr ""
 
-#: of optuna.integration.MLflowCallback:1
+#: of optuna.integration.mlflow.MLflowCallback:1
 msgid "Callback to track Optuna trials with MLflow."
 msgstr ""
 
-#: of optuna.integration.MLflowCallback:3
+#: of optuna.integration.mlflow.MLflowCallback:3
 msgid ""
 "This callback adds relevant information that is tracked by Optuna to "
 "MLflow. The MLflow experiment will be named after the Optuna study name."
 msgstr ""
 
-#: of optuna.integration.MLflowCallback:8
+#: of optuna.integration.mlflow.MLflowCallback:8
 msgid "示例"
 msgstr ""
 
-#: of optuna.integration.MLflowCallback:9
+#: of optuna.integration.mlflow.MLflowCallback:9
 msgid "Add MLflow callback to Optuna optimization."
 msgstr ""
 
-#: of optuna.integration.MLflowCallback
+#: of optuna.integration.mlflow.MLflowCallback:50
+msgid "Add additional logging to MLflow"
+msgstr ""
+
+#: of optuna.integration.mlflow.MLflowCallback
 msgid "参数"
 msgstr ""
 
-#: of optuna.integration.MLflowCallback:50
+#: of optuna.integration.mlflow.MLflowCallback:83
 msgid ""
 "The URI of the MLflow tracking server.  Please refer to "
 "`mlflow.set_tracking_uri "
@@ -51,42 +55,111 @@ msgid ""
 " for more details."
 msgstr ""
 
-#: of optuna.integration.MLflowCallback:50
+#: of optuna.integration.mlflow.MLflowCallback:83
 msgid "The URI of the MLflow tracking server."
 msgstr ""
 
-#: of optuna.integration.MLflowCallback:52
+#: of optuna.integration.mlflow.MLflowCallback:85
 msgid ""
 "Please refer to `mlflow.set_tracking_uri "
 "<https://www.mlflow.org/docs/latest/python_api/mlflow.html#mlflow.set_tracking_uri>`_"
 " for more details."
 msgstr ""
 
-#: of optuna.integration.MLflowCallback:55
+#: of optuna.integration.mlflow.MLflowCallback:88
 msgid ""
-"Name of the metric. Since the metric itself is just a number, "
-"`metric_name` can be used to give it a name. So you know later if it was "
-"roc-auc or accuracy."
+"Name assigned to optimized metric. In case of multi-objective "
+"optimization, list of names can be passed. Those names will be assigned "
+"to metrics in the order returned by objective function. If single name is"
+" provided, or this argument is left to default value, it will be "
+"broadcasted to each objective with a number suffix in order returned by "
+"objective function e.g. two objectives and default metric name will be "
+"logged as ``value_0`` and ``value_1``."
 msgstr ""
 
-#: of optuna.integration.MLflowCallback:58
+#: of optuna.integration.mlflow.MLflowCallback:95
 msgid ""
 "Flag indicating whether or not trials should be logged as nested runs. "
 "This is often helpful for aggregating trials to a particular study, under"
 " a given experiment."
 msgstr ""
 
-#: of optuna.integration.MLflowCallback:61
+#: of optuna.integration.mlflow.MLflowCallback:98
 msgid ""
 "Flag indicating whether or not to add the study's user attrs to the "
 "mlflow trial as tags. Please note that when this flag is set, key value "
-"pairs in study.user_attrs will supersede existing tags."
+"pairs in :attr:`~optuna.study.Study.user_attrs` will supersede existing "
+"tags."
 msgstr ""
 
-#: of optuna.integration.MLflowCallback:66
+#: of optuna.integration.mlflow.MLflowCallback:104
 msgid ""
 "Added in v1.4.0 as an experimental feature. The interface may change in "
 "newer versions without prior notice. See "
 "https://github.com/optuna/optuna/releases/tag/v1.4.0."
 msgstr ""
+
+#: ../../source/reference/generated/optuna.integration.MLflowCallback.rst:12
+msgid "Methods"
+msgstr ""
+
+#: of
+#: optuna.integration.mlflow.MLflowCallback.track_in_mlflow:1:<autosummary>:1
+msgid ""
+":obj:`track_in_mlflow "
+"<optuna.integration.MLflowCallback.track_in_mlflow>`\\ \\(\\)"
+msgstr ""
+
+#: of optuna.integration.mlflow.MLflowCallback.track_in_mlflow:1
+#: optuna.integration.mlflow.MLflowCallback.track_in_mlflow:1:<autosummary>:1
+msgid "Decorator for using MLflow logging in the objective function."
+msgstr ""
+
+#: of optuna.integration.mlflow.MLflowCallback.track_in_mlflow:3
+msgid ""
+"This decorator enables the extension of MLflow logging provided by the "
+"callback."
+msgstr ""
+
+#: of optuna.integration.mlflow.MLflowCallback.track_in_mlflow:5
+msgid ""
+"All information logged in the decorated objective function will be added "
+"to the MLflow run for the trial created by the callback."
+msgstr ""
+
+#: of optuna.integration.mlflow.MLflowCallback.track_in_mlflow
+msgid "返回"
+msgstr ""
+
+#: of optuna.integration.mlflow.MLflowCallback.track_in_mlflow:8
+msgid "Objective function with tracking to MLflow enabled."
+msgstr ""
+
+#: of optuna.integration.mlflow.MLflowCallback.track_in_mlflow
+msgid "返回类型"
+msgstr ""
+
+#: of optuna.integration.mlflow.MLflowCallback.track_in_mlflow:12
+msgid ""
+"Added in v2.9.0 as an experimental feature. The interface may change in "
+"newer versions without prior notice. See "
+"https://github.com/optuna/optuna/releases/tag/v2.9.0."
+msgstr ""
+
+#~ msgid ""
+#~ "Name of the metric. Since the "
+#~ "metric itself is just a number, "
+#~ "`metric_name` can be used to give "
+#~ "it a name. So you know later "
+#~ "if it was roc-auc or accuracy."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Flag indicating whether or not to "
+#~ "add the study's user attrs to the"
+#~ " mlflow trial as tags. Please note"
+#~ " that when this flag is set, "
+#~ "key value pairs in study.user_attrs will"
+#~ " supersede existing tags."
+#~ msgstr ""
 

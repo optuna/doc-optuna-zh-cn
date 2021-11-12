@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 2.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-20 13:35-0400\n"
+"POT-Creation-Date: 2021-10-15 09:48+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -33,9 +33,10 @@ msgid ""
 " depend on :class:`~optuna.study.Study`, and it is useful for deploying "
 "optimization results."
 msgstr ""
-"该对象有和 :class:`~optuna.trial.Trial` 一样的方法, 而且其提供预先定义好的参数值. 这些参数值可以"
-"在 :class:`~optuna.trial.FixedTrial` 的创建阶段指定. 和 :class:`~optuna.trial.Trial` 不同, "
-":class:`~optuna.trial.FrozenTrial` 不依赖于 :class:`~optuna.study.Study`, 所以能被用于部署优化结果."
+"该对象有和 :class:`~optuna.trial.Trial` 一样的方法, 而且其提供预先定义好的参数值. 这些参数值可以在 "
+":class:`~optuna.trial.FixedTrial` 的创建阶段指定. 和 :class:`~optuna.trial.Trial`"
+" 不同, :class:`~optuna.trial.FrozenTrial` 不依赖于 "
+":class:`~optuna.study.Study`, 所以能被用于部署优化结果."
 
 #: of optuna.trial._frozen.FrozenTrial:9
 msgid "示例"
@@ -47,62 +48,61 @@ msgstr "利用优化后的参数对一个目标函数重新求值."
 
 #: of optuna.trial._frozen.FrozenTrial:28
 msgid ""
-"Attributes are set in :func:`optuna.Study.optimize`, but several "
-"attributes can be updated after the optimization. That means such "
-"attributes are overwritten by the re-evaluation if your objective updates"
-" attributes of :class:`~optuna.trial.Trial`."
-msgstr "属性通过 :func:`optuna.Study.optimize` 来设定, 但是其中一些属性可以在优化后被更新. "
-"这意味着, 如果你更新了 :class:`~optuna.trial.Trial` 的属性, 此类属性会被覆盖."
+"Instances are mutable, despite the name. For instance, "
+":func:`~optuna.trial.FrozenTrial.set_user_attr` will update user "
+"attributes of objects in-place."
+msgstr ""
 
-#: of optuna.trial._frozen.FrozenTrial:34
+#: of optuna.trial._frozen.FrozenTrial:33
 msgid "Example:"
 msgstr ""
 
-#: of optuna.trial._frozen.FrozenTrial:36
+#: of optuna.trial._frozen.FrozenTrial:35
 msgid "Overwritten attributes."
 msgstr "覆盖属性."
 
-#: of optuna.trial._frozen.FrozenTrial:68
+#: of optuna.trial._frozen.FrozenTrial:67
 msgid ""
 "Please refer to :class:`~optuna.trial.Trial` for details of methods and "
 "properties."
 msgstr "方法的细节和属性请参考 :class:`~optuna.trial.Trial`."
 
-#: of optuna.trial._frozen.FrozenTrial:73
+#: of optuna.trial._frozen.FrozenTrial:72
 msgid ""
 "Unique and consecutive number of :class:`~optuna.trial.Trial` for each "
 ":class:`~optuna.study.Study`. Note that this field uses zero-based "
 "numbering."
-msgstr "每一个 :class:`~optuna.study.Study` 所有的独特和连续的 :class:`~optuna.trial.Trial` 号. "
-"注意, 这个域采用从零开始的计数."
+msgstr ""
+"每一个 :class:`~optuna.study.Study` 所有的独特和连续的 :class:`~optuna.trial.Trial` "
+"号. 注意, 这个域采用从零开始的计数."
 
-#: of optuna.trial._frozen.FrozenTrial:78
+#: of optuna.trial._frozen.FrozenTrial:77
 msgid ":class:`TrialState` of the :class:`~optuna.trial.Trial`."
 msgstr ""
 
-#: of optuna.trial._frozen.FrozenTrial:82
+#: of optuna.trial._frozen.FrozenTrial:81
 msgid "Objective value of the :class:`~optuna.trial.Trial`."
 msgstr ":class:`~optuna.trial.Trial` 的目标函数值."
 
-#: of optuna.trial._frozen.FrozenTrial:86
+#: of optuna.trial._frozen.FrozenTrial:85
 msgid ""
 "Sequence of objective values of the :class:`~optuna.trial.Trial`. The "
 "length is greater than 1 if the problem is multi-objective optimization."
-msgstr "Trial 目标函数值的序列. 如果该问题为多目标优化, 则其长度大于1."
+msgstr ":class:`~optuna.trial.Trial` 目标函数值的序列. 如果该问题为多目标优化, 则其长度大于1."
 
-#: of optuna.trial._frozen.FrozenTrial:91
+#: of optuna.trial._frozen.FrozenTrial:90
 msgid "Datetime where the :class:`~optuna.trial.Trial` started."
 msgstr ":class:`~optuna.trial.Trial` 的开始时间. "
 
-#: of optuna.trial._frozen.FrozenTrial:95
+#: of optuna.trial._frozen.FrozenTrial:94
 msgid "Datetime where the :class:`~optuna.trial.Trial` finished."
 msgstr ":class:`~optuna.trial.Trial` 的结束时间. "
 
-#: of optuna.trial._frozen.FrozenTrial:99
+#: of optuna.trial._frozen.FrozenTrial:98
 msgid "Dictionary that contains suggested parameters."
 msgstr "包含了 suggested 参数集的字典. "
 
-#: of optuna.trial._frozen.FrozenTrial:103
+#: of optuna.trial._frozen.FrozenTrial:102
 msgid ""
 "Dictionary that contains the attributes of the "
 ":class:`~optuna.trial.Trial` set with "
@@ -111,7 +111,7 @@ msgstr ""
 "该字典包含了一个 :class:`~optuna.trial.Trial` 中所有用 "
 ":func:`optuna.trial.Trial.set_user_attr` 来设置的属性. "
 
-#: of optuna.trial._frozen.FrozenTrial:108
+#: of optuna.trial._frozen.FrozenTrial:107
 msgid "Intermediate objective values set with :func:`optuna.trial.Trial.report`."
 msgstr "用 :func:`optuna.trial.Trial.report` 设置的中间目标函数值. "
 
@@ -119,7 +119,7 @@ msgstr "用 :func:`optuna.trial.Trial.report` 设置的中间目标函数值. "
 msgid "引发"
 msgstr ""
 
-#: of optuna.trial._frozen.FrozenTrial:110
+#: of optuna.trial._frozen.FrozenTrial:109
 msgid "If both ``value`` and ``values`` are specified."
 msgstr "如果同时指定了 ``value`` 和 ``values``."
 
@@ -290,9 +290,10 @@ msgid ""
 "pruners assume that ``step`` starts at zero. For example, "
 ":class:`~optuna.pruners.MedianPruner` simply checks if ``step`` is less "
 "than ``n_warmup_steps`` as the warmup mechanism."
-msgstr "Trial 步骤（例如, 神经网络训练的 epoch). "
-"注意 pruner 假设 ``step`` 从零计数. 比如, :class:`~optuna.pruners.MedianPruner` 仅"
-"将检查 ``step``  是否比 ``n_warmup_steps`` 小作为热身机制."
+msgstr ""
+"Trial 步骤（例如, 神经网络训练的 epoch). 注意 pruner 假设 ``step`` 从零计数. 比如, "
+":class:`~optuna.pruners.MedianPruner` 仅将检查 ``step``  是否比 "
+"``n_warmup_steps`` 小作为热身机制."
 
 #: of optuna.trial._frozen.FrozenTrial.report
 #: optuna.trial._frozen.FrozenTrial.should_prune
@@ -312,4 +313,17 @@ msgstr ":class:`~optuna.trial.FrozenTrial` 只对参数的一个组合进行采�
 #: of optuna.trial._frozen.FrozenTrial.should_prune:8
 msgid ":obj:`False`."
 msgstr ""
+
+#~ msgid ""
+#~ "Attributes are set in "
+#~ ":func:`optuna.Study.optimize`, but several "
+#~ "attributes can be updated after the "
+#~ "optimization. That means such attributes "
+#~ "are overwritten by the re-evaluation "
+#~ "if your objective updates attributes of"
+#~ " :class:`~optuna.trial.Trial`."
+#~ msgstr ""
+#~ "属性通过 :func:`optuna.Study.optimize` 来设定, "
+#~ "但是其中一些属性可以在优化后被更新. 这意味着, 如果你更新了 "
+#~ ":class:`~optuna.trial.Trial` 的属性, 此类属性会被覆盖."
 

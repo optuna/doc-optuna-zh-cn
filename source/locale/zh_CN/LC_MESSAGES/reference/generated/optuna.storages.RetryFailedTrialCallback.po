@@ -1,0 +1,100 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018, Optuna Contributors.
+# This file is distributed under the same license as the Optuna package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Optuna 2.10.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-10-15 09:48+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../source/reference/generated/optuna.storages.RetryFailedTrialCallback.rst:2
+msgid "optuna.storages.RetryFailedTrialCallback"
+msgstr ""
+
+#: of optuna._callbacks.RetryFailedTrialCallback:1
+msgid "Retry a failed trial up to a maximum number of times."
+msgstr ""
+
+#: of optuna._callbacks.RetryFailedTrialCallback:3
+msgid ""
+"When a trial fails, this callback can be used with the "
+":class:`optuna.storage` class to recreate the trial in "
+":obj:`TrialState.WAITING` to queue up the trial to be run again."
+msgstr ""
+
+#: of optuna._callbacks.RetryFailedTrialCallback:6
+msgid ""
+"This is helpful in environments where trials may fail due to external "
+"conditions, such as being preempted by other processes."
+msgstr ""
+
+#: of optuna._callbacks.RetryFailedTrialCallback:9
+msgid "Usage:"
+msgstr ""
+
+#: of optuna._callbacks.RetryFailedTrialCallback
+#: optuna._callbacks.RetryFailedTrialCallback.retried_trial_number
+msgid "参数"
+msgstr ""
+
+#: of optuna._callbacks.RetryFailedTrialCallback:27
+msgid ""
+"The max number of times a trial can be retried. Must be set to "
+":obj:`None` or an integer. If set to the default value of :obj:`None` "
+"will retry indefinitely. If set to an integer, will only retry that many "
+"times."
+msgstr ""
+
+#: of optuna._callbacks.RetryFailedTrialCallback:32
+#: optuna._callbacks.RetryFailedTrialCallback.retried_trial_number:9
+msgid ""
+"Added in v2.8.0 as an experimental feature. The interface may change in "
+"newer versions without prior notice. See "
+"https://github.com/optuna/optuna/releases/tag/v2.8.0."
+msgstr ""
+
+#: ../../source/reference/generated/optuna.storages.RetryFailedTrialCallback.rst:12
+msgid "Methods"
+msgstr ""
+
+#: of
+#: optuna._callbacks.RetryFailedTrialCallback.retried_trial_number:1:<autosummary>:1
+msgid ""
+":obj:`retried_trial_number "
+"<optuna.storages.RetryFailedTrialCallback.retried_trial_number>`\\ "
+"\\(trial\\)"
+msgstr ""
+
+#: of optuna._callbacks.RetryFailedTrialCallback.retried_trial_number:1
+#: optuna._callbacks.RetryFailedTrialCallback.retried_trial_number:1:<autosummary>:1
+msgid "Return the number of the trial being retried."
+msgstr ""
+
+#: of optuna._callbacks.RetryFailedTrialCallback.retried_trial_number:3
+msgid "The trial object."
+msgstr ""
+
+#: of optuna._callbacks.RetryFailedTrialCallback.retried_trial_number
+msgid "返回"
+msgstr ""
+
+#: of optuna._callbacks.RetryFailedTrialCallback.retried_trial_number:5
+msgid ""
+"The number of the first failed trial. If not retry of a previous trial, "
+"returns :obj:`None`."
+msgstr ""
+
+#: of optuna._callbacks.RetryFailedTrialCallback.retried_trial_number
+msgid "返回类型"
+msgstr ""
+

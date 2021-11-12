@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 2.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-20 13:35-0400\n"
+"POT-Creation-Date: 2021-10-15 09:48+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -61,7 +61,14 @@ msgid ""
 "<http://proceedings.mlr.press/v28/bergstra13.pdf>`_"
 msgstr ""
 
-#: of optuna.samplers._tpe.sampler.TPESampler:19
+#: of optuna.samplers._tpe.sampler.TPESampler:17
+msgid ""
+"`Multiobjective tree-structured parzen estimator for computationally "
+"expensive optimization problems "
+"<https://dl.acm.org/doi/10.1145/3377930.3389817>`_"
+msgstr ""
+
+#: of optuna.samplers._tpe.sampler.TPESampler:21
 #: optuna.samplers._tpe.sampler.TPESampler.hyperopt_parameters:7
 msgid "示例"
 msgstr ""
@@ -74,7 +81,7 @@ msgstr ""
 msgid "参数"
 msgstr ""
 
-#: of optuna.samplers._tpe.sampler.TPESampler:34
+#: of optuna.samplers._tpe.sampler.TPESampler:36
 msgid ""
 "Enhance the stability of Parzen estimator by imposing a Gaussian prior "
 "when :obj:`True`. The prior is only effective if the sampling "
@@ -86,7 +93,7 @@ msgid ""
 ":class:`~optuna.distributions.IntLogUniformDistribution`."
 msgstr ""
 
-#: of optuna.samplers._tpe.sampler.TPESampler:41
+#: of optuna.samplers._tpe.sampler.TPESampler:43
 msgid ""
 "The weight of the prior. This argument is used in "
 ":class:`~optuna.distributions.UniformDistribution`, "
@@ -97,37 +104,52 @@ msgid ""
 ":class:`~optuna.distributions.CategoricalDistribution`."
 msgstr ""
 
-#: of optuna.samplers._tpe.sampler.TPESampler:48
+#: of optuna.samplers._tpe.sampler.TPESampler:50
 msgid ""
 "Enable a heuristic to limit the smallest variances of Gaussians used in "
 "the Parzen estimator."
 msgstr ""
 
-#: of optuna.samplers._tpe.sampler.TPESampler:50
+#: of optuna.samplers._tpe.sampler.TPESampler:52
 msgid ""
 "Take endpoints of domains into account when calculating variances of "
 "Gaussians in Parzen estimator. See the original paper for details on the "
 "heuristics to calculate the variances."
 msgstr ""
 
-#: of optuna.samplers._tpe.sampler.TPESampler:53
+#: of optuna.samplers._tpe.sampler.TPESampler:55
 msgid ""
 "The random sampling is used instead of the TPE algorithm until the given "
 "number of trials finish in the same study."
 msgstr ""
 
-#: of optuna.samplers._tpe.sampler.TPESampler:55
+#: of optuna.samplers._tpe.sampler.TPESampler:57
 msgid "Number of candidate samples used to calculate the expected improvement."
 msgstr ""
 
-#: of optuna.samplers._tpe.sampler.TPESampler:56
+#: of optuna.samplers._tpe.sampler.TPESampler:58
 msgid ""
 "A function that takes the number of finished trials and returns the "
 "number of trials to form a density function for samples with low grains. "
 "See the original paper for more details."
 msgstr ""
 
-#: of optuna.samplers._tpe.sampler.TPESampler:59
+#: of optuna.samplers._tpe.sampler.TPESampler:61
+msgid ""
+"A function that takes the number of finished trials and returns a weight "
+"for them. See `Making a Science of Model Search: Hyperparameter "
+"Optimization in Hundreds of Dimensions for Vision Architectures "
+"<http://proceedings.mlr.press/v28/bergstra13.pdf>`_ for more details.  .."
+" note::     In the multi-objective case, this argument is only used to "
+"compute the weights of     bad trials, i.e., trials to construct `g(x)` "
+"in the `paper     <https://papers.nips.cc/paper/4443-algorithms-for-"
+"hyper-parameter-optimization.pdf>`_     ). The weights of good trials, "
+"i.e., trials to construct `l(x)`, are computed by a     rule based on the"
+" hypervolume contribution proposed in the `paper of MOTPE     "
+"<https://dl.acm.org/doi/10.1145/3377930.3389817>`_."
+msgstr ""
+
+#: of optuna.samplers._tpe.sampler.TPESampler:61
 msgid ""
 "A function that takes the number of finished trials and returns a weight "
 "for them. See `Making a Science of Model Search: Hyperparameter "
@@ -135,11 +157,22 @@ msgid ""
 "<http://proceedings.mlr.press/v28/bergstra13.pdf>`_ for more details."
 msgstr ""
 
-#: of optuna.samplers._tpe.sampler.TPESampler:63
+#: of optuna.samplers._tpe.sampler.TPESampler:67
+msgid ""
+"In the multi-objective case, this argument is only used to compute the "
+"weights of bad trials, i.e., trials to construct `g(x)` in the `paper "
+"<https://papers.nips.cc/paper/4443-algorithms-for-hyper-parameter-"
+"optimization.pdf>`_ ). The weights of good trials, i.e., trials to "
+"construct `l(x)`, are computed by a rule based on the hypervolume "
+"contribution proposed in the `paper of MOTPE "
+"<https://dl.acm.org/doi/10.1145/3377930.3389817>`_."
+msgstr ""
+
+#: of optuna.samplers._tpe.sampler.TPESampler:73
 msgid "Seed for random number generator."
 msgstr ""
 
-#: of optuna.samplers._tpe.sampler.TPESampler:64
+#: of optuna.samplers._tpe.sampler.TPESampler:74
 msgid ""
 "If this is :obj:`True`, the multivariate TPE is used when suggesting "
 "parameters. The multivariate TPE is reported to outperform the "
@@ -151,7 +184,7 @@ msgid ""
 "https://github.com/optuna/optuna/releases/tag/v2.2.0."
 msgstr ""
 
-#: of optuna.samplers._tpe.sampler.TPESampler:64
+#: of optuna.samplers._tpe.sampler.TPESampler:74
 msgid ""
 "If this is :obj:`True`, the multivariate TPE is used when suggesting "
 "parameters. The multivariate TPE is reported to outperform the "
@@ -160,18 +193,120 @@ msgid ""
 "<http://proceedings.mlr.press/v80/falkner18a.html>`_ for more details."
 msgstr ""
 
-#: of optuna.samplers._tpe.sampler.TPESampler:70
+#: of optuna.samplers._tpe.sampler.TPESampler:80
 msgid ""
 "Added in v2.2.0 as an experimental feature. The interface may change in "
 "newer versions without prior notice. See "
 "https://github.com/optuna/optuna/releases/tag/v2.2.0."
 msgstr ""
 
-#: of optuna.samplers._tpe.sampler.TPESampler:73
+#: of optuna.samplers._tpe.sampler.TPESampler:83
+msgid ""
+"If this and ``multivariate`` are :obj:`True`, the multivariate TPE with "
+"the group decomposed search space is used when suggesting parameters. The"
+" sampling algorithm decomposes the search space based on past trials and "
+"samples from the joint distribution in each decomposed subspace. The "
+"decomposed subspaces are a partition of the whole search space. Each "
+"subspace is a maximal subset of the whole search space, which satisfies "
+"the following: for a trial in completed trials, the intersection of the "
+"subspace and the search space of the trial becomes subspace itself or an "
+"empty set. Sampling from the joint distribution on the subspace is "
+"realized by multivariate TPE.  .. note::     Added in v2.8.0 as an "
+"experimental feature. The interface may change in newer     versions "
+"without prior notice. See     "
+"https://github.com/optuna/optuna/releases/tag/v2.8.0.  Example:  .. "
+"testcode::      import optuna       def objective(trial):         x = "
+"trial.suggest_categorical(\"x\", [\"A\", \"B\"])         if x == \"A\":"
+"             return trial.suggest_float(\"y\", -10, 10)         else:"
+"             return trial.suggest_int(\"z\", -10, 10)       sampler = "
+"optuna.samplers.TPESampler(multivariate=True, group=True)     study = "
+"optuna.create_study(sampler=sampler)     study.optimize(objective, "
+"n_trials=10)"
+msgstr ""
+
+#: of optuna.samplers._tpe.sampler.TPESampler:83
+msgid ""
+"If this and ``multivariate`` are :obj:`True`, the multivariate TPE with "
+"the group decomposed search space is used when suggesting parameters. The"
+" sampling algorithm decomposes the search space based on past trials and "
+"samples from the joint distribution in each decomposed subspace. The "
+"decomposed subspaces are a partition of the whole search space. Each "
+"subspace is a maximal subset of the whole search space, which satisfies "
+"the following: for a trial in completed trials, the intersection of the "
+"subspace and the search space of the trial becomes subspace itself or an "
+"empty set. Sampling from the joint distribution on the subspace is "
+"realized by multivariate TPE."
+msgstr ""
+
+#: of optuna.samplers._tpe.sampler.TPESampler:94
+#: optuna.samplers._tpe.sampler.TPESampler:139
+msgid ""
+"Added in v2.8.0 as an experimental feature. The interface may change in "
+"newer versions without prior notice. See "
+"https://github.com/optuna/optuna/releases/tag/v2.8.0."
+msgstr ""
+
+#: of optuna.samplers._tpe.sampler.TPESampler:98
+msgid "Example:"
+msgstr ""
+
+#: of optuna.samplers._tpe.sampler.TPESampler:116
 msgid ""
 "If this is :obj:`True` and ``multivariate=True``, a warning message is "
 "emitted when the value of a parameter is sampled by using an independent "
 "sampler. If ``multivariate=False``, this flag has no effect."
+msgstr ""
+
+#: of optuna.samplers._tpe.sampler.TPESampler:119
+msgid ""
+"If :obj:`True`, penalize running trials to avoid suggesting parameter "
+"configurations nearby.  .. note::     Abnormally terminated trials often "
+"leave behind a record with a state of     `RUNNING` in the storage.     "
+"Such \"zombie\" trial parameters will be avoided by the constant liar "
+"algorithm     during subsequent sampling.     When using an "
+":class:`~optuna.storages.RDBStorage`, it is possible to enable the     "
+"``heartbeat_interval`` to change the records for abnormally terminated "
+"trials to     `FAIL`.  .. note::     It is recommended to set this value "
+"to :obj:`True` during distributed     optimization to avoid having "
+"multiple workers evaluating similar parameter     configurations. In "
+"particular, if each objective function evaluation is costly     and the "
+"durations of the running states are significant, and/or the number of"
+"     workers is high.  .. note::     Added in v2.8.0 as an experimental "
+"feature. The interface may change in newer     versions without prior "
+"notice. See     https://github.com/optuna/optuna/releases/tag/v2.8.0."
+msgstr ""
+
+#: of optuna.samplers._tpe.sampler.TPESampler:119
+msgid ""
+"If :obj:`True`, penalize running trials to avoid suggesting parameter "
+"configurations nearby."
+msgstr ""
+
+#: of optuna.samplers._tpe.sampler.TPESampler:123
+msgid ""
+"Abnormally terminated trials often leave behind a record with a state of "
+"`RUNNING` in the storage. Such \"zombie\" trial parameters will be "
+"avoided by the constant liar algorithm during subsequent sampling. When "
+"using an :class:`~optuna.storages.RDBStorage`, it is possible to enable "
+"the ``heartbeat_interval`` to change the records for abnormally "
+"terminated trials to `FAIL`."
+msgstr ""
+
+#: of optuna.samplers._tpe.sampler.TPESampler:132
+msgid ""
+"It is recommended to set this value to :obj:`True` during distributed "
+"optimization to avoid having multiple workers evaluating similar "
+"parameter configurations. In particular, if each objective function "
+"evaluation is costly and the durations of the running states are "
+"significant, and/or the number of workers is high."
+msgstr ""
+
+#: of optuna.samplers._tpe.sampler.TPESampler
+msgid "引发"
+msgstr ""
+
+#: of optuna.samplers._tpe.sampler.TPESampler:143
+msgid "If ``multivariate`` is :obj:`False` and ``group`` is :obj:`True`."
 msgstr ""
 
 #: ../../source/reference/generated/optuna.samplers.TPESampler.rst:12

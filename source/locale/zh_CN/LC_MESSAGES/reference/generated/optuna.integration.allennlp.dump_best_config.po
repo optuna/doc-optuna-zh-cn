@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 2.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-20 13:35-0400\n"
+"POT-Creation-Date: 2021-10-15 09:48+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,33 +21,39 @@ msgstr ""
 msgid "optuna.integration.allennlp.dump\\_best\\_config"
 msgstr ""
 
-#: of optuna.integration.allennlp.dump_best_config:1
+#: of optuna.integration.allennlp._dump_best_config.dump_best_config:1
 msgid ""
-"Save JSON config file after updating with parameters from the best trial "
-"in the study."
+"Save JSON config file with environment variables and best performing "
+"hyperparameters."
 msgstr ""
 
-#: of optuna.integration.allennlp.dump_best_config
+#: of optuna.integration.allennlp._dump_best_config.dump_best_config
 msgid "参数"
 msgstr ""
 
-#: of optuna.integration.allennlp.dump_best_config:3
+#: of optuna.integration.allennlp._dump_best_config.dump_best_config:3
 msgid ""
 "Input Jsonnet config file used with "
 ":class:`~optuna.integration.AllenNLPExecutor`."
 msgstr ""
 
-#: of optuna.integration.allennlp.dump_best_config:5
+#: of optuna.integration.allennlp._dump_best_config.dump_best_config:5
 msgid "Output JSON config file."
 msgstr ""
 
-#: of optuna.integration.allennlp.dump_best_config:6
+#: of optuna.integration.allennlp._dump_best_config.dump_best_config:6
 msgid ""
 "Instance of :class:`~optuna.study.Study`. Note that "
 ":func:`~optuna.study.Study.optimize` must have been called."
 msgstr ""
 
-#: of optuna.integration.allennlp.dump_best_config
+#: of optuna.integration.allennlp._dump_best_config.dump_best_config
 msgid "返回类型"
 msgstr ""
+
+#~ msgid ""
+#~ "Save JSON config file after updating "
+#~ "with parameters from the best trial "
+#~ "in the study."
+#~ msgstr ""
 

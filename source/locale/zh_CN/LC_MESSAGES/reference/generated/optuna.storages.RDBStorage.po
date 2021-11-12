@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 2.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-20 13:35-0400\n"
+"POT-Creation-Date: 2021-10-15 09:48+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -39,7 +39,9 @@ msgstr ""
 msgid ""
 "Create an :class:`~optuna.storages.RDBStorage` instance with customized "
 "``pool_size`` and ``timeout`` settings."
-msgstr "利用定制的 ``pool_size`` 和 ``timeout`` 创建一个 :class:`~optuna.storages.RDBStorage`."
+msgstr ""
+"利用定制的 ``pool_size`` 和 ``timeout`` 创建一个 "
+":class:`~optuna.storages.RDBStorage`."
 
 #: of optuna.storages._base.BaseStorage.check_trial_is_updatable
 #: optuna.storages._base.BaseStorage.get_n_trials
@@ -101,7 +103,9 @@ msgstr "设定心跳信号间隔, 每隔 ``interval`` 记录一次."
 msgid ""
 "Grace period before a running trial is failed from the last heartbeat. If"
 " it is :obj:`None`, the grace period will be `2 * heartbeat_interval`."
-msgstr "从最后一次心跳开始, 运行 trial 失败前的宽限期. 如果设置为 :obj:`None` 的话, 宽限期将会是 `2 * heartbeat_interval`."
+msgstr ""
+"从最后一次心跳开始, 运行 trial 失败前的宽限期. 如果设置为 :obj:`None` 的话, 宽限期将会是 `2 * "
+"heartbeat_interval`."
 
 #: of optuna.storages._rdb.storage.RDBStorage:36
 msgid ""
@@ -117,7 +121,8 @@ msgid ""
 "A callback function that is invoked after failing each stale trial. The "
 "function must accept two parameters with the following types in this "
 "order: :class:`~optuna.study.Study` and :class:`~optuna.FrozenTrial`."
-msgstr "在每一个旧 trial 失败后被调用的回调函数. 该函数必须按照顺序接受两个下列类型的参数: "
+msgstr ""
+"在每一个旧 trial 失败后被调用的回调函数. 该函数必须按照顺序接受两个下列类型的参数: "
 ":class:`~optuna.study.Study` 和 :class:`~optuna.FrozenTrial`."
 
 #: of optuna.storages._rdb.storage.RDBStorage:41
@@ -133,9 +138,10 @@ msgid ""
 "``engine_kwargs['pool_pre_ping']=False``, but it is recommended to keep "
 "the setting if execution time of your objective function is longer than "
 "the `wait_timeout` of your MySQL configuration."
-msgstr "如果你使用 MySQL, `pool_pre_ping`_ 默认情况下将会被设置为 :obj:`True` 以防止连接超时. "
-"你可以通过设置 ``engine_kwargs['pool_pre_ping']=False`` 来关闭它. 但是如果"
-"如果你的目标函数的执行时间超过你的 MySQL 配置的 `wait_timeout`, 我们推荐保持这个设置."
+msgstr ""
+"如果你使用 MySQL, `pool_pre_ping`_ 默认情况下将会被设置为 :obj:`True` 以防止连接超时. 你可以通过设置 "
+"``engine_kwargs['pool_pre_ping']=False`` 来关闭它. 但是如果如果你的目标函数的执行时间超过你的 "
+"MySQL 配置的 `wait_timeout`, 我们推荐保持这个设置."
 
 #: of optuna.storages._base.BaseStorage.check_trial_is_updatable
 #: optuna.storages._base.BaseStorage.get_n_trials
@@ -178,8 +184,10 @@ msgid ""
 msgstr "如果给定的 `heartbeat_interval` 或者 `grace_period` 不是一个正整数."
 
 #: of optuna.storages._rdb.storage.RDBStorage:58
-msgid "If the a process that was failed by heartbeat but was actually running."
-msgstr "如果一个由心跳信号终止的进程实际上在运行"
+msgid ""
+"When a process tries to finish a trial that has already     been set to "
+":class:`~optuna.trial.TrialState.FAIL` by heartbeat."
+msgstr ""
 
 #: ../../source/reference/generated/optuna.storages.RDBStorage.rst:12
 msgid "Methods"
@@ -468,7 +476,7 @@ msgstr ""
 #: of
 #: optuna.storages._base.BaseStorage.check_trial_is_updatable:1:<autosummary>:1
 #: optuna.storages._rdb.storage.RDBStorage.get_trial_id_from_study_id_trial_number:1
-msgid "Read the trial id of a trial."
+msgid "Read the trial ID of a trial."
 msgstr "读取一个 trial 的 ID."
 
 #: of
@@ -882,9 +890,9 @@ msgid ""
 "will be failed, that is, those states will be changed to "
 ":obj:`~optuna.trial.TrialState.FAIL`. The grace period is ``2 * "
 "heartbeat_interval``."
-msgstr "正在运行的 trial, 如果其心跳信号长时间没有更新的话将会被终止, 也就是说其状态会被设置为 :obj:`~optuna.trial.TrialState.FAIL`."
-"这个宽限期为 ``2 * "
-"heartbeat_interval``."
+msgstr ""
+"正在运行的 trial, 如果其心跳信号长时间没有更新的话将会被终止, 也就是说其状态会被设置为 "
+":obj:`~optuna.trial.TrialState.FAIL`.这个宽限期为 ``2 * heartbeat_interval``."
 
 #: of optuna.storages._rdb.storage.RDBStorage.fail_stale_trials:7
 msgid "ID of the related study."
@@ -1054,7 +1062,9 @@ msgid ""
 ":obj:`True` if the storage supports the heartbeat and the return value of"
 " :meth:`~optuna.storages.BaseStorage.get_heartbeat_interval` is an "
 "integer, otherwise :obj:`False`."
-msgstr "如果存储支持心跳信号而且 :meth:`~optuna.storages.BaseStorage.get_heartbeat_interval` 返回值为整数的话, 为 :obj:`True`. 否则为 :obj:`False`."
+msgstr ""
+"如果存储支持心跳信号而且 :meth:`~optuna.storages.BaseStorage.get_heartbeat_interval` "
+"返回值为整数的话, 为 :obj:`True`. 否则为 :obj:`False`."
 
 #: of optuna.storages._rdb.storage.RDBStorage.remove_session:3
 msgid ""
@@ -1067,10 +1077,10 @@ msgid ""
 " to touch a SQLite connection from threads other than the thread that "
 "created the connection. Therefore, we need to explicitly close the "
 "connection from each thread."
-msgstr "在 SQLAlchemy 的 ThreadLocalRegistry 中为每个线程存储一个会话. "
-"该方法关闭并删除与当前线程相关的会话. 特别是在多线程使用情况下, 从 *每个线程* 调用这个方法是很重要的. "
-"否则, 所有的会话和它们相关的DB连接都会被偶尔调用垃圾收集器的线程所破坏. "
-"默认情况下, 不允许从创建连接的线程以外的线程接触 SQLite 连接. "
+msgstr ""
+"在 SQLAlchemy 的 ThreadLocalRegistry 中为每个线程存储一个会话. 该方法关闭并删除与当前线程相关的会话. "
+"特别是在多线程使用情况下, 从 *每个线程* 调用这个方法是很重要的. 否则, "
+"所有的会话和它们相关的DB连接都会被偶尔调用垃圾收集器的线程所破坏. 默认情况下, 不允许从创建连接的线程以外的线程接触 SQLite 连接. "
 "因此, 我们需要明确地从每个线程关闭连接."
 
 #: of optuna.storages._rdb.storage.RDBStorage.set_study_directions:4
@@ -1078,8 +1088,8 @@ msgid ""
 "A sequence of direction whose element is either "
 ":obj:`~optuna.study.StudyDirection.MAXIMIZE` or "
 ":obj:`~optuna.study.StudyDirection.MINIMIZE`."
-msgstr "方向列表, 其元素为 "
-":obj:`~optuna.study.StudyDirection.MAXIMIZE` 或者 "
+msgstr ""
+"方向列表, 其元素为 :obj:`~optuna.study.StudyDirection.MAXIMIZE` 或者 "
 ":obj:`~optuna.study.StudyDirection.MINIMIZE`."
 
 #: of optuna.storages._rdb.storage.RDBStorage.set_study_directions:9
@@ -1087,7 +1097,9 @@ msgid ""
 "If the directions are already set and the each coordinate of passed "
 "``directions``     is the opposite direction or "
 ":obj:`~optuna.study.StudyDirection.NOT_SET`."
-msgstr "如果方向已经设定, 而且每一个传递给 ``directions`` 的座标是相反的或者 :obj:`~optuna.study.StudyDirection.NOT_SET`."
+msgstr ""
+"如果方向已经设定, 而且每一个传递给 ``directions`` 的座标是相反的或者 "
+":obj:`~optuna.study.StudyDirection.NOT_SET`."
 
 #: of optuna.storages._rdb.storage.RDBStorage.set_study_system_attr:3
 #: optuna.storages._rdb.storage.RDBStorage.set_study_user_attr:3
@@ -1142,8 +1154,10 @@ msgid ""
 "state is kept the same. The latter happens when this method tries to "
 "update the state of :obj:`~optuna.trial.TrialState.RUNNING` trial to "
 ":obj:`~optuna.trial.TrialState.RUNNING`."
-msgstr "如果状态被成功地改变了则为 :obj:`True`. 如果状态保持不变则为 :obj:`False`. "
-"如果该方法试图更新一个 :obj:`~optuna.trial.TrialState.RUNNING` trial 为 :obj:`~optuna.trial.TrialState.RUNNING` 的话, 后者将会发生."
+msgstr ""
+"如果状态被成功地改变了则为 :obj:`True`. 如果状态保持不变则为 :obj:`False`. 如果该方法试图更新一个 "
+":obj:`~optuna.trial.TrialState.RUNNING` trial 为 "
+":obj:`~optuna.trial.TrialState.RUNNING` 的话, 后者将会发生."
 
 #: of optuna.storages._rdb.storage.RDBStorage.set_trial_values:3
 msgid "This method overwrites any existing trial values."
@@ -1152,4 +1166,7 @@ msgstr "该方法将覆盖任何现存的 trial 值."
 #: of optuna.storages._rdb.storage.RDBStorage.set_trial_values:6
 msgid "Values of the objective function."
 msgstr "目标函数的值."
+
+#~ msgid "If the a process that was failed by heartbeat but was actually running."
+#~ msgstr "如果一个由心跳信号终止的进程实际上在运行"
 

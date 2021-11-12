@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 1.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-20 13:35-0400\n"
+"POT-Creation-Date: 2021-10-15 09:48+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -28,11 +28,11 @@ msgstr "某某库可以和 Optuna 配合使用吗？（某某是你常用的机�
 #: ../../source/faq.rst:10
 msgid ""
 "Optuna is compatible with most ML libraries, and it's easy to use Optuna "
-"with those. Please refer to `examples "
-"<https://github.com/optuna/optuna/tree/master/examples>`_."
+"with those. Please refer to `examples <https://github.com/optuna/optuna-"
+"examples/>`_."
 msgstr ""
-"Optuna 和绝大多数机器学习库兼容，并且很容易同他们配合使用。参见 `examples "
-"<https://github.com/optuna/optuna/tree/master/examples>`_."
+"Optuna 和绝大多数机器学习库兼容，并且很容易同他们配合使用。参见 `examples <https://github.com/optuna/optuna-"
+"examples/>`_."
 
 #: ../../source/faq.rst:17
 msgid "How to define objective functions that have own arguments?"
@@ -56,15 +56,15 @@ msgstr ""
 "``lambda`` 的例子："
 
 #: ../../source/faq.rst:66
-#, fuzzy
 msgid ""
 "Please also refer to `sklearn_addtitional_args.py "
-"<https://github.com/optuna/optuna/blob/master/examples/sklearn/sklearn_additional_args.py>`_"
-" example, which reuses the dataset instead of loading it in each trial "
-"execution."
+"<https://github.com/optuna/optuna-"
+"examples/tree/main/sklearn/sklearn_additional_args.py>`_ example, which "
+"reuses the dataset instead of loading it in each trial execution."
 msgstr ""
 "请参考 `sklearn_addtitional_args.py "
-"<https://github.com/optuna/optuna/blob/master/examples/sklearn_additional_args.py>`_"
+"<https://github.com/optuna/optuna-"
+"examples/tree/main/sklearn/sklearn_additional_args.py>`_ "
 " ，在该例中，数据集被重复使用而无需在每次trial执行时重新加载。"
 
 #: ../../source/faq.rst:71
@@ -307,7 +307,6 @@ msgid "What happens when I dynamically alter a search space?"
 msgstr "动态地改变搜索空间会导致怎样的结果？"
 
 #: ../../source/faq.rst:243
-#, fuzzy
 msgid ""
 "Since parameters search spaces are specified in each call to the "
 "suggestion API, e.g. :func:`~optuna.trial.Trial.suggest_float` and "
@@ -316,9 +315,8 @@ msgid ""
 "spaces in different trials. The behavior when altered is defined by each "
 "sampler individually."
 msgstr ""
-"由于参数空间只在每次调用 suggestion API (比如 "
-":func:`~optuna.trial.Trial.suggest_float` 和 "
-":func:`~optuna.trial.Trial.suggest_int`) 的时候才会被确定，因此，即使在同一个 study "
+"由于参数空间只在每次调用 suggestion API (比如 :func:`~optuna.trial.Trial.suggest_float`"
+" 和 :func:`~optuna.trial.Trial.suggest_int`) 的时候才会被确定，因此，即使在同一个 study "
 "中，我们也可以通过在不同 trial 里对不同的参数空间进行采样来实现对搜索范围的改变。参数空间改变之后的行为是由每个 sampler 来决定的。"
 
 #: ../../source/faq.rst:251
@@ -413,4 +411,57 @@ msgstr ""
 ":class:`~optuna.integration.ChainerMNStudy` 目前并不提供 ``gc_after_trial`` 和用于"
 " :func:`~optuna.integration.ChainerMNStudy.optimize` "
 "的回调接口。在使用该类时，你只能在目标函数内部调用垃圾回收器。"
+
+#: ../../source/faq.rst:337
+msgid "How can I output a log only when the best value is updated?"
+msgstr ""
+
+#: ../../source/faq.rst:339
+msgid ""
+"Here's how to replace the logging feature of optuna and with your own "
+"logging callback function. The implemented callback can be passed to "
+":func:`~optuna.study.Study.optimize`. Here's an example:"
+msgstr "这里展示了如何用你自己的日志回调函数替代 Optuna 的日志函数. 这个回调实现可以被传递到 :func:`~optuna.study.Study.optimize` 中, 以下是一个例子: "
+
+#: ../../source/faq.rst:374
+msgid ""
+"How do I suggest variables which represent the proportion, that is, are "
+"in accordance with Dirichlet distribution?"
+msgstr "我如何才能 suggest 代表比例的变量, 也就是那些遵循 Dirichlet 分布的变量?"
+
+#: ../../source/faq.rst:376
+msgid ""
+"When you want to suggest :math:`n` variables which represent the "
+"proportion, that is, :math:`p[0], p[1], ..., p[n-1]` which satisfy "
+":math:`0 \\le p[k] \\le 1` for any :math:`k` and :math:`p[0] + p[1] + ..."
+" + p[n-1] = 1`, try the below. For example, these variables can be used "
+"as weights when interpolating the loss functions. These variables are in "
+"accordance with the flat `Dirichlet distribution "
+"<https://en.wikipedia.org/wiki/Dirichlet_distribution>`_."
+msgstr ""
+"当你试图 suggest :math:`n` 个代表比例的变量, 也就是 :math:`p[0], p[1], ..., p[n-1]` 且它们满足 "
+":math:`0 \\le p[k] \\le 1` for any :math:`k` and :math:`p[0] + p[1] + ..."
+" + p[n-1] = 1`, 请尝试下面的例子. 比如, 当进行损失函数插值时, 这些变量可以被用作权重. 这些变量遵循 "
+"`Dirichlet 分布 "
+"<https://en.wikipedia.org/wiki/Dirichlet_distribution>`_."
+
+#: ../../source/faq.rst:421
+msgid ""
+"This method is justified in the following way: First, if we apply the "
+"transformation :math:`x = - \\log (u)` to the variable :math:`u` sampled "
+"from the uniform distribution :math:`Uni(0, 1)` in the interval "
+":math:`[0, 1]`, the variable :math:`x` will follow the exponential "
+"distribution :math:`Exp(1)` with scale parameter :math:`1`. Furthermore, "
+"for :math:`n` variables :math:`x[0], ..., x[n-1]` that follow the "
+"exponential distribution of scale parameter :math:`1` independently, "
+"normalizing them with :math:`p[i] = x[i] / \\sum_i x[i]`, the vector "
+":math:`p` follows the Dirichlet distribution :math:`Dir(\\alpha)` of "
+"scale parameter :math:`\\alpha = (1, ..., 1)`. You can verify the "
+"transformation by calculating the elements of the Jacobian."
+msgstr ""
+"该方法可以通过以下方式说明: 首先, 如果我们对从均匀分布 :math:`Uni(0, 1)` 中采样的 :math:`u`  应用 :math:`x = - \\log (u)` "
+"变换, 变量 :math:`x`  将服从指数分布 :math:`Exp(1)`, 其中 scale 参数为 :math:`1`. "
+"更进一步, 对于 :math:`n` 个互相独立且服从 scale 参数为 :math:`1` 的 指数分布的变量 :math:`x[0], ..., x[n-1]`, 对其进行归一化 "
+":math:`p[i] = x[i] / \\sum_i x[i]` 以后 :math:`p`  则服从 Dirichlet 分布 :math:`Dir(\\alpha)`, 且 "
+"scale 参数为 :math:`\\alpha = (1, ..., 1)`. 你可以通过计算 Jacobian 的方式来验证这个变换."
 

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 2.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-06 18:29-0400\n"
+"POT-Creation-Date: 2021-10-15 09:48+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,26 +21,29 @@ msgstr ""
 msgid "optuna.study.Study"
 msgstr ""
 
-#: of optuna.study.Study:1
+#: of optuna.study.study.Study:1
 msgid "A study corresponds to an optimization task, i.e., a set of trials."
 msgstr "一个 study 对应一个优化任务, 也就是一系列 trial."
 
-#: of optuna.study.Study:3
+#: of optuna.study.study.Study:3
 msgid ""
 "This object provides interfaces to run a new "
 ":class:`~optuna.trial.Trial`, access trials' history, set/get user-"
 "defined attributes of the study itself."
-msgstr "该对象提供接口用于运行 :class:`~optuna.trial.Trial`, 获取 trial 的历史记录, 设置/获取在 study 中用户定义的属性."
+msgstr ""
+"该对象提供接口用于运行 :class:`~optuna.trial.Trial`, 获取 trial 的历史记录, 设置/获取在 study "
+"中用户定义的属性."
 
-#: of optuna.study.Study:6
+#: of optuna.study.study.Study:6
 msgid ""
 "Note that the direct use of this constructor is not recommended. To "
 "create and load a study, please refer to the documentation of "
 ":func:`~optuna.study.create_study` and :func:`~optuna.study.load_study` "
 "respectively."
-msgstr "注意, 我们不推荐直接使用该构造函数. 要创造或加载一个 study, 请分别参考 "
-":func:`~optuna.study.create_study` 和 :func:`~optuna.study.load_study` 的文档."
-
+msgstr ""
+"注意, 我们不推荐直接使用该构造函数. 要创造或加载一个 study, 请分别参考 "
+":func:`~optuna.study.create_study` 和 :func:`~optuna.study.load_study` "
+"的文档."
 
 #: ../../source/reference/generated/optuna.study.Study.rst:12
 msgid "Methods"
@@ -51,7 +54,7 @@ msgid ":obj:`add_trial <optuna.study.Study.add_trial>`\\ \\(trial\\)"
 msgstr ""
 
 #: ../../source/reference/generated/optuna.study.Study.rst:31:<autosummary>:1
-#: of optuna.study.Study.add_trial:1
+#: of optuna.study.study.Study.add_trial:1
 msgid "Add trial to study."
 msgstr "添加 trial 到 study."
 
@@ -60,7 +63,7 @@ msgid ":obj:`add_trials <optuna.study.Study.add_trials>`\\ \\(trials\\)"
 msgstr ""
 
 #: ../../source/reference/generated/optuna.study.Study.rst:31:<autosummary>:1
-#: of optuna.study.Study.add_trials:1
+#: of optuna.study.study.Study.add_trials:1
 msgid "Add trials to study."
 msgstr "添加多个 trial 到 study."
 
@@ -69,7 +72,7 @@ msgid ":obj:`ask <optuna.study.Study.ask>`\\ \\(\\[fixed\\_distributions\\]\\)"
 msgstr ""
 
 #: ../../source/reference/generated/optuna.study.Study.rst:31:<autosummary>:1
-#: of optuna.study.Study.ask:1
+#: of optuna.study.study.Study.ask:1
 msgid "Create a new trial from which hyperparameters can be suggested."
 msgstr "创建新 trial, 从中我们对超参数进行采样."
 
@@ -78,7 +81,7 @@ msgid ":obj:`enqueue_trial <optuna.study.Study.enqueue_trial>`\\ \\(params\\)"
 msgstr ""
 
 #: ../../source/reference/generated/optuna.study.Study.rst:31:<autosummary>:1
-#: of optuna.study.Study.enqueue_trial:1
+#: of optuna.study.study.Study.enqueue_trial:1
 msgid "Enqueue a trial with given parameter values."
 msgstr "将给定参数值的 trial 入列."
 
@@ -89,8 +92,8 @@ msgid ""
 msgstr ""
 
 #: ../../source/reference/generated/optuna.study.Study.rst:31:<autosummary>:1
-#: of optuna.study.BaseStudy.get_trials:1
-#: optuna.study.Study.add_trial:1:<autosummary>:1 optuna.study.Study.trials:1
+#: of optuna.study.Study.trials:1 optuna.study.study.BaseStudy.get_trials:1
+#: optuna.study.study.Study.add_trial:1:<autosummary>:1
 msgid "Return all trials in the study."
 msgstr "返回 study 中所有 trial."
 
@@ -101,7 +104,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/reference/generated/optuna.study.Study.rst:31:<autosummary>:1
-#: of optuna.study.Study.optimize:1
+#: of optuna.study.study.Study.optimize:1
 msgid "Optimize an objective function."
 msgstr "优化目标函数."
 
@@ -112,7 +115,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/reference/generated/optuna.study.Study.rst:31:<autosummary>:1
-#: of optuna.study.Study.set_system_attr:1
+#: of optuna.study.study.Study.set_system_attr:1
 msgid "Set a system attribute to the study."
 msgstr "设定 study 中的系统属性."
 
@@ -123,7 +126,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/reference/generated/optuna.study.Study.rst:31:<autosummary>:1
-#: of optuna.study.Study.set_user_attr:1
+#: of optuna.study.study.Study.set_user_attr:1
 msgid "Set a user attribute to the study."
 msgstr "设定 study 中的用户属性."
 
@@ -132,7 +135,7 @@ msgid ":obj:`stop <optuna.study.Study.stop>`\\ \\(\\)"
 msgstr ""
 
 #: ../../source/reference/generated/optuna.study.Study.rst:31:<autosummary>:1
-#: of optuna.study.Study.stop:1
+#: of optuna.study.study.Study.stop:1
 msgid "Exit from the current optimization loop after the running trials finish."
 msgstr "在运行中的trial结束后从当前优化循环中退出."
 
@@ -143,7 +146,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/reference/generated/optuna.study.Study.rst:31:<autosummary>:1
-#: of optuna.study.Study.tell:1
+#: of optuna.study.study.Study.tell:1
 msgid "Finish a trial created with :func:`~optuna.study.Study.ask`."
 msgstr ""
 
@@ -154,7 +157,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/reference/generated/optuna.study.Study.rst:31:<autosummary>:1
-#: of optuna.study.Study.trials_dataframe:1
+#: of optuna.study.study.Study.trials_dataframe:1
 msgid "Export trials as a pandas DataFrame_."
 msgstr "将 trial 导出为 pandas DataFrame_."
 
@@ -162,215 +165,224 @@ msgstr "将 trial 导出为 pandas DataFrame_."
 msgid "Attributes"
 msgstr ""
 
-#: of optuna.study.Study.add_trial:1:<autosummary>:1
+#: of optuna.study.study.Study.add_trial:1:<autosummary>:1
 msgid ":obj:`best_params <optuna.study.Study.best_params>`\\"
 msgstr ""
 
-#: of optuna.study.Study.add_trial:1:<autosummary>:1
-#: optuna.study.Study.best_params:1
+#: of optuna.study.Study.best_params:1
+#: optuna.study.study.Study.add_trial:1:<autosummary>:1
 msgid "Return parameters of the best trial in the study."
 msgstr "返回 study 中的最佳 trial 的参数."
 
-#: of optuna.study.Study.add_trial:1:<autosummary>:1
+#: of optuna.study.study.Study.add_trial:1:<autosummary>:1
 msgid ":obj:`best_trial <optuna.study.Study.best_trial>`\\"
 msgstr ""
 
-#: of optuna.study.Study.add_trial:1:<autosummary>:1
-#: optuna.study.Study.best_trial:1
+#: of optuna.study.Study.best_trial:1
+#: optuna.study.study.Study.add_trial:1:<autosummary>:1
 msgid "Return the best trial in the study."
 msgstr "返回 study 中的最佳 trial"
 
-#: of optuna.study.Study.add_trial:1:<autosummary>:1
+#: of optuna.study.study.Study.add_trial:1:<autosummary>:1
 msgid ":obj:`best_trials <optuna.study.Study.best_trials>`\\"
 msgstr ""
 
-#: of optuna.study.Study.add_trial:1:<autosummary>:1
-#: optuna.study.Study.best_trials:1
+#: of optuna.study.Study.best_trials:1
+#: optuna.study.study.Study.add_trial:1:<autosummary>:1
 msgid "Return trials located at the Pareto front in the study."
 msgstr "返回 study 中处于帕累托前沿上的 trial."
 
-#: of optuna.study.Study.add_trial:1:<autosummary>:1
+#: of optuna.study.study.Study.add_trial:1:<autosummary>:1
 msgid ":obj:`best_value <optuna.study.Study.best_value>`\\"
 msgstr ""
 
-#: of optuna.study.Study.add_trial:1:<autosummary>:1
-#: optuna.study.Study.best_value:1
+#: of optuna.study.Study.best_value:1
+#: optuna.study.study.Study.add_trial:1:<autosummary>:1
 msgid "Return the best objective value in the study."
 msgstr "返回 study 中的最佳目标值."
 
-#: of optuna.study.Study.add_trial:1:<autosummary>:1
+#: of optuna.study.study.Study.add_trial:1:<autosummary>:1
 msgid ":obj:`direction <optuna.study.Study.direction>`\\"
 msgstr ""
 
-#: of optuna.study.Study.add_trial:1:<autosummary>:1
-#: optuna.study.Study.direction:1
+#: of optuna.study.Study.direction:1
+#: optuna.study.study.Study.add_trial:1:<autosummary>:1
 msgid "Return the direction of the study."
 msgstr "返回 study 的方向."
 
-#: of optuna.study.Study.add_trial:1:<autosummary>:1
+#: of optuna.study.study.Study.add_trial:1:<autosummary>:1
 msgid ":obj:`directions <optuna.study.Study.directions>`\\"
 msgstr ""
 
-#: of optuna.study.Study.add_trial:1:<autosummary>:1
-#: optuna.study.Study.directions:1
+#: of optuna.study.Study.directions:1
+#: optuna.study.study.Study.add_trial:1:<autosummary>:1
 msgid "Return the directions of the study."
 msgstr "返回 study 的所有方向."
 
-#: of optuna.study.Study.add_trial:1:<autosummary>:1
+#: of optuna.study.study.Study.add_trial:1:<autosummary>:1
 msgid ":obj:`system_attrs <optuna.study.Study.system_attrs>`\\"
 msgstr ""
 
-#: of optuna.study.Study.add_trial:1:<autosummary>:1
-#: optuna.study.Study.system_attrs:1
+#: of optuna.study.Study.system_attrs:1
+#: optuna.study.study.Study.add_trial:1:<autosummary>:1
 msgid "Return system attributes."
 msgstr "返回系统属性."
 
-#: of optuna.study.Study.add_trial:1:<autosummary>:1
+#: of optuna.study.study.Study.add_trial:1:<autosummary>:1
 msgid ":obj:`trials <optuna.study.Study.trials>`\\"
 msgstr ""
 
-#: of optuna.study.Study.add_trial:1:<autosummary>:1
+#: of optuna.study.study.Study.add_trial:1:<autosummary>:1
 msgid ":obj:`user_attrs <optuna.study.Study.user_attrs>`\\"
 msgstr ""
 
-#: of optuna.study.Study.add_trial:1:<autosummary>:1
-#: optuna.study.Study.user_attrs:1
+#: of optuna.study.Study.user_attrs:1
+#: optuna.study.study.Study.add_trial:1:<autosummary>:1
 msgid "Return user attributes."
 msgstr "返回用户属性."
 
-#: of optuna.study.Study.add_trial:3
+#: of optuna.study.study.Study.add_trial:3
 msgid "The trial is validated before being added."
 msgstr "trial 在添加之前会被验证."
 
-#: of optuna.study.BaseStudy.get_trials:6 optuna.study.Study.add_trial:6
-#: optuna.study.Study.add_trials:6 optuna.study.Study.ask:13
-#: optuna.study.Study.ask:30 optuna.study.Study.enqueue_trial:7
-#: optuna.study.Study.optimize:10 optuna.study.Study.set_user_attr:8
-#: optuna.study.Study.stop:9 optuna.study.Study.tell:8
-#: optuna.study.Study.trials_dataframe:8 optuna.study.Study.user_attrs:8
+#: of optuna.study.Study.user_attrs:8 optuna.study.study.BaseStudy.get_trials:6
+#: optuna.study.study.Study.add_trial:6 optuna.study.study.Study.add_trials:6
+#: optuna.study.study.Study.ask:13 optuna.study.study.Study.ask:30
+#: optuna.study.study.Study.enqueue_trial:7
+#: optuna.study.study.Study.optimize:10
+#: optuna.study.study.Study.set_user_attr:8 optuna.study.study.Study.stop:9
+#: optuna.study.study.Study.tell:8 optuna.study.study.Study.trials_dataframe:8
 msgid "示例"
 msgstr ""
 
-#: of optuna.study.Study.add_trial:44
+#: of optuna.study.study.Study.add_trial:44
 msgid ""
 "This method should in general be used to add already evaluated trials "
 "(``trial.state.is_finished() == True``). To queue trials for evaluation, "
 "please refer to :func:`~optuna.study.Study.enqueue_trial`."
-msgstr "该方法通常被用于添加已经求解过的 trial (``trial.state.is_finished() == True``). "
-"要把trial 加入求解队列, 请参考 :func:`~optuna.study.Study.enqueue_trial`."
+msgstr ""
+"该方法通常被用于添加已经求解过的 trial (``trial.state.is_finished() == True``). 要把trial "
+"加入求解队列, 请参考 :func:`~optuna.study.Study.enqueue_trial`."
 
-#: of optuna.study.Study.add_trial:50
+#: of optuna.study.study.Study.add_trial:50
 msgid "See :func:`~optuna.trial.create_trial` for how to create trials."
 msgstr "关于如何创建 trial 请参考 :func:`~optuna.trial.create_trial`."
 
-#: of optuna.study.BaseStudy.get_trials optuna.study.Study.add_trial
-#: optuna.study.Study.add_trials optuna.study.Study.ask
-#: optuna.study.Study.enqueue_trial optuna.study.Study.optimize
-#: optuna.study.Study.set_system_attr optuna.study.Study.set_user_attr
-#: optuna.study.Study.tell optuna.study.Study.trials_dataframe
+#: of optuna.study.study.BaseStudy.get_trials
+#: optuna.study.study.Study.add_trial optuna.study.study.Study.add_trials
+#: optuna.study.study.Study.ask optuna.study.study.Study.enqueue_trial
+#: optuna.study.study.Study.optimize optuna.study.study.Study.set_system_attr
+#: optuna.study.study.Study.set_user_attr optuna.study.study.Study.tell
+#: optuna.study.study.Study.trials_dataframe
 msgid "参数"
 msgstr ""
 
-#: of optuna.study.Study.add_trial:52
+#: of optuna.study.study.Study.add_trial:52
 msgid "Trial to add."
 msgstr "等待添加的 trial."
 
-#: of optuna.study.Study.add_trial optuna.study.Study.add_trials
-#: optuna.study.Study.best_params optuna.study.Study.best_trial
+#: of optuna.study.Study.best_params optuna.study.Study.best_trial
 #: optuna.study.Study.best_value optuna.study.Study.direction
-#: optuna.study.Study.optimize optuna.study.Study.stop optuna.study.Study.tell
+#: optuna.study.study.Study.add_trial optuna.study.study.Study.add_trials
+#: optuna.study.study.Study.optimize optuna.study.study.Study.stop
+#: optuna.study.study.Study.tell
 msgid "引发"
 msgstr ""
 
-#: of optuna.study.Study.add_trial:54
+#: of optuna.study.study.Study.add_trial:54
 msgid "If trial is an invalid state."
 msgstr "如果 trial 处于无效状态."
 
-#: of optuna.study.BaseStudy.get_trials optuna.study.Study.add_trial
-#: optuna.study.Study.add_trials optuna.study.Study.ask
-#: optuna.study.Study.enqueue_trial optuna.study.Study.optimize
-#: optuna.study.Study.set_system_attr optuna.study.Study.set_user_attr
-#: optuna.study.Study.stop optuna.study.Study.tell
-#: optuna.study.Study.trials_dataframe
+#: of optuna.study.study.BaseStudy.get_trials
+#: optuna.study.study.Study.add_trial optuna.study.study.Study.add_trials
+#: optuna.study.study.Study.ask optuna.study.study.Study.enqueue_trial
+#: optuna.study.study.Study.optimize optuna.study.study.Study.set_system_attr
+#: optuna.study.study.Study.set_user_attr optuna.study.study.Study.stop
+#: optuna.study.study.Study.tell optuna.study.study.Study.trials_dataframe
 msgid "返回类型"
 msgstr ""
 
-#: of optuna.study.Study.add_trial:57
+#: of optuna.study.study.Study.add_trial:57
 msgid ""
 "Added in v2.0.0 as an experimental feature. The interface may change in "
 "newer versions without prior notice. See "
 "https://github.com/optuna/optuna/releases/tag/v2.0.0."
-msgstr "在 v2.0.0 中作为试验性特性引入. 在未来该接口可能在没有提前提醒的情况下改变. 参见 "
+msgstr ""
+"在 v2.0.0 中作为试验性特性引入. 在未来该接口可能在没有提前提醒的情况下改变. 参见 "
 "https://github.com/optuna/optuna/releases/tag/v2.0.0."
 
-#: of optuna.study.Study.add_trials:3
+#: of optuna.study.study.Study.add_trials:3
 msgid "The trials are validated before being added."
 msgstr "trial 在添加之前会被验证."
 
-#: of optuna.study.Study.add_trials:31
+#: of optuna.study.study.Study.add_trials:31
 msgid "See :func:`~optuna.study.Study.add_trial` for addition of each trial."
 msgstr "对于每一个 trial 的添加参考 :func:`~optuna.study.Study.add_trial`."
 
-#: of optuna.study.Study.add_trials:33
+#: of optuna.study.study.Study.add_trials:33
 msgid "Trials to add."
 msgstr "等待添加的 trial."
 
-#: of optuna.study.Study.add_trials:35
+#: of optuna.study.study.Study.add_trials:35
 msgid "If ``trials`` include invalid trial."
 msgstr "如果 ``trials`` 中包含无效 trial."
 
-#: of optuna.study.Study.add_trials:38
+#: of optuna.study.study.Study.add_trials:38
 msgid ""
 "Added in v2.5.0 as an experimental feature. The interface may change in "
 "newer versions without prior notice. See "
 "https://github.com/optuna/optuna/releases/tag/v2.5.0."
-msgstr "在 v2.5.0 中作为试验性特性引入. 在未来该接口可能在没有提前提醒的情况下改变. 参见 "
+msgstr ""
+"在 v2.5.0 中作为试验性特性引入. 在未来该接口可能在没有提前提醒的情况下改变. 参见 "
 "https://github.com/optuna/optuna/releases/tag/v2.5.0."
 
-#: of optuna.study.Study.ask:3
+#: of optuna.study.study.Study.ask:3
 msgid ""
 "This method is part of an alternative to "
 ":func:`~optuna.study.Study.optimize` that allows controlling the lifetime"
 " of a trial outside the scope of ``func``. Each call to this method "
 "should be followed by a call to :func:`~optuna.study.Study.tell` to "
 "finish the created trial."
-msgstr "该方法是 :func:`~optuna.study.Study.optimize` 的一个部分替代项. 它允许在 ``func`` 之外控制 trial 的生命周期. "
-"每次调用该方法后都应该接着调用 :func:`~optuna.study.Study.tell` 来完成 trial 的创建."
+msgstr ""
+"该方法是 :func:`~optuna.study.Study.optimize` 的一个部分替代项. 它允许在 ``func`` 之外控制 "
+"trial 的生命周期. 每次调用该方法后都应该接着调用 :func:`~optuna.study.Study.tell` 来完成 trial "
+"的创建."
 
-#: of optuna.study.Study.ask:10 optuna.study.Study.tell:5
+#: of optuna.study.study.Study.ask:10 optuna.study.study.Study.tell:5
 msgid "The :ref:`ask_and_tell` tutorial provides use-cases with examples."
 msgstr ":ref:`ask_and_tell` 教程提供了带有例子的使用案例."
 
-#: of optuna.study.Study.ask:14
+#: of optuna.study.study.Study.ask:14
 msgid "Getting the trial object with the :func:`~optuna.study.Study.ask` method."
 msgstr "使用 :func:`~optuna.study.Study.ask` 获取 trial 对象."
 
-#: of optuna.study.Study.ask:31
+#: of optuna.study.study.Study.ask:31
 msgid ""
 "Passing previously defined distributions to the "
 ":func:`~optuna.study.Study.ask` method."
 msgstr "将定义好的分布传递给 :func:`~optuna.study.Study.ask`."
 
-#: of optuna.study.Study.ask:53
+#: of optuna.study.study.Study.ask:53
 msgid ""
 "A dictionary containing the parameter names and parameter's "
 "distributions. Each parameter in this dictionary is automatically "
 "suggested for the returned trial, even when the suggest method is not "
 "explicitly invoked by the user. If this argument is set to :obj:`None`, "
 "no parameter is automatically suggested."
-msgstr "一个包含了参数名和参数分布的字典. 字典中的每一个参数都会自动 suggest 在返回的 trial 中, 哪怕用户并没有明确触发 suggest 方法. "
-"如果该参数被设置为 :obj:`None`, 则不会自动 suggest 参数."
+msgstr ""
+"一个包含了参数名和参数分布的字典. 字典中的每一个参数都会自动 suggest 在返回的 trial 中, 哪怕用户并没有明确触发 suggest"
+" 方法. 如果该参数被设置为 :obj:`None`, 则不会自动 suggest 参数."
 
-#: of optuna.study.BaseStudy.get_trials optuna.study.Study.ask
-#: optuna.study.Study.best_params optuna.study.Study.best_trial
+#: of optuna.study.Study.best_params optuna.study.Study.best_trial
 #: optuna.study.Study.best_trials optuna.study.Study.best_value
 #: optuna.study.Study.direction optuna.study.Study.directions
 #: optuna.study.Study.system_attrs optuna.study.Study.trials
-#: optuna.study.Study.trials_dataframe optuna.study.Study.user_attrs
+#: optuna.study.Study.user_attrs optuna.study.study.BaseStudy.get_trials
+#: optuna.study.study.Study.ask optuna.study.study.Study.trials_dataframe
 msgid "返回"
 msgstr ""
 
-#: of optuna.study.Study.ask:58
+#: of optuna.study.study.Study.ask:58
 msgid "A :class:`~optuna.trial.Trial`."
 msgstr ""
 
@@ -393,9 +405,10 @@ msgid ""
 "dominate the trial. It's called that a trial ``t0`` dominates another "
 "trial ``t1`` if ``all(v0 <= v1) for v0, v1 in zip(t0.values, t1.values)``"
 " and ``any(v0 < v1) for v0, v1 in zip(t0.values, t1.values)`` are held."
-msgstr "如果不存在 dominate 该trial 的trial, 则该 trial 处于帕累托前沿上. "
-"如果 ``all(v0 <= v1) for v0, v1 in zip(t0.values, t1.values)`` 成立, 则称 trial ``t0`` dominate trial ``t1``. "
-
+msgstr ""
+"如果不存在 dominate 该trial 的trial, 则该 trial 处于帕累托前沿上. 如果 ``all(v0 <= v1) for "
+"v0, v1 in zip(t0.values, t1.values)`` 成立, 则称 trial ``t0`` dominate trial "
+"``t1``. "
 
 #: of optuna.study.Study.best_trials:8
 msgid "A list of :class:`~optuna.trial.FrozenTrial` objects."
@@ -413,46 +426,48 @@ msgstr ":class:`~optuna.study.StudyDirection` 对象."
 msgid "A list of :class:`~optuna.study.StudyDirection` objects."
 msgstr ":class:`~optuna.study.StudyDirection`  对象列表."
 
-#: of optuna.study.Study.enqueue_trial:3
+#: of optuna.study.study.Study.enqueue_trial:3
 msgid ""
 "You can fix the next sampling parameters which will be evaluated in your "
 "objective function."
 msgstr "你可以固定下一个采样参数, 其将在目标函数中被采样."
 
-#: of optuna.study.Study.enqueue_trial:26
+#: of optuna.study.study.Study.enqueue_trial:26
 msgid "Parameter values to pass your objective function."
 msgstr "传递给目标函数的参数值."
 
-#: of optuna.study.Study.enqueue_trial:29
+#: of optuna.study.study.Study.enqueue_trial:29
 msgid ""
 "Added in v1.2.0 as an experimental feature. The interface may change in "
 "newer versions without prior notice. See "
 "https://github.com/optuna/optuna/releases/tag/v1.2.0."
-msgstr "在 v1.2.0 中作为试验性特性引入. 在未来该接口可能在没有提前提醒的情况下改变. 参见 "
+msgstr ""
+"在 v1.2.0 中作为试验性特性引入. 在未来该接口可能在没有提前提醒的情况下改变. 参见 "
 "https://github.com/optuna/optuna/releases/tag/v1.2.0."
 
-#: of optuna.study.BaseStudy.get_trials:3 optuna.study.Study.trials:3
+#: of optuna.study.Study.trials:3 optuna.study.study.BaseStudy.get_trials:3
 msgid "The returned trials are ordered by trial number."
 msgstr "返回的 trial 按照 trial 号排序."
 
-#: of optuna.study.BaseStudy.get_trials:23
+#: of optuna.study.study.BaseStudy.get_trials:23
 msgid ""
 "Flag to control whether to apply ``copy.deepcopy()`` to the trials. Note "
 "that if you set the flag to :obj:`False`, you shouldn't mutate any fields"
 " of the returned trial. Otherwise the internal state of the study may "
 "corrupt and unexpected behavior may happen."
-msgstr "控制是否应用 ``copy.deepcopy()`` 到 trial 的选项. 注意, 如果设置其为 :obj:`False`, 你就不应该交换返回 trial 的任何域."
-" 否则 study 的内部状态可能会崩溃, 引发无法预知的行为."
+msgstr ""
+"控制是否应用 ``copy.deepcopy()`` 到 trial 的选项. 注意, 如果设置其为 :obj:`False`, "
+"你就不应该交换返回 trial 的任何域. 否则 study 的内部状态可能会崩溃, 引发无法预知的行为."
 
-#: of optuna.study.BaseStudy.get_trials:27
+#: of optuna.study.study.BaseStudy.get_trials:27
 msgid "Trial states to filter on. If :obj:`None`, include all states."
 msgstr "用于过滤的 trial 状态. 如果设置为 :obj:`None` 将包含所有状态."
 
-#: of optuna.study.BaseStudy.get_trials:29 optuna.study.Study.trials:7
+#: of optuna.study.Study.trials:7 optuna.study.study.BaseStudy.get_trials:29
 msgid "A list of :class:`~optuna.FrozenTrial` objects."
 msgstr ":class:`~optuna.FrozenTrial` 对象的列表"
 
-#: of optuna.study.Study.optimize:3
+#: of optuna.study.study.Study.optimize:3
 msgid ""
 "Optimization is done by choosing a suitable set of hyperparameter values "
 "from a given range. Uses a sampler which implements the task of value "
@@ -461,42 +476,37 @@ msgid ""
 "sampler is TPE. See also :class:`~optuna.samplers.TPESampler` for more "
 "details on 'TPE'."
 msgstr ""
-"通过从一定范围内选择合适的超参数集合, 该优化过程已经完成. 使用一个从特定分布上获得 suggestion 值的"
-" sampler. 该 sampler 是通过 "
-":func:`~optuna.study.create_study` 来确定的. 其默认值是 TPE. "
-"关于 TPE 的更多细节见 :class:`~optuna.samplers.TPESampler`."
+"通过从一定范围内选择合适的超参数集合, 该优化过程已经完成. 使用一个从特定分布上获得 suggestion 值的 sampler. 该 "
+"sampler 是通过 :func:`~optuna.study.create_study` 来确定的. 其默认值是 TPE. 关于 TPE "
+"的更多细节见 :class:`~optuna.samplers.TPESampler`."
 
-#: of optuna.study.Study.optimize:24
+#: of optuna.study.study.Study.optimize:24
 msgid "A callable that implements objective function."
 msgstr "目标函数."
 
-#: of optuna.study.Study.optimize:25
+#: of optuna.study.study.Study.optimize:25
 msgid ""
 "The number of trials. If this argument is set to :obj:`None`, there is no"
 " limitation on the number of trials. If :obj:`timeout` is also set to "
 ":obj:`None`, the study continues to create trials until it receives a "
 "termination signal such as Ctrl+C or SIGTERM."
 msgstr ""
-"trial 的个数. 如果该选项被设置成 :obj:`None` 的话,  trial "
-"数就不存在限制了. 如果 :obj:`timeout` 也被设置成 :obj:`None` "
-"的话,  该 study 将会一直创建新 trial, 除非它收到了一个比如 "
-"Ctrl+C 或者是 SIGTERM 的终止信号. "
+"trial 的个数. 如果该选项被设置成 :obj:`None` 的话,  trial 数就不存在限制了. 如果 :obj:`timeout` "
+"也被设置成 :obj:`None` 的话,  该 study 将会一直创建新 trial, 除非它收到了一个比如 Ctrl+C 或者是 "
+"SIGTERM 的终止信号. "
 
-
-#: of optuna.study.Study.optimize:29
+#: of optuna.study.study.Study.optimize:29
 msgid ""
 "Stop study after the given number of second(s). If this argument is set "
 "to :obj:`None`, the study is executed without time limitation. If "
 ":obj:`n_trials` is also set to :obj:`None`, the study continues to create"
 " trials until it receives a termination signal such as Ctrl+C or SIGTERM."
 msgstr ""
-"该给定的秒数之后终止 study. 如果该选项被设置成 :obj:`None` 的话, 该"
-" study 将会在没有时间限制的情况下一直运行. 如果 :obj:`n_trials` 也被设置成"
-" :obj:`None` 的话,  该 study 将会一直创建新 "
-"trial, 除非它收到了一个比如 Ctrl+C 或者是 SIGTERM 的终止信号. "
+"该给定的秒数之后终止 study. 如果该选项被设置成 :obj:`None` 的话, 该 study 将会在没有时间限制的情况下一直运行. 如果"
+" :obj:`n_trials` 也被设置成 :obj:`None` 的话,  该 study 将会一直创建新 trial, 除非它收到了一个比如"
+" Ctrl+C 或者是 SIGTERM 的终止信号. "
 
-
-#: of optuna.study.Study.optimize:33
+#: of optuna.study.study.Study.optimize:33
 msgid ""
 "The number of parallel jobs. If this argument is set to :obj:`-1`, the "
 "number is set to CPU count.  .. note::     ``n_jobs`` allows "
@@ -511,57 +521,56 @@ msgid ""
 "https://github.com/optuna/optuna/releases/tag/v2.7.0."
 msgstr ""
 
-#: of optuna.study.Study.optimize:33
+#: of optuna.study.study.Study.optimize:33
 msgid ""
 "The number of parallel jobs. If this argument is set to :obj:`-1`, the "
 "number is set to CPU count."
 msgstr "并行运行的 job 数. 如果该选项被设置成了 :obj:`-1`, job 数目将等于 CPU 核心数. "
 
-#: of optuna.study.Study.optimize:37
+#: of optuna.study.study.Study.optimize:37
 msgid ""
 "``n_jobs`` allows parallelization using :obj:`threading` and may suffer "
 "from `Python's GIL "
 "<https://wiki.python.org/moin/GlobalInterpreterLock>`_. It is recommended"
 " to use :ref:`process-based parallelization<distributed>` if ``func`` is "
 "CPU bound."
-msgstr "``n_jobs`` 允许使用 :obj:`threading`  进行并行化, 这可能会受到 `Python 的 GIL 影响 <https://wiki.python.org/moin/GlobalInterpreterLock>`_. "
-"我们推荐使用 :ref:`process-based parallelization<distributed>`, 如果你的 ``func`` 受制于 CPU 的话."
+msgstr ""
+"``n_jobs`` 允许使用 :obj:`threading`  进行并行化, 这可能会受到 `Python 的 GIL 影响 "
+"<https://wiki.python.org/moin/GlobalInterpreterLock>`_. 我们推荐使用 :ref"
+":`process-based parallelization<distributed>`, 如果你的 ``func`` 受制于 CPU 的话."
 
-#: of optuna.study.Study.optimize:43
+#: of optuna.study.study.Study.optimize:43
 msgid ""
 "Deprecated in v2.7.0. This feature will be removed in the future. It is "
 "recommended to use :ref:`process-based parallelization<distributed>`. The"
 " removal of this feature is currently scheduled for v4.0.0, but this "
 "schedule is subject to change. See "
 "https://github.com/optuna/optuna/releases/tag/v2.7.0."
-msgstr "在 v2.7.0 中被弃用. 该特性在未来会被移除. 我们推荐使用 "
-":ref:`process-based parallelization<distributed>`. "
-"该特征的移除计划在 v4.0.0 中发生. 但是这个计划可能会改变, 参见 "
+msgstr ""
+"在 v2.7.0 中被弃用. 该特性在未来会被移除. 我们推荐使用 :ref:`process-based "
+"parallelization<distributed>`. 该特征的移除计划在 v4.0.0 中发生. 但是这个计划可能会改变, 参见 "
 "https://github.com/optuna/optuna/releases/tag/v2.7.0."
 
-#: of optuna.study.Study.optimize:48
+#: of optuna.study.study.Study.optimize:48
 msgid ""
 "A study continues to run even when a trial raises one of the exceptions "
 "specified in this argument. Default is an empty tuple, i.e. the study "
 "will stop for any exception except for "
 ":class:`~optuna.exceptions.TrialPruned`."
 msgstr ""
-"该选项中指定一些异常, 这样, 当 trial 抛出这些异常时, study "
-"仍然会继续运行. 默认情况下这是一个空元组, 也就是说,  study 会在碰到任何除 "
-":class:`~optuna.exceptions.TrialPruned` 之外的异常时都终止运行. "
+"该选项中指定一些异常, 这样, 当 trial 抛出这些异常时, study 仍然会继续运行. 默认情况下这是一个空元组, 也就是说,  "
+"study 会在碰到任何除 :class:`~optuna.exceptions.TrialPruned` 之外的异常时都终止运行. "
 
-
-#: of optuna.study.Study.optimize:51
+#: of optuna.study.study.Study.optimize:51
 msgid ""
 "List of callback functions that are invoked at the end of each trial. "
 "Each function must accept two parameters with the following types in this"
 " order: :class:`~optuna.study.Study` and :class:`~optuna.FrozenTrial`."
 msgstr ""
-"一系列在每个 trial 终止时会被调用的回调函数. 每个函数必须按照 "
-":class:`~optuna.study.Study` 和 "
+"一系列在每个 trial 终止时会被调用的回调函数. 每个函数必须按照 :class:`~optuna.study.Study` 和 "
 ":class:`~optuna.FrozenTrial` 的顺序接受两个对应类型的参数. "
 
-#: of optuna.study.Study.optimize:54
+#: of optuna.study.study.Study.optimize:54
 msgid ""
 "Flag to determine whether to automatically run garbage collection after "
 "each trial. Set to :obj:`True` to run the garbage collection, "
@@ -571,65 +580,70 @@ msgid ""
 ".. seealso::      :ref:`out-of-memory-gc-collect`"
 msgstr ""
 
-#: of optuna.study.Study.optimize:54
+#: of optuna.study.study.Study.optimize:54
 msgid ""
 "Flag to determine whether to automatically run garbage collection after "
 "each trial. Set to :obj:`True` to run the garbage collection, "
 ":obj:`False` otherwise. When it runs, it runs a full collection by "
 "internally calling :func:`gc.collect`. If you see an increase in memory "
 "consumption over several trials, try setting this flag to :obj:`True`."
-msgstr "确定是否要在每个 trial 之后自动运行垃圾回收的选项. 设置为 :obj:`True` 的话将运行, 设置为 :obj:`False` 则相反. "
-"当它运行时, 它将通过在内部执行 :func:`gc.collect` 进行完整的回收. "
-"如果你每隔几个 trial 就观察到上升的内存使用, 可以尝试设置该选项为 :obj:`True`."
+msgstr ""
+"确定是否要在每个 trial 之后自动运行垃圾回收的选项. 设置为 :obj:`True` 的话将运行, 设置为 :obj:`False` "
+"则相反. 当它运行时, 它将通过在内部执行 :func:`gc.collect` 进行完整的回收. 如果你每隔几个 trial "
+"就观察到上升的内存使用, 可以尝试设置该选项为 :obj:`True`."
 
-#: of optuna.study.Study.optimize:62
+#: of optuna.study.study.Study.optimize:62
 msgid ":ref:`out-of-memory-gc-collect`"
 msgstr ""
 
-#: of optuna.study.Study.optimize:63
+#: of optuna.study.study.Study.optimize:63
 msgid ""
 "Flag to show progress bars or not. To disable progress bar, set this "
-"``False``. Currently, progress bar is experimental feature and disabled "
-"when ``n_jobs`` :math:`\\ne 1`."
+":obj:`False`. Currently, progress bar is experimental feature and "
+"disabled when ``n_jobs`` :math:`\\ne 1`."
 msgstr ""
-"设置是否显示进度条的选项. 要禁用它的话, 将其设置成 ``False``. 目前这是一个试验性特性, 并且当 "
-"``n_jobs`` :math:`[\\ne 1]` 时会被自动禁用. "
+"设置是否显示进度条的选项. 要禁用它的话, 将其设置成 ``False``. 目前这是一个试验性特性, 并且当 ``n_jobs`` "
+":math:`[\\ne 1]` 时会被自动禁用."
 
-#: of optuna.study.Study.optimize:67
+#: of optuna.study.study.Study.optimize:67
 msgid "If nested invocation of this method occurs."
 msgstr "如果该方法的堆叠调用发生."
 
-#: of optuna.study.Study.set_system_attr:3
+#: of optuna.study.study.Study.set_system_attr:3
 msgid ""
 "Note that Optuna internally uses this method to save system messages. "
 "Please use :func:`~optuna.study.Study.set_user_attr` to set users' "
 "attributes."
-msgstr "注意, Optuna 在内部使用该方法来保存系统信息, 关于用户属性参见 :func:`~optuna.study.Study.set_user_attr`. "
+msgstr ""
+"注意, Optuna 在内部使用该方法来保存系统信息, 关于用户属性参见 "
+":func:`~optuna.study.Study.set_user_attr`. "
 
-#: of optuna.study.Study.set_system_attr:6 optuna.study.Study.set_user_attr:32
+#: of optuna.study.study.Study.set_system_attr:6
+#: optuna.study.study.Study.set_user_attr:32
 msgid "A key string of the attribute."
 msgstr "一个属性键值对. "
 
-#: of optuna.study.Study.set_system_attr:7 optuna.study.Study.set_user_attr:33
+#: of optuna.study.study.Study.set_system_attr:7
+#: optuna.study.study.Study.set_user_attr:33
 msgid "A value of the attribute. The value should be JSON serializable."
 msgstr "属性对应的值, 该值应是可 JSON 序列化的. "
 
-#: of optuna.study.Study.set_user_attr:5
+#: of optuna.study.study.Study.set_user_attr:5
 msgid "See :attr:`~optuna.study.Study.user_attrs` for related attribute."
 msgstr "相关属性见 :attr:`~optuna.study.Study.user_attrs`"
 
-#: of optuna.study.Study.stop:3
+#: of optuna.study.study.Study.stop:3
 msgid ""
 "This method lets the running :meth:`~optuna.study.Study.optimize` method "
 "return immediately after all trials which the "
 ":meth:`~optuna.study.Study.optimize` method spawned finishes. This method"
 " does not affect any behaviors of parallel or successive study processes."
 msgstr ""
-"该方法会正在运行的 :meth:`~optuna.study.Study.optimize` 终止, 只要其中由"
-" :meth:`~optuna.study.Study.optimize` 生成的 trial "
-"都结束了. 该方法不会影响并行或者序列执行的 study 的任何行为. "
+"该方法会正在运行的 :meth:`~optuna.study.Study.optimize` 终止, 只要其中由 "
+":meth:`~optuna.study.Study.optimize` 生成的 trial 都结束了. 该方法不会影响并行或者序列执行的 "
+"study 的任何行为. "
 
-#: of optuna.study.Study.stop:26
+#: of optuna.study.study.Study.stop:26
 msgid "If this method is called outside an objective function or callback."
 msgstr "如果该方法是在目标函数或者一个回调函数之外被调用的话. "
 
@@ -637,36 +651,38 @@ msgstr "如果该方法是在目标函数或者一个回调函数之外被调用
 msgid "A dictionary containing all system attributes."
 msgstr "一个包含所有系统属性的字典."
 
-#: of optuna.study.Study.tell:50
+#: of optuna.study.study.Study.tell:50
 msgid "A :class:`~optuna.trial.Trial` object or a trial number."
 msgstr ":class:`~optuna.trial.Trial` 对象或者 trial 号."
 
-#: of optuna.study.Study.tell:51
+#: of optuna.study.study.Study.tell:51
 msgid ""
 "Optional objective value or a sequence of such values in case the study "
 "is used for multi-objective optimization. Argument must be provided if "
 "``state`` is :class:`~optuna.trial.TrialState.COMPLETE` and should be "
 ":obj:`None` if ``state`` is :class:`~optuna.trial.TrialState.FAIL` or "
 ":class:`~optuna.trial.TrialState.PRUNED`."
-msgstr "一个可选目标函数值或者一系列目标函数值, 如果 study 是用于多目标优化的话."
-"如果 ``state`` 是 :class:`~optuna.trial.TrialState.COMPLETE` 的话, 则必须提供该参数. "
-"如果 ``state`` 是 :class:`~optuna.trial.TrialState.FAIL` 或者 "
+msgstr ""
+"一个可选目标函数值或者一系列目标函数值, 如果 study 是用于多目标优化的话.如果 ``state`` 是 "
+":class:`~optuna.trial.TrialState.COMPLETE` 的话, 则必须提供该参数. 如果 ``state`` 是 "
+":class:`~optuna.trial.TrialState.FAIL` 或者 "
 ":class:`~optuna.trial.TrialState.PRUNED` 的话, 该值应为 :obj:`None`."
 
-#: of optuna.study.Study.tell:56
+#: of optuna.study.study.Study.tell:56
 msgid ""
 "State to be reported. Must be :class:`~optuna.trial.TrialState.COMPLETE`,"
 " :class:`~optuna.trial.TrialState.FAIL` or "
 ":class:`~optuna.trial.TrialState.PRUNED`."
-msgstr "要报告的状态. 必须是 :class:`~optuna.trial.TrialState.COMPLETE`,"
-" :class:`~optuna.trial.TrialState.FAIL` 或者 "
+msgstr ""
+"要报告的状态. 必须是 :class:`~optuna.trial.TrialState.COMPLETE`, "
+":class:`~optuna.trial.TrialState.FAIL` 或者 "
 ":class:`~optuna.trial.TrialState.PRUNED`."
 
-#: of optuna.study.Study.tell:60
+#: of optuna.study.study.Study.tell:60
 msgid "If ``trial`` is not a :class:`~optuna.trial.Trial` or an :obj:`int`."
 msgstr "如果 ``trial`` 不是 :class:`~optuna.trial.Trial` 或者 :obj:`int`."
 
-#: of optuna.study.Study.tell:61
+#: of optuna.study.study.Study.tell:61
 msgid ""
 "If any of the following.     ``values`` is a sequence but its length does"
 " not match the number of objectives     for its associated study.     "
@@ -679,44 +695,49 @@ msgid ""
 ":class:`~optuna.trial.TrialState.FAIL` or     "
 ":class:`~optuna.trial.TrialState.PRUNED`.     ``trial`` is a trial number"
 " but no     trial exists with that number."
-msgstr "如果发生下列情况. ``values`` 是一个序列但是其长度和目标函数的个数不匹配. "
-"``state`` 是 :class:`~optuna.trial.TrialState.COMPLETE` 但是 ``values`` 是 :obj:`None`. "
-"``state`` 是 :class:`~optuna.trial.TrialState.FAIL` 或者 :class:`~optuna.trial.TrialState.PRUNED` "
-"``values`` 不是 :obj:`None`. ``state`` 不是     "
-":class:`~optuna.trial.TrialState.COMPLETE`,     "
+msgstr ""
+"如果发生下列情况. ``values`` 是一个序列但是其长度和目标函数的个数不匹配. ``state`` 是 "
+":class:`~optuna.trial.TrialState.COMPLETE` 但是 ``values`` 是 :obj:`None`. "
+"``state`` 是 :class:`~optuna.trial.TrialState.FAIL` 或者 "
+":class:`~optuna.trial.TrialState.PRUNED` ``values`` 不是 :obj:`None`. "
+"``state`` 不是     :class:`~optuna.trial.TrialState.COMPLETE`,     "
 ":class:`~optuna.trial.TrialState.FAIL` 或者     "
-":class:`~optuna.trial.TrialState.PRUNED`. ``trial`` 是一个 trial 号但是没有 trial 对应的号是此值."
+":class:`~optuna.trial.TrialState.PRUNED`. ``trial`` 是一个 trial 号但是没有 trial"
+" 对应的号是此值."
 
 #: of optuna.study.Study.trials:5
 msgid "This is a short form of ``self.get_trials(deepcopy=True, states=None)``."
 msgstr "这是 ``self.get_trials(deepcopy=True, states=None)`` 的简写形式."
 
-#: of optuna.study.Study.trials_dataframe:3
+#: of optuna.study.study.Study.trials_dataframe:3
 msgid ""
 "The DataFrame_ provides various features to analyze studies. It is also "
 "useful to draw a histogram of objective values and to export trials as a "
 "CSV file. If there are no trials, an empty DataFrame_ is returned."
-msgstr "DataFrame_ 提供各种功能来分析 study. 它对绘制目标值的直方图和将 trial 导出为 CSV 文件也很有用. 如果没有 trial, 将返回一个空的 DataFrame_. "
+msgstr ""
+"DataFrame_ 提供各种功能来分析 study. 它对绘制目标值的直方图和将 trial 导出为 CSV 文件也很有用. 如果没有 "
+"trial, 将返回一个空的 DataFrame_. "
 
-#: of optuna.study.Study.trials_dataframe:28
+#: of optuna.study.study.Study.trials_dataframe:28
 msgid ""
 "Specifies field names of :class:`~optuna.FrozenTrial` to include them to "
 "a DataFrame of trials."
 msgstr "确定 :class:`~optuna.FrozenTrial` 的域名以将其包含到一个 trial 的 DataFrame 中."
 
-#: of optuna.study.Study.trials_dataframe:30
+#: of optuna.study.study.Study.trials_dataframe:30
 msgid ""
 "Specifies whether the returned DataFrame_ employs MultiIndex_ or not. "
 "Columns that are hierarchical by nature such as ``(params, x)`` will be "
 "flattened to ``params_x`` when set to :obj:`False`."
-msgstr "确定返回的 DataFrame_ 中是否使用 MultiIndex_. "
-"当设置为 :obj:`False` 时, 那些层级组织的列, 例如 ``(params, x)``, 将会被扁平为 ``params_x``."
+msgstr ""
+"确定返回的 DataFrame_ 中是否使用 MultiIndex_. 当设置为 :obj:`False` 时, 那些层级组织的列, 例如 "
+"``(params, x)``, 将会被扁平为 ``params_x``."
 
-#: of optuna.study.Study.trials_dataframe:34
+#: of optuna.study.study.Study.trials_dataframe:34
 msgid "A pandas DataFrame_ of trials in the :class:`~optuna.study.Study`."
 msgstr "由 :class:`~optuna.study.Study` 中trial 构成的 pandas DataFrame_"
 
-#: of optuna.study.Study.trials_dataframe:41
+#: of optuna.study.study.Study.trials_dataframe:41
 msgid ""
 "If ``value`` is in ``attrs`` during multi-objective optimization, it is "
 "implicitly replaced with ``values``."

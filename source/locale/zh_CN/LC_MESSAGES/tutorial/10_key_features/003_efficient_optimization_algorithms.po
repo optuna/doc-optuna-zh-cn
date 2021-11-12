@@ -33,7 +33,7 @@ msgid ""
 "Optuna enables efficient hyperparameter optimization by adopting state-"
 "of-the-art algorithms for sampling hyperparameters and pruning "
 "efficiently unpromising trials."
-msgstr "通过采用最先进的超参数采样算法和对无望 trial 的剪枝， Optuna使得高效的超参数优化成为可能。"
+msgstr "通过采用最先进的超参数采样算法和对无望 trial 的剪枝， Optuna使得高效的超参数优化成为可能. "
 
 #: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:31
 msgid "Sampling Algorithms"
@@ -48,7 +48,7 @@ msgid ""
 "suggest parameters is in :class:`optuna.samplers.BaseSampler`."
 msgstr ""
 "利用 suggested 参数值和评估的目标值的记录，采样器基本上不断缩小搜索空间，直到找到一个最佳的搜索空间，其产生的参数会带来 "
-"更好的目标函数值。关于采样器如何 suggest 参数的更详细的解释见 :class:`optuna.samplers.BaseSampler`."
+"更好的目标函数值. 关于采样器如何 suggest 参数的更详细的解释见 :class:`optuna.samplers.BaseSampler`."
 
 #: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:37
 msgid "Optuna provides the following sampling algorithms:"
@@ -123,11 +123,11 @@ msgid ""
 ":class:`optuna.pruners.SuccessiveHalvingPruner`"
 msgstr ""
 ":class:`optuna.pruners.SuccessiveHalvingPruner` 实现的 Asynchronous "
-"Successive Halving 算法。"
+"Successive Halving 算法. "
 
 #: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:138
 msgid "Hyperband algorithm implemented in :class:`optuna.pruners.HyperbandPruner`"
-msgstr ":class:`optuna.pruners.HyperbandPruner` 实现的 Hyperband 算法。"
+msgstr ":class:`optuna.pruners.HyperbandPruner` 实现的 Hyperband 算法. "
 
 #: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:140
 msgid ""
@@ -187,7 +187,7 @@ msgstr ""
 
 #: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:205
 msgid "Set up the median stopping rule as the pruning condition."
-msgstr "将中位数终止规则设置为剪枝条件。"
+msgstr "将中位数终止规则设置为剪枝条件. "
 
 #: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:254
 msgid ""
@@ -195,7 +195,7 @@ msgid ""
 " all of the iterations. The format of message is ``\"Trial <Trial Number>"
 " pruned.\"``."
 msgstr ""
-"如你所见，有几个 trial 在其迭代完成之前被剪枝（终止）了。消息格式是 ``\"Trial <Trial Number> "
+"如你所见，有几个 trial 在其迭代完成之前被剪枝（终止）了. 消息格式是 ``\"Trial <Trial Number> "
 "pruned.\"``."
 
 #: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:260
@@ -219,7 +219,7 @@ msgid ""
 ":class:`optuna.pruners.MedianPruner` is the best."
 msgstr ""
 "对 :class:`optuna.samplers.RandomSampler` 而言 "
-":class:`optuna.pruners.MedianPruner` 是最好的。"
+":class:`optuna.pruners.MedianPruner` 是最好的. "
 
 #: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:265
 msgid ""
@@ -227,7 +227,7 @@ msgid ""
 ":class:`optuna.pruners.Hyperband` is the best."
 msgstr ""
 "对于 :class:`optuna.samplers.TPESampler` 而言 "
-":class:`optuna.pruners.Hyperband` 是最好的。"
+":class:`optuna.pruners.Hyperband` 是最好的. "
 
 #: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:267
 msgid ""
@@ -237,10 +237,10 @@ msgid ""
 "Vol.J103-D No.9 pp.615-631, 2020 "
 "<https://doi.org/10.14923/transinfj.2019JDR0003>`_,"
 msgstr ""
-"不过，注意这个基准测试不是深度学习。对于深度学习而言，请参考 `Ozaki et al, Hyperparameter Optimization "
+"不过，注意这个基准测试不是深度学习. 对于深度学习而言，请参考 `Ozaki et al, Hyperparameter Optimization "
 "Methods: Overview and Characteristics, in IEICE Trans, Vol.J103-D No.9 "
 "pp.615-631, 2020 <https://doi.org/10.14923/transinfj.2019JDR0003>`_ "
-"里的这张表格。"
+"里的这张表格. "
 
 #: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:272
 msgid "Parallel Compute Resource"
@@ -296,7 +296,7 @@ msgstr "用于剪枝的集成模块"
 msgid ""
 "To implement pruning mechanism in much simpler forms, Optuna provides "
 "integration modules for the following libraries."
-msgstr "为了用最简单的形式实现剪枝算法，Optuna 为以下库提供了集成模块。"
+msgstr "为了用最简单的形式实现剪枝算法，Optuna 为以下库提供了集成模块. "
 
 #: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:290
 msgid ""
@@ -305,7 +305,6 @@ msgid ""
 msgstr "关于 Optuna 集成模块的完整列表，参见 :mod:`optuna.integration`."
 
 #: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:292
-#, fuzzy
 msgid ""
 "For example, :class:`~optuna.integration.XGBoostPruningCallback` "
 "introduces pruning without directly changing the logic of training "
@@ -314,8 +313,8 @@ msgid ""
 " for the entire script.)"
 msgstr ""
 "比如，:class:`~optuna.integration.XGBoostPruningCallback` "
-"在没有改变训练迭代过程的逻辑的情况下引入了剪枝。(完整的脚本见 `example "
-"<https://github.com/optuna/optuna/blob/master/examples/pruning/xgboost_integration.py>`_"
+"在没有改变训练迭代过程的逻辑的情况下引入了剪枝. (完整的脚本见 `example "
+"<https://github.com/optuna/optuna/blob/master/examples/xgboost/xgboost_integration.py>`_"
 " .)"
 
 #: ../../source/tutorial/10_key_features/003_efficient_optimization_algorithms.rst:303

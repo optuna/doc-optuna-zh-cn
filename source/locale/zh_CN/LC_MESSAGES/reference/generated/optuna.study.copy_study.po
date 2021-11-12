@@ -1,0 +1,80 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018, Optuna Contributors.
+# This file is distributed under the same license as the Optuna package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Optuna 2.10.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-10-15 09:48+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../source/reference/generated/optuna.study.copy_study.rst:2
+msgid "optuna.study.copy\\_study"
+msgstr ""
+
+#: of optuna.study.study.copy_study:1
+msgid "Copy study from one storage to another."
+msgstr "将一个存储中的 study 复制到另一个存储中."
+
+#: of optuna.study.study.copy_study:3
+msgid ""
+"The direction(s) of the objective(s) in the study, trials, user "
+"attributes and system attributes are copied."
+msgstr "study 中目标函数的方向, trial, 用户属性以及系统属性都会被复制."
+
+#: of optuna.study.study.copy_study:7
+msgid "示例"
+msgstr ""
+
+#: of optuna.study.study.copy_study
+msgid "参数"
+msgstr ""
+
+#: of optuna.study.study.copy_study:49
+msgid "Name of study."
+msgstr ""
+
+#: of optuna.study.study.copy_study:50
+msgid ""
+"Source database URL such as ``sqlite:///example.db``. Please see also the"
+" documentation of :func:`~optuna.study.create_study` for further details."
+msgstr ""
+
+#: of optuna.study.study.copy_study:52
+msgid "Destination database URL."
+msgstr ""
+
+#: of optuna.study.study.copy_study:53
+msgid "Name of the created study. If omitted, ``from_study_name`` is used."
+msgstr ""
+
+#: of optuna.study.study.copy_study
+msgid "引发"
+msgstr ""
+
+#: of optuna.study.study.copy_study:55
+msgid ""
+"If a study with a conflicting name already exists in the destination "
+"storage."
+msgstr ""
+
+#: of optuna.study.study.copy_study
+msgid "返回类型"
+msgstr ""
+
+#: of optuna.study.study.copy_study:58
+msgid ""
+"Added in v2.8.0 as an experimental feature. The interface may change in "
+"newer versions without prior notice. See "
+"https://github.com/optuna/optuna/releases/tag/v2.8.0."
+msgstr ""
+

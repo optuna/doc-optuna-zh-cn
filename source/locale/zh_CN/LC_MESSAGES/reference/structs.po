@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 1.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-20 13:35-0400\n"
+"POT-Creation-Date: 2021-10-15 09:48+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -36,10 +36,14 @@ msgid "The :class:`~optuna.trial.Trial` is running."
 msgstr "运行中的 :class:`~optuna.trial.Trial`."
 
 #: of optuna.trial._state.TrialState:9
+msgid "The :class:`~optuna.trial.Trial` is waiting and unfinished."
+msgstr "运行中的 :class:`~optuna.trial.Trial`."
+
+#: of optuna.trial._state.TrialState:13
 msgid "The :class:`~optuna.trial.Trial` has been finished without any error."
 msgstr "已完成且未触发错误的 :class:`~optuna.trial.Trial`."
 
-#: of optuna.trial._state.TrialState:13
+#: of optuna.trial._state.TrialState:17
 msgid ""
 "The :class:`~optuna.trial.Trial` has been pruned with "
 ":class:`~optuna.exceptions.TrialPruned`."
@@ -47,7 +51,7 @@ msgstr ""
 "已经被 :class:`~optuna.exceptions.TrialPruned` 剪枝的 "
 ":class:`~optuna.trial.Trial`."
 
-#: of optuna.trial._state.TrialState:18
+#: of optuna.trial._state.TrialState:22
 msgid "The :class:`~optuna.trial.Trial` has failed due to an uncaught error."
 msgstr "由于未捕获的错误，该 :class:`~optuna.trial.Trial` 已经失败。"
 
@@ -57,19 +61,19 @@ msgid ""
 "instead."
 msgstr "该类已废弃。请改用 :class:`~optuna.trial.TrialState`."
 
-#: of optuna._study_direction.StudyDirection:1
+#: of optuna.study._study_direction.StudyDirection:1
 msgid "Direction of a :class:`~optuna.study.Study`."
 msgstr ":class:`~optuna.study.Study` 的方向。 "
 
-#: of optuna._study_direction.StudyDirection:5
+#: of optuna.study._study_direction.StudyDirection:5
 msgid "Direction has not been set."
 msgstr "方向未设置。"
 
-#: of optuna._study_direction.StudyDirection:9
+#: of optuna.study._study_direction.StudyDirection:9
 msgid ":class:`~optuna.study.Study` minimizes the objective function."
 msgstr ":class:`~optuna.study.Study` 将最小化目标函数"
 
-#: of optuna._study_direction.StudyDirection:13
+#: of optuna.study._study_direction.StudyDirection:13
 msgid ":class:`~optuna.study.Study` maximizes the objective function."
 msgstr ":class:`~optuna.study.Study` 将最大化目标函数。"
 

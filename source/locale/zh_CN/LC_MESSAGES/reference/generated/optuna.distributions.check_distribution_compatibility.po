@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 2.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-20 13:35-0400\n"
+"POT-Creation-Date: 2021-10-15 09:48+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -42,26 +42,28 @@ msgid "A distribution newly added to storage."
 msgstr "新添加到存储内容的分布"
 
 #: of optuna.distributions.check_distribution_compatibility
-msgid "返回"
-msgstr ""
-
-#: of optuna.distributions.check_distribution_compatibility:8
-msgid "True denotes given distributions are compatible. Otherwise, they are not."
-msgstr "如果是 True 的话，表明这些分布是兼容的，否则不兼容。"
-
-#: of optuna.distributions.check_distribution_compatibility
 msgid "引发"
 msgstr ""
 
-#: of optuna.distributions.check_distribution_compatibility:10
+#: of optuna.distributions.check_distribution_compatibility:8
 msgid ""
 "If different distribution kinds are set to ``dist_old`` and ``dist_new``,"
 "     or ``dist_old.choices`` doesn't match ``dist_new.choices``     for "
 ":class:`~optuna.distributions.CategoricalDistribution`."
-msgstr "如果 ``dist_old`` 和 ``dist_new`` 属于不同类的分布或者 "
-"``dist_old.choices`` 不匹配 :class:`~optuna.distributions.CategoricalDistribution`  的 ``dist_new.choices``."
+msgstr ""
+"如果 ``dist_old`` 和 ``dist_new`` 属于不同类的分布或者 ``dist_old.choices`` 不匹配 "
+":class:`~optuna.distributions.CategoricalDistribution`  的 "
+"``dist_new.choices``."
 
 #: of optuna.distributions.check_distribution_compatibility
 msgid "返回类型"
 msgstr ""
+
+#~ msgid "返回"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "True denotes given distributions are "
+#~ "compatible. Otherwise, they are not."
+#~ msgstr "如果是 True 的话，表明这些分布是兼容的，否则不兼容。"
 
