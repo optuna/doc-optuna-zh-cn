@@ -23,26 +23,29 @@ msgstr ""
 
 #: of optuna.integration.allennlp._executor.AllenNLPExecutor:1
 msgid "AllenNLP extension to use optuna with Jsonnet config file."
-msgstr ""
+msgstr "为了让 Jsonnet 配置文件在 Optuna 中可用的 AllenNLP 扩展. "
 
 #: of optuna.integration.allennlp._executor.AllenNLPExecutor:3
 msgid ""
 "This feature is experimental since AllenNLP major release will come soon."
 " The interface may change without prior notice to correspond to the "
 "update."
-msgstr ""
+msgstr "这是个试验性的特性，因为 AllenNLP 的下一个主要版本将发行. 而该接口可能在没有提前告知更新的情况下改变. "
 
 #: of optuna.integration.allennlp._executor.AllenNLPExecutor:6
 msgid ""
 "See the examples of `objective function <https://github.com/optuna"
 "/optuna-examples/tree/ main/allennlp/allennlp_jsonnet.py>`_."
 msgstr ""
+"见例子 `objective function <https://github.com/optuna"
+"/optuna-examples/tree/ main/allennlp/allennlp_jsonnet.py>`_."
 
 #: of optuna.integration.allennlp._executor.AllenNLPExecutor:9
 msgid ""
 "You can also see the tutorial of our AllenNLP integration on `AllenNLP "
 "Guide <https://guide.allennlp.org/hyperparameter-optimization>`_."
-msgstr ""
+msgstr "你也可以在 `AllenNLP "
+"Guide <https://guide.allennlp.org/hyperparameter-optimization>`_ 上看到我们关于 AllenNLP 集成的教程."
 
 #: of optuna.integration.allennlp._executor.AllenNLPExecutor:13
 msgid ""
@@ -51,7 +54,10 @@ msgid ""
 "floating point. Please see the `example configuration "
 "<https://github.com/optuna/optuna-examples/tree/main/ "
 "allennlp/classifier.jsonnet>`_."
-msgstr ""
+msgstr "从 Optuna v2.1.0开始, 用户需要使用 Jsonnet 里的方法来传播参数. 对于整数采用 ``std.parseInt``, "
+"对于浮点数采用 ``std.parseJson``. 请参考 `example configuration "
+"<https://github.com/optuna/optuna-examples/tree/main/ "
+"allennlp/classifier.jsonnet>`_."
 
 #: of optuna.integration.allennlp._executor.AllenNLPExecutor:19
 msgid ""
@@ -61,7 +67,9 @@ msgid ""
 "value is set in both a search space in Optuna and the environment "
 "variables, the executor will use the value specified in the search space "
 "in Optuna."
-msgstr ""
+msgstr "在 :class:`~optuna.integration.AllenNLPExecutor` 中, 你可以通过使用 Optuna suggest 方法定义搜索空间"
+"或者像在 AllenNLP CLI 中设置环境变量那样来定义搜索空间. 如果一个值同时出现在 Optuna 的搜索空间和环境变量里, "
+"executor 将会采用 Optuna 搜索空间里的那个."
 
 #: of optuna.integration.allennlp._executor.AllenNLPExecutor
 msgid "参数"
@@ -71,7 +79,7 @@ msgstr ""
 msgid ""
 "A :class:`~optuna.trial.Trial` corresponding to the current evaluation of"
 " the objective function."
-msgstr ""
+msgstr "对应于目标函数本次求值的 :class:`~optuna.trial.Trial`. "
 
 #: of optuna.integration.allennlp._executor.AllenNLPExecutor:27
 msgid ""
@@ -79,32 +87,36 @@ msgid ""
 "``std.extVar``. Please refer to `the config example "
 "<https://github.com/allenai/allentune/blob/ "
 "master/examples/classifier.jsonnet>`_."
-msgstr ""
+msgstr "AllenNLP 的配置文件. 超参数应该被标记为 "
+"``std.extVar``. 请参考 `the config example "
+"<https://github.com/allenai/allentune/blob/ "
+"master/examples/classifier.jsonnet>`_."
 
 #: of optuna.integration.allennlp._executor.AllenNLPExecutor:31
 msgid "A path which model weights and logs are saved."
-msgstr ""
+msgstr "存储模型的权重和日志的路径."
 
 #: of optuna.integration.allennlp._executor.AllenNLPExecutor:32
 msgid "An evaluation metric for the result of ``objective``."
-msgstr ""
+msgstr "``objective`` 的评估求值函数."
 
 #: of optuna.integration.allennlp._executor.AllenNLPExecutor:33
 msgid "If :obj:`True`, an executor overwrites the output directory if it exists."
-msgstr ""
+msgstr "如果为:obj:`True`, executor 将会覆盖输出目录."
 
 #: of optuna.integration.allennlp._executor.AllenNLPExecutor:34
 msgid ""
 "If :obj:`True`, tqdm status is printed on separate lines and slows tqdm "
 "refresh rate."
-msgstr ""
+msgstr "如果为 :obj:`True`, tqdm 状态将会另起一行显示且其刷新率会降低."
 
 #: of optuna.integration.allennlp._executor.AllenNLPExecutor:35
 msgid ""
 "Additional packages to include. For more information, please see "
 "`AllenNLP documentation "
 "<https://docs.allennlp.org/master/api/commands/train/>`_."
-msgstr ""
+msgstr "要引入的其他包, 更多信息参见 `AllenNLP documentation "
+"<https://docs.allennlp.org/master/api/commands/train/>`_."
 
 #: of optuna.integration.allennlp._executor.AllenNLPExecutor:40
 msgid ""
@@ -112,6 +124,8 @@ msgid ""
 "newer versions without prior notice. See "
 "https://github.com/optuna/optuna/releases/tag/v1.4.0."
 msgstr ""
+"在 v1.4.0 中作为实验性特征引入. 该接口可能在新版中在没有提醒的情况下改变, 参见 "
+"https://github.com/optuna/optuna/releases/tag/v1.4.0."
 
 #: ../../source/reference/generated/optuna.integration.AllenNLPExecutor.rst:12
 msgid "Methods"
@@ -125,7 +139,7 @@ msgstr ""
 #: of optuna.integration.allennlp._executor.AllenNLPExecutor.run:1
 #: optuna.integration.allennlp._executor.AllenNLPExecutor.run:1:<autosummary>:1
 msgid "Train a model using AllenNLP."
-msgstr ""
+msgstr "使用 AllenNLP 来训练模型."
 
 #: of optuna.integration.allennlp._executor.AllenNLPExecutor.run
 msgid "返回类型"

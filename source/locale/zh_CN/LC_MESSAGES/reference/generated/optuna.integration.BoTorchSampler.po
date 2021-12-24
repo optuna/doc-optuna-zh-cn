@@ -25,7 +25,7 @@ msgstr ""
 msgid ""
 "A sampler that uses BoTorch, a Bayesian optimization library built on top"
 " of PyTorch."
-msgstr ""
+msgstr "采用 BoTorch 的采样器. BoTorch 是一个建立在 PyTorch 基础上的贝叶斯优化库."
 
 #: of optuna.integration.botorch.BoTorchSampler:3
 msgid ""
@@ -33,20 +33,22 @@ msgid ""
 "to suggest parameter configurations. Parameters are transformed to "
 "continuous space and passed to BoTorch, and then transformed back to "
 "Optuna's representations. Categorical parameters are one-hot encoded."
-msgstr ""
+msgstr "该采样器允许使用 BoTorch 的优化算来为 Optuna 提供参数 suggestion. 参数会被转化为"
+"连续空间然后被传递给 BoTorch, 之后又会被转化回 Optuna 的表示空间. (在此过程中) 类别参数以 one-hot 形式编码."
 
 #: of optuna.integration.botorch.BoTorchSampler:8
 msgid ""
 "See an `example <https://github.com/optuna/optuna-"
 "examples/blob/main/multi_objective/ botorch_simple.py>`_ how to use the "
 "sampler."
-msgstr ""
+msgstr "关于如何使用该采样器, 参见 `example <https://github.com/optuna/optuna-"
+"examples/blob/main/multi_objective/ botorch_simple.py>`_."
 
 #: of optuna.integration.botorch.BoTorchSampler:12
 msgid ""
 "See the `BoTorch <https://botorch.org/>`_ homepage for details and for "
 "how to implement your own ``candidates_func``."
-msgstr ""
+msgstr "关于如何实现你自己的 ``candidates_func`` 参见 `BoTorch <https://botorch.org/>`_ 的主页."
 
 #: of optuna.integration.botorch.BoTorchSampler:16
 msgid ""
@@ -54,7 +56,7 @@ msgid ""
 "when used with constraints. Instead, a new instance should be created for"
 " each new study. The reason for this is that the sampler is stateful "
 "keeping all the computed constraints."
-msgstr ""
+msgstr "当与约束条件一起使用时, 该采样器的一个实例*不应该用于不同的 study*. 相反, 应该为每个新的 study 创建一个新的实例. 原因是, 在保持所有计算的约束时该采样器是有状态的. "
 
 #: of optuna.integration.botorch.BoTorchSampler
 #: optuna.integration.botorch.BoTorchSampler.after_trial
@@ -90,7 +92,10 @@ msgid ""
 "``torch.Tensor``. The return value must be a ``torch.Tensor``. However, "
 "if ``constraints_func`` is omitted, constraints will be :obj:`None`. For "
 "any constraints that failed to compute, the tensor will contain NaN."
-msgstr ""
+msgstr "一个可选的, 用于提供下一个 candidate 的suggestion 的函数. 其必须接受 "
+"训练数据, 目标函数, 约束条件 和搜索空间的边界作为参数并返回下一个 candidate. 参数类型为 ``torch.Tensor``. "
+"返回类型必须为 ``torch.Tensor``. 然而, 如果省略 ``constraints_func`` 的话, 约束条件将为 :obj:`None`. "
+"张量中将包含 NaN 的约束条件无法计算."
 
 #: of optuna.integration.botorch.BoTorchSampler:27
 msgid ""
@@ -100,15 +105,18 @@ msgid ""
 " two or three, Quasi MC-based batch Expected Hypervolume Improvement "
 "(qEHVI) is used. Otherwise, for larger number of objectives, the faster "
 "Quasi MC-based extended ParEGO (qParEGO) is used."
-msgstr ""
+msgstr "如果省略的话, 该值见基于目标函数的个数来自动生成. 如果目标函数个数为 1, "
+"将采用 Quasi MC-based batch Expected Improvement (qEI). 如果目标函数个数为 2 或 3, "
+"将采用 Quasi MC-based batch Expected Hypervolume Improvement "
+"(qEHVI). 对于其他目标函数个数更多的情形, 将采用更快的 Quasi MC-based extended ParEGO (qParEGO)."
 
 #: of optuna.integration.botorch.BoTorchSampler:33
 msgid "The function should assume *maximization* of the objective."
-msgstr ""
+msgstr "该函数应预设目标函数的 *最大化* ."
 
 #: of optuna.integration.botorch.BoTorchSampler:36
 msgid "See :func:`optuna.integration.botorch.qei_candidates_func` for an example."
-msgstr ""
+msgstr "例子见 :func:`optuna.integration.botorch.qei_candidates_func`. "
 
 #: of optuna.integration.botorch.BoTorchSampler:37
 msgid ""
@@ -119,7 +127,9 @@ msgid ""
 "smaller than 0 is considered feasible.  If omitted, no constraints will "
 "be passed to ``candidates_func`` nor taken into account during "
 "suggestion."
-msgstr ""
+msgstr "可选的用于计算目标函数约束条件的函数. 其接受 :class:`~optuna.trial.FrozenTrial` 作为参数, 返回约束条件. "
+"返回值必须为 :obj:`float` 构成的序列. (序列中) 大于 0 的值意味着该约束被打破, 小于或者等于0 的值意味着可行. "
+"如果省略的话, 在 suggestion 过程中 ``candidates_func`` 将不会接受或者考虑约束条件."
 
 #: of optuna.integration.botorch.BoTorchSampler:37
 msgid ""
@@ -128,25 +138,26 @@ msgid ""
 " return value must be a sequence of :obj:`float` s. A value strictly "
 "larger than 0 means that a constraint is violated. A value equal to or "
 "smaller than 0 is considered feasible."
-msgstr ""
+msgstr "可选的用于计算目标函数约束条件的函数. 其接受 :class:`~optuna.trial.FrozenTrial` 作为参数, 返回约束条件. "
+"返回值必须为 :obj:`float` 构成的序列. (序列中) 大于 0 的值意味着该约束被打破, 小于或者等于0 的值意味着可行. "
 
 #: of optuna.integration.botorch.BoTorchSampler:42
 msgid ""
 "If omitted, no constraints will be passed to ``candidates_func`` nor "
 "taken into account during suggestion."
-msgstr ""
+msgstr "如果省略的话, 在 suggestion 过程中 ``candidates_func`` 将不会接受或者考虑约束条件."
 
 #: of optuna.integration.botorch.BoTorchSampler:44
 msgid ""
 "Number of initial trials, that is the number of trials to resort to "
 "independent sampling."
-msgstr ""
+msgstr "初始 trial 个数, 独立采样的 trial 的个数."
 
 #: of optuna.integration.botorch.BoTorchSampler:46
 msgid ""
 "An independent sampler to use for the initial trials and for parameters "
 "that are conditional."
-msgstr ""
+msgstr "用于条件参数和初始 tiral 的独立 sampler. "
 
 #: of optuna.integration.botorch.BoTorchSampler:50
 #: optuna.integration.botorch.BoTorchSampler.after_trial:7
@@ -155,6 +166,8 @@ msgid ""
 "newer versions without prior notice. See "
 "https://github.com/optuna/optuna/releases/tag/v2.4.0."
 msgstr ""
+"在 v2.4.0 中作为试验性特性引入. 该接口可能在未来在没有提前告知的情况下改变, 参考 "
+"https://github.com/optuna/optuna/releases/tag/v2.4.0."
 
 #: ../../source/reference/generated/optuna.integration.BoTorchSampler.rst:12
 msgid "Methods"
@@ -169,7 +182,7 @@ msgstr ""
 #: of optuna.integration.botorch.BoTorchSampler.after_trial:1
 #: optuna.integration.botorch.BoTorchSampler.after_trial:1:<autosummary>:1
 msgid "Trial post-processing."
-msgstr ""
+msgstr "trial 后处理."
 
 #: of optuna.integration.botorch.BoTorchSampler.after_trial:1:<autosummary>:1
 msgid ""
@@ -183,7 +196,7 @@ msgstr ""
 msgid ""
 "Infer the search space that will be used by relative sampling in the "
 "target trial."
-msgstr ""
+msgstr "推断将会用于目标 trial 的相对采样的搜索空间. "
 
 #: of optuna.integration.botorch.BoTorchSampler.after_trial:1:<autosummary>:1
 msgid ":obj:`reseed_rng <optuna.integration.BoTorchSampler.reseed_rng>`\\ \\(\\)"
@@ -192,7 +205,7 @@ msgstr ""
 #: of optuna.integration.botorch.BoTorchSampler.after_trial:1:<autosummary>:1
 #: optuna.integration.botorch.BoTorchSampler.reseed_rng:1
 msgid "Reseed sampler's random number generator."
-msgstr ""
+msgstr "重置采样器的随机数种子."
 
 #: of optuna.integration.botorch.BoTorchSampler.after_trial:1:<autosummary>:1
 msgid ""
@@ -204,7 +217,7 @@ msgstr ""
 #: of optuna.integration.botorch.BoTorchSampler.after_trial:1:<autosummary>:1
 #: optuna.integration.botorch.BoTorchSampler.sample_independent:1
 msgid "Sample a parameter for a given distribution."
-msgstr ""
+msgstr "从给定的分布中采样参数. "
 
 #: of optuna.integration.botorch.BoTorchSampler.after_trial:1:<autosummary>:1
 msgid ""
@@ -216,37 +229,37 @@ msgstr ""
 #: of optuna.integration.botorch.BoTorchSampler.after_trial:1:<autosummary>:1
 #: optuna.integration.botorch.BoTorchSampler.sample_relative:1
 msgid "Sample parameters in a given search space."
-msgstr ""
+msgstr "从给定的搜索空间中采样参数."
 
 #: of optuna.integration.botorch.BoTorchSampler.after_trial:3
 msgid ""
 "This method is called after the objective function returns and right "
 "before the trials is finished and its state is stored."
-msgstr ""
+msgstr "该方法在目标函数返回之后和 trial 刚好完成且状态被存储之前调用."
 
 #: of optuna.integration.botorch.BoTorchSampler.after_trial:10
 #: optuna.integration.botorch.BoTorchSampler.infer_relative_search_space:8
 #: optuna.integration.botorch.BoTorchSampler.sample_independent:13
 #: optuna.integration.botorch.BoTorchSampler.sample_relative:12
 msgid "Target study object."
-msgstr ""
+msgstr "目标 study 对象."
 
 #: of optuna.integration.botorch.BoTorchSampler.after_trial:11
 #: optuna.integration.botorch.BoTorchSampler.infer_relative_search_space:9
 #: optuna.integration.botorch.BoTorchSampler.sample_independent:14
 #: optuna.integration.botorch.BoTorchSampler.sample_relative:13
 msgid "Target trial object. Take a copy before modifying this object."
-msgstr ""
+msgstr "目标 trial 对象. 在修改该对象前先复制一次."
 
 #: of optuna.integration.botorch.BoTorchSampler.after_trial:13
 msgid "Resulting trial state."
-msgstr ""
+msgstr "最终 trial 状态."
 
 #: of optuna.integration.botorch.BoTorchSampler.after_trial:14
 msgid ""
 "Resulting trial values. Guaranteed to not be :obj:`None` if trial "
 "succeeded."
-msgstr ""
+msgstr "最终 trial 值. 如果 trial 成功的话不可为 :obj:`None`."
 
 #: of optuna.integration.botorch.BoTorchSampler.after_trial
 #: optuna.integration.botorch.BoTorchSampler.infer_relative_search_space
@@ -263,7 +276,8 @@ msgid ""
 "search space returned by this method is passed to it. The parameters not "
 "contained in the search space will be sampled by using "
 ":func:`~optuna.samplers.BaseSampler.sample_independent` method."
-msgstr ""
+msgstr "该方法在 :func:`~optuna.samplers.BaseSampler.sample_relative` 前调用, 且该方法返回的搜索空间将被传递给它. "
+"不包含在搜索空间中的参数将采用 :func:`~optuna.samplers.BaseSampler.sample_independent` 进行采样. "
 
 #: of optuna.integration.botorch.BoTorchSampler.infer_relative_search_space
 #: optuna.integration.botorch.BoTorchSampler.sample_independent
@@ -273,14 +287,15 @@ msgstr ""
 
 #: of optuna.integration.botorch.BoTorchSampler.infer_relative_search_space:12
 msgid "A dictionary containing the parameter names and parameter's distributions."
-msgstr ""
+msgstr "包含参数名和参数值的字典. "
 
 #: of optuna.integration.botorch.BoTorchSampler.infer_relative_search_space:15
 msgid ""
 "Please refer to :func:`~optuna.samplers.intersection_search_space` as an "
 "implementation of "
 ":func:`~optuna.samplers.BaseSampler.infer_relative_search_space`."
-msgstr ""
+msgstr "关于 :func:`~optuna.samplers.BaseSampler.infer_relative_search_space` 的实现请参考 :func:`~optuna.samplers.intersection_search_space`."
+
 
 #: of optuna.integration.botorch.BoTorchSampler.reseed_rng:3
 msgid ""
@@ -290,7 +305,9 @@ msgid ""
 "random number generator, and they may suggest the same values. To prevent"
 " this issue, this method assigns a different seed to each random number "
 "generator."
-msgstr ""
+msgstr "如果 ``n_jobs>1`` 的话, 该方法由 :class:`~optuna.study.Study 实例调用. "
+"此时, 采样器实例将会连同其随机数生成器一起被复制, 也因此会提供一样的 suggestion. 为了规避这个问题, "
+"该方法为每个随机数生成器分配一个不同的随机数种子."
 
 #: of optuna.integration.botorch.BoTorchSampler.sample_independent:3
 msgid ""
@@ -298,7 +315,8 @@ msgid ""
 " space returned by :func:`~optuna.samplers.BaseSampler.sample_relative` "
 "method. This method is suitable for sampling algorithms that do not use "
 "relationship between parameters such as random sampling and TPE."
-msgstr ""
+msgstr "只有当:func:`~optuna.samplers.BaseSampler.sample_relative` 返回的搜索空间中不包含某参数时, 该方法才会被调用. "
+"该方法适用于不使用参数间关系的采样算法, 例如随机采样和 TPE."
 
 #: of optuna.integration.botorch.BoTorchSampler.sample_independent:9
 #: optuna.integration.botorch.BoTorchSampler.sample_relative:8
@@ -306,21 +324,21 @@ msgid ""
 "The failed trials are ignored by any build-in samplers when they sample "
 "new parameters. Thus, failed trials are regarded as deleted in the "
 "samplers' perspective."
-msgstr ""
+msgstr "当采样新参数时, 失败的 trial 会被内置 sampler 忽略. 因此, 从 sampler 的角度来看, 失败的 trial 等于被删除了."
 
 #: of optuna.integration.botorch.BoTorchSampler.sample_independent:16
 msgid "Name of the sampled parameter."
-msgstr ""
+msgstr "采样参数名."
 
 #: of optuna.integration.botorch.BoTorchSampler.sample_independent:17
 msgid ""
 "Distribution object that specifies a prior and/or scale of the sampling "
 "algorithm."
-msgstr ""
+msgstr "指定先验或者采样算法的尺度的分布对象."
 
 #: of optuna.integration.botorch.BoTorchSampler.sample_independent:19
 msgid "A parameter value."
-msgstr ""
+msgstr "参数值."
 
 #: of optuna.integration.botorch.BoTorchSampler.sample_relative:3
 msgid ""
@@ -328,130 +346,15 @@ msgid ""
 "before the evaluation of the objective function. This method is suitable "
 "for sampling algorithms that use relationship between parameters such as "
 "Gaussian Process and CMA-ES."
-msgstr ""
+msgstr "在每个 trial 的开始阶段该方法会被调用一次. 也就是恰好在目标函数求值之前被调用. "
+"该方法适用于使用参数间关系的采样算法, 例如高斯过程和 CMA-ES."
 
 #: of optuna.integration.botorch.BoTorchSampler.sample_relative:15
 msgid ""
 "The search space returned by "
 ":func:`~optuna.samplers.BaseSampler.infer_relative_search_space`."
-msgstr ""
+msgstr ":func:`~optuna.samplers.BaseSampler.infer_relative_search_space` 返回的搜索空间."
 
 #: of optuna.integration.botorch.BoTorchSampler.sample_relative:18
 msgid "A dictionary containing the parameter names and the values."
-msgstr ""
-
-#~ msgid ""
-#~ "See an `example "
-#~ "<https://github.com/optuna/optuna/blob/master/examples/ "
-#~ "botorch_simple.py>`_ how to use the "
-#~ "sampler."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "This method is called right before "
-#~ ":func:`~optuna.samplers.BaseSampler.sample_relative` method, "
-#~ "and the search space returned by "
-#~ "this method is pass to it. The "
-#~ "parameters not contained in the search"
-#~ " space will be sampled by using "
-#~ ":func:`~optuna.samplers.BaseSampler.sample_independent` method."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "See an `example "
-#~ "<https://github.com/optuna/optuna/blob/master/examples/ "
-#~ "multi_objective/botorch_simple.py>`_ how to use "
-#~ "the sampler."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "An instance of this sampler *should "
-#~ "be not used with different studies* "
-#~ "when used with constraints. Instead, a"
-#~ " new instance should be created for"
-#~ " each new study. The reason for "
-#~ "this is that the sampler is "
-#~ "stateful keeping all the computed "
-#~ "constraints."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "An optional function that suggests the"
-#~ " next candidates. It must take the"
-#~ " training data, the objectives, the "
-#~ "constraints, the search space bounds and"
-#~ " return the next candidates. The "
-#~ "arguments are of type ``torch.Tensor``. "
-#~ "The return value must be a "
-#~ "``torch.Tensor``. However, if ``constraints_func``"
-#~ " is omitted, constraints will be "
-#~ ":obj:`None`. For any constraints that "
-#~ "failed to compute, the tensor will "
-#~ "contain NaN.  If omitted, is determined"
-#~ " automatically based on the number of"
-#~ " objectives. If the number of "
-#~ "objectives is one, Quasi MC-based "
-#~ "batch Expected Improvement (qEI) is "
-#~ "used. If the number of objectives "
-#~ "is larger than one but smaller "
-#~ "than four, Quasi MC-based batch "
-#~ "Expected Hypervolume Improvement (qEHVI) is"
-#~ " used. Otherwise, for larger number "
-#~ "of objectives, the faster Quasi MC-"
-#~ "based extended ParEGO (qParEGO) is used."
-#~ "  The function should assume *maximization*"
-#~ " of the objective.  .. seealso::     "
-#~ "See :func:`optuna.integration.botorch.qei_candidates_func` "
-#~ "for an example."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "If omitted, is determined automatically "
-#~ "based on the number of objectives. "
-#~ "If the number of objectives is "
-#~ "one, Quasi MC-based batch Expected "
-#~ "Improvement (qEI) is used. If the "
-#~ "number of objectives is larger than "
-#~ "one but smaller than four, Quasi "
-#~ "MC-based batch Expected Hypervolume "
-#~ "Improvement (qEHVI) is used. Otherwise, "
-#~ "for larger number of objectives, the "
-#~ "faster Quasi MC-based extended ParEGO"
-#~ " (qParEGO) is used."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "An optional function that computes the"
-#~ " objective constraints. It must take "
-#~ "a :class:`~optuna.trial.FrozenTrial` and return "
-#~ "the constraints. The return value must"
-#~ " be a sequence of :obj:`float` s. "
-#~ "A value strictly larger than 0 "
-#~ "means that a constraints is violated."
-#~ " A value equal to or smaller "
-#~ "than 0 is considered feasible.  If "
-#~ "omitted, no constraints will be passed"
-#~ " to ``candidates_func`` nor taken into "
-#~ "account during suggestion if "
-#~ "``candidates_func`` is omitted."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "An optional function that computes the"
-#~ " objective constraints. It must take "
-#~ "a :class:`~optuna.trial.FrozenTrial` and return "
-#~ "the constraints. The return value must"
-#~ " be a sequence of :obj:`float` s. "
-#~ "A value strictly larger than 0 "
-#~ "means that a constraints is violated."
-#~ " A value equal to or smaller "
-#~ "than 0 is considered feasible."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "If omitted, no constraints will be "
-#~ "passed to ``candidates_func`` nor taken "
-#~ "into account during suggestion if "
-#~ "``candidates_func`` is omitted."
-#~ msgstr ""
-
+msgstr "一个包含了参数名和参数分布的字典. "
