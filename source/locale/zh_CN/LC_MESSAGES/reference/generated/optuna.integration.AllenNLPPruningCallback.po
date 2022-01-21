@@ -75,13 +75,13 @@ msgstr ""
 msgid ""
 "A :class:`~optuna.trial.Trial` corresponding to the current evaluation of"
 " the objective function."
-msgstr "一个 :class:`~optuna.trial.Trial` 对应当前目标函数的求值. "
+msgstr "一个对应当前目标函数求值的 :class:`~optuna.trial.Trial`."
 
 #: of optuna.integration.allennlp._pruner.AllenNLPPruningCallback:27
 msgid ""
 "An evaluation metric for pruning, e.g. ``validation_loss`` or "
 "``validation_accuracy``."
-msgstr "用于剪枝的求职评估函数. 例如 ``validation_loss`` 或者 "
+msgstr "用于剪枝的求值评估函数. 例如 ``validation_loss`` 或者 "
 "``validation_accuracy``."
 
 #: of optuna.integration.allennlp._pruner.AllenNLPPruningCallback:31

@@ -299,7 +299,7 @@ msgstr ""
 
 #: of optuna.samplers._base.BaseSampler.sample_relative:18
 msgid "A dictionary containing the parameter names and the values."
-msgstr "一个包含了参数名和参数分布的字典. "
+msgstr "一个包含了参数名和参数值的字典. "
 
 #~ msgid ""
 #~ "This method is called right before "

@@ -81,7 +81,7 @@ msgstr ""
 
 #: ../../source/reference/integration.rst:26:<autosummary>:1
 msgid "AllenNLP extension to use optuna with Jsonnet config file."
-msgstr "为了让 Jsonnet 配置文件在 Optuna 中可用的 AllenNLP 扩展. "
+msgstr "AllenNLP 扩展组件. 用以在optuna中使用Jsonnet的配置文件."
 
 #: ../../source/reference/integration.rst:26:<autosummary>:1
 msgid ""
