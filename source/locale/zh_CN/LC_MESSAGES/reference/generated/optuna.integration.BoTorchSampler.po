@@ -233,7 +233,7 @@ msgstr "目标 study 对象."
 #: optuna.integration.botorch.BoTorchSampler.sample_independent:14
 #: optuna.integration.botorch.BoTorchSampler.sample_relative:13
 msgid "Target trial object. Take a copy before modifying this object."
-msgstr "目标 trial 对象. 在修改该对象前先复制一次."
+msgstr "目标 trial 对象. 在修改该对象前请先备份."
 
 #: of optuna.integration.botorch.BoTorchSampler.after_trial:13
 msgid "Resulting trial state."
@@ -289,7 +289,7 @@ msgid ""
 "random number generator, and they may suggest the same values. To prevent"
 " this issue, this method assigns a different seed to each random number "
 "generator."
-msgstr "如果 ``n_jobs>1`` 的话, 该方法由 :class:`~optuna.study.Study` 实例调用. "
+msgstr "在 ``n_jobs>1`` 的情况下, 该方法由 :class:`~optuna.study.Study` 实例调用. "
 "此时, 采样器实例将会连同其随机数生成器一起被复制, 也因此会提供一样的 suggestion. 为了规避这个问题, "
 "该方法为每个随机数生成器分配一个不同的随机数种子."
 
