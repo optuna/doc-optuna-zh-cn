@@ -24,13 +24,15 @@ msgstr ""
 #: of optuna.integration.botorch.qei_candidates_func:1
 msgid "Quasi MC-based batch Expected Improvement (qEI)."
 msgstr ""
+#  This one is left empty as it's an algorithm name
 
 #: of optuna.integration.botorch.qei_candidates_func:3
 msgid ""
 "The default value of ``candidates_func`` in "
 ":class:`~optuna.integration.BoTorchSampler` with single-objective "
 "optimization."
-msgstr ""
+msgstr "单目标优化时 :class:`~optuna.integration.BoTorchSampler` "
+"中 ``candidates_func`` 的默认值."
 
 #: of optuna.integration.botorch.qei_candidates_func
 msgid "参数"
@@ -44,7 +46,9 @@ msgid ""
 "larger than the actual number of parameters if categorical parameters are"
 " included in the search space, since these parameters are one-hot "
 "encoded. Values are not normalized."
-msgstr ""
+msgstr "之前的参数配置. 一个维度为 ``(n_trials, n_params)`` 的 ``torch.Tensor``. "
+"``n_trials`` 是已经观察到的 trial 个数, ``n_params`` 是参数的个数. 如果搜索空间中包含类别参数的话, ``n_params`` "
+"可能比实际的参数个数多, 因为它们是 one-hot 编码的. 这些数值未被归一化."
 
 #: of optuna.integration.botorch.qei_candidates_func:12
 msgid ""
@@ -52,7 +56,9 @@ msgid ""
 "n_objectives)``. ``n_trials`` is identical to that of ``train_x``. "
 "``n_objectives`` is the number of objectives. Observations are not "
 "normalized."
-msgstr ""
+msgstr "之前的目标值. 一个维度为 ``(n_trials, n_objectives)`` 的 ``torch.Tensor``. "
+"``n_trials`` 和 ``train_x`` 中的 ``n_trials`` 一致. ``n_objectives`` 是目标值的个数. "
+"观察值未被归一化."
 
 #: of optuna.integration.botorch.qei_candidates_func:15
 msgid ""
@@ -61,7 +67,9 @@ msgid ""
 "``n_constraints`` is the number of constraints. A constraint is violated "
 "if strictly larger than 0. If no constraints are involved in the "
 "optimization, this argument will be :obj:`None`."
-msgstr ""
+msgstr "目标函数约束. 一个维度为 ``(n_trials, n_constraints)`` 的 ``torch.Tensor``. "
+"``n_trials`` 和 ``train_x`` 中的 ``n_trials`` 一致. ``n_constraints`` 是约束条件的个数. "
+"每个约束不得大于0. 如果优化过程中没有约束的话, 该参数为 :obj:`None`."
 
 #: of optuna.integration.botorch.qei_candidates_func:19
 msgid ""
@@ -69,7 +77,8 @@ msgid ""
 "``n_params`` is identical to that of ``train_x``. The first and the "
 "second rows correspond to the lower and upper bounds for each parameter "
 "respectively."
-msgstr ""
+msgstr "搜索空间边界. 一个维度为 ``(2, n_params)`` 的 ``torch.Tensor``. "
+"``n_params`` 和 ``train_x`` 中的 ``n_params`` 一致. 第一和第二行分别对应各参数的搜索上界和下界."
 
 #: of optuna.integration.botorch.qei_candidates_func
 msgid "返回"
@@ -79,7 +88,7 @@ msgstr ""
 msgid ""
 "Next set of candidates. Usually the return value of BoTorch's "
 "``optimize_acqf``."
-msgstr ""
+msgstr "下一个可选值的集合. 通常为 BoTorch 的 ``optimize_acqf``."
 
 #: of optuna.integration.botorch.qei_candidates_func
 msgid "返回类型"
@@ -91,13 +100,5 @@ msgid ""
 "newer versions without prior notice. See "
 "https://github.com/optuna/optuna/releases/tag/v2.4.0."
 msgstr ""
-
-#~ msgid ""
-#~ "Search space bounds. A ``torch.Tensor`` "
-#~ "of shape ``(n_params, 2)``. ``n_params`` "
-#~ "is identical to that of ``train_x``. "
-#~ "The first and the second column "
-#~ "correspond to the lower and upper "
-#~ "bounds for each parameter respectively."
-#~ msgstr ""
-
+"在 v2.4.0 中作为试验性特性引入, 该接口可能在更新的版本中在没有提前告知的情况下改变, 参见 "
+"https://github.com/optuna/optuna/releases/tag/v2.4.0."
