@@ -67,7 +67,7 @@ msgid ""
 "value is set in both a search space in Optuna and the environment "
 "variables, the executor will use the value specified in the search space "
 "in Optuna."
-msgstr "在 :class:`~optuna.integration.AllenNLPExecutor` 中, 你可以通过使用 Optuna suggest 方法定义搜索空间"
+msgstr "在 :class:`~optuna.integration.AllenNLPExecutor` 中, 你可以通过使用 Optuna suggest 方法"
 "或者像在 AllenNLP CLI 中设置环境变量那样来定义搜索空间. 如果一个值同时出现在 Optuna 的搜索空间和环境变量里, "
 "executor 将会采用 Optuna 搜索空间里的那个."
 

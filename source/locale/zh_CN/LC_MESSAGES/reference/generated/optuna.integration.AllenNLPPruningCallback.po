@@ -149,7 +149,7 @@ msgid ""
 "<https://docs.allennlp.org/master/ api/common/registrable/#registrable>`_"
 " in AllenNLP."
 msgstr "该方法和 `Registrable.register "
-"<https://docs.allennlp.org/master/ api/common/registrable/#registrable>`_ 有一样的签名."
+"<https://docs.allennlp.org/master/ api/common/registrable/#registrable>`_ 用法相同."
 
 #~ msgid ""
 #~ "See `the example "
