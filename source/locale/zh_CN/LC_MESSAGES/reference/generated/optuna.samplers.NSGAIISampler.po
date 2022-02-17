@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 2.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-15 09:48+0800\n"
+"POT-Creation-Date: 2022-02-17 18:33-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,41 +21,41 @@ msgstr ""
 msgid "optuna.samplers.NSGAIISampler"
 msgstr ""
 
-#: of optuna.samplers._nsga2.NSGAIISampler:1
+#: of optuna.samplers._nsga2.sampler.NSGAIISampler:1
 msgid "Multi-objective sampler using the NSGA-II algorithm."
 msgstr ""
 
-#: of optuna.samplers._nsga2.NSGAIISampler:3
+#: of optuna.samplers._nsga2.sampler.NSGAIISampler:3
 msgid ""
 "NSGA-II stands for \"Nondominated Sorting Genetic Algorithm II\", which "
 "is a well known, fast and elitist multi-objective genetic algorithm."
 msgstr ""
 
-#: of optuna.samplers._nsga2.NSGAIISampler:6
+#: of optuna.samplers._nsga2.sampler.NSGAIISampler:6
 msgid ""
 "For further information about NSGA-II, please refer to the following "
 "paper:"
 msgstr ""
 
-#: of optuna.samplers._nsga2.NSGAIISampler:8
+#: of optuna.samplers._nsga2.sampler.NSGAIISampler:8
 msgid ""
 "`A fast and elitist multiobjective genetic algorithm: NSGA-II "
 "<https://ieeexplore.ieee.org/document/996017>`_"
 msgstr ""
 
-#: of optuna.samplers._nsga2.NSGAIISampler
-#: optuna.samplers._nsga2.NSGAIISampler.after_trial
-#: optuna.samplers._nsga2.NSGAIISampler.infer_relative_search_space
-#: optuna.samplers._nsga2.NSGAIISampler.sample_independent
-#: optuna.samplers._nsga2.NSGAIISampler.sample_relative
+#: of optuna.samplers._nsga2.sampler.NSGAIISampler
+#: optuna.samplers._nsga2.sampler.NSGAIISampler.after_trial
+#: optuna.samplers._nsga2.sampler.NSGAIISampler.infer_relative_search_space
+#: optuna.samplers._nsga2.sampler.NSGAIISampler.sample_independent
+#: optuna.samplers._nsga2.sampler.NSGAIISampler.sample_relative
 msgid "参数"
 msgstr ""
 
-#: of optuna.samplers._nsga2.NSGAIISampler:11
+#: of optuna.samplers._nsga2.sampler.NSGAIISampler:11
 msgid "Number of individuals (trials) in a generation."
 msgstr ""
 
-#: of optuna.samplers._nsga2.NSGAIISampler:12
+#: of optuna.samplers._nsga2.sampler.NSGAIISampler:12
 msgid ""
 "Probability of mutating each parameter when creating a new individual. If"
 " :obj:`None` is specified, the value ``1.0 / len(parent_trial.params)`` "
@@ -63,21 +63,176 @@ msgid ""
 "individual."
 msgstr ""
 
-#: of optuna.samplers._nsga2.NSGAIISampler:15
+#: of optuna.samplers._nsga2.sampler.NSGAIISampler:15
+msgid ""
+"Crossover to be applied when creating child individuals. The available "
+"crossovers are `uniform` (default), `blxalpha`, `sbx`, `vsbx`, `undx`, "
+"and `spx`.  For :class:`~optuna.distributions.CategoricalDistribution`, "
+"uniform crossover will be applied, and for other distributions, the "
+"specified crossover will be applied.  For more information on each of the"
+" crossover method, please refer to the following.  - uniform: Select each"
+" parameter with equal probability   from the two parent individuals."
+"      - `Gilbert Syswerda. 1989. Uniform Crossover in Genetic Algorithms."
+"       In Proceedings of the 3rd International Conference on Genetic "
+"Algorithms.       Morgan Kaufmann Publishers Inc., San Francisco, CA, "
+"USA, 2–9.       "
+"<https://www.researchgate.net/publication/201976488_Uniform_Crossover_in_Genetic_Algorithms>`_"
+"  - blxalpha: It uniformly samples child individuals from the hyper-"
+"rectangles created   by the two parent individuals.      - `Eshelman, L. "
+"and J. D. Schaffer.       Real-Coded Genetic Algorithms and Interval-"
+"Schemata. FOGA (1992).       "
+"<https://www.sciencedirect.com/science/article/abs/pii/B9780080948324500180>`_"
+"  - sbx: Generate a child from two parent individuals   according to the "
+"polynomial probability distribution.      - `Deb, K. and R. Agrawal."
+"       “Simulated Binary Crossover for Continuous Search Space.”       "
+"Complex Syst. 9 (1995): n. pag.       <https://www.complex-"
+"systems.com/abstracts/v09_i02_a02/>`_  - vsbx: In SBX, the probability of"
+" occurrence of child individuals   becomes zero in some parameter "
+"regions.   vSBX generates child individuals without excluding any region "
+"of the parameter space,   while maintaining the excellent properties of "
+"SBX.      - `Pedro J. Ballester, Jonathan N. Carter.       Real-Parameter"
+" Genetic Algorithms for Finding Multiple Optimal Solutions       in "
+"Multi-modal Optimization. GECCO 2003: 706-717       "
+"<https://link.springer.com/chapter/10.1007/3-540-45105-6_86>`_  - undx: "
+"Generate child individuals from the three parents   using a multivariate "
+"normal distribution.      - `H. Kita, I. Ono and S. Kobayashi,       "
+"Multi-parental extension of the unimodal normal distribution crossover"
+"       for real-coded genetic algorithms,       Proceedings of the 1999 "
+"Congress on Evolutionary Computation-CEC99       (Cat. No. 99TH8406), "
+"1999, pp. 1581-1588 Vol. 2       "
+"<https://ieeexplore.ieee.org/document/782672>`_  - spx: It uniformly "
+"samples child individuals from within a single simplex   that is similar "
+"to the simplex produced by the parent individual.      - `Shigeyoshi "
+"Tsutsui and Shigeyoshi Tsutsui and David E. Goldberg and       David E. "
+"Goldberg and Kumara Sastry and Kumara Sastry       Progress Toward "
+"Linkage Learning in Real-Coded GAs with Simplex Crossover.       IlliGAL "
+"Report. 2000.       <https://www.researchgate.net/publication"
+"/2388486_Progress_Toward_Linkage_Learning_in_Real-"
+"Coded_GAs_with_Simplex_Crossover>`_"
+msgstr ""
+
+#: of optuna.samplers._nsga2.sampler.NSGAIISampler:15
+msgid ""
+"Crossover to be applied when creating child individuals. The available "
+"crossovers are `uniform` (default), `blxalpha`, `sbx`, `vsbx`, `undx`, "
+"and `spx`."
+msgstr ""
+
+#: of optuna.samplers._nsga2.sampler.NSGAIISampler:19
+msgid ""
+"For :class:`~optuna.distributions.CategoricalDistribution`, uniform "
+"crossover will be applied, and for other distributions, the specified "
+"crossover will be applied."
+msgstr ""
+
+#: of optuna.samplers._nsga2.sampler.NSGAIISampler:23
+msgid ""
+"For more information on each of the crossover method, please refer to the"
+" following."
+msgstr ""
+
+#: of optuna.samplers._nsga2.sampler.NSGAIISampler:25
+msgid ""
+"uniform: Select each parameter with equal probability from the two parent"
+" individuals."
+msgstr ""
+
+#: of optuna.samplers._nsga2.sampler.NSGAIISampler:28
+msgid ""
+"`Gilbert Syswerda. 1989. Uniform Crossover in Genetic Algorithms. In "
+"Proceedings of the 3rd International Conference on Genetic Algorithms. "
+"Morgan Kaufmann Publishers Inc., San Francisco, CA, USA, 2–9. "
+"<https://www.researchgate.net/publication/201976488_Uniform_Crossover_in_Genetic_Algorithms>`_"
+msgstr ""
+
+#: of optuna.samplers._nsga2.sampler.NSGAIISampler:33
+msgid ""
+"blxalpha: It uniformly samples child individuals from the hyper-"
+"rectangles created by the two parent individuals."
+msgstr ""
+
+#: of optuna.samplers._nsga2.sampler.NSGAIISampler:36
+msgid ""
+"`Eshelman, L. and J. D. Schaffer. Real-Coded Genetic Algorithms and "
+"Interval-Schemata. FOGA (1992). "
+"<https://www.sciencedirect.com/science/article/abs/pii/B9780080948324500180>`_"
+msgstr ""
+
+#: of optuna.samplers._nsga2.sampler.NSGAIISampler:40
+msgid ""
+"sbx: Generate a child from two parent individuals according to the "
+"polynomial probability distribution."
+msgstr ""
+
+#: of optuna.samplers._nsga2.sampler.NSGAIISampler:43
+msgid ""
+"`Deb, K. and R. Agrawal. “Simulated Binary Crossover for Continuous "
+"Search Space.” Complex Syst. 9 (1995): n. pag. <https://www.complex-"
+"systems.com/abstracts/v09_i02_a02/>`_"
+msgstr ""
+
+#: of optuna.samplers._nsga2.sampler.NSGAIISampler:48
+msgid ""
+"vsbx: In SBX, the probability of occurrence of child individuals becomes "
+"zero in some parameter regions. vSBX generates child individuals without "
+"excluding any region of the parameter space, while maintaining the "
+"excellent properties of SBX."
+msgstr ""
+
+#: of optuna.samplers._nsga2.sampler.NSGAIISampler:53
+msgid ""
+"`Pedro J. Ballester, Jonathan N. Carter. Real-Parameter Genetic "
+"Algorithms for Finding Multiple Optimal Solutions in Multi-modal "
+"Optimization. GECCO 2003: 706-717 "
+"<https://link.springer.com/chapter/10.1007/3-540-45105-6_86>`_"
+msgstr ""
+
+#: of optuna.samplers._nsga2.sampler.NSGAIISampler:58
+msgid ""
+"undx: Generate child individuals from the three parents using a "
+"multivariate normal distribution."
+msgstr ""
+
+#: of optuna.samplers._nsga2.sampler.NSGAIISampler:61
+msgid ""
+"`H. Kita, I. Ono and S. Kobayashi, Multi-parental extension of the "
+"unimodal normal distribution crossover for real-coded genetic algorithms,"
+" Proceedings of the 1999 Congress on Evolutionary Computation-CEC99 (Cat."
+" No. 99TH8406), 1999, pp. 1581-1588 Vol. 2 "
+"<https://ieeexplore.ieee.org/document/782672>`_"
+msgstr ""
+
+#: of optuna.samplers._nsga2.sampler.NSGAIISampler:68
+msgid ""
+"spx: It uniformly samples child individuals from within a single simplex "
+"that is similar to the simplex produced by the parent individual."
+msgstr ""
+
+#: of optuna.samplers._nsga2.sampler.NSGAIISampler:71
+msgid ""
+"`Shigeyoshi Tsutsui and Shigeyoshi Tsutsui and David E. Goldberg and "
+"David E. Goldberg and Kumara Sastry and Kumara Sastry Progress Toward "
+"Linkage Learning in Real-Coded GAs with Simplex Crossover. IlliGAL "
+"Report. 2000. <https://www.researchgate.net/publication"
+"/2388486_Progress_Toward_Linkage_Learning_in_Real-"
+"Coded_GAs_with_Simplex_Crossover>`_"
+msgstr ""
+
+#: of optuna.samplers._nsga2.sampler.NSGAIISampler:76
 msgid ""
 "Probability that a crossover (parameters swapping between parents) will "
 "occur when creating a new individual."
 msgstr ""
 
-#: of optuna.samplers._nsga2.NSGAIISampler:17
+#: of optuna.samplers._nsga2.sampler.NSGAIISampler:78
 msgid "Probability of swapping each parameter of the parents during crossover."
 msgstr ""
 
-#: of optuna.samplers._nsga2.NSGAIISampler:18
+#: of optuna.samplers._nsga2.sampler.NSGAIISampler:79
 msgid "Seed for random number generator."
 msgstr ""
 
-#: of optuna.samplers._nsga2.NSGAIISampler:19
+#: of optuna.samplers._nsga2.sampler.NSGAIISampler:80
 msgid ""
 "An optional function that computes the objective constraints. It must "
 "take a :class:`~optuna.trial.FrozenTrial` and return the constraints. The"
@@ -98,7 +253,7 @@ msgid ""
 "notice. See     https://github.com/optuna/optuna/releases/tag/v2.5.0."
 msgstr ""
 
-#: of optuna.samplers._nsga2.NSGAIISampler:19
+#: of optuna.samplers._nsga2.sampler.NSGAIISampler:80
 msgid ""
 "An optional function that computes the objective constraints. It must "
 "take a :class:`~optuna.trial.FrozenTrial` and return the constraints. The"
@@ -109,148 +264,170 @@ msgid ""
 " only if all values are equal to 0 or smaller."
 msgstr ""
 
-#: of optuna.samplers._nsga2.NSGAIISampler:26
+#: of optuna.samplers._nsga2.sampler.NSGAIISampler:87
 msgid ""
 "The ``constraints_func`` will be evaluated after each successful trial. "
 "The function won't be called when trials fail or they are pruned, but "
 "this behavior is subject to change in the future releases."
 msgstr ""
 
-#: of optuna.samplers._nsga2.NSGAIISampler:30
+#: of optuna.samplers._nsga2.sampler.NSGAIISampler:91
 msgid ""
 "The constraints are handled by the constrained domination. A trial x is "
 "said to constrained-dominate a trial y, if any of the following "
 "conditions is true:"
 msgstr ""
 
-#: of optuna.samplers._nsga2.NSGAIISampler:33
+#: of optuna.samplers._nsga2.sampler.NSGAIISampler:94
 msgid "Trial x is feasible and trial y is not."
 msgstr ""
 
-#: of optuna.samplers._nsga2.NSGAIISampler:34
+#: of optuna.samplers._nsga2.sampler.NSGAIISampler:95
 msgid ""
 "Trial x and y are both infeasible, but trial x has a smaller overall "
 "violation."
 msgstr ""
 
-#: of optuna.samplers._nsga2.NSGAIISampler:35
+#: of optuna.samplers._nsga2.sampler.NSGAIISampler:96
 msgid "Trial x and y are feasible and trial x dominates trial y."
 msgstr ""
 
-#: of optuna.samplers._nsga2.NSGAIISampler:38
+#: of optuna.samplers._nsga2.sampler.NSGAIISampler:99
 msgid ""
 "Added in v2.5.0 as an experimental feature. The interface may change in "
 "newer versions without prior notice. See "
 "https://github.com/optuna/optuna/releases/tag/v2.5.0."
 msgstr ""
 
+#: of optuna.samplers._nsga2.sampler.NSGAIISampler
+msgid "引发"
+msgstr ""
+
+#: of optuna.samplers._nsga2.sampler.NSGAIISampler:103
+msgid ""
+"If ``crossover`` is not in `[uniform, blxalpha, sbx, vsbx, undx, spx]`."
+"     Or, if ``population_size <= n_parents``.     The `n_parents` is "
+"determined by each crossover.     For `undx` and `spx`, ``n_parents=3``, "
+"and for the other algorithms, ``n_parents=2``."
+msgstr ""
+
 #: ../../source/reference/generated/optuna.samplers.NSGAIISampler.rst:12
 msgid "Methods"
 msgstr ""
 
-#: of optuna.samplers._nsga2.NSGAIISampler.after_trial:1:<autosummary>:1
+#: of
+#: optuna.samplers._nsga2.sampler.NSGAIISampler.after_trial:1:<autosummary>:1
 msgid ""
 ":obj:`after_trial <optuna.samplers.NSGAIISampler.after_trial>`\\ "
 "\\(study\\, trial\\, state\\, values\\)"
 msgstr ""
 
-#: of optuna.samplers._nsga2.NSGAIISampler.after_trial:1
-#: optuna.samplers._nsga2.NSGAIISampler.after_trial:1:<autosummary>:1
+#: of optuna.samplers._nsga2.sampler.NSGAIISampler.after_trial:1
+#: optuna.samplers._nsga2.sampler.NSGAIISampler.after_trial:1:<autosummary>:1
 msgid "Trial post-processing."
 msgstr ""
 
-#: of optuna.samplers._nsga2.NSGAIISampler.after_trial:1:<autosummary>:1
+#: of
+#: optuna.samplers._nsga2.sampler.NSGAIISampler.after_trial:1:<autosummary>:1
 msgid ""
 ":obj:`infer_relative_search_space "
 "<optuna.samplers.NSGAIISampler.infer_relative_search_space>`\\ "
 "\\(study\\, trial\\)"
 msgstr ""
 
-#: of optuna.samplers._nsga2.NSGAIISampler.after_trial:1:<autosummary>:1
-#: optuna.samplers._nsga2.NSGAIISampler.infer_relative_search_space:1
+#: of
+#: optuna.samplers._nsga2.sampler.NSGAIISampler.after_trial:1:<autosummary>:1
+#: optuna.samplers._nsga2.sampler.NSGAIISampler.infer_relative_search_space:1
 msgid ""
 "Infer the search space that will be used by relative sampling in the "
 "target trial."
 msgstr ""
 
-#: of optuna.samplers._nsga2.NSGAIISampler.after_trial:1:<autosummary>:1
+#: of
+#: optuna.samplers._nsga2.sampler.NSGAIISampler.after_trial:1:<autosummary>:1
 msgid ":obj:`reseed_rng <optuna.samplers.NSGAIISampler.reseed_rng>`\\ \\(\\)"
 msgstr ""
 
-#: of optuna.samplers._nsga2.NSGAIISampler.after_trial:1:<autosummary>:1
-#: optuna.samplers._nsga2.NSGAIISampler.reseed_rng:1
+#: of
+#: optuna.samplers._nsga2.sampler.NSGAIISampler.after_trial:1:<autosummary>:1
+#: optuna.samplers._nsga2.sampler.NSGAIISampler.reseed_rng:1
 msgid "Reseed sampler's random number generator."
 msgstr ""
 
-#: of optuna.samplers._nsga2.NSGAIISampler.after_trial:1:<autosummary>:1
+#: of
+#: optuna.samplers._nsga2.sampler.NSGAIISampler.after_trial:1:<autosummary>:1
 msgid ""
 ":obj:`sample_independent "
 "<optuna.samplers.NSGAIISampler.sample_independent>`\\ \\(study\\, "
 "trial\\, param\\_name\\, ...\\)"
 msgstr ""
 
-#: of optuna.samplers._nsga2.NSGAIISampler.after_trial:1:<autosummary>:1
-#: optuna.samplers._nsga2.NSGAIISampler.sample_independent:1
+#: of
+#: optuna.samplers._nsga2.sampler.NSGAIISampler.after_trial:1:<autosummary>:1
+#: optuna.samplers._nsga2.sampler.NSGAIISampler.sample_independent:1
 msgid "Sample a parameter for a given distribution."
 msgstr ""
 
-#: of optuna.samplers._nsga2.NSGAIISampler.after_trial:1:<autosummary>:1
+#: of
+#: optuna.samplers._nsga2.sampler.NSGAIISampler.after_trial:1:<autosummary>:1
 msgid ""
 ":obj:`sample_relative <optuna.samplers.NSGAIISampler.sample_relative>`\\ "
 "\\(study\\, trial\\, search\\_space\\)"
 msgstr ""
 
-#: of optuna.samplers._nsga2.NSGAIISampler.after_trial:1:<autosummary>:1
-#: optuna.samplers._nsga2.NSGAIISampler.sample_relative:1
+#: of
+#: optuna.samplers._nsga2.sampler.NSGAIISampler.after_trial:1:<autosummary>:1
+#: optuna.samplers._nsga2.sampler.NSGAIISampler.sample_relative:1
 msgid "Sample parameters in a given search space."
 msgstr ""
 
-#: of optuna.samplers._nsga2.NSGAIISampler.after_trial:3
+#: of optuna.samplers._nsga2.sampler.NSGAIISampler.after_trial:3
 msgid ""
 "This method is called after the objective function returns and right "
 "before the trials is finished and its state is stored."
 msgstr ""
 
-#: of optuna.samplers._nsga2.NSGAIISampler.after_trial:7
+#: of optuna.samplers._nsga2.sampler.NSGAIISampler.after_trial:7
 msgid ""
 "Added in v2.4.0 as an experimental feature. The interface may change in "
 "newer versions without prior notice. See "
 "https://github.com/optuna/optuna/releases/tag/v2.4.0."
 msgstr ""
 
-#: of optuna.samplers._nsga2.NSGAIISampler.after_trial:10
-#: optuna.samplers._nsga2.NSGAIISampler.infer_relative_search_space:8
-#: optuna.samplers._nsga2.NSGAIISampler.sample_independent:13
-#: optuna.samplers._nsga2.NSGAIISampler.sample_relative:12
+#: of optuna.samplers._nsga2.sampler.NSGAIISampler.after_trial:10
+#: optuna.samplers._nsga2.sampler.NSGAIISampler.infer_relative_search_space:8
+#: optuna.samplers._nsga2.sampler.NSGAIISampler.sample_independent:13
+#: optuna.samplers._nsga2.sampler.NSGAIISampler.sample_relative:12
 msgid "Target study object."
 msgstr ""
 
-#: of optuna.samplers._nsga2.NSGAIISampler.after_trial:11
-#: optuna.samplers._nsga2.NSGAIISampler.infer_relative_search_space:9
-#: optuna.samplers._nsga2.NSGAIISampler.sample_independent:14
-#: optuna.samplers._nsga2.NSGAIISampler.sample_relative:13
+#: of optuna.samplers._nsga2.sampler.NSGAIISampler.after_trial:11
+#: optuna.samplers._nsga2.sampler.NSGAIISampler.infer_relative_search_space:9
+#: optuna.samplers._nsga2.sampler.NSGAIISampler.sample_independent:14
+#: optuna.samplers._nsga2.sampler.NSGAIISampler.sample_relative:13
 msgid "Target trial object. Take a copy before modifying this object."
 msgstr ""
 
-#: of optuna.samplers._nsga2.NSGAIISampler.after_trial:13
+#: of optuna.samplers._nsga2.sampler.NSGAIISampler.after_trial:13
 msgid "Resulting trial state."
 msgstr ""
 
-#: of optuna.samplers._nsga2.NSGAIISampler.after_trial:14
+#: of optuna.samplers._nsga2.sampler.NSGAIISampler.after_trial:14
 msgid ""
 "Resulting trial values. Guaranteed to not be :obj:`None` if trial "
 "succeeded."
 msgstr ""
 
-#: of optuna.samplers._nsga2.NSGAIISampler.after_trial
-#: optuna.samplers._nsga2.NSGAIISampler.infer_relative_search_space
-#: optuna.samplers._nsga2.NSGAIISampler.reseed_rng
-#: optuna.samplers._nsga2.NSGAIISampler.sample_independent
-#: optuna.samplers._nsga2.NSGAIISampler.sample_relative
+#: of optuna.samplers._nsga2.sampler.NSGAIISampler.after_trial
+#: optuna.samplers._nsga2.sampler.NSGAIISampler.infer_relative_search_space
+#: optuna.samplers._nsga2.sampler.NSGAIISampler.reseed_rng
+#: optuna.samplers._nsga2.sampler.NSGAIISampler.sample_independent
+#: optuna.samplers._nsga2.sampler.NSGAIISampler.sample_relative
 msgid "返回类型"
 msgstr ""
 
-#: of optuna.samplers._nsga2.NSGAIISampler.infer_relative_search_space:3
+#: of
+#: optuna.samplers._nsga2.sampler.NSGAIISampler.infer_relative_search_space:3
 msgid ""
 "This method is called right before "
 ":func:`~optuna.samplers.BaseSampler.sample_relative` method, and the "
@@ -259,24 +436,26 @@ msgid ""
 ":func:`~optuna.samplers.BaseSampler.sample_independent` method."
 msgstr ""
 
-#: of optuna.samplers._nsga2.NSGAIISampler.infer_relative_search_space
-#: optuna.samplers._nsga2.NSGAIISampler.sample_independent
-#: optuna.samplers._nsga2.NSGAIISampler.sample_relative
+#: of optuna.samplers._nsga2.sampler.NSGAIISampler.infer_relative_search_space
+#: optuna.samplers._nsga2.sampler.NSGAIISampler.sample_independent
+#: optuna.samplers._nsga2.sampler.NSGAIISampler.sample_relative
 msgid "返回"
 msgstr ""
 
-#: of optuna.samplers._nsga2.NSGAIISampler.infer_relative_search_space:12
+#: of
+#: optuna.samplers._nsga2.sampler.NSGAIISampler.infer_relative_search_space:12
 msgid "A dictionary containing the parameter names and parameter's distributions."
 msgstr ""
 
-#: of optuna.samplers._nsga2.NSGAIISampler.infer_relative_search_space:15
+#: of
+#: optuna.samplers._nsga2.sampler.NSGAIISampler.infer_relative_search_space:15
 msgid ""
 "Please refer to :func:`~optuna.samplers.intersection_search_space` as an "
 "implementation of "
 ":func:`~optuna.samplers.BaseSampler.infer_relative_search_space`."
 msgstr ""
 
-#: of optuna.samplers._nsga2.NSGAIISampler.reseed_rng:3
+#: of optuna.samplers._nsga2.sampler.NSGAIISampler.reseed_rng:3
 msgid ""
 "This method is called by the :class:`~optuna.study.Study` instance if "
 "trials are executed in parallel with the option ``n_jobs>1``. In that "
@@ -286,7 +465,7 @@ msgid ""
 "generator."
 msgstr ""
 
-#: of optuna.samplers._nsga2.NSGAIISampler.sample_independent:3
+#: of optuna.samplers._nsga2.sampler.NSGAIISampler.sample_independent:3
 msgid ""
 "This method is called only for the parameters not contained in the search"
 " space returned by :func:`~optuna.samplers.BaseSampler.sample_relative` "
@@ -294,29 +473,29 @@ msgid ""
 "relationship between parameters such as random sampling and TPE."
 msgstr ""
 
-#: of optuna.samplers._nsga2.NSGAIISampler.sample_independent:9
-#: optuna.samplers._nsga2.NSGAIISampler.sample_relative:8
+#: of optuna.samplers._nsga2.sampler.NSGAIISampler.sample_independent:9
+#: optuna.samplers._nsga2.sampler.NSGAIISampler.sample_relative:8
 msgid ""
 "The failed trials are ignored by any build-in samplers when they sample "
 "new parameters. Thus, failed trials are regarded as deleted in the "
 "samplers' perspective."
 msgstr ""
 
-#: of optuna.samplers._nsga2.NSGAIISampler.sample_independent:16
+#: of optuna.samplers._nsga2.sampler.NSGAIISampler.sample_independent:16
 msgid "Name of the sampled parameter."
 msgstr ""
 
-#: of optuna.samplers._nsga2.NSGAIISampler.sample_independent:17
+#: of optuna.samplers._nsga2.sampler.NSGAIISampler.sample_independent:17
 msgid ""
 "Distribution object that specifies a prior and/or scale of the sampling "
 "algorithm."
 msgstr ""
 
-#: of optuna.samplers._nsga2.NSGAIISampler.sample_independent:19
+#: of optuna.samplers._nsga2.sampler.NSGAIISampler.sample_independent:19
 msgid "A parameter value."
 msgstr ""
 
-#: of optuna.samplers._nsga2.NSGAIISampler.sample_relative:3
+#: of optuna.samplers._nsga2.sampler.NSGAIISampler.sample_relative:3
 msgid ""
 "This method is called once at the beginning of each trial, i.e., right "
 "before the evaluation of the objective function. This method is suitable "
@@ -324,13 +503,13 @@ msgid ""
 "Gaussian Process and CMA-ES."
 msgstr ""
 
-#: of optuna.samplers._nsga2.NSGAIISampler.sample_relative:15
+#: of optuna.samplers._nsga2.sampler.NSGAIISampler.sample_relative:15
 msgid ""
 "The search space returned by "
 ":func:`~optuna.samplers.BaseSampler.infer_relative_search_space`."
 msgstr ""
 
-#: of optuna.samplers._nsga2.NSGAIISampler.sample_relative:18
+#: of optuna.samplers._nsga2.sampler.NSGAIISampler.sample_relative:18
 msgid "A dictionary containing the parameter names and the values."
 msgstr ""
 

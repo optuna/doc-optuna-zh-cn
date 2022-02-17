@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 1.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-15 09:48+0800\n"
+"POT-Creation-Date: 2022-02-17 18:33-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -28,7 +28,12 @@ msgid ""
 "<https://docs.openstack.org/cliff/latest/index.html>`_."
 msgstr ""
 ":mod:`~optuna.cli` 模块使用 `cliff framework "
-"<https://docs.openstack.org/cliff/latest/index.html>`_ 框架实现了Optuna的命令行功能. "
+"<https://docs.openstack.org/cliff/latest/index.html>`_ 框架实现了Optuna的命令行功能."
+" "
+
+#: ../../source/reference/cli.rst:9
+msgid "The :ref:`cli` tutorial provides use-cases with examples."
+msgstr ""
 
 #: ../../<_OptunaApp>:1
 msgid "show program's version number and exit"
@@ -66,11 +71,16 @@ msgid "Name of study."
 msgstr "Study 名."
 
 #: ../../<_Ask>:1
-msgid "Direction of optimization."
-msgstr "优化的方向."
+msgid ""
+"Direction of optimization. This argument is deprecated. Please create a "
+"study in advance."
+msgstr ""
 
 #: ../../<_Ask>:1
-msgid "Directions of optimization, if there are multiple objectives."
+#, fuzzy
+msgid ""
+"Directions of optimization, if there are multiple objectives. This "
+"argument is deprecated. Please create a study in advance."
 msgstr "如果有多个目标函数的话, 这里为所有优化的方向."
 
 #: ../../<_Ask>:1
@@ -85,7 +95,9 @@ msgstr "Sampler 对象的初始化关键词参数的 JSON 表示."
 msgid ""
 "Search space as JSON. Keys are names and values are outputs from "
 ":func:`~optuna.distributions.distribution_to_json`."
-msgstr "JSON 格式的搜索空间. 键为名, 值为 :func:`~optuna.distributions.distribution_to_json` 的输出."
+msgstr ""
+"JSON 格式的搜索空间. 键为名, 值为 :func:`~optuna.distributions.distribution_to_json` "
+"的输出."
 
 #: ../../<_Ask>:1 ../../<_BestTrial>:1 ../../<_BestTrials>:1 ../../<_Studies>:1
 #: ../../<_Trials>:1
@@ -97,9 +109,9 @@ msgid "Flatten nested columns such as params."
 msgstr "将多层的嵌套列, 例如参数, 进行展平."
 
 #: ../../<_Ask>:1 ../../<_BestTrial>:1 ../../<_BestTrials>:1
-#: ../../<_CreateStudy>:1 ../../<_Dashboard>:1 ../../<_DeleteStudy>:1
-#: ../../<_StorageUpgrade>:1 ../../<_Studies>:1 ../../<_StudyOptimize>:1
-#: ../../<_StudySetUserAttribute>:1 ../../<_Tell>:1 ../../<_Trials>:1
+#: ../../<_CreateStudy>:1 ../../<_DeleteStudy>:1 ../../<_StorageUpgrade>:1
+#: ../../<_Studies>:1 ../../<_StudyOptimize>:1 ../../<_StudySetUserAttribute>:1
+#: ../../<_Tell>:1 ../../<_Trials>:1
 msgid "This command is provided by the optuna plugin."
 msgstr "该命令由 optuna 插件提供. "
 
@@ -158,47 +170,6 @@ msgid ""
 "directions. Each direction should be either \"minimize\" or \"maximize\"."
 msgstr "对新 study 设置优化的方向. 在不同的方向之间留出空格, 每个方向只能是 \"minimize\" 或 \"maximize\"."
 
-msgid "dashboard"
-msgstr ""
-
-#: ../../<_Dashboard>:1
-msgid "Launch web dashboard (beta)."
-msgstr "启动 web dashboard (beta)."
-
-#: ../../<_Dashboard>:1
-msgid ""
-"This feature is deprecated since version 2.7.0. Please use `optuna-"
-"dashboard <https://github.com/optuna/optuna-dashboard>`_ instead."
-msgstr "该特性从 2.7.0 版之后弃用. 作为替代, 请使用 `optuna-"
-"dashboard <https://github.com/optuna/optuna-dashboard>`_ ."
-
-#: ../../<_Dashboard>:1 ../../<_StudyOptimize>:1
-#: ../../<_StudySetUserAttribute>:1
-msgid "This argument is deprecated. Use --study-name instead."
-msgstr "该参数已弃用. 作为替代, 请使用  –study-name."
-
-#: ../../<_Dashboard>:1
-msgid "The name of the study to show on the dashboard."
-msgstr "在 dashboard 中展示的 study 名."
-
-#: ../../<_Dashboard>:1
-msgid ""
-"Output HTML file path. If it is not given, a HTTP server starts and the "
-"dashboard is served."
-msgstr "HTML 文件的输出路径. 如果该参数没有设定的话, Optuna 将会启动一个 HTTP server 并host 一个dashboard"
-
-#: ../../<_Dashboard>:1
-msgid ""
-"Allow websocket access from the specified host(s).Internally, it is used "
-"as the value of bokeh's --allow-websocket-origin option. Please refer to "
-"https://bokeh.pydata.org/en/latest/docs/reference/command/subcommands/serve.html"
-" for more details."
-msgstr ""
-"允许从制定的 host 发起的的 websocket 请求. 该选项用法和 bokeh 的 ``–allow-websocket-origin`` "
-"一样. 更多细节见 "
-"https://docs.bokeh.org/en/latest/docs/reference/command/subcommands/serve.html.设定具有可读性的"
-" study 名, 以方便和其他的 study 区分. "
-
 msgid "delete-study"
 msgstr ""
 
@@ -253,6 +224,10 @@ msgid ""
 " set to CPU counts."
 msgstr "并行运行的任务个数. 如果该参数设置为 -1, 则任务的实际数目将等于 CPU 的核心数. "
 
+#: ../../<_StudyOptimize>:1 ../../<_StudySetUserAttribute>:1
+msgid "This argument is deprecated. Use --study-name instead."
+msgstr "该参数已弃用. 作为替代, 请使用  –study-name."
+
 #: ../../<_StudyOptimize>:1
 msgid "The name of the study to start optimization on."
 msgstr "被优化的 study 名. "
@@ -288,7 +263,8 @@ msgid "tell"
 msgstr ""
 
 #: ../../<_Tell>:1
-msgid "Finish a trial created with the ask command."
+#, fuzzy
+msgid "Finish a trial, which was created by the ask command."
 msgstr "结束一个 ask命令创建的trial."
 
 #: ../../<_Tell>:1
@@ -303,6 +279,13 @@ msgstr "目标函数值."
 msgid "Trial state."
 msgstr "Trial 状态"
 
+#: ../../<_Tell>:1
+#, fuzzy
+msgid ""
+"If specified, tell is skipped without any error when the trial is "
+"alreadyfinished."
+msgstr "如果开启该选项,  当存在一个同名的 study 时, optuna 在优化开始时将跳过创建 study 的过程, 并且不报错. "
+
 msgid "trials"
 msgstr ""
 
@@ -313,3 +296,46 @@ msgstr "显示 study 列表."
 #: ../../<_Trials>:1
 msgid "The name of the study which includes trials."
 msgstr "包含 trial 的 study 名."
+
+#~ msgid "Direction of optimization."
+#~ msgstr "优化的方向."
+
+#~ msgid "dashboard"
+#~ msgstr ""
+
+#~ msgid "Launch web dashboard (beta)."
+#~ msgstr "启动 web dashboard (beta)."
+
+#~ msgid ""
+#~ "This feature is deprecated since version"
+#~ " 2.7.0. Please use `optuna-dashboard "
+#~ "<https://github.com/optuna/optuna-dashboard>`_ instead."
+#~ msgstr ""
+#~ "该特性从 2.7.0 版之后弃用. 作为替代, 请使用 `optuna-"
+#~ "dashboard <https://github.com/optuna/optuna-dashboard>`_"
+#~ " ."
+
+#~ msgid "The name of the study to show on the dashboard."
+#~ msgstr "在 dashboard 中展示的 study 名."
+
+#~ msgid ""
+#~ "Output HTML file path. If it is"
+#~ " not given, a HTTP server starts "
+#~ "and the dashboard is served."
+#~ msgstr "HTML 文件的输出路径. 如果该参数没有设定的话, Optuna 将会启动一个 HTTP server 并host 一个dashboard"
+
+#~ msgid ""
+#~ "Allow websocket access from the "
+#~ "specified host(s).Internally, it is used "
+#~ "as the value of bokeh's --allow-"
+#~ "websocket-origin option. Please refer to"
+#~ " "
+#~ "https://bokeh.pydata.org/en/latest/docs/reference/command/subcommands/serve.html"
+#~ " for more details."
+#~ msgstr ""
+#~ "允许从制定的 host 发起的的 websocket 请求. 该选项用法和"
+#~ " bokeh 的 ``–allow-websocket-origin`` "
+#~ "一样. 更多细节见 "
+#~ "https://docs.bokeh.org/en/latest/docs/reference/command/subcommands/serve.html.设定具有可读性的"
+#~ " study 名, 以方便和其他的 study 区分. "
+

@@ -12,6 +12,8 @@
 
    .. autosummary::
    
+      ~PyTorchLightningPruningCallback.on_fit_end
+      ~PyTorchLightningPruningCallback.on_init_start
       ~PyTorchLightningPruningCallback.on_validation_end
    
 

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 2.7.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-15 09:48+0800\n"
+"POT-Creation-Date: 2022-02-17 18:33-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -43,6 +43,9 @@ msgid ""
 msgstr ""
 
 #: of optuna.integration.pytorch_distributed.TorchDistributedTrial
+#: optuna.integration.pytorch_distributed.TorchDistributedTrial.suggest_discrete_uniform
+#: optuna.integration.pytorch_distributed.TorchDistributedTrial.suggest_loguniform
+#: optuna.integration.pytorch_distributed.TorchDistributedTrial.suggest_uniform
 msgid "参数"
 msgstr ""
 
@@ -149,34 +152,67 @@ msgstr ""
 msgid "Attributes"
 msgstr ""
 
-#: ../../source/reference/generated/optuna.integration.TorchDistributedTrial.rst:40:<autosummary>:1
+#: of
+#: optuna.integration.pytorch_distributed.TorchDistributedTrial.suggest_discrete_uniform:1:<autosummary>:1
 msgid ""
 ":obj:`datetime_start "
 "<optuna.integration.TorchDistributedTrial.datetime_start>`\\"
 msgstr ""
 
-#: ../../source/reference/generated/optuna.integration.TorchDistributedTrial.rst:40:<autosummary>:1
+#: of
+#: optuna.integration.pytorch_distributed.TorchDistributedTrial.suggest_discrete_uniform:1:<autosummary>:1
 msgid ""
 ":obj:`distributions "
 "<optuna.integration.TorchDistributedTrial.distributions>`\\"
 msgstr ""
 
-#: ../../source/reference/generated/optuna.integration.TorchDistributedTrial.rst:40:<autosummary>:1
+#: of
+#: optuna.integration.pytorch_distributed.TorchDistributedTrial.suggest_discrete_uniform:1:<autosummary>:1
 msgid ":obj:`number <optuna.integration.TorchDistributedTrial.number>`\\"
 msgstr ""
 
-#: ../../source/reference/generated/optuna.integration.TorchDistributedTrial.rst:40:<autosummary>:1
+#: of
+#: optuna.integration.pytorch_distributed.TorchDistributedTrial.suggest_discrete_uniform:1:<autosummary>:1
 msgid ":obj:`params <optuna.integration.TorchDistributedTrial.params>`\\"
 msgstr ""
 
-#: ../../source/reference/generated/optuna.integration.TorchDistributedTrial.rst:40:<autosummary>:1
+#: of
+#: optuna.integration.pytorch_distributed.TorchDistributedTrial.suggest_discrete_uniform:1:<autosummary>:1
 msgid ""
 ":obj:`system_attrs "
 "<optuna.integration.TorchDistributedTrial.system_attrs>`\\"
 msgstr ""
 
-#: ../../source/reference/generated/optuna.integration.TorchDistributedTrial.rst:40:<autosummary>:1
+#: of
+#: optuna.integration.pytorch_distributed.TorchDistributedTrial.suggest_discrete_uniform:1:<autosummary>:1
 msgid ":obj:`user_attrs <optuna.integration.TorchDistributedTrial.user_attrs>`\\"
+msgstr ""
+
+#: of
+#: optuna.integration.pytorch_distributed.TorchDistributedTrial.suggest_discrete_uniform:2
+#: optuna.integration.pytorch_distributed.TorchDistributedTrial.suggest_loguniform:2
+#: optuna.integration.pytorch_distributed.TorchDistributedTrial.suggest_uniform:2
+msgid ""
+"Deprecated in v3.0.0. This feature will be removed in the future. The "
+"removal of this feature is currently scheduled for v6.0.0, but this "
+"schedule is subject to change. See "
+"https://github.com/optuna/optuna/releases/tag/v3.0.0."
+msgstr ""
+
+#: of
+#: optuna.integration.pytorch_distributed.TorchDistributedTrial.suggest_discrete_uniform:7
+#: optuna.integration.pytorch_distributed.TorchDistributedTrial.suggest_loguniform:7
+#: optuna.integration.pytorch_distributed.TorchDistributedTrial.suggest_uniform:7
+msgid ""
+"Use :func:`~optuna.integration.TorchDistributedTrial.suggest_float` "
+"instead."
+msgstr ""
+
+#: of
+#: optuna.integration.pytorch_distributed.TorchDistributedTrial.suggest_discrete_uniform
+#: optuna.integration.pytorch_distributed.TorchDistributedTrial.suggest_loguniform
+#: optuna.integration.pytorch_distributed.TorchDistributedTrial.suggest_uniform
+msgid "返回类型"
 msgstr ""
 
 #~ msgid ""

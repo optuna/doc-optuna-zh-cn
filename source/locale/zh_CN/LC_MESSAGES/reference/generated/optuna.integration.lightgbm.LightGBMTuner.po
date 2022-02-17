@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 2.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-15 09:48+0800\n"
+"POT-Creation-Date: 2022-02-17 18:33-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -71,7 +71,7 @@ msgid ""
 "List of Optuna callback functions that are invoked at the end of each "
 "trial. Each function must accept two parameters with the following types "
 "in this order: :class:`~optuna.study.Study` and "
-":class:`~optuna.FrozenTrial`. Please note that this is not a "
+":class:`~optuna.trial.FrozenTrial`. Please note that this is not a "
 "``callbacks`` argument of `lightgbm.train()`_ ."
 msgstr ""
 
@@ -176,8 +176,6 @@ msgstr ""
 #: ../../source/reference/generated/optuna.integration.lightgbm.LightGBMTuner.rst:31:<autosummary>:1
 #: of
 #: optuna.integration._lightgbm_tuner.optimize._LightGBMBaseTuner.get_best_booster:1
-#: optuna.integration.lightgbm.LightGBMTuner.best_booster:1
-#: optuna.integration.lightgbm.LightGBMTuner.best_booster:1:<autosummary>:1
 msgid "Return the best booster."
 msgstr ""
 
@@ -254,45 +252,24 @@ msgstr ""
 msgid "Attributes"
 msgstr ""
 
-#: of optuna.integration.lightgbm.LightGBMTuner.best_booster:1:<autosummary>:1
-msgid ""
-":obj:`best_booster "
-"<optuna.integration.lightgbm.LightGBMTuner.best_booster>`\\"
-msgstr ""
-
-#: of optuna.integration.lightgbm.LightGBMTuner.best_booster:1:<autosummary>:1
+#: of optuna.integration.lightgbm.LightGBMTuner.best_params:1:<autosummary>:1
 msgid ""
 ":obj:`best_params "
 "<optuna.integration.lightgbm.LightGBMTuner.best_params>`\\"
 msgstr ""
 
-#: of optuna.integration.lightgbm.LightGBMTuner.best_booster:1:<autosummary>:1
-#: optuna.integration.lightgbm.LightGBMTuner.best_params:1
+#: of optuna.integration.lightgbm.LightGBMTuner.best_params:1
+#: optuna.integration.lightgbm.LightGBMTuner.best_params:1:<autosummary>:1
 msgid "Return parameters of the best booster."
 msgstr ""
 
-#: of optuna.integration.lightgbm.LightGBMTuner.best_booster:1:<autosummary>:1
+#: of optuna.integration.lightgbm.LightGBMTuner.best_params:1:<autosummary>:1
 msgid ":obj:`best_score <optuna.integration.lightgbm.LightGBMTuner.best_score>`\\"
 msgstr ""
 
-#: of optuna.integration.lightgbm.LightGBMTuner.best_booster:1:<autosummary>:1
+#: of optuna.integration.lightgbm.LightGBMTuner.best_params:1:<autosummary>:1
 #: optuna.integration.lightgbm.LightGBMTuner.best_score:1
 msgid "Return the score of the best booster."
-msgstr ""
-
-#: of optuna.integration.lightgbm.LightGBMTuner.best_booster:4
-msgid ""
-"Deprecated in v1.4.0. This feature will be removed in the future. The "
-"removal of this feature is currently scheduled for v3.0.0, but this "
-"schedule is subject to change. See "
-"https://github.com/optuna/optuna/releases/tag/v1.4.0."
-msgstr ""
-
-#: of optuna.integration.lightgbm.LightGBMTuner.best_booster:9
-msgid ""
-"Please get the best booster via "
-":class:`~optuna.integration.lightgbm.LightGBMTuner.get_best_booster` "
-"instead."
 msgstr ""
 
 #: of
@@ -311,4 +288,35 @@ msgstr ""
 #: optuna.integration._lightgbm_tuner.optimize._LightGBMBaseTuner.sample_train_set
 msgid "返回类型"
 msgstr ""
+
+#~ msgid ""
+#~ "List of Optuna callback functions that"
+#~ " are invoked at the end of each"
+#~ " trial. Each function must accept two"
+#~ " parameters with the following types "
+#~ "in this order: :class:`~optuna.study.Study` "
+#~ "and :class:`~optuna.FrozenTrial`. Please note "
+#~ "that this is not a ``callbacks`` "
+#~ "argument of `lightgbm.train()`_ ."
+#~ msgstr ""
+
+#~ msgid ""
+#~ ":obj:`best_booster "
+#~ "<optuna.integration.lightgbm.LightGBMTuner.best_booster>`\\"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Deprecated in v1.4.0. This feature will"
+#~ " be removed in the future. The "
+#~ "removal of this feature is currently "
+#~ "scheduled for v3.0.0, but this schedule"
+#~ " is subject to change. See "
+#~ "https://github.com/optuna/optuna/releases/tag/v1.4.0."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Please get the best booster via "
+#~ ":class:`~optuna.integration.lightgbm.LightGBMTuner.get_best_booster`"
+#~ " instead."
+#~ msgstr ""
 

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 2.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-15 09:48+0800\n"
+"POT-Creation-Date: 2022-02-17 18:33-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -277,6 +277,9 @@ msgid "Please refer to :func:`~optuna.trial.FrozenTrial.should_prune`."
 msgstr "请参考 :func:`~optuna.trial.FrozenTrial.should_prune`."
 
 #: of optuna.trial._frozen.FrozenTrial.report
+#: optuna.trial._frozen.FrozenTrial.suggest_discrete_uniform
+#: optuna.trial._frozen.FrozenTrial.suggest_loguniform
+#: optuna.trial._frozen.FrozenTrial.suggest_uniform
 msgid "参数"
 msgstr ""
 
@@ -297,6 +300,9 @@ msgstr ""
 
 #: of optuna.trial._frozen.FrozenTrial.report
 #: optuna.trial._frozen.FrozenTrial.should_prune
+#: optuna.trial._frozen.FrozenTrial.suggest_discrete_uniform
+#: optuna.trial._frozen.FrozenTrial.suggest_loguniform
+#: optuna.trial._frozen.FrozenTrial.suggest_uniform
 msgid "返回类型"
 msgstr ""
 
@@ -313,6 +319,23 @@ msgstr ":class:`~optuna.trial.FrozenTrial` 只对参数的一个组合进行采�
 #: of optuna.trial._frozen.FrozenTrial.should_prune:8
 msgid ":obj:`False`."
 msgstr ""
+
+#: of optuna.trial._frozen.FrozenTrial.suggest_discrete_uniform:2
+#: optuna.trial._frozen.FrozenTrial.suggest_loguniform:2
+#: optuna.trial._frozen.FrozenTrial.suggest_uniform:2
+msgid ""
+"Deprecated in v3.0.0. This feature will be removed in the future. The "
+"removal of this feature is currently scheduled for v6.0.0, but this "
+"schedule is subject to change. See "
+"https://github.com/optuna/optuna/releases/tag/v3.0.0."
+msgstr ""
+
+#: of optuna.trial._frozen.FrozenTrial.suggest_discrete_uniform:7
+#: optuna.trial._frozen.FrozenTrial.suggest_loguniform:7
+#: optuna.trial._frozen.FrozenTrial.suggest_uniform:7
+#, fuzzy
+msgid "Use :func:`~optuna.trial.FrozenTrial.suggest_float` instead."
+msgstr "请参考 :func:`~optuna.trial.FrozenTrial.should_prune`."
 
 #~ msgid ""
 #~ "Attributes are set in "
