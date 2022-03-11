@@ -100,7 +100,11 @@ msgid ""
 "a dictionary containing metrics after training. "
 ":class:`~optuna.integration.AllenNLPExecutor` accesses the dictionary by "
 "the key ``metrics`` you specify and use it as a objective value."
-msgstr ""
+msgstr "求值评估函数. AllenNLP 的 `GradientDescrentTrainer.train() "
+"<https://docs.allennlp.org/ "
+"main/api/training/gradient_descent_trainer/#train>`_ 在训练后会返回一个包含评估函数的字典. "
+":class:`~optuna.integration.AllenNLPExecutor` 通过你指定的键名 ``metrics`` 来读取字典并将其作为目标函数值. "
+
 
 #: of optuna.integration.allennlp._executor.AllenNLPExecutor:34
 msgid "If :obj:`True`, an executor overwrites the output directory if it exists."
