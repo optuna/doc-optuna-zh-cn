@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 2.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-20 13:35-0400\n"
+"POT-Creation-Date: 2022-02-17 18:33-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -26,52 +26,66 @@ msgid "A uniform distribution in the log domain."
 msgstr "对数域的均匀分布."
 
 #: of optuna.distributions.LogUniformDistribution:3
+#, fuzzy
 msgid ""
 "This object is instantiated by :func:`~optuna.trial.Trial.suggest_float` "
-"with ``log=True`` and :func:`~optuna.trial.Trial.suggest_loguniform`, and"
-" passed to :mod:`~optuna.samplers` in general."
-msgstr "一般情况下, 该对象在 ``log=True`` 和 :func:`~optuna.trial.Trial.suggest_loguniform` 时由 :func:`~optuna.trial.Trial.suggest_float` "
-"进行实例化, 然后被传递到 :mod:`~optuna.samplers`."
+"with ``log=True``, and passed to :mod:`~optuna.samplers` in general."
+msgstr ""
+"一般情况下, 该对象在 ``log=True`` 和 :func:`~optuna.trial.Trial.suggest_loguniform`"
+" 时由 :func:`~optuna.trial.Trial.suggest_float` 进行实例化, 然后被传递到 "
+":mod:`~optuna.samplers`."
 
-
-#: of optuna.distributions.LogUniformDistribution:9
+#: of optuna.distributions.LogUniformDistribution:8
 msgid ""
 "Lower endpoint of the range of the distribution. ``low`` is included in "
 "the range."
 msgstr "该分布的取值范围下界. 其中 ``low`` 值是包含在取值范围内的."
 
-#: of optuna.distributions.LogUniformDistribution:13
+#: of optuna.distributions.LogUniformDistribution:12
+#, fuzzy
 msgid ""
-"Upper endpoint of the range of the distribution. ``high`` is included "
-"from the range."
+"Upper endpoint of the range of the distribution. ``high`` is included in "
+"the range."
 msgstr "该分布的取值范围上界. 其中 ``high`` 值是包含在取值范围内的."
 
 #: of optuna.distributions.LogUniformDistribution
 msgid "引发"
 msgstr ""
 
-#: of optuna.distributions.LogUniformDistribution:15
+#: of optuna.distributions.LogUniformDistribution:14
 msgid ""
 "If ``low`` value is larger than ``high`` value, or ``low`` value is "
 "smaller than or     equal to 0."
 msgstr "如果 ``low`` 的值比 ``high`` 大, 或者 ``low`` 小于等于 0 的话."
 
+#: of optuna.distributions.LogUniformDistribution:17
+msgid ""
+"Deprecated in v3.0.0. This feature will be removed in the future. The "
+"removal of this feature is currently scheduled for v6.0.0, but this "
+"schedule is subject to change. See "
+"https://github.com/optuna/optuna/releases/tag/v3.0.0."
+msgstr ""
+
+#: of optuna.distributions.LogUniformDistribution:22
+msgid "Use :class:`~optuna.distributions.FloatDistribution` instead."
+msgstr ""
+
 #: ../../source/reference/generated/optuna.distributions.LogUniformDistribution.rst:12
 msgid "Methods"
 msgstr ""
 
-#: of optuna.distributions.LogUniformDistribution.single:1:<autosummary>:1
+#: of optuna.distributions.FloatDistribution.single:1:<autosummary>:1
 msgid ""
 ":obj:`single <optuna.distributions.LogUniformDistribution.single>`\\ "
 "\\(\\)"
 msgstr ""
 
-#: of optuna.distributions.LogUniformDistribution.single:1
-#: optuna.distributions.LogUniformDistribution.single:1:<autosummary>:1
+#: of optuna.distributions.FloatDistribution.single:1
+#: optuna.distributions.FloatDistribution.single:1:<autosummary>:1
 msgid "Test whether the range of this distribution contains just a single value."
 msgstr "测试该分布是否仅包含单一值."
 
-#: of optuna.distributions.LogUniformDistribution.single:1:<autosummary>:1
+#: of optuna.distributions.FloatDistribution.single:1:<autosummary>:1
 msgid ""
 ":obj:`to_external_repr "
 "<optuna.distributions.LogUniformDistribution.to_external_repr>`\\ "
@@ -79,13 +93,13 @@ msgid ""
 msgstr ""
 
 #: of optuna.distributions.BaseDistribution.to_external_repr:1
-#: optuna.distributions.LogUniformDistribution.single:1:<autosummary>:1
+#: optuna.distributions.FloatDistribution.single:1:<autosummary>:1
 msgid ""
 "Convert internal representation of a parameter value into external "
 "representation."
 msgstr "将参数的内部表示转化为外部表示."
 
-#: of optuna.distributions.LogUniformDistribution.single:1:<autosummary>:1
+#: of optuna.distributions.FloatDistribution.single:1:<autosummary>:1
 msgid ""
 ":obj:`to_internal_repr "
 "<optuna.distributions.LogUniformDistribution.to_internal_repr>`\\ "
@@ -93,7 +107,7 @@ msgid ""
 msgstr ""
 
 #: of optuna.distributions.BaseDistribution.to_internal_repr:1
-#: optuna.distributions.LogUniformDistribution.single:1:<autosummary>:1
+#: optuna.distributions.FloatDistribution.single:1:<autosummary>:1
 msgid ""
 "Convert external representation of a parameter value into internal "
 "representation."
@@ -101,11 +115,11 @@ msgstr "将参数的外部表示转化为内部表示."
 
 #: of optuna.distributions.BaseDistribution.to_external_repr
 #: optuna.distributions.BaseDistribution.to_internal_repr
-#: optuna.distributions.LogUniformDistribution.single
+#: optuna.distributions.FloatDistribution.single
 msgid "返回"
 msgstr ""
 
-#: of optuna.distributions.LogUniformDistribution.single:3
+#: of optuna.distributions.FloatDistribution.single:3
 msgid ""
 ":obj:`True` if the range of this distribution contains just a single "
 "value, otherwise :obj:`False`."
@@ -113,7 +127,7 @@ msgstr "如果该分布仅包含一个值的话为 :obj:`True`, 否则为 :obj:`
 
 #: of optuna.distributions.BaseDistribution.to_external_repr
 #: optuna.distributions.BaseDistribution.to_internal_repr
-#: optuna.distributions.LogUniformDistribution.single
+#: optuna.distributions.FloatDistribution.single
 msgid "返回类型"
 msgstr ""
 

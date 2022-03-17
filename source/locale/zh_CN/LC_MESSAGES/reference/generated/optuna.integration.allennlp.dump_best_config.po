@@ -25,7 +25,7 @@ msgstr ""
 msgid ""
 "Save JSON config file with environment variables and best performing "
 "hyperparameters."
-msgstr ""
+msgstr "保存包含环境变量和最佳表现的超参数的配置到 JSON 文件."
 
 #: of optuna.integration.allennlp._dump_best_config.dump_best_config
 msgid "参数"
@@ -35,25 +35,18 @@ msgstr ""
 msgid ""
 "Input Jsonnet config file used with "
 ":class:`~optuna.integration.AllenNLPExecutor`."
-msgstr ""
+msgstr "和 :class:`~optuna.integration.AllenNLPExecutor` 配合使用的 Jsonnet 输入配置文件."
 
 #: of optuna.integration.allennlp._dump_best_config.dump_best_config:5
 msgid "Output JSON config file."
-msgstr ""
+msgstr "Jsonnet 输出配置文件. "
 
 #: of optuna.integration.allennlp._dump_best_config.dump_best_config:6
 msgid ""
 "Instance of :class:`~optuna.study.Study`. Note that "
 ":func:`~optuna.study.Study.optimize` must have been called."
-msgstr ""
+msgstr ":class:`~optuna.study.Study` 实例. 注意必须先调用 :func:`~optuna.study.Study.optimize`."
 
 #: of optuna.integration.allennlp._dump_best_config.dump_best_config
 msgid "返回类型"
 msgstr ""
-
-#~ msgid ""
-#~ "Save JSON config file after updating "
-#~ "with parameters from the best trial "
-#~ "in the study."
-#~ msgstr ""
-

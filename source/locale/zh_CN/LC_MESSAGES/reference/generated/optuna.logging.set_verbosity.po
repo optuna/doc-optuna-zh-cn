@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 2.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-20 13:35-0400\n"
+"POT-Creation-Date: 2022-02-17 18:33-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -25,11 +25,20 @@ msgstr ""
 msgid "Set the level for the Optuna's root logger."
 msgstr "设置 Optuna 当前的根 logger 的日志水平."
 
+#: of optuna.logging.set_verbosity:4
+msgid "示例"
+msgstr ""
+
+#: of optuna.logging.set_verbosity:5
+#, fuzzy
+msgid "Set the logging level ``optuna.logging.WARNING``."
+msgstr "日志水平, 比如 ``optuna.logging.DEBUG`` 和 ``optuna.logging.INFO``."
+
 #: of optuna.logging.set_verbosity
 msgid "参数"
 msgstr ""
 
-#: of optuna.logging.set_verbosity:3
+#: of optuna.logging.set_verbosity:32
 msgid "Logging level, e.g., ``optuna.logging.DEBUG`` and ``optuna.logging.INFO``."
 msgstr "日志水平, 比如 ``optuna.logging.DEBUG`` 和 ``optuna.logging.INFO``."
 
@@ -37,27 +46,27 @@ msgstr "日志水平, 比如 ``optuna.logging.DEBUG`` 和 ``optuna.logging.INFO`
 msgid "返回类型"
 msgstr ""
 
-#: of optuna.logging.set_verbosity:6
+#: of optuna.logging.set_verbosity:35
 msgid "Optuna has following logging levels:"
 msgstr ""
 
-#: of optuna.logging.set_verbosity:8
+#: of optuna.logging.set_verbosity:37
 msgid "``optuna.logging.CRITICAL``, ``optuna.logging.FATAL``"
 msgstr ""
 
-#: of optuna.logging.set_verbosity:9
+#: of optuna.logging.set_verbosity:38
 msgid "``optuna.logging.ERROR``"
 msgstr ""
 
-#: of optuna.logging.set_verbosity:10
+#: of optuna.logging.set_verbosity:39
 msgid "``optuna.logging.WARNING``, ``optuna.logging.WARN``"
 msgstr ""
 
-#: of optuna.logging.set_verbosity:11
+#: of optuna.logging.set_verbosity:40
 msgid "``optuna.logging.INFO``"
 msgstr ""
 
-#: of optuna.logging.set_verbosity:12
+#: of optuna.logging.set_verbosity:41
 msgid "``optuna.logging.DEBUG``"
 msgstr ""
 

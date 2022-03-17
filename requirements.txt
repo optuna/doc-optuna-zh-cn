@@ -1,4 +1,4 @@
-optuna==2.10.0
+optuna==3.0.0a2
 sphinx
 sphinx-rtd-theme
 sphinx-copybutton
@@ -10,7 +10,7 @@ scikit-learn
 plotly>=4.0.0
 pandas
 lightgbm
-torch==1.7.1
-torchvision==0.8.2
-torchaudio==0.7.2
+torch==1.10.0
+torchvision==0.11.1
+torchaudio==0.10.0
 thop

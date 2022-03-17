@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 2.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-15 09:48+0800\n"
+"POT-Creation-Date: 2022-02-17 18:33-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -51,11 +51,32 @@ msgid ""
 "thus depend on how this dictionary is formatted."
 msgstr ""
 
+#: of optuna.integration.pytorch_lightning.PyTorchLightningPruningCallback:16
+msgid ""
+"For the distributed data parallel training, the version of "
+"PyTorchLightning needs to be higher than or equal to v1.5.0. In addition,"
+" :class:`~optuna.study.Study` should be instantiated with RDB storage."
+msgstr ""
+
 #: ../../source/reference/generated/optuna.integration.PyTorchLightningPruningCallback.rst:12
 msgid "Methods"
 msgstr ""
 
-#: ../../source/reference/generated/optuna.integration.PyTorchLightningPruningCallback.rst:15:<autosummary>:1
+#: ../../source/reference/generated/optuna.integration.PyTorchLightningPruningCallback.rst:17:<autosummary>:1
+msgid ""
+":obj:`on_fit_end "
+"<optuna.integration.PyTorchLightningPruningCallback.on_fit_end>`\\ "
+"\\(trainer\\, pl\\_module\\)"
+msgstr ""
+
+#: ../../source/reference/generated/optuna.integration.PyTorchLightningPruningCallback.rst:17:<autosummary>:1
+msgid ""
+":obj:`on_init_start "
+"<optuna.integration.PyTorchLightningPruningCallback.on_init_start>`\\ "
+"\\(trainer\\)"
+msgstr ""
+
+#: ../../source/reference/generated/optuna.integration.PyTorchLightningPruningCallback.rst:17:<autosummary>:1
 msgid ""
 ":obj:`on_validation_end "
 "<optuna.integration.PyTorchLightningPruningCallback.on_validation_end>`\\"

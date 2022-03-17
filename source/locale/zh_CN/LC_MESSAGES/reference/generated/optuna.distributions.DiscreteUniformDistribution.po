@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 2.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-20 13:35-0400\n"
+"POT-Creation-Date: 2022-02-17 18:33-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -26,39 +26,48 @@ msgid "A discretized uniform distribution in the linear domain."
 msgstr ""
 
 #: of optuna.distributions.DiscreteUniformDistribution:3
+#, fuzzy
 msgid ""
-"This object is instantiated by "
-":func:`~optuna.trial.Trial.suggest_uniform` with ``step`` argument and "
-":func:`~optuna.trial.Trial.suggest_discrete_uniform`, and passed to "
-":mod:`~optuna.samplers` in general."
-msgstr "一般情况下, 该对象在有 ``step`` 参数 和 :func:`~optuna.trial.Trial.suggest_discrete_uniform` 时由 :func:`~optuna.trial.Trial.suggest_uniform` "
-"进行实例化, 然后被传递到 :mod:`~optuna.samplers`."
+"This object is instantiated by :func:`~optuna.trial.Trial.suggest_float` "
+"with ``step`` argument, and passed to :mod:`~optuna.samplers` in general."
+msgstr ""
+"一般情况下, 该对象在有 ``step`` 参数 和 "
+":func:`~optuna.trial.Trial.suggest_discrete_uniform` 时由 "
+":func:`~optuna.trial.Trial.suggest_uniform` 进行实例化, 然后被传递到 "
+":mod:`~optuna.samplers`."
 
-#: of optuna.distributions.DiscreteUniformDistribution:8
+#: of optuna.distributions.DiscreteUniformDistribution:7
 msgid ""
 "If the range :math:`[\\mathsf{low}, \\mathsf{high}]` is not divisible by "
 ":math:`q`, :math:`\\mathsf{high}` will be replaced with the maximum of "
 ":math:`k q + \\mathsf{low} < \\mathsf{high}`, where :math:`k` is an "
 "integer."
 msgstr ""
-"如果区间 :math:`[\\mathsf{low}, \\mathsf{high}]` 不能被步数"
-" :math:`q` 整除的话， 值 :math:`\\mathsf{high}` "
-"会被替代成 :math:`k q + \\mathsf{low} \\lt"
-" \\mathsf{high}` 的最大值，其中 :math:`k` 是整数. "
+"如果区间 :math:`[\\mathsf{low}, \\mathsf{high}]` 不能被步数 :math:`q` 整除的话， 值 "
+":math:`\\mathsf{high}` 会被替代成 :math:`k q + \\mathsf{low} \\lt "
+"\\mathsf{high}` 的最大值，其中 :math:`k` 是整数. "
 
-#: of optuna.distributions.DiscreteUniformDistribution:14
+#: of optuna.distributions.BaseDistribution.to_external_repr
+#: optuna.distributions.BaseDistribution.to_internal_repr
+#: optuna.distributions.DiscreteUniformDistribution
+msgid "参数"
+msgstr ""
+
+#: of optuna.distributions.DiscreteUniformDistribution:11
+#: optuna.distributions.DiscreteUniformDistribution:19
 msgid ""
 "Lower endpoint of the range of the distribution. ``low`` is included in "
 "the range."
 msgstr "该分布的取值范围下界. 其中 ``low`` 值是包含在取值范围内的. "
 
-#: of optuna.distributions.DiscreteUniformDistribution:18
+#: of optuna.distributions.DiscreteUniformDistribution:12
+#: optuna.distributions.DiscreteUniformDistribution:23
 msgid ""
 "Upper endpoint of the range of the distribution. ``high`` is included in "
 "the range."
 msgstr "该分布的取值范围上界. 其中 ``high`` 值是包含在取值范围内的. "
 
-#: of optuna.distributions.DiscreteUniformDistribution:22
+#: of optuna.distributions.DiscreteUniformDistribution:13
 msgid "A discretization step."
 msgstr "离散化步长"
 
@@ -66,60 +75,96 @@ msgstr "离散化步长"
 msgid "引发"
 msgstr ""
 
-#: of optuna.distributions.DiscreteUniformDistribution:24
-msgid "If ``low`` value is larger than ``high`` value."
+#: of optuna.distributions.DiscreteUniformDistribution:15
+#, fuzzy
+msgid ""
+"If ``low`` value is larger than ``high`` value, or ``q`` value is smaller"
+" or     equal to 0."
 msgstr "如果 ``low`` 的值比 ``high`` 大的话."
+
+#: of optuna.distributions.DiscreteUniformDistribution:26
+msgid ""
+"Deprecated in v3.0.0. This feature will be removed in the future. The "
+"removal of this feature is currently scheduled for v6.0.0, but this "
+"schedule is subject to change. See "
+"https://github.com/optuna/optuna/releases/tag/v3.0.0."
+msgstr ""
+
+#: of optuna.distributions.DiscreteUniformDistribution:31
+msgid "Use :class:`~optuna.distributions.FloatDistribution` instead."
+msgstr ""
 
 #: ../../source/reference/generated/optuna.distributions.DiscreteUniformDistribution.rst:12
 msgid "Methods"
 msgstr ""
 
-#: of optuna.distributions.DiscreteUniformDistribution.single:1:<autosummary>:1
+#: ../../source/reference/generated/optuna.distributions.DiscreteUniformDistribution.rst:23:<autosummary>:1
 msgid ""
 ":obj:`single <optuna.distributions.DiscreteUniformDistribution.single>`\\"
 " \\(\\)"
 msgstr ""
 
-#: of optuna.distributions.DiscreteUniformDistribution.single:1
-#: optuna.distributions.DiscreteUniformDistribution.single:1:<autosummary>:1
+#: ../../source/reference/generated/optuna.distributions.DiscreteUniformDistribution.rst:23:<autosummary>:1
+#: of optuna.distributions.FloatDistribution.single:1
 msgid "Test whether the range of this distribution contains just a single value."
 msgstr "测试该分布是否仅包含单一值."
 
-#: of optuna.distributions.DiscreteUniformDistribution.single:1:<autosummary>:1
+#: ../../source/reference/generated/optuna.distributions.DiscreteUniformDistribution.rst:23:<autosummary>:1
 msgid ""
 ":obj:`to_external_repr "
 "<optuna.distributions.DiscreteUniformDistribution.to_external_repr>`\\ "
 "\\(param\\_value\\_in\\_internal\\_repr\\)"
 msgstr ""
 
+#: ../../source/reference/generated/optuna.distributions.DiscreteUniformDistribution.rst:23:<autosummary>:1
 #: of optuna.distributions.BaseDistribution.to_external_repr:1
-#: optuna.distributions.DiscreteUniformDistribution.single:1:<autosummary>:1
 msgid ""
 "Convert internal representation of a parameter value into external "
 "representation."
 msgstr "将参数的内部表示转化为外部表示."
 
-#: of optuna.distributions.DiscreteUniformDistribution.single:1:<autosummary>:1
+#: ../../source/reference/generated/optuna.distributions.DiscreteUniformDistribution.rst:23:<autosummary>:1
 msgid ""
 ":obj:`to_internal_repr "
 "<optuna.distributions.DiscreteUniformDistribution.to_internal_repr>`\\ "
 "\\(param\\_value\\_in\\_external\\_repr\\)"
 msgstr ""
 
+#: ../../source/reference/generated/optuna.distributions.DiscreteUniformDistribution.rst:23:<autosummary>:1
 #: of optuna.distributions.BaseDistribution.to_internal_repr:1
-#: optuna.distributions.DiscreteUniformDistribution.single:1:<autosummary>:1
 msgid ""
 "Convert external representation of a parameter value into internal "
 "representation."
 msgstr "将参数的外部表示转化为内部表示."
 
+#: ../../source/reference/generated/optuna.distributions.DiscreteUniformDistribution.rst:25
+msgid "Attributes"
+msgstr ""
+
+#: of optuna.distributions.DiscreteUniformDistribution.q:1:<autosummary>:1
+msgid ":obj:`q <optuna.distributions.DiscreteUniformDistribution.q>`\\"
+msgstr ""
+
+#: of optuna.distributions.DiscreteUniformDistribution.q:1
+#: optuna.distributions.DiscreteUniformDistribution.q:1:<autosummary>:1
+#, fuzzy
+msgid "Discretization step."
+msgstr "离散化步长"
+
+#: of optuna.distributions.DiscreteUniformDistribution.q:3
+msgid ""
+":class:`~optuna.distributions.DiscreteUniformDistribution` is a subtype "
+"of :class:`~optuna.distributions.FloatDistribution`. This property is a "
+"proxy for its ``step`` attribute."
+msgstr ""
+
 #: of optuna.distributions.BaseDistribution.to_external_repr
 #: optuna.distributions.BaseDistribution.to_internal_repr
-#: optuna.distributions.DiscreteUniformDistribution.single
+#: optuna.distributions.FloatDistribution.single
 msgid "返回"
 msgstr ""
 
-#: of optuna.distributions.DiscreteUniformDistribution.single:3
+#: of optuna.distributions.FloatDistribution.single:3
 msgid ""
 ":obj:`True` if the range of this distribution contains just a single "
 "value, otherwise :obj:`False`."
@@ -127,13 +172,8 @@ msgstr "如果该分布仅包含一个值的话为 :obj:`True`, 否则为 :obj:`
 
 #: of optuna.distributions.BaseDistribution.to_external_repr
 #: optuna.distributions.BaseDistribution.to_internal_repr
-#: optuna.distributions.DiscreteUniformDistribution.single
+#: optuna.distributions.FloatDistribution.single
 msgid "返回类型"
-msgstr ""
-
-#: of optuna.distributions.BaseDistribution.to_external_repr
-#: optuna.distributions.BaseDistribution.to_internal_repr
-msgid "参数"
 msgstr ""
 
 #: of optuna.distributions.BaseDistribution.to_external_repr:3
@@ -145,3 +185,4 @@ msgstr "Optuna 对参数值的内部表示"
 #: optuna.distributions.BaseDistribution.to_internal_repr:3
 msgid "Optuna's external representation of a parameter value."
 msgstr "Optuna 对参数值的外部表示"
+

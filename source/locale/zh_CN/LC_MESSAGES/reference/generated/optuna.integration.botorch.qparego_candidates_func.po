@@ -26,19 +26,22 @@ msgid ""
 "Quasi MC-based extended ParEGO (qParEGO) for constrained multi-objective "
 "optimization."
 msgstr ""
+#  This one is left empty as it's an algorithm name
 
 #: of optuna.integration.botorch.qparego_candidates_func:3
 msgid ""
 "The default value of ``candidates_func`` in "
 ":class:`~optuna.integration.BoTorchSampler` with multi-objective "
 "optimization when the number of objectives is larger than three."
-msgstr ""
+msgstr "当多目标优化的目标值的个数大于3时, 这是 :class:`~optuna.integration.BoTorchSampler` "
+"中 ``candidates_func`` 的默认值."
+
 
 #: of optuna.integration.botorch.qparego_candidates_func:7
 msgid ""
 ":func:`~optuna.integration.botorch.qei_candidates_func` for argument and "
 "return value descriptions."
-msgstr ""
+msgstr ":func:`~optuna.integration.botorch.qei_candidates_func` 作为参数并且返回值描述."
 
 #: of optuna.integration.botorch.qparego_candidates_func:11
 msgid ""
@@ -46,6 +49,8 @@ msgid ""
 "newer versions without prior notice. See "
 "https://github.com/optuna/optuna/releases/tag/v2.4.0."
 msgstr ""
+"在 v2.4.0 中作为试验性特性引入, 该接口可能在更新的版本中在没有提前告知的情况下改变, 参见 "
+"https://github.com/optuna/optuna/releases/tag/v2.4.0."
 
 #: of optuna.integration.botorch.qparego_candidates_func
 msgid "参数"

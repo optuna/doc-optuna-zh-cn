@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 2.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-06 18:29-0400\n"
+"POT-Creation-Date: 2022-02-17 18:33-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -105,12 +105,7 @@ msgid ""
 "parallelization using :obj:`threading` and may suffer from         "
 "`Python's GIL <https://wiki.python.org/moin/GlobalInterpreterLock>`_."
 "         It is recommended to use :ref:`process-based "
-"parallelization<distributed>`         if ``func`` is CPU bound.      .. "
-"warning::         Deprecated in v2.7.0. This feature will be removed in "
-"the future.         It is recommended to use :ref:`process-based "
-"parallelization<distributed>`.         The removal of this feature is "
-"currently scheduled for v4.0.0, but this         schedule is subject to "
-"change.         See https://github.com/optuna/optuna/releases/tag/v2.7.0."
+"parallelization<distributed>`         if ``func`` is CPU bound."
 msgstr ""
 
 #: of optuna.integration.sklearn.OptunaSearchCV:27
@@ -128,16 +123,7 @@ msgid ""
 "CPU bound."
 msgstr ""
 
-#: of optuna.integration.sklearn.OptunaSearchCV:37
-msgid ""
-"Deprecated in v2.7.0. This feature will be removed in the future. It is "
-"recommended to use :ref:`process-based parallelization<distributed>`. The"
-" removal of this feature is currently scheduled for v4.0.0, but this "
-"schedule is subject to change. See "
-"https://github.com/optuna/optuna/releases/tag/v2.7.0."
-msgstr ""
-
-#: of optuna.integration.sklearn.OptunaSearchCV:42
+#: of optuna.integration.sklearn.OptunaSearchCV:35
 msgid ""
 "Number of trials. If :obj:`None`, there is no limitation on the number of"
 " trials. If :obj:`timeout` is also set to :obj:`None`, the study "
@@ -145,7 +131,7 @@ msgid ""
 " Ctrl+C or SIGTERM. This trades off runtime vs quality of the solution."
 msgstr ""
 
-#: of optuna.integration.sklearn.OptunaSearchCV:47
+#: of optuna.integration.sklearn.OptunaSearchCV:40
 msgid ""
 "Seed of the pseudo random number generator. If int, this is the seed used"
 " by the random number generator. If ``numpy.random.RandomState`` object, "
@@ -153,14 +139,14 @@ msgid ""
 "state from ``numpy.random`` is used."
 msgstr ""
 
-#: of optuna.integration.sklearn.OptunaSearchCV:52
+#: of optuna.integration.sklearn.OptunaSearchCV:45
 msgid ""
 "If :obj:`True`, refit the estimator with the best found hyperparameters. "
 "The refitted estimator is made available at the ``best_estimator_`` "
 "attribute and permits using ``predict`` directly."
 msgstr ""
 
-#: of optuna.integration.sklearn.OptunaSearchCV:56
+#: of optuna.integration.sklearn.OptunaSearchCV:49
 msgid ""
 "If :obj:`True`, training scores will be included. Computing training "
 "scores is used to get insights on how different hyperparameter settings "
@@ -170,38 +156,38 @@ msgid ""
 "performance."
 msgstr ""
 
-#: of optuna.integration.sklearn.OptunaSearchCV:63
+#: of optuna.integration.sklearn.OptunaSearchCV:56
 msgid ""
 "String or callable to evaluate the predictions on the validation data. If"
 " :obj:`None`, ``score`` on the estimator is used."
 msgstr ""
 
-#: of optuna.integration.sklearn.OptunaSearchCV:65
+#: of optuna.integration.sklearn.OptunaSearchCV:58
 msgid ""
 "Study corresponds to the optimization task. If :obj:`None`, a new study "
 "is created."
 msgstr ""
 
-#: of optuna.integration.sklearn.OptunaSearchCV:67
+#: of optuna.integration.sklearn.OptunaSearchCV:60
 msgid ""
 "Proportion of samples that are used during hyperparameter search.  - If "
 "int, then draw ``subsample`` samples. - If float, then draw ``subsample``"
 " * ``X.shape[0]`` samples."
 msgstr ""
 
-#: of optuna.integration.sklearn.OptunaSearchCV:67
+#: of optuna.integration.sklearn.OptunaSearchCV:60
 msgid "Proportion of samples that are used during hyperparameter search."
 msgstr ""
 
-#: of optuna.integration.sklearn.OptunaSearchCV:69
+#: of optuna.integration.sklearn.OptunaSearchCV:62
 msgid "If int, then draw ``subsample`` samples."
 msgstr ""
 
-#: of optuna.integration.sklearn.OptunaSearchCV:70
+#: of optuna.integration.sklearn.OptunaSearchCV:63
 msgid "If float, then draw ``subsample`` * ``X.shape[0]`` samples."
 msgstr ""
 
-#: of optuna.integration.sklearn.OptunaSearchCV:71
+#: of optuna.integration.sklearn.OptunaSearchCV:64
 msgid ""
 "Time limit in seconds for the search of appropriate models. If "
 ":obj:`None`, the study is executed without time limitation. If "
@@ -210,43 +196,51 @@ msgid ""
 " This trades off runtime vs quality of the solution."
 msgstr ""
 
-#: of optuna.integration.sklearn.OptunaSearchCV:77
+#: of optuna.integration.sklearn.OptunaSearchCV:70
 msgid "Verbosity level. The higher, the more messages."
 msgstr ""
 
-#: of optuna.integration.sklearn.OptunaSearchCV:81
+#: of optuna.integration.sklearn.OptunaSearchCV:74
 msgid ""
 "Estimator that was chosen by the search. This is present only if "
 "``refit`` is set to :obj:`True`."
 msgstr ""
 
-#: of optuna.integration.sklearn.OptunaSearchCV:86
+#: of optuna.integration.sklearn.OptunaSearchCV:79
 msgid "Number of cross-validation splits."
 msgstr ""
 
-#: of optuna.integration.sklearn.OptunaSearchCV:90
+#: of optuna.integration.sklearn.OptunaSearchCV:83
 msgid ""
 "Time for refitting the best estimator. This is present only if ``refit`` "
 "is set to :obj:`True`."
 msgstr ""
 
-#: of optuna.integration.sklearn.OptunaSearchCV:95
+#: of optuna.integration.sklearn.OptunaSearchCV:88
 msgid "Indices of samples that are used during hyperparameter search."
 msgstr ""
 
-#: of optuna.integration.sklearn.OptunaSearchCV:99
+#: of optuna.integration.sklearn.OptunaSearchCV:92
 msgid "Scorer function."
 msgstr ""
 
-#: of optuna.integration.sklearn.OptunaSearchCV:103
+#: of optuna.integration.sklearn.OptunaSearchCV:96
 msgid "Actual study."
 msgstr ""
 
-#: of optuna.integration.sklearn.OptunaSearchCV:106
+#: of optuna.integration.sklearn.OptunaSearchCV:99
 msgid "实际案例"
 msgstr ""
 
-#: of optuna.integration.sklearn.OptunaSearchCV:121
+#: of optuna.integration.sklearn.OptunaSearchCV:114
+msgid ""
+"By following the scikit-learn convention for scorers, the direction of "
+"optimization is ``maximize``. See https://scikit-"
+"learn.org/stable/modules/model_evaluation.html. For the minimization "
+"problem, please multiply ``-1``."
+msgstr ""
+
+#: of optuna.integration.sklearn.OptunaSearchCV:119
 msgid ""
 "Added in v0.17.0 as an experimental feature. The interface may change in "
 "newer versions without prior notice. See "
@@ -578,5 +572,38 @@ msgid ""
 msgstr ""
 
 #~ msgid "Number of parallel jobs. :obj:`-1` means using all processors."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Number of :obj:`threading` based parallel "
+#~ "jobs. :obj:`-1` means using the number"
+#~ " is set to CPU count.      .. "
+#~ "note::         ``n_jobs`` allows parallelization "
+#~ "using :obj:`threading` and may suffer "
+#~ "from         `Python's GIL "
+#~ "<https://wiki.python.org/moin/GlobalInterpreterLock>`_.         "
+#~ "It is recommended to use :ref"
+#~ ":`process-based parallelization<distributed>`         "
+#~ "if ``func`` is CPU bound.      .. "
+#~ "warning::         Deprecated in v2.7.0. This"
+#~ " feature will be removed in the "
+#~ "future.         It is recommended to use"
+#~ " :ref:`process-based parallelization<distributed>`."
+#~ "         The removal of this feature "
+#~ "is currently scheduled for v4.0.0, but"
+#~ " this         schedule is subject to "
+#~ "change.         See "
+#~ "https://github.com/optuna/optuna/releases/tag/v2.7.0."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Deprecated in v2.7.0. This feature will"
+#~ " be removed in the future. It "
+#~ "is recommended to use :ref:`process-"
+#~ "based parallelization<distributed>`. The removal "
+#~ "of this feature is currently scheduled"
+#~ " for v4.0.0, but this schedule is "
+#~ "subject to change. See "
+#~ "https://github.com/optuna/optuna/releases/tag/v2.7.0."
 #~ msgstr ""
 

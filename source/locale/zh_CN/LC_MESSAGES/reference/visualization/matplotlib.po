@@ -23,7 +23,7 @@ msgstr ""
 
 #: ../../source/reference/visualization/matplotlib.rst:7
 msgid "The following functions use Matplotlib as a backend."
-msgstr ""
+msgstr "下列函数采用 Matplotlib 作为后端."
 
 #: ../../source/reference/visualization/matplotlib.rst:21:<autosummary>:1
 msgid ""

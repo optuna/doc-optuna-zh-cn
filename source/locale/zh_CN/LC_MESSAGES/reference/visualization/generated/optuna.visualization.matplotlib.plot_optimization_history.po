@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 2.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-20 13:35-0400\n"
+"POT-Creation-Date: 2022-02-17 18:33-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -44,19 +44,29 @@ msgid "The following code snippet shows how to plot optimization history."
 msgstr "下面的代码片段展示了如何绘制优化历史记录. "
 
 #: of
+#: optuna.visualization.matplotlib._optimization_history.plot_optimization_history:29
+msgid ""
+"You need to adjust the size of the plot by yourself using "
+"``plt.tight_layout()`` or ``plt.savefig(IMAGE_NAME, "
+"bbox_inches='tight')``."
+msgstr ""
+
+#: of
 #: optuna.visualization.matplotlib._optimization_history.plot_optimization_history
 msgid "参数"
 msgstr ""
 
 #: of
-#: optuna.visualization.matplotlib._optimization_history.plot_optimization_history:26
+#: optuna.visualization.matplotlib._optimization_history.plot_optimization_history:32
+#, fuzzy
 msgid ""
 "A :class:`~optuna.study.Study` object whose trials are plotted for their "
-"target values."
+"target values. You can pass multiple studies if you want to compare those"
+" optimization histories."
 msgstr "其 trial 的目标值被绘制的 :class:`~optuna.study.Study` 对象."
 
 #: of
-#: optuna.visualization.matplotlib._optimization_history.plot_optimization_history:27
+#: optuna.visualization.matplotlib._optimization_history.plot_optimization_history:34
 msgid ""
 "A function to specify the value to display. If it is :obj:`None` and "
 "``study`` is being used for single-objective optimization, the objective "
@@ -65,25 +75,29 @@ msgid ""
 msgstr ""
 
 #: of
-#: optuna.visualization.matplotlib._optimization_history.plot_optimization_history:27
+#: optuna.visualization.matplotlib._optimization_history.plot_optimization_history:34
 msgid ""
 "A function to specify the value to display. If it is :obj:`None` and "
 "``study`` is being used for single-objective optimization, the objective "
 "values are plotted."
-msgstr "用于指定绘制的值的函数. 如果其为 :obj:`None` 且 ``study`` 是单目标优化 study, "
-"则将绘制目标函数值."
+msgstr "用于指定绘制的值的函数. 如果其为 :obj:`None` 且 ``study`` 是单目标优化 study, 则将绘制目标函数值."
 
 #: of
-#: optuna.visualization.matplotlib._optimization_history.plot_optimization_history:31
+#: optuna.visualization.matplotlib._optimization_history.plot_optimization_history:38
 msgid ""
 "Specify this argument if ``study`` is being used for multi-objective "
 "optimization."
 msgstr "如果 ``study`` 是多目标优化的话, 则需要指定该参数."
 
 #: of
-#: optuna.visualization.matplotlib._optimization_history.plot_optimization_history:32
+#: optuna.visualization.matplotlib._optimization_history.plot_optimization_history:39
 msgid "Target's name to display on the axis label and the legend."
 msgstr "在坐标轴和标签上展示的目标名称."
+
+#: of
+#: optuna.visualization.matplotlib._optimization_history.plot_optimization_history:40
+msgid "A flag to show the error bar."
+msgstr ""
 
 #: of
 #: optuna.visualization.matplotlib._optimization_history.plot_optimization_history
@@ -91,7 +105,7 @@ msgid "返回"
 msgstr ""
 
 #: of
-#: optuna.visualization.matplotlib._optimization_history.plot_optimization_history:34
+#: optuna.visualization.matplotlib._optimization_history.plot_optimization_history:42
 msgid "A :class:`matplotlib.axes.Axes` object."
 msgstr ""
 
@@ -101,7 +115,7 @@ msgid "引发"
 msgstr ""
 
 #: of
-#: optuna.visualization.matplotlib._optimization_history.plot_optimization_history:36
+#: optuna.visualization.matplotlib._optimization_history.plot_optimization_history:44
 msgid ""
 "If ``target`` is :obj:`None` and ``study`` is being used for multi-"
 "objective     optimization."
@@ -113,11 +127,12 @@ msgid "返回类型"
 msgstr ""
 
 #: of
-#: optuna.visualization.matplotlib._optimization_history.plot_optimization_history:39
+#: optuna.visualization.matplotlib._optimization_history.plot_optimization_history:47
 msgid ""
 "Added in v2.2.0 as an experimental feature. The interface may change in "
 "newer versions without prior notice. See "
 "https://github.com/optuna/optuna/releases/tag/v2.2.0."
-msgstr "在 2.2.0 版本中作为试验性特征引入, 之后该接口可能在没有提前预告的情况下改变. 参考 "
+msgstr ""
+"在 2.2.0 版本中作为试验性特征引入, 之后该接口可能在没有提前预告的情况下改变. 参考 "
 "https://github.com/optuna/optuna/releases/tag/v2.2.0."
 

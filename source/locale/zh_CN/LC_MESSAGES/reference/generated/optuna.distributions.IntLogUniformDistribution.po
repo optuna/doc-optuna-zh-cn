@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 2.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-20 13:35-0400\n"
+"POT-Creation-Date: 2022-02-17 18:33-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -29,8 +29,9 @@ msgstr ""
 msgid ""
 "This object is instantiated by :func:`~optuna.trial.Trial.suggest_int`, "
 "and passed to :mod:`~optuna.samplers` in general."
-msgstr "一般情况下, 该对象由 :func:`~optuna.trial.Trial.suggest_int` "
-"进行实例化, 然后被传递到 :mod:`~optuna.samplers`."
+msgstr ""
+"一般情况下, 该对象由 :func:`~optuna.trial.Trial.suggest_int` 进行实例化, 然后被传递到 "
+":mod:`~optuna.samplers`."
 
 #: of optuna.distributions.IntLogUniformDistribution:8
 msgid ""
@@ -53,8 +54,9 @@ msgid ""
 "Deprecated in v2.0.0. ``step`` argument will be removed in the future. "
 "The removal of this feature is currently scheduled for v4.0.0, but this "
 "schedule is subject to change."
-msgstr "在 v2.0.0 中被废弃. 在未来, ``step``  将会被移除. "
-"目前, 这个特性的移除计划在 v4.0.0 中发生, 但是该计划可能会有改变."
+msgstr ""
+"在 v2.0.0 中被废弃. 在未来, ``step``  将会被移除. 目前, 这个特性的移除计划在 v4.0.0 中发生, "
+"但是该计划可能会有改变."
 
 #: of optuna.distributions.IntLogUniformDistribution:23
 msgid ""
@@ -62,8 +64,9 @@ msgid ""
 " ignore this value and assume that ``step`` is always 1. User-defined "
 "samplers may continue to use other values besides 1 during the "
 "deprecation."
-msgstr "Optuna 中的 sampler 和其他依赖这个分布的组件将会忽略这个值并假定 ``step`` 永远为1. "
-"在被废弃之前, 用户定义的 sampler 可使用 1 之外的其他值."
+msgstr ""
+"Optuna 中的 sampler 和其他依赖这个分布的组件将会忽略这个值并假定 ``step`` 永远为1. 在被废弃之前, 用户定义的 "
+"sampler 可使用 1 之外的其他值."
 
 #: of optuna.distributions.IntLogUniformDistribution
 msgid "引发"
@@ -75,87 +78,97 @@ msgid ""
 "smaller than 1."
 msgstr "如果 ``low`` 的值比 ``high`` 大, 或者 ``low`` 小于 1 的话."
 
+#: of optuna.distributions.IntLogUniformDistribution:31
+msgid ""
+"Deprecated in v3.0.0. This feature will be removed in the future. The "
+"removal of this feature is currently scheduled for v6.0.0, but this "
+"schedule is subject to change. See "
+"https://github.com/optuna/optuna/releases/tag/v3.0.0."
+msgstr ""
+
+#: of optuna.distributions.IntLogUniformDistribution:36
+msgid "Use :class:`~optuna.distributions.IntDistribution` instead."
+msgstr ""
+
 #: ../../source/reference/generated/optuna.distributions.IntLogUniformDistribution.rst:12
 msgid "Methods"
 msgstr ""
 
-#: ../../source/reference/generated/optuna.distributions.IntLogUniformDistribution.rst:23:<autosummary>:1
+#: of optuna.distributions.IntDistribution.single:1:<autosummary>:1
 msgid ""
 ":obj:`single <optuna.distributions.IntLogUniformDistribution.single>`\\ "
 "\\(\\)"
 msgstr ""
 
-#: ../../source/reference/generated/optuna.distributions.IntLogUniformDistribution.rst:23:<autosummary>:1
-#: of optuna.distributions.IntLogUniformDistribution.single:1
+#: of optuna.distributions.IntDistribution.single:1
+#: optuna.distributions.IntDistribution.single:1:<autosummary>:1
 msgid "Test whether the range of this distribution contains just a single value."
 msgstr "测试该分布是否仅包含单一值."
 
-#: ../../source/reference/generated/optuna.distributions.IntLogUniformDistribution.rst:23:<autosummary>:1
+#: of optuna.distributions.IntDistribution.single:1:<autosummary>:1
 msgid ""
 ":obj:`to_external_repr "
 "<optuna.distributions.IntLogUniformDistribution.to_external_repr>`\\ "
 "\\(param\\_value\\_in\\_internal\\_repr\\)"
 msgstr ""
 
-#: ../../source/reference/generated/optuna.distributions.IntLogUniformDistribution.rst:23:<autosummary>:1
-#: of optuna.distributions.IntLogUniformDistribution.to_external_repr:1
+#: of optuna.distributions.IntDistribution.single:1:<autosummary>:1
+#: optuna.distributions.IntDistribution.to_external_repr:1
 msgid ""
 "Convert internal representation of a parameter value into external "
 "representation."
 msgstr "将参数的内部表示转化为外部表示."
 
-#: ../../source/reference/generated/optuna.distributions.IntLogUniformDistribution.rst:23:<autosummary>:1
+#: of optuna.distributions.IntDistribution.single:1:<autosummary>:1
 msgid ""
 ":obj:`to_internal_repr "
 "<optuna.distributions.IntLogUniformDistribution.to_internal_repr>`\\ "
 "\\(param\\_value\\_in\\_external\\_repr\\)"
 msgstr ""
 
-#: ../../source/reference/generated/optuna.distributions.IntLogUniformDistribution.rst:23:<autosummary>:1
-#: of optuna.distributions.IntLogUniformDistribution.to_internal_repr:1
+#: of optuna.distributions.IntDistribution.single:1:<autosummary>:1
+#: optuna.distributions.IntDistribution.to_internal_repr:1
 msgid ""
 "Convert external representation of a parameter value into internal "
 "representation."
 msgstr "将参数的外部表示转化为内部表示."
 
-#: ../../source/reference/generated/optuna.distributions.IntLogUniformDistribution.rst:25
-msgid "Attributes"
-msgstr ""
-
-#: of optuna.distributions.IntLogUniformDistribution.single:1:<autosummary>:1
-msgid ":obj:`step <optuna.distributions.IntLogUniformDistribution.step>`\\"
-msgstr ""
-
-#: of optuna.distributions.IntLogUniformDistribution.single
-#: optuna.distributions.IntLogUniformDistribution.to_external_repr
-#: optuna.distributions.IntLogUniformDistribution.to_internal_repr
+#: of optuna.distributions.IntDistribution.single
+#: optuna.distributions.IntDistribution.to_external_repr
+#: optuna.distributions.IntDistribution.to_internal_repr
 msgid "返回"
 msgstr ""
 
-#: of optuna.distributions.IntLogUniformDistribution.single:3
+#: of optuna.distributions.IntDistribution.single:3
 msgid ""
 ":obj:`True` if the range of this distribution contains just a single "
 "value, otherwise :obj:`False`."
 msgstr ""
 
-#: of optuna.distributions.IntLogUniformDistribution.single
-#: optuna.distributions.IntLogUniformDistribution.to_external_repr
-#: optuna.distributions.IntLogUniformDistribution.to_internal_repr
+#: of optuna.distributions.IntDistribution.single
+#: optuna.distributions.IntDistribution.to_external_repr
+#: optuna.distributions.IntDistribution.to_internal_repr
 msgid "返回类型"
 msgstr ""
 
-#: of optuna.distributions.IntLogUniformDistribution.to_external_repr
-#: optuna.distributions.IntLogUniformDistribution.to_internal_repr
+#: of optuna.distributions.IntDistribution.to_external_repr
+#: optuna.distributions.IntDistribution.to_internal_repr
 msgid "参数"
 msgstr ""
 
-#: of optuna.distributions.IntLogUniformDistribution.to_external_repr:3
-#: optuna.distributions.IntLogUniformDistribution.to_internal_repr:5
+#: of optuna.distributions.IntDistribution.to_external_repr:3
+#: optuna.distributions.IntDistribution.to_internal_repr:5
 msgid "Optuna's internal representation of a parameter value."
 msgstr "Optuna 对参数值的内部表示"
 
-#: of optuna.distributions.IntLogUniformDistribution.to_external_repr:5
-#: optuna.distributions.IntLogUniformDistribution.to_internal_repr:3
+#: of optuna.distributions.IntDistribution.to_external_repr:5
+#: optuna.distributions.IntDistribution.to_internal_repr:3
 msgid "Optuna's external representation of a parameter value."
 msgstr "Optuna 对参数值的外部表示"
+
+#~ msgid "Attributes"
+#~ msgstr ""
+
+#~ msgid ":obj:`step <optuna.distributions.IntLogUniformDistribution.step>`\\"
+#~ msgstr ""
 

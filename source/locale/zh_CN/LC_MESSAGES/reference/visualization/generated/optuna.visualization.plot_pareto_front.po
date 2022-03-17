@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 2.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-20 13:35-0400\n"
+"POT-Creation-Date: 2022-02-17 18:33-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -59,11 +59,43 @@ msgid ""
 " default order is used."
 msgstr "指定座标轴顺序的索引列表, 如果设置为 :obj:`None`, 则采用默认顺序."
 
+#: of optuna.visualization._pareto_front.plot_pareto_front:34
+msgid ""
+"An optional function that computes the objective constraints. It must "
+"take a :class:`~optuna.trial.FrozenTrial` and return the constraints. The"
+" return value must be a sequence of :obj:`float` s. A value strictly "
+"larger than 0 means that a constraint is violated. A value equal to or "
+"smaller than 0 is considered feasible. This specification is the same as "
+"in, for example, :class:`~optuna.integration.NSGAIISampler`.  If given, "
+"trials are classified into three categories: feasible and best, feasible "
+"but non-best, and infeasible. Categories are shown in different colors. "
+"Here, whether a trial is best (on Pareto front) or not is determined "
+"ignoring all infeasible trials."
+msgstr ""
+
+#: of optuna.visualization._pareto_front.plot_pareto_front:34
+msgid ""
+"An optional function that computes the objective constraints. It must "
+"take a :class:`~optuna.trial.FrozenTrial` and return the constraints. The"
+" return value must be a sequence of :obj:`float` s. A value strictly "
+"larger than 0 means that a constraint is violated. A value equal to or "
+"smaller than 0 is considered feasible. This specification is the same as "
+"in, for example, :class:`~optuna.integration.NSGAIISampler`."
+msgstr ""
+
+#: of optuna.visualization._pareto_front.plot_pareto_front:41
+msgid ""
+"If given, trials are classified into three categories: feasible and best,"
+" feasible but non-best, and infeasible. Categories are shown in different"
+" colors. Here, whether a trial is best (on Pareto front) or not is "
+"determined ignoring all infeasible trials."
+msgstr ""
+
 #: of optuna.visualization._pareto_front.plot_pareto_front
 msgid "返回"
 msgstr ""
 
-#: of optuna.visualization._pareto_front.plot_pareto_front:35
+#: of optuna.visualization._pareto_front.plot_pareto_front:45
 msgid "A :class:`plotly.graph_objs.Figure` object."
 msgstr ""
 
@@ -71,7 +103,7 @@ msgstr ""
 msgid "引发"
 msgstr ""
 
-#: of optuna.visualization._pareto_front.plot_pareto_front:37
+#: of optuna.visualization._pareto_front.plot_pareto_front:47
 msgid "If the number of objectives of ``study`` isn't 2 or 3."
 msgstr ""
 
@@ -79,7 +111,7 @@ msgstr ""
 msgid "返回类型"
 msgstr ""
 
-#: of optuna.visualization._pareto_front.plot_pareto_front:40
+#: of optuna.visualization._pareto_front.plot_pareto_front:50
 msgid ""
 "Added in v2.4.0 as an experimental feature. The interface may change in "
 "newer versions without prior notice. See "

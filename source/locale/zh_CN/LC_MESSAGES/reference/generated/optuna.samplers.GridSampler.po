@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 2.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-20 13:35-0400\n"
+"POT-Creation-Date: 2022-02-17 18:33-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -68,6 +68,13 @@ msgid ""
 "suggestions during distributed optimization."
 msgstr ""
 
+#: of optuna.samplers._grid.GridSampler:67
+msgid ""
+"All parameters must be specified when using "
+":class:`~optuna.samplers.GridSampler` with "
+":meth:`~optuna.study.Study.enqueue_trial`."
+msgstr ""
+
 #: of optuna.samplers._grid.GridSampler
 #: optuna.samplers._grid.GridSampler.after_trial
 #: optuna.samplers._grid.GridSampler.infer_relative_search_space
@@ -76,7 +83,7 @@ msgstr ""
 msgid "参数"
 msgstr ""
 
-#: of optuna.samplers._grid.GridSampler:65
+#: of optuna.samplers._grid.GridSampler:70
 msgid ""
 "A dictionary whose key and value are a parameter name and the "
 "corresponding candidates of values, respectively."

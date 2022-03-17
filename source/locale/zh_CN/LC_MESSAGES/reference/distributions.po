@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 1.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-26 14:44-0400\n"
+"POT-Creation-Date: 2022-02-17 18:33-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -31,106 +31,129 @@ msgid ""
 "specific parameters, such as the ``low`` and ``high`` endpoints for a "
 ":class:`~optuna.distributions.UniformDistribution`."
 msgstr ""
-":mod:`~optuna.distributions` 模块定义了代表各种概率分布的类, "
-"主要用于优化 trial 时进行初始超参数建议."
-"这些分布类继承自库内部的 "
-":class:`~optuna.distributions.BaseDistribution`, 并且以特定的参数被初始化, "
-"比如对 :class:`~optuna.distributions.UniformDistribution` 来说是 ``low`` 和 ``high`` 端点."
+":mod:`~optuna.distributions` 模块定义了代表各种概率分布的类, 主要用于优化 trial "
+"时进行初始超参数建议.这些分布类继承自库内部的 :class:`~optuna.distributions.BaseDistribution`, "
+"并且以特定的参数被初始化, 比如对 :class:`~optuna.distributions.UniformDistribution` 来说是 "
+"``low`` 和 ``high`` 端点."
 
 #: ../../source/reference/distributions.rst:8
 msgid ""
 "Optuna users should not use distribution classes directly, but instead "
 "use utility functions provided by :class:`~optuna.trial.Trial` such as "
 ":meth:`~optuna.trial.Trial.suggest_int`."
-msgstr "Optuna用户不应该直接使用分布类, 而应该使用 :class:`~optuna.trial.Trial` 提供的实用函数, 如 :meth:`~optuna.trial.Trial.suggest_int`."
+msgstr ""
+"Optuna用户不应该直接使用分布类, 而应该使用 :class:`~optuna.trial.Trial` 提供的实用函数, 如 "
+":meth:`~optuna.trial.Trial.suggest_int`."
 
-#: ../../source/reference/distributions.rst:22:<autosummary>:1
+#: ../../source/reference/distributions.rst:24:<autosummary>:1
+msgid ""
+":obj:`optuna.distributions.FloatDistribution "
+"<optuna.distributions.FloatDistribution>`"
+msgstr ""
+
+#: ../../source/reference/distributions.rst:24:<autosummary>:1
+#, fuzzy
+msgid "A distribution on floats."
+msgstr "将分布序列化成json格式. "
+
+#: ../../source/reference/distributions.rst:24:<autosummary>:1
+msgid ""
+":obj:`optuna.distributions.IntDistribution "
+"<optuna.distributions.IntDistribution>`"
+msgstr ""
+
+#: ../../source/reference/distributions.rst:24:<autosummary>:1
+#, fuzzy
+msgid "A distribution on integers."
+msgstr "整数上的均匀分布. "
+
+#: ../../source/reference/distributions.rst:24:<autosummary>:1
 msgid ""
 ":obj:`optuna.distributions.UniformDistribution "
 "<optuna.distributions.UniformDistribution>`"
 msgstr ""
 
-#: ../../source/reference/distributions.rst:22:<autosummary>:1
+#: ../../source/reference/distributions.rst:24:<autosummary>:1
 msgid "A uniform distribution in the linear domain."
 msgstr "线性域的均匀分布. "
 
-#: ../../source/reference/distributions.rst:22:<autosummary>:1
+#: ../../source/reference/distributions.rst:24:<autosummary>:1
 msgid ""
 ":obj:`optuna.distributions.LogUniformDistribution "
 "<optuna.distributions.LogUniformDistribution>`"
 msgstr ""
 
-#: ../../source/reference/distributions.rst:22:<autosummary>:1
+#: ../../source/reference/distributions.rst:24:<autosummary>:1
 msgid "A uniform distribution in the log domain."
 msgstr "Log 均匀分布. "
 
-#: ../../source/reference/distributions.rst:22:<autosummary>:1
+#: ../../source/reference/distributions.rst:24:<autosummary>:1
 msgid ""
 ":obj:`optuna.distributions.DiscreteUniformDistribution "
 "<optuna.distributions.DiscreteUniformDistribution>`"
 msgstr ""
 
-#: ../../source/reference/distributions.rst:22:<autosummary>:1
+#: ../../source/reference/distributions.rst:24:<autosummary>:1
 msgid "A discretized uniform distribution in the linear domain."
 msgstr "线性离散均匀分布. "
 
-#: ../../source/reference/distributions.rst:22:<autosummary>:1
+#: ../../source/reference/distributions.rst:24:<autosummary>:1
 msgid ""
 ":obj:`optuna.distributions.IntUniformDistribution "
 "<optuna.distributions.IntUniformDistribution>`"
 msgstr ""
 
-#: ../../source/reference/distributions.rst:22:<autosummary>:1
+#: ../../source/reference/distributions.rst:24:<autosummary>:1
 msgid "A uniform distribution on integers."
 msgstr "整数上的均匀分布. "
 
-#: ../../source/reference/distributions.rst:22:<autosummary>:1
+#: ../../source/reference/distributions.rst:24:<autosummary>:1
 msgid ""
 ":obj:`optuna.distributions.IntLogUniformDistribution "
 "<optuna.distributions.IntLogUniformDistribution>`"
 msgstr ""
 
-#: ../../source/reference/distributions.rst:22:<autosummary>:1
+#: ../../source/reference/distributions.rst:24:<autosummary>:1
 msgid "A uniform distribution on integers in the log domain."
 msgstr "Log 操作后的整数均匀分布. "
 
-#: ../../source/reference/distributions.rst:22:<autosummary>:1
+#: ../../source/reference/distributions.rst:24:<autosummary>:1
 msgid ""
 ":obj:`optuna.distributions.CategoricalDistribution "
 "<optuna.distributions.CategoricalDistribution>`"
 msgstr ""
 
-#: ../../source/reference/distributions.rst:22:<autosummary>:1
+#: ../../source/reference/distributions.rst:24:<autosummary>:1
 msgid "A categorical distribution."
 msgstr "分类分布. "
 
-#: ../../source/reference/distributions.rst:22:<autosummary>:1
+#: ../../source/reference/distributions.rst:24:<autosummary>:1
 msgid ""
 ":obj:`optuna.distributions.distribution_to_json "
 "<optuna.distributions.distribution_to_json>`"
 msgstr ""
 
-#: ../../source/reference/distributions.rst:22:<autosummary>:1
+#: ../../source/reference/distributions.rst:24:<autosummary>:1
 msgid "Serialize a distribution to JSON format."
 msgstr "将分布序列化成json格式. "
 
-#: ../../source/reference/distributions.rst:22:<autosummary>:1
+#: ../../source/reference/distributions.rst:24:<autosummary>:1
 msgid ""
 ":obj:`optuna.distributions.json_to_distribution "
 "<optuna.distributions.json_to_distribution>`"
 msgstr ""
 
-#: ../../source/reference/distributions.rst:22:<autosummary>:1
+#: ../../source/reference/distributions.rst:24:<autosummary>:1
 msgid "Deserialize a distribution in JSON format."
 msgstr "将 JSON 格式的分布反序列化. "
 
-#: ../../source/reference/distributions.rst:22:<autosummary>:1
+#: ../../source/reference/distributions.rst:24:<autosummary>:1
 msgid ""
 ":obj:`optuna.distributions.check_distribution_compatibility "
 "<optuna.distributions.check_distribution_compatibility>`"
 msgstr ""
 
-#: ../../source/reference/distributions.rst:22:<autosummary>:1
+#: ../../source/reference/distributions.rst:24:<autosummary>:1
 msgid "A function to check compatibility of two distributions."
 msgstr "检查两分布的兼容性. "
 
@@ -154,8 +177,8 @@ msgstr "检查两分布的兼容性. "
 #~ ":func:`~optuna.trial.Trial.suggest_uniform`, and passed"
 #~ " to :mod:`~optuna.samplers` in general."
 #~ msgstr ""
-#~ "一般情况下, 该对象由 :func:`~optuna.trial.Trial.suggest_uniform` "
-#~ "进行实例化, 然后被传递到 :mod:`~optuna.samplers`."
+#~ "一般情况下, 该对象由 :func:`~optuna.trial.Trial.suggest_uniform`"
+#~ " 进行实例化, 然后被传递到 :mod:`~optuna.samplers`."
 
 #~ msgid ""
 #~ "Lower endpoint of the range of the"
@@ -223,7 +246,8 @@ msgstr "检查两分布的兼容性. "
 #~ "如果区间 :math:`[\\mathsf{low}, \\mathsf{high}]` 不能被步数"
 #~ " :math:`q` 整除的话,  值 :math:`\\mathsf{high}` "
 #~ "会被替代成 :math:`k q + \\mathsf{low} \\lt"
-#~ " \\mathsf{high}` 的最大值, 其中 :math:`k` 是整数. "
+#~ " \\mathsf{high}` 的最大值, 其中 :math:`k` 是整数."
+#~ " "
 
 #~ msgid ""
 #~ "Upper endpoint of the range of the"

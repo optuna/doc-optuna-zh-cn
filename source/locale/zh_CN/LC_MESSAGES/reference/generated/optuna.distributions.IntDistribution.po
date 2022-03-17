@@ -1,0 +1,140 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018, Optuna Contributors.
+# This file is distributed under the same license as the Optuna package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Optuna 3.0.0a2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-02-17 18:33-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../source/reference/generated/optuna.distributions.IntDistribution.rst:2
+msgid "optuna.distributions.IntDistribution"
+msgstr ""
+
+#: of optuna.distributions.IntDistribution:1
+msgid "A distribution on integers."
+msgstr ""
+
+#: of optuna.distributions.IntDistribution:3
+msgid ""
+"This object is instantiated by :func:`~optuna.trial.Trial.suggest_int`, "
+"and passed to :mod:`~optuna.samplers` in general."
+msgstr ""
+
+#: of optuna.distributions.IntDistribution:8
+msgid ""
+"Lower endpoint of the range of the distribution. ``low`` is included in "
+"the range."
+msgstr ""
+
+#: of optuna.distributions.IntDistribution:12
+msgid ""
+"Upper endpoint of the range of the distribution. ``high`` is included in "
+"the range."
+msgstr ""
+
+#: of optuna.distributions.IntDistribution:16
+msgid "If ``log`` is :obj:`True`, this distribution is in log-scaled domain."
+msgstr ""
+
+#: of optuna.distributions.IntDistribution:20
+msgid ""
+"A discretization step. This parameter must be 1 when the parameter "
+"``log`` is :obj:`True`."
+msgstr ""
+
+#: of optuna.distributions.IntDistribution
+msgid "引发"
+msgstr ""
+
+#: of optuna.distributions.IntDistribution:23
+msgid ""
+"If ``low`` value is larger than ``high`` value.     If ``low`` value is "
+"less than 1 when ``log`` is :obj:`True`.     If ``step`` is not positive "
+"value.     If ``log`` is :obj:`True` and ``step``!= 1."
+msgstr ""
+
+#: ../../source/reference/generated/optuna.distributions.IntDistribution.rst:12
+msgid "Methods"
+msgstr ""
+
+#: of optuna.distributions.IntDistribution.single:1:<autosummary>:1
+msgid ":obj:`single <optuna.distributions.IntDistribution.single>`\\ \\(\\)"
+msgstr ""
+
+#: of optuna.distributions.IntDistribution.single:1
+#: optuna.distributions.IntDistribution.single:1:<autosummary>:1
+msgid "Test whether the range of this distribution contains just a single value."
+msgstr ""
+
+#: of optuna.distributions.IntDistribution.single:1:<autosummary>:1
+msgid ""
+":obj:`to_external_repr "
+"<optuna.distributions.IntDistribution.to_external_repr>`\\ "
+"\\(param\\_value\\_in\\_internal\\_repr\\)"
+msgstr ""
+
+#: of optuna.distributions.IntDistribution.single:1:<autosummary>:1
+#: optuna.distributions.IntDistribution.to_external_repr:1
+msgid ""
+"Convert internal representation of a parameter value into external "
+"representation."
+msgstr ""
+
+#: of optuna.distributions.IntDistribution.single:1:<autosummary>:1
+msgid ""
+":obj:`to_internal_repr "
+"<optuna.distributions.IntDistribution.to_internal_repr>`\\ "
+"\\(param\\_value\\_in\\_external\\_repr\\)"
+msgstr ""
+
+#: of optuna.distributions.IntDistribution.single:1:<autosummary>:1
+#: optuna.distributions.IntDistribution.to_internal_repr:1
+msgid ""
+"Convert external representation of a parameter value into internal "
+"representation."
+msgstr ""
+
+#: of optuna.distributions.IntDistribution.single
+#: optuna.distributions.IntDistribution.to_external_repr
+#: optuna.distributions.IntDistribution.to_internal_repr
+msgid "返回"
+msgstr ""
+
+#: of optuna.distributions.IntDistribution.single:3
+msgid ""
+":obj:`True` if the range of this distribution contains just a single "
+"value, otherwise :obj:`False`."
+msgstr ""
+
+#: of optuna.distributions.IntDistribution.single
+#: optuna.distributions.IntDistribution.to_external_repr
+#: optuna.distributions.IntDistribution.to_internal_repr
+msgid "返回类型"
+msgstr ""
+
+#: of optuna.distributions.IntDistribution.to_external_repr
+#: optuna.distributions.IntDistribution.to_internal_repr
+msgid "参数"
+msgstr ""
+
+#: of optuna.distributions.IntDistribution.to_external_repr:3
+#: optuna.distributions.IntDistribution.to_internal_repr:5
+msgid "Optuna's internal representation of a parameter value."
+msgstr ""
+
+#: of optuna.distributions.IntDistribution.to_external_repr:5
+#: optuna.distributions.IntDistribution.to_internal_repr:3
+msgid "Optuna's external representation of a parameter value."
+msgstr ""
+

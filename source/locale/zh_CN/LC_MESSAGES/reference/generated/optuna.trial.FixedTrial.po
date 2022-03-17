@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 2.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-14 18:04-0500\n"
+"POT-Creation-Date: 2022-02-17 18:33-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,11 +21,11 @@ msgstr ""
 msgid "optuna.trial.FixedTrial"
 msgstr ""
 
-#: of optuna.trial.FixedTrial:1
+#: of optuna.trial._fixed.FixedTrial:1
 msgid "A trial class which suggests a fixed value for each parameter."
 msgstr "为每个参数都提供固定值的 trial 类."
 
-#: of optuna.trial.FixedTrial:3
+#: of optuna.trial._fixed.FixedTrial:3
 msgid ""
 "This object has the same methods as :class:`~optuna.trial.Trial`, and it "
 "suggests pre-defined parameter values. The parameter values can be "
@@ -35,33 +35,37 @@ msgid ""
 ":class:`~optuna.study.Study`, and it is useful for deploying optimization"
 " results."
 msgstr ""
-"该对象有和 :class:`~optuna.trial.Trial` 一样的方法, 而且其提供预先定义好的参数值. 这些参数值可以"
-"在 :class:`~optuna.trial.FixedTrial` 的创建阶段指定. 和 :class:`~optuna.trial.Trial` 不同, "
-":class:`~optuna.trial.FixedTrial` 不依赖于 :class:`~optuna.study.Study`, 所以能被用于部署优化结果."
+"该对象有和 :class:`~optuna.trial.Trial` 一样的方法, 而且其提供预先定义好的参数值. 这些参数值可以在 "
+":class:`~optuna.trial.FixedTrial` 的创建阶段指定. 和 :class:`~optuna.trial.Trial`"
+" 不同, :class:`~optuna.trial.FixedTrial` 不依赖于 :class:`~optuna.study.Study`,"
+" 所以能被用于部署优化结果."
 
-#: of optuna.trial.FixedTrial:10
+#: of optuna.trial._fixed.FixedTrial:10
 msgid "示例"
 msgstr ""
 
-#: of optuna.trial.FixedTrial:11
+#: of optuna.trial._fixed.FixedTrial:11
 msgid "Evaluate an objective function with parameter values given by a user."
 msgstr "对用户提供的参数值进行目标函数求解."
 
-#: of optuna.trial.FixedTrial:27
+#: of optuna.trial._fixed.FixedTrial:27
 msgid ""
 "Please refer to :class:`~optuna.trial.Trial` for details of methods and "
 "properties."
 msgstr "方法和属性的细节请参考 :class:`~optuna.trial.Trial`."
 
-#: of optuna.trial.FixedTrial
+#: of optuna.trial._fixed.FixedTrial
+#: optuna.trial._fixed.FixedTrial.suggest_discrete_uniform
+#: optuna.trial._fixed.FixedTrial.suggest_loguniform
+#: optuna.trial._fixed.FixedTrial.suggest_uniform
 msgid "参数"
 msgstr ""
 
-#: of optuna.trial.FixedTrial:29
+#: of optuna.trial._fixed.FixedTrial:29
 msgid "A dictionary containing all parameters."
 msgstr "包含所有参数的字典."
 
-#: of optuna.trial.FixedTrial:30
+#: of optuna.trial._fixed.FixedTrial:30
 msgid "A trial number. Defaults to ``0``."
 msgstr "Trial 数, 默认为 ``0``."
 
@@ -130,27 +134,49 @@ msgstr ""
 msgid "Attributes"
 msgstr ""
 
-#: ../../source/reference/generated/optuna.trial.FixedTrial.rst:40:<autosummary>:1
+#: of optuna.trial._fixed.FixedTrial.suggest_discrete_uniform:1:<autosummary>:1
 msgid ":obj:`datetime_start <optuna.trial.FixedTrial.datetime_start>`\\"
 msgstr ""
 
-#: ../../source/reference/generated/optuna.trial.FixedTrial.rst:40:<autosummary>:1
+#: of optuna.trial._fixed.FixedTrial.suggest_discrete_uniform:1:<autosummary>:1
 msgid ":obj:`distributions <optuna.trial.FixedTrial.distributions>`\\"
 msgstr ""
 
-#: ../../source/reference/generated/optuna.trial.FixedTrial.rst:40:<autosummary>:1
+#: of optuna.trial._fixed.FixedTrial.suggest_discrete_uniform:1:<autosummary>:1
 msgid ":obj:`number <optuna.trial.FixedTrial.number>`\\"
 msgstr ""
 
-#: ../../source/reference/generated/optuna.trial.FixedTrial.rst:40:<autosummary>:1
+#: of optuna.trial._fixed.FixedTrial.suggest_discrete_uniform:1:<autosummary>:1
 msgid ":obj:`params <optuna.trial.FixedTrial.params>`\\"
 msgstr ""
 
-#: ../../source/reference/generated/optuna.trial.FixedTrial.rst:40:<autosummary>:1
+#: of optuna.trial._fixed.FixedTrial.suggest_discrete_uniform:1:<autosummary>:1
 msgid ":obj:`system_attrs <optuna.trial.FixedTrial.system_attrs>`\\"
 msgstr ""
 
-#: ../../source/reference/generated/optuna.trial.FixedTrial.rst:40:<autosummary>:1
+#: of optuna.trial._fixed.FixedTrial.suggest_discrete_uniform:1:<autosummary>:1
 msgid ":obj:`user_attrs <optuna.trial.FixedTrial.user_attrs>`\\"
+msgstr ""
+
+#: of optuna.trial._fixed.FixedTrial.suggest_discrete_uniform:2
+#: optuna.trial._fixed.FixedTrial.suggest_loguniform:2
+#: optuna.trial._fixed.FixedTrial.suggest_uniform:2
+msgid ""
+"Deprecated in v3.0.0. This feature will be removed in the future. The "
+"removal of this feature is currently scheduled for v6.0.0, but this "
+"schedule is subject to change. See "
+"https://github.com/optuna/optuna/releases/tag/v3.0.0."
+msgstr ""
+
+#: of optuna.trial._fixed.FixedTrial.suggest_discrete_uniform:7
+#: optuna.trial._fixed.FixedTrial.suggest_loguniform:7
+#: optuna.trial._fixed.FixedTrial.suggest_uniform:7
+msgid "Use :func:`~optuna.trial.FixedTrial.suggest_float` instead."
+msgstr ""
+
+#: of optuna.trial._fixed.FixedTrial.suggest_discrete_uniform
+#: optuna.trial._fixed.FixedTrial.suggest_loguniform
+#: optuna.trial._fixed.FixedTrial.suggest_uniform
+msgid "返回类型"
 msgstr ""
 

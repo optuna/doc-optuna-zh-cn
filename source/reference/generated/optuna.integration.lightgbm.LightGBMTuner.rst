@@ -33,7 +33,6 @@
 
    .. autosummary::
    
-      ~LightGBMTuner.best_booster
       ~LightGBMTuner.best_params
       ~LightGBMTuner.best_score
    

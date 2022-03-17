@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 1.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-15 09:48+0800\n"
+"POT-Creation-Date: 2022-02-17 18:33-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -31,8 +31,8 @@ msgid ""
 "with those. Please refer to `examples <https://github.com/optuna/optuna-"
 "examples/>`_."
 msgstr ""
-"Optuna 和绝大多数机器学习库兼容，并且很容易同他们配合使用。参见 `examples <https://github.com/optuna/optuna-"
-"examples/>`_."
+"Optuna 和绝大多数机器学习库兼容，并且很容易同他们配合使用。参见 `examples <https://github.com/optuna"
+"/optuna-examples/>`_."
 
 #: ../../source/faq.rst:17
 msgid "How to define objective functions that have own arguments?"
@@ -62,10 +62,9 @@ msgid ""
 "examples/tree/main/sklearn/sklearn_additional_args.py>`_ example, which "
 "reuses the dataset instead of loading it in each trial execution."
 msgstr ""
-"请参考 `sklearn_addtitional_args.py "
-"<https://github.com/optuna/optuna-"
-"examples/tree/main/sklearn/sklearn_additional_args.py>`_ "
-" ，在该例中，数据集被重复使用而无需在每次trial执行时重新加载。"
+"请参考 `sklearn_addtitional_args.py <https://github.com/optuna/optuna-"
+"examples/tree/main/sklearn/sklearn_additional_args.py>`_  "
+"，在该例中，数据集被重复使用而无需在每次trial执行时重新加载。"
 
 #: ../../source/faq.rst:71
 msgid "Can I use Optuna without remote RDB servers?"
@@ -94,8 +93,9 @@ msgid "How can I save and resume studies?"
 msgstr "如何保存和恢复 study？"
 
 #: ../../source/faq.rst:96
+#, fuzzy
 msgid ""
-"There are two ways of persisting studies, which depends if you are using "
+"There are two ways of persisting studies, which depend if you are using "
 "in-memory storage (default) or remote databases (RDB). In-memory studies "
 "can be saved and loaded like usual Python objects using ``pickle`` or "
 "``joblib``. For example, using ``joblib``:"
@@ -109,14 +109,19 @@ msgid "And to resume the study:"
 msgstr "恢复 study:"
 
 #: ../../source/faq.rst:117
-msgid "If you are using RDBs, see :ref:`rdb` for more details."
-msgstr "如果你用的是 RDB, 具体细节请参考 :ref:`rdb`."
+msgid ""
+"Note that Optuna does not support saving/reloading across different "
+"Optuna versions with ``pickle``. To save/reload a study across different "
+"Optuna versions, please use RDBs and `upgrade storage schema "
+"<reference/cli.html#storage-upgrade>`_ if necessary. If you are using "
+"RDBs, see :ref:`rdb` for more details."
+msgstr ""
 
-#: ../../source/faq.rst:120
+#: ../../source/faq.rst:123
 msgid "How to suppress log messages of Optuna?"
 msgstr "如何禁用 Optuna 的日志信息？"
 
-#: ../../source/faq.rst:122
+#: ../../source/faq.rst:125
 msgid ""
 "By default, Optuna shows log messages at the ``optuna.logging.INFO`` "
 "level. You can change logging levels by using  "
@@ -125,19 +130,19 @@ msgstr ""
 "默认情况下，Optuna 打印处于 ``optuna.logging.INFO`` 层级的日志信息。通过设置  "
 ":func:`optuna.logging.set_verbosity`, 你可以改变这个层级。"
 
-#: ../../source/faq.rst:125
+#: ../../source/faq.rst:128
 msgid "For instance, you can stop showing each trial result as follows:"
 msgstr "比如，下面的代码可以终止打印每一个trial的结果："
 
-#: ../../source/faq.rst:136
+#: ../../source/faq.rst:139
 msgid "Please refer to :class:`optuna.logging` for further details."
 msgstr "更多的细节请参考  :class:`optuna.logging`."
 
-#: ../../source/faq.rst:140
+#: ../../source/faq.rst:143
 msgid "How to save machine learning models trained in objective functions?"
 msgstr "如何在目标函数中保存训练好的机器学习模型？"
 
-#: ../../source/faq.rst:142
+#: ../../source/faq.rst:145
 msgid ""
 "Optuna saves hyperparameter values with its corresponding objective value"
 " to storage, but it discards intermediate objects such as machine "
@@ -147,7 +152,7 @@ msgstr ""
 "Optuna "
 "会保存超参数和对应的目标函数值，但是它不会存储诸如机器学习模型或者网络权重这样的中间数据。要保存模型或者权重的话，请利用你正在使用的机器学习库提供的对应功能。"
 
-#: ../../source/faq.rst:146
+#: ../../source/faq.rst:149
 msgid ""
 "We recommend saving :obj:`optuna.trial.Trial.number` with a model in "
 "order to identify its corresponding trial. For example, you can save SVM "
@@ -156,11 +161,11 @@ msgstr ""
 "在保存模型的时候，我们推荐将 :obj:`optuna.trial.Trial.number` 一同存储。这样易于之后确认对应的 "
 "trial.比如，你可以用以下方式在目标函数中保存训练好的 SVM 模型："
 
-#: ../../source/faq.rst:172
+#: ../../source/faq.rst:175
 msgid "How can I obtain reproducible optimization results?"
 msgstr "如何获得可复现的优化结果？"
 
-#: ../../source/faq.rst:174
+#: ../../source/faq.rst:177
 msgid ""
 "To make the parameters suggested by Optuna reproducible, you can specify "
 "a fixed random seed via ``seed`` argument of "
@@ -170,11 +175,11 @@ msgstr ""
 "要让 Optuna 生成的参数可复现的话，你可以通过设置 :class:`~optuna.samplers.RandomSampler` 或者 "
 ":class:`~optuna.samplers.TPESampler` 中的参数 ``seed`` 来指定一个固定的随机数种子："
 
-#: ../../source/faq.rst:182
+#: ../../source/faq.rst:185
 msgid "However, there are two caveats."
 msgstr "但是这么做的需要注意以下两点。"
 
-#: ../../source/faq.rst:184
+#: ../../source/faq.rst:187
 msgid ""
 "First, when optimizing a study in distributed or parallel mode, there is "
 "inherent non-determinism. Thus it is very difficult to reproduce the same"
@@ -185,7 +190,7 @@ msgstr ""
 "的优化过程本身是分布式的或者并行的，那么这个过程中存在着固有的不确定性。因此，在这种情况下我们很难复现出同样的结果。如果你想复现结果的话，我们建议用顺序执行的方式来优化你的"
 " study."
 
-#: ../../source/faq.rst:188
+#: ../../source/faq.rst:191
 msgid ""
 "Second, if your objective function behaves in a non-deterministic way "
 "(i.e., it does not return the same value even if the same parameters were"
@@ -195,11 +200,11 @@ msgid ""
 "it."
 msgstr "其次，如果你的目标函数的行为本身就是不确定的（也就是说，即使送入同样的参数，其返回值也不是唯一的），那么你就无法复现这个优化过程。要解决这个问题的话，请设置一个选项（比如随机数种子）来让你的优化目标的行为变成确定性的，前提是你用的机器学习库支持这一功能。"
 
-#: ../../source/faq.rst:193
+#: ../../source/faq.rst:196
 msgid "How are exceptions from trials handled?"
 msgstr "Trial 是如何处理抛出异常的？"
 
-#: ../../source/faq.rst:195
+#: ../../source/faq.rst:198
 msgid ""
 "Trials that raise exceptions without catching them will be treated as "
 "failures, i.e. with the :obj:`~optuna.trial.TrialState.FAIL` status."
@@ -207,7 +212,7 @@ msgstr ""
 "那些抛出异常却没有对应的捕获机制的 trial 会被视作失败的 trial, 也就是处于 "
 ":obj:`~optuna.trial.TrialState.FAIL` 状态的 trial."
 
-#: ../../source/faq.rst:197
+#: ../../source/faq.rst:200
 msgid ""
 "By default, all exceptions except :class:`~optuna.exceptions.TrialPruned`"
 " raised in objective functions are propagated to the caller of "
@@ -224,11 +229,11 @@ msgstr ""
 ":func:`~optuna.study.Study.optimize` 函数中的 ``catch`` "
 "参数来指定要捕获的异常类型。这样，此类异常就会在 study 内部被捕获，而不会继续向外层传递。"
 
-#: ../../source/faq.rst:203
+#: ../../source/faq.rst:206
 msgid "You can find the failed trials in log messages."
 msgstr "你可以在日志信息里找到失败的 trial."
 
-#: ../../source/faq.rst:210
+#: ../../source/faq.rst:213
 msgid ""
 "You can also find the failed trials by checking the trial states as "
 "follows:"
@@ -284,29 +289,29 @@ msgstr ""
 msgid "1269"
 msgstr ""
 
-#: ../../source/faq.rst:224
+#: ../../source/faq.rst:227
 msgid "The ``catch`` argument in :func:`~optuna.study.Study.optimize`."
 msgstr ""
 
-#: ../../source/faq.rst:228
+#: ../../source/faq.rst:231
 msgid "How are NaNs returned by trials handled?"
 msgstr "Trial 返回的 NaN 是如何处理的？"
 
-#: ../../source/faq.rst:230
+#: ../../source/faq.rst:233
 msgid ""
 "Trials that return :obj:`NaN` (``float('nan')``) are treated as failures,"
 " but they will not abort studies."
 msgstr "返回 :obj:`NaN` 的 trial 被视为失败的 trial, 但是它们并不会导致 study 被终止。"
 
-#: ../../source/faq.rst:232
+#: ../../source/faq.rst:235
 msgid "Trials which return :obj:`NaN` are shown as follows:"
 msgstr "这些返回  :obj:`NaN` 的 trial 在日志里长这样："
 
-#: ../../source/faq.rst:241
+#: ../../source/faq.rst:244
 msgid "What happens when I dynamically alter a search space?"
 msgstr "动态地改变搜索空间会导致怎样的结果？"
 
-#: ../../source/faq.rst:243
+#: ../../source/faq.rst:246
 msgid ""
 "Since parameters search spaces are specified in each call to the "
 "suggestion API, e.g. :func:`~optuna.trial.Trial.suggest_float` and "
@@ -319,17 +324,17 @@ msgstr ""
 " 和 :func:`~optuna.trial.Trial.suggest_int`) 的时候才会被确定，因此，即使在同一个 study "
 "中，我们也可以通过在不同 trial 里对不同的参数空间进行采样来实现对搜索范围的改变。参数空间改变之后的行为是由每个 sampler 来决定的。"
 
-#: ../../source/faq.rst:251
+#: ../../source/faq.rst:254
 msgid ""
 "Discussion about the TPE sampler. "
 "https://github.com/optuna/optuna/issues/822"
 msgstr "关于 TPE sampler 的 讨论：https://github.com/optuna/optuna/issues/822"
 
-#: ../../source/faq.rst:255
+#: ../../source/faq.rst:258
 msgid "How can I use two GPUs for evaluating two trials simultaneously?"
 msgstr "如何在两块 GPU 上同时跑两个 trial?"
 
-#: ../../source/faq.rst:257
+#: ../../source/faq.rst:260
 msgid ""
 "If your optimization target supports GPU (CUDA) acceleration and you want"
 " to specify which GPU is used, the easiest way is to set "
@@ -338,7 +343,7 @@ msgstr ""
 "如果你的优化目标支持 GPU (CUDA) 加速，你又想指定优化所用的 GPU 的话，设置 ``CUDA_VISIBLE_DEVICES`` "
 "环境变量可能是实现这一目标最轻松的方式了："
 
-#: ../../source/faq.rst:273
+#: ../../source/faq.rst:276
 msgid ""
 "Please refer to `CUDA C Programming Guide "
 "<https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#env-"
@@ -347,11 +352,11 @@ msgstr ""
 "更多细节见 `CUDA C Programming Guide <https://docs.nvidia.com/cuda/cuda-c"
 "-programming-guide/index.html#env-vars>`_."
 
-#: ../../source/faq.rst:277
+#: ../../source/faq.rst:280
 msgid "How can I test my objective functions?"
 msgstr "如何对目标函数进行测试？"
 
-#: ../../source/faq.rst:279
+#: ../../source/faq.rst:282
 msgid ""
 "When you test objective functions, you may prefer fixed parameter values "
 "to sampled ones. In that case, you can use "
@@ -365,17 +370,17 @@ msgstr ""
 "作为目标函数的输入参数。它会从一个给定的参数字典中送入固定的参数值。比如，针对函数 :math:`x + y`, 你可以用如下方式送入两个任意的 "
 ":math:`x` 和 :math:`y`:"
 
-#: ../../source/faq.rst:295
+#: ../../source/faq.rst:298
 msgid ""
 "Using :class:`~optuna.trial.FixedTrial`, you can write unit tests as "
 "follows:"
 msgstr "如果使用 :class:`~optuna.trial.FixedTrial` 的话，你也可以用如下方式写单元测试："
 
-#: ../../source/faq.rst:309
+#: ../../source/faq.rst:312
 msgid "How do I avoid running out of memory (OOM) when optimizing studies?"
 msgstr "在优化时, 我该如何避免耗尽内存 (running out of memory, OOM)?"
 
-#: ../../source/faq.rst:311
+#: ../../source/faq.rst:314
 msgid ""
 "If the memory footprint increases as you run more trials, try to "
 "periodically run the garbage collector. Specify ``gc_after_trial`` to "
@@ -386,7 +391,7 @@ msgstr ""
 ":func:`~optuna.study.Study.optimize` 时指定 ``gc_after_trial`` 为 :obj:`True`"
 " 或在回调函数中调用 :func:`gc.collect`."
 
-#: ../../source/faq.rst:328
+#: ../../source/faq.rst:331
 msgid ""
 "There is a performance trade-off for running the garbage collector, which"
 " could be non-negligible depending on how fast your objective function "
@@ -400,7 +405,7 @@ msgstr ""
 ":obj:`False`. 注意，上面这个例子类似于在目标函数内运行垃圾回收器，不同之处在于 :func:`gc.collect` 哪怕在出现包括"
 " :class:`~optuna.exceptions.TrialPruned` 这样的错误时也会被调用。"
 
-#: ../../source/faq.rst:333
+#: ../../source/faq.rst:336
 msgid ""
 ":class:`~optuna.integration.ChainerMNStudy` does currently not provide "
 "``gc_after_trial`` nor callbacks for "
@@ -412,24 +417,35 @@ msgstr ""
 " :func:`~optuna.integration.ChainerMNStudy.optimize` "
 "的回调接口。在使用该类时，你只能在目标函数内部调用垃圾回收器。"
 
-#: ../../source/faq.rst:337
+#: ../../source/faq.rst:340
 msgid "How can I output a log only when the best value is updated?"
 msgstr ""
 
-#: ../../source/faq.rst:339
+#: ../../source/faq.rst:342
+#, fuzzy
 msgid ""
-"Here's how to replace the logging feature of optuna and with your own "
-"logging callback function. The implemented callback can be passed to "
+"Here's how to replace the logging feature of optuna with your own logging"
+" callback function. The implemented callback can be passed to "
 ":func:`~optuna.study.Study.optimize`. Here's an example:"
-msgstr "这里展示了如何用你自己的日志回调函数替代 Optuna 的日志函数. 这个回调实现可以被传递到 :func:`~optuna.study.Study.optimize` 中, 以下是一个例子: "
+msgstr ""
+"这里展示了如何用你自己的日志回调函数替代 Optuna 的日志函数. 这个回调实现可以被传递到 "
+":func:`~optuna.study.Study.optimize` 中, 以下是一个例子: "
 
-#: ../../source/faq.rst:374
+#: ../../source/faq.rst:376
+msgid ""
+"Note that this callback may show incorrect values when you try to "
+"optimize an objective function with ``n_jobs!=1`` (or other forms of "
+"distributed optimization) due to its reads and writes to storage that are"
+" prone to race conditions."
+msgstr ""
+
+#: ../../source/faq.rst:380
 msgid ""
 "How do I suggest variables which represent the proportion, that is, are "
 "in accordance with Dirichlet distribution?"
 msgstr "我如何才能 suggest 代表比例的变量, 也就是那些遵循 Dirichlet 分布的变量?"
 
-#: ../../source/faq.rst:376
+#: ../../source/faq.rst:382
 msgid ""
 "When you want to suggest :math:`n` variables which represent the "
 "proportion, that is, :math:`p[0], p[1], ..., p[n-1]` which satisfy "
@@ -439,13 +455,12 @@ msgid ""
 "accordance with the flat `Dirichlet distribution "
 "<https://en.wikipedia.org/wiki/Dirichlet_distribution>`_."
 msgstr ""
-"当你试图 suggest :math:`n` 个代表比例的变量, 也就是 :math:`p[0], p[1], ..., p[n-1]` 且它们满足 "
-":math:`0 \\le p[k] \\le 1` for any :math:`k` and :math:`p[0] + p[1] + ..."
-" + p[n-1] = 1`, 请尝试下面的例子. 比如, 当进行损失函数插值时, 这些变量可以被用作权重. 这些变量遵循 "
-"`Dirichlet 分布 "
-"<https://en.wikipedia.org/wiki/Dirichlet_distribution>`_."
+"当你试图 suggest :math:`n` 个代表比例的变量, 也就是 :math:`p[0], p[1], ..., p[n-1]` "
+"且它们满足 :math:`0 \\le p[k] \\le 1` for any :math:`k` and :math:`p[0] + p[1]"
+" + ... + p[n-1] = 1`, 请尝试下面的例子. 比如, 当进行损失函数插值时, 这些变量可以被用作权重. 这些变量遵循 "
+"`Dirichlet 分布 <https://en.wikipedia.org/wiki/Dirichlet_distribution>`_."
 
-#: ../../source/faq.rst:421
+#: ../../source/faq.rst:427
 msgid ""
 "This method is justified in the following way: First, if we apply the "
 "transformation :math:`x = - \\log (u)` to the variable :math:`u` sampled "
@@ -459,9 +474,169 @@ msgid ""
 "scale parameter :math:`\\alpha = (1, ..., 1)`. You can verify the "
 "transformation by calculating the elements of the Jacobian."
 msgstr ""
-"该方法可以通过以下方式说明: 首先, 如果我们对从均匀分布 :math:`Uni(0, 1)` 中采样的 :math:`u`  应用 :math:`x = - \\log (u)` "
-"变换, 变量 :math:`x`  将服从指数分布 :math:`Exp(1)`, 其中 scale 参数为 :math:`1`. "
-"更进一步, 对于 :math:`n` 个互相独立且服从 scale 参数为 :math:`1` 的 指数分布的变量 :math:`x[0], ..., x[n-1]`, 对其进行归一化 "
-":math:`p[i] = x[i] / \\sum_i x[i]` 以后 :math:`p`  则服从 Dirichlet 分布 :math:`Dir(\\alpha)`, 且 "
-"scale 参数为 :math:`\\alpha = (1, ..., 1)`. 你可以通过计算 Jacobian 的方式来验证这个变换."
+"该方法可以通过以下方式说明: 首先, 如果我们对从均匀分布 :math:`Uni(0, 1)` 中采样的 :math:`u`  应用 "
+":math:`x = - \\log (u)` 变换, 变量 :math:`x`  将服从指数分布 :math:`Exp(1)`, 其中 "
+"scale 参数为 :math:`1`. 更进一步, 对于 :math:`n` 个互相独立且服从 scale 参数为 :math:`1` 的 "
+"指数分布的变量 :math:`x[0], ..., x[n-1]`, 对其进行归一化 :math:`p[i] = x[i] / \\sum_i "
+"x[i]` 以后 :math:`p`  则服从 Dirichlet 分布 :math:`Dir(\\alpha)`, 且 scale 参数为 "
+":math:`\\alpha = (1, ..., 1)`. 你可以通过计算 Jacobian 的方式来验证这个变换."
+
+#: ../../source/faq.rst:433
+msgid "How can I optimize a model with some constraints?"
+msgstr ""
+
+#: ../../source/faq.rst:435
+msgid ""
+"When you want to optimize a model with constraints, you can use the "
+"following classes, :class:`~optuna.samplers.NSGAIISampler` or "
+":class:`~optuna.integration.BoTorchSampler`. The following example is a "
+"benchmark of Binh and Korn function, a multi-objective optimization, with"
+" constraints using :class:`~optuna.samplers.NSGAIISampler`. This one has "
+"two constraints :math:`c_0 = (x-5)^2 + y^2 - 25 \\le 0` and :math:`c_1 = "
+"-(x - 8)^2 - (y + 3)^2 + 7.7 \\le 0` and finds the optimal solution "
+"satisfying these constraints."
+msgstr ""
+
+#: ../../source/faq.rst:490
+msgid ""
+"If you are interested in the exmaple for "
+":class:`~optuna.integration.BoTorchSampler`, please refer to `this sample"
+" code <https://github.com/optuna/optuna-"
+"examples/blob/main/multi_objective/botorch_simple.py>`_."
+msgstr ""
+
+#: ../../source/faq.rst:493
+msgid ""
+"There are two kinds of constrained optimizations, one with soft "
+"constraints and the other with hard constraints. Soft constraints do not "
+"have to be satisfied, but an objective function is penalized if they are "
+"unsatisfied. On the other hand, hard constraints must be satisfied."
+msgstr ""
+
+#: ../../source/faq.rst:496
+msgid ""
+"Optuna is adopting the soft one and **DOES NOT** support the hard one. In"
+" other words, Optuna **DOES NOT** have built-in samplers for the hard "
+"constraints."
+msgstr ""
+
+#: ../../source/faq.rst:499
+msgid "How can I parallelize optimization?"
+msgstr ""
+
+#: ../../source/faq.rst:501
+msgid "The variations of parallelization are in the following three cases."
+msgstr ""
+
+#: ../../source/faq.rst:503
+msgid "Multi-threading parallelization with single node"
+msgstr ""
+
+#: ../../source/faq.rst:504
+msgid "Multi-processing parallelization with single node"
+msgstr ""
+
+#: ../../source/faq.rst:505
+msgid "Multi-processing parallelization with multiple nodes"
+msgstr ""
+
+#: ../../source/faq.rst:508
+msgid "1. Multi-threading parallelization with a single node"
+msgstr ""
+
+#: ../../source/faq.rst:510
+msgid ""
+"Parallelization can be achieved by setting the argument ``n_jobs`` in "
+":func:`optuna.study.Study.optimize`. However, the python code will not be"
+" faster due to GIL because :func:`optuna.study.Study.optimize` with "
+"``n_jobs!=1`` uses multi-threading."
+msgstr ""
+
+#: ../../source/faq.rst:513
+msgid ""
+"While optimizing, it will be faster in limited situations, such as "
+"waiting for other server requests or C/C++ processing with numpy, etc., "
+"but it will not be faster in other cases."
+msgstr ""
+
+#: ../../source/faq.rst:515
+msgid "For more information about 1., see APIReference_."
+msgstr ""
+
+#: ../../source/faq.rst:520
+msgid "2. Multi-processing parallelization with single node"
+msgstr ""
+
+#: ../../source/faq.rst:522
+msgid ""
+"This can be achieved by using file-based RDBs (such as SQLite) and "
+"client/server RDBs (such as PostgreSQL and MySQL). However, if you are in"
+" the environment where you can not install an RDB, you can not run multi-"
+"processing parallelization with single node. When you really want to do "
+"it, please request it as a GitHub issue. If we receive a lot of requests,"
+" we may provide a solution for it."
+msgstr ""
+
+#: ../../source/faq.rst:525
+msgid "For more information about 2., see TutorialEasyParallelization_."
+msgstr ""
+
+#: ../../source/faq.rst:530
+msgid "3. Multi-processing parallelization with multiple nodes"
+msgstr ""
+
+#: ../../source/faq.rst:532
+msgid ""
+"This can be achieved by using client/server RDBs (such as PostgreSQL and "
+"MySQL). However, if you are in the environment where you can not install "
+"a client/server RDB, you can not run multi-processing parallelization "
+"with multiple nodes."
+msgstr ""
+
+#: ../../source/faq.rst:535
+msgid "For more information about 3., see TutorialEasyParallelization_."
+msgstr ""
+
+#: ../../source/faq.rst:538
+msgid ""
+"Can I monitor trials and make them failed automatically when they are "
+"killed unexpectedly?"
+msgstr ""
+
+#: ../../source/faq.rst:542
+msgid "Heartbeat mechanism is experimental. API would change in the future."
+msgstr ""
+
+#: ../../source/faq.rst:544
+msgid ""
+"A process running a trial could be killed unexpectedly, typically by a "
+"job scheduler in a cluster environment. If trials are killed "
+"unexpectedly, they will be left on the storage with their states "
+"`RUNNING` until we remove them or update their state manually. For such a"
+" case, Optuna supports monitoring trials using `heartbeat "
+"<https://en.wikipedia.org/wiki/Heartbeat_(computing)>`_ mechanism. Using "
+"heartbeat, if a process running a trial is killed unexpectedly, Optuna "
+"will automatically change the state of the trial that was running on that"
+" process to :obj:`~optuna.trial.TrialState.FAIL` from "
+":obj:`~optuna.trial.TrialState.RUNNING`."
+msgstr ""
+
+#: ../../source/faq.rst:567
+msgid ""
+"The heartbeat is supposed to be used with "
+":meth:`~optuna.study.Study.optimize`. If you use "
+":meth:`~optuna.study.Study.ask` and :meth:`~optuna.study.Study.tell`, "
+"please change the state of the killed trials by calling "
+":meth:`~optuna.study.Study.tell` explicitly."
+msgstr ""
+
+#: ../../source/faq.rst:571
+msgid ""
+"You can also execute a callback function to process the failed trial. "
+"Optuna provides a callback to retry failed trials as "
+":class:`~optuna.storages.RetryFailedTrialCallback`. Note that a callback "
+"is invoked at a beginning of each trial, which means "
+":class:`~optuna.storages.RetryFailedTrialCallback` will retry failed "
+"trials when a new trial starts to evaluate."
+msgstr ""
 

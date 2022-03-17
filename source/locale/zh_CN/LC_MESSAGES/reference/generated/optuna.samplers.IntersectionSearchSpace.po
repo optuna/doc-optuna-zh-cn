@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Optuna 2.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-20 13:35-0400\n"
+"POT-Creation-Date: 2022-02-17 18:33-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,13 +21,13 @@ msgstr ""
 msgid "optuna.samplers.IntersectionSearchSpace"
 msgstr ""
 
-#: of optuna.samplers._search_space.IntersectionSearchSpace:1
+#: of optuna.samplers._search_space.intersection.IntersectionSearchSpace:1
 msgid ""
 "A class to calculate the intersection search space of a "
-":class:`~optuna.study.BaseStudy`."
+":class:`~optuna.study.Study`."
 msgstr ""
 
-#: of optuna.samplers._search_space.IntersectionSearchSpace:3
+#: of optuna.samplers._search_space.intersection.IntersectionSearchSpace:3
 msgid ""
 "Intersection search space contains the intersection of parameter "
 "distributions that have been suggested in the completed trials of the "
@@ -36,7 +36,7 @@ msgid ""
 "space (i.e., the parameters with dynamic value ranges are excluded)."
 msgstr ""
 
-#: of optuna.samplers._search_space.IntersectionSearchSpace:9
+#: of optuna.samplers._search_space.intersection.IntersectionSearchSpace:9
 msgid ""
 "Note that an instance of this class is supposed to be used for only one "
 "study. If different studies are passed to "
@@ -44,12 +44,12 @@ msgid ""
 ":obj:`ValueError` is raised."
 msgstr ""
 
-#: of optuna.samplers._search_space.IntersectionSearchSpace
-#: optuna.samplers._search_space.IntersectionSearchSpace.calculate
+#: of optuna.samplers._search_space.intersection.IntersectionSearchSpace
+#: optuna.samplers._search_space.intersection.IntersectionSearchSpace.calculate
 msgid "参数"
 msgstr ""
 
-#: of optuna.samplers._search_space.IntersectionSearchSpace:13
+#: of optuna.samplers._search_space.intersection.IntersectionSearchSpace:13
 msgid "Whether pruned trials should be included in the search space."
 msgstr ""
 
@@ -58,24 +58,25 @@ msgid "Methods"
 msgstr ""
 
 #: of
-#: optuna.samplers._search_space.IntersectionSearchSpace.calculate:1:<autosummary>:1
+#: optuna.samplers._search_space.intersection.IntersectionSearchSpace.calculate:1:<autosummary>:1
 msgid ""
 ":obj:`calculate <optuna.samplers.IntersectionSearchSpace.calculate>`\\ "
 "\\(study\\[\\, ordered\\_dict\\]\\)"
 msgstr ""
 
-#: of optuna.samplers._search_space.IntersectionSearchSpace.calculate:1
-#: optuna.samplers._search_space.IntersectionSearchSpace.calculate:1:<autosummary>:1
-msgid ""
-"Returns the intersection search space of the "
-":class:`~optuna.study.BaseStudy`."
+#: of
+#: optuna.samplers._search_space.intersection.IntersectionSearchSpace.calculate:1
+#: optuna.samplers._search_space.intersection.IntersectionSearchSpace.calculate:1:<autosummary>:1
+msgid "Returns the intersection search space of the :class:`~optuna.study.Study`."
 msgstr ""
 
-#: of optuna.samplers._search_space.IntersectionSearchSpace.calculate:3
+#: of
+#: optuna.samplers._search_space.intersection.IntersectionSearchSpace.calculate:3
 msgid "A study with completed trials."
 msgstr ""
 
-#: of optuna.samplers._search_space.IntersectionSearchSpace.calculate:4
+#: of
+#: optuna.samplers._search_space.intersection.IntersectionSearchSpace.calculate:4
 msgid ""
 "A boolean flag determining the return type. If :obj:`False`, the returned"
 " object will be a :obj:`dict`. If :obj:`True`, the returned object will "
@@ -83,23 +84,39 @@ msgid ""
 "names."
 msgstr ""
 
-#: of optuna.samplers._search_space.IntersectionSearchSpace.calculate
+#: of
+#: optuna.samplers._search_space.intersection.IntersectionSearchSpace.calculate
 msgid "返回"
 msgstr ""
 
-#: of optuna.samplers._search_space.IntersectionSearchSpace.calculate:9
+#: of
+#: optuna.samplers._search_space.intersection.IntersectionSearchSpace.calculate:9
 msgid "A dictionary containing the parameter names and parameter's distributions."
 msgstr ""
 
-#: of optuna.samplers._search_space.IntersectionSearchSpace.calculate
+#: of
+#: optuna.samplers._search_space.intersection.IntersectionSearchSpace.calculate
 msgid "引发"
 msgstr ""
 
-#: of optuna.samplers._search_space.IntersectionSearchSpace.calculate:11
+#: of
+#: optuna.samplers._search_space.intersection.IntersectionSearchSpace.calculate:11
 msgid "If different studies are passed into this method."
 msgstr ""
 
-#: of optuna.samplers._search_space.IntersectionSearchSpace.calculate
+#: of
+#: optuna.samplers._search_space.intersection.IntersectionSearchSpace.calculate
 msgid "返回类型"
 msgstr ""
+
+#~ msgid ""
+#~ "A class to calculate the intersection"
+#~ " search space of a "
+#~ ":class:`~optuna.study.BaseStudy`."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Returns the intersection search space of"
+#~ " the :class:`~optuna.study.BaseStudy`."
+#~ msgstr ""
 
