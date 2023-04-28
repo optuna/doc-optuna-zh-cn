@@ -43,7 +43,7 @@ msgstr "二次函数的例子"
 msgid ""
 "Usually, Optuna is used to optimize hyperparameters, but as an example, "
 "let's optimize a simple quadratic function: :math:`(x - 2)^2`."
-msgstr "通常，Optuna是用于优化超参数的，但是作为例子，我们这里来优化一个简单的而此函数：:math:`(x - 2)^2`."
+msgstr "通常，Optuna是用于优化超参数的，但是作为例子，我们这里来优化一个简单的二次函数：:math:`(x - 2)^2`."
 
 #: ../../source/tutorial/10_key_features/001_first.rst:38
 msgid "First of all, import :mod:`optuna`."
