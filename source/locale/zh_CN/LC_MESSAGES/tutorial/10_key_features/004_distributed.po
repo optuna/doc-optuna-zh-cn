@@ -108,7 +108,7 @@ msgid ""
 " it may cause deadlocks and serious performance issues. Please consider "
 "to use another database engine like PostgreSQL or MySQL."
 msgstr ""
-"我们不建议在大规模的分布式优化中采用 SQLite 因为其可能造成死锁和烟zhngde性能问题。请考虑其他数据库引擎，比如 PostgreSQL "
+"我们不建议在大规模的分布式优化中采用 SQLite 因为其可能造成死锁和显著的性能问题。请考虑其他数据库引擎，比如 PostgreSQL "
 "或者 MySQL."
 
 #: ../../source/tutorial/10_key_features/004_distributed.rst:105
